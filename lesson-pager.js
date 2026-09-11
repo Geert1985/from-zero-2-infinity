@@ -52,10 +52,8 @@ function render() {
   if (app && parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") {
     app.innerHTML = renderLesson(parts[1], parts[3], parts[5]);
     if (typeof typesetMath === "function") typesetMath(app);
-    if (typeof mountWidgets === "function") {
-      const host = app.querySelector("[data-widget]") || app.querySelector(".panel.lesson") || app;
-      if (host && parts[3]) mountWidgets(host, parts[3]);
-    }
+    const slot = app.querySelector("[data-widget]");
+    if (slot && typeof mountWidgets === "function") mountWidgets(app, parts[3]);
     return;
   }
   return _render0();
