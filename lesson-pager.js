@@ -23,11 +23,10 @@ function renderLesson(phaseId, id, page) {
   const collect = i !== last ? "" : (leerstofCollected(m.id)
     ? '<span class="lesstof-done"><img class="book-ico lg" src="assets/book-open.png" alt=""> Lesstof verzameld</span>'
     : '<button class="btn primary" id="collect-leerstof" data-mid="' + m.id + '"><img class="book-ico lg" src="assets/book-open.png" alt=""> Verzamel lesstof</button>');
-  const widget = String(body).indexOf("data-widget") >= 0 ? "" : "";
   return (
     '<div class="screen" style="background-image:url(\'' + bgFor(phaseId) + "')\">" +
     topbar('<button class="btn" data-go="/fase/' + phaseId + '">Fase ' + phaseId + "</button>") +
-    '<div class="layout"><div class="panel lesson">' + body + widget +
+    '<div class="layout"><div class="panel lesson">' + body +
     '<div class="lesson-pager" style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:20px">' +
     prev + '<span>' + (i + 1) + " / " + pages.length + "</span>" + nxt + "</div>" +
     '<div class="lesson-actions">' +
@@ -46,7 +45,7 @@ function render() {
     app.innerHTML = renderLesson(parts[1], parts[3], parts[5]);
     if (typeof typesetMath === "function") typesetMath(app);
     if (typeof mountWidgets === "function") {
-      const host = app.querySelector(".widget-host") || app.querySelector(".panel.lesson") || app;
+      const host = app.querySelector("[data-widget]") || app.querySelector(".panel.lesson") || app;
       if (host && parts[3]) mountWidgets(host, parts[3]);
     }
     return;
@@ -63,3 +62,5 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowLeft" && buttons[0]) go(buttons[0].getAttribute("data-go"));
   if (e.key === "ArrowRight" && buttons[1]) go(buttons[1].getAttribute("data-go"));
 });
+
+if (document.readyState !== "loading") render();
