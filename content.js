@@ -1,0 +1,14 @@
+/* Bundelt de fasebestanden tot MILESTONES en PHASE_EXAMS. Pas lessen aan in fase1.js … fase7.js. */
+const PHASE_EXAMS = {
+  1: PHASE_EXAM_1,
+  2: PHASE_EXAM_2,
+  3: PHASE_EXAM_3,
+  4: PHASE_EXAM_4,
+  5: PHASE_EXAM_5,
+  6: PHASE_EXAM_6,
+  7: PHASE_EXAM_7
+};
+const MILESTONES = [].concat(
+  MILESTONES_1, MILESTONES_2, MILESTONES_3,
+  MILESTONES_4, MILESTONES_5, MILESTONES_6, MILESTONES_7
+);
