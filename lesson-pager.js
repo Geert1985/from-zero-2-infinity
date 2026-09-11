@@ -1,8 +1,16 @@
 function lessonPages(html) {
   const raw = String(html || "").trim();
   if (!raw) return [""];
-  const parts = raw.split(/(?=<h2\b)/i).map(function (s) { return s.trim(); }).filter(Boolean);
-  return parts.length ? parts : [raw];
+  let parts = raw.split(/(?=<h3\b)/i).map(function (s) { return s.trim(); }).filter(Boolean);
+  if (parts.length <= 1) {
+    parts = raw.split(/(?=<h2\b)/i).map(function (s) { return s.trim(); }).filter(Boolean);
+    return parts.length ? parts : [raw];
+  }
+  if (!/^<h3/i.test(parts[0]) && parts.length > 1) {
+    parts[1] = parts[0] + parts[1];
+    parts.shift();
+  }
+  return parts;
 }
 
 function renderLesson(phaseId, id, page) {
