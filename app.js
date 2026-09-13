@@ -490,7 +490,7 @@ document.addEventListener("click", function (e) {
     const parts = parseHash();
     const m = getMilestone(parts[3]);
     const res = gradeList(m.practice, document.getElementById("quiz"));
-    document.getElementById("score").innerHTML = '<p class="score-banner">' + res.correct + " / " + res.total + " goed</p>';
+    document.getElementById("score").innerHTML = '<p class="score-banner">' + res.correct + " / " + res.total + " goed</p>";
     return;
   }
   if (e.target.id === "submit-exam") {
