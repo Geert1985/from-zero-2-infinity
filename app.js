@@ -1,6 +1,1 @@
-const ADMIN_USER = "admin";
-const ADMIN_PASS = "infinity";
-
-function progress() {
-  return store.getState();
-}
+RESTORED_FROM_LOCAL_ORIG
