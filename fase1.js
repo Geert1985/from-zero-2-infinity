@@ -19,7 +19,8 @@ const MILESTONES_1 = [
         <p>Stel dat er drie appels op tafel liggen. We kunnen ook drie stenen of drie stoelen hebben.</p>
         <p>De voorwerpen zijn verschillend, maar de <strong>hoeveelheid is dezelfde: drie</strong></p>
         <p>Het <strong>getal 3</strong> geeft die hoeveelheid aan</p>
-        <p>Het <strong>Een cijfer is een teken waarmee we een getal schrijven.</strong></p>
+        <p><strong>Een cijfer is een teken waarmee we een getal schrijven</strong>, zoals een letter een teken is waarmee we een woord maken.</p>
+        
         <div>
           <p>bijvoorbeeld:</p>
           <ul>
