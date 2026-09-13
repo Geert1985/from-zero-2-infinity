@@ -234,24 +234,36 @@ function topbar(extra) {
   extra = extra || "";
   const n = leerstofScore();
   const t = toetsScore();
+  const i = inzichtScore();
   return (
     '<div class="topbar">' +
-    '<div class="brand">From Zero 2 Infinity</div>' +
-    '<div class="score-row">' +
-    '<div class="lesstof-score" id="score-lesstof" title="Verzamelde lesstof">' +
-    '<img src="assets/book-open.png" alt="">' +
-    "<span>Lesstof <strong>" + n + "</strong></span></div>" +
-    '<div class="lesstof-score toets-score" id="score-toets" title="Gehaalde toetsen">' +
-    '<img src="assets/medaille.png" alt="">' +
-    "<span>Toets <strong>" + t + "</strong></span></div>" +
-    '<div class="lesstof-score" id="score-inzicht" title="Inzichtpunten">' +
-    '<img src="assets/inzicht.png" alt="">' +
-    "<span>Inzicht <strong>" + inzichtScore() + "</strong></span></div></div>" +
-    '<div class="nav-actions">' +
-    extra +
-    '<button class="btn ghost" data-go="/">Kaart</button>' +
-    '<button class="btn ghost" data-go="/admin">' + (isAdmin() ? "Admin aan" : "Admin") + "</button>" +
-    '<button class="btn ghost" id="reset-btn">Reset</button></div></div>'
+      '<div class="brand">From Zero 2 Infinity</div>' +
+        '<div class="score-row">' +
+          '<div class="lesstof-score" id="score-lesstof">' +
+
+            '<div class="score-item">' +
+              '<img src="assets/book-open.png" title="Verzamelde lesstof">' +
+              "<span>" + n + "</span>" +
+            '</div>' +
+                  
+            '<div class="score-item">' +
+              '<img src="assets/medaille.png" title="Gehaalde toetsen">' +
+              "<span>" + t + "</span>" +
+            '</div>' +
+            '<div class="score-item">' +
+              '<img src="assets/inzicht.png" title="Inzichtpunten">' +
+              "<span>" + i + "</span>" + 
+            '</div>' + 
+          '</div>' +  
+        '</div>'+
+    
+      '<div class="nav-actions">' +
+       extra +
+      '<button class="btn ghost" data-go="/">Kaart</button>' +
+      '<button class="btn ghost" data-go="/admin">' + (isAdmin() ? "Admin aan" : "Admin") + "</button>" +
+      '<button class="btn ghost" id="reset-btn">Reset</button>' + 
+      '</div>' + 
+    '</div>'
   );
 }
 
