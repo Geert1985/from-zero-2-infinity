@@ -1,14 +1,21 @@
+.phase-card .cost-ico,
 .cost-ico {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-  vertical-align: -3px;
-  margin: 0 2px;
+  width: 18px !important;
+  height: 18px !important;
+  object-fit: contain !important;
+  vertical-align: -4px;
+  margin: 0 3px;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  background: transparent !important;
+  display: inline-block;
 }
 .phase-card .status.locked {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 4px;
   text-transform: none;
   letter-spacing: 0.04em;

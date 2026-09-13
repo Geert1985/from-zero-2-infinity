@@ -3,7 +3,7 @@ function costLabel(c) {
     "Kost " + c.les +
     ' <img class="cost-ico" src="assets/book-open.png" alt="lesstof"> ' +
     c.toets +
-    ' <img class="cost-ico" src="assets/toets.png" alt="toets">'
+    ' <img class="cost-ico" src="assets/medaille.png" alt="toets">'
   );
 }
 
@@ -57,7 +57,7 @@ function renderPhase(phaseId) {
     return screen + topbar() + '<div class="layout"><div class="panel"><h1>Fase ' + phaseId +
       " is nog vergrendeld</h1><p>" + costLabel(c) +
       ". Je hebt " + leerstofScore() + ' <img class="cost-ico" src="assets/book-open.png" alt=""> en ' +
-      toetsScore() + ' <img class="cost-ico" src="assets/toets.png" alt="">.</p>' +
+      toetsScore() + ' <img class="cost-ico" src="assets/medaille.png" alt="">.</p>' +
       '<button class="btn primary" data-go="/">Naar de kaart</button></div></div></div>';
   }
   if (!phasePlayable(phaseId)) {
