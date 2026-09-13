@@ -8,57 +8,229 @@ const MILESTONES_1 = [
       <h2>Milestone 1.1 — Getalbegrip en het positiestelsel</h2>
       <p><strong>Doel:</strong> 
       <ul>
-        <li>begrijpen wat een getal voorstelt</li>
-        <li>hoe we hoeveelheden met cijfers schrijven</li>
+        <li>begrijpen wat het verschil is tussen een cijfer en een getal</li>
+        <li>hoe we hoeveelheden met getallen schrijven</li>
         <li>hoe het tientallig positiestelsel werkt</li>
         <li>hoe natuurlijke getallen op een getallenlijn geordend en vergeleken worden</li>
       </ul>
       </p>
 
-      <h3>1. Van hoeveelheid naar getal</h3>
-      <p>Stel dat er drie appels op tafel liggen. We kunnen de appels aanwijzen, maar we kunnen de hoeveelheid ook los zien van de appels zelf. Er zijn bijvoorbeeld ook drie stenen of drie stoelen. De concrete objecten verschillen, maar de <strong>hoeveelheid</strong> is dezelfde.</p>
-      <p>Het <strong>getal 3</strong> is de abstracte naam die we aan die hoeveelheid geven. Dat is een belangrijk idee: een getal is niet het symbool <strong>3</strong> zelf en ook niet de verzameling appels. Het symbool 3 is een <strong>cijfer</strong> waarmee we het getal kunnen schrijven.</p>
+      <h3>1. Het verschil tussen een getal en een cijfer</h3>
+      <p>Stel dat er drie appels op tafel liggen. We kunnen ook drie stenen of drie stoelen hebben.</p>
+      <p>De voorwerpen zijn verschillend, maar de <strong>hoeveelheid is dezelfde: drie</strong></p>
+      <p>Het <strong>getal 3</strong> geeft die hoeveelheid aan</p>
+      <p>Het <strong>Een cijfer is een teken waarmee we een getal schrijven.</strong></p>
+      <div>
+        <p>bijvoorbeeld:</p>
+        <ul>
+          <li>3 appels => het <strong>getal 3</strong> dat bestaat uit het <strong>cijfer 3</strong> </li>
+          <li>27 appels => het <strong>getal 27</strong> dat bestaat uit <strong>cijfer 2 en 7</strong></li>
+          <li>405 appels => het <strong>getal 405</strong> dat bestaat uit de <strong>cijfers 4, 0 en 5</strong></li>
+        </ul>
+      </div>
 
-      <div class="callout"><strong>Cijfer ≠ getal.</strong> Een cijfer is een symbool. Een getal is een wiskundig object dat bijvoorbeeld een hoeveelheid of een positie op de getallenlijn kan voorstellen. Het getal 27 bestaat in onze decimale schrijfwijze uit de cijfers 2 en 7.</div>
+      <div class="callout"><strong>Cijfer ≠ getal.</strong> Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</div>
 
-      <h3>2. De natuurlijke getallen</h3>
-      <p>Om te tellen gebruiken we de <strong>natuurlijke getallen</strong>. Deze verzameling wordt aangeduid met het symbool ℕ. In deze cursus nemen we 0 mee in de verzameling:</p>
-      <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, …}</p>
-      <p>Na elk natuurlijk getal <strong>n</strong> komt een volgend getal, de <strong>opvolger</strong>:</p>
-      <p class="formula">n + 1</p>
-      <p>Bijvoorbeeld: Kiezen we als natuurlijk getal n bijvoorbeeld 8. De opvolger van 8 is 8 + 1 = 9.</p>
-      <p>Omgekeerd heeft elk natuurlijk getal (behalve 0) een <strong>voorganger</strong>:</p>
-      <p class="formula">n − 1</p>
-      <p>De voorganger van 8 is dus 8 - 1 = 7.</p> 
-      <p>0 heeft in ℕ dus geen voorganger want het kleinste natuurlijke getal is namelijk 0</p>
-      <p>Er bestaat <strong>geen grootste natuurlijk getal</strong>: als je een natuurlijk getal hebt, kun je er altijd 1 bij optellen.</p>
-
-      <div class="callout"><p>De natuurlijke getallen zijn geschikt om te tellen, maar niet voldoende voor alle rekenproblemen.</p><p> Zo heeft <strong>3 − 5</strong> geen oplossing in ℕ.</p><p> Later zullen we daarom grotere getallensystemen invoeren.</p></div>
-
-      <h3>3. Cijfers en de tien symbolen</h3>
+      <h3>2. Cijfers en de tien symbolen</h3>
       <p>In het decimale stelsel gebruiken we precies tien cijfers:</p>
       <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
-      <p>Met deze tien cijfers kunnen we oneindig veel verschillende getallen schrijven. Het verschil tussen bijvoorbeeld 2, 20 en 200 komt niet door nieuwe cijfers, maar door de <strong>positie</strong> van het cijfer.</p>
+      
+      <div class="callout"><strong>Elk cijfer heeft een naam en een symbool.</strong> 
+        <p class="formula">0 = nul</p>
+        <p class="formula">1 = één</p>
+        <p class="formula">2 = twee</p>
+        <p class="formula">3 = drie</p>
+        <p class="formula">4 = vier</p>
+        <p class="formula">5 = vijf</p>
+        <p class="formula">6 = zes</p>
+        <p class="formula">7 = zeven</p>
+        <p class="formula">8 = acht</p>
+        <p class="formula">9 = negen</p>
+      </div>
 
-      <h3>4. Het tientallig positiestelsel</h3>
-      <p>Ons talstelsel is <strong>tientallig</strong>: iedere positie naar links vertegenwoordigt een waarde die tien keer zo groot is als de positie rechts ervan.</p>
+      <p>Met deze tien cijfers kunnen we oneindig veel verschillende getallen schrijven. Het verschil tussen bijvoorbeeld 2, 20 en 200 komt niet door nieuwe cijfers, maar door de <strong>positie</strong> van het cijfer.</p>
+     
+
+      <h3>3. Getallen groter dan 9</h3>
+
+      <p>We hebben nu de <strong>10 cijfers</strong> geleerd:</p>
+
+      <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+
+      <p>Maar met deze 10 cijfers kunnen we nog veel meer getallen maken.</p>
+
+      <p>Na 9 komt bijvoorbeeld:</p>
+
+      <p class="formula">10, 11, 12, 13, 14, ... , 99, 100, 101, 102, ...</p>
+
+      <p>Hoe kunnen we met maar 10 cijfers toch oneindig veel getallen schrijven?</p>
+
+      <h4>De plaats van een cijfer is belangrijk</h4>
+
+      <p>We schrijven getallen met cijfers. De <strong>plaats</strong> van een cijfer bepaalt hoeveel het cijfer waard is.</p>
+
+      <p>Kijk bijvoorbeeld naar het getal <strong>4 705</strong> (vierduizend zevenhonderd en vijf). We gaan van rechts naar links kijken welke cijfers we tegenkomen en wat de waarde ervan is</p>
 
       <table>
-        <tr><th>Positie</th><th>Naam</th><th>Waarde</th><th>In 4 705</th></tr>
-        <tr><td>1e van rechts</td><td>eenheden</td><td>10⁰ = 1</td><td>5</td></tr>
-        <tr><td>2e</td><td>tientallen</td><td>10¹ = 10</td><td>0</td></tr>
-        <tr><td>3e</td><td>honderdtallen</td><td>10² = 100</td><td>7</td></tr>
-        <tr><td>4e</td><td>duizendtallen</td><td>10³ = 1 000</td><td>4</td></tr>
+        <tr>
+          <th>Cijfer</th>  
+          <th>Plaats</th>
+          <th>Waarde</th>
+          <th>Naam</th>
+        </tr>
+        <tr>
+          <td>5</td>  
+          <td>1e van rechts</td>
+          <td>1</td>
+          <td>eenheden</td>  
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>2e van rechts</td>
+          <td>10</td>
+          <td>tientallen</td>    
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>3e van rechts</td>
+          <td>100</td>
+          <td>honderdtallen</td>    
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>4e van rechts</td>
+          <td>1 000</td>
+          <td>duizendtallen</td>    
+        </tr>
       </table>
 
-      <p>Daarom geldt:</p>
-      <p class="formula">4 705 = 4 × 1 000 + 7 × 100 + 0 × 10 + 5 × 1</p>
-      <p>of, met machten van 10:</p>
-      <p class="formula">4 705 = 4 × 10³ + 7 × 10² + 0 × 10¹ + 5 × 10⁰</p>
+      <p>We kunnen het getal <strong>4 705</strong> dus opdelen:</p>
 
-      <p>Dit noemen we de <strong>plaatswaarde</strong> van een cijfer. In 4 705 heeft de 7 de plaatswaarde 700. Het cijfer zelf blijft 7.</p>
-      <p>De <strong>cijferwaarde</strong> van een cijfer is dus het cijfer zelf; de <strong>plaatswaarde</strong> hangt af van zijn positie.</p>
+      <p class="formula">4 000 + 700 + 0 + 5 = 4 705</p>
 
+      <p>Het cijfer <strong>4</strong> staat op de plaats van de duizendtallen. Daarom betekent het hier <strong>4 000</strong>.</p>
+
+      <p>Het cijfer <strong>7</strong> staat op de plaats van de honderdtallen. Daarom betekent het hier <strong>700</strong>.</p>
+
+      <p>Het cijfer <strong>5</strong> staat op de plaats van de eenheden. Daarom betekent het hier <strong>5</strong>.</p>
+
+      <h4>De waarde van een cijfer</h4>
+
+      <p>We maken hierbij onderscheid tussen twee dingen:</p>
+
+      <ul>
+        <li>De <strong>cijferwaarde</strong> is het cijfer zelf.</li>
+        <li>De <strong>plaatswaarde</strong> is wat het cijfer betekent door zijn plaats in het getal.</li>
+      </ul>
+
+      <p>Bijvoorbeeld in <strong>4 705</strong>:</p>
+
+      <ul>
+        <li>het cijfer is <strong>7</strong>;</li>
+        <li>de plaatswaarde van 7 is <strong>700</strong>.</li>
+      </ul>
+
+      <h4>Een eenvoudig patroon</h4>
+
+      <p>Als je helemaal rechts begint bij een getal, zal bij elke stap naar links de waarde van het cijfer <strong>10 keer groter</strong> worden:</p>
+
+      <p class="formula">1 → 10 → 100 → 1 000 → 10 000 → ...</p>
+
+      <p>Daarom noemen we ons getallensysteem het <strong>tientallig stelsel</strong>.</p>
+
+      <p>Met slechts 10 cijfers kunnen we zo alle getallen schrijven: van kleine getallen tot getallen met miljoenen, miljarden en nog veel meer cijfers.</p>
+      
+
+      <h3>4. De natuurlijke getallen</h3>
+
+      <p>Als we dingen tellen, gebruiken we de <strong>natuurlijke getallen</strong>.</p>
+
+      <p>Bijvoorbeeld:</p>
+
+      <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...</p>
+
+      <p>Deze getallen noemen we de <strong>natuurlijke getallen</strong>. We gebruiken het symbool <strong>ℕ</strong> voor de verzameling van alle natuurlijke getallen.</p>
+
+      <p>In deze cursus hoort <strong>0</strong> ook bij de natuurlijke getallen:</p>
+
+      <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
+
+      <h4>De opvolger</h4>
+
+      <p>Na elk natuurlijk getal komt een volgend natuurlijk getal.</p>
+
+      <p>Je krijgt het volgende getal door <strong>1 op te tellen</strong>.</p>
+
+      <p>Bijvoorbeeld:</p>
+
+      <p class="formula">5 → 6</p>
+
+      <p class="formula">12 → 13</p>
+
+      <p class="formula">99 → 100</p>
+
+      <p>Het getal dat na een ander getal komt, noemen we de <strong>opvolger</strong>.</p>
+
+      <p>De opvolger van 8 is dus 9, want:</p>
+
+      <p class="formula">8 + 1 = 9</p>
+
+      <h4>De voorganger</h4>
+
+      <p>We kunnen ook naar het vorige getal gaan.</p>
+
+      <p>Je krijgt het vorige getal door <strong>1 af te trekken</strong>.</p>
+
+      <p>Bijvoorbeeld:</p>
+
+      <p class="formula">6 → 5</p>
+
+      <p class="formula">13 → 12</p>
+
+      <p class="formula">100 → 99</p>
+
+      <p>Het getal dat vóór een ander getal komt, noemen we de <strong>voorganger</strong>.</p>
+
+      <p>De voorganger van 8 is dus 7, want:</p>
+
+      <p class="formula">8 − 1 = 7</p>
+
+      <p><strong>0 heeft geen voorganger in ℕ</strong>, want 0 is het kleinste natuurlijke getal.</p>
+
+      <h4>Er is geen grootste natuurlijk getal</h4>
+
+      <p>De natuurlijke getallen blijven altijd doorgaan.</p>
+
+      <p>Neem bijvoorbeeld 1 000 000. Ook daarna komt nog een natuurlijk getal:</p>
+
+      <p class="formula">1 000 000 + 1 = 1 000 001</p>
+
+      <p>En ook daarna kunnen we weer 1 optellen.</p>
+
+      <p>Er bestaat dus <strong>geen grootste natuurlijk getal</strong>.</p>
+
+      <div class="callout">
+        <p><strong>Onthoud:</strong></p>
+        <p>De natuurlijke getallen beginnen bij 0 en gaan oneindig verder:</p>
+
+        <p class="formula">0, 1, 2, 3, 4, 5, ...</p>
+
+        <p>De <strong>opvolger</strong> vind je door 1 op te tellen.</p>
+        <p>De <strong>voorganger</strong> vind je door 1 af te trekken.</p>
+      </div>
+
+      <h4>Zijn de natuurlijke getallen altijd voldoende?</h4>
+
+      <p>Met natuurlijke getallen kunnen we veel berekeningen maken.</p>
+
+      <p>Maar soms komen we een probleem tegen. Kijk bijvoorbeeld naar:</p>
+
+      <p class="formula">3 − 5</p>
+
+      <p>Het antwoord is kleiner dan 0 en is dus geen natuurlijk getal.</p>
+
+      <p>Later zullen we daarom kennismaken met <strong>negatieve getallen</strong> en met een grotere verzameling getallen.</p>
+      
       <h3>5. Nul als cijfer en als plaatshouder</h3>
       <p>Nul heeft twee belangrijke rollen.</p>
       <ul>

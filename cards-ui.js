@@ -91,7 +91,7 @@ function renderPhase(phaseId) {
   return (
     screen + topbar() + '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + " — " + phase.title +
     "</h1><p>" + (PHASE_BLURB[phaseId] || phase.short) + "</p>" +
-    (nextCost ? "<p>Volgende fase vanaf " + costLabel(nextCost) + " .</p>" : "") +
+    (nextCost ? "<p>Volgende fase opent vanaf " + costLabel(nextCost) + " .</p>" : "") +
     '<div class="progress-bar"><span style="width:' + pctDone(phaseId) + '%"></span></div></div>' +
     '<div class="stone-grid">' + stones + "</div></div></div>"
   );

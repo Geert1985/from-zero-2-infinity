@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/c:\\Users\\geert\\Downloads\\Wiskunde App\\from-zero-2-infinity\\Cursusbestanden\\Chinees Wiskundeboek g1_2.aux": true,
+        "**/c:\\Users\\geert\\Downloads\\Wiskunde App\\from-zero-2-infinity\\Cursusbestanden\\Chinees Wiskundeboek g1_2.log": true,
+        "**/c:\\Users\\geert\\Downloads\\Wiskunde App\\from-zero-2-infinity\\Cursusbestanden\\Chinees Wiskundeboek g1_2.gz": true,
+        "**/c:\\Users\\geert\\Downloads\\Wiskunde App\\from-zero-2-infinity\\Cursusbestanden\\Chinees Wiskundeboek g1_2.out": true
+    }
+}
