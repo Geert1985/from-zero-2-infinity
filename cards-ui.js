@@ -1,8 +1,8 @@
 function costLabel(c) {
   return (
-    "Kost " + c.les +
+    c.les +
     ' <img class="cost-ico" src="assets/book-open.png" alt="lesstof"> ' +
-    c.toets +
+    " en " + c.toets + 
     ' <img class="cost-ico" src="assets/medaille.png" alt="toets">'
   );
 }
@@ -54,10 +54,9 @@ function renderPhase(phaseId) {
   const screen = '<div class="screen" style="background-image:url(\'' + bgFor(phaseId) + "')\">";
   if (!phaseUnlocked(phaseId)) {
     const c = phaseCost(phaseId);
-    return screen + topbar() + '<div class="layout"><div class="panel"><h1>Fase ' + phaseId +
-      " is nog vergrendeld</h1><p>" + costLabel(c) +
-      ". Je hebt " + leerstofScore() + ' <img class="cost-ico" src="assets/book-open.png" alt=""> en ' +
-      toetsScore() + ' <img class="cost-ico" src="assets/medaille.png" alt="">.</p>' +
+    return screen + topbar() + 
+      '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + " is nog vergrendeld</h1>" + 
+      "Nodig om te ontgrendelen: " + costLabel(c) + '.</p>' +
       '<button class="btn primary" data-go="/">Naar de kaart</button></div></div></div>';
   }
   if (!phasePlayable(phaseId)) {
@@ -92,7 +91,7 @@ function renderPhase(phaseId) {
   return (
     screen + topbar() + '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + " — " + phase.title +
     "</h1><p>" + (PHASE_BLURB[phaseId] || phase.short) + "</p>" +
-    (nextCost ? "<p>Volgende fase vanaf " + costLabel(nextCost) + " (nu " + leerstofScore() + " / " + toetsScore() + ").</p>" : "") +
+    (nextCost ? "<p>Volgende fase vanaf " + costLabel(nextCost) + " .</p>" : "") +
     '<div class="progress-bar"><span style="width:' + pctDone(phaseId) + '%"></span></div></div>' +
     '<div class="stone-grid">' + stones + "</div></div></div>"
   );

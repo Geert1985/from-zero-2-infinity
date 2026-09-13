@@ -324,55 +324,6 @@ function renderAdmin() {
   );
 }
 
-function renderPhase(phaseId) {
-  phaseId = Number(phaseId);
-  const phase = COURSE.phases.find((p) => p.id === phaseId);
-  if (!phase) return renderHome();
-  const screen = '<div class="screen" style="background-image:url(\'' + bgFor(phaseId) + "')\">";
-  if (!phaseUnlocked(phaseId)) {
-    const c = phaseCost(phaseId);
-    return screen + topbar() + '<div class="layout"><div class="panel"><h1>Fase ' + phaseId +
-      " is nog vergrendeld</h1><p>Kost " + c.les + " lesstof en " + c.toets +
-      " toetsen. Je hebt er " + leerstofScore() + " en " + toetsScore() +
-      ". Punten blijven staan.</p>" +
-      '<button class="btn primary" data-go="/">Naar de kaart</button></div></div></div>';
-  }
-  if (!phasePlayable(phaseId)) {
-    return screen + topbar('<button class="btn" data-go="/">Alle fases</button>') +
-      '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + ": " + phase.title +
-      "</h1><p>Deze fase volgt later.</p></div></div></div>";
-  }
-  const list = milestonesFor(phaseId);
-  const stones = list.map((m) => {
-    const done = milestonePassed(m.id);
-    const st = done ? "done" : "";
-    const art = (list.indexOf(m) % 5) + 1;
-    const testIco = done ? "assets/medaille.png" : "assets/toets.png";
-    return (
-      '<article class="stone ' + st + '">' +
-      '<img class="stone-art" src="assets/mile-' + art + '.png" alt="">' +
-      (phaseId == 1 && worldFor(m.id) ? '<p class="ch-world">' + worldFor(m.id).name + "</p>" : "") +
-      "<h3>" + m.title + "</h3><p>" + m.goal + "</p>" +
-      (done ? '<div class="status done">Behaald</div>' : "") +
-      '<div class="stone-actions">' +
-      '<button class="btn lesstof-btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/les">' +
-      '<img class="book-ico" src="assets/' + (leerstofCollected(m.id) ? "book-open.png" : "book-closed.png") + '" alt=""> Lesstof</button>' +
-      '<button class="btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/toets"><img class="book-ico" src="' + testIco + '" alt=""> Toets</button></div></article>'
-    );
-  }).join("");
-  const next = COURSE.phases.find((p) => p.id === phaseId + 1);
-  const nextCost = next ? phaseCost(next.id) : null;
-  return (
-    screen + topbar() + '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + " — " + phase.title +
-    "</h1><p>" + (PHASE_BLURB[phaseId] || phase.short) + "</p>" +
-    (nextCost
-      ? "<p>Volgende fase vanaf " + nextCost.les + " lesstof en " + nextCost.toets + " toetsen (nu " + leerstofScore() + " / " + toetsScore() + ").</p>"
-      : "") +
-    '<div class="progress-bar"><span style="width:' + pctDone(phaseId) + '%"></span></div></div>' +
-    '<div class="stone-grid">' + stones + "</div></div></div>"
-  );
-}
-
 function renderLesson(phaseId, id) {
   const m = getMilestone(id);
   if (!m) return renderPhase(phaseId);
