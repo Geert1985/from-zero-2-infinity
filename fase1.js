@@ -2,147 +2,122 @@
 const MILESTONES_1 = [
   {
     id: "1.1",
-    title: "Getalbegrip en positiestelsel",
+    title: "Cijfers en Getallen",
     goal: "Van tellen naar getallen.",
-    theory: `
-      <h2>Milestone 1.1 — Getalbegrip en het positiestelsel</h2>
-      <p><strong>Doel:</strong> 
-      <ul>
-        <li>begrijpen wat het verschil is tussen een cijfer en een getal</li>
-        <li>hoe we hoeveelheden met getallen schrijven</li>
-        <li>hoe het tientallig positiestelsel werkt</li>
-        <li>hoe natuurlijke getallen op een getallenlijn geordend en vergeleken worden</li>
-      </ul>
-      </p>
+    theory: /* html */`
+      <h2>Cijfers en Getallen</h2>
+        <p><strong>Doel:</strong> 
+          <ul>
+            <li>begrijpen wat het verschil is tussen een cijfer en een getal</li>
+            <li>hoe we hoeveelheden met getallen schrijven</li>
+            <li>hoe het tientallig positiestelsel werkt</li>
+            <li>hoe natuurlijke getallen op een getallenlijn geordend en vergeleken worden</li>
+          </ul>
+        </p>
 
       <h3>1. Het verschil tussen een getal en een cijfer</h3>
-      <p>Stel dat er drie appels op tafel liggen. We kunnen ook drie stenen of drie stoelen hebben.</p>
-      <p>De voorwerpen zijn verschillend, maar de <strong>hoeveelheid is dezelfde: drie</strong></p>
-      <p>Het <strong>getal 3</strong> geeft die hoeveelheid aan</p>
-      <p>Het <strong>Een cijfer is een teken waarmee we een getal schrijven.</strong></p>
-      <div>
-        <p>bijvoorbeeld:</p>
-        <ul>
-          <li>3 appels => het <strong>getal 3</strong> dat bestaat uit het <strong>cijfer 3</strong> </li>
-          <li>27 appels => het <strong>getal 27</strong> dat bestaat uit <strong>cijfer 2 en 7</strong></li>
-          <li>405 appels => het <strong>getal 405</strong> dat bestaat uit de <strong>cijfers 4, 0 en 5</strong></li>
-        </ul>
-      </div>
+        <p>Stel dat er drie appels op tafel liggen. We kunnen ook drie stenen of drie stoelen hebben.</p>
+        <p>De voorwerpen zijn verschillend, maar de <strong>hoeveelheid is dezelfde: drie</strong></p>
+        <p>Het <strong>getal 3</strong> geeft die hoeveelheid aan</p>
+        <p>Het <strong>Een cijfer is een teken waarmee we een getal schrijven.</strong></p>
+        <div>
+          <p>bijvoorbeeld:</p>
+          <ul>
+            <li>3 appels => het <strong>getal 3</strong> dat bestaat uit het <strong>cijfer 3</strong> </li>
+            <li>27 appels => het <strong>getal 27</strong> dat bestaat uit <strong>cijfer 2 en 7</strong></li>
+            <li>405 appels => het <strong>getal 405</strong> dat bestaat uit de <strong>cijfers 4, 0 en 5</strong></li>
+          </ul>
+        </div>
 
-      <div class="callout"><strong>Cijfer ≠ getal.</strong> Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</div>
+        <div class="callout"><strong>Cijfer ≠ getal.</strong> Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</div>
 
       <h3>2. Cijfers en de tien symbolen</h3>
-      <p>In het decimale stelsel gebruiken we precies tien cijfers:</p>
-      <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
-      
-      <div class="callout"><strong>Elk cijfer heeft een naam en een symbool.</strong> 
-        <p class="formula">0 = nul</p>
-        <p class="formula">1 = één</p>
-        <p class="formula">2 = twee</p>
-        <p class="formula">3 = drie</p>
-        <p class="formula">4 = vier</p>
-        <p class="formula">5 = vijf</p>
-        <p class="formula">6 = zes</p>
-        <p class="formula">7 = zeven</p>
-        <p class="formula">8 = acht</p>
-        <p class="formula">9 = negen</p>
-      </div>
+        <p>In het decimale stelsel gebruiken we precies tien cijfers:</p>
+        <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+        
+        <div class="callout"><strong>Elk cijfer heeft een naam en een symbool.</strong> 
+          <p class="formula">0 = nul</p>
+          <p class="formula">1 = één</p>
+          <p class="formula">2 = twee</p>
+          <p class="formula">3 = drie</p>
+          <p class="formula">4 = vier</p>
+          <p class="formula">5 = vijf</p>
+          <p class="formula">6 = zes</p>
+          <p class="formula">7 = zeven</p>
+          <p class="formula">8 = acht</p>
+          <p class="formula">9 = negen</p>
+        </div>
 
-      <p>Met deze tien cijfers kunnen we oneindig veel verschillende getallen schrijven. Het verschil tussen bijvoorbeeld 2, 20 en 200 komt niet door nieuwe cijfers, maar door de <strong>positie</strong> van het cijfer.</p>
-     
+        <p>Met deze tien cijfers kunnen we oneindig veel verschillende getallen schrijven. Het verschil tussen bijvoorbeeld 2, 20 en 200 komt niet door nieuwe cijfers, maar door de <strong>positie</strong> van het cijfer.</p>
 
       <h3>3. Getallen groter dan 9</h3>
+        <p>We hebben nu de <strong>10 cijfers</strong> geleerd:</p>
+        <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+        <p>Maar met deze 10 cijfers kunnen we nog veel meer getallen maken.</p>
+        <p>Na 9 komt bijvoorbeeld:</p>
+        <p class="formula">10, 11, 12, 13, 14, ... , 99, 100, 101, 102, ...</p>
+        <p>Hoe kunnen we met maar 10 cijfers toch oneindig veel getallen schrijven?</p>
+        <h4>De plaats van een cijfer is belangrijk</h4>
+        <p>We schrijven getallen met cijfers. De <strong>plaats</strong> van een cijfer bepaalt hoeveel het cijfer waard is.</p>
+        <p>Kijk bijvoorbeeld naar het getal <strong>4 705</strong> (vierduizend zevenhonderd en vijf). We gaan van rechts naar links kijken welke cijfers we tegenkomen en wat de waarde ervan is</p>
+        <table>
+          <tr>
+            <th>Cijfer</th>  
+            <th>Plaats</th>
+            <th>Waarde</th>
+            <th>Naam</th>
+          </tr>
+          <tr>
+            <td>5</td>  
+            <td>1e van rechts</td>
+            <td>1</td>
+            <td>eenheden</td>  
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>2e van rechts</td>
+            <td>10</td>
+            <td>tientallen</td>    
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>3e van rechts</td>
+            <td>100</td>
+            <td>honderdtallen</td>    
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>4e van rechts</td>
+            <td>1 000</td>
+            <td>duizendtallen</td>    
+          </tr>
+        </table>
 
-      <p>We hebben nu de <strong>10 cijfers</strong> geleerd:</p>
+        <p>We kunnen het getal <strong>4 705</strong> dus opdelen:</p>
 
-      <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
-
-      <p>Maar met deze 10 cijfers kunnen we nog veel meer getallen maken.</p>
-
-      <p>Na 9 komt bijvoorbeeld:</p>
-
-      <p class="formula">10, 11, 12, 13, 14, ... , 99, 100, 101, 102, ...</p>
-
-      <p>Hoe kunnen we met maar 10 cijfers toch oneindig veel getallen schrijven?</p>
-
-      <h4>De plaats van een cijfer is belangrijk</h4>
-
-      <p>We schrijven getallen met cijfers. De <strong>plaats</strong> van een cijfer bepaalt hoeveel het cijfer waard is.</p>
-
-      <p>Kijk bijvoorbeeld naar het getal <strong>4 705</strong> (vierduizend zevenhonderd en vijf). We gaan van rechts naar links kijken welke cijfers we tegenkomen en wat de waarde ervan is</p>
-
-      <table>
-        <tr>
-          <th>Cijfer</th>  
-          <th>Plaats</th>
-          <th>Waarde</th>
-          <th>Naam</th>
-        </tr>
-        <tr>
-          <td>5</td>  
-          <td>1e van rechts</td>
-          <td>1</td>
-          <td>eenheden</td>  
-        </tr>
-        <tr>
-          <td>0</td>
-          <td>2e van rechts</td>
-          <td>10</td>
-          <td>tientallen</td>    
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>3e van rechts</td>
-          <td>100</td>
-          <td>honderdtallen</td>    
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>4e van rechts</td>
-          <td>1 000</td>
-          <td>duizendtallen</td>    
-        </tr>
-      </table>
-
-      <p>We kunnen het getal <strong>4 705</strong> dus opdelen:</p>
-
-      <p class="formula">4 000 + 700 + 0 + 5 = 4 705</p>
-
-      <p>Het cijfer <strong>4</strong> staat op de plaats van de duizendtallen. Daarom betekent het hier <strong>4 000</strong>.</p>
-
-      <p>Het cijfer <strong>7</strong> staat op de plaats van de honderdtallen. Daarom betekent het hier <strong>700</strong>.</p>
-
-      <p>Het cijfer <strong>5</strong> staat op de plaats van de eenheden. Daarom betekent het hier <strong>5</strong>.</p>
-
-      <h4>De waarde van een cijfer</h4>
-
-      <p>We maken hierbij onderscheid tussen twee dingen:</p>
-
-      <ul>
-        <li>De <strong>cijferwaarde</strong> is het cijfer zelf.</li>
-        <li>De <strong>plaatswaarde</strong> is wat het cijfer betekent door zijn plaats in het getal.</li>
-      </ul>
-
-      <p>Bijvoorbeeld in <strong>4 705</strong>:</p>
-
-      <ul>
-        <li>het cijfer is <strong>7</strong>;</li>
-        <li>de plaatswaarde van 7 is <strong>700</strong>.</li>
-      </ul>
-
-      <h4>Een eenvoudig patroon</h4>
-
+        <p class="formula">4 000 + 700 + 0 + 5 = 4 705</p>
+        <p>Het cijfer <strong>4</strong> staat op de plaats van de duizendtallen. Daarom betekent het hier <strong>4 000</strong>.</p>
+        <p>Het cijfer <strong>7</strong> staat op de plaats van de honderdtallen. Daarom betekent het hier <strong>700</strong>.</p>
+        <p>Het cijfer <strong>5</strong> staat op de plaats van de eenheden. Daarom betekent het hier <strong>5</strong>.</p>
+        <div class="callout"><strong>Bepalen van de waarde van een cijfer in een getal.</strong> 
+          <p>We maken hierbij onderscheid tussen twee dingen:</p>
+          <ul>
+            <li>De <strong>cijferwaarde</strong> is het cijfer zelf.</li>
+            <li>De <strong>plaatswaarde</strong> is wat het cijfer betekent door zijn plaats in het getal.</li>
+          </ul>
+        </div>
+        <p>Bijvoorbeeld in <strong>4 705</strong>:</p>
+        <ul>
+          <li>het cijfer is <strong>7</strong>;</li>
+          <li>de plaatswaarde van 7 is <strong>700</strong>.</li>
+        </ul>
+        <h4>Een eenvoudig patroon</h4>
       <p>Als je helemaal rechts begint bij een getal, zal bij elke stap naar links de waarde van het cijfer <strong>10 keer groter</strong> worden:</p>
-
       <p class="formula">1 → 10 → 100 → 1 000 → 10 000 → ...</p>
-
       <p>Daarom noemen we ons getallensysteem het <strong>tientallig stelsel</strong>.</p>
-
       <p>Met slechts 10 cijfers kunnen we zo alle getallen schrijven: van kleine getallen tot getallen met miljoenen, miljarden en nog veel meer cijfers.</p>
-      
 
       <h3>4. De natuurlijke getallen</h3>
-
       <p>Als we dingen tellen, gebruiken we de <strong>natuurlijke getallen</strong>.</p>
 
       <p>Bijvoorbeeld:</p>
@@ -231,92 +206,103 @@ const MILESTONES_1 = [
 
       <p>Later zullen we daarom kennismaken met <strong>negatieve getallen</strong> en met een grotere verzameling getallen.</p>
       
-      <h3>5. Nul als cijfer en als plaatshouder</h3>
-      <p>Nul heeft twee belangrijke rollen.</p>
-      <ul>
-        <li><strong>Als getal:</strong> 0 betekent geen hoeveelheid.</li>
-        <li><strong>Als plaatshouder:</strong> een 0 kan aangeven dat een bepaalde positie leeg is.</li>
-      </ul>
-      <p>In <strong>405</strong> staat 0 op de tientallenpositie. Er zijn 4 honderdtallen, 0 tientallen en 5 eenheden:</p>
-      <p class="formula">405 = 4 × 100 + 0 × 10 + 5 × 1</p>
-      <p>Zonder de 0 zouden we 45 schrijven. De 0 verandert dus niet alleen niets aan de hoeveelheid tientallen — ze maakt de positie van de andere cijfers zichtbaar.</p>
+      <h3>5. Getallen vergelijken</h3>
 
-      <h3>6. Grote getallen lezen en schrijven</h3>
-      <p>Elke positie naar links is tien keer zo groot. Na eenheden, tientallen, honderdtallen en duizendtallen volgen onder andere tienduizendtallen, honderdduizendtallen en miljoenen.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">3 482 019 = 3 000 000 + 400 000 + 80 000 + 2 000 + 0 × 100 + 10 + 9</p>
-      <p>Let erop dat een 0 op een positie ook hier informatie geeft: in 3 482 019 zijn er geen honderden.</p>
+<p>We kunnen getallen op een <strong>getallenlijn</strong> zetten.</p>
 
-      <h3>7. De getallenlijn</h3>
-      <p>We kunnen natuurlijke getallen voorstellen op een <strong>getallenlijn</strong>:</p>
-      <div data-widget="nats"></div>
-      
-      <p>Als je naar rechts beweegt, worden de getallen groter. Als je naar links beweegt, worden ze kleiner.</p>
-      <ul>
-        <li><strong>a &lt; b</strong>: a is kleiner dan b.</li>
-        <li><strong>a = b</strong>: a en b zijn gelijk.</li>
-        <li><strong>a &gt; b</strong>: a is groter dan b.</li>
-      </ul>
-      <p>Voor twee natuurlijke getallen is precies één van deze drie uitspraken waar.</p>
+<div data-widget="nats"></div>
 
-      <h3>8. Getallen vergelijken</h3>
-      <p>Bij getallen met evenveel cijfers vergelijk je eerst de meest linkse cijfers. Als die gelijk zijn, kijk je naar de volgende positie.</p>
-      <p>Voorbeeld:</p>
-      <p class="formula">4 728 &gt; 4 682</p>
-      <p>De duizendtallen zijn gelijk (4 = 4). Daarna vergelijken we de honderdtallen: 7 &gt; 6. Daarom is 4 728 groter.</p>
-      <p>Bij getallen met een verschillend aantal cijfers is een positief getal met meer cijfers groter:</p>
-      <p class="formula">999 &lt; 1 000</p>
+<p>Op een getallenlijn geldt:</p>
 
-      <h3>9. Afstand op de getallenlijn</h3>
-      <p>De afstand tussen twee natuurlijke getallen kun je bepalen door het verschil te nemen. Tussen 7 en 12 zitten bijvoorbeeld 5 stappen:</p>
-      <p class="formula">12 − 7 = 5</p>
-      <p>Dit idee wordt later belangrijk wanneer we absolute waarde, negatieve getallen en functies leren kennen.</p>
+<ul>
+  <li>naar <strong>rechts</strong> → de getallen worden groter;</li>
+  <li>naar <strong>links</strong> → de getallen worden kleiner.</li>
+</ul>
 
-      <h3>10. Een eerste wiskundig inzicht</h3>
-      <p>Het decimale stelsel is geen verzameling losse trucjes. Het is een systeem waarin elke positie een veelvoud van 10 vertegenwoordigt:</p>
-      <p>Daarom kun je elk natuurlijk getal ontleden in plaatswaarden. Dit principe vormt later de basis voor rekenen met grotere getallen, decimalen, machten en uiteindelijk algebra.</p>
-    `,
-    practice: [
-      { id: "p11-1", prompt: "Welke twee begrippen passen bij elkaar? Kies: het symbool 7 is een (cijfer/getal).", type: "choice", choices: ["cijfer", "getal"], accept: ["cijfer"] },
-      { id: "p11-2", prompt: "Schrijf 572 uit in honderdtallen, tientallen en eenheden.", accept: ["5×100+7×10+2×1", "5*100+7*10+2*1", "5 x 100 + 7 x 10 + 2 x 1"] },
-      { id: "p11-3", prompt: "Welk getal is 6 × 1 000 + 0 × 100 + 4 × 10 + 9?", accept: ["6049", "6 049"] },
-      { id: "p11-4", prompt: "Wat is de cijferwaarde van de 7 in 5 728?", accept: ["7"] },
-      { id: "p11-5", prompt: "Wat is de plaatswaarde van de 7 in 5 728?", accept: ["700"] },
-      { id: "p11-6", prompt: "Wat is de opvolger van 999?", accept: ["1000", "1 000"] },
-      { id: "p11-7", prompt: "Wat is de voorganger van 1 000?", accept: ["999"] },
-      { id: "p11-8", prompt: "Wat krijg je als je in 308 de 0 weglaat?", accept: ["38"] },
-      { id: "p11-9", prompt: "Waarom is de 0 in 405 belangrijk? Kies het beste antwoord.", type: "choice", choices: ["Omdat 0 groter is dan 5", "Omdat hij de tientallenpositie bewaart", "Omdat 405 anders negatief wordt", "Omdat 4 + 5 = 9"], accept: ["Omdat hij de tientallenpositie bewaart"] },
-      { id: "p11-10", prompt: "Hoeveel honderdtallen zitten er in 1 040?", accept: ["10"] },
-      { id: "p11-11", prompt: "Schrijf 3 482 019 als som van zijn plaatswaarden.", accept: ["3×1000000+4×100000+8×10000+2×1000+0×100+1×10+9", "3*1000000+4*100000+8*10000+2*1000+0*100+1*10+9"] },
-      { id: "p11-12", prompt: "Vul in: 45 □ 54. Gebruik <, > of =.", accept: ["<"] },
-      { id: "p11-13", prompt: "Vul in: 2 005 □ 1 999. Gebruik <, > of =.", accept: [">"] },
-      { id: "p11-14", prompt: "Zet van klein naar groot: 12, 3, 30, 21, 0, 8.", accept: ["0,3,8,12,21,30"] },
-      { id: "p11-15", prompt: "Welk natuurlijk getal ligt precies tussen 19 en 21?", accept: ["20"] },
-      { id: "p11-16", prompt: "Hoeveel stappen liggen er op de getallenlijn tussen 7 en 12?", accept: ["5"] },
-      { id: "p11-17", prompt: "Rond 43 af op het dichtstbijzijnde tiental.", accept: ["40"] },
-      { id: "p11-18", prompt: "Rond 47 af op het dichtstbijzijnde tiental.", accept: ["50"] },
-      { id: "p11-19", prompt: "Rond 1 249 af op het dichtstbijzijnde honderdtal.", accept: ["1200", "1 200"] },
-      { id: "p11-20", prompt: "Waar of niet waar: er bestaat een grootste natuurlijk getal.", type: "choice", choices: ["waar", "niet waar"], accept: ["niet waar"] },
-      { id: "p11-21", prompt: "Leg kort uit waarom er geen grootste natuurlijk getal bestaat.", type: "text", accept: ["je kunt er altijd 1 bij optellen", "er kan altijd 1 bij", "voor elk getal bestaat een groter getal"] },
-      { id: "p11-22", prompt: "Welke uitspraak is juist? Kies één.", type: "choice", choices: ["107 < 98", "107 = 98", "107 > 98"], accept: ["107 > 98"] }
-    ],
-    exam: [
-      { id: "e11-1", prompt: "Schrijf 4 705 als som van duizendtallen, honderdtallen, tientallen en eenheden.", accept: ["4×1000+7×100+0×10+5×1", "4*1000+7*100+0*10+5", "4 × 1000 + 7 × 100 + 0 × 10 + 5"] },
-      { id: "e11-2", prompt: "Welk getal is 3 × 10³ + 0 × 10² + 2 × 10¹ + 8 × 10⁰?", accept: ["3028", "3 028"] },
-      { id: "e11-3", prompt: "Wat is de cijferwaarde van de 6 in 6 204?", accept: ["6"] },
-      { id: "e11-4", prompt: "Wat is de plaatswaarde van de 6 in 6 204?", accept: ["6000", "6 000"] },
-      { id: "e11-5", prompt: "Waarom is de 0 in 4 050 nodig? Kies het beste antwoord.", type: "choice", choices: ["Omdat hij de honderdtallenpositie bewaart", "Omdat nul groter is dan 4", "Omdat 4 050 een priemgetal is", "Omdat de 5 anders negatief wordt"], accept: ["Omdat hij de honderdtallenpositie bewaart"] },
-      { id: "e11-6", prompt: "Zet van klein naar groot: 101, 11, 110, 0, 99.", accept: ["0,11,99,101,110"] },
-      { id: "e11-7", prompt: "Vul in: 2 999 □ 3 001. Gebruik <, > of =.", accept: ["<"] },
-      { id: "e11-8", prompt: "Welke is de opvolger van 9 999?", accept: ["10000", "10 000"] },
-      { id: "e11-9", prompt: "Welke is de voorganger van 1 000?", accept: ["999"] },
-      { id: "e11-10", prompt: "Rond 6 748 af op het dichtstbijzijnde honderdtal.", accept: ["6700", "6 700"] },
-      { id: "e11-11", prompt: "Hoeveel stappen liggen er tussen 14 en 20 op de getallenlijn?", accept: ["6"] },
-      { id: "e11-12", prompt: "Een leerling zegt: 'In 5 203 heeft de 2 de plaatswaarde 2 000.' Heeft de leerling gelijk? Antwoord ja of nee.", accept: ["ja"] },
-      { id: "e11-13", prompt: "Een leerling zegt: 'Omdat 89 uit twee cijfers bestaat en 102 uit drie cijfers, is 89 groter dan 102.' Wat is de fout? Kies het beste antwoord.", type: "choice", choices: ["Een getal met meer cijfers is altijd kleiner", "De leerling verwart het aantal cijfers met de grootte van het getal", "102 is geen natuurlijk getal", "89 moet eerst afgerond worden"], accept: ["De leerling verwart het aantal cijfers met de grootte van het getal"] },
-      { id: "e11-14", prompt: "Klopt 107 > 98? Antwoord ja of nee en geef een korte reden.", type: "text", accept: ["ja", "ja, 107 heeft drie cijfers en 98 twee", "ja want 107 is groter", "ja, 107 is groter"] }
-    ]
-  },
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 &lt; 7</p>
+
+<p>We lezen dit als: <strong>3 is kleiner dan 7</strong>.</p>
+
+<p>Het getal 3 staat namelijk links van 7 op de getallenlijn.</p>
+
+<h4>De tekens &lt;, = en &gt;</h4>
+
+<p>Om getallen met elkaar te vergelijken, gebruiken we drie tekens:</p>
+
+<ul>
+  <li><strong>&lt;</strong> betekent: kleiner dan</li>
+  <li><strong>=</strong> betekent: gelijk aan</li>
+  <li><strong>&gt;</strong> betekent: groter dan</li>
+</ul>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">4 &lt; 9</p>
+<p class="formula">6 = 6</p>
+<p class="formula">12 &gt; 5</p>
+
+<p>Let goed op de vorm van het teken. De <strong>puntige kant</strong> wijst altijd naar het kleinste getal.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 &lt; 8</p>
+
+<p>De puntige kant van <strong>&lt;</strong> wijst naar 3, omdat 3 het kleinste getal is.</p>
+
+<h4>Grotere getallen vergelijken</h4>
+
+<p>Bij grotere getallen kunnen we niet altijd gemakkelijk naar een getallenlijn kijken. We kunnen de cijfers van de getallen met elkaar vergelijken.</p>
+
+<p>Begin altijd bij het <strong>meest linkse cijfer</strong>.</p>
+
+<p>Bijvoorbeeld: 9 728 en 9 758</p>
+
+
+<p>We vergelijken eerst de duizendtallen:</p>
+
+<p class="formula">9 = 9</p>
+
+<p>Die zijn gelijk. Daarom kijken we naar de honderdtallen:</p>
+
+<p class="formula">7 = 7</p>
+
+<p>Ook die zijn gelijk. We kijken dus naar de tientallen:</p>
+
+<p class="formula">2 &lt; 5</p>
+
+<p>Daarom is:</p>
+
+<p class="formula">9 728 &lt; 9 758</p>
+
+<p>We vergelijken dus de cijfers <strong>van links naar rechts</strong>, totdat we een verschil vinden.</p>
+
+<h4>Als de getallen niet evenveel cijfers hebben</h4>
+
+<p>Heeft een getal <strong>meer cijfers</strong> dan een ander positief natuurlijk getal, dan is het ook groter.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">840 &lt; 2 840</p>
+
+<p>840 heeft drie cijfers en 2 840 heeft vier cijfers. Daarom is 2 840 groter.</p>
+
+<p>Dit werkt ook bij nog grotere getallen:</p>
+
+<p class="formula">9 999 &lt; 10 000</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Om twee getallen te vergelijken:</p>
+  <ol>
+    <li>Kijk eerst naar het aantal cijfers.</li>
+    <li>Als dat gelijk is, vergelijk je de cijfers van <strong>links naar rechts</strong>.</li>
+    <li>Het eerste cijfer dat verschilt, bepaalt welk getal groter is.</li>
+  </ol>
+</div>
+`   
+},
   {
     id: "1.2",
     title: "De vier hoofdbewerkingen",
