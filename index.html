@@ -8,12 +8,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
-  <link rel="stylesheet" href="styles.css?v=32" />
-  <link rel="stylesheet" href="cards.css?v=32" />
+  <link rel="stylesheet" href="styles.css?v=33" />
+  <link rel="stylesheet" href="cards.css?v=33" />
   <link rel="icon" href="assets/icon-fase7.png" />
+  <script>
+    window.addEventListener("error", function (e) {
+      var app = document.getElementById("app");
+      if (!app) return;
+      app.innerHTML =
+        '<div style="color:#e6c77a;padding:28px;font-family:sans-serif;max-width:720px">' +
+        "<h1>Fout bij starten</h1>" +
+        "<p>De pagina is geladen, maar een script is gestruikeld:</p>" +
+        "<pre style=\"white-space:pre-wrap;background:#111;padding:12px;border-radius:8px\">" +
+        String(e.message || e) + "\n" +
+        String(e.filename || "") + (e.lineno ? ":" + e.lineno : "") +
+        "</pre></div>";
+    });
+  </script>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app"><p style="color:#e6c77a;padding:24px;font-family:sans-serif">Laden…</p></div>
   <script src="https://cdn.jsdelivr.net/npm/redux@4.2.1/dist/redux.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjs@13.2.0/lib/browser/math.min.js"></script>
@@ -30,12 +44,28 @@
   <script src="fase7.js?v=16"></script>
   <script src="content.js?v=16"></script>
   <script src="exam.js?v=15"></script>
-  <script src="store.js?v=32"></script>
+  <script src="store.js?v=33"></script>
   <script src="math.js?v=15"></script>
   <script src="widgets.js?v=18"></script>
-  <script src="app.js?v=32"></script>
-  <script src="lesson-pager.js?v=32"></script>
+  <script src="app.js?v=33"></script>
+  <script src="lesson-pager.js?v=33"></script>
   <script src="score-live.js?v=30"></script>
   <script src="cards-ui.js?v=30"></script>
+  <script>
+    (function () {
+      var app = document.getElementById("app");
+      try {
+        if (typeof render === "function") render();
+        else if (app) app.innerHTML = "<p style=\"color:#e6c77a;padding:24px\">render() ontbreekt. app.js is niet geladen.</p>";
+      } catch (err) {
+        if (app) {
+          app.innerHTML =
+            '<div style="color:#e6c77a;padding:28px;font-family:sans-serif"><h1>Fout bij render</h1><pre>' +
+            String(err && err.stack ? err.stack : err) +
+            "</pre></div>";
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
