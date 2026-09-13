@@ -36,27 +36,3 @@
   text-transform: none;
   letter-spacing: 0.02em;
 }
-
-.callout {
-  position: relative;
-}
-.callout-collect {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-end;
-}
-.callout-collect .btn,
-.callout-collect .inzicht-done {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.inzicht-done {
-  color: var(--good);
-  font-size: 14px;
-  font-weight: 700;
-}
-.callout-collect .book-ico {
-  width: 22px;
-  height: 22px;
-}
