@@ -1,0 +1,31 @@
+.cost-ico {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  vertical-align: -3px;
+  margin: 0 2px;
+}
+.phase-card .status.locked {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+.stone {
+  text-align: center;
+}
+.stone h3,
+.stone p,
+.stone .status {
+  text-align: center;
+}
+.stone-topic {
+  margin: 0 14px 2px !important;
+  font-size: 13px !important;
+  color: #e6c77a !important;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
