@@ -45,8 +45,8 @@ function renderLesson(phaseId, id, page) {
   );
 }
 
-const _render0 = render;
-function render() {
+window.__appRender = window.render;
+window.render = function renderPaged() {
   const parts = parseHash();
   const app = document.getElementById("app");
   if (app && parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") {
@@ -56,17 +56,6 @@ function render() {
     if (slot && typeof mountWidgets === "function") mountWidgets(app, parts[3]);
     return;
   }
-  return _render0();
-}
-window.removeEventListener("hashchange", _render0);
-window.addEventListener("hashchange", render);
-
-document.addEventListener("keydown", function (e) {
-  const parts = parseHash();
-  if (parts[4] !== "les") return;
-  const buttons = document.querySelectorAll(".lesson-pager [data-go]");
-  if (e.key === "ArrowLeft" && buttons[0]) go(buttons[0].getAttribute("data-go"));
-  if (e.key === "ArrowRight" && buttons[1]) go(buttons[1].getAttribute("data-go"));
-});
-
-if (document.readyState !== "loading") render();
+  return window.__appRender();
+};
+window.addEventListener("hashchange", window.render);
