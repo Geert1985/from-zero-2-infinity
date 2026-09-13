@@ -13,6 +13,22 @@ function lessonPages(html) {
   return parts;
 }
 
+function enhanceCallouts(root, mid, page) {
+  if (!root) return;
+  const boxes = root.querySelectorAll(".callout");
+  boxes.forEach(function (box, idx) {
+    if (box.querySelector(".callout-collect")) return;
+    const key = String(mid) + ":p" + String(page) + ":c" + idx;
+    const taken = typeof inzichtCollected === "function" && inzichtCollected(key);
+    const wrap = document.createElement("div");
+    wrap.className = "callout-collect";
+    wrap.innerHTML = taken
+      ? '<span class="inzicht-done"><img class="book-ico" src="assets/inzicht.png" alt=""> Inzicht verzameld</span>'
+      : '<button type="button" class="btn collect-inzicht" data-ikey="' + key + '"><img class="book-ico" src="assets/inzicht.png" alt=""> Verzamel inzicht</button>';
+    box.appendChild(wrap);
+  });
+}
+
 function renderLesson(phaseId, id, page) {
   const m = getMilestone(id);
   if (!m) return renderPhase(phaseId);
@@ -54,8 +70,11 @@ window.render = function renderPaged() {
     if (typeof typesetMath === "function") typesetMath(app);
     const slot = app.querySelector("[data-widget]");
     if (slot && typeof mountWidgets === "function") mountWidgets(app, parts[3]);
+    enhanceCallouts(app, parts[3], parts[5] || 0);
     return;
   }
   return window.__appRender();
 };
 window.addEventListener("hashchange", window.render);
+window.addEventListener("load", window.render);
+if (document.readyState !== "loading") window.render();
