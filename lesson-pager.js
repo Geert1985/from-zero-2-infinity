@@ -71,6 +71,11 @@ window.render = function renderPaged() {
     const slot = app.querySelector("[data-widget]");
     if (slot && typeof mountWidgets === "function") mountWidgets(app, parts[3]);
     enhanceCallouts(app, parts[3], parts[5] || 0);
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    const screen = app.querySelector(".screen");
+    if (screen) screen.scrollTop = 0;
     return;
   }
   return window.__appRender();
