@@ -1288,7 +1288,60 @@ const MILESTONES_1 = [
   <p>Bij aftrekken en delen mag dat niet zomaar.</p>
 </div>
 
-<h3>13. Associatieve eigenschap</h3>
+<h3>13. Haakjes</h3>
+
+
+<p>Haakjes geven aan dat de berekening die ertussen staat, als één geheel moet worden bekeken.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">(2 + 3) × 4</p>
+
+<p>We rekenen eerst uit wat tussen de haakjes staat:</p>
+
+<p class="formula">2 + 3 = 5</p>
+
+<p>Daarna vermenigvuldigen we met 4:</p>
+
+<p class="formula">5 × 4 = 20</p>
+
+<p>Dus:</p>
+
+<p class="formula">(2 + 3) × 4 = 20</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Haakjes geven aan welke berekening eerst moet worden uitgevoerd.</p>
+</div>
+
+<h4>Waarom zijn haakjes belangrijk?</h4>
+
+<p>Zonder haakjes kan dezelfde getallencombinatie een andere uitkomst geven.</p>
+
+<p>Vergelijk:</p>
+
+<p class="formula">2 + 3 × 4</p>
+
+<p>met:</p>
+
+<p class="formula">(2 + 3) × 4</p>
+
+<p>Bij de eerste berekening doen we eerst de vermenigvuldiging:</p>
+
+<p class="formula">2 + 12 = 14</p>
+
+<p>Bij de tweede berekening zorgen de haakjes ervoor dat we eerst optellen:</p>
+
+<p class="formula">5 × 4 = 20</p>
+
+<p>Dus:</p>
+
+<p class="formula">2 + 3 × 4 = 14</p>
+
+<p class="formula">(2 + 3) × 4 = 20</p>
+
+
+<h3>14. Associatieve eigenschap</h3>
 
 <p>Bij optellen en vermenigvuldigen kunnen we niet alleen de volgorde veranderen. We kunnen ook bepalen <strong>welke getallen we eerst samen nemen</strong>.</p>
 
@@ -1342,61 +1395,47 @@ const MILESTONES_1 = [
   <p class="formula">(a × b) × c = a × (b × c)</p>
 </div>
 
+<h3>15. Distributieve eigenschap</h3>
 
-<h3>14. Haakjes</h3>
-
-<p>Je bent eerder al haakjes tegengekomen. Haakjes zijn de tekens <strong>(</strong> en <strong>)</strong>.</p>
-
-<p>Haakjes geven aan dat de berekening die ertussen staat, als één geheel moet worden bekeken.</p>
+<p>Bij <strong>slim rekenen met vermenigvuldigen</strong> hebben we al gezien dat we een vermenigvuldiging kunnen opsplitsen in eenvoudigere delen.</p>
 
 <p>Bijvoorbeeld:</p>
 
-<p class="formula">(2 + 3) × 4</p>
+<p class="formula">7 × 13 = (7 × 10) + (7 × 3)</p>
 
-<p>We rekenen eerst uit wat tussen de haakjes staat:</p>
+<p>We hebben 13 dus opgesplitst in 10 en 3:</p>
 
-<p class="formula">2 + 3 = 5</p>
+<p class="formula">13 = 10 + 3</p>
 
-<p>Daarna vermenigvuldigen we met 4:</p>
+<p>Dit is geen toevallige rekenhandigheid. Het is een belangrijk wiskundig principe. We geven dit principe de naam <strong>distributieve eigenschap</strong>.</p>
 
-<p class="formula">5 × 4 = 20</p>
+<h4>Vermenigvuldigen over een optelling</h4>
 
-<p>Dus:</p>
+<p>Een vermenigvuldiging mag worden verdeeld over de termen van een optelling.</p>
 
-<p class="formula">(2 + 3) × 4 = 20</p>
+<p>In het algemeen geldt:</p>
+
+<p class="formula">a × (b + c) = a × b + a × c</p>
+
+<p>Bij ons voorbeeld geeft dat:</p>
+
+<p class="formula">7 × (10 + 3) = 7 × 10 + 7 × 3</p>
+
+<p>En dus:</p>
+
+<p class="formula">7 × 13 = 70 + 21 = 91</p>
 
 <div class="callout">
   <p><strong>Onthoud:</strong></p>
-  <p>Haakjes geven aan welke berekening eerst moet worden uitgevoerd.</p>
+  <p>De distributieve eigenschap betekent dat een vermenigvuldiging kan worden verdeeld over een optelling.</p>
+
+  <p class="formula">a × (b + c) = a × b + a × c</p>
+
+  <p>Je hebt dit principe al gebruikt bij <strong>slim rekenen met vermenigvuldigen</strong>. Nu heeft het een naam.</p>
 </div>
 
-<h4>Waarom zijn haakjes belangrijk?</h4>
 
-<p>Zonder haakjes kan dezelfde getallencombinatie een andere uitkomst geven.</p>
-
-<p>Vergelijk:</p>
-
-<p class="formula">2 + 3 × 4</p>
-
-<p>met:</p>
-
-<p class="formula">(2 + 3) × 4</p>
-
-<p>Bij de eerste berekening doen we eerst de vermenigvuldiging:</p>
-
-<p class="formula">2 + 12 = 14</p>
-
-<p>Bij de tweede berekening zorgen de haakjes ervoor dat we eerst optellen:</p>
-
-<p class="formula">5 × 4 = 20</p>
-
-<p>Dus:</p>
-
-<p class="formula">2 + 3 × 4 = 14</p>
-
-<p class="formula">(2 + 3) × 4 = 20</p>
-
-<h3>15. Bewerkingsvolgorde</h3>
+<h3>16. Bewerkingsvolgorde</h3>
 
 <h4>De volgorde van bewerkingen</h4>
 
@@ -1463,7 +1502,7 @@ const MILESTONES_1 = [
   <p>Bij bewerkingen van hetzelfde niveau rekenen we van links naar rechts.</p>
 </div>
 
-<h3>15. Schatten en controleren</h3>
+<h3>17. Schatten en controleren</h3>
 
 <p>Je kunt een berekening op verschillende manieren controleren. Een handige manier is eerst een <strong>schatting</strong> te maken.</p>
 
