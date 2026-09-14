@@ -219,7 +219,11 @@ function mountTangent(root) {
     root.querySelector("[data-o=h]").textContent = h.toFixed(2);
     const sec = (f(x0 + h) - f(x0)) / h;
     const tan = 2 * x0;
-    note.textContent = `secanthelling = ${sec.toFixed(2)} · raaklijn f'(${x0.toFixed(2)}) = ${tan.toFixed(2)}`;
+    let msg = "Maak h kleiner. Secant = " + sec.toFixed(2) + " · raaklijn f'(" + x0.toFixed(2) + ") = " + tan.toFixed(2);
+    if (h <= 0.15 && Math.abs(sec - tan) < 0.08) {
+      msg += " · Ontdekking ontgrendeld: de afgeleide is de limiet van de secanthelling.";
+    }
+    note.textContent = msg;
     const { ctx, w, h: H } = prepCanvas(canvas);
     const world = { xMin: -3, xMax: 3, yMin: -1, yMax: 9 };
     const { sx, sy } = axes(ctx, w, H, world);
@@ -271,7 +275,7 @@ function mountRiemann(root) {
     ctx.strokeStyle = "#e6c77a";
     for (let i = 0; i < n; i++) {
       const x = a + i * dx;
-      const y = x; // left Riemann for y=x
+      const y = x;
       sum += y * dx;
       ctx.fillRect(sx(x), sy(y), sx(x + dx) - sx(x), sy(0) - sy(y));
       ctx.strokeRect(sx(x), sy(y), sx(x + dx) - sx(x), sy(0) - sy(y));
@@ -330,82 +334,54 @@ function mountVectors(root) {
 }
 
 function mountComplex(root) {
-  root.innerHTML = widgetShell("Complex vlak", "z en i·z. Vermenigvuldigen met i is 90° tegenwijzerzin.",
+  root.innerHTML = widgetShell("Complex vlak", "Van a+bi naar een punt in het vlak.",
     `<canvas></canvas>
      <div class="widget-controls">
-       <label>Re <input type="range" min="-3" max="3" step="0.1" value="1" data-k="re"> <output data-o="re">1</output></label>
-       <label>Im <input type="range" min="-3" max="3" step="0.1" value="1" data-k="im"> <output data-o="im">1</output></label>
+       <label>a <input type="range" min="-4" max="4" step="0.1" value="2" data-k="a"> <output data-o="a">2</output></label>
+       <label>b <input type="range" min="-4" max="4" step="0.1" value="1" data-k="b"> <output data-o="b">1</output></label>
      </div>
      <p class="widget-readout"></p>`);
   const canvas = root.querySelector("canvas");
-  const reEl = root.querySelector("[data-k=re]");
-  const imEl = root.querySelector("[data-k=im]");
+  const aEl = root.querySelector("[data-k=a]"), bEl = root.querySelector("[data-k=b]");
   const note = root.querySelector(".widget-readout");
   const draw = () => {
-    const re = Number(reEl.value), im = Number(imEl.value);
-    root.querySelector("[data-o=re]").textContent = re;
-    root.querySelector("[data-o=im]").textContent = im;
+    const a = Number(aEl.value), b = Number(bEl.value);
+    root.querySelector("[data-o=a]").textContent = a;
+    root.querySelector("[data-o=b]").textContent = b;
     const { ctx, w, h } = prepCanvas(canvas);
-    const { sx, sy } = axes(ctx, w, h, { xMin: -4, xMax: 4, yMin: -4, yMax: 4 });
-    const dot = (x, y, color, label) => {
-      ctx.fillStyle = color;
-      ctx.beginPath(); ctx.arc(sx(x), sy(y), 6, 0, Math.PI * 2); ctx.fill();
-      ctx.strokeStyle = color;
-      ctx.beginPath(); ctx.moveTo(sx(0), sy(0)); ctx.lineTo(sx(x), sy(y)); ctx.stroke();
-      ctx.fillStyle = "#fff6df";
-      ctx.font = "12px 'Source Sans 3', sans-serif";
-      ctx.fillText(label, sx(x) + 6, sy(y) - 6);
-    };
-    dot(re, im, "#7dcea0", "z");
-    dot(-im, re, "#e6c77a", "i·z");
-    const mod = Math.hypot(re, im);
-    note.textContent = `|z| = ${mod.toFixed(2)} · i·z = ${(-im).toFixed(1)} + ${re.toFixed(1)}i`;
+    const { sx, sy } = axes(ctx, w, h, { xMin: -5, xMax: 5, yMin: -5, yMax: 5 });
+    ctx.fillStyle = "#e6c77a";
+    ctx.beginPath(); ctx.arc(sx(a), sy(b), 6, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "13px Cinzel, serif";
+    ctx.fillText(`${a} + ${b}i`, sx(a) + 8, sy(b) - 8);
+    note.textContent = `|z| = √(${a}² + ${b}²) ≈ ${Math.hypot(a, b).toFixed(2)}`;
   };
-  [reEl, imEl].forEach((el) => el.addEventListener("input", draw));
+  [aEl, bEl].forEach((el) => el.addEventListener("input", draw));
   draw();
 }
 
 function mountUnitcircle(root) {
-  root.innerHTML = widgetShell("Eenheidscirkel", "Draai de hoek. cos is de x-coördinaat, sin de y-coördinaat.",
-    `<canvas data-h="240"></canvas>
+  root.innerHTML = widgetShell("Eenheidscirkel", "Kies een hoek en zie cosinus en sinus.",
+    `<canvas data-h="220"></canvas>
      <div class="widget-controls">
-       <label>α (°) <input type="range" min="0" max="360" step="1" value="45" data-k="deg"> <output data-o="deg">45</output></label>
+       <label>hoek ° <input type="range" min="0" max="360" step="1" value="45" data-k="deg"> <output data-o="deg">45</output></label>
      </div>
      <p class="widget-readout"></p>`);
-  const canvas = root.querySelector("canvas");
-  const degEl = root.querySelector("[data-k=deg]");
-  const note = root.querySelector(".widget-readout");
+  const canvas = root.querySelector("canvas"), degEl = root.querySelector("[data-k=deg]"), note = root.querySelector(".widget-readout");
   const draw = () => {
-    const deg = Number(degEl.value);
-    const rad = deg * Math.PI / 180;
-    const c = Math.cos(rad), s = Math.sin(rad);
-    root.querySelector("[data-o=deg]").textContent = String(deg);
-    note.textContent = "cos(" + deg + "°) ≈ " + c.toFixed(2) + " · sin(" + deg + "°) ≈ " + s.toFixed(2);
+    const deg = Number(degEl.value), a = deg * Math.PI / 180;
+    root.querySelector("[data-o=deg]").textContent = deg;
     const { ctx, w, h } = prepCanvas(canvas);
-    const { sx, sy } = axes(ctx, w, h, { xMin: -1.4, xMax: 1.4, yMin: -1.4, yMax: 1.4 });
-    ctx.strokeStyle = "#e6c77a";
-    ctx.beginPath();
-    ctx.arc(sx(0), sy(0), Math.abs(sx(1) - sx(0)), 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.strokeStyle = "#fff6df";
-    ctx.beginPath();
-    ctx.moveTo(sx(0), sy(0));
-    ctx.lineTo(sx(c), sy(s));
-    ctx.stroke();
-    ctx.strokeStyle = "#6ab0e0";
-    ctx.beginPath();
-    ctx.moveTo(sx(0), sy(0));
-    ctx.lineTo(sx(c), sy(0));
-    ctx.stroke();
-    ctx.strokeStyle = "#7dcea0";
-    ctx.beginPath();
-    ctx.moveTo(sx(c), sy(0));
-    ctx.lineTo(sx(c), sy(s));
-    ctx.stroke();
-    ctx.fillStyle = "#fff6df";
-    ctx.beginPath();
-    ctx.arc(sx(c), sy(s), 5, 0, Math.PI * 2);
-    ctx.fill();
+    const r = Math.min(w, h) * 0.35, cx = w / 2, cy = h / 2;
+    ctx.fillStyle = "#0d0b08"; ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = "rgba(230,199,122,0.35)"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx - r - 12, cy); ctx.lineTo(cx + r + 12, cy); ctx.moveTo(cx, cy - r - 12); ctx.lineTo(cx, cy + r + 12); ctx.stroke();
+    const x = cx + r * Math.cos(a), y = cy - r * Math.sin(a);
+    ctx.strokeStyle = "#e6c77a"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.stroke();
+    ctx.fillStyle = "#e6c77a"; ctx.beginPath(); ctx.arc(x, y, 5, 0, Math.PI * 2); ctx.fill();
+    note.textContent = `cos(${deg}°) ≈ ${Math.cos(a).toFixed(3)} · sin(${deg}°) ≈ ${Math.sin(a).toFixed(3)}`;
   };
   degEl.addEventListener("input", draw);
   draw();
@@ -454,35 +430,30 @@ const WIDGET_BUILDERS = {
 
 function mountWidgets(root, milestoneId) {
   const page = document.getElementById("app") || root;
-  const slots = page.querySelectorAll("[data-widget]");
+  if (!root || !page) return;
+
+  // Preferred API: the lesson itself decides where an interactive widget belongs.
+  // Example: <div data-widget="groups"></div>
+  const slots = Array.from(page.querySelectorAll("[data-widget]"));
   if (slots.length) {
     slots.forEach((slot) => {
       const kind = slot.getAttribute("data-widget");
-      (WIDGET_BUILDERS[kind] || (() => {}))(slot);
+      const builder = WIDGET_BUILDERS[kind];
+      if (builder) builder(slot);
     });
+    return;
   }
 
-  if (milestoneId === "1.2" && !page.querySelector('[data-widget="groups"]')) {
-    const groupHeading = Array.from(page.querySelectorAll("h4")).find(
-      (heading) => heading.textContent.trim() === "Vermenigvuldigen als groepjes"
-    );
-    if (groupHeading) {
-      const slot = document.createElement("div");
-      slot.setAttribute("data-widget", "groups");
-      groupHeading.insertAdjacentElement("afterend", slot);
-      WIDGET_BUILDERS.groups(slot);
-    }
-  }
-
-  if (slots.length) return;
+  // Backwards-compatible fallback for milestones that have not yet received
+  // explicit widget slots. Widgets are mounted directly in the lesson; there
+  // is deliberately no generic widget-dock/layout wrapper.
   const kinds = WIDGET_MAP[milestoneId] || [];
-  if (!kinds.length || !root) return;
-  const dock = document.createElement("div");
-  dock.className = "widget-dock";
-  root.appendChild(dock);
   kinds.forEach((kind) => {
+    const builder = WIDGET_BUILDERS[kind];
+    if (!builder) return;
     const box = document.createElement("div");
-    dock.appendChild(box);
-    (WIDGET_BUILDERS[kind] || (() => {}))(box);
+    box.className = "widget-mount";
+    root.appendChild(box);
+    builder(box);
   });
 }
