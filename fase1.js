@@ -308,50 +308,666 @@ const MILESTONES_1 = [
     id: "1.2",
     title: "De vier hoofdbewerkingen",
     goal: "Leer rekenen met getallen.",
-    theory: `
-      <h2>Milestone 1.2 — De vier hoofdbewerkingen</h2>
-      <p><strong>Doel:</strong> leren rekenen met de vier basisbewerkingen en begrijpen waarom de rekenregels werken. Je leert zowel hoofdrekenen als schriftelijke rekenmethodes en leert je antwoorden controleren.</p>
+    theory: /* html */`
+      <h2>De vier hoofdbewerkingen</h2>
 
-      <h3>1. Optellen</h3>
-      <p>Optellen combineert hoeveelheden. In <strong>7 + 5 = 12</strong> zijn 7 en 5 de termen en 12 de som.</p>
-      <p>Op de getallenlijn kun je starten bij 7 en 5 stappen naar rechts gaan.</p>
-      <p class="formula">a + 0 = a</p>
-      <p>Nul is het <strong>neutrale element</strong> van de optelling.</p>
+        <p><strong>Doel:</strong></p>
 
-      <h3>2. Schriftelijk optellen</h3>
-      <p>Bij grote getallen schrijf je de overeenkomstige posities onder elkaar: eenheden onder eenheden, tientallen onder tientallen, enzovoort.</p>
-      <pre>  738
-+ 496
-─────
- 1234</pre>
-      <p>Je begint rechts. Als een kolom 10 of meer oplevert, schrijf je de eenheden en draag je het tiental over naar de volgende kolom.</p>
-      <p>Controleer een optelling eventueel door af te ronden of door de inverse bewerking te gebruiken.</p>
+        <ul>
+          <li>leren wat optellen, aftrekken, vermenigvuldigen en delen betekenen;</li>
+          <li>de vier bewerkingen leren uitvoeren;</li>
+          <li>leren rekenen met grotere getallen;</li>
+          <li>leren in welke volgorde je bewerkingen uitvoert;</li>
+          <li>ontdekken welke rol 0 speelt bij het rekenen.</li>
+        </ul>
+
+
+        <h3>1. Optellen</h3>
+
+        <p>Met <strong>optellen</strong> voegen we hoeveelheden samen.</p>
+
+        <p>Bijvoorbeeld: je hebt 7 appels en krijgt er 5 bij.</p>
+
+        <p>Dan heb je:</p>
+
+        <p class="formula">7 + 5 = 12</p>
+
+        <p>Je hebt nu 12 appels.</p>
+
+        <p>De getallen die we optellen noemen we de <strong>termen</strong>. Het antwoord noemen we de <strong>som</strong>.</p>
+
+        <p>In:</p>
+
+        <p class="formula">7 + 5 = 12</p>
+
+        <ul>
+          <li>7 en 5 zijn de <strong>termen</strong>;</li>
+          <li>12 is de <strong>som</strong>.</li>
+        </ul>
+
+        <h4>Optellen op de getallenlijn</h4>
+
+        <p>We kunnen optellen ook voorstellen op een getallenlijn.</p>
+
+        <p>Bijvoorbeeld bij <strong>7 + 5</strong>:</p>
+
+        <p>We beginnen bij 7 en gaan 5 plaatsen naar rechts.</p>
+
+        <div data-widget="nats"></div>
+
+        <p>We komen uit bij 12.</p>
+
+        <p>Dus:</p>
+
+        <p class="formula">7 + 5 = 12</p>
+
+        <h4>Optellen met 0</h4>
+
+        <p>Als je 0 bij een getal optelt, verandert het getal niet.</p>
+
+        <p>Bijvoorbeeld:</p>
+
+        <p class="formula">8 + 0 = 8</p>
+
+        <p class="formula">25 + 0 = 25</p>
+
+        <p class="formula">1 437 + 0 = 1 437</p>
+
+        <p>We noemen 0 daarom het <strong>neutrale element van de optelling</strong>.</p>
+
+
+        <h3>2. Schriftelijk optellen</h3>
+
+        <p>Bij kleine getallen kunnen we gemakkelijk uit het hoofd optellen. Bij grotere getallen is het handig om de getallen <strong>onder elkaar</strong> te schrijven.</p>
+
+        <p>We zorgen ervoor dat dezelfde posities onder elkaar staan.</p>
+
+        <p>In de tabel gaan we voor elk getal opschijven wat de waarde is van de eenheden, tientallen, hondertalle en duidendtallen</p>
+        <P>We bekijken het voorbeeld:</P>
+        <p class="formula">738 + 496</p>
+        
+        <table>
+          <tr>
+            <th></th>
+            <th>Duizendtallen</th>
+            <th>Honderdtallen</th>
+            <th>Tientallen</th>
+            <th>Eenheden</th>
+          </tr>
+          <tr>
+            <th>738</th>
+            <td>0</td>
+            <td>7</td>
+            <td>3</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>496</th>
+            <td>0</td>
+            <td>4</td>
+            <td>9</td>
+            <td>6</td>
+          </tr>
+        </table>
+
+        <p>We tellen de kolommen op. We beginnen <strong>rechts bij de eenheden</strong>.</p>
+
+        <h4>Stap 1: de eenheden</h4>
+
+        <p>We rekenen:</p>
+
+        <p class="formula">8 + 6 = 14</p>
+
+        <p>We schrijven de <strong>4 eenheden</strong> op. De 1 staat voor <strong>1 tiental</strong>. Die nemen we mee naar de volgende kolom.</p>
+
+        <table>
+          <tr>
+            <th></th>
+            <th>Duizendtallen</th>
+            <th>Honderdtallen</th>
+            <th>Tientallen</th>
+            <th>Eenheden</th>
+          </tr>
+          <tr>
+            <th>738</th>
+            <td>0</td>
+            <td>7</td>
+            <td>3</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>496</th>
+            <td>0</td>
+            <td>4</td>
+            <td>9</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <th>Resultaat</th>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+        </table>
+
+        <h4>Stap 2: de tientallen</h4>
+
+        <p>We rekenen de tientallen op, inclusief het tiental dat we meenemen:</p>
+
+        <p class="formula">3 + 9 + 1 = 13</p>
+
+        <p>We schrijven de <strong>3 tientallen</strong> op en nemen <strong>1 honderdtal</strong> mee.</p>
+
+        <table>
+          <tr>
+            <th></th>
+            <th>Duizendtallen</th>
+            <th>Honderdtallen</th>
+            <th>Tientallen</th>
+            <th>Eenheden</th>
+          </tr>
+          <tr>
+            <th>738</th>
+            <td>0</td>
+            <td>7</td>
+            <td>3</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>496</th>
+            <td>0</td>
+            <td>4</td>
+            <td>9</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <th>Resultaat</th>
+            <td></td>
+            <td>1</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+        </table>
+
+        <h4>Stap 3: de honderdtallen</h4>
+
+        <p>We rekenen:</p>
+
+        <p class="formula">7 + 4 + 1 = 12</p>
+
+        <p>We schrijven de <strong>2 honderdtallen</strong> op en nemen <strong>1 duizendtal</strong> mee.</p>
+
+        <h4>Stap 4: de duizendtallen</h4>
+
+        <p>Er zijn geen duizendtallen in 738 en 496. We hebben alleen het duizendtal dat we meenemen:</p>
+
+        <p class="formula">1</p>
+
+        <p>Het resultaat is dus:</p>
+
+        <table>
+          <tr>
+            <th></th>
+            <th>Duizendtallen</th>
+            <th>Honderdtallen</th>
+            <th>Tientallen</th>
+            <th>Eenheden</th>
+          </tr>
+          <tr>
+            <th>738</th>
+            <td>0</td>
+            <td>7</td>
+            <td>3</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th>496</th>
+            <td>0</td>
+            <td>4</td>
+            <td>9</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <th>Som</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+        </table>
+
+        <p>Dus:</p>
+
+        <p class="formula">738 + 496 = 1 234</p>
+
+        <div class="callout">
+          <p><strong>Onthoud:</strong></p>
+          <ul>
+            <li>Schrijf de getallen netjes onder elkaar.</li>
+            <li>Eenheden komen onder eenheden, tientallen onder tientallen, enzovoort.</li>
+            <li>Begin bij de <strong>eenheden</strong>, dus rechts.</li>
+            <li>Is een kolom 10 of groter? Schrijf de eenheden op en neem het tiental mee naar de volgende kolom.</li>
+          </ul>
+        </div>
 
       <h3>3. Aftrekken</h3>
-      <p>Aftrekken maakt een verschil tussen twee getallen. In <strong>12 − 5 = 7</strong> is 7 het verschil.</p>
-      <p>Aftrekken is de inverse bewerking van optellen:</p>
-      <p class="formula">a − b = c &nbsp; ↔ &nbsp; c + b = a</p>
-      <p>Dus als 17 − 9 = 8, dan moet 8 + 9 = 17.</p>
 
-      <h3>4. Schriftelijk aftrekken</h3>
-      <p>Ook bij aftrekken werk je per positie. Wanneer het bovenste cijfer te klein is, leen je één eenheid van de volgende positie.</p>
-      <pre> 1002
-− 587
-─────
-  415</pre>
-      <p>De nullen maken dit voorbeeld interessant: je moet de plaatswaarden correct herverdelen voordat je verder rekent.</p>
+<p>Met <strong>aftrekken</strong> halen we een hoeveelheid weg van een andere hoeveelheid.</p>
 
+<p>Bijvoorbeeld: je hebt 12 appels en geeft er 5 weg.</p>
+
+<p>Dan blijven er over:</p>
+
+<p class="formula">12 − 5 = 7</p>
+
+<p>We noemen 7 het <strong>verschil</strong>.</p>
+
+<h4>Aftrekken en optellen horen bij elkaar</h4>
+
+<p>Optellen en aftrekken zijn elkaars <strong>omgekeerde bewerkingen</strong>.</p>
+
+<p>Als:</p>
+
+<p class="formula">12 − 5 = 7</p>
+
+<p>dan moet je met optellen weer bij 12 uitkomen:</p>
+
+<p class="formula">7 + 5 = 12</p>
+
+<p>Je kunt een aftrekking dus controleren met een optelling.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">17 − 9 = 8</p>
+
+<p>Controle:</p>
+
+<p class="formula">8 + 9 = 17</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Bij een aftrekking kun je je antwoord controleren door het verschil en het getal dat je hebt afgetrokken weer op te tellen.</p>
+</div>
+
+
+<h3>4. Schriftelijk aftrekken</h3>
+
+<p>Bij grote getallen is het handig om de getallen <strong>onder elkaar</strong> te schrijven.</p>
+
+<p>Net als bij optellen zorgen we ervoor dat dezelfde posities onder elkaar staan.</p>
+
+<p>We bekijken het voorbeeld:</p>
+
+<p class="formula">1 234 − 738</p>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Duizendtallen</th>
+    <th>Honderdtallen</th>
+    <th>Tientallen</th>
+    <th>Eenheden</th>
+  </tr>
+  <tr>
+    <th>1 234</th>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th>- 738</th>
+    <td>0</td>
+    <td>7</td>
+    <td>3</td>
+    <td>8</td>
+  </tr>
+</table>
+
+<p>We beginnen, net als bij optellen, <strong>rechts bij de eenheden</strong>.</p>
+
+<h4>Stap 1: de eenheden</h4>
+
+<p>We moeten 8 eenheden aftrekken van 4 eenheden:</p>
+
+<p class="formula">4 − 8</p>
+
+<p>Dat kan niet met alleen de 4 eenheden. We hebben daarom extra eenheden nodig.</p>
+
+<p>We kunnen <strong>1 tiental omwisselen voor 10 eenheden</strong>.</p>
+
+<p>Er staan 3 tientallen bij 1 234</p>
+
+<p>Als we een tien gaan omzetten en bij de eenheden gaan zetten zullen er nog 2 tientallen overblijven:</p>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Duizendtallen</th>
+    <th>Honderdtallen</th>
+    <th>Tientallen</th>
+    <th>Eenheden</th>
+  </tr>
+  <tr>
+    <th>1 234</th>
+    <td>1</td>
+    <td>2</td>
+    <td>2</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <th>− 738</th>
+    <td>0</td>
+    <td>7</td>
+    <td>3</td>
+    <td>8</td>
+  </tr>
+</table>
+
+<p>Nu kunnen we de eenheden aftrekken:</p>
+
+<p class="formula">14 − 8 = 6</p>
+
+<h4>Stap 2: de tientallen</h4>
+
+<p>We hebben 2 tientallen en moeten er 3 aftrekken:</p>
+
+<p class="formula">2 − 3</p>
+
+<p>Dat kan niet met alleen de 2 tientallen. We hebben daarom extra tientallen nodig.</p>
+
+<p>We kunnen <strong>1 honderdtal omwisselen voor 10 tientallen</strong>.</p>
+
+<p>Er staan 2 honderdtallen bij 1 234</p>
+
+<p>Als we een honderd gaan omzetten en bij de tientallen gaan zetten, zal er nog 1 honderdtal overblijven:</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Duizendtallen</th>
+    <th>Honderdtallen</th>
+    <th>Tientallen</th>
+    <th>Eenheden</th>
+  </tr>
+  <tr>
+    <th>1 234</th>
+    <td>1</td>
+    <td>1</td>
+    <td>12</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <th>− 738</th>
+    <td>0</td>
+    <td>7</td>
+    <td>3</td>
+    <td>8</td>
+  </tr>
+</table>
+
+<p>Nu kunnen we de tientallen aftrekken:</p>
+<p class="formula">12 − 3 = 9</p>
+
+<h4>Stap 3: de honderdtallen</h4>
+
+<p>We hebben nog 1 honderdtal en moeten er 7 aftrekken:</p>
+
+<p class="formula">1 − 7</p>
+
+<p>Dat kan niet met alleen 1 honderdtal. We hebben daarom extra honderdtallen nodig.</p>
+
+<p>We kunnen <strong>1 duidendtal omwisselen voor 10 honderdtallen</strong>.</p>
+
+<p>Er staat 1 duidendtal bij 1 234</p>
+
+<p>Als we een duizend gaan omzetten en bij de honderdtallen gaan zetten, zal er nog 0 duidendtal overblijven:</p>
+<table>
+  <tr>
+    <th></th>
+    <th>Duizendtallen</th>
+    <th>Honderdtallen</th>
+    <th>Tientallen</th>
+    <th>Eenheden</th>
+  </tr>
+  <tr>
+    <th>1 234</th>
+    <td>0</td>
+    <td>11</td>
+    <td>12</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <th>− 738</th>
+    <td>0</td>
+    <td>7</td>
+    <td>3</td>
+    <td>8</td>
+  </tr>
+</table>
+
+<p>Nu kunnen we de honderdtallen aftrekken:</p>
+<p class="formula">11 − 7 = 4</p>
+
+
+<h4>Stap 4: de duizendtallen</h4>
+
+<p>We hebben het enige duizendtal gebruikt om 10 honderdtallen te maken.</p>
+
+<p>Er blijven dus geen duizendtallen over.</p>
+
+<p>Het antwoord is:</p>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Duizendtallen</th>
+    <th>Honderdtallen</th>
+    <th>Tientallen</th>
+    <th>Eenheden</th>
+  </tr>
+  <tr>
+    <th>1 234</th>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th>− 738</th>
+    <td></td>
+    <td>7</td>
+    <td>3</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <th>Verschil</th>
+    <td></td>
+    <td>4</td>
+    <td>9</td>
+    <td>6</td>
+  </tr>
+</table>
+
+<p>Dus:</p>
+
+<p class="formula">1 234 − 738 = 496</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <ul>
+    <li>Schrijf de getallen netjes onder elkaar.</li>
+    <li>Begin rechts bij de eenheden.</li>
+    <li>Kun je een cijfer niet aftrekken? Wissel dan één eenheid van de volgende positie om voor 10 eenheden.</li>
+    <li>Staat daar een 0? Ga verder naar links tot je een positie vindt waar je iets kunt omwisselen.</li>
+    <li>Controleer je antwoord eventueel met een optelling.</li>
+  </ul>
+
+</div>
       <h3>5. Vermenigvuldigen</h3>
-      <p>Vermenigvuldigen kun je zien als herhaald optellen:</p>
-      <p class="formula">4 × 3 = 3 + 3 + 3 + 3 = 12</p>
-      <p>Maar vermenigvuldiging is meer dan alleen herhaald optellen. Het is een bewerking waarmee we een hoeveelheid schalen of groepen combineren.</p>
-      <p>Belangrijke eigenschappen:</p>
-      <p class="formula">a × 0 = 0 &nbsp;&nbsp; a × 1 = a &nbsp;&nbsp; a × 10 = 10a</p>
 
-      <h3>6. Schriftelijk vermenigvuldigen</h3>
-      <p>Bij grotere getallen kun je een vermenigvuldiging opsplitsen volgens de plaatswaarden:</p>
-      <p class="formula">37 × 24 = 37 × (20 + 4) = 37 × 20 + 37 × 4 = 740 + 148 = 888</p>
-      <p>Dit is de <strong>distributieve eigenschap</strong>. De traditionele cijfermethode is een verkorte manier om hetzelfde principe uit te voeren.</p>
+<p>Met <strong>vermenigvuldigen</strong> kunnen we meerdere gelijke hoeveelheden snel samenrekenen.</p>
+
+<p>Bijvoorbeeld: je hebt 4 groepjes van 3 appels.</p>
+
+<p>Dat is hetzelfde als:</p>
+
+<p class="formula">3 + 3 + 3 + 3 = 12</p>
+
+<p>In plaats van vier keer 3 op te tellen, kunnen we schrijven:</p>
+
+<p class="formula">4 × 3 = 12</p>
+
+<p>We lezen dit als: <strong>4 keer 3 is 12</strong>.</p>
+
+<h4>Vermenigvuldigen als groepjes</h4>
+
+<p>Bij <strong>4 × 3</strong> hebben we:</p>
+
+<ul>
+  <li><strong>4</strong> gelijke groepjes;</li>
+  <li>in elk groepje zitten <strong>3</strong> dingen.</li>
+</ul>
+
+<p>Dus:</p>
+
+<p class="formula">4 × 3 = 12</p>
+
+<p>Vermenigvuldigen kunnen we ook gebruiken om een hoeveelheid groter te maken.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">5 × 10 = 50</p>
+
+<p>5 wordt hier tien keer zo groot.</p>
+
+<h4>Vermenigvuldigen met 0</h4>
+
+<p>Als we een getal met 0 vermenigvuldigen, krijgen we altijd 0.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">7 × 0 = 0</p>
+
+<p class="formula">125 × 0 = 0</p>
+
+<p>Dit komt overeen met het idee van groepjes: 0 groepjes van iets bevat helemaal niets.</p>
+
+<h4>Vermenigvuldigen met 1</h4>
+
+<p>Als we een getal met 1 vermenigvuldigen, verandert het getal niet.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">8 × 1 = 8</p>
+
+<p class="formula">43 × 1 = 43</p>
+
+<p>Er is maar één groepje, dus de hoeveelheid blijft hetzelfde.</p>
+
+<h4>Vermenigvuldigen met 10</h4>
+
+<p>Als we een getal met 10 vermenigvuldigen, wordt elke plaatswaarde 10 keer groter.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">7 × 10 = 70</p>
+
+<p class="formula">23 × 10 = 230</p>
+
+<p>Je ziet dat de cijfers één plaats naar links opschuiven.</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Vermenigvuldigen betekent dat we gelijke hoeveelheden combineren of een hoeveelheid meerdere keren nemen.</p>
+  <p>Bijzonder belangrijk:</p>
+  <p class="formula">getal × 0 = 0</p>
+</div>
+
+
+<h3>6. Schriftelijk vermenigvuldigen</h3>
+
+<p>Bij kleine vermenigvuldigingen kunnen we vaak uit het hoofd rekenen. Bij grotere getallen kunnen we de berekening stap voor stap uitvoeren.</p>
+
+<p>We bekijken bijvoorbeeld:</p>
+
+<p class="formula">37 × 24</p>
+
+<p>Het getal 24 bestaat uit <strong>2 tientallen en 4 eenheden</strong>.</p>
+
+<p>We kunnen 24 daarom opsplitsen:</p>
+
+<p class="formula">24 = 20 + 4</p>
+
+<p>Dus kunnen we schrijven:</p>
+
+<p class="formula">37 × 24 = 37 × (20 + 4)</p>
+
+<h4>Stap 1: vermenigvuldig met de eenheden</h4>
+
+<p>We vermenigvuldigen 37 met 4:</p>
+
+<p class="formula">37 × 4 = 148</p>
+
+<h4>Stap 2: vermenigvuldig met de tientallen</h4>
+
+<p>Daarna vermenigvuldigen we 37 met 20:</p>
+
+<p class="formula">37 × 20 = 740</p>
+
+<p>We kunnen dit ook zien als:</p>
+
+<p class="formula">37 × 2 × 10 = 74 × 10 = 740</p>
+
+<h4>Stap 3: tel de resultaten op</h4>
+
+<p>We hebben nu beide delen berekend:</p>
+
+<table>
+  <tr>
+    <th>Deel</th>
+    <th>Berekening</th>
+    <th>Resultaat</th>
+  </tr>
+  <tr>
+    <td>Eenheden</td>
+    <td>37 × 4</td>
+    <td>148</td>
+  </tr>
+  <tr>
+    <td>Tientallen</td>
+    <td>37 × 20</td>
+    <td>740</td>
+  </tr>
+  <tr>
+    <td>Totaal</td>
+    <td>148 + 740</td>
+    <td>888</td>
+  </tr>
+</table>
+
+<p>Dus:</p>
+
+<p class="formula">37 × 24 = 888</p>
+
+<h4>Waarom werkt deze methode?</h4>
+
+<p>We hebben 24 opgesplitst in 20 en 4. Daardoor hebben we de vermenigvuldiging in twee eenvoudigere delen verdeeld:</p>
+
+<p class="formula">37 × 24 = 37 × 20 + 37 × 4</p>
+
+<p>Deze manier van rekenen noemen we de <strong>distributieve eigenschap</strong>.</p>
+
+<p>De gewone schriftelijke vermenigvuldiging die je later leert, is eigenlijk een <strong>kortere manier om precies hetzelfde te doen</strong>.</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Bij een grotere vermenigvuldiging kun je een getal opsplitsen in tientallen, eenheden, honderdtallen enzovoort.</p>
+  <p>Bijvoorbeeld:</p>
+  <p class="formula">24 = 20 + 4</p>
+  <p>Daarna vermenigvuldig je elk deel afzonderlijk en tel je de resultaten op.</p>
+</div>
+
 
       <h3>7. Delen</h3>
       <p>Delen is de inverse bewerking van vermenigvuldigen. Bij <strong>12 ÷ 3 = 4</strong> vragen we: hoeveel keer past 3 in 12?</p>
