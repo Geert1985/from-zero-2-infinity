@@ -304,6 +304,7 @@ const MILESTONES_1 = [
 </div>
     `   
   },
+  
   {
     id: "1.2",
     title: "De vier hoofdbewerkingen",
@@ -1596,6 +1597,7 @@ const MILESTONES_1 = [
 </div>
     `
   },
+  
   {
     id: "1.3",
     title: "Het getallensysteem uitbreiden",
@@ -1628,7 +1630,7 @@ const MILESTONES_1 = [
 
       <p>Bijvoorbeeld: de verzameling van de eerste vijf natuurlijke getallen is</p>
 
-      <p class="formula">{0, 1, 2, 3, 4}</p>
+      <p class="formula"> { 0, 1, 2, 3, 4 } </p>
 
       <p>De accolades <strong>{ }</strong> geven aan dat we een verzameling
       opsommen.</p>
@@ -2076,6 +2078,7 @@ voldoende zijn voor alle problemen. Zo blijven we het getallensysteem
 uitbreiden.</p>
     `
   },
+  
   {
     id: "1.4",
     title: "Getaltheorie en structuur",
@@ -2163,6 +2166,7 @@ uitbreiden.</p>
       <p>Getaltheorie lijkt misschien een verzameling regels, maar onthult structuur. Priemfactorisatie helpt bij breuken vereenvoudigen, GGD en KGV, algoritmen en later bij abstractere wiskunde.</p>
     `
   },
+  
   {
     id: "1.5",
     title: "Machten, wortels en reële getallen",

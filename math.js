@@ -18,6 +18,9 @@ function squeezeScripts(s, map, wrap) {
 
 function unicodeToTex(raw) {
   let s = String(raw ?? "");
+  // Accolades van verzamelingen zichtbaar maken voor KaTeX.
+  // Bijvoorbeeld: ℕ = {0, 1, 2, ...} → ℕ = \{0, 1, 2, ...\}
+  s = s.replace(/(\s|=)\{([^{}]*)\}/g, "$1\\{$2\\}");
   s = s.replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
   s = s.replace(/d\/dx/g, "\\frac{\\mathrm{d}}{\\mathrm{d}x}");
   s = s.replace(/lim\s*([a-zA-Z])\s*→\s*([^\s,]+)/g, (_, v, a) => `\\lim_{${v} \\to ${a}}`);
