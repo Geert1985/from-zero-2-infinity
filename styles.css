@@ -384,37 +384,35 @@ body {
 }
 .stone-art {
   width: 100%;
-  height: 168px;
-  object-fit: cover;
-  object-position: center 40%;
+  height: auto !important;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
   display: block;
+  flex: 0 0 auto;
   border-bottom: 1px solid rgba(230,199,122,0.25);
 }
-.stone h3 {
-  margin: 10px 14px 0;
-  font-size: 15px;
-  color: #fff6df;
-  font-family: Cinzel, serif;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.25;
-}
-.stone p { margin: 0 14px; font-size: 13px; color: #f0e2c4; flex: 1; }
-.stone .status { margin: 0 14px; }
-.stone .stone-actions { margin: 4px 14px 0; }
+.stone h3,
+.stone > p,
+.stone .status { display: none; }
 .stone-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 10px;
-  margin-top: 6px;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 14px;
+  padding-top: 4px;
 }
 .stone-actions .btn {
-  flex: 1 1 calc(50% - 6px);
+  width: 100%;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .stone-actions .btn.primary {
-  flex-basis: 100%;
-  margin-top: 8px;
+  margin-top: 0;
 }
 .status {
   font-size: 12px;
@@ -468,122 +466,56 @@ body {
 }
 .fig-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-  margin: 12px 0 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
 }
-.fig {
-  background: #0d0b08;
+.fig-card {
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 8px;
-  text-align: center;
-  max-width: 280px;
-  width: 100%;
-  margin: 0 auto;
+  border-radius: 16px;
+  padding: 12px;
+  background: rgba(0,0,0,0.18);
 }
-.fig svg { width: 100%; height: auto; display: block; max-height: 180px; }
-.fig .cap { display: block; margin-top: 6px; font-size: 13px; color: #e6d7b4; }
-
-.widget-dock { margin: 18px 0 8px; display: grid; gap: 14px; max-width: 100%; }
-.widget {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: rgba(8,7,5,0.55);
-  padding: 12px 14px 14px;
-  max-width: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-.widget header {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: baseline;
-  margin-bottom: 8px;
-  font-family: Cinzel, serif;
-  color: var(--gold);
-}
-.widget header span { font-family: "Source Sans 3", sans-serif; font-size: 13px; color: #e6d7b4; font-weight: 400; }
-.widget canvas { display: block; width: 100%; max-width: 100%; border-radius: 10px; background: #0d0b08; }
-.widget-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 16px;
-  margin-top: 10px;
-  font-size: 14px;
-  max-width: 100%;
-}
-.widget-controls label { display: flex; align-items: center; gap: 8px; min-width: 0; }
-.widget-controls input[type=range] { width: 140px; max-width: 40vw; accent-color: var(--gold-deep); }
-.widget-controls output { min-width: 3.2em; display: inline-block; font-variant-numeric: tabular-nums; }
-.widget-readout { margin: 8px 0 0; color: #fff6df; font-size: 14px; overflow-wrap: anywhere; }
-
-.question {
-  border-top: 1px solid var(--line);
-  padding: 16px 0;
-}
-.question:first-child { border-top: 0; }
-.question .q-title { font-weight: 700; margin-bottom: 8px; }
-input[type="text"], textarea, select {
-  width: 100%;
-  max-width: 420px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--line);
-  color: var(--parchment);
-  border-radius: 10px;
-  padding: 10px 12px;
-  font: inherit;
-}
-.choices { display: grid; gap: 8px; }
-.choice {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  max-width: 640px;
-}
-.feedback { margin-top: 8px; font-size: 14px; }
-.feedback.ok, .feedback.good { color: var(--good); }
-.feedback.no, .feedback.bad { color: var(--bad); }
-.discovery { color: var(--good); font-weight: 700; }
-.score-banner {
-  font-family: Cinzel, serif;
-  font-size: 22px;
-  color: var(--gold);
-}
-
+.fig-card img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .progress-bar {
-  height: 8px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 99px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
   overflow: hidden;
+  border: 1px solid var(--line);
 }
-.progress-bar > span {
+.progress-bar span {
   display: block;
   height: 100%;
   background: linear-gradient(90deg, #9a6d22, #e6c77a);
 }
+.quiz-option {
+  width: 100%;
+  text-align: left;
+  margin: 8px 0;
+}
+.feedback {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--line);
+}
+.feedback.good { border-color: rgba(125,206,160,0.55); }
+.feedback.bad { border-color: rgba(224,122,106,0.55); }
+.q-title { font-size: 19px; margin-bottom: 12px; }
+.small { font-size: 13px; color: var(--parchment-dim); }
 
-.footer-note {
-  text-align: center;
-  padding: 8px 16px 28px;
-  color: rgba(244,234,211,0.65);
-  font-size: 13px;
+@media (max-width: 760px) {
+  .topbar { grid-template-columns: 1fr; justify-items: center; }
+  .nav-actions { justify-self: center; }
+  .stone { width: min(100%, 300px); flex-basis: min(100%, 300px); }
+  .stone-actions { margin-left: 12px; margin-right: 12px; }
+  .layout, .phase-grid { width: min(100% - 20px, 1100px); }
 }
 
-.hidden { display: none !important; }
-
-
-.challenge-panel .ch-world { color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; }
-.challenge-panel .ch-scene { color: #f0e2c4; }
-.challenge-panel .ch-prompt { font-size: 18px; }
-.ch-line { display: flex; align-items: center; gap: 10px; }
-.ch-line input { flex: 1; }
-.ch-build { display: flex; flex-wrap: wrap; gap: 4px; min-height: 24px; }
-.ch-build i { width: 16px; height: 16px; background: #c9a24a; display: block; border-radius: 2px; }
-.fx-ok { color: var(--good); font-weight: 700; margin-top: 8px; }
-.fx-bad { color: #e08a8a; margin-top: 8px; }
-.fx-bar { height: 10px; background: #2a2418; border-radius: 99px; overflow: hidden; margin: 8px 0; }
-.fx-bar span { display: block; height: 100%; width: 100%; background: linear-gradient(90deg,#d7b56a,#9a6d22); }
-.fx-bar.empty span { width: 20%; opacity: 0.4; }
-#ch-hintbox { min-height: 1.2em; color: var(--gold); }
+@media (max-width: 520px) {
+  .topbar { padding: 12px 14px; }
+  .panel { padding: 18px 16px; }
+  .stone-grid { gap: 12px; }
+  .stone { width: 100%; flex-basis: 100%; }
+}
