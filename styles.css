@@ -519,3 +519,177 @@ body {
   .stone-grid { gap: 12px; }
   .stone { width: 100%; flex-basis: 100%; }
 }
+
+/* =========================================================
+   1.4.1 — Verdeel het geheel
+   ========================================================= */
+
+.fraction-whole-widget-shell > header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.fraction-whole-widget-shell > header strong {
+  white-space: nowrap;
+}
+
+.fraction-whole-widget-shell > header span {
+  line-height: 1.4;
+}
+
+
+/* ---------------------------------------------------------
+   Sliders
+   --------------------------------------------------------- */
+
+.fraction-whole-widget {
+  width: 100%;
+}
+
+.fraction-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+
+  margin: 18px 0 4px;
+}
+
+.fraction-control {
+  min-width: 0;
+}
+
+.fraction-control label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+
+  font-size: 0.9rem;
+}
+
+.fraction-control label strong {
+  min-width: 24px;
+  text-align: right;
+}
+
+.fraction-control input[type="range"] {
+  width: 100%;
+  display: block;
+}
+
+
+/* ---------------------------------------------------------
+   Canvas
+   --------------------------------------------------------- */
+
+.fraction-canvas-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.fraction-whole-canvas {
+  display: block;
+
+  width: 100%;
+  max-width: 760px;
+
+  height: 150px;
+
+  margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Breuk
+   --------------------------------------------------------- */
+
+.fraction-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: -2px;
+}
+
+.fraction-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.fraction-num,
+.fraction-den {
+  display: block;
+}
+
+.fraction-line {
+  display: block;
+
+  width: 42px;
+  height: 2px;
+
+  margin: 5px 0;
+
+  background: currentColor;
+}
+
+.fraction-explanation {
+  margin-top: 9px;
+
+  font-size: 0.95rem;
+
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   Mobiel
+   --------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+  .fraction-whole-widget-shell > header {
+    display: block;
+  }
+
+  .fraction-whole-widget-shell > header strong,
+  .fraction-whole-widget-shell > header span {
+    display: block;
+  }
+
+  .fraction-controls {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .fraction-whole-canvas {
+    height: 140px;
+  }
+}
+
+.theory-image {
+  width: 100%;
+  margin: 18px 0 24px;
+  text-align: center;
+}
+
+.theory-image img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}

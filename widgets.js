@@ -1504,6 +1504,384 @@ function mountAssociative(root) {
 // FRACTION VISUAL
 // ============================================================
 
+function mountFractionWhole(root) {
+  root.innerHTML = widgetShell(
+    "Verdeel het geheel",
+    "Verdeel een geheel in gelijke delen en neem er een aantal.",
+    `
+      <div class="fraction-whole-widget">
+
+        <div class="fraction-controls">
+
+          <div class="fraction-control">
+            <label>
+              <span>Aantal gelijke delen</span>
+              <strong class="fraction-denominator-value">5</strong>
+            </label>
+
+            <input
+              type="range"
+              class="fraction-denominator"
+              min="2"
+              max="12"
+              value="5"
+            >
+          </div>
+
+          <div class="fraction-control">
+            <label>
+              <span>Aantal genomen delen</span>
+              <strong class="fraction-numerator-value">2</strong>
+            </label>
+
+            <input
+              type="range"
+              class="fraction-numerator"
+              min="1"
+              max="5"
+              value="2"
+            >
+          </div>
+
+        </div>
+
+        <div class="fraction-canvas-container">
+          <canvas
+            class="fraction-whole-canvas"
+            width="760"
+            height="150"
+          ></canvas>
+        </div>
+
+        <div class="fraction-result">
+
+          <div class="fraction-large">
+            <span class="fraction-num">2</span>
+            <span class="fraction-line"></span>
+            <span class="fraction-den">5</span>
+          </div>
+
+          <div class="fraction-explanation">
+            2 van de 5 gelijke delen
+          </div>
+
+        </div>
+
+      </div>
+    `
+  );
+
+  /*
+   * Geef de widget een eigen class zodat we
+   * ook de header van widgetShell specifiek
+   * kunnen aanpassen.
+   */
+  const widget =
+    root.querySelector(".widget");
+
+  if (widget) {
+    widget.classList.add("fraction-whole-widget-shell");
+  }
+
+
+  const denominatorSlider =
+    root.querySelector(".fraction-denominator");
+
+  const numeratorSlider =
+    root.querySelector(".fraction-numerator");
+
+  const denominatorValue =
+    root.querySelector(".fraction-denominator-value");
+
+  const numeratorValue =
+    root.querySelector(".fraction-numerator-value");
+
+  const canvas =
+    root.querySelector(".fraction-whole-canvas");
+
+  const container =
+    root.querySelector(".fraction-canvas-container");
+
+  const fractionNum =
+    root.querySelector(".fraction-num");
+
+  const fractionDen =
+    root.querySelector(".fraction-den");
+
+  const explanation =
+    root.querySelector(".fraction-explanation");
+
+  const ctx =
+    canvas.getContext("2d");
+
+
+  /*
+   * Canvas voorbereiden.
+   *
+   * We gebruiken een vaste tekenhoogte en
+   * passen alleen de resolutie aan wanneer
+   * de beschikbare breedte verandert.
+   */
+  function resizeCanvas() {
+
+    const width =
+      Math.max(
+        300,
+        Math.floor(container.clientWidth)
+      );
+
+    const height = 150;
+
+    const dpr =
+      window.devicePixelRatio || 1;
+
+    canvas.width =
+      Math.round(width * dpr);
+
+    canvas.height =
+      Math.round(height * dpr);
+
+    canvas.style.width =
+      width + "px";
+
+    canvas.style.height =
+      height + "px";
+
+    ctx.setTransform(
+      dpr,
+      0,
+      0,
+      dpr,
+      0,
+      0
+    );
+
+    draw();
+  }
+
+
+  /*
+   * Teken de breuk.
+   */
+  function draw() {
+
+    const denominator =
+      Number(denominatorSlider.value);
+
+    let numerator =
+      Number(numeratorSlider.value);
+
+    if (numerator > denominator) {
+      numerator = denominator;
+      numeratorSlider.value = denominator;
+    }
+
+    numeratorSlider.max = denominator;
+
+
+    /*
+     * Waarden bij de sliders
+     */
+    denominatorValue.textContent =
+      denominator;
+
+    numeratorValue.textContent =
+      numerator;
+
+
+    /*
+     * Resultaat
+     */
+    fractionNum.textContent =
+      numerator;
+
+    fractionDen.textContent =
+      denominator;
+
+    explanation.textContent =
+      `${numerator} van de ${denominator} gelijke delen`;
+
+
+    /*
+     * Canvas leegmaken
+     */
+    const width =
+      canvas.clientWidth;
+
+    const height = 150;
+
+    ctx.clearRect(
+      0,
+      0,
+      width,
+      height
+    );
+
+
+    /*
+     * Breukbalk.
+     *
+     * Maximaal 700 px breed zodat hij
+     * nooit overdreven groot wordt.
+     */
+    const barWidth =
+      Math.min(width - 30, 700);
+
+    const barHeight = 58;
+
+    const barX =
+      (width - barWidth) / 2;
+
+    const barY = 25;
+
+    const partWidth =
+      barWidth / denominator;
+
+
+    /*
+     * Achtergrond van het geheel
+     */
+    ctx.fillStyle =
+      "rgba(235, 240, 246, 0.92)";
+
+    ctx.fillRect(
+      barX,
+      barY,
+      barWidth,
+      barHeight
+    );
+
+
+    /*
+     * Gekozen delen
+     */
+    ctx.fillStyle =
+      "#4f7cff";
+
+    ctx.fillRect(
+      barX,
+      barY,
+      partWidth * numerator,
+      barHeight
+    );
+
+
+    /*
+     * Buitenrand
+     */
+    ctx.strokeStyle =
+      "rgba(255,255,255,0.9)";
+
+    ctx.lineWidth = 2;
+
+    ctx.strokeRect(
+      barX,
+      barY,
+      barWidth,
+      barHeight
+    );
+
+
+    /*
+     * Verdelingslijnen
+     */
+    for (let i = 1; i < denominator; i++) {
+
+      const x =
+        barX + i * partWidth;
+
+      ctx.beginPath();
+
+      ctx.moveTo(
+        x,
+        barY
+      );
+
+      ctx.lineTo(
+        x,
+        barY + barHeight
+      );
+
+      ctx.strokeStyle =
+        "rgba(255,255,255,0.95)";
+
+      ctx.lineWidth = 2;
+
+      ctx.stroke();
+    }
+
+
+    /*
+     * Nummering
+     */
+    ctx.font =
+      "14px sans-serif";
+
+    ctx.textAlign =
+      "center";
+
+    ctx.textBaseline =
+      "top";
+
+    for (let i = 0; i < denominator; i++) {
+
+      const x =
+        barX +
+        i * partWidth +
+        partWidth / 2;
+
+      ctx.fillStyle =
+        "rgba(255,255,255,0.75)";
+
+      ctx.fillText(
+        String(i + 1),
+        x,
+        barY + barHeight + 7
+      );
+    }
+  }
+
+
+  /*
+   * Alleen tekenen bij sliderbeweging.
+   * Geen resize → geen verspringen/zoomen.
+   */
+  denominatorSlider.addEventListener(
+    "input",
+    draw
+  );
+
+  numeratorSlider.addEventListener(
+    "input",
+    draw
+  );
+
+
+  /*
+   * ResizeObserver uitsluitend voor echte
+   * wijzigingen in de beschikbare ruimte.
+   */
+  if (typeof ResizeObserver !== "undefined") {
+
+    const observer =
+      new ResizeObserver(() => {
+        resizeCanvas();
+      });
+
+    observer.observe(container);
+
+  } else {
+
+    window.addEventListener(
+      "resize",
+      resizeCanvas
+    );
+  }
+
+
+  resizeCanvas();
+}
+
 function mountFractionVisual(root) {
   if (!root) return;
 
@@ -1655,6 +2033,1948 @@ function mountFractionVisual(root) {
 // ============================================================
 // PERCENTAGE BAR
 // ============================================================
+
+function mountFractionNumberLine(root) {
+  root.innerHTML = widgetShell(
+    "Breuk op de getallenlijn",
+    "Verander de teller en noemer en bekijk waar de breuk ligt.",
+    `
+      <div class="fraction-nl-widget">
+
+        <div class="fraction-controls">
+
+          <div class="fraction-control">
+            <label>
+              <span>Noemer</span>
+              <strong class="fnl-den-value">4</strong>
+            </label>
+            <input
+              type="range"
+              class="fnl-den"
+              min="2"
+              max="12"
+              value="4"
+            >
+          </div>
+
+          <div class="fraction-control">
+            <label>
+              <span>Teller</span>
+              <strong class="fnl-num-value">3</strong>
+            </label>
+            <input
+              type="range"
+              class="fnl-num"
+              min="0"
+              max="4"
+              value="3"
+            >
+          </div>
+
+        </div>
+
+        <div class="fraction-canvas-container">
+          <canvas
+            class="fraction-numberline-canvas"
+            width="760"
+            height="170"
+          ></canvas>
+        </div>
+
+        <div class="fraction-nl-result">
+          <strong class="fnl-result-fraction">3/4</strong>
+          <span class="fnl-result-text">
+            ligt tussen 0 en 1
+          </span>
+        </div>
+
+      </div>
+    `
+  );
+
+  const denSlider = root.querySelector(".fnl-den");
+  const numSlider = root.querySelector(".fnl-num");
+
+  const denValue = root.querySelector(".fnl-den-value");
+  const numValue = root.querySelector(".fnl-num-value");
+
+  const canvas = root.querySelector(".fraction-numberline-canvas");
+  const container = root.querySelector(".fraction-canvas-container");
+
+  const resultFraction =
+    root.querySelector(".fnl-result-fraction");
+
+  const resultText =
+    root.querySelector(".fnl-result-text");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    const width = Math.max(300, Math.floor(container.clientWidth));
+    const height = 170;
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    draw();
+  }
+
+  function draw() {
+    const denominator = Number(denSlider.value);
+    let numerator = Number(numSlider.value);
+
+    if (numerator > denominator) {
+      numerator = denominator;
+      numSlider.value = denominator;
+    }
+
+    numSlider.max = denominator;
+
+    denValue.textContent = denominator;
+    numValue.textContent = numerator;
+
+    resultFraction.textContent =
+      `${numerator}/${denominator}`;
+
+    const value = numerator / denominator;
+
+    if (value === 0) {
+      resultText.textContent = "ligt op 0";
+    } else if (value === 1) {
+      resultText.textContent = "ligt op 1";
+    } else {
+      resultText.textContent =
+        "ligt tussen 0 en 1";
+    }
+
+    const width = canvas.clientWidth;
+    const height = 170;
+
+    ctx.clearRect(0, 0, width, height);
+
+    const left = 35;
+    const right = width - 35;
+    const y = 85;
+    const lineWidth = right - left;
+
+    /*
+     * Getallenlijn
+     */
+    ctx.beginPath();
+    ctx.moveTo(left, y);
+    ctx.lineTo(right, y);
+
+    ctx.strokeStyle = "rgba(255,255,255,0.8)";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    /*
+     * Pijlen
+     */
+    ctx.beginPath();
+    ctx.moveTo(right, y);
+    ctx.lineTo(right - 8, y - 5);
+    ctx.lineTo(right - 8, y + 5);
+    ctx.closePath();
+    ctx.fillStyle = "rgba(255,255,255,0.8)";
+    ctx.fill();
+
+    /*
+     * Verdeel 0 tot 1 in gelijke delen.
+     */
+    for (let i = 0; i <= denominator; i++) {
+      const x =
+        left + (lineWidth * i / denominator);
+
+      ctx.beginPath();
+      ctx.moveTo(x, y - 9);
+      ctx.lineTo(x, y + 9);
+
+      ctx.strokeStyle =
+        "rgba(255,255,255,0.8)";
+
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.font = "13px sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+
+      ctx.fillStyle =
+        "rgba(255,255,255,0.8)";
+
+      if (i === 0) {
+        ctx.fillText("0", x, y + 16);
+      } else if (i === denominator) {
+        ctx.fillText("1", x, y + 16);
+      }
+    }
+
+    /*
+     * Breukpositie
+     */
+    const fractionX =
+      left + lineWidth * value;
+
+    ctx.beginPath();
+    ctx.arc(
+      fractionX,
+      y,
+      9,
+      0,
+      Math.PI * 2
+    );
+
+    ctx.fillStyle = "#4f7cff";
+    ctx.fill();
+
+    /*
+     * Breuklabel
+     */
+    ctx.font = "bold 16px sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "bottom";
+
+    ctx.fillStyle = "#ffffff";
+
+    ctx.fillText(
+      `${numerator}/${denominator}`,
+      fractionX,
+      y - 15
+    );
+  }
+
+  denSlider.addEventListener("input", draw);
+  numSlider.addEventListener("input", draw);
+
+  if (typeof ResizeObserver !== "undefined") {
+    const observer = new ResizeObserver(() => {
+      resizeCanvas();
+    });
+
+    observer.observe(container);
+  } else {
+    window.addEventListener("resize", resizeCanvas);
+  }
+
+  resizeCanvas();
+}
+
+function mountEquivalentFractions(root) {
+  root.innerHTML = widgetShell(
+    "Gelijkwaardige breuken",
+    "Zie hoe dezelfde hoeveelheid op verschillende manieren kan worden verdeeld.",
+    `
+      <div class="equivalent-fractions-widget">
+
+        <div class="fraction-controls">
+
+          <div class="fraction-control">
+            <label>
+              <span>Breuk</span>
+              <strong class="ef-num-value">1</strong>
+              /
+              <strong class="ef-den-value">2</strong>
+            </label>
+
+            <input
+              type="range"
+              class="ef-den"
+              min="2"
+              max="10"
+              value="2"
+            >
+          </div>
+
+          <div class="fraction-control">
+            <label>
+              <span>Aantal gelijke breuken</span>
+              <strong class="ef-mult-value">1</strong>
+            </label>
+
+            <input
+              type="range"
+              class="ef-mult"
+              min="1"
+              max="5"
+              value="1"
+            >
+          </div>
+
+        </div>
+
+        <div class="fraction-canvas-container">
+          <canvas
+            class="equivalent-fractions-canvas"
+            width="760"
+            height="220"
+          ></canvas>
+        </div>
+
+        <div class="ef-result">
+          <strong class="ef-result-text">
+            1/2 = 2/4 = 3/6
+          </strong>
+        </div>
+
+      </div>
+    `
+  );
+
+  const denSlider = root.querySelector(".ef-den");
+  const multSlider = root.querySelector(".ef-mult");
+
+  const denValue = root.querySelector(".ef-den-value");
+  const multValue = root.querySelector(".ef-mult-value");
+
+  const canvas =
+    root.querySelector(".equivalent-fractions-canvas");
+
+  const container =
+    root.querySelector(".fraction-canvas-container");
+
+  const result =
+    root.querySelector(".ef-result-text");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    const width = Math.max(300, Math.floor(container.clientWidth));
+    const height = 220;
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    draw();
+  }
+
+  function draw() {
+    const denominator = Number(denSlider.value);
+    const multiplier = Number(multSlider.value);
+
+    const numerator = 1;
+
+    denValue.textContent = denominator;
+    multValue.textContent = multiplier;
+
+    const equivalentNumerator =
+      numerator * multiplier;
+
+    const equivalentDenominator =
+      denominator * multiplier;
+
+    result.textContent =
+      `1/${denominator} = ` +
+      `${equivalentNumerator}/${equivalentDenominator}`;
+
+    const width = canvas.clientWidth;
+    const height = 220;
+
+    ctx.clearRect(0, 0, width, height);
+
+    const barWidth =
+      Math.min(width - 40, 680);
+
+    const barHeight = 45;
+    const x = (width - barWidth) / 2;
+
+    /*
+     * Eerste balk
+     */
+    drawBar(
+      x,
+      25,
+      barWidth,
+      barHeight,
+      denominator,
+      numerator,
+      `1/${denominator}`
+    );
+
+    /*
+     * Tweede balk
+     */
+    drawBar(
+      x,
+      110,
+      barWidth,
+      barHeight,
+      equivalentDenominator,
+      equivalentNumerator,
+      `${equivalentNumerator}/${equivalentDenominator}`
+    );
+  }
+
+  function drawBar(
+    x,
+    y,
+    width,
+    height,
+    parts,
+    selected,
+    label
+  ) {
+    const partWidth = width / parts;
+
+    ctx.fillStyle =
+      "rgba(235,240,246,0.9)";
+
+    ctx.fillRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    ctx.fillStyle = "#4f7cff";
+
+    ctx.fillRect(
+      x,
+      y,
+      partWidth * selected,
+      height
+    );
+
+    ctx.strokeStyle =
+      "rgba(255,255,255,0.9)";
+
+    ctx.lineWidth = 2;
+
+    ctx.strokeRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    for (let i = 1; i < parts; i++) {
+      const px = x + i * partWidth;
+
+      ctx.beginPath();
+      ctx.moveTo(px, y);
+      ctx.lineTo(px, y + height);
+
+      ctx.stroke();
+    }
+
+    ctx.font = "bold 16px sans-serif";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#ffffff";
+
+    ctx.fillText(
+      label,
+      x,
+      y - 7
+    );
+  }
+
+  denSlider.addEventListener("input", draw);
+  multSlider.addEventListener("input", draw);
+
+  if (typeof ResizeObserver !== "undefined") {
+    const observer = new ResizeObserver(() => {
+      resizeCanvas();
+    });
+
+    observer.observe(container);
+  } else {
+    window.addEventListener("resize", resizeCanvas);
+  }
+
+  resizeCanvas();
+}
+
+function mountCompareFractions(root) {
+  root.innerHTML = widgetShell(
+    "Vergelijk twee breuken",
+    "Stel twee breuken in en ontdek welke groter is.",
+    `
+      <div class="compare-fractions-widget">
+
+        <div class="compare-controls">
+
+          <div class="compare-fraction-control">
+
+            <strong>Breuk A</strong>
+
+            <label>
+              Teller
+              <input
+                type="range"
+                class="cf-a-num"
+                min="1"
+                max="10"
+                value="2"
+              >
+              <span class="cf-a-num-value">2</span>
+            </label>
+
+            <label>
+              Noemer
+              <input
+                type="range"
+                class="cf-a-den"
+                min="2"
+                max="10"
+                value="3"
+              >
+              <span class="cf-a-den-value">3</span>
+            </label>
+
+          </div>
+
+
+          <div class="compare-fraction-control">
+
+            <strong>Breuk B</strong>
+
+            <label>
+              Teller
+              <input
+                type="range"
+                class="cf-b-num"
+                min="1"
+                max="10"
+                value="3"
+              >
+              <span class="cf-b-num-value">3</span>
+            </label>
+
+            <label>
+              Noemer
+              <input
+                type="range"
+                class="cf-b-den"
+                min="2"
+                max="10"
+                value="5"
+              >
+              <span class="cf-b-den-value">5</span>
+            </label>
+
+          </div>
+
+        </div>
+
+        <div class="fraction-canvas-container">
+          <canvas
+            class="compare-fractions-canvas"
+            width="760"
+            height="250"
+          ></canvas>
+        </div>
+
+        <div class="cf-result">
+          <strong class="cf-result-text">2/3 &gt; 3/5</strong>
+        </div>
+
+      </div>
+    `
+  );
+
+  const aNum = root.querySelector(".cf-a-num");
+  const aDen = root.querySelector(".cf-a-den");
+  const bNum = root.querySelector(".cf-b-num");
+  const bDen = root.querySelector(".cf-b-den");
+
+  const aNumValue = root.querySelector(".cf-a-num-value");
+  const aDenValue = root.querySelector(".cf-a-den-value");
+  const bNumValue = root.querySelector(".cf-b-num-value");
+  const bDenValue = root.querySelector(".cf-b-den-value");
+
+  const canvas =
+    root.querySelector(".compare-fractions-canvas");
+
+  const container =
+    root.querySelector(".fraction-canvas-container");
+
+  const result =
+    root.querySelector(".cf-result-text");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    const width = Math.max(300, Math.floor(container.clientWidth));
+    const height = 250;
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    draw();
+  }
+
+  function draw() {
+    let an = Number(aNum.value);
+    const ad = Number(aDen.value);
+
+    let bn = Number(bNum.value);
+    const bd = Number(bDen.value);
+
+    if (an > ad) {
+      an = ad;
+      aNum.value = ad;
+    }
+
+    if (bn > bd) {
+      bn = bd;
+      bNum.value = bd;
+    }
+
+    aNum.max = ad;
+    bNum.max = bd;
+
+    aNumValue.textContent = an;
+    aDenValue.textContent = ad;
+
+    bNumValue.textContent = bn;
+    bDenValue.textContent = bd;
+
+    const a = an / ad;
+    const b = bn / bd;
+
+    let symbol = "=";
+
+    if (a > b) symbol = ">";
+    if (a < b) symbol = "<";
+
+    result.textContent =
+      `${an}/${ad} ${symbol} ${bn}/${bd}`;
+
+    const width = canvas.clientWidth;
+
+    ctx.clearRect(
+      0,
+      0,
+      width,
+      250
+    );
+
+    const barWidth =
+      Math.min(width - 40, 680);
+
+    const barHeight = 45;
+    const x = (width - barWidth) / 2;
+
+    drawBar(
+      x,
+      25,
+      barWidth,
+      barHeight,
+      ad,
+      an,
+      `${an}/${ad}`
+    );
+
+    drawBar(
+      x,
+      105,
+      barWidth,
+      barHeight,
+      bd,
+      bn,
+      `${bn}/${bd}`
+    );
+
+    /*
+     * Getallenlijn
+     */
+    const y = 190;
+
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + barWidth, y);
+
+    ctx.strokeStyle =
+      "rgba(255,255,255,0.8)";
+
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    /*
+     * Positie A
+     */
+    drawPoint(
+      x + barWidth * a,
+      y,
+      "#4f7cff"
+    );
+
+    /*
+     * Positie B
+     */
+    drawPoint(
+      x + barWidth * b,
+      y,
+      "#f2a65a"
+    );
+
+    ctx.font = "13px sans-serif";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+    ctx.fillStyle = "#ffffff";
+
+    ctx.fillText("0", x, y + 8);
+    ctx.fillText("1", x + barWidth, y + 8);
+  }
+
+  function drawBar(
+    x,
+    y,
+    width,
+    height,
+    denominator,
+    numerator,
+    label
+  ) {
+    const partWidth = width / denominator;
+
+    ctx.fillStyle =
+      "rgba(235,240,246,0.9)";
+
+    ctx.fillRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    ctx.fillStyle = "#4f7cff";
+
+    ctx.fillRect(
+      x,
+      y,
+      partWidth * numerator,
+      height
+    );
+
+    ctx.strokeStyle =
+      "rgba(255,255,255,0.9)";
+
+    ctx.lineWidth = 2;
+
+    ctx.strokeRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    for (let i = 1; i < denominator; i++) {
+      const px =
+        x + i * partWidth;
+
+      ctx.beginPath();
+      ctx.moveTo(px, y);
+      ctx.lineTo(px, y + height);
+      ctx.stroke();
+    }
+
+    ctx.font = "bold 15px sans-serif";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "bottom";
+    ctx.fillStyle = "#ffffff";
+
+    ctx.fillText(
+      label,
+      x,
+      y - 6
+    );
+  }
+
+  function drawPoint(x, y, color) {
+    ctx.beginPath();
+
+    ctx.arc(
+      x,
+      y,
+      7,
+      0,
+      Math.PI * 2
+    );
+
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  [aNum, aDen, bNum, bDen].forEach(
+    slider => slider.addEventListener("input", draw)
+  );
+
+  if (typeof ResizeObserver !== "undefined") {
+    const observer = new ResizeObserver(() => {
+      resizeCanvas();
+    });
+
+    observer.observe(container);
+  } else {
+    window.addEventListener("resize", resizeCanvas);
+  }
+
+  resizeCanvas();
+}
+
+function mountAddFractions(root) {
+  root.innerHTML = widgetShell(
+    "Breuken optellen",
+    "Zie wat er gebeurt wanneer we twee breuken samenvoegen.",
+    `
+      <div class="add-fractions-widget">
+
+        <div class="add-fraction-controls">
+
+          <div>
+            <label>
+              Eerste breuk
+              <strong class="af-a">1/4</strong>
+            </label>
+
+            <div class="af-sliders">
+              <input
+                type="range"
+                class="af-a-num"
+                min="1"
+                max="6"
+                value="1"
+              >
+
+              <input
+                type="range"
+                class="af-a-den"
+                min="2"
+                max="8"
+                value="4"
+              >
+            </div>
+          </div>
+
+          <div>
+            <label>
+              Tweede breuk
+              <strong class="af-b">2/4</strong>
+            </label>
+
+            <div class="af-sliders">
+              <input
+                type="range"
+                class="af-b-num"
+                min="1"
+                max="6"
+                value="2"
+              >
+
+              <input
+                type="range"
+                class="af-b-den"
+                min="2"
+                max="8"
+                value="4"
+              >
+            </div>
+          </div>
+
+        </div>
+
+        <div class="fraction-canvas-container">
+          <canvas
+            class="add-fractions-canvas"
+            width="760"
+            height="270"
+          ></canvas>
+        </div>
+
+        <div class="af-result">
+          <strong class="af-result-text">
+            1/4 + 2/4 = 3/4
+          </strong>
+        </div>
+
+      </div>
+    `
+  );
+
+  const aNum = root.querySelector(".af-a-num");
+  const aDen = root.querySelector(".af-a-den");
+
+  const bNum = root.querySelector(".af-b-num");
+  const bDen = root.querySelector(".af-b-den");
+
+  const aLabel = root.querySelector(".af-a");
+  const bLabel = root.querySelector(".af-b");
+
+  const result =
+    root.querySelector(".af-result-text");
+
+  const canvas =
+    root.querySelector(".add-fractions-canvas");
+
+  const container =
+    root.querySelector(".fraction-canvas-container");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    const width = Math.max(300, Math.floor(container.clientWidth));
+    const height = 270;
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    draw();
+  }
+
+  function gcd(a, b) {
+    while (b !== 0) {
+      const t = a % b;
+      a = b;
+      b = t;
+    }
+
+    return Math.abs(a);
+  }
+
+  function draw() {
+    let an = Number(aNum.value);
+    const ad = Number(aDen.value);
+
+    let bn = Number(bNum.value);
+    const bd = Number(bDen.value);
+
+    if (an > ad) {
+      an = ad;
+      aNum.value = ad;
+    }
+
+    if (bn > bd) {
+      bn = bd;
+      bNum.value = bd;
+    }
+
+    aNum.max = ad;
+    bNum.max = bd;
+
+    aLabel.textContent =
+      `${an}/${ad}`;
+
+    bLabel.textContent =
+      `${bn}/${bd}`;
+
+    /*
+     * Gelijke noemers
+     */
+    if (ad === bd) {
+
+      const sum = an + bn;
+
+      const g = gcd(sum, ad);
+
+      const simpleNum = sum / g;
+      const simpleDen = ad / g;
+
+      result.textContent =
+        `${an}/${ad} + ${bn}/${bd} = ` +
+        `${simpleNum}/${simpleDen}`;
+
+      drawEqualDenominator(
+        an,
+        bn,
+        ad
+      );
+
+      return;
+    }
+
+    /*
+     * Verschillende noemers:
+     * zoek gemeenschappelijke noemer.
+     */
+    const commonDen =
+      (ad * bd) / gcd(ad, bd);
+
+    const aFactor =
+      commonDen / ad;
+
+    const bFactor =
+      commonDen / bd;
+
+    const commonA =
+      an * aFactor;
+
+    const commonB =
+      bn * bFactor;
+
+    const sum =
+      commonA + commonB;
+
+    const g =
+      gcd(sum, commonDen);
+
+    result.textContent =
+      `${an}/${ad} + ${bn}/${bd} = ` +
+      `${sum}/${commonDen}` +
+      (g > 1
+        ? ` = ${sum / g}/${commonDen / g}`
+        : "");
+
+    drawDifferentDenominators(
+      an,
+      ad,
+      bn,
+      bd,
+      commonA,
+      commonB,
+      commonDen
+    );
+  }
+
+  function drawEqualDenominator(
+    an,
+    bn,
+    denominator
+  ) {
+    const width = canvas.clientWidth;
+
+    ctx.clearRect(
+      0,
+      0,
+      width,
+      270
+    );
+
+    const barWidth =
+      Math.min(width - 40, 680);
+
+    const barHeight = 45;
+
+    const x =
+      (width - barWidth) / 2;
+
+    drawBar(
+      x,
+      30,
+      barWidth,
+      barHeight,
+      denominator,
+      an,
+      `${an}/${denominator}`
+    );
+
+    drawBar(
+      x,
+      105,
+      barWidth,
+      barHeight,
+      denominator,
+      bn,
+      `${bn}/${denominator}`
+    );
+
+    drawBar(
+      x,
+      180,
+      barWidth,
+      barHeight,
+      denominator,
+      an + bn,
+      `${an + bn}/${denominator}`
+    );
+  }
+
+  function drawDifferentDenominators(
+    an,
+    ad,
+    bn,
+    bd,
+    commonA,
+    commonB,
+    commonDen
+  ) {
+    const width = canvas.clientWidth;
+
+    ctx.clearRect(
+      0,
+      0,
+      width,
+      270
+    );
+
+    const barWidth =
+      Math.min(width - 40, 680);
+
+    const barHeight = 40;
+
+    const x =
+      (width - barWidth) / 2;
+
+    drawBar(
+      x,
+      20,
+      barWidth,
+      barHeight,
+      ad,
+      an,
+      `${an}/${ad}`
+    );
+
+    drawBar(
+      x,
+      90,
+      barWidth,
+      barHeight,
+      bd,
+      bn,
+      `${bn}/${bd}`
+    );
+
+    drawBar(
+      x,
+      160,
+      barWidth,
+      barHeight,
+      commonDen,
+      commonA + commonB,
+      `${commonA}/${commonDen} + ` +
+      `${commonB}/${commonDen}`
+    );
+  }
+
+  function drawBar(
+    x,
+    y,
+    width,
+    height,
+    denominator,
+    numerator,
+    label
+  ) {
+    const partWidth =
+      width / denominator;
+
+    ctx.fillStyle =
+      "rgba(235,240,246,0.9)";
+
+    ctx.fillRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    ctx.fillStyle =
+      "#4f7cff";
+
+    ctx.fillRect(
+      x,
+      y,
+      Math.min(numerator, denominator) *
+        partWidth,
+      height
+    );
+
+    ctx.strokeStyle =
+      "rgba(255,255,255,0.9)";
+
+    ctx.lineWidth = 2;
+
+    ctx.strokeRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    for (let i = 1; i < denominator; i++) {
+      const px =
+        x + i * partWidth;
+
+      ctx.beginPath();
+      ctx.moveTo(px, y);
+      ctx.lineTo(px, y + height);
+      ctx.stroke();
+    }
+
+    ctx.font =
+      "bold 14px sans-serif";
+
+    ctx.textAlign = "left";
+    ctx.textBaseline = "bottom";
+
+    ctx.fillStyle = "#ffffff";
+
+    ctx.fillText(
+      label,
+      x,
+      y - 5
+    );
+  }
+
+  [aNum, aDen, bNum, bDen].forEach(
+    slider => slider.addEventListener("input", draw)
+  );
+
+  if (typeof ResizeObserver !== "undefined") {
+    const observer =
+      new ResizeObserver(() => {
+        resizeCanvas();
+      });
+
+    observer.observe(container);
+  } else {
+    window.addEventListener(
+      "resize",
+      resizeCanvas
+    );
+  }
+
+  resizeCanvas();
+}
+
+function mountMultiplyFractions(root) {
+  root.innerHTML = widgetShell(
+    "Breuken vermenigvuldigen",
+    "Bekijk een deel van een ander deel.",
+    `
+      <div class="multiply-fractions-widget">
+
+        <div class="mf-controls">
+
+          <div class="mf-fraction">
+            <label>
+              Eerste breuk
+              <strong class="mf-a-label">1/2</strong>
+            </label>
+
+            <input
+              type="range"
+              class="mf-a-num"
+              min="1"
+              max="6"
+              value="1"
+            >
+
+            <input
+              type="range"
+              class="mf-a-den"
+              min="2"
+              max="6"
+              value="2"
+            >
+          </div>
+
+          <div class="mf-fraction">
+            <label>
+              Tweede breuk
+              <strong class="mf-b-label">3/4</strong>
+            </label>
+
+            <input
+              type="range"
+              class="mf-b-num"
+              min="1"
+              max="6"
+              value="3"
+            >
+
+            <input
+              type="range"
+              class="mf-b-den"
+              min="2"
+              max="6"
+              value="4"
+            >
+          </div>
+
+        </div>
+
+        <div class="fraction-canvas-container">
+          <canvas
+            class="multiply-fractions-canvas"
+            width="760"
+            height="300"
+          ></canvas>
+        </div>
+
+        <div class="mf-result">
+          <strong class="mf-result-text">
+            1/2 × 3/4 = 3/8
+          </strong>
+        </div>
+
+      </div>
+    `
+  );
+
+  const aNum = root.querySelector(".mf-a-num");
+  const aDen = root.querySelector(".mf-a-den");
+
+  const bNum = root.querySelector(".mf-b-num");
+  const bDen = root.querySelector(".mf-b-den");
+
+  const aLabel = root.querySelector(".mf-a-label");
+  const bLabel = root.querySelector(".mf-b-label");
+
+  const result =
+    root.querySelector(".mf-result-text");
+
+  const canvas =
+    root.querySelector(".multiply-fractions-canvas");
+
+  const container =
+    root.querySelector(".fraction-canvas-container");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    const width = Math.max(300, Math.floor(container.clientWidth));
+    const height = 300;
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width =
+      Math.round(width * dpr);
+
+    canvas.height =
+      Math.round(height * dpr);
+
+    canvas.style.width =
+      width + "px";
+
+    canvas.style.height =
+      height + "px";
+
+    ctx.setTransform(
+      dpr,
+      0,
+      0,
+      dpr,
+      0,
+      0
+    );
+
+    draw();
+  }
+
+  function draw() {
+    let an = Number(aNum.value);
+    const ad = Number(aDen.value);
+
+    let bn = Number(bNum.value);
+    const bd = Number(bDen.value);
+
+    if (an > ad) {
+      an = ad;
+      aNum.value = ad;
+    }
+
+    if (bn > bd) {
+      bn = bd;
+      bNum.value = bd;
+    }
+
+    aNum.max = ad;
+    bNum.max = bd;
+
+    aLabel.textContent =
+      `${an}/${ad}`;
+
+    bLabel.textContent =
+      `${bn}/${bd}`;
+
+    const resultNum =
+      an * bn;
+
+    const resultDen =
+      ad * bd;
+
+    result.textContent =
+      `${an}/${ad} × ${bn}/${bd} = ` +
+      `${resultNum}/${resultDen}`;
+
+    const width = canvas.clientWidth;
+
+    ctx.clearRect(
+      0,
+      0,
+      width,
+      300
+    );
+
+    const barWidth =
+      Math.min(width - 40, 680);
+
+    const barHeight = 45;
+
+    const x =
+      (width - barWidth) / 2;
+
+    /*
+     * Eerste breuk
+     */
+    drawBar(
+      x,
+      25,
+      barWidth,
+      barHeight,
+      ad,
+      an,
+      `${an}/${ad}`
+    );
+
+    /*
+     * Tweede breuk
+     */
+    drawBar(
+      x,
+      100,
+      barWidth,
+      barHeight,
+      bd,
+      bn,
+      `${bn}/${bd}`
+    );
+
+    /*
+     * Resultaat.
+     *
+     * We tekenen het resultaat als een
+     * raster: ad × bd kleine delen.
+     */
+    const rows = ad;
+    const cols = bd;
+
+    const gridWidth =
+      Math.min(barWidth, 520);
+
+    const gridHeight = 90;
+
+    const gx =
+      (width - gridWidth) / 2;
+
+    const gy = 180;
+
+    const cellWidth =
+      gridWidth / cols;
+
+    const cellHeight =
+      gridHeight / rows;
+
+    for (let r = 0; r < rows; r++) {
+
+      for (let c = 0; c < cols; c++) {
+
+        const selected =
+          r < an &&
+          c < bn;
+
+        ctx.fillStyle =
+          selected
+            ? "#4f7cff"
+            : "rgba(235,240,246,0.9)";
+
+        ctx.fillRect(
+          gx + c * cellWidth,
+          gy + r * cellHeight,
+          cellWidth,
+          cellHeight
+        );
+      }
+    }
+
+    ctx.strokeStyle =
+      "rgba(255,255,255,0.9)";
+
+    ctx.lineWidth = 1;
+
+    ctx.strokeRect(
+      gx,
+      gy,
+      gridWidth,
+      gridHeight
+    );
+
+    ctx.font =
+      "bold 14px sans-serif";
+
+    ctx.textAlign = "left";
+    ctx.textBaseline = "bottom";
+
+    ctx.fillStyle = "#ffffff";
+
+    ctx.fillText(
+      `${resultNum}/${resultDen}`,
+      gx,
+      gy - 6
+    );
+  }
+
+  function drawBar(
+    x,
+    y,
+    width,
+    height,
+    denominator,
+    numerator,
+    label
+  ) {
+    const partWidth =
+      width / denominator;
+
+    ctx.fillStyle =
+      "rgba(235,240,246,0.9)";
+
+    ctx.fillRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    ctx.fillStyle =
+      "#4f7cff";
+
+    ctx.fillRect(
+      x,
+      y,
+      Math.min(numerator, denominator) *
+        partWidth,
+      height
+    );
+
+    ctx.strokeStyle =
+      "rgba(255,255,255,0.9)";
+
+    ctx.lineWidth = 2;
+
+    ctx.strokeRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    for (let i = 1; i < denominator; i++) {
+
+      const px =
+        x + i * partWidth;
+
+      ctx.beginPath();
+      ctx.moveTo(px, y);
+      ctx.lineTo(px, y + height);
+      ctx.stroke();
+    }
+
+    ctx.font =
+      "bold 14px sans-serif";
+
+    ctx.textAlign = "left";
+    ctx.textBaseline = "bottom";
+
+    ctx.fillStyle = "#ffffff";
+
+    ctx.fillText(
+      label,
+      x,
+      y - 5
+    );
+  }
+
+  [aNum, aDen, bNum, bDen].forEach(
+    slider => slider.addEventListener("input", draw)
+  );
+
+  if (typeof ResizeObserver !== "undefined") {
+    const observer =
+      new ResizeObserver(() => {
+        resizeCanvas();
+      });
+
+    observer.observe(container);
+  } else {
+    window.addEventListener(
+      "resize",
+      resizeCanvas
+    );
+  }
+
+  resizeCanvas();
+}
+
+function mountDivideFractions(root) {
+  root.innerHTML = widgetShell(
+    "Breuken delen",
+    "Hoeveel keer past de tweede breuk in de eerste?",
+    `
+      <div class="divide-fractions-widget">
+
+        <div class="df-controls">
+
+          <div class="df-fraction">
+            <label>
+              Te delen
+              <strong class="df-a-label">3/4</strong>
+            </label>
+
+            <input
+              type="range"
+              class="df-a-num"
+              min="1"
+              max="6"
+              value="3"
+            >
+
+            <input
+              type="range"
+              class="df-a-den"
+              min="2"
+              max="8"
+              value="4"
+            >
+          </div>
+
+          <div class="df-fraction">
+            <label>
+              Deler
+              <strong class="df-b-label">1/2</strong>
+            </label>
+
+            <input
+              type="range"
+              class="df-b-num"
+              min="1"
+              max="6"
+              value="1"
+            >
+
+            <input
+              type="range"
+              class="df-b-den"
+              min="2"
+              max="8"
+              value="2"
+            >
+          </div>
+
+        </div>
+
+        <div class="fraction-canvas-container">
+          <canvas
+            class="divide-fractions-canvas"
+            width="760"
+            height="270"
+          ></canvas>
+        </div>
+
+        <div class="df-result">
+          <strong class="df-result-text">
+            3/4 ÷ 1/2 = 3/2
+          </strong>
+        </div>
+
+      </div>
+    `
+  );
+
+  const aNum = root.querySelector(".df-a-num");
+  const aDen = root.querySelector(".df-a-den");
+
+  const bNum = root.querySelector(".df-b-num");
+  const bDen = root.querySelector(".df-b-den");
+
+  const aLabel =
+    root.querySelector(".df-a-label");
+
+  const bLabel =
+    root.querySelector(".df-b-label");
+
+  const result =
+    root.querySelector(".df-result-text");
+
+  const canvas =
+    root.querySelector(".divide-fractions-canvas");
+
+  const container =
+    root.querySelector(".fraction-canvas-container");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    const width =
+      Math.max(300, Math.floor(container.clientWidth));
+
+    const height = 270;
+
+    const dpr =
+      window.devicePixelRatio || 1;
+
+    canvas.width =
+      Math.round(width * dpr);
+
+    canvas.height =
+      Math.round(height * dpr);
+
+    canvas.style.width =
+      width + "px";
+
+    canvas.style.height =
+      height + "px";
+
+    ctx.setTransform(
+      dpr,
+      0,
+      0,
+      dpr,
+      0,
+      0
+    );
+
+    draw();
+  }
+
+  function draw() {
+
+    let an = Number(aNum.value);
+    const ad = Number(aDen.value);
+
+    let bn = Number(bNum.value);
+    const bd = Number(bDen.value);
+
+    if (an > ad) {
+      an = ad;
+      aNum.value = ad;
+    }
+
+    if (bn > bd) {
+      bn = bd;
+      bNum.value = bd;
+    }
+
+    aNum.max = ad;
+    bNum.max = bd;
+
+    aLabel.textContent =
+      `${an}/${ad}`;
+
+    bLabel.textContent =
+      `${bn}/${bd}`;
+
+    const resultNum =
+      an * bd;
+
+    const resultDen =
+      ad * bn;
+
+    result.textContent =
+      `${an}/${ad} ÷ ${bn}/${bd} = ` +
+      `${resultNum}/${resultDen}`;
+
+    const width = canvas.clientWidth;
+
+    ctx.clearRect(
+      0,
+      0,
+      width,
+      270
+    );
+
+    const barWidth =
+      Math.min(width - 40, 680);
+
+    const barHeight = 55;
+
+    const x =
+      (width - barWidth) / 2;
+
+    /*
+     * Eerste balk:
+     * het getal dat we verdelen.
+     */
+    drawBar(
+      x,
+      30,
+      barWidth,
+      barHeight,
+      ad,
+      an,
+      `${an}/${ad}`
+    );
+
+    /*
+     * Toon de stukken van de deler
+     * onder de eerste balk.
+     */
+    const divisorParts =
+      Math.max(1, Math.round(bd / bn));
+
+    const pieceWidth =
+      barWidth / divisorParts;
+
+    ctx.strokeStyle =
+      "#f2a65a";
+
+    ctx.lineWidth = 3;
+
+    for (let i = 1; i < divisorParts; i++) {
+
+      const px =
+        x + i * pieceWidth;
+
+      ctx.beginPath();
+      ctx.moveTo(px, 25);
+      ctx.lineTo(px, 90);
+      ctx.stroke();
+    }
+
+    /*
+     * Uitleg
+     */
+    ctx.font =
+      "14px sans-serif";
+
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillStyle = "#ffffff";
+
+    const quotient =
+      (an / ad) / (bn / bd);
+
+    ctx.fillText(
+      `≈ ${quotient.toFixed(2)} keer`,
+      width / 2,
+      130
+    );
+
+    /*
+     * Omgekeerde breuk
+     */
+    ctx.font =
+      "bold 16px sans-serif";
+
+    ctx.fillText(
+      `delen door ${bn}/${bd} = × ${bd}/${bn}`,
+      width / 2,
+      170
+    );
+  }
+
+  function drawBar(
+    x,
+    y,
+    width,
+    height,
+    denominator,
+    numerator,
+    label
+  ) {
+
+    const partWidth =
+      width / denominator;
+
+    ctx.fillStyle =
+      "rgba(235,240,246,0.9)";
+
+    ctx.fillRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    ctx.fillStyle =
+      "#4f7cff";
+
+    ctx.fillRect(
+      x,
+      y,
+      Math.min(numerator, denominator) *
+        partWidth,
+      height
+    );
+
+    ctx.strokeStyle =
+      "rgba(255,255,255,0.9)";
+
+    ctx.lineWidth = 2;
+
+    ctx.strokeRect(
+      x,
+      y,
+      width,
+      height
+    );
+
+    for (let i = 1; i < denominator; i++) {
+
+      const px =
+        x + i * partWidth;
+
+      ctx.beginPath();
+      ctx.moveTo(px, y);
+      ctx.lineTo(px, y + height);
+      ctx.stroke();
+    }
+
+    ctx.font =
+      "bold 14px sans-serif";
+
+    ctx.textAlign = "left";
+    ctx.textBaseline = "bottom";
+
+    ctx.fillStyle = "#ffffff";
+
+    ctx.fillText(
+      label,
+      x,
+      y - 5
+    );
+  }
+
+  [aNum, aDen, bNum, bDen].forEach(
+    slider => slider.addEventListener("input", draw)
+  );
+
+  if (typeof ResizeObserver !== "undefined") {
+
+    const observer =
+      new ResizeObserver(() => {
+        resizeCanvas();
+      });
+
+    observer.observe(container);
+
+  } else {
+
+    window.addEventListener(
+      "resize",
+      resizeCanvas
+    );
+  }
+
+  resizeCanvas();
+}
 
 function mountPercentageBar(root) {
   if (!root) return;
@@ -2029,6 +4349,7 @@ const WIDGET_BUILDERS = {
   smartdivision: mountSmartDivision,
   commutative: mountCommutative,
   associative: mountAssociative,
+  fractionWhole: mountFractionWhole,
   fractionVisual: mountFractionVisual,
   percentageBar: mountPercentageBar,
   plot: mountPlot,
@@ -2037,6 +4358,12 @@ const WIDGET_BUILDERS = {
   vectors: mountVectors,
   complex: mountComplex,
   unitcircle: mountUnitcircle,
+  fractionNumberLine: mountFractionNumberLine,
+  equivalentFractions: mountEquivalentFractions,
+  compareFractions: mountCompareFractions,
+  addFractions: mountAddFractions,
+  multiplyFractions: mountMultiplyFractions,
+  divideFractions: mountDivideFractions,
   sine: mountSine
 };
 
