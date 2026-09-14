@@ -1,14 +1,3 @@
-const WIDGET_MAP = {
-  "1.1": ["nats"],
-  "1.2": ["groups"],
-  "1.3": ["ints"],
-  "2.3": ["plot"],
-  "2.4": ["unitcircle", "sine"],
-  "3.2": ["tangent"],
-  "3.3": ["riemann"],
-  "4.1": ["vectors"],
-  "5.1": ["complex"]
-};
 
 function widgetShell(title, hint, body) {
   return `<section class="widget">
@@ -254,6 +243,1264 @@ function mountGroups(root) {
   [groupsEl, itemsEl].forEach((el) => el.addEventListener("input", draw));
   draw();
 }
+
+function mountSmartMultiplication(root) {
+  root.innerHTML = widgetShell(
+    "Slim rekenen met vermenigvuldigen",
+    "Splits een vermenigvuldiging op in twee eenvoudigere vermenigvuldigingen.",
+    `<canvas data-h="300"></canvas>
+     <div class="widget-controls">
+       <label>
+         Groepjes
+         <input
+           type="range"
+           min="2"
+           max="10"
+           step="1"
+           value="6"
+           data-k="groups"
+         >
+         <output data-o="groups">6</output>
+       </label>
+
+       <label>
+         Aantal per groep
+         <input
+           type="range"
+           min="2"
+           max="12"
+           step="1"
+           value="7"
+           data-k="total"
+         >
+         <output data-o="total">7</output>
+       </label>
+
+       <label>
+         Splits
+         <input
+           type="range"
+           min="1"
+           max="6"
+           step="1"
+           value="5"
+           data-k="split"
+         >
+         <output data-o="split">5 + 2</output>
+       </label>
+     </div>
+     <p class="widget-readout"></p>`
+  );
+
+  const canvas = root.querySelector("canvas");
+  const groupsEl = root.querySelector("[data-k=groups]");
+  const totalEl = root.querySelector("[data-k=total]");
+  const splitEl = root.querySelector("[data-k=split]");
+
+  const groupsOut = root.querySelector("[data-o=groups]");
+  const totalOut = root.querySelector("[data-o=total]");
+  const splitOut = root.querySelector("[data-o=split]");
+  const readout = root.querySelector(".widget-readout");
+
+  const draw = () => {
+    const groups = Number(groupsEl.value);
+    const total = Number(totalEl.value);
+
+    // De splitslider mag nooit groter zijn dan total - 1.
+    const splitMax = Math.max(1, total - 1);
+    splitEl.max = splitMax;
+
+    if (Number(splitEl.value) > splitMax) {
+      splitEl.value = splitMax;
+    }
+
+    const split = Number(splitEl.value);
+    const remainder = total - split;
+
+    groupsOut.textContent = groups;
+    totalOut.textContent = total;
+    splitOut.textContent = `${split} + ${remainder}`;
+
+    const { ctx, w, h } = prepCanvas(canvas);
+
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+
+    // ------------------------------------------------------------
+    // Instellingen voor de visuele groepjes
+    // ------------------------------------------------------------
+
+    const top = 58;
+    const bottom = 48;
+
+    // Ruimte tussen de twee delen van iedere rij.
+    const gap = 22;
+
+    const availableWidth = w - 50;
+    const availableHeight = h - top - bottom;
+
+    const maxColumns = total;
+
+    const cellWidth = Math.min(
+      34,
+      (availableWidth - gap) / maxColumns
+    );
+
+    const cellHeight = Math.min(
+      34,
+      availableHeight / groups
+    );
+
+    const radius = Math.min(
+      10,
+      cellWidth * 0.30,
+      cellHeight * 0.30
+    );
+
+    const leftWidth = split * cellWidth;
+    const rightWidth = remainder * cellWidth;
+
+    const wholeWidth =
+      leftWidth +
+      (remainder > 0 ? gap : 0) +
+      rightWidth;
+
+    const startX = (w - wholeWidth) / 2;
+
+    // ------------------------------------------------------------
+    // Titel van de visualisatie
+    // ------------------------------------------------------------
+
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "22px Cinzel, serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(
+      `${groups} × ${total} = ${groups} × ${split} + ${groups} × ${remainder}`,
+      w / 2,
+      25
+    );
+
+    // ------------------------------------------------------------
+    // Objecten tekenen
+    // ------------------------------------------------------------
+
+    const startY =
+      top +
+      (availableHeight - groups * cellHeight) / 2 +
+      cellHeight / 2;
+
+    for (let row = 0; row < groups; row++) {
+      const y = startY + row * cellHeight;
+
+      // Eerste deel
+      for (let col = 0; col < split; col++) {
+        const x =
+          startX +
+          col * cellWidth +
+          cellWidth / 2;
+
+        ctx.fillStyle = "#7dcea0";
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Tweede deel
+      for (let col = 0; col < remainder; col++) {
+        const x =
+          startX +
+          leftWidth +
+          gap +
+          col * cellWidth +
+          cellWidth / 2;
+
+        ctx.fillStyle = "#6ab0e0";
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    // ------------------------------------------------------------
+    // Scheidingslijn tussen de twee delen
+    // ------------------------------------------------------------
+
+    if (remainder > 0) {
+      const separatorX =
+        startX +
+        leftWidth +
+        gap / 2;
+
+      ctx.strokeStyle = "rgba(230,199,122,0.55)";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 5]);
+
+      ctx.beginPath();
+      ctx.moveTo(separatorX, top - 8);
+      ctx.lineTo(separatorX, h - bottom + 8);
+      ctx.stroke();
+
+      ctx.setLineDash([]);
+    }
+
+    // ------------------------------------------------------------
+    // Uitleg onder de groepjes
+    // ------------------------------------------------------------
+
+    ctx.font = "16px 'Source Sans 3', sans-serif";
+
+    const equationY = h - 22;
+
+    ctx.fillStyle = "#7dcea0";
+    ctx.textAlign = "right";
+
+    ctx.fillText(
+      `${groups} × ${split} = ${groups * split}`,
+      w / 2 - 10,
+      equationY
+    );
+
+    ctx.fillStyle = "#fff6df";
+    ctx.textAlign = "center";
+
+    ctx.fillText(
+      "+",
+      w / 2,
+      equationY
+    );
+
+    ctx.fillStyle = "#6ab0e0";
+    ctx.textAlign = "left";
+
+    ctx.fillText(
+      `${groups} × ${remainder} = ${groups * remainder}`,
+      w / 2 + 10,
+      equationY
+    );
+
+    // ------------------------------------------------------------
+    // Tekstuele uitleg
+    // ------------------------------------------------------------
+
+    readout.textContent =
+      `${groups} × ${total} = ${groups * total}  →  ` +
+      `${groups * split} + ${groups * remainder} = ${groups * total}`;
+  };
+
+  groupsEl.addEventListener("input", draw);
+  totalEl.addEventListener("input", draw);
+  splitEl.addEventListener("input", draw);
+
+  draw();
+}
+
+function mountDivisionGroups(root) {
+  root.innerHTML = widgetShell(
+    "Delen als gelijke groepen",
+    "Verdeel de voorwerpen in even grote groepen.",
+    `<canvas data-h="300"></canvas>
+     <div class="widget-controls">
+       <label>
+         Totaal
+         <input
+           type="range"
+           min="4"
+           max="30"
+           step="1"
+           value="12"
+           data-k="total"
+         >
+         <output data-o="total">12</output>
+       </label>
+
+       <label>
+         Aantal groepen
+         <input
+           type="range"
+           min="1"
+           max="10"
+           step="1"
+           value="3"
+           data-k="groups"
+         >
+         <output data-o="groups">3</output>
+       </label>
+     </div>
+     <p class="widget-readout"></p>`
+  );
+
+  const canvas = root.querySelector("canvas");
+  const totalEl = root.querySelector("[data-k=total]");
+  const groupsEl = root.querySelector("[data-k=groups]");
+
+  const totalOut = root.querySelector("[data-o=total]");
+  const groupsOut = root.querySelector("[data-o=groups]");
+  const readout = root.querySelector(".widget-readout");
+
+  const draw = () => {
+    const total = Number(totalEl.value);
+    const groups = Number(groupsEl.value);
+
+    totalOut.textContent = total;
+    groupsOut.textContent = groups;
+
+    const quotient = Math.floor(total / groups);
+    const remainder = total % groups;
+
+    const { ctx, w, h } = prepCanvas(canvas);
+
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+
+    /*
+     * We tekenen de groepen als kolommen.
+     * Elk voorwerp is een cirkel.
+     */
+    const top = 55;
+    const bottom = 45;
+    const side = 30;
+
+    const availableWidth = w - 2 * side;
+    const availableHeight = h - top - bottom;
+
+    const gapX = 16;
+    const gapY = 10;
+
+    const cellWidth =
+      Math.min(
+        34,
+        (availableWidth - (groups - 1) * gapX) / groups
+      );
+
+    const cellHeight =
+      Math.min(
+        34,
+        (availableHeight - (quotient - 1) * gapY) /
+          Math.max(quotient, 1)
+      );
+
+    const radius =
+      Math.min(
+        11,
+        cellWidth * 0.32,
+        cellHeight * 0.32
+      );
+
+    const totalWidth =
+      groups * cellWidth +
+      (groups - 1) * gapX;
+
+    const startX = (w - totalWidth) / 2;
+
+    /*
+     * Titel boven de visualisatie
+     */
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "22px Cinzel, serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(
+      `${total} ÷ ${groups} = ${quotient}`,
+      w / 2,
+      25
+    );
+
+    /*
+     * Voorwerpen tekenen.
+     *
+     * We vullen de groepen rij per rij.
+     * Daardoor krijgt iedere groep precies
+     * hetzelfde aantal voorwerpen.
+     */
+    for (let group = 0; group < groups; group++) {
+      const x =
+        startX +
+        group * (cellWidth + gapX) +
+        cellWidth / 2;
+
+      for (let item = 0; item < quotient; item++) {
+        const y =
+          top +
+          item * (cellHeight + gapY) +
+          cellHeight / 2;
+
+        ctx.fillStyle = "#7dcea0";
+
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    /*
+     * Labels onder de groepen.
+     */
+    ctx.font = "14px 'Source Sans 3', sans-serif";
+    ctx.textAlign = "center";
+
+    for (let group = 0; group < groups; group++) {
+      const x =
+        startX +
+        group * (cellWidth + gapX) +
+        cellWidth / 2;
+
+      ctx.fillStyle = "#cbb98a";
+
+      ctx.fillText(
+        `${quotient}`,
+        x,
+        h - 20
+      );
+    }
+
+    /*
+     * Uitleg onderaan.
+     */
+    readout.textContent =
+      `${total} voorwerpen verdeeld over ${groups} groepen ` +
+      `= ${quotient} per groep`;
+  };
+
+  totalEl.addEventListener("input", draw);
+  groupsEl.addEventListener("input", draw);
+
+  draw();
+}
+
+function mountDivisionRemainder(root) {
+  root.innerHTML = widgetShell(
+    "Delen met rest",
+    "Maak zoveel mogelijk volledige groepen.",
+    `<canvas data-h="320"></canvas>
+     <div class="widget-controls">
+       <label>
+         Totaal
+         <input
+           type="range"
+           min="4"
+           max="30"
+           step="1"
+           value="14"
+           data-k="total"
+         >
+         <output data-o="total">14</output>
+       </label>
+
+       <label>
+         Grootte van de groep
+         <input
+           type="range"
+           min="2"
+           max="8"
+           step="1"
+           value="4"
+           data-k="divisor"
+         >
+         <output data-o="divisor">4</output>
+       </label>
+     </div>
+     <p class="widget-readout"></p>`
+  );
+
+  const canvas = root.querySelector("canvas");
+  const totalEl = root.querySelector("[data-k=total]");
+  const divisorEl = root.querySelector("[data-k=divisor]");
+
+  const totalOut = root.querySelector("[data-o=total]");
+  const divisorOut = root.querySelector("[data-o=divisor]");
+  const readout = root.querySelector(".widget-readout");
+
+  const draw = () => {
+    const total = Number(totalEl.value);
+    const divisor = Number(divisorEl.value);
+
+    const quotient = Math.floor(total / divisor);
+    const remainder = total % divisor;
+
+    totalOut.textContent = total;
+    divisorOut.textContent = divisor;
+
+    const { ctx, w, h } = prepCanvas(canvas);
+
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+
+    /*
+     * Titel
+     */
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "22px Cinzel, serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(
+      `${total} ÷ ${divisor} = ${quotient} rest ${remainder}`,
+      w / 2,
+      25
+    );
+
+    /*
+     * Afmetingen van de volledige groepen.
+     */
+    const groupGap = 22;
+    const itemGap = 8;
+
+    const side = 25;
+    const top = 55;
+
+    const groupWidth = Math.min(
+      150,
+      (w - 2 * side - Math.max(quotient - 1, 0) * groupGap) /
+        Math.max(quotient, 1)
+    );
+
+    const itemSize = Math.min(
+      28,
+      (groupWidth - (divisor - 1) * itemGap) / divisor
+    );
+
+    const groupActualWidth =
+      divisor * itemSize +
+      (divisor - 1) * itemGap;
+
+    const totalGroupsWidth =
+      quotient * groupActualWidth +
+      Math.max(quotient - 1, 0) * groupGap;
+
+    const startX = (w - totalGroupsWidth) / 2;
+
+    /*
+     * Volledige groepen tekenen.
+     */
+    for (let group = 0; group < quotient; group++) {
+      const groupX =
+        startX +
+        group * (groupActualWidth + groupGap);
+
+      for (let item = 0; item < divisor; item++) {
+        const x =
+          groupX +
+          item * (itemSize + itemGap) +
+          itemSize / 2;
+
+        const y = top + 80;
+
+        ctx.fillStyle = "#7dcea0";
+
+        ctx.beginPath();
+        ctx.arc(
+          x,
+          y,
+          Math.min(10, itemSize * 0.35),
+          0,
+          Math.PI * 2
+        );
+        ctx.fill();
+      }
+
+      /*
+       * Label onder iedere groep.
+       */
+      ctx.fillStyle = "#cbb98a";
+      ctx.font = "14px 'Source Sans 3', sans-serif";
+      ctx.textAlign = "center";
+
+      ctx.fillText(
+        `groep ${group + 1}`,
+        groupX + groupActualWidth / 2,
+        top + 125
+      );
+    }
+
+    /*
+     * Rest tekenen.
+     */
+    if (remainder > 0) {
+      const remainderStartX =
+        startX +
+        quotient * (groupActualWidth + groupGap);
+
+      for (let item = 0; item < remainder; item++) {
+        const x =
+          remainderStartX +
+          item * (itemSize + itemGap) +
+          itemSize / 2;
+
+        const y = top + 80;
+
+        ctx.fillStyle = "#6ab0e0";
+
+        ctx.beginPath();
+        ctx.arc(
+          x,
+          y,
+          Math.min(10, itemSize * 0.35),
+          0,
+          Math.PI * 2
+        );
+        ctx.fill();
+      }
+
+      ctx.fillStyle = "#6ab0e0";
+      ctx.font = "14px 'Source Sans 3', sans-serif";
+      ctx.textAlign = "center";
+
+      const remainderWidth =
+        remainder * itemSize +
+        Math.max(remainder - 1, 0) * itemGap;
+
+      ctx.fillText(
+        "rest",
+        remainderStartX + remainderWidth / 2,
+        top + 125
+      );
+    }
+
+    /*
+     * Rekenkundige controle onderaan.
+     */
+    ctx.font = "16px 'Source Sans 3', sans-serif";
+    ctx.textAlign = "center";
+
+    ctx.fillStyle = "#fff6df";
+
+    ctx.fillText(
+      `${quotient} × ${divisor} + ${remainder} = ${total}`,
+      w / 2,
+      h - 42
+    );
+
+    readout.textContent =
+      `${total} ÷ ${divisor} = ${quotient} rest ${remainder}`;
+  };
+
+  totalEl.addEventListener("input", draw);
+  divisorEl.addEventListener("input", draw);
+
+  draw();
+}
+
+function mountSmartDivision(root) {
+  root.innerHTML = widgetShell(
+    "Slim delen",
+    "Splits een getal op in twee delen die zonder rest deelbaar zijn.",
+    `<canvas data-h="320"></canvas>
+     <div class="widget-controls">
+       <label>
+         Getal
+         <input
+           type="range"
+           min="20"
+           max="150"
+           step="1"
+           value="84"
+           data-k="total"
+         >
+         <output data-o="total">84</output>
+       </label>
+
+       <label>
+         Deler
+         <input
+           type="range"
+           min="2"
+           max="10"
+           step="1"
+           value="4"
+           data-k="divisor"
+         >
+         <output data-o="divisor">4</output>
+       </label>
+
+       <label>
+         Splitsing
+         <input
+           type="range"
+           min="1"
+           max="1"
+           step="1"
+           value="1"
+           data-k="split"
+         >
+         <output data-o="split">80 + 4</output>
+       </label>
+     </div>
+     <p class="widget-readout"></p>`
+  );
+
+  const canvas = root.querySelector("canvas");
+  const totalEl = root.querySelector("[data-k=total]");
+  const divisorEl = root.querySelector("[data-k=divisor]");
+  const splitEl = root.querySelector("[data-k=split]");
+
+  const totalOut = root.querySelector("[data-o=total]");
+  const divisorOut = root.querySelector("[data-o=divisor]");
+  const splitOut = root.querySelector("[data-o=split]");
+  const readout = root.querySelector(".widget-readout");
+
+  /*
+   * Bepaal alle splitsingen waarbij beide delen
+   * zonder rest deelbaar zijn door de deler.
+   */
+  const getValidSplits = (total, divisor) => {
+    const splits = [];
+
+    for (let split = 1; split < total; split++) {
+      const remainder = total - split;
+
+      if (
+        split % divisor === 0 &&
+        remainder % divisor === 0
+      ) {
+        splits.push(split);
+      }
+    }
+
+    return splits;
+  };
+
+  const draw = () => {
+    const total = Number(totalEl.value);
+    const divisor = Number(divisorEl.value);
+
+    const validSplits = getValidSplits(total, divisor);
+
+    /*
+     * Als het totaal zelf niet deelbaar is door de deler,
+     * bestaat er geen splitsing waarbij beide delen zonder
+     * rest deelbaar zijn.
+     */
+    if (validSplits.length === 0) {
+      totalOut.textContent = total;
+      divisorOut.textContent = divisor;
+      splitOut.textContent = "geen geldige splitsing";
+
+      splitEl.disabled = true;
+
+      const { ctx, w, h } = prepCanvas(canvas);
+
+      ctx.fillStyle = "#fff6df";
+      ctx.font = "22px Cinzel, serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      ctx.fillText(
+        `${total} ÷ ${divisor}`,
+        w / 2,
+        80
+      );
+
+      ctx.font = "18px 'Source Sans 3', sans-serif";
+
+      ctx.fillText(
+        "Geen splitsing waarbij beide delen",
+        w / 2,
+        145
+      );
+
+      ctx.fillText(
+        "zonder rest deelbaar zijn.",
+        w / 2,
+        175
+      );
+
+      readout.textContent =
+        `${total} ÷ ${divisor} kan hier niet met deze methode worden opgesplitst.`;
+
+      return;
+    }
+
+    splitEl.disabled = false;
+
+    /*
+     * De slider gebruikt een index in de lijst met geldige
+     * splitsingen.
+     */
+    splitEl.min = 0;
+    splitEl.max = validSplits.length - 1;
+    splitEl.step = 1;
+
+    let splitIndex = Number(splitEl.value);
+
+    if (
+      !Number.isInteger(splitIndex) ||
+      splitIndex < 0 ||
+      splitIndex >= validSplits.length
+    ) {
+      splitIndex = 0;
+      splitEl.value = 0;
+    }
+
+    const split = validSplits[splitIndex];
+    const remainder = total - split;
+
+    const leftQuotient = split / divisor;
+    const rightQuotient = remainder / divisor;
+    const result = total / divisor;
+
+    totalOut.textContent = total;
+    divisorOut.textContent = divisor;
+    splitOut.textContent = `${split} + ${remainder}`;
+
+    const { ctx, w, h } = prepCanvas(canvas);
+
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+
+    /*
+     * Hoofdequatie
+     */
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "22px Cinzel, serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(
+      `${total} ÷ ${divisor} = ${result}`,
+      w / 2,
+      28
+    );
+
+    /*
+     * De twee delen.
+     */
+    const centerY = 125;
+
+    const leftX = w * 0.28;
+    const rightX = w * 0.72;
+
+    /*
+     * Eerste deel
+     */
+    ctx.fillStyle = "#7dcea0";
+    ctx.font = "26px Cinzel, serif";
+
+    ctx.fillText(
+      `${split} ÷ ${divisor}`,
+      leftX,
+      centerY
+    );
+
+    /*
+     * Tweede deel
+     */
+    ctx.fillStyle = "#6ab0e0";
+
+    ctx.fillText(
+      `${remainder} ÷ ${divisor}`,
+      rightX,
+      centerY
+    );
+
+    /*
+     * Verbindingslijnen
+     */
+    ctx.strokeStyle = "rgba(230,199,122,0.55)";
+    ctx.lineWidth = 2;
+
+    ctx.beginPath();
+    ctx.moveTo(leftX, centerY + 30);
+    ctx.lineTo(leftX, centerY + 55);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(rightX, centerY + 30);
+    ctx.lineTo(rightX, centerY + 55);
+    ctx.stroke();
+
+    /*
+     * Resultaten van beide eenvoudige delingen.
+     */
+    ctx.font = "20px 'Source Sans 3', sans-serif";
+
+    ctx.fillStyle = "#7dcea0";
+
+    ctx.fillText(
+      `= ${leftQuotient}`,
+      leftX,
+      centerY + 85
+    );
+
+    ctx.fillStyle = "#6ab0e0";
+
+    ctx.fillText(
+      `= ${rightQuotient}`,
+      rightX,
+      centerY + 85
+    );
+
+    /*
+     * Eindresultaat.
+     */
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "18px 'Source Sans 3', sans-serif";
+
+    ctx.fillText(
+      `${split} ÷ ${divisor} + ${remainder} ÷ ${divisor} = ${result}`,
+      w / 2,
+      h - 40
+    );
+
+    readout.textContent =
+      `${total} ÷ ${divisor} = ` +
+      `${split} ÷ ${divisor} + ${remainder} ÷ ${divisor}`;
+  };
+
+  totalEl.addEventListener("input", draw);
+  divisorEl.addEventListener("input", draw);
+  splitEl.addEventListener("input", draw);
+
+  draw();
+}
+
+function mountCommutative(root) {
+  root.innerHTML = widgetShell(
+    "De commutatieve eigenschap",
+    "Draai de groepen om en het totaal blijft hetzelfde.",
+    `<canvas data-h="320"></canvas>
+     <div class="widget-controls">
+       <label>
+         Eerste getal
+         <input
+           type="range"
+           min="2"
+           max="8"
+           step="1"
+           value="3"
+           data-k="a"
+         >
+         <output data-o="a">3</output>
+       </label>
+
+       <label>
+         Tweede getal
+         <input
+           type="range"
+           min="2"
+           max="8"
+           step="1"
+           value="4"
+           data-k="b"
+         >
+         <output data-o="b">4</output>
+       </label>
+     </div>
+     <p class="widget-readout"></p>`
+  );
+
+  const canvas = root.querySelector("canvas");
+  const aEl = root.querySelector("[data-k=a]");
+  const bEl = root.querySelector("[data-k=b]");
+
+  const aOut = root.querySelector("[data-o=a]");
+  const bOut = root.querySelector("[data-o=b]");
+  const readout = root.querySelector(".widget-readout");
+
+  const drawArray = (
+    ctx,
+    rows,
+    columns,
+    centerX,
+    centerY,
+    label
+  ) => {
+    const cell = 24;
+    const gap = 6;
+
+    const width =
+      columns * cell +
+      (columns - 1) * gap;
+
+    const height =
+      rows * cell +
+      (rows - 1) * gap;
+
+    const startX = centerX - width / 2;
+    const startY = centerY - height / 2;
+
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < columns; col++) {
+        const x =
+          startX +
+          col * (cell + gap) +
+          cell / 2;
+
+        const y =
+          startY +
+          row * (cell + gap) +
+          cell / 2;
+
+        ctx.fillStyle = "#7dcea0";
+
+        ctx.beginPath();
+        ctx.arc(
+          x,
+          y,
+          8,
+          0,
+          Math.PI * 2
+        );
+        ctx.fill();
+      }
+    }
+
+    ctx.fillStyle = "#cbb98a";
+    ctx.font = "16px 'Source Sans 3', sans-serif";
+    ctx.textAlign = "center";
+
+    ctx.fillText(
+      label,
+      centerX,
+      startY + height + 30
+    );
+  };
+
+  const draw = () => {
+    const a = Number(aEl.value);
+    const b = Number(bEl.value);
+
+    const total = a * b;
+
+    aOut.textContent = a;
+    bOut.textContent = b;
+
+    const { ctx, w, h } = prepCanvas(canvas);
+
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+
+    /*
+     * Links: a rijen van b.
+     */
+    drawArray(
+      ctx,
+      a,
+      b,
+      w * 0.27,
+      135,
+      `${a} × ${b} = ${total}`
+    );
+
+    /*
+     * Rechts: b rijen van a.
+     */
+    drawArray(
+      ctx,
+      b,
+      a,
+      w * 0.73,
+      135,
+      `${b} × ${a} = ${total}`
+    );
+
+    /*
+     * Pijl / gelijkheid in het midden.
+     */
+    ctx.fillStyle = "#e6c77a";
+    ctx.font = "24px Cinzel, serif";
+    ctx.textAlign = "center";
+
+    ctx.fillText(
+      "=",
+      w / 2,
+      135
+    );
+
+    /*
+     * Algemene conclusie.
+     */
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "18px 'Source Sans 3', sans-serif";
+
+    ctx.fillText(
+      `${a} × ${b} = ${b} × ${a} = ${total}`,
+      w / 2,
+      h - 25
+    );
+
+    readout.textContent =
+      `De volgorde verandert het aantal niet: ` +
+      `${a} × ${b} = ${b} × ${a} = ${total}`;
+  };
+
+  aEl.addEventListener("input", draw);
+  bEl.addEventListener("input", draw);
+
+  draw();
+}
+
+function mountAssociative(root) {
+  root.innerHTML = widgetShell(
+    "De associatieve eigenschap",
+    "Verander de groepering en ontdek dat het antwoord hetzelfde blijft.",
+    `<canvas data-h="320"></canvas>
+     <div class="widget-controls">
+       <label>
+         Eerste getal
+         <input
+           type="range"
+           min="1"
+           max="9"
+           step="1"
+           value="2"
+           data-k="a"
+         >
+         <output data-o="a">2</output>
+       </label>
+
+       <label>
+         Tweede getal
+         <input
+           type="range"
+           min="1"
+           max="9"
+           step="1"
+           value="3"
+           data-k="b"
+         >
+         <output data-o="b">3</output>
+       </label>
+
+       <label>
+         Derde getal
+         <input
+           type="range"
+           min="1"
+           max="9"
+           step="1"
+           value="4"
+           data-k="c"
+         >
+         <output data-o="c">4</output>
+       </label>
+     </div>
+     <p class="widget-readout"></p>`
+  );
+
+  const canvas = root.querySelector("canvas");
+
+  const aEl = root.querySelector("[data-k=a]");
+  const bEl = root.querySelector("[data-k=b]");
+  const cEl = root.querySelector("[data-k=c]");
+
+  const aOut = root.querySelector("[data-o=a]");
+  const bOut = root.querySelector("[data-o=b]");
+  const cOut = root.querySelector("[data-o=c]");
+
+  const readout = root.querySelector(".widget-readout");
+
+  const draw = () => {
+    const a = Number(aEl.value);
+    const b = Number(bEl.value);
+    const c = Number(cEl.value);
+
+    const left = (a + b) + c;
+    const right = a + (b + c);
+
+    aOut.textContent = a;
+    bOut.textContent = b;
+    cOut.textContent = c;
+
+    const { ctx, w, h } = prepCanvas(canvas);
+
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+
+    /*
+     * Linkerkant
+     */
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "22px Cinzel, serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(
+      `(${a} + ${b}) + ${c}`,
+      w * 0.27,
+      65
+    );
+
+    ctx.fillStyle = "#7dcea0";
+    ctx.font = "20px 'Source Sans 3', sans-serif";
+
+    ctx.fillText(
+      `${a + b} + ${c}`,
+      w * 0.27,
+      125
+    );
+
+    ctx.fillText(
+      `= ${left}`,
+      w * 0.27,
+      175
+    );
+
+    /*
+     * Gelijkheid
+     */
+    ctx.fillStyle = "#e6c77a";
+    ctx.font = "28px Cinzel, serif";
+
+    ctx.fillText(
+      "=",
+      w / 2,
+      125
+    );
+
+    /*
+     * Rechterkant
+     */
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "22px Cinzel, serif";
+
+    ctx.fillText(
+      `${a} + (${b} + ${c})`,
+      w * 0.73,
+      65
+    );
+
+    ctx.fillStyle = "#6ab0e0";
+    ctx.font = "20px 'Source Sans 3', sans-serif";
+
+    ctx.fillText(
+      `${a} + ${b + c}`,
+      w * 0.73,
+      125
+    );
+
+    ctx.fillText(
+      `= ${right}`,
+      w * 0.73,
+      175
+    );
+
+    /*
+     * Conclusie
+     */
+    ctx.fillStyle = "#fff6df";
+    ctx.font = "18px 'Source Sans 3', sans-serif";
+
+    ctx.fillText(
+      `Beide manieren geven ${left}`,
+      w / 2,
+      h - 30
+    );
+
+    readout.textContent =
+      `(${a} + ${b}) + ${c} = ` +
+      `${a} + (${b} + ${c}) = ${left}`;
+  };
+
+  aEl.addEventListener("input", draw);
+  bEl.addEventListener("input", draw);
+  cEl.addEventListener("input", draw);
+
+  draw();
+}
+
 
 function mountPlot(root) {
   root.innerHTML = widgetShell("Functieplot", "Sleep a en b. Zet de parabool aan voor x².",
@@ -507,6 +1754,12 @@ const WIDGET_BUILDERS = {
   nats: mountNats,
   ints: mountInts,
   groups: mountGroups,
+  smartmult: mountSmartMultiplication,
+  divisionGroups: mountDivisionGroups,
+  divisionRemainder: mountDivisionRemainder,
+  smartdivision: mountSmartDivision,
+  commutative: mountCommutative,
+  associative: mountAssociative,
   plot: mountPlot,
   tangent: mountTangent,
   riemann: mountRiemann,
@@ -532,16 +1785,5 @@ function mountWidgets(root, milestoneId) {
     return;
   }
 
-  // Backwards-compatible fallback for milestones that have not yet received
-  // explicit widget slots. Widgets are mounted directly in the lesson; there
-  // is deliberately no generic widget-dock/layout wrapper.
-  const kinds = WIDGET_MAP[milestoneId] || [];
-  kinds.forEach((kind) => {
-    const builder = WIDGET_BUILDERS[kind];
-    if (!builder) return;
-    const box = document.createElement("div");
-    box.className = "widget-mount";
-    root.appendChild(box);
-    builder(box);
-  });
+
 }

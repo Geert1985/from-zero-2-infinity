@@ -302,8 +302,8 @@ const MILESTONES_1 = [
     <li>Het eerste cijfer dat verschilt, bepaalt welk getal groter is.</li>
   </ol>
 </div>
-`   
-},
+    `   
+  },
   {
     id: "1.2",
     title: "De vier hoofdbewerkingen",
@@ -886,193 +886,676 @@ const MILESTONES_1 = [
 </div>
 
 
-<h3>6. Schriftelijk vermenigvuldigen</h3>
+<h3>6. Eenvoudige tafels</h3>
 
-<p>Bij kleine vermenigvuldigingen kunnen we vaak uit het hoofd rekenen. Bij grotere getallen kunnen we de berekening stap voor stap uitvoeren.</p>
+<p>Nu we begrijpen wat vermenigvuldigen betekent, kunnen we de eenvoudigste vermenigvuldigingen oefenen.</p>
 
-<p>We bekijken bijvoorbeeld:</p>
+<p>De tafels van 1 tot en met 10 zijn belangrijk om vlot te kunnen rekenen. Het doel is dat eenvoudige vermenigvuldigingen na verloop van tijd bijna automatisch komen.</p>
 
-<p class="formula">37 × 24</p>
+<p>Bijvoorbeeld:</p>
 
-<p>Het getal 24 bestaat uit <strong>2 tientallen en 4 eenheden</strong>.</p>
+<p class="formula">2 × 4 = 8</p>
+<p class="formula">3 × 5 = 15</p>
+<p class="formula">7 × 2 = 14</p>
 
-<p>We kunnen 24 daarom opsplitsen:</p>
+<p>Je kunt een tafel ook zien als een reeks gelijke sprongen:</p>
 
-<p class="formula">24 = 20 + 4</p>
+<p class="formula">
+  4 × 3 = 3 + 3 + 3 + 3 = 12
+</p>
 
-<p>Dus kunnen we schrijven:</p>
+<p>Maar als je de tafels goed kent, hoef je niet telkens opnieuw op te tellen. Je weet dan meteen dat:</p>
 
-<p class="formula">37 × 24 = 37 × (20 + 4)</p>
-
-<h4>Stap 1: vermenigvuldig met de eenheden</h4>
-
-<p>We vermenigvuldigen 37 met 4:</p>
-
-<p class="formula">37 × 4 = 148</p>
-
-<h4>Stap 2: vermenigvuldig met de tientallen</h4>
-
-<p>Daarna vermenigvuldigen we 37 met 20:</p>
-
-<p class="formula">37 × 20 = 740</p>
-
-<p>We kunnen dit ook zien als:</p>
-
-<p class="formula">37 × 2 × 10 = 74 × 10 = 740</p>
-
-<h4>Stap 3: tel de resultaten op</h4>
-
-<p>We hebben nu beide delen berekend:</p>
-
-<table>
-  <tr>
-    <th>Deel</th>
-    <th>Berekening</th>
-    <th>Resultaat</th>
-  </tr>
-  <tr>
-    <td>Eenheden</td>
-    <td>37 × 4</td>
-    <td>148</td>
-  </tr>
-  <tr>
-    <td>Tientallen</td>
-    <td>37 × 20</td>
-    <td>740</td>
-  </tr>
-  <tr>
-    <td>Totaal</td>
-    <td>148 + 740</td>
-    <td>888</td>
-  </tr>
-</table>
-
-<p>Dus:</p>
-
-<p class="formula">37 × 24 = 888</p>
-
-<h4>Waarom werkt deze methode?</h4>
-
-<p>We hebben 24 opgesplitst in 20 en 4. Daardoor hebben we de vermenigvuldiging in twee eenvoudigere delen verdeeld:</p>
-
-<p class="formula">37 × 24 = 37 × 20 + 37 × 4</p>
-
-<p>Deze manier van rekenen noemen we de <strong>distributieve eigenschap</strong>.</p>
-
-<p>De gewone schriftelijke vermenigvuldiging die je later leert, is eigenlijk een <strong>kortere manier om precies hetzelfde te doen</strong>.</p>
+<p class="formula">
+  4 × 3 = 12
+</p>
 
 <div class="callout">
   <p><strong>Onthoud:</strong></p>
-  <p>Bij een grotere vermenigvuldiging kun je een getal opsplitsen in tientallen, eenheden, honderdtallen enzovoort.</p>
-  <p>Bijvoorbeeld:</p>
-  <p class="formula">24 = 20 + 4</p>
-  <p>Daarna vermenigvuldig je elk deel afzonderlijk en tel je de resultaten op.</p>
+  <p>De tafels vormen de basis voor moeilijkere vermenigvuldigingen.</p>
 </div>
 
 
-      <h3>7. Delen</h3>
-      <p>Delen is de inverse bewerking van vermenigvuldigen. Bij <strong>12 ÷ 3 = 4</strong> vragen we: hoeveel keer past 3 in 12?</p>
-      <p>Je kunt ook denken aan verdelen: 12 objecten verdelen over 3 gelijke groepen geeft 4 objecten per groep.</p>
+<h3>7. Slim rekenen met vermenigvuldigen</h3>
 
-      <h3>8. Delen met rest</h3>
-      <p>Niet elke deling komt exact uit. Bij 157 ÷ 12 krijgen we 13 rest 1:</p>
-      <p class="formula">157 = 13 × 12 + 1</p>
-      <p>In het algemeen:</p>
-      <p class="formula">a = q × d + r &nbsp; met &nbsp; 0 ≤ r &lt; d</p>
-      <p>Hier is <strong>q</strong> het quotiënt, <strong>d</strong> de deler en <strong>r</strong> de rest.</p>
+<p>Je hoeft niet elke vermenigvuldiging uit het hoofd te kennen. Vaak kun je een moeilijke vermenigvuldiging veranderen in een paar eenvoudige vermenigvuldigingen.</p>
 
-      <h3>9. Schriftelijk delen</h3>
-      <p>Bij een grotere deling bepaal je stap voor stap hoeveel keer de deler in het huidige deel van het getal past. Je vermenigvuldigt, trekt af en haalt vervolgens het volgende cijfer naar beneden.</p>
-      <p>Het belangrijkste is niet alleen het antwoord, maar ook de controle:</p>
-      <p class="formula">quotiënt × deler + rest = deeltal</p>
+<p>Bijvoorbeeld:</p>
 
-      <h3>10. Delen door nul</h3>
-      <p>Delen door nul is niet gedefinieerd. Er bestaat bijvoorbeeld geen getal <strong>x</strong> waarvoor:</p>
-      <p class="formula">0 × x = 5</p>
-      <p>Daarom heeft <strong>5 ÷ 0</strong> geen betekenis in de gewone rekenkunde.</p>
-      <p>Ook <strong>0 ÷ 0</strong> krijgt geen unieke waarde: elk getal voldoet immers aan 0 × x = 0. Daarom definiëren we ook 0 ÷ 0 niet.</p>
+<p class="formula">
+  6 × 7
+</p>
 
-      <h3>11. Commutatieve eigenschap</h3>
-      <p>Bij optellen en vermenigvuldigen mag je de volgorde verwisselen:</p>
-      <p class="formula">a + b = b + a</p>
-      <p class="formula">a × b = b × a</p>
-      <p>Dat geldt niet voor aftrekken en delen.</p>
+<p>Als je weet dat <strong>6 × 5 = 30</strong>, kun je verder rekenen:</p>
 
-      <h3>12. Associatieve eigenschap</h3>
-      <p>Bij optellen en vermenigvuldigen maakt de manier waarop je drie getallen groepeert niet uit:</p>
-      <p class="formula">(a + b) + c = a + (b + c)</p>
-      <p class="formula">(a × b) × c = a × (b × c)</p>
-      <p>Dit geldt niet in het algemeen voor aftrekken en delen.</p>
+<div data-widget="smartmult"></div>
 
-      <h3>13. Distributieve eigenschap</h3>
-      <p>Vermenigvuldigen over een som:</p>
-      <p class="formula">a × (b + c) = a × b + a × c</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">8 × 21 = 8 × (20 + 1) = 160 + 8 = 168</p>
-      <p>Deze eigenschap wordt later essentieel in de algebra.</p>
+<p class="formula">
+  6 × 7 = 6 × 5 + 6 × 2
+</p>
 
-      <h3>14. Bewerkingsvolgorde</h3>
-      <p>Wanneer meerdere bewerkingen in één uitdrukking staan, gebruiken we een vaste volgorde:</p>
-      <ol>
-        <li>haakjes;</li>
-        <li>machten en wortels;</li>
-        <li>vermenigvuldigen en delen, van links naar rechts;</li>
-        <li>optellen en aftrekken, van links naar rechts.</li>
-      </ol>
-      <p>Dus:</p>
-      <p class="formula">3 + 7 × 4 − 5 = 3 + 28 − 5 = 26</p>
-      <p>En:</p>
-      <p class="formula">18 ÷ 3 × 4 + 2 = 6 × 4 + 2 = 26</p>
+<p>Dus:</p>
 
-      <h3>15. Schatten en controleren</h3>
-      <p>Een goede rekenaar controleert niet blind een uitkomst. Je kunt bijvoorbeeld vooraf schatten:</p>
-      <p class="formula">738 + 496 ≈ 700 + 500 = 1 200</p>
-      <p>Een antwoord van 1234 is plausibel; een antwoord van 234 zou dat niet zijn.</p>
-      <p>Controleer bij aftrekken met een optelling en bij delen met een vermenigvuldiging.</p>
-    `,
-    practice: [
-      { id: "p12-1", prompt: "47 + 38", accept: ["85"] },
-      { id: "p12-2", prompt: "738 + 496", accept: ["1234", "1 234"] },
-      { id: "p12-3", prompt: "91 − 57", accept: ["34"] },
-      { id: "p12-4", prompt: "1002 − 587", accept: ["415"] },
-      { id: "p12-5", prompt: "12 × 8", accept: ["96"] },
-      { id: "p12-6", prompt: "37 × 24", accept: ["888"] },
-      { id: "p12-7", prompt: "144 ÷ 12", accept: ["12"] },
-      { id: "p12-8", prompt: "29 ÷ 6: geef quotiënt en rest als '4 rest 5'.", accept: ["4 rest 5", "4 r 5"] },
-      { id: "p12-9", prompt: "157 ÷ 12: geef quotiënt en rest.", accept: ["13 rest 1", "13 r 1"] },
-      { id: "p12-10", prompt: "Controleer 157 ÷ 12 = 13 rest 1 met een vermenigvuldiging.", accept: ["13×12+1=157", "13*12+1=157", "157=13×12+1"] },
-      { id: "p12-11", prompt: "3 + 6 × 2 − 4", accept: ["11"] },
-      { id: "p12-12", prompt: "24 ÷ 3 × 2 + 5", accept: ["21"] },
-      { id: "p12-13", prompt: "5 × (8 − 3) + 2 × 4", accept: ["33"] },
-      { id: "p12-14", prompt: "100 − 4 × (6 + 7)", accept: ["48"] },
-      { id: "p12-15", prompt: "Is optellen commutatief? ja/nee", accept: ["ja"] },
-      { id: "p12-16", prompt: "Is aftrekken commutatief? ja/nee", accept: ["nee"] },
-      { id: "p12-17", prompt: "Gebruik distributiviteit: 8 × 21.", accept: ["168"] },
-      { id: "p12-18", prompt: "Is 7 ÷ 0 gedefinieerd? ja/nee", accept: ["nee"] },
-      { id: "p12-19", prompt: "Een leerling rekent 3 + 4 × 5 = 35. Wat is de fout?", type: "choice", choices: ["Er is geen fout", "De leerling telt eerst op in plaats van eerst te vermenigvuldigen", "De leerling had moeten aftrekken", "4 × 5 = 35"], accept: ["De leerling telt eerst op in plaats van eerst te vermenigvuldigen"] },
-      { id: "p12-20", prompt: "Schat 738 + 496 tot op ongeveer honderd.", accept: ["1200", "1 200"] },
-      { id: "p12-21", prompt: "Waar of niet waar: 8 × (10 + 3) = 8 × 10 + 3.", type: "choice", choices: ["waar", "niet waar"], accept: ["niet waar"] },
-      { id: "p12-22", prompt: "Waarom is 0 ÷ 0 niet gedefinieerd? Kies het beste antwoord.", type: "choice", choices: ["Omdat 0 geen getal is", "Omdat er niet één unieke uitkomst is", "Omdat delen altijd verboden is", "Omdat nul negatief is"], accept: ["Omdat er niet één unieke uitkomst is"] },
-      { id: "p12-23", prompt: "Vul in: 36 ÷ 6 × 3 + 1", accept: ["19"] },
-      { id: "p12-24", prompt: "Geef een controle voor 120 − 48 = 72.", type: "text", accept: ["72+48=120", "48+72=120", "72 + 48 = 120"] }
-    ],
-    exam: [
-      { id: "e12-1", prompt: "738 + 496", accept: ["1234", "1 234"] },
-      { id: "e12-2", prompt: "1002 − 587", accept: ["415"] },
-      { id: "e12-3", prompt: "37 × 24", accept: ["888"] },
-      { id: "e12-4", prompt: "157 ÷ 12: geef quotiënt en rest.", accept: ["13 rest 1", "13 r 1"] },
-      { id: "e12-5", prompt: "3 + 7 × 4 − 5", accept: ["26"] },
-      { id: "e12-6", prompt: "18 ÷ 3 × 4 + 2", accept: ["26"] },
-      { id: "e12-7", prompt: "−8 × (4 − 7)", accept: ["24"] },
-      { id: "e12-8", prompt: "Leg uit hoe je 48 − 29 kunt controleren.", type: "text", accept: ["19+29=48", "19 + 29 = 48"] },
-      { id: "e12-9", prompt: "Welke bewerking is commutatief: aftrekken of vermenigvuldigen? Kies één.", type: "choice", choices: ["aftrekken", "vermenigvuldigen"], accept: ["vermenigvuldigen"] },
-      { id: "e12-10", prompt: "Gebruik distributiviteit: 8 × 21.", accept: ["168"] },
-      { id: "e12-11", prompt: "Is 5 ÷ 0 gedefinieerd? ja/nee", accept: ["nee"] },
-      { id: "e12-12", prompt: "Een leerling beweert: 20 ÷ 4 × 5 = 1. Wat is de fout? Kies het beste antwoord.", type: "choice", choices: ["Delen en vermenigvuldigen hebben dezelfde prioriteit en worden van links naar rechts uitgevoerd", "Vermenigvuldigen moet altijd vóór delen", "20 ÷ 4 = 1", "5 moet worden opgeteld"], accept: ["Delen en vermenigvuldigen hebben dezelfde prioriteit en worden van links naar rechts uitgevoerd"] },
-      { id: "e12-13", prompt: "Schat 1 002 − 587 tot op ongeveer honderd.", accept: ["400", "400 ongeveer"] },
-      { id: "e12-14", prompt: "Geef de uitkomst van 24 ÷ 3 × 2 + 5.", accept: ["21"] },
-      { id: "e12-15", prompt: "Leg in één zin uit waarom 0 ÷ 0 geen unieke uitkomst heeft.", type: "text", accept: ["elk getal maal 0 is 0", "ieder getal maal 0 is 0", "er zijn oneindig veel oplossingen"] }
-    ]
+<p class="formula">
+  30 + 12 = 42
+</p>
+
+<p>Daarom is:</p>
+
+<p class="formula">
+  6 × 7 = 42
+</p>
+
+<h4>Een getal opsplitsen</h4>
+
+<p>Hetzelfde idee werkt met grotere getallen. Stel dat je <strong>7 × 13</strong> wilt berekenen.</p>
+
+<p>13 kunnen we opsplitsen in 10 en 3:</p>
+
+<p class="formula">
+  13 = 10 + 3
+</p>
+
+<p>Dan rekenen we:</p>
+
+<p class="formula">
+  7 × 13 = 7 × 10 + 7 × 3
+</p>
+
+<p>Dat geeft:</p>
+
+<p class="formula">
+  70 + 21 = 91
+</p>
+
+<p>Dus:</p>
+
+<p class="formula">
+  7 × 13 = 91
+</p>
+
+<h4>Een handige vermenigvuldiging zoeken</h4>
+
+<p>Je kunt soms ook een vermenigvuldiging kiezen die je al goed kent.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">
+  8 × 9
+</p>
+
+<p>Je weet misschien dat <strong>8 × 10 = 80</strong>. Eén groepje van 8 te veel kunnen we er weer aftrekken:</p>
+
+<p class="formula">
+  8 × 9 = 8 × 10 − 8
+</p>
+
+<p class="formula">
+  80 − 8 = 72
+</p>
+
+<p>Dus:</p>
+
+<p class="formula">
+  8 × 9 = 72
+</p>
+
+<div class="callout">
+  <p><strong>Belangrijk inzicht:</strong></p>
+  <p>Een moeilijke vermenigvuldiging kun je vaak veranderen in eenvoudige vermenigvuldigingen die je al kent.</p>
+  <p>Je kunt bijvoorbeeld een getal opsplitsen:</p>
+  <p class="formula">7 × 13 = 7 × 10 + 7 × 3</p>
+  <p>Of vertrekken van een bekende vermenigvuldiging:</p>
+  <p class="formula">8 × 9 = 8 × 10 − 8</p>
+  <p><strong>Goed rekenen betekent dus niet alleen veel uit het hoofd kennen, maar ook slimme strategieën gebruiken.</strong></p>
+</div>
+
+<h3>8. Delen</h3>
+
+<p>Delen is het verdelen van een aantal in <strong>gelijke groepen</strong>. Het is de omgekeerde bewerking van vermenigvuldigen.</p>
+
+<p>Stel dat we 12 appels eerlijk willen verdelen over 3 personen. Iedere persoon krijgt dan evenveel appels:</p>
+
+<p class="formula">12 ÷ 3 = 4</p>
+
+<p>Iedere persoon krijgt dus 4 appels.</p>
+
+<p>We kunnen dezelfde situatie ook bekijken vanuit het aantal groepjes. Hoeveel groepjes van 3 kunnen we maken met 12 voorwerpen?</p>
+
+<p class="formula">12 ÷ 3 = 4</p>
+
+<p>Ook hier is het antwoord 4. Daarom kunnen we delen op twee manieren begrijpen:</p>
+
+<ul>
+  <li><strong>Verdelen:</strong> 12 voorwerpen verdelen over 3 gelijke groepen geeft 4 per groep.</li>
+  <li><strong>Groepjes maken:</strong> hoeveel groepjes van 3 passen er in 12? Dat zijn er 4.</li>
+</ul>
+
+<div data-widget="divisionGroups"></div>
+
+<h4>Delen en vermenigvuldigen horen bij elkaar</h4>
+
+<p>Delen en vermenigvuldigen zijn omgekeerde bewerkingen.</p>
+
+<p>Als:</p>
+
+<p class="formula">3 × 4 = 12</p>
+
+<p>dan weten we ook:</p>
+
+<p class="formula">12 ÷ 3 = 4</p>
+
+<p>en:</p>
+
+<p class="formula">12 ÷ 4 = 3</p>
+
+<p>Je kunt een deling daarom controleren met een vermenigvuldiging.</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Delen betekent een hoeveelheid eerlijk verdelen of bepalen hoeveel gelijke groepjes erin passen.</p>
+  <p>Vermenigvuldigen en delen zijn omgekeerde bewerkingen:</p>
+  <p class="formula">3 × 4 = 12</p>
+  <p class="formula">12 ÷ 3 = 4</p>
+  <p class="formula">12 ÷ 4 = 3</p>
+</div>
+
+<h3>9. Delen met rest</h3>
+
+<p>Niet elke hoeveelheid kan precies in gelijke groepen worden verdeeld.</p>
+
+<p>Stel dat we <strong>14 voorwerpen</strong> willen verdelen in groepjes van <strong>4</strong>.</p>
+<p class="formula">14 ÷ 4</p>
+
+<p>We kunnen drie volledige groepjes maken, namelijk :</p>
+<p class="formula">3 × 4 = 12</p>
+
+<p>Vier groepjes van vier zou niet gaan, want dan moeten we 16 voorwerpen hebben:</p>
+<p class="formula">4 × 4 = 16</p>
+
+<p>Dus we kiezen voor 3 groepjes van 4.</p> 
+<p>Maar dan blijven er nog 2 voorwerpen over. Dit is de rest.</p>
+
+<div data-widget="divisionRemainder"></div>
+
+<p>Het getal <strong>3</strong> noemen we het <strong>quotiënt</strong>. Het vertelt hoeveel volledige groepjes we kunnen maken.</p>
+
+<p>Het getal <strong>2</strong> noemen we de <strong>rest</strong>. Dat zijn de voorwerpen die niet meer in een volledig groepje passen.</p>
+
+<h4>De deling controleren</h4>
+
+<p>Een deling met rest kunnen we altijd controleren met een vermenigvuldiging.</p>
+
+<p>Bij <strong>14 ÷ 4 = 3 rest 2</strong> geldt:</p>
+
+<p class="formula">3 × 4 + 2 = 14</p>
+
+<p>De algemene vorm is:</p>
+
+<p class="formula">a = q × d + r</p>
+
+<p>Hierbij is <strong>a</strong> het getal dat we delen, <strong>q</strong> het quotiënt, <strong>d</strong> de deler en <strong>r</strong> de rest.</p>
+
+<p>De rest is altijd kleiner dan de deler. Anders zouden we nog een extra volledig groepje kunnen maken.</p>
+
+<p class="formula">0 ≤ r &lt; d</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Bij een deling met rest maken we eerst zoveel mogelijk volledige groepjes.</p>
+  <p>Wat overblijft, is de rest.</p>
+</div>
+
+
+<h3>10. Slim delen</h3>
+
+<p>Een deling met grotere getallen lijkt soms moeilijk. Maar net zoals bij vermenigvuldigen kunnen we een getal vaak <strong>opsplitsen in eenvoudigere delen</strong>.</p>
+<p>In deze eerste kennismaking met slim delen gebruiken we alleen voorbeelden waarbij de getallen <strong>zonder rest</strong> deelbaar zijn. Als er een rest ontstaat, gebruiken we de methode van <em>delen met rest</em> die we eerder hebben geleerd.</p>
+<p>Stel dat we willen berekenen:</p>
+
+<p class="formula">84 ÷ 4</p>
+
+<p>We kunnen 84 opsplitsen in 80 en 4:</p>
+
+<p class="formula">84 = 80 + 4</p>
+
+<p>Nu kunnen we beide delen afzonderlijk delen door 4:</p>
+
+<p class="formula">80 ÷ 4 = 20</p>
+
+<p class="formula">4 ÷ 4 = 1</p>
+
+<p>Dus:</p>
+
+<p class="formula">84 ÷ 4 = 20 + 1 = 21</p>
+
+<div data-widget="smartdivision"></div>
+
+<h4>Een handige splitsing zoeken</h4>
+
+<p>Je kunt een getal op verschillende manieren opsplitsen. Kies bij voorkeur een splitsing waardoor de afzonderlijke delingen gemakkelijk worden.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">96 ÷ 3</p>
+
+<p>We kunnen 96 opsplitsen in 90 en 6:</p>
+
+<p class="formula">96 = 90 + 6</p>
+
+<p>Daarna:</p>
+
+<p class="formula">90 ÷ 3 = 30</p>
+
+<p class="formula">6 ÷ 3 = 2</p>
+
+<p>Dus:</p>
+
+<p class="formula">96 ÷ 3 = 30 + 2 = 32</p>
+
+<p>Een andere handige strategie is vertrekken van een getal dat je gemakkelijk kunt delen.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">120 ÷ 6</p>
+
+<p>Omdat 12 ÷ 6 = 2, weten we meteen dat:</p>
+
+<p class="formula">120 ÷ 6 = 20</p>
+
+<div class="callout">
+  <p><strong>Belangrijk inzicht:</strong></p>
+  <p>Bij een moeilijke deling kun je vaak een getal opsplitsen in delen die je gemakkelijk kunt delen.</p>
+  <p class="formula">84 ÷ 4 = 80 ÷ 4 + 4 ÷ 4</p>
+  <p class="formula">= 20 + 1 = 21</p>
+  <p>Goed rekenen betekent dus niet alleen een vaste methode volgen. Je kunt ook zoeken naar een slimme manier om een berekening eenvoudiger te maken.</p>
+</div>
+
+
+
+<h3>11. Delen door nul</h3>
+
+<p>Bij delen vragen we ons af: <strong>hoeveel groepjes van de deler passen in het getal?</strong></p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">6 ÷ 2 = 3</p>
+
+<p>Er passen precies 3 groepjes van 2 in 6.</p>
+
+<p>Maar wat gebeurt er bij:</p>
+
+<p class="formula">6 ÷ 0</p>
+
+<p>Dan zouden we moeten zoeken hoeveel groepjes van 0 samen 6 vormen.</p>
+
+<p>Maar hoeveel groepjes van 0 we ook nemen, we krijgen altijd 0:</p>
+
+<p class="formula">1 × 0 = 0</p>
+
+<p class="formula">100 × 0 = 0</p>
+
+<p class="formula">1 000 000 × 0 = 0</p>
+
+<p>We kunnen dus nooit 6 krijgen door een getal met 0 te vermenigvuldigen.</p>
+
+<p>Daarom bestaat er geen getal dat voldoet aan:</p>
+
+<p class="formula">6 ÷ 0 = ?</p>
+
+<div data-widget="divisionZero"></div>
+
+<h4>En wat met 0 ÷ 0?</h4>
+
+<p>Dit geval is anders. We zoeken nu een getal dat voldoet aan:</p>
+
+<p class="formula">0 ÷ 0 = ?</p>
+
+<p>Als we dit controleren met een vermenigvuldiging, krijgen we:</p>
+
+<p class="formula">? × 0 = 0</p>
+
+<p>Maar dat klopt voor <strong>elk</strong> getal:</p>
+
+<p class="formula">1 × 0 = 0</p>
+
+<p class="formula">5 × 0 = 0</p>
+
+<p class="formula">100 × 0 = 0</p>
+
+<p>Er is dus niet één uniek antwoord.</p>
+
+<p>Daarom is ook <strong>0 ÷ 0 niet gedefinieerd</strong>.</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Delen door nul is niet gedefinieerd.</p>
+  <p>Bij <strong>6 ÷ 0</strong> bestaat er geen oplossing.</p>
+  <p>Bij <strong>0 ÷ 0</strong> zijn er oneindig veel mogelijke oplossingen, en dus geen uniek antwoord.</p>
+</div>
+
+<h3>12. Commutatieve eigenschap</h3>
+
+<p>Bij vermenigvuldigen maakt de volgorde van de getallen niet uit.</p>
+
+<p>Neem bijvoorbeeld:</p>
+
+<p class="formula">3 × 4 = 12</p>
+
+<p>Dit betekent: 3 groepjes van 4. Maar we kunnen dezelfde 12 voorwerpen ook anders ordenen: 4 groepjes van 3.</p>
+
+<p class="formula">4 × 3 = 12</p>
+
+<div data-widget="commutative"></div>
+
+<p>We hebben dus:</p>
+
+<p class="formula">3 × 4 = 4 × 3</p>
+
+<p>Dit noemen we de <strong>commutatieve eigenschap</strong> van de vermenigvuldiging.</p>
+
+<p>In het algemeen geldt:</p>
+
+<p class="formula">a × b = b × a</p>
+
+<h4>Niet elke bewerking is commutatief</h4>
+
+<p>Bij aftrekken en delen maakt de volgorde wel uit.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">8 − 3 = 5</p>
+
+<p class="formula">3 − 8 = −5</p>
+
+<p>Dus:</p>
+
+<p class="formula">8 − 3 ≠ 3 − 8</p>
+
+<p>Ook bij delen geldt:</p>
+
+<p class="formula">12 ÷ 3 = 4</p>
+
+<p class="formula">3 ÷ 12 = 0,25</p>
+
+<p>Daarom zijn aftrekken en delen <strong>niet commutatief</strong>.</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Bij optellen en vermenigvuldigen mag je de volgorde verwisselen.</p>
+  <p class="formula">a + b = b + a</p>
+  <p class="formula">a × b = b × a</p>
+  <p>Bij aftrekken en delen mag dat niet zomaar.</p>
+</div>
+
+<h3>13. Associatieve eigenschap</h3>
+
+<p>Bij optellen en vermenigvuldigen kunnen we niet alleen de volgorde veranderen. We kunnen ook bepalen <strong>welke getallen we eerst samen nemen</strong>.</p>
+
+<p>Neem bijvoorbeeld:</p>
+
+<p class="formula">2 + 3 + 4</p>
+
+<p>We kunnen eerst 2 en 3 optellen. Dit gaan we aanduiden met haakjes:</p>
+
+<p class="formula">(2 + 3) + 4 = 9</p>
+
+<p>Maar we kunnen ook eerst 3 en 4 optellen:</p>
+
+<p class="formula">2 + (3 + 4) = 9</p>
+
+<p>Het antwoord blijft hetzelfde.</p>
+
+<div data-widget="associative"></div>
+
+<p>We kunnen dus schrijven:</p>
+
+<p class="formula">(a + b) + c = a + (b + c)</p>
+
+<p>Dit noemen we de <strong>associatieve eigenschap</strong> van de optelling.</p>
+
+<h4>Ook bij vermenigvuldigen</h4>
+
+<p>Dezelfde eigenschap geldt voor vermenigvuldigen.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">(2 × 3) × 4 = 24</p>
+
+<p>Maar:</p>
+
+<p class="formula">2 × (3 × 4) = 24</p>
+
+<p>Dus:</p>
+
+<p class="formula">(a × b) × c = a × (b × c)</p>
+
+<p>Ook bij vermenigvuldigen maakt de groepering dus niet uit.</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>De haakjes geven aan welke getallen we eerst samen nemen.</p>
+  <p>De <strong>associatieve eigenschap</strong> betekent dat je bij optellen en vermenigvuldigen de getallen anders mag groeperen zonder het antwoord te veranderen.</p>
+
+  <p class="formula">(a + b) + c = a + (b + c)</p>
+
+  <p class="formula">(a × b) × c = a × (b × c)</p>
+</div>
+
+
+<h3>14. Haakjes</h3>
+
+<p>Je bent eerder al haakjes tegengekomen. Haakjes zijn de tekens <strong>(</strong> en <strong>)</strong>.</p>
+
+<p>Haakjes geven aan dat de berekening die ertussen staat, als één geheel moet worden bekeken.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">(2 + 3) × 4</p>
+
+<p>We rekenen eerst uit wat tussen de haakjes staat:</p>
+
+<p class="formula">2 + 3 = 5</p>
+
+<p>Daarna vermenigvuldigen we met 4:</p>
+
+<p class="formula">5 × 4 = 20</p>
+
+<p>Dus:</p>
+
+<p class="formula">(2 + 3) × 4 = 20</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Haakjes geven aan welke berekening eerst moet worden uitgevoerd.</p>
+</div>
+
+<h4>Waarom zijn haakjes belangrijk?</h4>
+
+<p>Zonder haakjes kan dezelfde getallencombinatie een andere uitkomst geven.</p>
+
+<p>Vergelijk:</p>
+
+<p class="formula">2 + 3 × 4</p>
+
+<p>met:</p>
+
+<p class="formula">(2 + 3) × 4</p>
+
+<p>Bij de eerste berekening doen we eerst de vermenigvuldiging:</p>
+
+<p class="formula">2 + 12 = 14</p>
+
+<p>Bij de tweede berekening zorgen de haakjes ervoor dat we eerst optellen:</p>
+
+<p class="formula">5 × 4 = 20</p>
+
+<p>Dus:</p>
+
+<p class="formula">2 + 3 × 4 = 14</p>
+
+<p class="formula">(2 + 3) × 4 = 20</p>
+
+<h3>15. Bewerkingsvolgorde</h3>
+
+<h4>De volgorde van bewerkingen</h4>
+
+<p>Wanneer een berekening verschillende bewerkingen bevat en er zijn haakjes aanwezig, dan gebruiken we deze volgorde:</p>
+
+<ol>
+  <li><strong>Haakjes</strong></li>
+  <li><strong>Vermenigvuldigen en delen</strong></li>
+  <li><strong>Optellen en aftrekken</strong></li>
+</ol>
+
+<p>Bij bewerkingen van hetzelfde niveau (voorbeeld enkel optellen en aftrekken) rekenen we van <strong>links naar rechts</strong>.</p>
+
+<p>Bekijk bijvoorbeeld:</p>
+
+<p class="formula">2 + 3 × 4</p>
+
+<p>Vermenigvuldigen moet eerst uitgevoerd worden, we gaan dit duidelijk maken door haakjes te plaatsen:</p>
+
+<p class="formula">2 + (3 × 4) = 2 + 12 = 14</p>
+
+<div data-widget="orderOperations"></div>
+
+<p>Als bewerkingen van hetzelfde niveau na elkaar staan, werken we van <strong>links naar rechts</strong>.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">20 ÷ 5 × 2</p>
+
+<p>We rekenen eerst de deling uit:</p>
+
+<p class="formula">20 ÷ 5 = 4</p>
+
+<p>Daarna vermenigvuldigen we:</p>
+
+<p class="formula">4 × 2 = 8</p>
+
+<p>Dus:</p>
+
+<p class="formula">20 ÷ 5 × 2 = 8</p>
+
+<h4>Haakjes veranderen de volgorde</h4>
+
+<p>Met haakjes kunnen we aangeven dat een bepaalde bewerking eerst moet gebeuren.</p>
+
+<p>Vergelijk:</p>
+
+<p class="formula">2 + 3 × 4 = 14</p>
+
+<p>met:</p>
+
+<p class="formula">(2 + 3) × 4 = 20</p>
+
+<p><strong>De haakjes zorgen ervoor dat de optelling eerst wordt uitgevoerd.</strong></p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>De standaardvolgorde is:</p>
+<ol>
+  <li><strong>Haakjes</strong></li>
+  <li><strong>Vermenigvuldigen en delen</strong></li>
+  <li><strong>Optellen en aftrekken</strong></li>
+</ol>
+  <p>Bij bewerkingen van hetzelfde niveau rekenen we van links naar rechts.</p>
+</div>
+
+<h3>15. Schatten en controleren</h3>
+
+<p>Je kunt een berekening op verschillende manieren controleren. Een handige manier is eerst een <strong>schatting</strong> te maken.</p>
+
+<p>Bij een schatting vervang je getallen door getallen waarmee je gemakkelijker kunt rekenen.</p>
+
+<h4>Schatten met afgeronde getallen</h4>
+
+<p>Stel dat je wilt berekenen:</p>
+
+<p class="formula">398 + 203</p>
+
+<p>We kunnen 398 ongeveer vervangen door 400 en 203 door 200:</p>
+
+<p class="formula">400 + 200 = 600</p>
+
+<p>We verwachten dus een antwoord dat ongeveer 600 is.</p>
+
+<p>Het exacte antwoord is:</p>
+
+<p class="formula">398 + 203 = 601</p>
+
+<p>Dat ligt heel dicht bij onze schatting. Ons antwoord is dus waarschijnlijk juist.</p>
+
+<h4>Ook bij vermenigvuldigen</h4>
+
+<p>Schatten is ook handig bij vermenigvuldigingen.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">49 × 21</p>
+
+<p>We kunnen 49 afronden naar 50 en 21 naar 20:</p>
+
+<p class="formula">50 × 20 = 1000</p>
+
+<p>Het exacte antwoord is:</p>
+
+<p class="formula">49 × 21 = 1029</p>
+
+<p>1029 ligt in de buurt van 1000. Dat is dus een redelijke uitkomst.</p>
+
+<h4>Een antwoord controleren</h4>
+
+<p>Je kunt een berekening ook controleren met de <strong>omgekeerde bewerking</strong>.</p>
+
+<p>Stel dat je hebt berekend:</p>
+
+<p class="formula">84 ÷ 4 = 21</p>
+
+<p>Je kunt dit controleren met een vermenigvuldiging:</p>
+
+<p class="formula">21 × 4 = 84</p>
+
+<p>De berekening klopt dus.</p>
+
+<p>Bij een deling met rest kun je op dezelfde manier controleren.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">14 ÷ 4 = 3 rest 2</p>
+
+<p>Controle:</p>
+
+<p class="formula">3 × 4 + 2 = 14</p>
+
+<h4>Een fout herkennen</h4>
+
+<p>Schatten kan je ook helpen om fouten snel te ontdekken.</p>
+
+<p>Stel dat iemand beweert:</p>
+
+<p class="formula">49 × 21 = 109</p>
+
+<p>Onze schatting was ongeveer 1000:</p>
+
+<p class="formula">50 × 20 ≈ 1000</p>
+
+<p>109 ligt daar helemaal niet in de buurt. We weten dus onmiddellijk dat er ergens een fout is gemaakt.</p>
+
+<div class="callout">
+  <p><strong>Belangrijk inzicht:</strong></p>
+  <p>Een schatting hoeft niet exact te zijn. Ze helpt je om te controleren of een antwoord <strong>redelijk</strong> is.</p>
+
+  <p>Je kunt een berekening ook controleren met een omgekeerde bewerking.</p>
+
+  <p class="formula">84 ÷ 4 = 21</p>
+
+  <p class="formula">21 × 4 = 84</p>
+
+  <p><strong>Goed rekenen betekent dus ook weten wanneer een antwoord niet kan kloppen.</strong></p>
+</div>
+    `
   },
   {
     id: "1.3",
