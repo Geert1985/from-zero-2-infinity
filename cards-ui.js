@@ -70,16 +70,9 @@ function renderPhase(phaseId) {
     const st = done ? "done" : "";
     const art = index + 1;
     const testIco = done ? "assets/medaille.png" : "assets/toets.png";
-    const place = worldName(m.id);
-    const head = place || m.title;
-    const topic = place ? m.title : "";
     return (
       '<article class="stone ' + st + '">' +
-      '<img class="stone-art" src="assets/mile-' + art + '.svg?v=2" alt="">' +
-      "<h3>" + head + "</h3>" +
-      (topic ? '<p class="stone-topic">' + topic + "</p>" : "") +
-      "<p>" + m.goal + "</p>" +
-      (done ? '<div class="status done">Behaald</div>' : "") +
+      '<img class="stone-art" style="height:auto;object-fit:contain" src="assets/mile-' + art + '.svg?v=3" alt="">' +
       '<div class="stone-actions">' +
       '<button class="btn lesstof-btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/les">' +
       '<img class="book-ico" src="assets/' + (leerstofCollected(m.id) ? "book-open.png" : "book-closed.png") + '" alt=""> Lesstof</button>' +
