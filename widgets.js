@@ -1500,7 +1500,276 @@ function mountAssociative(root) {
 
   draw();
 }
+// ============================================================
+// FRACTION VISUAL
+// ============================================================
 
+function mountFractionVisual(root) {
+  if (!root) return;
+
+  root.innerHTML = `
+    <div class="widget fraction-visual-widget">
+      <h4>Breuken zichtbaar maken</h4>
+
+      <div class="fraction-visual-controls">
+        <label>
+          Noemer:
+          <input
+            type="range"
+            class="fraction-denominator"
+            min="2"
+            max="12"
+            value="5"
+          >
+          <span class="fraction-denominator-value">5</span>
+        </label>
+
+        <label>
+          Teller:
+          <input
+            type="range"
+            class="fraction-numerator"
+            min="1"
+            max="5"
+            value="3"
+          >
+          <span class="fraction-numerator-value">3</span>
+        </label>
+      </div>
+
+      <canvas class="fraction-visual-canvas"></canvas>
+
+      <div class="fraction-visual-readout"></div>
+    </div>
+  `;
+
+  const denominatorSlider =
+    root.querySelector(".fraction-denominator");
+
+  const numeratorSlider =
+    root.querySelector(".fraction-numerator");
+
+  const denominatorValue =
+    root.querySelector(".fraction-denominator-value");
+
+  const numeratorValue =
+    root.querySelector(".fraction-numerator-value");
+
+  const canvas =
+    root.querySelector(".fraction-visual-canvas");
+
+  const readout =
+    root.querySelector(".fraction-visual-readout");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    draw();
+  }
+
+  function draw() {
+    const denominator = Number(denominatorSlider.value);
+    const numerator = Number(numeratorSlider.value);
+
+    denominatorValue.textContent = denominator;
+    numeratorValue.textContent = numerator;
+
+    canvas.width = canvas.clientWidth * (window.devicePixelRatio || 1);
+    canvas.height = canvas.clientHeight * (window.devicePixelRatio || 1);
+
+    const dpr = window.devicePixelRatio || 1;
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+
+    ctx.clearRect(0, 0, width, height);
+
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const radius = Math.min(width, height) * 0.32;
+
+    // Teken de gelijke delen
+    for (let i = 0; i < denominator; i++) {
+      const startAngle =
+        -Math.PI / 2 + i * (2 * Math.PI / denominator);
+
+      const endAngle =
+        -Math.PI / 2 + (i + 1) * (2 * Math.PI / denominator);
+
+      ctx.beginPath();
+      ctx.moveTo(centerX, centerY);
+      ctx.arc(
+        centerX,
+        centerY,
+        radius,
+        startAngle,
+        endAngle
+      );
+      ctx.closePath();
+
+      if (i < numerator) {
+        ctx.fillStyle = "#4caf50";
+      } else {
+        ctx.fillStyle = "#e8e8e8";
+      }
+
+      ctx.fill();
+      ctx.stroke();
+    }
+
+    readout.innerHTML = `
+      <strong>${numerator}/${denominator}</strong>
+      =
+      ${numerator} van de ${denominator} gelijke delen
+    `;
+  }
+
+  denominatorSlider.addEventListener("input", () => {
+    const denominator = Number(denominatorSlider.value);
+
+    numeratorSlider.max = denominator;
+
+    if (Number(numeratorSlider.value) > denominator) {
+      numeratorSlider.value = denominator;
+    }
+
+    draw();
+  });
+
+  numeratorSlider.addEventListener("input", draw);
+
+  window.addEventListener("resize", resizeCanvas);
+
+  resizeCanvas();
+}
+// ============================================================
+// PERCENTAGE BAR
+// ============================================================
+
+function mountPercentageBar(root) {
+  if (!root) return;
+
+  root.innerHTML = `
+    <div class="widget percentage-bar-widget">
+      <h4>Een percentage zichtbaar maken</h4>
+
+      <label>
+        Percentage:
+        <input
+          type="range"
+          class="percentage-slider"
+          min="0"
+          max="100"
+          value="25"
+        >
+        <span class="percentage-value">25%</span>
+      </label>
+
+      <canvas class="percentage-bar-canvas"></canvas>
+
+      <div class="percentage-bar-readout"></div>
+    </div>
+  `;
+
+  const slider =
+    root.querySelector(".percentage-slider");
+
+  const value =
+    root.querySelector(".percentage-value");
+
+  const canvas =
+    root.querySelector(".percentage-bar-canvas");
+
+  const readout =
+    root.querySelector(".percentage-bar-readout");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    draw();
+  }
+
+  function draw() {
+    const percentage = Number(slider.value);
+
+    value.textContent = `${percentage}%`;
+
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = canvas.clientWidth * dpr;
+    canvas.height = canvas.clientHeight * dpr;
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+
+    ctx.clearRect(0, 0, width, height);
+
+    const barX = width * 0.1;
+    const barY = height * 0.35;
+    const barWidth = width * 0.8;
+    const barHeight = height * 0.3;
+
+    // Volledige balk
+    ctx.fillStyle = "#e8e8e8";
+    ctx.fillRect(
+      barX,
+      barY,
+      barWidth,
+      barHeight
+    );
+
+    // Percentage
+    ctx.fillStyle = "#4caf50";
+    ctx.fillRect(
+      barX,
+      barY,
+      barWidth * percentage / 100,
+      barHeight
+    );
+
+    // Rand
+    ctx.strokeRect(
+      barX,
+      barY,
+      barWidth,
+      barHeight
+    );
+
+    readout.innerHTML = `
+      <strong>${percentage}%</strong>
+      =
+      ${percentage}/100
+      =
+      ${(percentage / 100).toLocaleString("nl-BE")}
+    `;
+  }
+
+  slider.addEventListener("input", draw);
+
+  window.addEventListener("resize", resizeCanvas);
+
+  resizeCanvas();
+}
 
 function mountPlot(root) {
   root.innerHTML = widgetShell("Functieplot", "Sleep a en b. Zet de parabool aan voor x².",
@@ -1760,6 +2029,8 @@ const WIDGET_BUILDERS = {
   smartdivision: mountSmartDivision,
   commutative: mountCommutative,
   associative: mountAssociative,
+  fractionVisual: mountFractionVisual,
+  percentageBar: mountPercentageBar,
   plot: mountPlot,
   tangent: mountTangent,
   riemann: mountRiemann,

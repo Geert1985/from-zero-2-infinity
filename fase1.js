@@ -1600,171 +1600,481 @@ const MILESTONES_1 = [
     id: "1.3",
     title: "Het getallensysteem uitbreiden",
     goal: "Van ℕ naar ℤ en ℚ.",
-    theory: `
-      <h2>Milestone 1.3 — Het getallensysteem uitbreiden</h2>
-      <p><strong>Doel:</strong> begrijpen waarom ℕ niet genoeg is en stap voor stap leren werken met ℤ en ℚ. Je leert ook absolute waarde, breuken, decimalen, percentages en verhoudingen.</p>
+    theory: /* html */`
+      <h2>Het getallensysteem uitbreiden</h2>
+      <p><strong>Doel:</strong></p>
 
-      <h3>1. Waarom hebben we negatieve getallen nodig?</h3>
-      <p>In ℕ heeft <strong>3 − 5</strong> geen antwoord. Om zulke verschillen toch te kunnen beschrijven, breiden we de getallen uit met negatieve getallen.</p>
-      <p class="formula">ℤ = {…, −3, −2, −1, 0, 1, 2, 3, …}</p>
-      <p>De gehele getallen bevatten dus de natuurlijke getallen en hun negatieve tegenhangers.</p>
+        <ul>
+          <li>begrijpen wat een verzameling is;</li>
+          <li>begrijpen waarom de verzameling ℕ niet genoeg is;</li>
+          <li>stap voor stap leren werken met de verzameling ℤ en ℚ;</li>
+          <li>leren over absolute waarde, breuken, decimalen, percentages en verhoudingen.</li>
+        </ul>
+      
+      <p>Tot nu toe hebben we gewerkt met de natuurlijke getallen:
+        0, 1, 2, 3, 4, 5, ...</p>
 
-      <h3>2. De getallenlijn met negatieve getallen</h3>
-      <pre>←────|────|────|────|────|────→
-     −3   −2   −1    0    1    2    3</pre>
-      <p>Naar rechts worden getallen groter. Naar links worden ze kleiner. Daarom geldt bijvoorbeeld:</p>
-      <p class="formula">−5 &lt; −2 &lt; 0 &lt; 4</p>
+      <p>Maar naarmate we meer rekenproblemen proberen op te lossen, ontdekken we
+      dat deze getallen niet altijd voldoende zijn. Soms hebben we nieuwe soorten
+      getallen nodig.</p>
 
-      <h3>3. Tegenovergestelde getallen</h3>
-      <p>De getallen <strong>5</strong> en <strong>−5</strong> liggen even ver van 0, maar aan tegenovergestelde kanten.</p>
-      <p class="formula">5 + (−5) = 0</p>
-      <p>We noemen ze elkaars <strong>tegengestelde</strong>.</p>
+      <p>Om dat goed te begrijpen, maken we eerst kennis met een belangrijk idee:
+      <strong>verzamelingen</strong>.</p>
 
-      <h3>4. Absolute waarde</h3>
-      <p>De <strong>absolute waarde</strong> van een getal is de afstand tot 0:</p>
-      <p class="formula">|5| = 5 &nbsp;&nbsp; |−5| = 5 &nbsp;&nbsp; |0| = 0</p>
-      <p>Absolute waarde is dus nooit negatief.</p>
+      <h3>1. Wat is een verzameling?</h3>
 
-      <h3>5. Optellen en aftrekken met gehele getallen</h3>
-      <p>Bij optellen kun je de getallenlijn gebruiken. Een positief getal beweegt naar rechts; een negatief getal naar links.</p>
-      <p>Aftrekken kun je omzetten in optellen van het tegengestelde:</p>
-      <p class="formula">a − b = a + (−b)</p>
-      <p>Dus:</p>
-      <p class="formula">7 − (−3) = 7 + 3 = 10</p>
+      <p>Een <strong>verzameling</strong> is simpelweg een groep dingen die we
+      samen bekijken omdat ze iets gemeenschappelijk hebben.</p>
 
-      <h3>6. Vermenigvuldigen en delen met tekens</h3>
-      <p>Bij vermenigvuldigen en delen gelden de tekenregels:</p>
-      <ul>
-        <li>zelfde tekens → positief;</li>
-        <li>verschillende tekens → negatief.</li>
-      </ul>
+      <p>Bijvoorbeeld: de verzameling van de eerste vijf natuurlijke getallen is</p>
+
+      <p class="formula">{0, 1, 2, 3, 4}</p>
+
+      <p>De accolades <strong>{ }</strong> geven aan dat we een verzameling
+      opsommen.</p>
+
+      <p>De afzonderlijke dingen in een verzameling noemen we
+      <strong>elementen</strong>.</p>
+
+      <p>In de verzameling {0, 1, 2, 3, 4} zijn 0, 1, 2, 3 en 4 dus elementen.</p>
+
+      <div class="callout insight">
+        <strong>Belangrijk inzicht</strong>
+        <p>Een verzameling is een manier om een groep getallen of andere objecten
+        als één geheel te bekijken.</p>
+      </div>
+
+    <h3>2. Hoort een getal bij een verzameling?</h3>
+
+    <p>In de wiskunde gebruiken we een speciaal symbool om aan te geven dat iets
+    een element van een verzameling is:</p>
+
+    <p class="formula">3 ∈ {0, 1, 2, 3, 4}</p>
+
+    <p>Het symbool <strong>∈</strong> betekent
+    <strong>"is een element van"</strong>.</p>
+
+    <p>We kunnen dus lezen:</p>
+
+    <p><strong>3 is een element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
+
+    <p>Voor een getal dat niet in de verzameling zit, gebruiken we
+    <strong>∉</strong>.</p>
+
+    <p class="formula">7 ∉ {0, 1, 2, 3, 4}</p>
+
+    <p>Dit betekent:</p>
+
+    <p><strong>7 is geen element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
+
+
+    <h3>3. De natuurlijke getallen</h3>
+
+    <p>De verzameling van de natuurlijke getallen krijgt een naam:
+    <strong>ℕ</strong>.</p>
+
+    <p>We gebruiken ℕ voor alle natuurlijke getallen:</p>
+
+    <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
+
+    <p>De puntjes betekenen dat de reeks verdergaat.</p>
+
+    <p>Zo kunnen we bijvoorbeeld schrijven:</p>
+
+    <p class="formula">5 ∈ ℕ</p>
+
+    <p>Maar:</p>
+
+    <p class="formula">−3 ∉ ℕ</p>
+
+    <p>Een negatief getal behoort dus niet tot de natuurlijke getallen.</p>
+
+
+      <h3>4. Waarom hebben we negatieve getallen nodig?</h3>
+      
+      <p>Tot nu toe konden we met natuurlijke getallen heel wat problemen oplossen.
+      Maar er ontstaat een probleem wanneer we een kleiner getal van een groter
+      getal aftrekken.</p>      
+      
       <p>Bijvoorbeeld:</p>
-      <p class="formula">(−4) × (−3) = 12</p>
-      <p class="formula">(−20) ÷ 5 = −4</p>
 
-      <h3>7. Waarom breuken?</h3>
-      <p>Gehele getallen zijn niet genoeg om eerlijk te verdelen. Bijvoorbeeld 1 pizza verdelen over 2 personen geeft niet één geheel getal per persoon.</p>
-      <p>We gebruiken daarom <strong>rationele getallen</strong>:</p>
-      <p class="formula">ℚ = {a/b | a,b ∈ ℤ en b ≠ 0}</p>
-      <p>De getallenstelsels zijn nu genest:</p>
-      <p class="formula">ℕ ⊂ ℤ ⊂ ℚ</p>
+      <p class="formula">3 − 5 = ?</p>
 
-      <h3>8. Teller en noemer</h3>
-      <p>In <strong>3/5</strong> is 3 de <strong>teller</strong> en 5 de <strong>noemer</strong>. De breuk betekent drie vijfde van één geheel.</p>
-      <p>De noemer mag nooit nul zijn.</p>
+      <p>Er bestaat geen natuurlijk getal dat het antwoord is.</p>
 
-      <h3>9. Gelijkwaardige breuken</h3>
-      <p>Een breuk verandert niet van waarde wanneer teller en noemer met hetzelfde niet-nul getal worden vermenigvuldigd:</p>
-      <p class="formula">1/2 = 2/4 = 3/6 = 50/100</p>
-      <p>Om een breuk te <strong>vereenvoudigen</strong>, deel je teller en noemer door hun grootste gemene deler.</p>
+      <p>We kunnen vanaf 3 drie stappen teruggaan:</p>
 
-      <h3>10. Breuken vergelijken</h3>
-      <p>Bij gelijke noemers is de breuk met de grootste teller groter.</p>
-      <p>Bij ongelijke noemers kun je gelijknamig maken:</p>
-      <p class="formula">1/3 = 2/6 &nbsp;&nbsp; en &nbsp;&nbsp; 1/2 = 3/6</p>
-      <p>Dus <strong>1/2 &gt; 1/3</strong>.</p>
+      <p class="formula">3 − 3 = 0</p>
 
-      <h3>11. Breuken optellen en aftrekken</h3>
-      <p>Bij gelijknamige breuken tel of trek je de tellers op en blijft de noemer gelijk:</p>
-      <p class="formula">2/7 + 3/7 = 5/7</p>
-      <p>Bij verschillende noemers maak je eerst een gemeenschappelijke noemer:</p>
-      <p class="formula">1/2 + 1/3 = 3/6 + 2/6 = 5/6</p>
+      <p>Maar daarna moeten we nog twee stappen verder terug.</p>
 
-      <h3>12. Breuken vermenigvuldigen</h3>
-      <p>Vermenigvuldig teller met teller en noemer met noemer:</p>
-      <p class="formula">(2/3) × (5/4) = 10/12 = 5/6</p>
-      <p>Je kunt soms vooraf kruislings vereenvoudigen.</p>
+      <p>Daarom hebben we nieuwe getallen nodig die links van nul op de getallenlijn
+      staan.</p>
 
-      <h3>13. Breuken delen</h3>
-      <p>Delen door een breuk is vermenigvuldigen met het omgekeerde:</p>
-      <p class="formula">a/b ÷ c/d = a/b × d/c</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">3/8 ÷ 9/4 = 3/8 × 4/9 = 1/6</p>
+      <div data-widget="ints"></div>
 
-      <h3>14. Decimalen</h3>
-      <p>Een decimaal getal is een andere schrijfwijze voor een getal dat ook als breuk kan worden geschreven.</p>
-      <p class="formula">0,5 = 5/10 = 1/2</p>
-      <p class="formula">0,125 = 125/1000 = 1/8</p>
-      <p>Niet elke breuk heeft een eindige decimale schrijfwijze. Bijvoorbeeld:</p>
-      <p class="formula">1/3 = 0,333…</p>
+      <div class="callout insight">
+        <strong>Waarom breiden we het getallensysteem uit?</strong>
+        <p>Niet omdat de bestaande getallen "fout" zijn, maar omdat ze niet meer
+        voldoende zijn om alle problemen op te lossen.</p>
+      </div>
 
-      <h3>15. Decimalen vergelijken en rekenen</h3>
-      <p>Bij vergelijken kun je nullen achter de komma toevoegen:</p>
-      <p class="formula">0,7 = 0,70 &gt; 0,65</p>
-      <p>Bij optellen en aftrekken zet je de komma's onder elkaar.</p>
+    <h3>5. De gehele getallen</h3>
 
-      <h3>16. Percentages</h3>
-      <p>Een percentage betekent “per honderd”:</p>
-      <p class="formula">17% = 17/100 = 0,17</p>
-      <p>Een percentage van een getal bereken je met:</p>
-      <p class="formula">p% van n = p/100 × n</p>
-      <p>Dus:</p>
-      <p class="formula">25% van 64 = 0,25 × 64 = 16</p>
+    <p>We voegen de negatieve gehele getallen toe:</p>
 
-      <h3>17. Percentageverandering</h3>
-      <p>Bij een stijging met 15% vermenigvuldig je met <strong>1,15</strong>. Bij een daling met 15% vermenigvuldig je met <strong>0,85</strong>.</p>
-      <p class="formula">nieuw = oud × (1 + stijging)</p>
-      <p class="formula">nieuw = oud × (1 − daling)</p>
-      <p>Let op: een stijging van 20% gevolgd door een daling van 20% brengt je niet terug naar het oorspronkelijke bedrag.</p>
+    <p class="formula">..., −3, −2, −1, 0, 1, 2, 3, ...</p>
 
-      <h3>18. Verhoudingen</h3>
-      <p>Een verhouding vergelijkt twee hoeveelheden:</p>
-      <p class="formula">3 : 8 = 3/8</p>
-      <p>Als 3 : 8 gelijk is aan x : 24, dan is:</p>
-      <p class="formula">x = 24 × 3/8 = 9</p>
-      <p>Een verhouding kun je zien als een schaalfactor of als een breuk.</p>
+    <p>Deze volledige verzameling noemen we de
+    <strong>gehele getallen</strong>. We gebruiken hiervoor het symbool
+    <strong>ℤ</strong>.</p>
 
-      <h3>19. De grote lijn</h3>
-      <p>De uitbreiding van het getallensysteem gebeurt omdat bestaande getallen tekortschieten:</p>
-      <ul>
-        <li>ℕ is niet genoeg voor aftrekken;</li>
-        <li>ℤ is niet genoeg voor alle delingen;</li>
-        <li>ℚ zal later niet genoeg blijken voor bijvoorbeeld √2.</li>
-      </ul>
-      <p>Wiskunde breidt haar getallensysteem dus uit wanneer nieuwe problemen daarom vragen.</p>
-    `,
-    practice: [
-      { id: "p13-1", prompt: "−8 + 13", accept: ["5"] },
-      { id: "p13-2", prompt: "−12 + 7 − (−4)", accept: ["-1", "−1"] },
-      { id: "p13-3", prompt: "−6 × (4 − 7)", accept: ["18"] },
-      { id: "p13-4", prompt: "−20 ÷ 5", accept: ["-4", "−4"] },
-      { id: "p13-5", prompt: "Bereken |−17|.", accept: ["17"] },
-      { id: "p13-6", prompt: "Vul in: −5 □ −2. Gebruik <, > of =.", accept: ["<"] },
-      { id: "p13-7", prompt: "Vereenvoudig 18/24.", accept: ["3/4"] },
-      { id: "p13-8", prompt: "Welke breuk is groter: 1/2 of 1/3?", type: "choice", choices: ["1/2", "1/3"], accept: ["1/2"] },
-      { id: "p13-9", prompt: "1/2 + 1/3", accept: ["5/6"] },
-      { id: "p13-10", prompt: "5/6 − 1/4", accept: ["7/12"] },
-      { id: "p13-11", prompt: "2/5 × 15/8", accept: ["3/4"] },
-      { id: "p13-12", prompt: "3/8 ÷ 9/4", accept: ["1/6"] },
-      { id: "p13-13", prompt: "Schrijf 0,125 als vereenvoudigde breuk.", accept: ["1/8"] },
-      { id: "p13-14", prompt: "Welke is groter: 0,7 of 0,65?", accept: ["0,7", "0.7"] },
-      { id: "p13-15", prompt: "Bereken 0,75 + 0,8.", accept: ["1,55", "1.55"] },
-      { id: "p13-16", prompt: "Wat is 25% van 64?", accept: ["16"] },
-      { id: "p13-17", prompt: "Wat is 17,5% van 80?", accept: ["14"] },
-      { id: "p13-18", prompt: "Een prijs van €200 stijgt met 15%. Wat is de nieuwe prijs?", accept: ["230", "€230", "230 euro"] },
-      { id: "p13-19", prompt: "4 : 9 = x : 36. Vind x.", accept: ["16"] },
-      { id: "p13-20", prompt: "Een leerling zegt: 1/2 + 1/3 = 2/5. Wat is de fout?", type: "choice", choices: ["Tellers en noemers mag je niet afzonderlijk optellen", "1/2 is geen breuk", "3 is geen noemer", "Het antwoord moet negatief zijn"], accept: ["Tellers en noemers mag je niet afzonderlijk optellen"] },
-      { id: "p13-21", prompt: "Waar of niet waar: −7 > −3.", type: "choice", choices: ["waar", "niet waar"], accept: ["niet waar"] },
-      { id: "p13-22", prompt: "Waarom is 5/0 geen rationaal getal?", type: "text", accept: ["delen door nul is niet gedefinieerd", "de noemer mag niet nul zijn", "noemer mag niet 0 zijn"] },
-      { id: "p13-23", prompt: "Een bedrag van 100 stijgt met 20% en daalt daarna met 20%. Is het eindbedrag 100? ja/nee", accept: ["nee"] },
-      { id: "p13-24", prompt: "Bereken het eindbedrag uit oefening 23.", accept: ["96"] }
-    ],
-    exam: [
-      { id: "e13-1", prompt: "−8 × (4 − 7)", accept: ["24"] },
-      { id: "e13-2", prompt: "−12 + 7 − (−4)", accept: ["-1", "−1"] },
-      { id: "e13-3", prompt: "Bereken |−9|.", accept: ["9"] },
-      { id: "e13-4", prompt: "1/2 + 1/3", accept: ["5/6"] },
-      { id: "e13-5", prompt: "5/6 − 1/4", accept: ["7/12"] },
-      { id: "e13-6", prompt: "3/4 × 8/9", accept: ["2/3"] },
-      { id: "e13-7", prompt: "3/8 ÷ 9/4", accept: ["1/6"] },
-      { id: "e13-8", prompt: "Schrijf 0,375 als vereenvoudigde breuk.", accept: ["3/8"] },
-      { id: "e13-9", prompt: "Wat is 17,5% van 80?", accept: ["14"] },
-      { id: "e13-10", prompt: "4 : 9 = x : 36. Vind x.", accept: ["16"] },
-      { id: "e13-11", prompt: "Welke is groter: −4 of −9?", accept: ["-4", "−4"] },
-      { id: "e13-12", prompt: "Een prijs van €240 daalt met 15%. Wat is de nieuwe prijs?", accept: ["204", "€204", "204 euro"] },
-      { id: "e13-13", prompt: "Een leerling beweert 2/3 + 1/3 = 3/6. Wat is de fout?", type: "choice", choices: ["De tellers zijn verkeerd opgeteld", "Bij gelijke noemers tel je de tellers op en behoud je de noemer", "3/6 is altijd gelijk aan 1", "Breuken mogen niet worden opgeteld"], accept: ["Bij gelijke noemers tel je de tellers op en behoud je de noemer"] },
-      { id: "e13-14", prompt: "Leg kort uit waarom ℤ niet genoeg is voor de uitkomst van 1 ÷ 2.", type: "text", accept: ["1/2 is geen geheel getal", "het antwoord is een breuk", "1/2 zit niet in de gehele getallen"] }
-    ]
+    <p class="formula">ℤ = {..., −3, −2, −1, 0, 1, 2, 3, ...}</p>
+
+    <p>Nu kunnen we bijvoorbeeld schrijven:</p>
+
+    <p class="formula">−2 ∈ ℤ</p>
+
+    <p>En de eerdere berekening krijgt een oplossing:</p>
+
+    <p class="formula">3 − 5 = −2</p>
+
+    <p>De gehele getallen lossen dus een probleem op dat met alleen natuurlijke
+    getallen niet opgelost kon worden.</p>
+
+
+    <h3>6. Deelverzamelingen</h3>
+
+    <p>Er is nog een belangrijk verband tussen ℕ en ℤ.</p>
+
+    <p>Elk natuurlijk getal is ook een geheel getal.</p>
+
+    <p>0 is bijvoorbeeld een natuurlijk getal én een geheel getal.
+    Hetzelfde geldt voor 1, 2, 3, 4, enzovoort.</p>
+
+    <p>De natuurlijke getallen vormen daarom een deel van de gehele getallen.</p>
+
+    <p>In de wiskunde noemen we dit een <strong>deelverzameling</strong>.</p>
+
+    <p>Het symbool <strong>⊂</strong> betekent
+    <strong>"is een deelverzameling van"</strong>.</p>
+
+    <p>We kunnen daarom schrijven:</p>
+
+    <p class="formula">ℕ ⊂ ℤ</p>
+
+    <p>Dit lezen we als:</p>
+
+    <p><strong>De natuurlijke getallen zijn een deelverzameling van de gehele
+    getallen.</strong></p>
+
+    <div class="callout">
+      <strong>Let op het verschil</strong>
+      <p>Het symbool <strong>∈</strong> gebruik je wanneer je een
+      <strong>getal met een verzameling</strong> vergelijkt.</p>
+
+      <p class="formula">3 ∈ ℕ</p>
+
+      <p>Het symbool <strong>⊂</strong> gebruik je wanneer je
+      <strong>twee verzamelingen met elkaar</strong> vergelijkt.</p>
+
+      <p class="formula">ℕ ⊂ ℤ</p>
+    </div>
+
+    <h3>7. Tegenovergestelde getallen</h3>
+
+<p>Op de getallenlijn heeft elk positief getal een getal op precies dezelfde
+afstand van nul aan de andere kant.</p>
+
+<p>Het tegenovergestelde van 5 is −5.</p>
+
+<p>Het tegenovergestelde van −3 is 3.</p>
+
+<p>Het getal 0 is zijn eigen tegenovergestelde.</p>
+
+<p>We kunnen dit voorstellen als:</p>
+
+<p class="formula">5 ↔ −5</p>
+
+<p>en</p>
+
+<p class="formula">3 ↔ −3</p>
+
+<div class="callout insight">
+  <strong>Inzicht</strong>
+  <p>Tegengestelde getallen liggen even ver van nul, maar aan tegenovergestelde
+  kanten van de getallenlijn.</p>
+</div>
+
+
+<h3>8. Absolute waarde</h3>
+
+<p>De <strong>absolute waarde</strong> van een getal vertelt hoe ver dat getal
+van nul ligt.</p>
+
+<p>De absolute waarde van 5 is 5:</p>
+
+<p class="formula">|5| = 5</p>
+
+<p>De absolute waarde van −5 is ook 5:</p>
+
+<p class="formula">|−5| = 5</p>
+
+<p>De verticale streepjes <strong>| |</strong> betekenen hier:
+"de absolute waarde van".</p>
+
+<p>De absolute waarde is dus altijd positief of nul.</p>
+
+
+<h3>9. Optellen en aftrekken met gehele getallen</h3>
+
+<p>De getallenlijn geeft ons een eenvoudige manier om met negatieve getallen
+te rekenen.</p>
+
+<p>Bij optellen beweeg je naar rechts als je een positief getal toevoegt en
+naar links als je een negatief getal toevoegt.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 + (−5) = −2</p>
+
+<p>Je begint bij 3 en beweegt vijf plaatsen naar links.</p>
+
+<p>Aftrekken kunnen we bekijken als het toevoegen van het tegenovergestelde.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 − 5 = 3 + (−5) = −2</p>
+
+<div class="callout insight">
+  <strong>Belangrijk</strong>
+  <p>Aftrekken van een getal komt overeen met optellen van het
+  tegenovergestelde.</p>
+</div>
+
+
+<h3>10. Vermenigvuldigen en delen met tekens</h3>
+
+<p>Ook bij vermenigvuldigen en delen krijgen we regels voor positieve en
+negatieve getallen.</p>
+
+<p>Bij vermenigvuldigen geldt:</p>
+
+<p class="formula">positief × positief = positief</p>
+<p class="formula">positief × negatief = negatief</p>
+<p class="formula">negatief × positief = negatief</p>
+<p class="formula">negatief × negatief = positief</p>
+
+<p>Bij delen gelden dezelfde regels voor de tekens.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">(−4) × (−3) = 12</p>
+
+<p>en:</p>
+
+<p class="formula">(−12) ÷ 3 = −4</p>
+
+
+<h3>11. Waarom hebben we breuken nodig?</h3>
+
+<p>Met natuurlijke en gehele getallen kunnen we nog steeds niet elke deling
+uitvoeren.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 ÷ 2 = ?</p>
+
+<p>Er bestaat geen geheel getal dat precies tussen 1 en 2 ligt en het antwoord
+vormt.</p>
+
+<p>Daarom introduceren we <strong>breuken</strong>.</p>
+
+<p>Een breuk maakt het mogelijk om een geheel in gelijke delen op te splitsen.</p>
+
+<div data-widget="fractionVisual"></div>
+
+
+<h3>12. Teller en noemer</h3>
+
+<p>Een breuk bestaat uit twee getallen.</p>
+
+<p class="formula">3/5</p>
+
+<p>Het getal boven de streep heet de <strong>teller</strong>.</p>
+
+<p>Het getal onder de streep heet de <strong>noemer</strong>.</p>
+
+<p>Bij 3/5 is 3 dus de teller en 5 de noemer.</p>
+
+<p>De noemer vertelt in hoeveel gelijke delen het geheel is verdeeld.
+De teller vertelt hoeveel van die delen we nemen.</p>
+
+
+<h3>13. Gelijkwaardige breuken</h3>
+
+<p>Een breuk kan er anders uitzien zonder dat de waarde verandert.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">1/2 = 2/4 = 3/6</p>
+
+<p>Deze breuken stellen allemaal dezelfde hoeveelheid voor.</p>
+
+<p>We noemen ze <strong>gelijkwaardige breuken</strong>.</p>
+
+<p>Een breuk kunnen we ook vereenvoudigen. Zo kunnen we 4/8 schrijven als
+1/2.</p>
+
+
+<h3>14. Breuken vergelijken</h3>
+
+<p>Met breuken kunnen we hoeveelheden nauwkeuriger vergelijken.</p>
+
+<p>Wanneer twee breuken dezelfde noemer hebben, kunnen we de tellers
+rechtstreeks vergelijken.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3/8 &lt; 5/8</p>
+
+<p>Omdat beide breuken in acht gelijke delen zijn verdeeld, zien we dat
+3 delen minder zijn dan 5 delen.</p>
+
+
+<h3>15. Breuken optellen en aftrekken</h3>
+
+<p>Wanneer breuken dezelfde noemer hebben, kunnen we de tellers optellen of
+aftrekken.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">2/7 + 3/7 = 5/7</p>
+
+<p>Wanneer de noemers verschillend zijn, moeten we eerst gelijkwaardige
+breuken zoeken met dezelfde noemer.</p>
+
+
+<h3>16. Breuken vermenigvuldigen</h3>
+
+<p>Bij het vermenigvuldigen van breuken vermenigvuldigen we de tellers met
+elkaar en de noemers met elkaar.</p>
+
+<p class="formula">2/3 × 4/5 = 8/15</p>
+
+
+<h3>17. Breuken delen</h3>
+
+<p>Een breuk delen door een andere breuk kunnen we omzetten in
+vermenigvuldigen met het omgekeerde.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">2/3 ÷ 4/5 = 2/3 × 5/4</p>
+
+<p>Dit idee zullen we later verder oefenen.</p>
+
+
+<h3>18. Decimalen</h3>
+
+<p>Dezelfde getallen kunnen we op verschillende manieren schrijven.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">1/2 = 0,5</p>
+
+<p>De komma geeft het begin van het decimale gedeelte aan.</p>
+
+<p>Decimalen zijn daarom geen volledig nieuwe soort getallen. Ze zijn een
+andere manier om bepaalde getallen te schrijven.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">0,5 = 0,50 = 0,500</p>
+
+<p>Deze drie schrijfwijzen stellen dezelfde waarde voor.</p>
+
+
+<h3>19. Percentages</h3>
+
+<p>Een percentage is een verhouding waarbij we het geheel opdelen in
+100 gelijke delen.</p>
+
+<div data-widget="percentageBar"></div>
+
+<p>Het symbool <strong>%</strong> betekent "per honderd".</p>
+
+<p>25% betekent dus 25 van de 100 gelijke delen:</p>
+
+<p class="formula">25% = 25/100 = 0,25</p>
+
+<p>Percentages zijn daardoor nauw verbonden met breuken en decimalen.</p>
+
+
+<h3>20. Percentageverandering</h3>
+
+<p>Percentages kunnen ook aangeven hoeveel iets verandert ten opzichte van
+een beginwaarde.</p>
+
+<p>Wanneer een prijs bijvoorbeeld stijgt van €100 naar €110, is de stijging
+€10.</p>
+
+<p>Omdat €10 gelijk is aan 10% van €100, is de stijging 10%.</p>
+
+<p class="formula">10/100 = 0,10 = 10%</p>
+
+
+<h3>21. Verhoudingen</h3>
+
+<p>Een <strong>verhouding</strong> vergelijkt hoeveelheden met elkaar.</p>
+
+<p>Stel dat een groep uit 2 rode en 3 blauwe ballen bestaat.</p>
+
+<p>De verhouding rood tegenover blauw is:</p>
+
+<p class="formula">2 : 3</p>
+
+<p>Verhoudingen komen overal voor: bij recepten, kaarten, snelheid,
+schaalmodellen en percentages.</p>
+
+
+<h3>22. De grote lijn</h3>
+
+<p>We hebben in deze les verschillende soorten getallen gezien.</p>
+
+<p>We begonnen met de natuurlijke getallen:</p>
+
+<p class="formula">ℕ = {0, 1, 2, 3, ...}</p>
+
+<p>Toen we problemen tegenkwamen zoals 3 − 5, hadden we negatieve getallen
+nodig. Zo ontstonden de gehele getallen:</p>
+
+<p class="formula">ℤ = {..., −2, −1, 0, 1, 2, ...}</p>
+
+<p>Omdat ieder natuurlijk getal ook een geheel getal is, geldt:</p>
+
+<p class="formula">ℕ ⊂ ℤ</p>
+
+<p>Het symbool <strong>⊂</strong> betekent dat de verzameling links een
+deelverzameling is van de verzameling rechts.</p>
+
+<p>Toen we vervolgens een probleem kregen met bijvoorbeeld 3 ÷ 2, hadden we
+breuken nodig. Daarmee komen we bij de <strong>rationele getallen</strong>,
+die we later met het symbool ℚ zullen aanduiden.</p>
+
+<div class="callout insight">
+  <strong>De rode draad</strong>
+  <p>Het getallensysteem wordt steeds groter omdat we nieuwe problemen
+  ontdekken die met de bestaande getallen niet opgelost kunnen worden.</p>
+
+  <p>Nieuwe getallen zijn dus geen willekeurige toevoegingen. Ze ontstaan
+  omdat we meer rekenproblemen willen kunnen oplossen.</p>
+</div>
+
+<p>In volgende lessen zullen we ontdekken dat ook de rationale getallen niet
+voldoende zijn voor alle problemen. Zo blijven we het getallensysteem
+uitbreiden.</p>
+    `
   },
   {
     id: "1.4",
@@ -1851,43 +2161,7 @@ const MILESTONES_1 = [
 
       <h3>13. Waarom is dit belangrijk?</h3>
       <p>Getaltheorie lijkt misschien een verzameling regels, maar onthult structuur. Priemfactorisatie helpt bij breuken vereenvoudigen, GGD en KGV, algoritmen en later bij abstractere wiskunde.</p>
-    `,
-    practice: [
-      { id: "p14-1", prompt: "Is 91 priem? Antwoord ja of nee.", accept: ["nee"] },
-      { id: "p14-2", prompt: "Ontbind 91 in priemfactoren.", accept: ["7×13", "7*13"] },
-      { id: "p14-3", prompt: "Ontbind 60 in priemfactoren.", accept: ["2²×3×5", "2^2×3×5", "2^2*3*5"] },
-      { id: "p14-4", prompt: "Ontbind 84 in priemfactoren.", accept: ["2²×3×7", "2^2×3×7", "2^2*3*7"] },
-      { id: "p14-5", prompt: "Geef alle positieve delers van 18.", accept: ["1,2,3,6,9,18"] },
-      { id: "p14-6", prompt: "GGD(24,36)", accept: ["12"] },
-      { id: "p14-7", prompt: "KGV(24,36)", accept: ["72"] },
-      { id: "p14-8", prompt: "Vereenvoudig 42/56 met behulp van de GGD.", accept: ["3/4"] },
-      { id: "p14-9", prompt: "GGD(105,28) met het Euclidische algoritme.", accept: ["7"] },
-      { id: "p14-10", prompt: "Is 234 deelbaar door 9? ja/nee", accept: ["ja"] },
-      { id: "p14-11", prompt: "Is 257 deelbaar door 2? ja/nee", accept: ["nee"] },
-      { id: "p14-12", prompt: "Waarom is 1 geen priemgetal?", type: "choice", choices: ["Omdat 1 geen positieve deler heeft", "Omdat 1 slechts één positieve deler heeft", "Omdat 1 even is", "Omdat 1 negatief is"], accept: ["Omdat 1 slechts één positieve deler heeft"] },
-      { id: "p14-13", prompt: "Hoeveel positieve delers heeft 2³ × 3² × 5?", accept: ["24"] },
-      { id: "p14-14", prompt: "Bereken GGD(48,18).", accept: ["6"] },
-      { id: "p14-15", prompt: "Bereken KGV(48,18).", accept: ["144"] },
-      { id: "p14-16", prompt: "Gebruik GGD × KGV = a × b als controle voor 48 en 18.", type: "text", accept: ["6×144=48×18", "6*144=48*18", "864=864"] },
-      { id: "p14-17", prompt: "Waar of niet waar: elk natuurlijk getal groter dan 1 heeft precies één priemfactorisatie, afgezien van de volgorde.", type: "choice", choices: ["waar", "niet waar"], accept: ["waar"] },
-      { id: "p14-18", prompt: "Een leerling zegt dat 2 × 3 × 5 en 5 × 2 × 3 verschillende priemfactorisaties zijn. Wat is de fout?", type: "choice", choices: ["De volgorde van factoren verandert het product niet", "2 is geen priemgetal", "5 mag niet in een factorisatie", "Er moeten negatieve factoren staan"], accept: ["De volgorde van factoren verandert het product niet"] },
-      { id: "p14-19", prompt: "Ontbind 180 in priemfactoren.", accept: ["2²×3²×5", "2^2×3^2×5", "2^2*3^2*5"] },
-      { id: "p14-20", prompt: "Welke priemgetallen moet je maximaal testen om te bepalen of 97 priem is?", accept: ["2,3,5,7"] }
-    ],
-    exam: [
-      { id: "e14-1", prompt: "Ontbind 90 in priemfactoren.", accept: ["2×3²×5", "2*3^2*5"] },
-      { id: "e14-2", prompt: "GGD(48,18)", accept: ["6"] },
-      { id: "e14-3", prompt: "KGV(48,18)", accept: ["144"] },
-      { id: "e14-4", prompt: "Is 97 priem? ja/nee", accept: ["ja"] },
-      { id: "e14-5", prompt: "Geef alle positieve delers van 18.", accept: ["1,2,3,6,9,18"] },
-      { id: "e14-6", prompt: "Is 234 deelbaar door 9? ja/nee", accept: ["ja"] },
-      { id: "e14-7", prompt: "Waarom is 1 geen priemgetal?", type: "text", accept: ["1 heeft slechts één positieve deler", "omdat 1 maar één deler heeft"] },
-      { id: "e14-8", prompt: "Hoeveel positieve delers heeft 2³ × 3² × 5?", accept: ["24"] },
-      { id: "e14-9", prompt: "Bereken GGD(105,28) met het Euclidische algoritme.", accept: ["7"] },
-      { id: "e14-10", prompt: "Een leerling ontbindt 60 als 2 × 30 en stopt. Waarom is dit nog geen priemfactorisatie?", type: "text", accept: ["30 is niet priem", "alle factoren moeten priem zijn", "2×30 bevat nog een samengestelde factor"] },
-      { id: "e14-11", prompt: "Als GGD(a,b)=6 en a=48, b=18, wat is dan KGV(a,b)?", accept: ["144"] },
-      { id: "e14-12", prompt: "Is de uitspraak 'elk even getal is priem' juist? ja/nee", accept: ["nee"] }
-    ]
+    `
   },
   {
     id: "1.5",
@@ -2005,77 +2279,7 @@ const MILESTONES_1 = [
         <li>ℝ bevat zowel rationale als irrationale getallen.</li>
       </ul>
       <p>Nieuwe getallen ontstaan dus niet zomaar: ze lossen problemen op die met het vorige systeem niet konden worden opgelost.</p>
-    `,
-    practice: [
-      { id: "p15-1", prompt: "5³", accept: ["125"] },
-      { id: "p15-2", prompt: "2⁵ × 2³", accept: ["256"] },
-      { id: "p15-3", prompt: "(3²)³", accept: ["729"] },
-      { id: "p15-4", prompt: "5⁶ ÷ 5²", accept: ["625"] },
-      { id: "p15-5", prompt: "Bereken 2⁻³.", accept: ["1/8", "0,125", "0.125"] },
-      { id: "p15-6", prompt: "10⁴", accept: ["10000", "10 000"] },
-      { id: "p15-7", prompt: "Schrijf 63 000 in wetenschappelijke notatie.", accept: ["6,3×10⁴", "6.3×10^4", "6,3*10^4"] },
-      { id: "p15-8", prompt: "Schrijf 0,00045 in wetenschappelijke notatie.", accept: ["4,5×10⁻⁴", "4.5×10^-4", "4,5*10^-4"] },
-      { id: "p15-9", prompt: "√81", accept: ["9"] },
-      { id: "p15-10", prompt: "∛(−8)", accept: ["-2", "−2"] },
-      { id: "p15-11", prompt: "√(4 × 36)", accept: ["12"] },
-      { id: "p15-12", prompt: "Vereenvoudig √72.", accept: ["6√2", "6sqrt2"] },
-      { id: "p15-13", prompt: "Vereenvoudig √50.", accept: ["5√2", "5sqrt2"] },
-      { id: "p15-14", prompt: "Rond 7,458 af op twee decimalen.", accept: ["7,46", "7.46"] },
-      { id: "p15-15", prompt: "Tussen welke twee opeenvolgende gehele getallen ligt √20?", accept: ["4 en 5", "4,5"] },
-      { id: "p15-16", prompt: "Is √2 rationaal? ja/nee", accept: ["nee"] },
-      { id: "p15-17", prompt: "Is √49 rationaal? ja/nee", accept: ["ja"] },
-      { id: "p15-18", prompt: "Waar of niet waar: √(9 + 16) = √9 + √16.", type: "choice", choices: ["waar", "niet waar"], accept: ["niet waar"] },
-      { id: "p15-19", prompt: "Bereken √25 en vergelijk dit met √9 + √16.", type: "text", accept: ["5 en 7", "5; 7"] },
-      { id: "p15-20", prompt: "Waarom is √30 groter dan 5 maar kleiner dan 6?", type: "text", accept: ["omdat 25<30<36", "25<30<36", "5²<30<6²"] },
-      { id: "p15-21", prompt: "Welke keten is juist?", type: "choice", choices: ["ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ", "ℝ ⊂ ℚ ⊂ ℤ ⊂ ℕ", "ℕ ⊂ ℚ ⊂ ℤ ⊂ ℝ"], accept: ["ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ"] },
-      { id: "p15-22", prompt: "Is 0,333… rationaal? ja/nee", accept: ["ja"] }
-    ],
-    exam: [
-      { id: "e15-1", prompt: "2³ × 2⁴", accept: ["128"] },
-      { id: "e15-2", prompt: "(3²)³", accept: ["729"] },
-      { id: "e15-3", prompt: "Bereken 2⁻³.", accept: ["1/8", "0,125", "0.125"] },
-      { id: "e15-4", prompt: "Schrijf 4 500 in wetenschappelijke notatie.", accept: ["4,5×10³", "4.5×10^3", "4,5*10^3"] },
-      { id: "e15-5", prompt: "√144", accept: ["12"] },
-      { id: "e15-6", prompt: "Vereenvoudig √72.", accept: ["6√2", "6sqrt2"] },
-      { id: "e15-7", prompt: "∛(−27)", accept: ["-3", "−3"] },
-      { id: "e15-8", prompt: "Tussen welke twee opeenvolgende gehele getallen ligt √30?", accept: ["5 en 6"] },
-      { id: "e15-9", prompt: "Is √49 rationaal? ja/nee", accept: ["ja"] },
-      { id: "e15-10", prompt: "Is √2 rationaal? ja/nee", accept: ["nee"] },
-      { id: "e15-11", prompt: "Waarom is √(9 + 16) niet gelijk aan √9 + √16?", type: "text", accept: ["een wortel mag niet over een som worden verdeeld", "wortels splitsen niet over optellingen", "omdat 5 niet gelijk is aan 7"] },
-      { id: "e15-12", prompt: "Welke uitspraak is juist?", type: "choice", choices: ["√20 < 4", "4 < √20 < 5", "√20 > 6"], accept: ["4 < √20 < 5"] },
-      { id: "e15-13", prompt: "Welke keten van getallensystemen is juist?", type: "choice", choices: ["ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ", "ℕ ⊂ ℝ ⊂ ℚ ⊂ ℤ", "ℤ ⊂ ℕ ⊂ ℚ ⊂ ℝ"], accept: ["ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ"] },
-      { id: "e15-14", prompt: "Leg kort uit waarom ℚ niet voldoende is om √2 te bevatten.", type: "text", accept: ["√2 is irrationaal", "sqrt2 is irrationaal", "√2 kan niet als breuk van gehele getallen worden geschreven"] }
-    ]
+    `
   }
 ];
 
-const PHASE_EXAM_1 = [
-  { id: "f1-1", prompt: "738 + 496", accept: ["1234", "1 234"] },
-  { id: "f1-2", prompt: "1 002 − 587", accept: ["415"] },
-  { id: "f1-3", prompt: "37 × 24", accept: ["888"] },
-  { id: "f1-4", prompt: "157 ÷ 12. Quotiënt en rest (bijv. 13 rest 1)", accept: ["13 rest 1", "13 r 1"] },
-  { id: "f1-5", prompt: "3 + 7 × 4 − 5", accept: ["26"] },
-  { id: "f1-6", prompt: "18 ÷ 3 × 4 + 2", accept: ["26"] },
-  { id: "f1-7", prompt: "−8 × (4 − 7)", accept: ["24"] },
-  { id: "f1-8", prompt: "−15 + 8 − (−6)", accept: ["-1"] },
-  { id: "f1-9", prompt: "2/3 + 3/5", accept: ["19/15"] },
-  { id: "f1-10", prompt: "5/6 − 1/4", accept: ["7/12"] },
-  { id: "f1-11", prompt: "3/4 × 8/9", accept: ["2/3"] },
-  { id: "f1-12", prompt: "3/8 ÷ 9/4", accept: ["1/6"] },
-  { id: "f1-13", prompt: "Schrijf 0,375 als vereenvoudigde breuk.", accept: ["3/8"] },
-  { id: "f1-14", prompt: "Wat is 17,5% van 80?", accept: ["14"] },
-  { id: "f1-15", prompt: "Ontbind 60 in priemfactoren.", accept: ["2²×3×5", "2^2×3×5", "2*2*3*5", "2×2×3×5"] },
-  { id: "f1-16", prompt: "GGD(48, 18)", accept: ["6"] },
-  { id: "f1-17", prompt: "KGV(48, 18)", accept: ["144"] },
-  { id: "f1-18", prompt: "√144", accept: ["12"] },
-  { id: "f1-19", prompt: "2³ × 2⁴ (getal)", accept: ["128"] },
-  { id: "f1-20", prompt: "Tussen welke gehele getallen ligt √30? (5 en 6)", accept: ["5 en 6", "5,6"] },
-  { id: "f1-21", prompt: "Waarom is delen door 0 niet gedefinieerd? Kies.", type: "choice",
-    choices: [
-      "Omdat 0 oneven is",
-      "Omdat 0 × b altijd 0 is, en dus nooit gelijk kan zijn aan een a ≠ 0",
-      "Omdat nul geen cijfer is",
-      "Omdat rekenmachines het weigeren"
-    ],
-    accept: ["Omdat 0 × b altijd 0 is, en dus nooit gelijk kan zijn aan een a ≠ 0"] }
-];
