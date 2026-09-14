@@ -36,20 +36,8 @@ function prepCanvas(canvas) {
 function axes(ctx, w, h, world, opts) {
   const pad = 28;
   const xMin = world.xMin, xMax = world.xMax, yMin = world.yMin, yMax = world.yMax;
-  let sx, sy;
-  if (opts && opts.iso) {
-    const spanX = xMax - xMin, spanY = yMax - yMin;
-    const innerW = Math.max(1, w - 2 * pad);
-    const innerH = Math.max(1, h - 2 * pad);
-    const scale = Math.min(innerW / spanX, innerH / spanY);
-    const ox = pad + (innerW - spanX * scale) / 2;
-    const oy = pad + (innerH - spanY * scale) / 2;
-    sx = (x) => ox + (x - xMin) * scale;
-    sy = (y) => h - oy - (y - yMin) * scale;
-  } else {
-    sx = (x) => pad + (x - xMin) / (xMax - xMin) * (w - 2 * pad);
-    sy = (y) => h - pad - (y - yMin) / (yMax - yMin) * (h - 2 * pad);
-  }
+  const sx = (x) => pad + (x - xMin) / (xMax - xMin) * (w - 2 * pad);
+  const sy = (y) => h - pad - (y - yMin) / (yMax - yMin) * (h - 2 * pad);
   ctx.fillStyle = "#0d0b08";
   ctx.fillRect(0, 0, w, h);
   ctx.strokeStyle = "rgba(230,199,122,0.22)";
@@ -69,34 +57,113 @@ function axes(ctx, w, h, world, opts) {
   return { sx, sy, pad };
 }
 
-function mountNumberline(root, spec) {
-  const min = spec.min;
-  const max = spec.max;
-  const hint = spec.hint;
-  const start = spec.start;
-  root.innerHTML = widgetShell("Getallenlijn", hint,
+function mountNumberline(root) {
+  root.innerHTML = widgetShell("Getallenlijn", "Sleep om te zien waar een getal ligt.",
     `<canvas data-h="120"></canvas>
      <div class="widget-controls">
-       <label>Getal <input type="range" min="${min}" max="${max}" step="1" value="${start}" data-k="v"> <output>${start}</output></label>
+       <label>Getal <input type="range" min="-10" max="10" step="0.1" value="3" data-k="v"> <output>3</output></label>
      </div>`);
   const canvas = root.querySelector("canvas");
   const range = root.querySelector("[data-k=v]");
   const out = root.querySelector("output");
   const draw = () => {
-    const v = Math.round(Number(range.value));
-    range.value = String(v);
-    out.textContent = String(v);
+    const v = Number(range.value);
+    out.textContent = v;
     const { ctx, w, h } = prepCanvas(canvas);
-    const { sx, sy } = axes(ctx, w, h, { xMin: min, xMax: max, yMin: -1, yMax: 1 }, { noY: true });
+    const { sx, sy } = axes(ctx, w, h, { xMin: -10, xMax: 10, yMin: -1, yMax: 1 }, { noY: true });
     ctx.fillStyle = "#e6c77a";
     ctx.beginPath();
     ctx.arc(sx(v), sy(0), 7, 0, Math.PI * 2);
     ctx.fill();
     ctx.fillStyle = "#fff6df";
     ctx.font = "13px Cinzel, serif";
-    ctx.fillText(String(v), sx(v) - 8, sy(0) - 14);
+    ctx.fillText(String(v), sx(v) - 10, sy(0) - 14);
   };
   range.addEventListener("input", draw);
+  draw();
+}
+
+function mountNats(root) {
+  mountNumberline(root);
+  const range = root.querySelector("[data-k=v]");
+  range.min = "0";
+  range.max = "20";
+  range.step = "1";
+  range.value = "3";
+  range.dispatchEvent(new Event("input"));
+  root.querySelector(".widget header span").textContent = "Natuurlijke getallen: 0, 1, 2, …";
+}
+
+function mountInts(root) {
+  mountNumberline(root);
+  const range = root.querySelector("[data-k=v]");
+  range.min = "-10";
+  range.max = "10";
+  range.step = "1";
+  range.value = "3";
+  range.dispatchEvent(new Event("input"));
+  root.querySelector(".widget header span").textContent = "Gehele getallen: …, −2, −1, 0, 1, 2, …";
+}
+
+function mountGroups(root) {
+  root.innerHTML = widgetShell("Vermenigvuldigen als groepjes", "Kies hoeveel groepjes je hebt en hoeveel dingen er in elk groepje zitten.",
+    `<div class="groups-visual" aria-live="polite"></div>
+     <div class="widget-controls">
+       <label>groepjes <input type="range" min="1" max="8" step="1" value="4" data-k="groups"> <output data-o="groups">4</output></label>
+       <label>per groepje <input type="range" min="1" max="8" step="1" value="3" data-k="items"> <output data-o="items">3</output></label>
+     </div>
+     <p class="widget-readout"></p>`);
+
+  const visual = root.querySelector(".groups-visual");
+  const groupsEl = root.querySelector("[data-k=groups]");
+  const itemsEl = root.querySelector("[data-k=items]");
+  const note = root.querySelector(".widget-readout");
+
+  const draw = () => {
+    const groups = Number(groupsEl.value);
+    const items = Number(itemsEl.value);
+    root.querySelector("[data-o=groups]").textContent = String(groups);
+    root.querySelector("[data-o=items]").textContent = String(items);
+
+    visual.innerHTML = "";
+    visual.style.display = "grid";
+    visual.style.gridTemplateColumns = "repeat(auto-fit, minmax(150px, 1fr))";
+    visual.style.gap = "10px";
+    visual.style.margin = "14px 0";
+    visual.setAttribute("role", "img");
+    visual.setAttribute("aria-label", `${groups} groepjes van ${items} voorwerpen`);
+
+    for (let g = 0; g < groups; g++) {
+      const group = document.createElement("div");
+      group.className = "group-cluster";
+      group.style.display = "grid";
+      group.style.gridTemplateColumns = `repeat(${Math.min(items, 8)}, minmax(24px, 1fr))`;
+      group.style.gap = "8px";
+      group.style.padding = "8px 10px";
+      group.style.border = "1px solid rgba(230,199,122,0.28)";
+      group.style.borderRadius = "12px";
+      group.style.background = "rgba(230,199,122,0.06)";
+      group.setAttribute("aria-hidden", "true");
+      for (let i = 0; i < items; i++) {
+        const dot = document.createElement("span");
+        dot.className = "group-dot";
+        dot.style.width = "20px";
+        dot.style.height = "20px";
+        dot.style.borderRadius = "50%";
+        dot.style.background = "#e6c77a";
+        dot.style.boxShadow = "0 0 0 2px rgba(230,199,122,0.12)";
+        dot.style.justifySelf = "center";
+        group.appendChild(dot);
+      }
+      visual.appendChild(group);
+    }
+
+    const total = groups * items;
+    const addition = Array(groups).fill(items).join(" + ");
+    note.textContent = `${groups} groepjes van ${items} = ${addition} = ${total} · ${groups} × ${items} = ${total}`;
+  };
+
+  [groupsEl, itemsEl].forEach((el) => el.addEventListener("input", draw));
   draw();
 }
 
@@ -152,11 +219,7 @@ function mountTangent(root) {
     root.querySelector("[data-o=h]").textContent = h.toFixed(2);
     const sec = (f(x0 + h) - f(x0)) / h;
     const tan = 2 * x0;
-    let msg = "Maak h kleiner. Secant = " + sec.toFixed(2) + " · raaklijn f'(" + x0.toFixed(2) + ") = " + tan.toFixed(2);
-    if (h <= 0.15 && Math.abs(sec - tan) < 0.08) {
-      msg += " · Ontdekking ontgrendeld: de afgeleide is de limiet van de secanthelling.";
-    }
-    note.textContent = msg;
+    note.textContent = `secanthelling = ${sec.toFixed(2)} · raaklijn f'(${x0.toFixed(2)}) = ${tan.toFixed(2)}`;
     const { ctx, w, h: H } = prepCanvas(canvas);
     const world = { xMin: -3, xMax: 3, yMin: -1, yMax: 9 };
     const { sx, sy } = axes(ctx, w, H, world);
@@ -256,7 +319,7 @@ function mountVectors(root) {
     const vx = Number(els.vx.value), vy = Number(els.vy.value);
     keys.forEach((k) => { root.querySelector(`[data-o=${k}]`).textContent = Number(els[k].value); });
     const { ctx, w, h } = prepCanvas(canvas);
-    const { sx, sy } = axes(ctx, w, h, { xMin: -4, xMax: 4, yMin: -4, yMax: 4 }, { iso: true });
+    const { sx, sy } = axes(ctx, w, h, { xMin: -4, xMax: 4, yMin: -4, yMax: 4 });
     arrow(ctx, sx, sy, ux, uy, "#7dcea0");
     arrow(ctx, sx, sy, vx, vy, "#6ab0e0");
     arrow(ctx, sx, sy, ux + vx, uy + vy, "#e6c77a");
@@ -283,7 +346,7 @@ function mountComplex(root) {
     root.querySelector("[data-o=re]").textContent = re;
     root.querySelector("[data-o=im]").textContent = im;
     const { ctx, w, h } = prepCanvas(canvas);
-    const { sx, sy } = axes(ctx, w, h, { xMin: -4, xMax: 4, yMin: -4, yMax: 4 }, { iso: true });
+    const { sx, sy } = axes(ctx, w, h, { xMin: -4, xMax: 4, yMin: -4, yMax: 4 });
     const dot = (x, y, color, label) => {
       ctx.fillStyle = color;
       ctx.beginPath(); ctx.arc(sx(x), sy(y), 6, 0, Math.PI * 2); ctx.fill();
@@ -304,7 +367,7 @@ function mountComplex(root) {
 
 function mountUnitcircle(root) {
   root.innerHTML = widgetShell("Eenheidscirkel", "Draai de hoek. cos is de x-coördinaat, sin de y-coördinaat.",
-    `<canvas data-h="280"></canvas>
+    `<canvas data-h="240"></canvas>
      <div class="widget-controls">
        <label>α (°) <input type="range" min="0" max="360" step="1" value="45" data-k="deg"> <output data-o="deg">45</output></label>
      </div>
@@ -319,7 +382,7 @@ function mountUnitcircle(root) {
     root.querySelector("[data-o=deg]").textContent = String(deg);
     note.textContent = "cos(" + deg + "°) ≈ " + c.toFixed(2) + " · sin(" + deg + "°) ≈ " + s.toFixed(2);
     const { ctx, w, h } = prepCanvas(canvas);
-    const { sx, sy } = axes(ctx, w, h, { xMin: -1.4, xMax: 1.4, yMin: -1.4, yMax: 1.4 }, { iso: true });
+    const { sx, sy } = axes(ctx, w, h, { xMin: -1.4, xMax: 1.4, yMin: -1.4, yMax: 1.4 });
     ctx.strokeStyle = "#e6c77a";
     ctx.beginPath();
     ctx.arc(sx(0), sy(0), Math.abs(sx(1) - sx(0)), 0, Math.PI * 2);
@@ -375,31 +438,18 @@ function mountSine(root) {
   draw();
 }
 
-function mountNats(root) {
-  mountNumberline(root, {
-    min: 0, max: 20, start: 3,
-    hint: "Natuurlijke getallen: 0, 1, 2, … Geen minteken, geen komma."
-  });
-}
-
-function mountInts(root) {
-  mountNumberline(root, {
-    min: -10, max: 10, start: 3,
-    hint: "Gehele getallen: …, −2, −1, 0, 1, 2, … Stap 1, geen komma."
-  });
-}
-
 const WIDGET_BUILDERS = {
+  numberline: mountNumberline,
   nats: mountNats,
   ints: mountInts,
+  groups: mountGroups,
   plot: mountPlot,
   tangent: mountTangent,
   riemann: mountRiemann,
   vectors: mountVectors,
   complex: mountComplex,
   unitcircle: mountUnitcircle,
-  sine: mountSine,
-  groups: mountGroups
+  sine: mountSine
 };
 
 function mountWidgets(root, milestoneId) {
@@ -410,8 +460,21 @@ function mountWidgets(root, milestoneId) {
       const kind = slot.getAttribute("data-widget");
       (WIDGET_BUILDERS[kind] || (() => {}))(slot);
     });
-    return;
   }
+
+  if (milestoneId === "1.2" && !page.querySelector('[data-widget="groups"]')) {
+    const groupHeading = Array.from(page.querySelectorAll("h4")).find(
+      (heading) => heading.textContent.trim() === "Vermenigvuldigen als groepjes"
+    );
+    if (groupHeading) {
+      const slot = document.createElement("div");
+      slot.setAttribute("data-widget", "groups");
+      groupHeading.insertAdjacentElement("afterend", slot);
+      WIDGET_BUILDERS.groups(slot);
+    }
+  }
+
+  if (slots.length) return;
   const kinds = WIDGET_MAP[milestoneId] || [];
   if (!kinds.length || !root) return;
   const dock = document.createElement("div");
@@ -422,60 +485,4 @@ function mountWidgets(root, milestoneId) {
     dock.appendChild(box);
     (WIDGET_BUILDERS[kind] || (() => {}))(box);
   });
-}
-
-function mountGroups(root) {
-  root.innerHTML = widgetShell("Vermenigvuldigen als groepjes", "Kies hoeveel groepjes je hebt en hoeveel dingen er in elk groepje zitten.",
-    `<div class="groups-visual" aria-live="polite"></div>
-     <div class="widget-controls">
-       <label>groepjes <input type="range" min="1" max="8" step="1" value="4" data-k="groups"> <output data-o="groups">4</output></label>
-       <label>per groepje <input type="range" min="1" max="8" step="1" value="3" data-k="items"> <output data-o="items">3</output></label>
-     </div>
-     <p class="widget-readout"></p>`);
-  const visual = root.querySelector(".groups-visual");
-  const groupsEl = root.querySelector("[data-k=groups]");
-  const itemsEl = root.querySelector("[data-k=items]");
-  const note = root.querySelector(".widget-readout");
-  const draw = () => {
-    const groups = Number(groupsEl.value);
-    const items = Number(itemsEl.value);
-    root.querySelector("[data-o=groups]").textContent = String(groups);
-    root.querySelector("[data-o=items]").textContent = String(items);
-    visual.innerHTML = "";
-    visual.style.display = "grid";
-    visual.style.gridTemplateColumns = "repeat(auto-fit, minmax(150px, 1fr))";
-    visual.style.gap = "10px";
-    visual.style.margin = "14px 0";
-    visual.setAttribute("role", "img");
-    visual.setAttribute("aria-label", `${groups} groepjes van ${items} voorwerpen`);
-    for (let g = 0; g < groups; g++) {
-      const group = document.createElement("div");
-      group.className = "group-cluster";
-      group.style.display = "grid";
-      group.style.gridTemplateColumns = `repeat(${Math.min(items, 8)}, minmax(24px, 1fr))`;
-      group.style.gap = "8px";
-      group.style.padding = "8px 10px";
-      group.style.border = "1px solid rgba(230,199,122,0.28)";
-      group.style.borderRadius = "12px";
-      group.style.background = "rgba(230,199,122,0.06)";
-      group.setAttribute("aria-hidden", "true");
-      for (let i = 0; i < items; i++) {
-        const dot = document.createElement("span");
-        dot.className = "group-dot";
-        dot.style.width = "20px";
-        dot.style.height = "20px";
-        dot.style.borderRadius = "50%";
-        dot.style.background = "#e6c77a";
-        dot.style.boxShadow = "0 0 0 2px rgba(230,199,122,0.12)";
-        dot.style.justifySelf = "center";
-        group.appendChild(dot);
-      }
-      visual.appendChild(group);
-    }
-    const total = groups * items;
-    const addition = Array(groups).fill(items).join(" + ");
-    note.textContent = `${groups} groepjes van ${items} = ${addition} = ${total} · ${groups} × ${items} = ${total}`;
-  };
-  [groupsEl, itemsEl].forEach((el) => el.addEventListener("input", draw));
-  draw();
 }
