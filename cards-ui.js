@@ -75,7 +75,7 @@ function renderPhase(phaseId) {
     const topic = place ? m.title : "";
     return (
       '<article class="stone ' + st + '">' +
-      '<img class="stone-art" src="assets/mile-' + art + '.svg" alt="">' +
+      '<img class="stone-art" src="assets/mile-' + art + '.svg?v=2" alt="">' +
       "<h3>" + head + "</h3>" +
       (topic ? '<p class="stone-topic">' + topic + "</p>" : "") +
       "<p>" + m.goal + "</p>" +
