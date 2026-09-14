@@ -72,7 +72,7 @@ function renderPhase(phaseId) {
     const testIco = done ? "assets/medaille.png" : "assets/toets.png";
     return (
       '<article class="stone ' + st + '">' +
-      '<img class="stone-art" src="assets/mile-' + art + '.png?v=1" alt="">' +
+      '<img class="stone-art" src="assets/mile-' + art + '.png?v=2" alt="">' +
       '<div class="stone-actions">' +
       '<button class="btn lesstof-btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/les">' +
       '<img class="book-ico" src="assets/' + (leerstofCollected(m.id) ? "book-open.png" : "book-closed.png") + '" alt=""> Lesstof</button>' +
