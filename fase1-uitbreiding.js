@@ -14,63 +14,246 @@
       goal: "Begrijpen waarom negatieve getallen nodig zijn en leren rekenen met ℤ.",
       theory: /* html */`
         <h2>Negatieve en gehele getallen</h2>
-        <p><strong>Doel:</strong> ontdekken waarom natuurlijke getallen niet altijd voldoende zijn, kennismaken met verzamelingen en leren rekenen met negatieve en positieve gehele getallen.</p>
+        <p><strong>Doel:</strong></p>
 
+        <ul>
+          <li>kennismaken met verzamelingen;</li>
+          <li>ontdekken waarom natuurlijke getallen niet altijd voldoende zijn;</li>
+          <li>leren rekenen met negatieve en positieve gehele getallen.</li>
+        </ul>
+        
         <h3>1. Verzameling en element</h3>
         <p>Een <strong>verzameling</strong> is een groep objecten die we als één geheel bekijken.</p>
-        <p class="formula">{0, 1, 2, 3, 4}</p>
+        <p class="formula"> { 0, 1, 2, 3, 4 } </p>
         <p>De getallen in de verzameling noemen we <strong>elementen</strong>. Het symbool <strong>∈</strong> betekent “is een element van” en <strong>∉</strong> betekent “is geen element van”.</p>
-        <p class="formula">3 ∈ {0, 1, 2, 3, 4}</p>
-        <p class="formula">7 ∉ {0, 1, 2, 3, 4}</p>
+        <p>In de verzameling {0, 1, 2, 3, 4} zijn 0, 1, 2, 3 en 4 dus elementen.</p>
+        <div class="callout insight">
+        <strong>Belangrijk inzicht</strong>
+        <p>Een verzameling is een manier om een groep getallen of andere objecten
+        als één geheel te bekijken.</p>
+      </div>
+    <p>In de wiskunde gebruiken we een speciaal symbool om aan te geven dat iets
+    een element van een verzameling is:</p>
+
+    <p class="formula">3 ∈ {0, 1, 2, 3, 4}</p>
+    <p>We kunnen dus lezen:</p>
+
+    <p><strong>3 is een element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
+
+    <p>Voor een getal dat niet in de verzameling zit, gebruiken we
+    <strong>∉</strong>.</p>
+
+    <p class="formula">7 ∉ {0, 1, 2, 3, 4}</p>
+
+    <p>Dit betekent:</p>
+
+    <p><strong>7 is geen element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
+
 
         <h3>2. De natuurlijke getallen</h3>
-        <p>De natuurlijke getallen vormen de verzameling ℕ:</p>
-        <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
-        <p>Daarmee kunnen we tellen en ordenen. Maar bekijk:</p>
-        <p class="formula">3 − 5</p>
-        <p>Het antwoord ligt onder nul en behoort dus niet tot ℕ.</p>
+        <p>De verzameling van de natuurlijke getallen krijgt een naam:
+    <strong>ℕ</strong>.</p>
+
+    <p>We gebruiken ℕ voor alle natuurlijke getallen:</p>
+
+    <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
+
+    <p>De puntjes betekenen dat de reeks verdergaat.</p>
+
+    <p>Zo kunnen we bijvoorbeeld schrijven:</p>
+
+    <p class="formula">5 ∈ ℕ</p>
+
+    <p>Maar:</p>
+
+    <p class="formula">−3 ∉ ℕ</p>
+
+    <p>Een negatief getal behoort dus niet tot de verzameling van de natuurlijke getallen.</p>
+
+
 
         <h3>3. De getallenlijn wordt uitgebreid</h3>
-        <p>We breiden de getallenlijn uit naar links van nul. Zo ontstaan de negatieve getallen.</p>
-        <div data-widget="ints"></div>
-        <p>We krijgen:</p>
-        <p class="formula">..., −3, −2, −1, 0, 1, 2, 3, ...</p>
+        <p>Tot nu toe konden we met natuurlijke getallen heel wat problemen oplossen.
+      Maar er ontstaat een probleem wanneer we een kleiner getal van een groter
+      getal aftrekken.</p>      
+      
+      <p>Bijvoorbeeld:</p>
+
+      <p class="formula">3 − 5 = ?</p>
+
+      <p>Er bestaat geen natuurlijk getal dat het antwoord is.</p>
+
+      <p>We kunnen vanaf 3 drie stappen teruggaan:</p>
+
+      <p class="formula">3 − 3 = 0</p>
+
+      <p>Maar daarna moeten we nog twee stappen verder terug.</p>
+
+      <p>Daarom hebben we nieuwe getallen nodig die links van nul op de getallenlijn
+      staan.</p>
+
+      <div data-widget="ints"></div>
+
+      <div class="callout insight">
+        <strong>Waarom breiden we het getallensysteem uit?</strong>
+        <p>Niet omdat de bestaande getallen "fout" zijn, maar omdat ze niet meer
+        voldoende zijn om alle problemen op te lossen.</p>
+      </div>
+
 
         <h3>4. De gehele getallen</h3>
-        <p>De natuurlijke getallen samen met hun negatieve tegenhangers vormen de <strong>gehele getallen</strong> ℤ.</p>
-        <p class="formula">ℤ = {..., −3, −2, −1, 0, 1, 2, 3, ...}</p>
-        <p>Nu heeft bijvoorbeeld <strong>3 − 5</strong> wel een antwoord:</p>
-        <p class="formula">3 − 5 = −2</p>
+        <p>We voegen de negatieve gehele getallen toe aan de verzameling van de natuurlijke getallen ℕ:</p>
+
+    <p class="formula">..., −3, −2, −1, 0, 1, 2, 3, ...</p>
+
+    <p>Hierdoor krijgen we een nieuwe, grotere verzameling.</p>
+    <p>Deze nieuwe verzameling noemen we de verzameling van de <strong>gehele getallen</strong>. We gebruiken hiervoor het symbool
+    <strong>ℤ</strong>.</p>
+
+    <p class="formula">ℤ = {..., −3, −2, −1, 0, 1, 2, 3, ...}</p>
+
+    <p>Nu kunnen we bijvoorbeeld schrijven:</p>
+
+    <p class="formula">−2 ∈ ℤ</p>
+
+    <p>En de eerdere berekening krijgt een oplossing:</p>
+
+    <p class="formula">3 − 5 = −2</p>
+
+    <p>De gehele getallen lossen dus een probleem op dat met alleen natuurlijke
+    getallen niet opgelost kon worden.</p>
+
+
 
         <h3>5. Deelverzamelingen</h3>
-        <p>Elk natuurlijk getal is ook een geheel getal. Daarom is ℕ een <strong>deelverzameling</strong> van ℤ.</p>
+        <p>Elk natuurlijk getal uit de verzameling ℕ is dus ook een element van de verzameling ℤ. Daarom is ℕ een <strong>deelverzameling</strong> van ℤ.</p>
         <p class="formula">ℕ ⊂ ℤ</p>
-        <p><strong>∈</strong> gebruik je voor een element en een verzameling. <strong>⊂</strong> gebruik je voor twee verzamelingen.</p>
+        <p>Het symbool <strong>⊂</strong> betekent
+    <strong>"is een deelverzameling van"</strong>.</p>
 
-        <h3>6. Tegenovergestelde getallen</h3>
-        <p>5 en −5 liggen even ver van nul, maar aan verschillende kanten.</p>
-        <p class="formula">5 ↔ −5</p>
-        <p>Het tegenovergestelde van 0 is 0.</p>
+    <p>We kunnen daarom schrijven:</p>
+
+    <p class="formula">ℕ ⊂ ℤ</p>
+
+    <p>Dit lezen we als:</p>
+
+    <p><strong>De natuurlijke getallen zijn een deelverzameling van de gehele
+    getallen.</strong></p>
+
+    <div class="callout">
+      <strong>Let op het verschil</strong>
+      <p>Het symbool <strong>∈</strong> gebruik je wanneer je een
+      <strong>element (getal) met een verzameling</strong> vergelijkt.</p>
+
+      <p class="formula">3 ∈ ℕ</p>
+
+      <p>Het symbool <strong>⊂</strong> gebruik je wanneer je
+      <strong>twee verzamelingen met elkaar</strong> vergelijkt.</p>
+
+      <p class="formula">ℕ ⊂ ℤ</p>
+    </div>
+
+
+
+        <h3>7. Tegenovergestelde getallen</h3>
+
+<p>Op de getallenlijn heeft elk positief getal een getal op precies dezelfde
+afstand van nul aan de andere kant.</p>
+
+<p>Het tegenovergestelde van 5 is −5.</p>
+
+<p>Het tegenovergestelde van −3 is 3.</p>
+
+<p>Het getal 0 is zijn eigen tegenovergestelde.</p>
+
+<p>We kunnen dit voorstellen als:</p>
+
+<p class="formula">5 ↔ −5</p>
+
+<p>en</p>
+
+<p class="formula">3 ↔ −3</p>
+
+<div class="callout insight">
+  <strong>Inzicht</strong>
+  <p>Tegengestelde getallen liggen even ver van nul, maar aan tegenovergestelde
+  kanten van de getallenlijn.</p>
+</div>
 
         <h3>7. Absolute waarde</h3>
-        <p>De <strong>absolute waarde</strong> vertelt hoe ver een getal van nul ligt.</p>
-        <p class="formula">|5| = 5 &nbsp;&nbsp; |−5| = 5 &nbsp;&nbsp; |0| = 0</p>
+        <p>De <strong>absolute waarde</strong> van een getal vertelt hoe ver dat getal
+van nul ligt.</p>
+
+<p>De absolute waarde van 5 is 5:</p>
+
+<p class="formula">|5| = 5</p>
+
+<p>De absolute waarde van −5 is ook 5:</p>
+
+<p class="formula">|−5| = 5</p>
+
+<p>De verticale streepjes <strong>| |</strong> betekenen hier:
+"de absolute waarde van".</p>
+
+<p>De absolute waarde is dus altijd positief of nul.</p>
+
+
 
         <h3>8. Optellen en aftrekken met gehele getallen</h3>
-        <p>Op de getallenlijn betekent optellen met een positief getal naar rechts bewegen en met een negatief getal naar links.</p>
-        <p class="formula">3 + (−5) = −2</p>
-        <p>Aftrekken kun je zien als optellen van het tegenovergestelde:</p>
-        <p class="formula">3 − 5 = 3 + (−5)</p>
+        <p>De getallenlijn geeft ons een eenvoudige manier om met negatieve getallen
+te rekenen.</p>
 
-        <h3>9. Vermenigvuldigen en delen met tekens</h3>
-        <p>Bij vermenigvuldigen en delen geldt:</p>
-        <p class="formula">+ × + = + &nbsp;&nbsp; + × − = −</p>
-        <p class="formula">− × + = − &nbsp;&nbsp; − × − = +</p>
-        <p>Voor delen gelden dezelfde tekenregels.</p>
-        <p class="formula">(−4) × (−3) = 12</p>
+<p>Bij optellen beweeg je naar rechts als je een positief getal toevoegt en
+naar links als je een negatief getal toevoegt.</p>
 
-        <div class="callout insight"><strong>De eerste grote uitbreiding</strong><p>ℕ was niet fout. ℕ was alleen te klein voor aftrekkingen zoals 3 − 5. Door ℤ toe te voegen kunnen we meer problemen oplossen.</p></div>
-      `,
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 + (−5) = −2</p>
+
+<p>Je begint bij 3 en beweegt vijf plaatsen naar links.</p>
+
+<p>Aftrekken kunnen we bekijken als het toevoegen van het tegenovergestelde.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 − 5 = 3 + (−5) = −2</p>
+
+<div class="callout insight">
+  <strong>Belangrijk</strong>
+  <p>Aftrekken van een getal komt overeen met optellen van het
+  tegenovergestelde.</p>
+</div>
+
+
+
+<h3>9. Vermenigvuldigen en delen met tekens</h3>
+        <p>Ook bij vermenigvuldigen en delen krijgen we regels voor positieve en
+negatieve getallen.</p>
+
+<p>Bij vermenigvuldigen geldt:</p>
+
+<ul>
+          <li>positief × positief = positief</li>
+          <li>positief × negatief = negatief</li>
+          <li>negatief × positief = negatief</li>
+          <li>negatief × negatief = positief</li>
+        </ul>
+
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">2 × 5 = 10</p>
+<p class="formula">2 × (-5) = -10</p>
+<p class="formula">-2 × 5 = -10</p>
+<p class="formula">-2 × -5 = 10</p>
+
+<p><strong>Bij delen gelden dezelfde regels voor de tekens als bij vermenigvuldigen.</strong></p>
+
+<p class="formula">12 ÷ 3 = 4</p>
+<p class="formula">12 ÷ (-3) = -4</p>
+<p class="formula">(−12) ÷ 3 = −4</p>
+<p class="formula">(−12) ÷ (-3) = 4</p>      
+`,
       practice: [],
       exam: []
     },
@@ -80,7 +263,12 @@
       goal: "Breuken begrijpen als getallen en leren rekenen met ℚ.",
       theory: /* html */`
         <h2>Breuken en rationale getallen</h2>
-        <p><strong>Doel:</strong> ontdekken waarom gehele getallen niet genoeg zijn voor elke deling en leren breuken voorstellen, vergelijken en bewerken.</p>
+        <p><strong>Doel:</strong></p>
+
+        <ul>
+          <li>ontdekken waarom gehele getallen niet genoeg zijn voor elke deling;</li>
+          <li>leren breuken voorstellen, vergelijken en bewerken.;</li>
+        </ul>
 
         <h3>1. Waarom hebben we breuken nodig?</h3>
         <p>Bekijk de deling:</p>

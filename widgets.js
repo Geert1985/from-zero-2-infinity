@@ -55,7 +55,7 @@ function mountNumberline(root, options = {}) {
   } = options;
 
   root.innerHTML = widgetShell(
-    "Getallenlijn",
+    "Getallenlijn: ",
     "Sleep om te zien waar een getal ligt.",
     `<canvas data-h="140"></canvas>
      <div class="widget-controls">
