@@ -1,7 +1,7 @@
 const WIDGET_MAP = {
-  "1.1": ["numberline"],
+  "1.1": ["nats"],
   "1.2": ["groups"],
-  "1.3": ["numberline"],
+  "1.3": ["ints"],
   "2.3": ["plot"],
   "2.4": ["unitcircle", "sine"],
   "3.2": ["tangent"],
@@ -81,6 +81,28 @@ function mountNumberline(root) {
   };
   range.addEventListener("input", draw);
   draw();
+}
+
+function mountNats(root) {
+  mountNumberline(root);
+  const range = root.querySelector("[data-k=v]");
+  range.min = "0";
+  range.max = "20";
+  range.step = "1";
+  range.value = "3";
+  range.dispatchEvent(new Event("input"));
+  root.querySelector(".widget header span").textContent = "Natuurlijke getallen: 0, 1, 2, …";
+}
+
+function mountInts(root) {
+  mountNumberline(root);
+  const range = root.querySelector("[data-k=v]");
+  range.min = "-10";
+  range.max = "10";
+  range.step = "1";
+  range.value = "3";
+  range.dispatchEvent(new Event("input"));
+  root.querySelector(".widget header span").textContent = "Gehele getallen: …, −2, −1, 0, 1, 2, …";
 }
 
 function mountGroups(root) {
@@ -412,6 +434,8 @@ function mountSine(root) {
 
 const WIDGET_BUILDERS = {
   numberline: mountNumberline,
+  nats: mountNats,
+  ints: mountInts,
   groups: mountGroups,
   plot: mountPlot,
   tangent: mountTangent,
