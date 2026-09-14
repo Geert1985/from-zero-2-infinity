@@ -629,7 +629,7 @@ negatieve getallen.</p>
     <p class="formula">
       \frac{6}{8}
       =
-      \frac{6 \div 2}{8 \div 2}
+      \frac{6 :  2}{8 : 2}
       =
       \frac{3}{4}
     </p>
@@ -680,7 +680,7 @@ negatieve getallen.</p>
       <p class="formula">
       \frac{18}{24}
       =
-      \frac{18 \div 6}{24 \div 6}
+      \frac{18 : 6}{24 : 6}
       =
       \frac{3}{4}
     </p>
@@ -767,7 +767,7 @@ negatieve getallen.</p>
 
     <p class="formula">
       \frac{2}{3}
-      \qquad\text{en}\qquad
+      en
       \frac{3}{5}
     </p>
 
@@ -995,7 +995,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      6 \div 2 = 3
+      6 : 2 = 3
     </p>
 
     <p>
@@ -1009,7 +1009,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{3}{4} \div \frac{1}{2}
+      \frac{3}{4} : \frac{1}{2}
     </p>
 
     <p>
@@ -1023,7 +1023,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{3}{4} \div \frac{1}{2}
+      \frac{3}{4} : \frac{1}{2}
       =
       \frac{3}{2}
     </p>
@@ -1051,7 +1051,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{a}{b} \div \frac{c}{d}
+      \frac{a}{b} : \frac{c}{d}
       =
       \frac{a}{b} \times \frac{d}{c}
     </p>
@@ -1061,7 +1061,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3} \div \frac{4}{5}
+      \frac{2}{3} : \frac{4}{5}
       =
       \frac{2}{3} \times \frac{5}{4}
       =
