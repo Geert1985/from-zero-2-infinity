@@ -828,6 +828,7 @@ const MILESTONES_1 = [
   <li><strong>4</strong> gelijke groepjes;</li>
   <li>in elk groepje zitten <strong>3</strong> dingen.</li>
 </ul>
+<div data-widget="groups"></div>
 
 <p>Dus:</p>
 

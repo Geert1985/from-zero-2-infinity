@@ -248,7 +248,7 @@ function mountGroups(root) {
 
     const total = groups * items;
     const addition = Array(groups).fill(items).join(" + ");
-    note.textContent = `${groups} groepjes van ${items} = ${addition} = ${total} · ${groups} × ${items} = ${total}`;
+    note.textContent = `${groups} groepjes van ${items} = ${addition} = ${groups} × ${items} = ${total}`;
   };
 
   [groupsEl, itemsEl].forEach((el) => el.addEventListener("input", draw));
