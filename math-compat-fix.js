@@ -19,7 +19,7 @@
     // Herstel \\times: \\t wordt in JavaScript een tab, gevolgd door 'imes'.
     s = s.replace(/\t\s*imes/g, "\\times");
 
-    // Herstel \\neq: \\n wordt in JavaScript een newline, gevolgd door 'eq'.
+    // Herstel \\neq: \\n    // wordt in JavaScript een newline, gevolgd door 'eq'.
     s = s.replace(/\n\s*eq/g, "\\neq");
 
     // Herstel \\qquad: dit commando verliest in een template literal de
