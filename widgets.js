@@ -57,52 +57,140 @@ function axes(ctx, w, h, world, opts) {
   return { sx, sy, pad };
 }
 
-function mountNumberline(root) {
-  root.innerHTML = widgetShell("Getallenlijn", "Sleep om te zien waar een getal ligt.",
-    `<canvas data-h="120"></canvas>
+function mountNumberline(root, options = {}) {
+  const {
+    min = 0,
+    max = 20,
+    step = 1,
+    value = 3
+  } = options;
+
+  root.innerHTML = widgetShell(
+    "Getallenlijn",
+    "Sleep om te zien waar een getal ligt.",
+    `<canvas data-h="140"></canvas>
      <div class="widget-controls">
-       <label>Getal <input type="range" min="-10" max="10" step="0.1" value="3" data-k="v"> <output>3</output></label>
-     </div>`);
+       <label>
+         Getal
+         <input
+           type="range"
+           min="${min}"
+           max="${max}"
+           step="${step}"
+           value="${value}"
+           data-k="v"
+         >
+         <output>${value}</output>
+       </label>
+     </div>`
+  );
+
   const canvas = root.querySelector("canvas");
   const range = root.querySelector("[data-k=v]");
   const out = root.querySelector("output");
+
   const draw = () => {
     const v = Number(range.value);
     out.textContent = v;
+
     const { ctx, w, h } = prepCanvas(canvas);
-    const { sx, sy } = axes(ctx, w, h, { xMin: -10, xMax: 10, yMin: -1, yMax: 1 }, { noY: true });
+
+    // Alleen een horizontale getallenlijn.
+    const pad = 32;
+    const y = h / 2;
+
+    const sx = (x) =>
+      pad + (x - min) / (max - min) * (w - 2 * pad);
+
+    // Achtergrond
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+
+    // Hoofdas
+    ctx.strokeStyle = "rgba(230,199,122,0.75)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(pad, y);
+    ctx.lineTo(w - pad, y);
+    ctx.stroke();
+
+    // Pijlen aan beide kanten
+    ctx.fillStyle = "rgba(230,199,122,0.9)";
+
+    ctx.beginPath();
+    ctx.moveTo(pad - 2, y);
+    ctx.lineTo(pad + 8, y - 5);
+    ctx.lineTo(pad + 8, y + 5);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(w - pad + 2, y);
+    ctx.lineTo(w - pad - 8, y - 5);
+    ctx.lineTo(w - pad - 8, y + 5);
+    ctx.closePath();
+    ctx.fill();
+
+    // Verdeling en getallen
+    ctx.font = "11px 'Source Sans 3', sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+
+    for (let x = min; x <= max; x += step) {
+      const X = sx(x);
+
+      // Zorg dat afrondingsfouten geen vreemde laatste tick geven.
+      if (X < pad || X > w - pad) continue;
+
+      // Tickmark
+      ctx.strokeStyle = "rgba(230,199,122,0.75)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(X, y - 7);
+      ctx.lineTo(X, y + 7);
+      ctx.stroke();
+
+      // Getal onder de as
+      ctx.fillStyle = "#cbb98a";
+      ctx.fillText(String(x), X, y + 11);
+    }
+
+    // Huidige waarde
+    const X = sx(v);
+
     ctx.fillStyle = "#e6c77a";
     ctx.beginPath();
-    ctx.arc(sx(v), sy(0), 7, 0, Math.PI * 2);
+    ctx.arc(X, y, 7, 0, Math.PI * 2);
     ctx.fill();
+
     ctx.fillStyle = "#fff6df";
     ctx.font = "13px Cinzel, serif";
-    ctx.fillText(String(v), sx(v) - 10, sy(0) - 14);
+    ctx.textBaseline = "bottom";
+    ctx.fillText(String(v), X, y - 12);
   };
+
   range.addEventListener("input", draw);
   draw();
 }
 
+//instellingen voor getallenlijn positieve natuurlijke getallen
 function mountNats(root) {
-  mountNumberline(root);
-  const range = root.querySelector("[data-k=v]");
-  range.min = "0";
-  range.max = "20";
-  range.step = "1";
-  range.value = "3";
-  range.dispatchEvent(new Event("input"));
-  root.querySelector(".widget header span").textContent = "Natuurlijke getallen: 0, 1, 2, …";
+  mountNumberline(root, {
+    min: 0,
+    max: 20,
+    step: 1,
+    value: 3
+  });
 }
 
+//instellingen getallenlijn voor negatieve en positieve getallen
 function mountInts(root) {
-  mountNumberline(root);
-  const range = root.querySelector("[data-k=v]");
-  range.min = "-10";
-  range.max = "10";
-  range.step = "1";
-  range.value = "3";
-  range.dispatchEvent(new Event("input"));
-  root.querySelector(".widget header span").textContent = "Gehele getallen: …, −2, −1, 0, 1, 2, …";
+  mountNumberline(root, {
+    min: -10,
+    max: 10,
+    step: 1,
+    value: 3
+  });
 }
 
 function mountGroups(root) {
