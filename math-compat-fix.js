@@ -1,8 +1,9 @@
 /* Compatibiliteitslaag voor LaTeX-formules in JavaScript template strings.
  *
- * In JavaScript wordt een enkele \\f geïnterpreteerd als form-feed.
- * Daardoor kan bijvoorbeeld \\frac in een template literal als "rac" in
- * de uiteindelijke tekst terechtkomen. Deze laag herstelt dat vóór KaTeX.
+ * JavaScript behandelt sommige backslash-combinaties in template literals
+ * als escape sequences. Daardoor kunnen LaTeX-commando's zoals \frac en
+ * \qquad beschadigd in de DOM terechtkomen voordat KaTeX ze verwerkt.
+ * Deze laag herstelt de bekende vormen vóór het typesetten.
  */
 (function () {
   if (typeof unicodeToTex !== "function") return;
@@ -12,9 +13,13 @@
   window.unicodeToTex = function (raw) {
     let s = String(raw ?? "");
 
-    // Herstel een per ongeluk als control character geïnterpreteerde \\frac.
-    // Dit vangt vooral de veelvoorkomende vorm: form-feed + "rac".
-    s = s.replace(/\f\s*rac/g, "\\\\frac");
+    // Herstel een per ongeluk als control character geïnterpreteerde \frac.
+    // In een JS template literal wordt \f namelijk een form-feed character.
+    s = s.replace(/\f\s*rac/g, "\\frac");
+
+    // \q is geen geldige JavaScript escape en kan daardoor als 'q' eindigen.
+    // Herstel de meest gebruikte LaTeX spacing-opdracht uit formules.
+    s = s.replace(/(^|[^\\])qquad\b/g, "$1\\qquad");
 
     return originalUnicodeToTex(s);
   };
