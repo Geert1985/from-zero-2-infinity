@@ -1885,20 +1885,20 @@ negatieve getallen.</p>
       <strong>één helft</strong>.
     </p>
 
-    <p class="formula">1/2</p>
+    <p class="formula">\frac{1}{2}</p>
 
     <p>
       Verdelen we hetzelfde geheel in 3 gelijke delen, dan is elk deel
       <strong>één derde</strong>.
     </p>
 
-    <p class="formula">1/3</p>
+    <p class="formula">\frac{1}{3}</p>
 
     <p>
       En bij 4 gelijke delen is elk deel <strong>één vierde</strong>.
     </p>
 
-    <p class="formula">1/4</p>
+    <p class="formula">\frac{1}{4}</p>
 
     <div data-widget="fractionWhole"></div>
 
@@ -1913,7 +1913,7 @@ negatieve getallen.</p>
       het geheel.
     </p>
 
-    <p class="formula">3/4</p>
+    <p class="formula">\frac{3}{4}</p>
 
     <p>
       De betekenis daarvan is eenvoudig:
@@ -1952,13 +1952,13 @@ negatieve getallen.</p>
       delen wordt verdeeld.
     </p>
 
-    <p class="formula">1/2 &gt; 1/3</p>
+    <p class="formula">\frac{1}{2} &gt; \frac{1}{3}</p>
 
     <p>
       En een derde is groter dan een vierde:
     </p>
 
-    <p class="formula">1/3 &gt; 1/4</p>
+    <p class="formula">\frac{1}{3} &gt; \frac{1}{4}</p>
 
     <p>
       Hoe meer gelijke stukken we van hetzelfde geheel maken,
@@ -2355,8 +2355,8 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3}
-      en
+      \frac{2}{3}\\
+      en\\
       \frac{3}{5}
     </p>
 
@@ -2365,9 +2365,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3} = \frac{10}{15}
-      \qquad
-      \frac{3}{5} = \frac{9}{15}
+      \frac{2}{3} = \frac{10}{15}\\ en\\ \frac{3}{5} = \frac{9}{15}
     </p>
 
     <p>
@@ -2679,9 +2677,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{7}{4}
-      =
-      1 + \frac{3}{4}
+      \frac{7}{4} = \frac{4}{4} + \frac{3}{4} = 1 + \frac{3}{4}
     </p>
 
     <p>
@@ -2704,7 +2700,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      7 \div 4 = 1 \text{ rest } 3
+    \frac{7}{4} = 1\\ rest\\ 3
     </p>
 
     <p>
