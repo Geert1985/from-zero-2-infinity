@@ -3021,34 +3021,7 @@ negatieve getallen.</p>
         <li>Een tweede procentuele verandering werkt op de nieuwe waarde.</li>
         <li>Procentpunten zijn niet hetzelfde als een procentuele verandering.</li>
       </ul>
-    `,
-    practice: [
-      { id: "p15-1", question: "Schrijf 0,625 als een vereenvoudigde breuk.", answer: ["5/8"] },
-      { id: "p15-2", question: "Schrijf 2,35 als een vereenvoudigde breuk.", answer: ["47/20"] },
-      { id: "p15-3", question: "Schrijf 7/8 als decimaal.", answer: ["0,875", "0.875"] },
-      { id: "p15-4", question: "Schrijf 3/20 als percentage.", answer: ["15%", "15"] },
-      { id: "p15-5", question: "Welke is groter: 0,099 of 0,1?", answer: ["0,1", "0.1"] },
-      { id: "p15-6", question: "Bereken: 12,75 + 8,6.", answer: ["21,35", "21.35"] },
-      { id: "p15-7", question: "Bereken: 3,5 × 0,24.", answer: ["0,84", "0.84"] },
-      { id: "p15-8", question: "Bereken: 4,8 ÷ 0,6.", answer: ["8"] },
-      { id: "p15-9", question: "Schrijf 0,875 als breuk én als percentage.", answer: ["7/8 en 87,5%", "7/8; 87,5%", "7/8 = 87,5%"] },
-      { id: "p15-10", question: "Bereken 17,5% van 240.", answer: ["42"] },
-      { id: "p15-11", question: "42 is 30% van welk getal?", answer: ["140"] },
-      { id: "p15-12", question: "18 van de 24 leerlingen zijn geslaagd. Welk percentage is dat?", answer: ["75%", "75"] },
-      { id: "p15-13", question: "Een prijs stijgt van €80 naar €100. Met hoeveel procent stijgt de prijs?", answer: ["25%", "25"] },
-      { id: "p15-14", question: "Een bedrag van €250 daalt met 18%. Wat is het nieuwe bedrag?", answer: ["205", "€205"] },
-      { id: "p15-15", question: "€100 stijgt met 20% en daalt daarna met 20%. Wat is het eindbedrag?", answer: ["€96", "96"] }
-    ],
-    exam: [
-      { id: "e15-1", question: "Schrijf 2,375 als een vereenvoudigde breuk.", answer: ["19/8"] },
-      { id: "e15-2", question: "Schrijf 7/16 als decimaal en percentage.", answer: ["0,4375 en 43,75%", "0.4375 en 43,75%", "0,4375 = 43,75%"] },
-      { id: "e15-3", question: "Bereken: 2,4 × 0,35.", answer: ["0,84", "0.84"] },
-      { id: "e15-4", question: "Bereken 12,5% van 360.", answer: ["45"] },
-      { id: "e15-5", question: "42 is 35% van welk geheel?", answer: ["120"] },
-      { id: "e15-6", question: "Een prijs stijgt van €120 naar €150. Wat is de procentuele stijging?", answer: ["25%", "25"] },
-      { id: "e15-7", question: "Een bedrag van €200 daalt met 15%. Wat is het nieuwe bedrag?", answer: ["170", "€170"] },
-      { id: "e15-8", question: "Een score stijgt van 40% naar 50%. Is dat een stijging van 10% of 10 procentpunten? Geef ook de relatieve procentuele stijging.", answer: ["10 procentpunten; 25%", "10 procentpunt; 25%", "10 procentpunten en 25%"] }
-    ]
+    `
   }
 ,
   {
@@ -3332,34 +3305,7 @@ negatieve getallen.</p>
         <li>Een verhoudingstabel helpt om evenredige hoeveelheden te berekenen.</li>
         <li>Bij schaalmodellen en recepten moet dezelfde factor op alle bijbehorende hoeveelheden worden toegepast.</li>
       </ul>
-    `,
-    practice: [
-      { id: "p16-1", question: "Een mand bevat 4 rode en 6 blauwe knikkers. Wat is de verhouding rood : blauw in de eenvoudigste vorm?", answer: ["2:3", "2 : 3"] },
-      { id: "p16-2", question: "Maak de verhouding 3 : 5 gelijkwaardig door beide termen met 4 te vermenigvuldigen.", answer: ["12:20", "12 : 20"] },
-      { id: "p16-3", question: "Vereenvoudig de verhouding 24 : 36.", answer: ["2:3", "2 : 3"] },
-      { id: "p16-4", question: "Welke verhouding is groter: 3 : 5 of 4 : 7?", answer: ["3:5", "3 : 5"] },
-      { id: "p16-5", question: "In een groep is de verhouding meisjes : jongens = 2 : 3. Er zijn 25 leerlingen. Hoeveel zijn er meisjes?", answer: ["10"] },
-      { id: "p16-6", question: "3 broodjes kosten €7,50. Wat kosten 8 broodjes als de prijs recht evenredig is?", answer: ["20", "€20", "€20,00"] },
-      { id: "p16-7", question: "Een kaart heeft schaal 1 : 200. Een afstand op de kaart is 6 cm. Hoe groot is de werkelijke afstand in meter?", answer: ["12", "12 m", "12 meter"] },
-      { id: "p16-8", question: "Een recept voor 4 personen gebruikt 300 g bloem. Hoeveel bloem heb je nodig voor 10 personen?", answer: ["750", "750 g", "750 gram"] },
-      { id: "p16-9", question: "De verhouding rood : groen : blauw is 2 : 3 : 5. Hoeveel groene onderdelen zijn er als het totaal 40 onderdelen is?", answer: ["12"] },
-      { id: "p16-10", question: "Een fietsrit van 30 km duurt 2 uur bij constante snelheid. Hoe ver rijd je in 5 uur?", answer: ["75", "75 km"] },
-      { id: "p16-11", question: "Is het verband recht evenredig? Bij 2 stuks kost iets €8, bij 4 stuks €16 en bij 6 stuks €24.", answer: ["ja", "Ja"] },
-      { id: "p16-12", question: "Is het verband recht evenredig? Bij 1 artikel betaal je €7, bij 2 artikelen €9 en bij 3 artikelen €11.", answer: ["nee", "Nee"] },
-      { id: "p16-13", question: "5 kg appels kost €12. Wat kost 8 kg als de prijs recht evenredig is?", answer: ["19,20", "€19,20", "19.20"] },
-      { id: "p16-14", question: "Een verfverhouding is geel : rood : wit = 2 : 1 : 3. Hoeveel liter geel heb je nodig voor 18 liter verf in totaal?", answer: ["6", "6 liter"] },
-      { id: "p16-15", question: "De verhouding leerlingen met fiets : zonder fiets is 3 : 2. Welk percentage van de leerlingen heeft een fiets?", answer: ["60%", "60"] }
-    ],
-    exam: [
-      { id: "e16-1", question: "Vereenvoudig de verhouding 42 : 56.", answer: ["3:4", "3 : 4"] },
-      { id: "e16-2", question: "In een klas is de verhouding meisjes : jongens = 5 : 3. Er zijn 32 leerlingen. Hoeveel meisjes zijn er?", answer: ["20"] },
-      { id: "e16-3", question: "Welke verhouding is groter: 5 : 8 of 7 : 12?", answer: ["5:8", "5 : 8"] },
-      { id: "e16-4", question: "4 kg appels kost €9,60. Wat kosten 7,5 kg bij een recht evenredig verband?", answer: ["18", "€18", "€18,00"] },
-      { id: "e16-5", question: "Een plan heeft schaal 1 : 250. Een gang is op het plan 7,2 cm lang. Hoe lang is de gang in werkelijkheid, in meter?", answer: ["18", "18 m", "18 meter"] },
-      { id: "e16-6", question: "Een recept voor 6 personen gebruikt 450 g rijst. Hoeveel rijst is nodig voor 10 personen?", answer: ["750", "750 g", "750 gram"] },
-      { id: "e16-7", question: "De verhouding A : B : C = 2 : 3 : 5. Samen zijn er 80 eenheden. Hoeveel zijn er van B en welk percentage van het totaal is dat?", answer: ["24 en 30%", "24; 30%", "24 = 30%"] },
-      { id: "e16-8", question: "Een abonnement kost €5 vaste kosten plus €2 per maand per extra dienst. Is de totale prijs recht evenredig met het aantal diensten? Leg kort uit waarom wel of niet.", answer: ["nee", "Nee", "niet recht evenredig"] }
-    ]
+    `
   },
 
   {
@@ -3559,34 +3505,7 @@ negatieve getallen.</p>
         <li>Een priemgetal groter dan 1 heeft precies twee positieve delers: 1 en zichzelf.</li>
       </ul>
       <div class="callout insight"><strong>Het kernidee</strong><p>Delers vertellen <strong>waarmee je een getal zonder rest kunt delen</strong>. Veelvouden vertellen <strong>welke getallen je krijgt door een getal te vermenigvuldigen</strong>. Deelbaarheidsregels laten ons deze structuur herkennen zonder telkens de volledige deling uit te voeren.</p></div>
-    `,
-    practice: [
-      { id: "p17-1", question: "Welke van deze getallen zijn delers van 24: 2, 3, 5, 6, 8? Geef alle juiste getallen.", answer: ["2, 3, 6, 8", "2 3 6 8", "2;3;6;8"] },
-      { id: "p17-2", question: "Is 7 een deler van 42?", answer: ["ja", "Ja"] },
-      { id: "p17-3", question: "Geef alle positieve delers van 18.", answer: ["1,2,3,6,9,18", "1, 2, 3, 6, 9, 18"] },
-      { id: "p17-4", question: "Geef de eerste vijf positieve veelvouden van 6.", answer: ["6,12,18,24,30", "6, 12, 18, 24, 30"] },
-      { id: "p17-5", question: "Is 345 deelbaar door 5?", answer: ["ja", "Ja"] },
-      { id: "p17-6", question: "Is 738 deelbaar door 2?", answer: ["ja", "Ja"] },
-      { id: "p17-7", question: "Is 738 deelbaar door 3? Gebruik de cijfersom.", answer: ["ja", "Ja"] },
-      { id: "p17-8", question: "Is 1 236 deelbaar door 4?", answer: ["ja", "Ja"] },
-      { id: "p17-9", question: "Is 1 235 deelbaar door 3?", answer: ["nee", "Nee"] },
-      { id: "p17-10", question: "Is 462 deelbaar door 6?", answer: ["ja", "Ja"] },
-      { id: "p17-11", question: "Is 1 248 deelbaar door 12?", answer: ["ja", "Ja"] },
-      { id: "p17-12", question: "Is 29 een priemgetal?", answer: ["ja", "Ja"] },
-      { id: "p17-13", question: "Is 51 een priemgetal?", answer: ["nee", "Nee"] },
-      { id: "p17-14", question: "Welke getallen zijn priemgetallen: 21, 23, 27, 31? Geef alle juiste getallen.", answer: ["23,31", "23, 31", "23;31"] },
-      { id: "p17-15", question: "Vereenvoudig de breuk 36/48 met behulp van een gemeenschappelijke deler.", answer: ["3/4"] }
-    ],
-    exam: [
-      { id: "e17-1", question: "Geef alle positieve delers van 36.", answer: ["1,2,3,4,6,9,12,18,36", "1, 2, 3, 4, 6, 9, 12, 18, 36"] },
-      { id: "e17-2", question: "Is 2 475 deelbaar door 3, 5 en 10? Geef aan door welke van de drie getallen het deelbaar is.", answer: ["3 en 5", "3,5", "3 en 5, niet 10"] },
-      { id: "e17-3", question: "Is 7 236 deelbaar door 4?", answer: ["ja", "Ja"] },
-      { id: "e17-4", question: "Is 5 832 deelbaar door 6?", answer: ["ja", "Ja"] },
-      { id: "e17-5", question: "Is 3 276 deelbaar door 12?", answer: ["ja", "Ja"] },
-      { id: "e17-6", question: "Welke van 37, 39, 41 en 51 zijn priemgetallen?", answer: ["37,41", "37, 41", "37 en 41"] },
-      { id: "e17-7", question: "Een getal heeft als positieve delers 1, 2, 4, 7, 14 en 28. Welk getal is dit?", answer: ["28"] },
-      { id: "e17-8", question: "Vereenvoudig 84/126 met de grootste gemeenschappelijke deler die je uit deze getallen kunt vinden.", answer: ["2/3"] }
-    ]
+    `
   }
 ,
   {
@@ -3968,34 +3887,7 @@ negatieve getallen.</p>
         <li>Het algoritme van Euclides is een efficiënte methode om de GGD te berekenen.</li>
       </ul>
       <div class="callout"><strong>Vooruitblik:</strong> met GGD en KGV hebben we de belangrijkste bouwstenen van de deelbaarheidsrekenkunde verzameld. In de volgende onderdelen kunnen we deze kennis combineren met machten en wortels.</div>
-    `,
-    practice: [
-      { id: "p19-1", question: "Bereken GGD(12, 18).", answer: ["6"] },
-      { id: "p19-2", question: "Bereken GGD(20, 30).", answer: ["10"] },
-      { id: "p19-3", question: "Bereken GGD(24, 36).", answer: ["12"] },
-      { id: "p19-4", question: "Bereken GGD(45, 60).", answer: ["15"] },
-      { id: "p19-5", question: "Bereken KGV(4, 6).", answer: ["12"] },
-      { id: "p19-6", question: "Bereken KGV(8, 12).", answer: ["24"] },
-      { id: "p19-7", question: "Bereken KGV(6, 8).", answer: ["24"] },
-      { id: "p19-8", question: "Bereken KGV(10, 15).", answer: ["30"] },
-      { id: "p19-9", question: "Bereken GGD(36, 60) met priemfactorisatie.", answer: ["12"] },
-      { id: "p19-10", question: "Bereken KGV(12, 18) met priemfactorisatie.", answer: ["36"] },
-      { id: "p19-11", question: "Je hebt 24 rode en 36 blauwe knikkers. Wat is het grootste aantal identieke pakketjes dat je zonder rest kunt maken?", answer: ["12"] },
-      { id: "p19-12", question: "Een lamp knippert elke 6 seconden en een andere elke 8 seconden. Na hoeveel seconden knipperen ze opnieuw samen?", answer: ["24"] },
-      { id: "p19-13", question: "Bereken GGD(252, 105) met het algoritme van Euclides.", answer: ["21"] },
-      { id: "p19-14", question: "Als GGD(12, 18) = 6, wat is dan KGV(12, 18)?", answer: ["36"] },
-      { id: "p19-15", question: "Vereenvoudig 84/126 met behulp van de GGD.", answer: ["2/3"] }
-    ],
-    exam: [
-      { id: "e19-1", question: "Bereken GGD(48, 72).", answer: ["24"] },
-      { id: "e19-2", question: "Bereken GGD(84, 126).", answer: ["42"] },
-      { id: "e19-3", question: "Bereken KGV(12, 20).", answer: ["60"] },
-      { id: "e19-4", question: "Bereken KGV(18, 24).", answer: ["72"] },
-      { id: "e19-5", question: "Bereken GGD(252, 105) met Euclides.", answer: ["21"] },
-      { id: "e19-6", question: "Bereken GGD(391, 299) met Euclides.", answer: ["23"] },
-      { id: "e19-7", question: "Als GGD(36, 60) = 12, bereken dan KGV(36, 60).", answer: ["180"] },
-      { id: "e19-8", question: "Vereenvoudig 144/216 met behulp van de GGD.", answer: ["2/3"] }
-    ]
+    `
   },
 {
     id: "1.10",
@@ -4131,34 +4023,7 @@ negatieve getallen.</p>
         <p class="formula">a^m ÷ a^n = a^{(m−n)}</p>
         <p class="formula">(a^m)^n = a^{(m × n)}</p>
       </div>
-    `,
-    practice: [
-      { id: "p110-1", question: "Schrijf 3 × 3 × 3 × 3 als een macht.", answer: ["3^4"] },
-      { id: "p110-2", question: "Bereken 2^5.", answer: ["32"] },
-      { id: "p110-3", question: "Wat is het grondtal in 7^3?", answer: ["7"] },
-      { id: "p110-4", question: "Wat is de exponent in 5^4?", answer: ["4"] },
-      { id: "p110-5", question: "Bereken 10^3.", answer: ["1000", "1 000"] },
-      { id: "p110-6", question: "Bereken 6^2.", answer: ["36"] },
-      { id: "p110-7", question: "Bereken 9^1.", answer: ["9"] },
-      { id: "p110-8", question: "Bereken 8^0.", answer: ["1"] },
-      { id: "p110-9", question: "Bereken 2^3 × 2^2.", answer: ["32"] },
-      { id: "p110-10", question: "Bereken 3^5 ÷ 3^2.", answer: ["27"] },
-      { id: "p110-11", question: "Bereken (2^2)^3.", answer: ["64"] },
-      { id: "p110-12", question: "Bereken (−4)^2.", answer: ["16"] },
-      { id: "p110-13", question: "Bereken (−2)^3.", answer: ["-8", "−8"] },
-      { id: "p110-14", question: "Bereken 4 + 2^3.", answer: ["12"] },
-      { id: "p110-15", question: "Schrijf 100 000 als een macht van 10.", answer: ["10^5"] }
-    ],
-    exam: [
-      { id: "e110-1", question: "Schrijf 5 × 5 × 5 × 5 × 5 als een macht.", answer: ["5^5"] },
-      { id: "e110-2", question: "Bereken 4^3.", answer: ["64"] },
-      { id: "e110-3", question: "Bereken 10^6.", answer: ["1000000", "1 000 000"] },
-      { id: "e110-4", question: "Bereken 2^4 × 2^3.", answer: ["128"] },
-      { id: "e110-5", question: "Bereken 5^4 ÷ 5^2.", answer: ["25"] },
-      { id: "e110-6", question: "Bereken (3^2)^2.", answer: ["81"] },
-      { id: "e110-7", question: "Bereken (−5)^2 + 2^3.", answer: ["33"] },
-      { id: "e110-8", question: "Bereken 2 + 3^2 × 2.", answer: ["20"] }
-    ]
+    `
   },
 
   {
@@ -4316,34 +4181,7 @@ negatieve getallen.</p>
         <p>Bij volmaakte kwadraten kunnen we de wortel exact bepalen.</p>
         <p>Bij andere getallen kunnen we de wortel bijvoorbeeld tussen twee gehele getallen plaatsen.</p>
       </div>
-    `,
-    practice: [
-      { id: "p111-1", question: "Bereken √25.", answer: ["5"] },
-      { id: "p111-2", question: "Bereken √64.", answer: ["8"] },
-      { id: "p111-3", question: "Bereken √81.", answer: ["9"] },
-      { id: "p111-4", question: "Bereken √0.", answer: ["0"] },
-      { id: "p111-5", question: "Bereken √1.", answer: ["1"] },
-      { id: "p111-6", question: "Tussen welke twee gehele getallen ligt √20?", answer: ["4 en 5", "4,5"] },
-      { id: "p111-7", question: "Tussen welke twee gehele getallen ligt √50?", answer: ["7 en 8", "7,8"] },
-      { id: "p111-8", question: "Welke is groter: √30 of √40?", answer: ["√40", "40"] },
-      { id: "p111-9", question: "Bereken √144.", answer: ["12"] },
-      { id: "p111-10", question: "Controleer √169 door het antwoord te kwadrateren. Wat is het antwoord?", answer: ["13"] },
-      { id: "p111-11", question: "Bereken √(1/4).", answer: ["1/2", "0,5"] },
-      { id: "p111-12", question: "Bereken √(4 × 9).", answer: ["6"] },
-      { id: "p111-13", question: "Vereenvoudig √72 tot de vorm a√2.", answer: ["6√2"] },
-      { id: "p111-14", question: "Is √(−9) een reëel getal?", answer: ["nee"] },
-      { id: "p111-15", question: "Welke positieve gehele getallen hebben als kwadraat 1, 4, 9 en 16?", answer: ["1, 2, 3 en 4", "1 2 3 4"] }
-    ],
-    exam: [
-      { id: "e111-1", question: "Bereken √196.", answer: ["14"] },
-      { id: "e111-2", question: "Tussen welke twee gehele getallen ligt √70?", answer: ["8 en 9", "8,9"] },
-      { id: "e111-3", question: "Bereken √(9/16).", answer: ["3/4", "0,75"] },
-      { id: "e111-4", question: "Welke is groter: √48 of √50?", answer: ["√50", "50"] },
-      { id: "e111-5", question: "Vereenvoudig √98 tot de vorm a√2.", answer: ["7√2"] },
-      { id: "e111-6", question: "Bereken √225.", answer: ["15"] },
-      { id: "e111-7", question: "Leg met een berekening uit waarom √121 = 11.", answer: ["11^2=121", "11^2 = 121", "121"] },
-      { id: "e111-8", question: "Is √(−16) een reëel getal?", answer: ["nee"] }
-    ]
+    `
   },
 
   {
@@ -4450,35 +4288,9 @@ negatieve getallen.</p>
         <li><strong>Fout:</strong> denken dat elke vierkantswortel irrationaal is.</li>
         <li><strong>Fout:</strong> denken dat irrationale getallen niet op de getallenlijn passen. <strong>Correct:</strong> ze zijn reële getallen en hebben dus een plaats op de getallenlijn.</li>
       </ul>
-    `,
-    practice: [
-      { id: "p112-1", question: "Is 3/4 een rationaal getal?", answer: ["ja"] },
-      { id: "p112-2", question: "Is √2 een rationaal getal?", answer: ["nee"] },
-      { id: "p112-3", question: "Is 0,75 rationaal?", answer: ["ja"] },
-      { id: "p112-4", question: "Is 0,333... rationaal?", answer: ["ja"] },
-      { id: "p112-5", question: "Is π rationaal?", answer: ["nee"] },
-      { id: "p112-6", question: "Tussen welke gehele getallen ligt √7?", answer: ["2", "3"] },
-      { id: "p112-7", question: "Tussen welke gehele getallen ligt √15?", answer: ["3", "4"] },
-      { id: "p112-8", question: "Is √16 rationaal?", answer: ["ja"] },
-      { id: "p112-9", question: "Is √10 rationaal?", answer: ["nee"] },
-      { id: "p112-10", question: "Welke van deze getallen is irrationaal: 1/2, 2, √5 of 0,25?", answer: ["√5"] },
-      { id: "p112-11", question: "Is 1,414 een exacte waarde van √2 of een benadering?", answer: ["benadering"] },
-      { id: "p112-12", question: "In welke verzameling hoort √2: ℕ, ℤ, ℚ of ℝ?", answer: ["ℝ"] },
-      { id: "p112-13", question: "Is elk rationaal getal ook een reëel getal?", answer: ["ja"] },
-      { id: "p112-14", question: "Welke is groter: √10 of 3?", answer: ["√10"] },
-      { id: "p112-15", question: "Schrijf 5 als een breuk om te tonen dat 5 rationaal is.", answer: ["5/1"] }
-    ],
-    exam: [
-      { id: "e112-1", question: "Is √3 rationaal of irrationaal?", answer: ["irrationaal"] },
-      { id: "e112-2", question: "Is 0,125 rationaal of irrationaal?", answer: ["rationaal"] },
-      { id: "e112-3", question: "Is 0,272727... rationaal of irrationaal?", answer: ["rationaal"] },
-      { id: "e112-4", question: "Tussen welke twee opeenvolgende gehele getallen ligt √30?", answer: ["5", "6"] },
-      { id: "e112-5", question: "Is √49 rationaal of irrationaal?", answer: ["rationaal"] },
-      { id: "e112-6", question: "Is 1,414 een exacte waarde van √2 of een benadering?", answer: ["benadering"] },
-      { id: "e112-7", question: "Geef de inclusieketen van natuurlijke tot en met reële getallen.", answer: ["ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ"] },
-      { id: "e112-8", question: "Welke is groter: √20 of 4?", answer: ["√20"] }
-    ]
+    `
   },
+
   {
     id: "1.13",
     title: "Afronden en wetenschappelijke notatie",
@@ -4653,33 +4465,6 @@ negatieve getallen.</p>
         <p class="formula">450 000 = 4,5 × 10^5</p>
         <p class="formula">0,00032 = 3,2 × 10^{-4}</p>
       </div>
-    `,
-    practice: [
-      { id: "p113-1", question: "Rond 7,3 af op een geheel getal.", answer: ["7"] },
-      { id: "p113-2", question: "Rond 7,8 af op een geheel getal.", answer: ["8"] },
-      { id: "p113-3", question: "Rond 4,26 af op één cijfer na de komma.", answer: ["4,3", "4.3"] },
-      { id: "p113-4", question: "Rond 7,386 af op twee cijfers na de komma.", answer: ["7,39", "7.39"] },
-      { id: "p113-5", question: "Rond 1 249 af op honderdtallen.", answer: ["1 200", "1200"] },
-      { id: "p113-6", question: "Rond 8 650 af op duizendtallen.", answer: ["9 000", "9000"] },
-      { id: "p113-7", question: "Welke schatting is geschikt voor 198 × 49?", answer: ["10 000", "10000"] },
-      { id: "p113-8", question: "Schrijf 300 000 000 in wetenschappelijke notatie.", answer: ["3 × 10^8", "3x10^8", "3 · 10^8"] },
-      { id: "p113-9", question: "Schrijf 4 500 000 in wetenschappelijke notatie.", answer: ["4,5 × 10^6", "4.5 × 10^6", "4,5x10^6"] },
-      { id: "p113-10", question: "Schrijf 72 000 in wetenschappelijke notatie.", answer: ["7,2 × 10^4", "7.2 × 10^4"] },
-      { id: "p113-11", question: "Schrijf 0,00045 in wetenschappelijke notatie.", answer: ["4,5 × 10^-4", "4.5 × 10^-4"] },
-      { id: "p113-12", question: "Schrijf 3,2 × 10^5 als gewoon getal.", answer: ["320 000", "320000"] },
-      { id: "p113-13", question: "Schrijf 6 × 10^-3 als gewoon decimaal getal.", answer: ["0,006", "0.006"] },
-      { id: "p113-14", question: "Rond 39,8 × 5,1 af door eerst beide factoren op hele getallen af te ronden. Geef de schatting.", answer: ["200"] },
-      { id: "p113-15", question: "Is 5,7 × 10^3 correcte wetenschappelijke notatie? Antwoord ja of nee.", answer: ["ja", "Ja"] }
-    ],
-    exam: [
-      { id: "e113-1", question: "Rond 18,746 af op twee cijfers na de komma.", answer: ["18,75", "18.75"] },
-      { id: "e113-2", question: "Rond 54 650 af op duizendtallen.", answer: ["55 000", "55000"] },
-      { id: "e113-3", question: "Rond 0,00486 af op vier cijfers na de komma.", answer: ["0,0049", "0.0049"] },
-      { id: "e113-4", question: "Schrijf 6 020 000 in wetenschappelijke notatie.", answer: ["6,02 × 10^6", "6.02 × 10^6"] },
-      { id: "e113-5", question: "Schrijf 0,000072 in wetenschappelijke notatie.", answer: ["7,2 × 10^-5", "7.2 × 10^-5"] },
-      { id: "e113-6", question: "Schrijf 8,4 × 10^4 als gewoon getal.", answer: ["84 000", "84000"] },
-      { id: "e113-7", question: "Een berekening geeft exact 12,4837. Welke benadering is nauwkeuriger: 12,5 of 12,484? Geef het antwoord.", answer: ["12,484", "12.484"] },
-      { id: "e113-8", question: "Is 12,5 × 10^3 correcte wetenschappelijke notatie? Leg kort uit.", answer: ["nee", "Nee", "nee, 12,5 is groter dan 10"] }
-    ]
+    `
   }
 ];
