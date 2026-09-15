@@ -1,0 +1,49 @@
+name: Publish Fase 1.8 and 1.9
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Insert milestones
+        shell: python
+        run: |
+          from pathlib import Path
+
+          target = Path("fase1.js")
+          text = target.read_text(encoding="utf-8")
+          marker = "\n];"
+
+          if marker not in text:
+              raise SystemExit("Kan einde van MILESTONES_1 niet vinden")
+
+          insert = ""
+          for name in ["fase1-1.8.tmp", "fase1-1.9.tmp"]:
+              part = Path(name).read_text(encoding="utf-8").rstrip()
+              insert += ",\n" + part
+
+          text = text.replace(marker, insert + marker, 1)
+          target.write_text(text, encoding="utf-8")
+
+      - name: Validate JavaScript
+        run: node --check fase1.js
+
+      - name: Remove temporary files
+        run: rm -f fase1-1.8.tmp fase1-1.9.tmp .github/workflows/add-fase1-1.8-1.9.yml
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fase1.js
+          git commit -m "Werk fase 1.8 en 1.9 uit: priemgetallen, factorisatie, GGD en KGV"
+          git push
