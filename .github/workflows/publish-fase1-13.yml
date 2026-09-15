@@ -1,0 +1,214 @@
+name: Publish fase 1.13 on assistant branch
+
+on:
+  push:
+    branches:
+      - 'chatGPT/fase1'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Insert fase 1.13 and update rendering context
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          fase = Path('fase1.js')
+          text = fase.read_text(encoding='utf-8')
+          if 'id: "1.13"' in text:
+              raise SystemExit('Fase 1.13 is already present; refusing to duplicate.')
+          part = Path('fase1-1.13.tmp').read_text(encoding='utf-8')
+          marker = '\n];'
+          pos = text.rfind(marker)
+          if pos == -1:
+              raise SystemExit('Could not find end of MILESTONES_1 array.')
+          before = text[:pos].rstrip()
+          if not before.endswith(','):
+              before += ','
+          text = before + '\n' + part.rstrip() + text[pos:]
+          fase.write_text(text, encoding='utf-8')
+
+          math = Path('math.js')
+          m = math.read_text(encoding='utf-8')
+          old_guard = 'if (el.classList.contains("formula") || el.classList.contains("math") || el.closest(".katex, svg, .fig")) return;'
+          new_guard = 'if (el.classList.contains("formula") || el.classList.contains("formula-inline") || el.classList.contains("math") || el.closest(".katex, svg, .fig")) return;'
+          if old_guard not in m:
+              raise SystemExit('Expected math.js guard not found.')
+          m = m.replace(old_guard, new_guard, 1)
+          anchor = '''  root.querySelectorAll("span.math").forEach((el) => {'''
+          inline = '''  root.querySelectorAll(".formula-inline").forEach((el) => {
+    try {
+      katex.render(toTex(el.textContent), el, { displayMode: false, throwOnError: false, output: "html" });
+    } catch { /* laat tekst staan */ }
+  });
+'''
+          if 'root.querySelectorAll(".formula-inline")' not in m:
+              if anchor not in m:
+                  raise SystemExit('Could not find inline rendering insertion point in math.js.')
+              m = m.replace(anchor, inline + anchor, 1)
+          math.write_text(m, encoding='utf-8')
+
+          context = Path('Projectcontext_AI.md')
+          c = context.read_text(encoding='utf-8')
+          replacement = r'''## 11.1 Harde regel voor LaTeX in cursus-JavaScript
+
+Nieuwe cursusinhoud in `fase*.js` moet de bestaande renderingarchitectuur volgen.
+
+### LaTeX in JavaScript template literals
+
+De cursusinhoud staat in JavaScript template literals. Daarom moet iedere LaTeX-opdracht die een backslash gebruikt, in de JavaScript-bron met **twee backslashes** worden geschreven.
+
+Correct:
+
+```html
+<p class="formula">\\mathbb{R} = \\mathbb{Q} \\cup \\text{irrationele getallen}</p>
+<span class="formula-inline">\\pi</span>
+<span class="formula-inline">x^2</span>
+<span class="formula-inline">2^{n+1}</span>
+```
+
+JavaScript geeft dan één backslash door aan KaTeX.
+
+Niet correct:
+
+```html
+<span class="formula-inline">\pi</span>
+```
+
+want de backslash moet in een JavaScript-template-literal expliciet worden ge-escaped.
+
+### Exponenten
+
+Voor één eenvoudig teken kan `x^2` worden gebruikt. Zodra de exponent uit meerdere tekens of een bewerking bestaat, gebruik je accolades:
+
+```html
+<p class="formula">2^{n+1}</p>
+<p class="formula">a^{m+n}</p>
+<p class="formula">x^{2k+1}</p>
+```
+
+### Breuken, wortels en symbolen
+
+Gebruik voor nieuwe inhoud expliciete LaTeX:
+
+```html
+<p class="formula">\\frac{3}{4}</p>
+<span class="formula-inline">\\sqrt{2}</span>
+<span class="formula-inline">\\pi</span>
+<span class="formula-inline">\\mathbb{R}</span>
+```
+
+### Tekst binnen een formule
+
+Gebruik `\\text{...}` wanneer gewone woorden onderdeel zijn van een formule:
+
+```html
+<p class="formula">\\sqrt{25} = 5 \\quad \\text{omdat} \\quad 5^2 = 25</p>
+```
+
+Gebruik dus niet `\\` als algemene manier om woorden van elkaar te scheiden. Een gewone LaTeX-spatie is in wiskundemodus niet betrouwbaar zichtbaar.
+
+### Geen `\[\]` in `.formula`
+
+Gebruik geen `\[\]` of `$$...$$` binnen een element met `class="formula"`. De renderer behandelt `.formula` al als display-formule.
+
+### Compatibiliteitslaag
+
+`math-compat-fix.js` is uitsluitend een vangnet voor oudere of beschadigde content. Nieuwe cursusinhoud moet vanaf het begin correct worden geschreven en mag niet afhankelijk zijn van deze reparatielaag.
+
+## 11.2 Inline wiskunde
+
+Wiskunde die midden in een zin staat, gebruikt:
+
+```html
+<span class="formula-inline">...</span>
+```
+
+`formula-inline` wordt rechtstreeks door `math.js` met KaTeX in `displayMode: false` gerenderd. De algemene automatische tekstverwerker moet een `formula-inline`-element daarna niet opnieuw verwerken.
+
+Voorbeelden:
+
+```html
+<span class="formula-inline">\\pi</span>
+<span class="formula-inline">\\sqrt{2}</span>
+<span class="formula-inline">\\mathbb{R}</span>
+<span class="formula-inline">x^2</span>
+<span class="formula-inline">2^{n+1}</span>
+```
+
+Gebruik `.formula-inline` voor complexe wiskundige fragmenten in lopende tekst. Gebruik geen losse `\pi`, `\sqrt{...}` of andere LaTeX-opdracht zonder de dubbele JavaScript-backslash.
+
+## 11.3 JavaScript escaping
+
+LaTeX en JavaScript-strings zijn gevoelig voor backslash-escapes. Vooral combinaties die beginnen met `\\f`, `\\t` of `\\n` kunnen door JavaScript als escape sequence worden geïnterpreteerd voordat KaTeX de tekst ontvangt.
+
+Daarom geldt:
+
+> **De cursusbron moet structureel correct zijn. We vertrouwen niet op een herstelmechanisme om nieuwe cursusinhoud te corrigeren.**
+
+Bij wijzigingen in `fase*.js` moet dus altijd worden gecontroleerd hoe de uiteindelijke string die `math.js` ontvangt eruitziet.
+
+## 11.4 `math-compat-fix.js`
+
+`math-compat-fix.js` is een **compatibiliteitslaag/vangnet** voor reeds bestaande of legacy-inhoud waarin LaTeX door JavaScript escaping beschadigd kan zijn geraakt.
+
+Deze file is **geen onderdeel van de gewenste schrijfwijze voor nieuwe cursusinhoud**.
+
+Nieuwe code moet dus niet worden geschreven met extra backslashes of andere workarounds met de bedoeling de compatibiliteitslaag te activeren.
+
+## 11.5 `fraction-widget-fix.js`
+
+`fraction-widget-fix.js` heeft **geen functie binnen de LaTeX-rendering**.
+
+Dit bestand is uitsluitend een technische override voor de `fractionVisual`-widget. Het zorgt onder andere voor correct canvas-resizen en voorkomt ongewenst zoomen of verschuiven tijdens slidergebruik.
+
+De scheiding is dus:
+
+```text
+math.js
+    → wiskundige tekst
+    → Unicode/ondersteunde notatie naar LaTeX
+    → KaTeX
+    → formule op het scherm
+
+math-compat-fix.js
+    → legacy/compatibiliteitsherstel
+
+fraction-widget-fix.js
+    → technische fix voor de visuele breukenwidget
+    → geen relatie met LaTeX-rendering
+```
+
+'''
+          pattern = r'## 11\.1 Harde regel voor LaTeX in cursus-JavaScript.*?(?=\n------------------------------------------------------------------------\n\n# 12\.)'
+          c2, n = re.subn(pattern, replacement, c, count=1, flags=re.S)
+          if n != 1:
+              raise SystemExit(f'Could not replace Projectcontext_AI LaTeX section; matches={n}.')
+          c2 = c2.replace(
+              '# 17. Huidige focus\n\nDe huidige ontwikkelfocus is:\n\n**Fase 1 verder uitbouwen, met 1.4 en daarna 1.5 als belangrijkste\ninhoudelijke stappen.**\n\n1.4 eindigt bij **gemengde getallen**.\n\nDaarna volgt de overgang naar: - decimalen; - percentages; - rationale\ngetallen.\n',
+              '# 17. Huidige focus\n\nDe huidige ontwikkelfocus is **Fase 1 verder uitbouwen**. De milestones 1.1 t/m 1.12 zijn aanwezig; 1.13 behandelt **afronden en wetenschappelijke notatie** en vormt voorlopig het einde van de huidige Fase 1-inhoud.\n'
+          )
+          context.write_text(c2, encoding='utf-8')
+          PY
+
+      - name: Validate JavaScript
+        run: node --check fase1.js && node --check math.js
+
+      - name: Remove temporary files and workflow
+        run: rm -f fase1-1.13.tmp .github/workflows/publish-fase1-13.yml
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fase1.js math.js Projectcontext_AI.md fase1-1.13.tmp .github/workflows/publish-fase1-13.yml
+          git commit -m "Werk fase 1.13 uit en verbeter inline LaTeX"
+          git push origin HEAD:chatGPT/fase1
