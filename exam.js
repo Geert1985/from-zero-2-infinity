@@ -25,9 +25,18 @@ function startExamSession(kind,phaseId,mid){
 }
 function currentExamQuestions(kind,phaseId,mid){return EXAM_SESSION[examSessionKey(kind,phaseId,mid)]||startExamSession(kind,phaseId,mid);}
 
+function examGcd(a,b){
+  a=Math.abs(Math.trunc(a)); b=Math.abs(Math.trunc(b));
+  while(b){const r=a%b;a=b;b=r;}
+  return a;
+}
 function examFractionEqual(a,b){
   if(!a||!b||!Number.isFinite(a.numerator)||!Number.isFinite(a.denominator)||!Number.isFinite(b.numerator)||!Number.isFinite(b.denominator)||a.denominator===0||b.denominator===0)return false;
   return a.numerator*b.denominator===b.numerator*a.denominator;
+}
+function examFractionSimplified(a){
+  if(!a||!Number.isInteger(a.numerator)||!Number.isInteger(a.denominator)||a.denominator===0)return false;
+  return examGcd(a.numerator,a.denominator)===1;
 }
 function examArrayEqual(a,b){return Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&a.every((v,i)=>String(v)===String(b[i]));}
 function examSetEqual(a,b){return Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&a.map(String).sort().join("\u0001")===b.map(String).sort().join("\u0001");}
@@ -47,7 +56,12 @@ function examSameAnswer(given,q){
     const tol=c.tolerance!=null?Number(c.tolerance):1e-9;
     return Math.abs(g-target)<=tol*Math.max(1,Math.abs(target));
   }
-  if(a.type==="fraction")return examFractionEqual(given,a.value);
+  if(a.type==="fraction"){
+    if(!examFractionEqual(given,a.value))return false;
+    const c=(q.response&&q.response.constraints)||{};
+    if(c.requireSimplified&&!examFractionSimplified(given))return false;
+    return true;
+  }
   if(a.type==="choice"||a.type==="symbol")return String(given)===String(a.value);
   if(a.type==="ordering")return examArrayEqual(given,a.value);
   if(a.type==="select")return examSetEqual(given,a.value);
@@ -68,8 +82,25 @@ function examGradeList(questions,root){
 }
 
 function PHASE_EXAM_BANK_1(){
-  const out=[]; const topics=Object.keys(EXAM_BANKS_1||{});
-  topics.forEach(t=>{const b=EXAM_BANKS_1[t]();if(b[0])out.push(b[0]);});
-  ["1.2","1.3","1.4","1.5","1.6","1.7","1.8"].forEach(t=>{const b=EXAM_BANKS_1[t]();if(b[1])out.push(b[1]);});
-  return out.slice(0,PHASE_EXAM_SIZE);
+  const topics=Object.keys(EXAM_BANKS_1||{}).sort((a,b)=>Number(a.split(".")[1])-Number(b.split(".")[1]));
+  const pools=topics.map(t=>EXAM_BANKS_1[t]());
+  const chosen=[];
+
+  /* Every topic must be represented at least once. Prefer application/reasoning questions. */
+  pools.forEach(pool=>{
+    const candidates=pool.filter(q=>Number(q.difficulty)>=2);
+    const pick=examShuffle((candidates.length?candidates:pool))[0];
+    if(pick)chosen.push(pick);
+  });
+
+  /* Fill the remaining slots with additional non-duplicate medium/hard questions. */
+  const used=new Set(chosen.map(q=>q.id));
+  const extras=[];
+  pools.forEach(pool=>pool.forEach(q=>{
+    if(!used.has(q.id)&&Number(q.difficulty)>=2)extras.push(q);
+  }));
+  chosen.push(...examShuffle(extras).slice(0,Math.max(0,PHASE_EXAM_SIZE-chosen.length)));
+
+  /* Shuffle the final exam so topic order cannot be learned by heart. */
+  return examShuffle(chosen).slice(0,PHASE_EXAM_SIZE);
 }
