@@ -5,15 +5,11 @@
     const base=EXAM_BANKS_1[topic];
     EXAM_BANKS_1[topic]=function(){ return base().concat(extra()); };
   }
-
-  wrap("1.1",function(){
-    const n=examRnd(300,900);
-    return [
-      exChoice("F1Q-1.1-01","1.1 Cijfers en Getallen","Een leerling zegt: 'In 4 082 is de 8 het cijfer van de tientallen, dus de plaatswaarde is 8.' Wat is correct?",["De plaatswaarde is 8","De plaatswaarde is 80","De plaatswaarde is 800","De 8 heeft geen plaatswaarde"],"De plaatswaarde is 80",3,3),
-      exNum("F1Q-1.1-02","1.1 Cijfers en Getallen","Welk getal krijg je als je het honderdtal van "+n+" met 3 verhoogt, terwijl alle andere cijfers gelijk blijven?",n+300,3,3),
-      exOrder("F1Q-1.1-03","1.1 Cijfers en Getallen","Zet van klein naar groot.",["0,9","1","0,09","10","0,99"],["0,09","0,9","0,99","1","10"],3,3)
-    ];
-  });
+  wrap("1.1",function(){const n=examRnd(300,900);return [
+    exChoice("F1Q-1.1-01","1.1 Cijfers en Getallen","Een leerling zegt: 'In 4 082 is de 8 het cijfer van de tientallen, dus de plaatswaarde is 8.' Wat is correct?",["De plaatswaarde is 8","De plaatswaarde is 80","De plaatswaarde is 800","De 8 heeft geen plaatswaarde"],"De plaatswaarde is 80",3,3),
+    exNum("F1Q-1.1-02","1.1 Cijfers en Getallen","Welk getal krijg je als je het honderdtal van "+n+" met 3 verhoogt, terwijl alle andere cijfers gelijk blijven?",n+300,3,3),
+    exOrder("F1Q-1.1-03","1.1 Cijfers en Getallen","Zet van klein naar groot.",["9","10","99","100","101"],["9","10","99","100","101"],3,3)
+  ];});
   wrap("1.2",function(){return [
     exNum("F1Q-1.2-01","1.2 De vier hoofdbewerkingen","Bereken zonder rekenmachine: 99 × 7.",693,3,3),
     exChoice("F1Q-1.2-02","1.2 De vier hoofdbewerkingen","Welke berekening is gelijk aan 48 × 19?",["48 × 20 + 48","48 × 20 − 48","50 × 20 − 48","48 × 10 − 48 × 9"],"48 × 20 − 48",3,3),
@@ -64,21 +60,21 @@
     exChoice("F1Q-1.10-11","1.10 Machten","Welke uitspraak is fout?",["5² = 25","5³ = 125","5⁰ = 0","5¹ = 5"],"5⁰ = 0",3,3)
   ];});
   wrap("1.11",function(){return [
-    exNum("F1Q-1.11-07","1.11 Wortels","Tussen welke twee opeenvolgende gehele getallen ligt √70? Geef het kleinste getal.",8,3,3),
-    exNum("F1Q-1.11-08","1.11 Wortels","Bereken: √(25 × 16).",20,3,3),
-    exChoice("F1Q-1.11-09","1.11 Wortels","Welke uitspraak is juist?",["√(9+16)=√9+√16","√(9×16)=√9×√16","√25=±5","√49=−7"],"√(9×16)=√9×√16",3,3),
-    exChoice("F1Q-1.11-10","1.11 Wortels","Waarom ligt √50 tussen 7 en 8?",["Omdat 7² < 50 < 8²","Omdat 7 < 50 < 8","Omdat 50 een even getal is","Omdat 7+8=15"],"Omdat 7² < 50 < 8²",3,3)
+    exNum("F1Q-1.11-07","1.11 Wortels","Bereken: √(25 × 16).",20,3,3),
+    exChoice("F1Q-1.11-08","1.11 Wortels","Welke uitspraak is juist?",["√(9+16)=√9+√16","√(9×16)=√9×√16","√25=±5","√49=−7"],"√(9×16)=√9×√16",3,3),
+    exNum("F1Q-1.11-09","1.11 Wortels","Bereken 2³ × √16.",32,3,3),
+    exChoice("F1Q-1.11-10","1.11 Wortels","Welke berekening gebruikt correct de wortelregel √(a×b)=√a×√b?",["√(36×25)=6×5","√(36+25)=6+5","√(36×25)=36×25","√(36×25)=6+5"],"√(36×25)=6×5",3,3)
   ];});
   wrap("1.12",function(){return [
     exChoice("F1Q-1.12-07","1.12 Irrationale en reële getallen","Welke uitspraak is altijd waar?",["Elk reëel getal is rationaal","Elk rationaal getal is reëel","Elk irrationaal getal is geheel","Geen enkel natuurlijk getal is reëel"],"Elk rationaal getal is reëel",3,3),
     exSymbol("F1Q-1.12-08","1.12 Irrationale en reële getallen","Vergelijk: √2 □ 1,41.",">",3,3),
-    exOrder("F1Q-1.12-09","1.12 Irrationale en reële getallen","Zet van klein naar groot.",["√2","1,41","1,5","√3"],["1,41","√2","1,5","√3"],3,3),
+    exOrder("F1Q-1.12-09","1.12 Irrationale en reële getallen","Zet van klein naar groot.",["1,4","√2","1,5","π"],["1,4","√2","1,5","π"],3,3),
     exSelect("F1Q-1.12-10","1.12 Irrationale en reële getallen","Selecteer alle rationale getallen.",["0,25","√2","−7","π","3/8","√9"],["0,25","−7","3/8","√9"],3,3)
   ];});
   wrap("1.13",function(){return [
     exChoice("F1Q-1.13-07","1.13 Afronden en wetenschappelijke notatie","Welke wetenschappelijke notatie is correct voor 0,00056?",["5,6 × 10⁻⁴","56 × 10⁻⁵","0,56 × 10⁻³","5,6 × 10⁴"],"5,6 × 10⁻⁴",3,3),
     exNum("F1Q-1.13-08","1.13 Afronden en wetenschappelijke notatie","Rond 48 650 af op duizenden.",49000,3,3),
-    exChoice("F1Q-1.13-09","1.13 Afronden en wetenschappelijke notatie","Welke waarde is het grootst?",["4,9 × 10³","0,49 × 10⁴","49 × 10²","4,09 × 10³"],"0,49 × 10⁴",3,3),
+    exChoice("F1Q-1.13-09","1.13 Afronden en wetenschappelijke notatie","Welke waarde is het grootst?",["4,9 × 10³","5,1 × 10³","49 × 10²","4,09 × 10³"],"5,1 × 10³",3,3),
     exNum("F1Q-1.13-10","1.13 Afronden en wetenschappelijke notatie","Schrijf 7,2 × 10⁵ als gewoon getal.",720000,3,3)
   ];});
 })();
