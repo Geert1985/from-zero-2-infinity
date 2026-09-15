@@ -4392,7 +4392,7 @@ negatieve getallen.</p>
       <p>Deze getallen hebben een oneindige decimale schrijfwijze zonder een eindeloos herhalend patroon.</p>
       <div class="callout"><strong>Rationaal of irrationaal?</strong><br>Rationaal = wel als breuk van gehele getallen te schrijven.<br>Irrationaal = niet als zo'n breuk te schrijven.</div>
       <p>Een belangrijke waarschuwing: niet elke vierkantswortel is irrationaal.</p>
-      <p>Ook het getal <span class="formula-inline">\pi</span> is irrationaal. Het is de verhouding tussen de omtrek en de diameter van een cirkel.</p>
+      <p>Ook het getal <span class="formula-inline">\\pi</span> is irrationaal. Het is de verhouding tussen de omtrek en de diameter van een cirkel.</p>
 
 
 
