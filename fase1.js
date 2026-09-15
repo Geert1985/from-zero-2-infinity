@@ -3364,7 +3364,7 @@ negatieve getallen.</p>
       { id: "e16-7", question: "De verhouding A : B : C = 2 : 3 : 5. Samen zijn er 80 eenheden. Hoeveel zijn er van B en welk percentage van het totaal is dat?", answer: ["24 en 30%", "24; 30%", "24 = 30%"] },
       { id: "e16-8", question: "Een abonnement kost €5 vaste kosten plus €2 per maand per extra dienst. Is de totale prijs recht evenredig met het aantal diensten? Leg kort uit waarom wel of niet.", answer: ["nee", "Nee", "niet recht evenredig"] }
     ]
-  }
+  },
 
   {
     id: "1.7",
@@ -3432,7 +3432,7 @@ negatieve getallen.</p>
       <p class="formula">24 ÷ 6 = 4</p>
       <p>is 24 deelbaar door 6.</p>
       <p>Maar:</p>
-      <p class="formula">25 ÷ 6 = 4 rest 1</p>
+      <p class="formula">25 ÷ 6 = 4\\ rest\\ 1</p>
       <p>dus 25 is niet deelbaar door 6.</p>
       <p>De drie begrippen horen bij elkaar:</p>
       <ul><li>6 is een <strong>deler</strong> van 24;</li><li>24 is <strong>deelbaar</strong> door 6;</li><li>24 is een <strong>veelvoud</strong> van 6.</li></ul>
@@ -3459,7 +3459,7 @@ negatieve getallen.</p>
       <h3>8. Deelbaarheid door 2</h3>
       <p>Een getal is deelbaar door 2 als het <strong>even</strong> is.</p>
       <p>Je kunt dit in het tientallig stelsel herkennen aan het laatste cijfer. Het getal moet eindigen op:</p>
-      <p class="formula">0, 2, 4, 6 of 8</p>
+      <p class="formula">0, 2, 4, 6\\ of\\ 8</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">348 ÷ 2 = 174</p>
       <p class="formula">1 026 ÷ 2 = 513</p>
