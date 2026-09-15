@@ -4001,985 +4001,351 @@ negatieve getallen.</p>
       { id: "e19-8", question: "Vereenvoudig 144/216 met behulp van de GGD.", answer: ["2/3"] }
     ]
   },
-  {
-    id: "1.8",
-    title: "Priemgetallen en factorisatie",
-    goal: "Priemgetallen herkennen en getallen ontbinden in priemfactoren.",
-    theory: /* html */`
-      <h2>Priemgetallen en factorisatie</h2>
-      <p><strong>Doel:</strong> priemgetallen herkennen, samengestelde getallen ontbinden en priemfactorisatie gebruiken.</p>
+{
+    id: "1.10",
+    title: "Machten",
+    goal: "Machten begrijpen en gebruiken om herhaalde vermenigvuldigingen kort te schrijven en te berekenen.",
+    theory: /* html */` 
+      <h2>Machten</h2>
+      <p><strong>Doel:</strong> machten begrijpen, lezen, berekenen en gebruiken in eenvoudige berekeningen.</p>
 
-      <h3>1. Van delers naar priemgetallen</h3>
-      <p>In 1.7 leerden we dat een getal delers heeft. Sommige getallen hebben precies twee positieve delers: <strong>1 en zichzelf</strong>. Deze getallen noemen we <strong>priemgetallen</strong>.</p>
-      <p>Bijvoorbeeld 7 heeft alleen de delers 1 en 7. Daarom is 7 een priemgetal.</p>
-      <div class="callout"><strong>Een priemgetal</strong> is een natuurlijk getal groter dan 1 met precies twee positieve delers: 1 en het getal zelf.</div>
-
-      <h3>2. Priemgetallen herkennen</h3>
-      <p>De eerste priemgetallen zijn:</p>
-      <p class="formula">2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...</p>
-      <p>Het getal 2 is bijzonder: het is het <strong>enige even priemgetal</strong>. Elk ander even getal is deelbaar door 2 en heeft dus meer dan twee positieve delers.</p>
-
-      <h3>3. Samengestelde getallen</h3>
-      <p>Een natuurlijk getal groter dan 1 dat geen priemgetal is, noemen we een <strong>samengesteld getal</strong>. Zo heeft 12 bijvoorbeeld de delers 1, 2, 3, 4, 6 en 12.</p>
-      <p>Het getal 1 is een uitzondering: <strong>1 is noch priem, noch samengesteld</strong>.</p>
-
-      <h3>4. Elk samengesteld getal heeft priemdelers</h3>
-      <p>Als een getal samengesteld is, kunnen we het schrijven als een product van kleinere natuurlijke getallen. Die factoren kunnen we op hun beurt verder ontbinden.</p>
+      <h3>1. Van herhaald vermenigvuldigen naar een macht</h3>
+      <p>Soms vermenigvuldigen we hetzelfde getal meerdere keren met zichzelf.</p>
       <p>Bijvoorbeeld:</p>
-      <p class="formula">12 = 3 × 4 = 3 × 2 × 2</p>
-      <p>We zijn uiteindelijk uitgekomen bij alleen priemgetallen.</p>
+      <p class="formula">2 × 2 × 2 × 2 = 16</p>
+      <p>In plaats van vier keer 2 te schrijven, kunnen we dit korter noteren:</p>
+      <p class="formula">2^4 = 16</p>
+      <p>Dit noemen we een <strong>macht</strong>.</p> We lezen dit als: 2 tot de macht 4.
 
-      <h3>5. Ontbinden in factoren</h3>
-      <p>Een getal schrijven als een product van factoren noemen we <strong>factoriseren</strong> of <strong>ontbinden in factoren</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">24 = 6 × 4</p>
-      <p>Maar we kunnen verdergaan:</p>
-      <p class="formula">24 = 2 × 3 × 2 × 2</p>
-      <p>Alle factoren zijn nu priem.</p>
-
-      <h3>6. Priemfactorisatie</h3>
-      <p>Een ontbinding waarin alle factoren priemgetallen zijn, noemen we de <strong>priemfactorisatie</strong>.</p>
-      <p>Voor 60 krijgen we bijvoorbeeld:</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>We kunnen dezelfde priemfactoren ook overzichtelijker schrijven met machten. Dat leren we in 1.10; voorlopig is het product voldoende.</p>
-
-      <h3>7. Een factorboom</h3>
-      <p>Een <strong>factorboom</strong> helpt om een getal stap voor stap te ontbinden. Kies telkens een factorisatie en ga door tot elke tak eindigt in een priemgetal.</p>
-      <p>Voor 36 kan dat bijvoorbeeld via:</p>
-      <p class="formula">36 = 4 × 9 = 2 × 2 × 3 × 3</p>
-      <p>De volgorde waarin je de factoren vindt, kan verschillen. De uiteindelijke priemfactoren zijn dezelfde, alleen eventueel in een andere volgorde.</p>
-
-      <h3>8. De fundamentele eigenschap van priemfactorisatie</h3>
-      <p>Elk natuurlijk getal groter dan 1 kan als product van priemgetallen worden geschreven. Bovendien is die priemfactorisatie, afgezien van de volgorde van de factoren, <strong>uniek</strong>.</p>
-      <p>Zo is:</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>en niet een andere verzameling priemfactoren die opnieuw 60 oplevert.</p>
-
-      <h3>9. Factoriseren met kleine priemgetallen</h3>
-      <p>Bij het factoriseren is het handig om eerst te controleren op deelbaarheid door kleine priemgetallen:</p>
-      <p class="formula">2, 3, 5, 7, 11, 13, ...</p>
-      <p>Gebruik de deelbaarheidsregels uit 1.7 wanneer die beschikbaar zijn. Zo zie je snel of een getal verder ontbonden kan worden.</p>
-
-      <h3>10. Een voorbeeld stap voor stap</h3>
-      <p>We ontbinden 84. Het getal is even, dus we delen door 2:</p>
-      <p class="formula">84 = 2 × 42</p>
-      <p>Nogmaals door 2:</p>
-      <p class="formula">42 = 2 × 21</p>
-      <p>En 21 is deelbaar door 3:</p>
-      <p class="formula">21 = 3 × 7</p>
-      <p>Dus:</p>
-      <p class="formula">84 = 2 × 2 × 3 × 7</p>
-
-      <h3>11. Factoriseren vanuit een deler</h3>
-      <p>Je hoeft niet altijd met 2 te beginnen. Je mag iedere geschikte deler kiezen en daarna verder ontbinden.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">90 = 9 × 10 = 3 × 3 × 2 × 5</p>
-      <p>Je krijgt dus dezelfde priemfactorisatie, ook al heb je een andere eerste stap gekozen.</p>
-
-      <h3>12. Priemfactorisatie en delers</h3>
-      <p>De priemfactorisatie laat zien welke priemgetallen als bouwstenen in een getal zitten. Daarmee kunnen we later systematisch de delers van een getal bepalen.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">12 = 2 × 2 × 3</p>
-      <p>De priemfactoren 2 en 3 zijn de belangrijkste bouwstenen van 12.</p>
-
-      <h3>13. Gemeenschappelijke priemfactoren</h3>
-      <p>Als twee getallen dezelfde priemfactor bevatten, noemen we die factor <strong>gemeenschappelijk</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">18 = 2 × 3 × 3</p>
-      <p class="formula">30 = 2 × 3 × 5</p>
-      <p>De getallen 2 en 3 komen in beide priemfactorisaties voor. Dit idee wordt belangrijk bij de GGD in 1.9.</p>
-
-      <h3>14. Priemfactorisatie en breuken</h3>
-      <p>Priemfactorisatie kan helpen om te zien welke factoren in de teller en noemer van een breuk kunnen worden weggewerkt.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">\frac{18}{30} = \frac{2 × 3 × 3}{2 × 3 × 5} = \frac{3}{5}</p>
-      <p>De gemeenschappelijke factoren 2 en 3 kunnen we wegdelen. In 1.9 maken we dit proces systematischer met de grootste gemene deler.</p>
-
-      <h3>15. Is een getal priem?</h3>
-      <p>Om te onderzoeken of een getal priem is, moet je nagaan of het een deler heeft naast 1 en zichzelf. De deelbaarheidsregels helpen daarbij.</p>
-      <p>Voor grotere getallen hoeven we niet alle mogelijke delers te testen. Als een getal <strong>n</strong> samengesteld is, heeft het een deler die niet groter is dan <span class="formula-inline">√n</span>. Daarom volstaat het om priemdelers tot en met <span class="formula-inline">√n</span> te controleren.</p>
-
-      <h3>16. Voorbeeld: is 97 priem?</h3>
-      <p>We controleren de priemgetallen die niet groter zijn dan <span class="formula-inline">√97</span>. Omdat <span class="formula-inline">√97</span> kleiner is dan 10, volstaan 2, 3, 5 en 7.</p>
       <ul>
-        <li>97 is niet deelbaar door 2;</li>
-        <li>de cijfersom is 16, dus 97 is niet deelbaar door 3;</li>
-        <li>97 eindigt niet op 0 of 5;</li>
-        <li>97 is niet deelbaar door 7.</li>
+        <li><strong>2</strong> is het <strong>grondtal</strong>;</li>
+        <li><strong>4</strong> is de <strong>exponent</strong>.</li>
       </ul>
-      <p>Daarom is 97 een priemgetal.</p>
+      <div class="callout"><strong>Onthoud:De exponent vertelt hoeveel keer het grondtal als factor voorkomt.</div>
 
-      <h3>17. Waarom factorisatie belangrijk is</h3>
-      <p>Priemfactorisatie is een van de belangrijkste manieren om de structuur van natuurlijke getallen zichtbaar te maken. Ze vormt de basis voor het berekenen van de <strong>GGD</strong> en het <strong>KGV</strong>, het vereenvoudigen van breuken en later ook het werken met machten.</p>
-      <div class="callout"><strong>Belangrijk idee:</strong> priemgetallen zijn de ondeelbare bouwstenen van de natuurlijke getallen groter dan 1.</div>
+      <h3>3. Een macht uitschrijven</h3>
+      <p>Een macht kunnen we altijd terugschrijven als een vermenigvuldiging.</p>
+      <p class="formula">5^3 = 5 × 5 × 5</p>
+      <p>Dus:</p>
+      <p class="formula">5^3 = 125</p>
+      <p>De exponent 3 betekent dat we drie factoren 5 hebben.</p>
+
+      <h3>4. Speciale macht: exponent 1</h3>
+      <p>Als de exponent 1 is, komt het grondtal één keer voor.</p>
+      <p class="formula">7^1 = 7</p>
+      <p>Voor elk getal geldt:</p>
+      <p class="formula">a^1 = a</p>
+
+      <h3>5. Speciale macht: exponent 0</h3>
+      <p>Voor elk getal dat niet nul is, geldt:</p>
+      <p class="formula">a^0 = 1</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">5^0 = 1</p>
+      <p>Dit lijkt misschien vreemd, maar deze regel zorgt ervoor dat de rekenregels voor machten netjes blijven aansluiten.</p>
+
+      <h3>6. Machten van 10</h3>
+      <p>Machten van 10 geven een handig patroon:</p>
+      <p class="formula">10^1 = 10</p>
+      <p class="formula">10^2 = 100</p>
+      <p class="formula">10^3 = 1 000</p>
+      <p class="formula">10^4 = 10 000</p>
+      <p>Bij een macht van 10 komt er bij iedere stap één nul bij.</p>
+
+      <h4>Machten en plaatswaarde</h4>
+      <p>De machten van 10 helpen ons het tientallig stelsel beter te begrijpen.</p>
+      <p>De eenheden, tientallen, honderdtallen en duizendtallen zijn opeenvolgende machten van 10:</p>
+      <p>Zo kunnen we bijvoorbeeld schrijven:</p>
+      <p class="formula">4 705 = 4 × 10^3 + 7 × 10^2 + 0 × 10^1 + 5 × 10^0</p>
+
+      <h3>7. Vermenigvuldigen en delen van machten met hetzelfde grondtal</h3>
+      <p>Wanneer we machten met hetzelfde grondtal vermenigvuldigen, mogen we de exponenten optellen.</p>
+      <p class="formula">2^3 × 2^2 = 2^5</p>
+      <p>Dat komt doordat:</p>
+      <p class="formula">2^3 × 2^2 = (2 × 2 × 2) × (2 × 2) = 2^5</p>
+
+      <p>Bij het delen van machten met hetzelfde grondtal trekken we de exponenten van elkaar af, zolang de deler niet nul is.</p>
+      <p class="formula">2^5 ÷ 2^2 = 2^3</p>
+      <p>Want van vijf factoren 2 blijven er na het wegnemen van twee factoren drie over.</p>
+
+      <h3>8. Een macht van een macht</h3>
+      <p>Soms staat er een macht bovenop een andere macht.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">(2^3)^2</p>
+      <p>De macht 2<sup>3</sup> komt twee keer voor:</p>
+      <p class="formula">(2^3)^2 = 2^3 × 2^3 = 2^6</p>
+
+      <h3>9. Machten met negatieve grondtallen</h3>
+      <p>Ook negatieve getallen kunnen een grondtal zijn.</p>
+      <p>Bij een even exponent wordt het resultaat positief:</p>
+      <p class="formula">(−3)^2 = (−3) × (−3) = 9</p>
+      <p>Bij een oneven exponent blijft het resultaat negatief:</p>
+      <p class="formula">(−3)^3 = (−3) × (−3) × (−3) = −27</p>
+<p>De haakjes zijn belangrijk wanneer je een negatief getal tot een macht verheft.</p>
+
+<p>De haakjes betekenen dat het volledige getal <span class="formula-inline">−3</span> het grondtal is:</p>
+
+<p class="formula"> (−3)^2 = (−3) × (−3) = 9 </p>
+
+<p>Zonder haakjes betekent dit iets anders. De macht hoort dan alleen bij de <span class="formula-inline">3</span>. Het minteken staat ervoor:</p>
+
+<p class="formula"> −3^2 = −(3^2) = −9 </p>
+
+<div class="callout"> <strong>Onthoud:</strong> staan de haakjes rond het negatieve getal, dan wordt het hele getal verheven tot de macht. Zonder haakjes wordt eerst de macht berekend en komt het minteken daarna. </div>
+
+<p>Dit verschil wordt vooral duidelijk bij een even exponent.</p>
+
+<p>Bij een oneven exponent blijft het negatieve teken behouden:</p>
+
+<p class="formula"> (−2)^3 = (−2) × (−2) × (−2) = −8 </p>
+
+<p>De haakjes maken dus duidelijk <strong>welk getal het grondtal is</strong>.</p>
+      
+
+
+<h3>10. Machten en volgorde van bewerkingen</h3>
+      <p><strong>Machten hebben voorrang op vermenigvuldigen, delen, optellen en aftrekken.</strong></p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">3 + 2^3 = 3 + 8 = 11</p>
+      <p>We berekenen dus eerst de macht.</p>
+      <p>Haakjes kunnen de volgorde veranderen:</p>
+      <p class="formula">(3 + 2)^3 = 5^3 = 125</p>
+
+      <h3>11. Machten gebruiken om grote getallen te schrijven</h3>
+      <p>Grote getallen kunnen we compact schrijven met machten van 10.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">1 000 000 = 10^6</p>
+      <p>Dit is een eerste stap naar <strong>wetenschappelijke notatie</strong>, die we later behandelen.</p>
+
+      <h3>12. Een handige strategie</h3>
+      <p>Wanneer je een macht tegenkomt:</p>
+      <ol>
+        <li>zoek het <strong>grondtal</strong>;</li>
+        <li>zoek de <strong>exponent</strong>;</li>
+        <li>schrijf de macht eventueel als herhaalde vermenigvuldiging;</li>
+        <li>reken daarna uit of gebruik een passende rekenregel.</li>
+      </ol>
+
+      <h3>13. Samenvatting</h3>
+      <div class="callout">
+        <p>Een macht is een korte schrijfwijze voor een herhaalde vermenigvuldiging.</p>
+        <p class="formula">a^n = a × a × ... × a</p>
+        <p>Het getal <span class="formula-inline">a</span> is het grondtal en <span class="formula-inline">n</span> is de exponent.</p>
+        <p>Belangrijke regels zijn:</p>
+        <p class="formula">a^m × a^n = a^{(m+n)}</p>
+        <p class="formula">a^m ÷ a^n = a^{(m−n)}</p>
+        <p class="formula">(a^m)^n = a^{(m × n)}</p>
+      </div>
+    `,
+    practice: [
+      { id: "p110-1", question: "Schrijf 3 × 3 × 3 × 3 als een macht.", answer: ["3^4"] },
+      { id: "p110-2", question: "Bereken 2^5.", answer: ["32"] },
+      { id: "p110-3", question: "Wat is het grondtal in 7^3?", answer: ["7"] },
+      { id: "p110-4", question: "Wat is de exponent in 5^4?", answer: ["4"] },
+      { id: "p110-5", question: "Bereken 10^3.", answer: ["1000", "1 000"] },
+      { id: "p110-6", question: "Bereken 6^2.", answer: ["36"] },
+      { id: "p110-7", question: "Bereken 9^1.", answer: ["9"] },
+      { id: "p110-8", question: "Bereken 8^0.", answer: ["1"] },
+      { id: "p110-9", question: "Bereken 2^3 × 2^2.", answer: ["32"] },
+      { id: "p110-10", question: "Bereken 3^5 ÷ 3^2.", answer: ["27"] },
+      { id: "p110-11", question: "Bereken (2^2)^3.", answer: ["64"] },
+      { id: "p110-12", question: "Bereken (−4)^2.", answer: ["16"] },
+      { id: "p110-13", question: "Bereken (−2)^3.", answer: ["-8", "−8"] },
+      { id: "p110-14", question: "Bereken 4 + 2^3.", answer: ["12"] },
+      { id: "p110-15", question: "Schrijf 100 000 als een macht van 10.", answer: ["10^5"] }
+    ],
+    exam: [
+      { id: "e110-1", question: "Schrijf 5 × 5 × 5 × 5 × 5 als een macht.", answer: ["5^5"] },
+      { id: "e110-2", question: "Bereken 4^3.", answer: ["64"] },
+      { id: "e110-3", question: "Bereken 10^6.", answer: ["1000000", "1 000 000"] },
+      { id: "e110-4", question: "Bereken 2^4 × 2^3.", answer: ["128"] },
+      { id: "e110-5", question: "Bereken 5^4 ÷ 5^2.", answer: ["25"] },
+      { id: "e110-6", question: "Bereken (3^2)^2.", answer: ["81"] },
+      { id: "e110-7", question: "Bereken (−5)^2 + 2^3.", answer: ["33"] },
+      { id: "e110-8", question: "Bereken 2 + 3^2 × 2.", answer: ["20"] }
+    ]
+  },
+  {
+    id: "1.11",
+    title: "Wortels",
+    goal: "Vierkantswortels begrijpen, berekenen en gebruiken als omgekeerde bewerking van kwadrateren.",
+    theory: /* html */`
+      <h2>Wortels</h2>
+      <p><strong>Doel:</strong> vierkantswortels begrijpen, berekenen, schatten en gebruiken.</p>
+
+      <h3>1. Van kwadrateren naar terugrekenen</h3>
+      <p>In 1.10 leerden we machten. In het bijzonder leerden we kwadrateren: een getal vermenigvuldigen met zichzelf.</p>
+      <p class="formula">5^2 = 5 × 5 = 25</p>
+      <p>Nu stellen we de omgekeerde vraag:</p>
+      <p>Welk getal moeten we met zichzelf vermenigvuldigen om 25 te krijgen?</p>
+      <p>Het antwoord is 5.</p>
+      <p>Deze omgekeerde bewerking noemen we de <strong>vierkantswortel</strong>.</p>
+
+      <h3>2. Het wortelteken</h3>
+      <p>We schrijven de vierkantswortel met het teken <strong>√</strong>.</p>
+      <p class="formula">√25 = 5</p>
+      <p>We lezen dit als: “de vierkantswortel van 25 is 5”.</p>
+      <div class="callout"><strong>Belangrijk:</strong> √25 betekent het niet-negatieve getal dat in het kwadraat 25 geeft.</div>
+
+      <h3>3. Kwadrateren en worteltrekken zijn omgekeerde bewerkingen</h3>
+      <p>Kwadrateren en de vierkantswortel zijn elkaars omgekeerde bewerkingen.</p>
+      <p class="formula">7^2 = 49</p>
+      <p class="formula">√49 = 7</p>
+      <p>Je kunt dus vanuit 7 naar 49 gaan door te kwadrateren en vanuit 49 terug naar 7 door de vierkantswortel te nemen.</p>
+
+      <h3>4. Volmaakte kwadraten</h3>
+      <p>Een getal dat het kwadraat is van een geheel getal noemen we een <strong>volmaakt kwadraat</strong>.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">1, 4, 9, 16, 25, 36, 49, 64, 81, 100</p>
+      <p>Want:</p>
+      <p class="formula">1^2 = 1</p>
+      <p class="formula">2^2 = 4</p>
+      <p class="formula">3^2 = 9</p>
+      <p class="formula">4^2 = 16</p>
+      <p>enzovoort.</p>
+
+      <h3>5. Vierkantswortels uitrekenen</h3>
+      <p>Als je een volmaakt kwadraat herkent, kun je de wortel meteen bepalen.</p>
+      <p class="formula">√36 = 6</p>
+      <p>want:</p>
+      <p class="formula">6^2 = 36</p>
+      <p>Evenzo:</p>
+      <p class="formula">√81 = 9</p>
+
+      <h3>6. De vierkantswortel is niet hetzelfde als delen door 2</h3>
+      <p>Een veelgemaakte fout is denken dat je voor een vierkantswortel het getal door 2 moet delen.</p>
+      <p>Dat klopt niet.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">√36 = 6</p>
+      <p>maar:</p>
+      <p class="formula">36 ÷ 2 = 18</p>
+      <p>De vierkantswortel vraagt dus niet naar de helft, maar naar het getal dat je met zichzelf moet vermenigvuldigen.</p>
+
+      <h3>7. Wortels van 0 en 1</h3>
+      <p>Ook 0 en 1 hebben een vierkantswortel.</p>
+      <p class="formula">√0 = 0</p>
+      <p class="formula">√1 = 1</p>
+      <p>Dit volgt rechtstreeks uit:</p>
+      <p class="formula">0^2 = 0</p>
+      <p class="formula">1^2 = 1</p>
+
+      <h3>8. Waarom √25 niet −5 is</h3>
+      <p>We weten dat:</p>
+      <p class="formula">5^2 = 25</p>
+      <p>maar ook:</p>
+      <p class="formula">(−5)^2 = 25</p>
+      <p>Toch schrijven we:</p>
+      <p class="formula">√25 = 5</p>
+      <p>Het wortelteken verwijst naar de <strong>niet-negatieve</strong> vierkantswortel.</p>
+      <p>Dit is belangrijk om het begrip vierkantswortel eenduidig te maken.</p>
+
+      <h3>9. Wortels schatten</h3>
+      <p>Niet elk getal heeft een gehele vierkantswortel.</p>
+      <p>Neem bijvoorbeeld 20.</p>
+      <p>We weten:</p>
+      <p class="formula">4^2 = 16</p>
+      <p class="formula">5^2 = 25</p>
+      <p>Dus ligt √20 tussen 4 en 5:</p>
+      <p class="formula">4 &lt; √20 &lt; 5</p>
+      <p>Zo kunnen we een wortel al schatten zonder hem precies te berekenen.</p>
+
+      <h3>10. Wortels vergelijken</h3>
+      <p>We kunnen wortels vergelijken door eerst te kijken tussen welke kwadraten ze liggen.</p>
+      <p>Bijvoorbeeld: welke is groter, √30 of √40?</p>
+      <p>Omdat:</p>
+      <p class="formula">30 &lt; 40</p>
+      <p>geldt ook:</p>
+      <p class="formula">√30 &lt; √40</p>
+      <p>Voor niet-negatieve getallen blijft de volgorde behouden wanneer we de vierkantswortel nemen.</p>
+
+      <h3>11. Een wortel controleren</h3>
+      <p>Je kunt een berekende vierkantswortel altijd controleren door het antwoord te kwadrateren.</p>
+      <p>Stel dat je denkt dat:</p>
+      <p class="formula">√144 = 12</p>
+      <p>Controleer dan:</p>
+      <p class="formula">12^2 = 144</p>
+      <p>De uitkomst klopt dus.</p>
+
+      <h3>12. Wortels en machten</h3>
+      <p>Het verband tussen machten en wortels kunnen we kort schrijven als:</p>
+      <p class="formula">√(a^2) = a</p>
+      <p>voor niet-negatieve <span class="formula-inline">a</span>.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">√(8^2) = 8</p>
+      <p>Dit laat opnieuw zien dat worteltrekken en kwadrateren elkaars omgekeerde bewerkingen zijn.</p>
+
+      <h3>13. Wortels en negatieve getallen</h3>
+      <p>In deze cursus werken we hier met <strong>reële getallen</strong>.</p>
+      <p>Daarom bestaat bijvoorbeeld √9 wel:</p>
+      <p class="formula">√9 = 3</p>
+      <p>maar √(−9) is geen reëel getal.</p>
+      <p>Complexe getallen behandelen we later in de cursus.</p>
+
+      <h3>14. Wortels in breuken</h3>
+      <p>Ook breuken kunnen een vierkantswortel hebben.</p>
+      <p>Bij eenvoudige gevallen kunnen we teller en noemer afzonderlijk herkennen:</p>
+      <p class="formula">√(1/4) = 1/2</p>
+      <p>want:</p>
+      <p class="formula">(1/2)^2 = 1/4</p>
+      <p>We gebruiken dit voorlopig alleen bij eenvoudige, herkenbare wortels.</p>
+
+      <h3>15. Wortels van producten</h3>
+      <p>Voor niet-negatieve getallen geldt een belangrijke eigenschap:</p>
+      <p class="formula">√(a × b) = √a × √b</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">√36 = √(4 × 9) = √4 × √9 = 2 × 3 = 6</p>
+      <p>Deze regel kan handig zijn om een wortel eenvoudiger te maken.</p>
+
+      <h3>16. Een wortel vereenvoudigen</h3>
+      <p>Soms zit er een volmaakt kwadraat in een getal.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">√72 = √(36 × 2)</p>
+      <p>Daarom:</p>
+      <p class="formula">√72 = √36 × √2 = 6√2</p>
+      <p>We hebben de wortel dus vereenvoudigd, ook al is √2 zelf geen geheel getal.</p>
+
+      <h3>17. Veelgemaakte fouten</h3>
+      <ul>
+        <li>√36 is 6, niet 18.</li>
+        <li>√25 is 5, niet ±5.</li>
+        <li>Niet elke wortel is een geheel getal.</li>
+        <li>Een vierkantswortel is niet hetzelfde als delen door 2.</li>
+        <li>Bij een negatieve waarde onder het wortelteken bestaat in de reële getallen geen uitkomst.</li>
+      </ul>
 
       <h3>18. Samenvatting</h3>
-      <ul>
-        <li>Een priemgetal groter dan 1 heeft precies twee positieve delers: 1 en zichzelf.</li>
-        <li>1 is noch priem, noch samengesteld.</li>
-        <li>Een samengesteld getal kan worden ontbonden in factoren.</li>
-        <li>De priemfactorisatie schrijft een getal als product van priemgetallen.</li>
-        <li>Die priemfactorisatie is uniek, afgezien van de volgorde.</li>
-        <li>Priemfactorisatie wordt in 1.9 gebruikt voor GGD en KGV.</li>
-      </ul>
+      <div class="callout">
+        <p>De vierkantswortel is de omgekeerde bewerking van kwadrateren.</p>
+        <p class="formula">√25 = 5 omdat 5^2 = 25</p>
+        <p>Bij volmaakte kwadraten kunnen we de wortel exact bepalen.</p>
+        <p>Bij andere getallen kunnen we de wortel bijvoorbeeld tussen twee gehele getallen plaatsen.</p>
+      </div>
     `,
     practice: [
-      { id: "p18-1", question: "Welke van deze getallen zijn priem: 11, 15, 17, 21?", answer: ["11", "17"] },
-      { id: "p18-2", question: "Is 2 een priemgetal?", answer: ["ja"] },
-      { id: "p18-3", question: "Is 1 een priemgetal?", answer: ["nee"] },
-      { id: "p18-4", question: "Ontbind 18 in priemfactoren.", answer: ["2 × 3 × 3"] },
-      { id: "p18-5", question: "Ontbind 24 in priemfactoren.", answer: ["2 × 2 × 2 × 3"] },
-      { id: "p18-6", question: "Ontbind 30 in priemfactoren.", answer: ["2 × 3 × 5"] },
-      { id: "p18-7", question: "Ontbind 42 in priemfactoren.", answer: ["2 × 3 × 7"] },
-      { id: "p18-8", question: "Ontbind 56 in priemfactoren.", answer: ["2 × 2 × 2 × 7"] },
-      { id: "p18-9", question: "Ontbind 75 in priemfactoren.", answer: ["3 × 5 × 5"] },
-      { id: "p18-10", question: "Ontbind 84 in priemfactoren.", answer: ["2 × 2 × 3 × 7"] },
-      { id: "p18-11", question: "Ontbind 90 in priemfactoren.", answer: ["2 × 3 × 3 × 5"] },
-      { id: "p18-12", question: "Is 91 een priemgetal?", answer: ["nee"] },
-      { id: "p18-13", question: "Is 97 een priemgetal?", answer: ["ja"] },
-      { id: "p18-14", question: "Wat zijn de gemeenschappelijke priemfactoren van 18 en 30?", answer: ["2 en 3", "2, 3"] },
-      { id: "p18-15", question: "Schrijf 60 als product van priemfactoren.", answer: ["2 × 2 × 3 × 5"] }
+      { id: "p111-1", question: "Bereken √25.", answer: ["5"] },
+      { id: "p111-2", question: "Bereken √64.", answer: ["8"] },
+      { id: "p111-3", question: "Bereken √81.", answer: ["9"] },
+      { id: "p111-4", question: "Bereken √0.", answer: ["0"] },
+      { id: "p111-5", question: "Bereken √1.", answer: ["1"] },
+      { id: "p111-6", question: "Tussen welke twee gehele getallen ligt √20?", answer: ["4 en 5", "4,5"] },
+      { id: "p111-7", question: "Tussen welke twee gehele getallen ligt √50?", answer: ["7 en 8", "7,8"] },
+      { id: "p111-8", question: "Welke is groter: √30 of √40?", answer: ["√40", "40"] },
+      { id: "p111-9", question: "Bereken √144.", answer: ["12"] },
+      { id: "p111-10", question: "Controleer √169 door het antwoord te kwadrateren. Wat is het antwoord?", answer: ["13"] },
+      { id: "p111-11", question: "Bereken √(1/4).", answer: ["1/2", "0,5"] },
+      { id: "p111-12", question: "Bereken √(4 × 9).", answer: ["6"] },
+      { id: "p111-13", question: "Vereenvoudig √72 tot de vorm a√2.", answer: ["6√2"] },
+      { id: "p111-14", question: "Is √(−9) een reëel getal?", answer: ["nee"] },
+      { id: "p111-15", question: "Welke positieve gehele getallen hebben als kwadraat 1, 4, 9 en 16?", answer: ["1, 2, 3 en 4", "1 2 3 4"] }
     ],
     exam: [
-      { id: "e18-1", question: "Welke van 29, 35, 37 en 39 zijn priemgetallen?", answer: ["29", "37"] },
-      { id: "e18-2", question: "Ontbind 72 in priemfactoren.", answer: ["2 × 2 × 2 × 3 × 3"] },
-      { id: "e18-3", question: "Ontbind 96 in priemfactoren.", answer: ["2 × 2 × 2 × 2 × 2 × 3"] },
-      { id: "e18-4", question: "Ontbind 105 in priemfactoren.", answer: ["3 × 5 × 7"] },
-      { id: "e18-5", question: "Is 113 een priemgetal?", answer: ["ja"] },
-      { id: "e18-6", question: "Welke priemfactoren komen voor in zowel 84 als 126?", answer: ["2, 3, 7", "2 en 3 en 7"] },
-      { id: "e18-7", question: "Ontbind 180 in priemfactoren.", answer: ["2 × 2 × 3 × 3 × 5"] },
-      { id: "e18-8", question: "Leg uit waarom 1 geen priemgetal is.", answer: ["1 heeft niet precies twee positieve delers", "1 heeft maar één positieve deler"] }
-    ]
-  },
-  {
-    id: "1.9",
-    title: "GGD, KGV en het algoritme van Euclides",
-    goal: "De grootste gemene deler en het kleinste gemene veelvoud berekenen en het algoritme van Euclides begrijpen.",
-    theory: /* html */`
-      <h2>GGD, KGV en het algoritme van Euclides</h2>
-      <p><strong>Doel:</strong> de GGD en het KGV van getallen bepalen en verschillende methoden gebruiken om ze te berekenen.</p>
-
-      <h3>1. Van gemeenschappelijke delers naar de GGD</h3>
-      <p>In 1.7 leerden we wat delers zijn en in 1.8 zagen we hoe priemfactorisatie de bouwstenen van getallen zichtbaar maakt. Als twee getallen dezelfde delers hebben, noemen we die <strong>gemeenschappelijke delers</strong>.</p>
-      <p>Bijvoorbeeld voor 12 en 18:</p>
-      <p class="formula">Delers(12) = {1, 2, 3, 4, 6, 12}</p>
-      <p class="formula">Delers(18) = {1, 2, 3, 6, 9, 18}</p>
-      <p>De gemeenschappelijke delers zijn 1, 2, 3 en 6. De grootste daarvan is 6.</p>
-
-      <h3>2. De grootste gemene deler</h3>
-      <p>De <strong>grootste gemene deler</strong>, afgekort <strong>GGD</strong>, van twee of meer natuurlijke getallen is de grootste positieve deler die ze gemeenschappelijk hebben.</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(12, 18) = 6</p>
-      <div class="callout"><strong>GGD = grootste gemeenschappelijke deler.</strong></div>
-
-      <h3>3. De GGD gebruiken bij breuken</h3>
-      <p>De GGD is handig om een breuk in één stap maximaal te vereenvoudigen.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">GGD(84, 126) = 42</p>
-      <p>Daarom:</p>
-      <p class="formula">\frac{84}{126} = \frac{84 ÷ 42}{126 ÷ 42} = \frac{2}{3}</p>
-      <p>Omdat 2 en 3 geen gemeenschappelijke deler groter dan 1 hebben, is de breuk verder niet te vereenvoudigen.</p>
-
-      <h3>4. GGD vinden door alle delers te zoeken</h3>
-      <p>Voor kleine getallen kun je de GGD bepalen door de delers van beide getallen op te schrijven.</p>
-      <p>Bijvoorbeeld voor 20 en 30:</p>
-      <p class="formula">Delers(20) = {1, 2, 4, 5, 10, 20}</p>
-      <p class="formula">Delers(30) = {1, 2, 3, 5, 6, 10, 15, 30}</p>
-      <p>De grootste gemeenschappelijke deler is 10:</p>
-      <p class="formula">GGD(20, 30) = 10</p>
-
-      <h3>5. GGD met priemfactorisatie</h3>
-      <p>Met priemfactorisatie kunnen we de gemeenschappelijke priemfactoren rechtstreeks zoeken.</p>
-      <p>Neem 36 en 60:</p>
-      <p class="formula">36 = 2 × 2 × 3 × 3</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>De gemeenschappelijke priemfactoren zijn 2, 2 en 3. Hun product is:</p>
-      <p class="formula">2 × 2 × 3 = 12</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(36, 60) = 12</p>
-
-      <h3>6. Gemeenschappelijke factoren tellen</h3>
-      <p>Bij priemfactorisatie moet je opletten dat je een gemeenschappelijke priemfactor niet vaker gebruikt dan hij in beide getallen voorkomt.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">24 = 2 × 2 × 2 × 3</p>
-      <p class="formula">36 = 2 × 2 × 3 × 3</p>
-      <p>Voor de GGD nemen we twee factoren 2 en één factor 3:</p>
-      <p class="formula">GGD(24, 36) = 2 × 2 × 3 = 12</p>
-
-      <h3>7. Van delers naar veelvouden: het KGV</h3>
-      <p>Bij de GGD kijken we naar <strong>delers</strong>. Bij het <strong>kleinste gemene veelvoud</strong>, afgekort <strong>KGV</strong>, kijken we naar veelvouden.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">Veelvouden(4) = 4, 8, 12, 16, 20, 24, ...</p>
-      <p class="formula">Veelvouden(6) = 6, 12, 18, 24, ...</p>
-      <p>Het kleinste positieve veelvoud dat in beide lijsten voorkomt is 12.</p>
-      <p class="formula">KGV(4, 6) = 12</p>
-
-      <h3>8. Het KGV</h3>
-      <p>Het <strong>kleinste gemene veelvoud</strong> van twee of meer natuurlijke getallen is het kleinste positieve veelvoud dat voor alle getallen een veelvoud is.</p>
-      <div class="callout"><strong>KGV = kleinste gemeenschappelijke veelvoud.</strong></div>
-      <p>We zoeken dus niet naar 0, ook al is 0 een veelvoud van elk natuurlijk getal. We nemen het <strong>kleinste positieve</strong> gemeenschappelijke veelvoud.</p>
-
-      <h3>9. KGV vinden door veelvouden op te schrijven</h3>
-      <p>Voor kleine getallen kun je de veelvouden opschrijven tot je een gemeenschappelijk veelvoud vindt.</p>
-      <p>Voor 8 en 12:</p>
-      <p class="formula">8, 16, 24, 32, ...</p>
-      <p class="formula">12, 24, 36, ...</p>
-      <p>Dus:</p>
-      <p class="formula">KGV(8, 12) = 24</p>
-
-      <h3>10. KGV met priemfactorisatie</h3>
-      <p>Ook het KGV kunnen we met priemfactorisatie vinden. Nu nemen we juist <strong>iedere priemfactor zo vaak als hij in minstens één van de getallen voorkomt</strong>.</p>
-      <p>Voor 12 en 18:</p>
-      <p class="formula">12 = 2 × 2 × 3</p>
-      <p class="formula">18 = 2 × 3 × 3</p>
-      <p>We hebben nodig: twee factoren 2 en twee factoren 3.</p>
-      <p class="formula">KGV(12, 18) = 2 × 2 × 3 × 3 = 36</p>
-
-      <h3>11. GGD en KGV: twee verschillende vragen</h3>
-      <p>GGD en KGV lijken op elkaar, maar beantwoorden een andere vraag.</p>
-      <ul>
-        <li><strong>GGD:</strong> welke grootste deler hebben de getallen gemeenschappelijk?</li>
-        <li><strong>KGV:</strong> wat is het kleinste positieve veelvoud dat de getallen gemeenschappelijk hebben?</li>
-      </ul>
-      <p>Een handige geheugensteun:</p>
-      <p class="formula">GGD → delen</p>
-      <p class="formula">KGV → veelvouden</p>
-
-      <h3>12. Wanneer gebruik je de GGD?</h3>
-      <p>De GGD is nuttig wanneer je iets in <strong>gelijke, zo groot mogelijke groepen</strong> wilt verdelen zonder rest.</p>
-      <p>Bijvoorbeeld: 24 rode en 36 blauwe knikkers verdelen in een zo groot mogelijk aantal identieke pakketjes. Het aantal pakketjes wordt dan bepaald door de GGD van 24 en 36.</p>
-      <p class="formula">GGD(24, 36) = 12</p>
-      <p>Je kunt dus 12 identieke pakketjes maken, met 2 rode en 3 blauwe knikkers per pakketje.</p>
-
-      <h3>13. Wanneer gebruik je het KGV?</h3>
-      <p>Het KGV is nuttig wanneer verschillende regelmatige gebeurtenissen <strong>tegelijk willen samenvallen</strong>.</p>
-      <p>Stel dat een lamp elke 6 seconden knippert en een andere elke 8 seconden. Ze knipperen opnieuw tegelijk na:</p>
-      <p class="formula">KGV(6, 8) = 24</p>
-      <p>Na 24 seconden vallen de twee momenten weer samen.</p>
-
-      <h3>14. De relatie tussen GGD en KGV</h3>
-      <p>Voor twee positieve gehele getallen <strong>a</strong> en <strong>b</strong> bestaat een belangrijke relatie:</p>
-      <p class="formula">GGD(a, b) × KGV(a, b) = a × b</p>
-      <p>Bijvoorbeeld voor 12 en 18:</p>
-      <p class="formula">6 × 36 = 12 × 18 = 216</p>
-      <p>Deze relatie is een handige controle wanneer je de GGD en het KGV hebt berekend.</p>
-
-      <h3>15. Het algoritme van Euclides</h3>
-      <p>Voor grote getallen is het niet praktisch om alle delers op te schrijven. Het <strong>algoritme van Euclides</strong> berekent de GGD met herhaalde delingen.</p>
-      <p>Het basisidee is:</p>
-      <p class="formula">GGD(a, b) = GGD(b, a mod b)</p>
-      <p>Hierbij is <strong>mod</strong> de rest bij een gehele deling.</p>
-
-      <h3>16. Euclides stap voor stap</h3>
-      <p>We berekenen de GGD van 252 en 105.</p>
-      <p class="formula">252 = 2 × 105 + 42</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(252, 105) = GGD(105, 42)</p>
-      <p>Nu:</p>
-      <p class="formula">105 = 2 × 42 + 21</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(105, 42) = GGD(42, 21)</p>
-      <p>En:</p>
-      <p class="formula">42 = 2 × 21 + 0</p>
-      <p>De laatste niet-nul rest is 21. Daarom:</p>
-      <p class="formula">GGD(252, 105) = 21</p>
-
-      <h3>17. Waarom werkt Euclides?</h3>
-      <p>Als we <strong>a</strong> delen door <strong>b</strong> en een rest <strong>r</strong> krijgen, dan geldt:</p>
-      <p class="formula">a = qb + r</p>
-      <p>Elke gemeenschappelijke deler van <strong>a</strong> en <strong>b</strong> deelt dan ook de rest <strong>r = a − qb</strong>. Omgekeerd geldt hetzelfde voor een gemeenschappelijke deler van <strong>b</strong> en <strong>r</strong>. Daarom hebben beide paren dezelfde gemeenschappelijke delers en dus dezelfde GGD.</p>
-
-      <h3>18. Samenvatting en strategie</h3>
-      <ul>
-        <li>De GGD is de grootste positieve gemeenschappelijke deler.</li>
-        <li>Het KGV is het kleinste positieve gemeenschappelijke veelvoud.</li>
-        <li>Voor kleine getallen kun je delers of veelvouden opschrijven.</li>
-        <li>Met priemfactorisatie neem je voor de GGD de gemeenschappelijke factoren en voor het KGV alle benodigde factoren.</li>
-        <li>De relatie <span class="formula-inline">GGD(a,b) × KGV(a,b) = a × b</span> kan als controle dienen.</li>
-        <li>Het algoritme van Euclides is een efficiënte methode om de GGD te berekenen.</li>
-      </ul>
-      <div class="callout"><strong>Vooruitblik:</strong> met GGD en KGV hebben we de belangrijkste bouwstenen van de deelbaarheidsrekenkunde verzameld. In de volgende onderdelen kunnen we deze kennis combineren met machten en wortels.</div>
-    `,
-    practice: [
-      { id: "p19-1", question: "Bereken GGD(12, 18).", answer: ["6"] },
-      { id: "p19-2", question: "Bereken GGD(20, 30).", answer: ["10"] },
-      { id: "p19-3", question: "Bereken GGD(24, 36).", answer: ["12"] },
-      { id: "p19-4", question: "Bereken GGD(45, 60).", answer: ["15"] },
-      { id: "p19-5", question: "Bereken KGV(4, 6).", answer: ["12"] },
-      { id: "p19-6", question: "Bereken KGV(8, 12).", answer: ["24"] },
-      { id: "p19-7", question: "Bereken KGV(6, 8).", answer: ["24"] },
-      { id: "p19-8", question: "Bereken KGV(10, 15).", answer: ["30"] },
-      { id: "p19-9", question: "Bereken GGD(36, 60) met priemfactorisatie.", answer: ["12"] },
-      { id: "p19-10", question: "Bereken KGV(12, 18) met priemfactorisatie.", answer: ["36"] },
-      { id: "p19-11", question: "Je hebt 24 rode en 36 blauwe knikkers. Wat is het grootste aantal identieke pakketjes dat je zonder rest kunt maken?", answer: ["12"] },
-      { id: "p19-12", question: "Een lamp knippert elke 6 seconden en een andere elke 8 seconden. Na hoeveel seconden knipperen ze opnieuw samen?", answer: ["24"] },
-      { id: "p19-13", question: "Bereken GGD(252, 105) met het algoritme van Euclides.", answer: ["21"] },
-      { id: "p19-14", question: "Als GGD(12, 18) = 6, wat is dan KGV(12, 18)?", answer: ["36"] },
-      { id: "p19-15", question: "Vereenvoudig 84/126 met behulp van de GGD.", answer: ["2/3"] }
-    ],
-    exam: [
-      { id: "e19-1", question: "Bereken GGD(48, 72).", answer: ["24"] },
-      { id: "e19-2", question: "Bereken GGD(84, 126).", answer: ["42"] },
-      { id: "e19-3", question: "Bereken KGV(12, 20).", answer: ["60"] },
-      { id: "e19-4", question: "Bereken KGV(18, 24).", answer: ["72"] },
-      { id: "e19-5", question: "Bereken GGD(252, 105) met Euclides.", answer: ["21"] },
-      { id: "e19-6", question: "Bereken GGD(391, 299) met Euclides.", answer: ["23"] },
-      { id: "e19-7", question: "Als GGD(36, 60) = 12, bereken dan KGV(36, 60).", answer: ["180"] },
-      { id: "e19-8", question: "Vereenvoudig 144/216 met behulp van de GGD.", answer: ["2/3"] }
-    ]
-  },
-  {
-    id: "1.8",
-    title: "Priemgetallen en factorisatie",
-    goal: "Priemgetallen herkennen en getallen ontbinden in priemfactoren.",
-    theory: /* html */`
-      <h2>Priemgetallen en factorisatie</h2>
-      <p><strong>Doel:</strong> priemgetallen herkennen, samengestelde getallen ontbinden en priemfactorisatie gebruiken.</p>
-
-      <h3>1. Van delers naar priemgetallen</h3>
-      <p>In 1.7 leerden we dat een getal delers heeft. Sommige getallen hebben precies twee positieve delers: <strong>1 en zichzelf</strong>. Deze getallen noemen we <strong>priemgetallen</strong>.</p>
-      <p>Bijvoorbeeld 7 heeft alleen de delers 1 en 7. Daarom is 7 een priemgetal.</p>
-      <div class="callout"><strong>Een priemgetal</strong> is een natuurlijk getal groter dan 1 met precies twee positieve delers: 1 en het getal zelf.</div>
-
-      <h3>2. Priemgetallen herkennen</h3>
-      <p>De eerste priemgetallen zijn:</p>
-      <p class="formula">2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...</p>
-      <p>Het getal 2 is bijzonder: het is het <strong>enige even priemgetal</strong>. Elk ander even getal is deelbaar door 2 en heeft dus meer dan twee positieve delers.</p>
-
-      <h3>3. Samengestelde getallen</h3>
-      <p>Een natuurlijk getal groter dan 1 dat geen priemgetal is, noemen we een <strong>samengesteld getal</strong>. Zo heeft 12 bijvoorbeeld de delers 1, 2, 3, 4, 6 en 12.</p>
-      <p>Het getal 1 is een uitzondering: <strong>1 is noch priem, noch samengesteld</strong>.</p>
-
-      <h3>4. Elk samengesteld getal heeft priemdelers</h3>
-      <p>Als een getal samengesteld is, kunnen we het schrijven als een product van kleinere natuurlijke getallen. Die factoren kunnen we op hun beurt verder ontbinden.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">12 = 3 × 4 = 3 × 2 × 2</p>
-      <p>We zijn uiteindelijk uitgekomen bij alleen priemgetallen.</p>
-
-      <h3>5. Ontbinden in factoren</h3>
-      <p>Een getal schrijven als een product van factoren noemen we <strong>factoriseren</strong> of <strong>ontbinden in factoren</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">24 = 6 × 4</p>
-      <p>Maar we kunnen verdergaan:</p>
-      <p class="formula">24 = 2 × 3 × 2 × 2</p>
-      <p>Alle factoren zijn nu priem.</p>
-
-      <h3>6. Priemfactorisatie</h3>
-      <p>Een ontbinding waarin alle factoren priemgetallen zijn, noemen we de <strong>priemfactorisatie</strong>.</p>
-      <p>Voor 60 krijgen we bijvoorbeeld:</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>We kunnen dezelfde priemfactoren ook overzichtelijker schrijven met machten. Dat leren we in 1.10; voorlopig is het product voldoende.</p>
-
-      <h3>7. Een factorboom</h3>
-      <p>Een <strong>factorboom</strong> helpt om een getal stap voor stap te ontbinden. Kies telkens een factorisatie en ga door tot elke tak eindigt in een priemgetal.</p>
-      <p>Voor 36 kan dat bijvoorbeeld via:</p>
-      <p class="formula">36 = 4 × 9 = 2 × 2 × 3 × 3</p>
-      <p>De volgorde waarin je de factoren vindt, kan verschillen. De uiteindelijke priemfactoren zijn dezelfde, alleen eventueel in een andere volgorde.</p>
-
-      <h3>8. De fundamentele eigenschap van priemfactorisatie</h3>
-      <p>Elk natuurlijk getal groter dan 1 kan als product van priemgetallen worden geschreven. Bovendien is die priemfactorisatie, afgezien van de volgorde van de factoren, <strong>uniek</strong>.</p>
-      <p>Zo is:</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>en niet een andere verzameling priemfactoren die opnieuw 60 oplevert.</p>
-
-      <h3>9. Factoriseren met kleine priemgetallen</h3>
-      <p>Bij het factoriseren is het handig om eerst te controleren op deelbaarheid door kleine priemgetallen:</p>
-      <p class="formula">2, 3, 5, 7, 11, 13, ...</p>
-      <p>Gebruik de deelbaarheidsregels uit 1.7 wanneer die beschikbaar zijn. Zo zie je snel of een getal verder ontbonden kan worden.</p>
-
-      <h3>10. Een voorbeeld stap voor stap</h3>
-      <p>We ontbinden 84. Het getal is even, dus we delen door 2:</p>
-      <p class="formula">84 = 2 × 42</p>
-      <p>Nogmaals door 2:</p>
-      <p class="formula">42 = 2 × 21</p>
-      <p>En 21 is deelbaar door 3:</p>
-      <p class="formula">21 = 3 × 7</p>
-      <p>Dus:</p>
-      <p class="formula">84 = 2 × 2 × 3 × 7</p>
-
-      <h3>11. Factoriseren vanuit een deler</h3>
-      <p>Je hoeft niet altijd met 2 te beginnen. Je mag iedere geschikte deler kiezen en daarna verder ontbinden.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">90 = 9 × 10 = 3 × 3 × 2 × 5</p>
-      <p>Je krijgt dus dezelfde priemfactorisatie, ook al heb je een andere eerste stap gekozen.</p>
-
-      <h3>12. Priemfactorisatie en delers</h3>
-      <p>De priemfactorisatie laat zien welke priemgetallen als bouwstenen in een getal zitten. Daarmee kunnen we later systematisch de delers van een getal bepalen.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">12 = 2 × 2 × 3</p>
-      <p>De priemfactoren 2 en 3 zijn de belangrijkste bouwstenen van 12.</p>
-
-      <h3>13. Gemeenschappelijke priemfactoren</h3>
-      <p>Als twee getallen dezelfde priemfactor bevatten, noemen we die factor <strong>gemeenschappelijk</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">18 = 2 × 3 × 3</p>
-      <p class="formula">30 = 2 × 3 × 5</p>
-      <p>De getallen 2 en 3 komen in beide priemfactorisaties voor. Dit idee wordt belangrijk bij de GGD in 1.9.</p>
-
-      <h3>14. Priemfactorisatie en breuken</h3>
-      <p>Priemfactorisatie kan helpen om te zien welke factoren in de teller en noemer van een breuk kunnen worden weggewerkt.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">\frac{18}{30} = \frac{2 × 3 × 3}{2 × 3 × 5} = \frac{3}{5}</p>
-      <p>De gemeenschappelijke factoren 2 en 3 kunnen we wegdelen. In 1.9 maken we dit proces systematischer met de grootste gemene deler.</p>
-
-      <h3>15. Is een getal priem?</h3>
-      <p>Om te onderzoeken of een getal priem is, moet je nagaan of het een deler heeft naast 1 en zichzelf. De deelbaarheidsregels helpen daarbij.</p>
-      <p>Voor grotere getallen hoeven we niet alle mogelijke delers te testen. Als een getal <strong>n</strong> samengesteld is, heeft het een deler die niet groter is dan <span class="formula-inline">√n</span>. Daarom volstaat het om priemdelers tot en met <span class="formula-inline">√n</span> te controleren.</p>
-
-      <h3>16. Voorbeeld: is 97 priem?</h3>
-      <p>We controleren de priemgetallen die niet groter zijn dan <span class="formula-inline">√97</span>. Omdat <span class="formula-inline">√97</span> kleiner is dan 10, volstaan 2, 3, 5 en 7.</p>
-      <ul>
-        <li>97 is niet deelbaar door 2;</li>
-        <li>de cijfersom is 16, dus 97 is niet deelbaar door 3;</li>
-        <li>97 eindigt niet op 0 of 5;</li>
-        <li>97 is niet deelbaar door 7.</li>
-      </ul>
-      <p>Daarom is 97 een priemgetal.</p>
-
-      <h3>17. Waarom factorisatie belangrijk is</h3>
-      <p>Priemfactorisatie is een van de belangrijkste manieren om de structuur van natuurlijke getallen zichtbaar te maken. Ze vormt de basis voor het berekenen van de <strong>GGD</strong> en het <strong>KGV</strong>, het vereenvoudigen van breuken en later ook het werken met machten.</p>
-      <div class="callout"><strong>Belangrijk idee:</strong> priemgetallen zijn de ondeelbare bouwstenen van de natuurlijke getallen groter dan 1.</div>
-
-      <h3>18. Samenvatting</h3>
-      <ul>
-        <li>Een priemgetal groter dan 1 heeft precies twee positieve delers: 1 en zichzelf.</li>
-        <li>1 is noch priem, noch samengesteld.</li>
-        <li>Een samengesteld getal kan worden ontbonden in factoren.</li>
-        <li>De priemfactorisatie schrijft een getal als product van priemgetallen.</li>
-        <li>Die priemfactorisatie is uniek, afgezien van de volgorde.</li>
-        <li>Priemfactorisatie wordt in 1.9 gebruikt voor GGD en KGV.</li>
-      </ul>
-    `,
-    practice: [
-      { id: "p18-1", question: "Welke van deze getallen zijn priem: 11, 15, 17, 21?", answer: ["11", "17"] },
-      { id: "p18-2", question: "Is 2 een priemgetal?", answer: ["ja"] },
-      { id: "p18-3", question: "Is 1 een priemgetal?", answer: ["nee"] },
-      { id: "p18-4", question: "Ontbind 18 in priemfactoren.", answer: ["2 × 3 × 3"] },
-      { id: "p18-5", question: "Ontbind 24 in priemfactoren.", answer: ["2 × 2 × 2 × 3"] },
-      { id: "p18-6", question: "Ontbind 30 in priemfactoren.", answer: ["2 × 3 × 5"] },
-      { id: "p18-7", question: "Ontbind 42 in priemfactoren.", answer: ["2 × 3 × 7"] },
-      { id: "p18-8", question: "Ontbind 56 in priemfactoren.", answer: ["2 × 2 × 2 × 7"] },
-      { id: "p18-9", question: "Ontbind 75 in priemfactoren.", answer: ["3 × 5 × 5"] },
-      { id: "p18-10", question: "Ontbind 84 in priemfactoren.", answer: ["2 × 2 × 3 × 7"] },
-      { id: "p18-11", question: "Ontbind 90 in priemfactoren.", answer: ["2 × 3 × 3 × 5"] },
-      { id: "p18-12", question: "Is 91 een priemgetal?", answer: ["nee"] },
-      { id: "p18-13", question: "Is 97 een priemgetal?", answer: ["ja"] },
-      { id: "p18-14", question: "Wat zijn de gemeenschappelijke priemfactoren van 18 en 30?", answer: ["2 en 3", "2, 3"] },
-      { id: "p18-15", question: "Schrijf 60 als product van priemfactoren.", answer: ["2 × 2 × 3 × 5"] }
-    ],
-    exam: [
-      { id: "e18-1", question: "Welke van 29, 35, 37 en 39 zijn priemgetallen?", answer: ["29", "37"] },
-      { id: "e18-2", question: "Ontbind 72 in priemfactoren.", answer: ["2 × 2 × 2 × 3 × 3"] },
-      { id: "e18-3", question: "Ontbind 96 in priemfactoren.", answer: ["2 × 2 × 2 × 2 × 2 × 3"] },
-      { id: "e18-4", question: "Ontbind 105 in priemfactoren.", answer: ["3 × 5 × 7"] },
-      { id: "e18-5", question: "Is 113 een priemgetal?", answer: ["ja"] },
-      { id: "e18-6", question: "Welke priemfactoren komen voor in zowel 84 als 126?", answer: ["2, 3, 7", "2 en 3 en 7"] },
-      { id: "e18-7", question: "Ontbind 180 in priemfactoren.", answer: ["2 × 2 × 3 × 3 × 5"] },
-      { id: "e18-8", question: "Leg uit waarom 1 geen priemgetal is.", answer: ["1 heeft niet precies twee positieve delers", "1 heeft maar één positieve deler"] }
-    ]
-  },
-  {
-    id: "1.9",
-    title: "GGD, KGV en het algoritme van Euclides",
-    goal: "De grootste gemene deler en het kleinste gemene veelvoud berekenen en het algoritme van Euclides begrijpen.",
-    theory: /* html */`
-      <h2>GGD, KGV en het algoritme van Euclides</h2>
-      <p><strong>Doel:</strong> de GGD en het KGV van getallen bepalen en verschillende methoden gebruiken om ze te berekenen.</p>
-
-      <h3>1. Van gemeenschappelijke delers naar de GGD</h3>
-      <p>In 1.7 leerden we wat delers zijn en in 1.8 zagen we hoe priemfactorisatie de bouwstenen van getallen zichtbaar maakt. Als twee getallen dezelfde delers hebben, noemen we die <strong>gemeenschappelijke delers</strong>.</p>
-      <p>Bijvoorbeeld voor 12 en 18:</p>
-      <p class="formula">Delers(12) = {1, 2, 3, 4, 6, 12}</p>
-      <p class="formula">Delers(18) = {1, 2, 3, 6, 9, 18}</p>
-      <p>De gemeenschappelijke delers zijn 1, 2, 3 en 6. De grootste daarvan is 6.</p>
-
-      <h3>2. De grootste gemene deler</h3>
-      <p>De <strong>grootste gemene deler</strong>, afgekort <strong>GGD</strong>, van twee of meer natuurlijke getallen is de grootste positieve deler die ze gemeenschappelijk hebben.</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(12, 18) = 6</p>
-      <div class="callout"><strong>GGD = grootste gemeenschappelijke deler.</strong></div>
-
-      <h3>3. De GGD gebruiken bij breuken</h3>
-      <p>De GGD is handig om een breuk in één stap maximaal te vereenvoudigen.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">GGD(84, 126) = 42</p>
-      <p>Daarom:</p>
-      <p class="formula">\frac{84}{126} = \frac{84 ÷ 42}{126 ÷ 42} = \frac{2}{3}</p>
-      <p>Omdat 2 en 3 geen gemeenschappelijke deler groter dan 1 hebben, is de breuk verder niet te vereenvoudigen.</p>
-
-      <h3>4. GGD vinden door alle delers te zoeken</h3>
-      <p>Voor kleine getallen kun je de GGD bepalen door de delers van beide getallen op te schrijven.</p>
-      <p>Bijvoorbeeld voor 20 en 30:</p>
-      <p class="formula">Delers(20) = {1, 2, 4, 5, 10, 20}</p>
-      <p class="formula">Delers(30) = {1, 2, 3, 5, 6, 10, 15, 30}</p>
-      <p>De grootste gemeenschappelijke deler is 10:</p>
-      <p class="formula">GGD(20, 30) = 10</p>
-
-      <h3>5. GGD met priemfactorisatie</h3>
-      <p>Met priemfactorisatie kunnen we de gemeenschappelijke priemfactoren rechtstreeks zoeken.</p>
-      <p>Neem 36 en 60:</p>
-      <p class="formula">36 = 2 × 2 × 3 × 3</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>De gemeenschappelijke priemfactoren zijn 2, 2 en 3. Hun product is:</p>
-      <p class="formula">2 × 2 × 3 = 12</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(36, 60) = 12</p>
-
-      <h3>6. Gemeenschappelijke factoren tellen</h3>
-      <p>Bij priemfactorisatie moet je opletten dat je een gemeenschappelijke priemfactor niet vaker gebruikt dan hij in beide getallen voorkomt.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">24 = 2 × 2 × 2 × 3</p>
-      <p class="formula">36 = 2 × 2 × 3 × 3</p>
-      <p>Voor de GGD nemen we twee factoren 2 en één factor 3:</p>
-      <p class="formula">GGD(24, 36) = 2 × 2 × 3 = 12</p>
-
-      <h3>7. Van delers naar veelvouden: het KGV</h3>
-      <p>Bij de GGD kijken we naar <strong>delers</strong>. Bij het <strong>kleinste gemene veelvoud</strong>, afgekort <strong>KGV</strong>, kijken we naar veelvouden.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">Veelvouden(4) = 4, 8, 12, 16, 20, 24, ...</p>
-      <p class="formula">Veelvouden(6) = 6, 12, 18, 24, ...</p>
-      <p>Het kleinste positieve veelvoud dat in beide lijsten voorkomt is 12.</p>
-      <p class="formula">KGV(4, 6) = 12</p>
-
-      <h3>8. Het KGV</h3>
-      <p>Het <strong>kleinste gemene veelvoud</strong> van twee of meer natuurlijke getallen is het kleinste positieve veelvoud dat voor alle getallen een veelvoud is.</p>
-      <div class="callout"><strong>KGV = kleinste gemeenschappelijke veelvoud.</strong></div>
-      <p>We zoeken dus niet naar 0, ook al is 0 een veelvoud van elk natuurlijk getal. We nemen het <strong>kleinste positieve</strong> gemeenschappelijke veelvoud.</p>
-
-      <h3>9. KGV vinden door veelvouden op te schrijven</h3>
-      <p>Voor kleine getallen kun je de veelvouden opschrijven tot je een gemeenschappelijk veelvoud vindt.</p>
-      <p>Voor 8 en 12:</p>
-      <p class="formula">8, 16, 24, 32, ...</p>
-      <p class="formula">12, 24, 36, ...</p>
-      <p>Dus:</p>
-      <p class="formula">KGV(8, 12) = 24</p>
-
-      <h3>10. KGV met priemfactorisatie</h3>
-      <p>Ook het KGV kunnen we met priemfactorisatie vinden. Nu nemen we juist <strong>iedere priemfactor zo vaak als hij in minstens één van de getallen voorkomt</strong>.</p>
-      <p>Voor 12 en 18:</p>
-      <p class="formula">12 = 2 × 2 × 3</p>
-      <p class="formula">18 = 2 × 3 × 3</p>
-      <p>We hebben nodig: twee factoren 2 en twee factoren 3.</p>
-      <p class="formula">KGV(12, 18) = 2 × 2 × 3 × 3 = 36</p>
-
-      <h3>11. GGD en KGV: twee verschillende vragen</h3>
-      <p>GGD en KGV lijken op elkaar, maar beantwoorden een andere vraag.</p>
-      <ul>
-        <li><strong>GGD:</strong> welke grootste deler hebben de getallen gemeenschappelijk?</li>
-        <li><strong>KGV:</strong> wat is het kleinste positieve veelvoud dat de getallen gemeenschappelijk hebben?</li>
-      </ul>
-      <p>Een handige geheugensteun:</p>
-      <p class="formula">GGD → delen</p>
-      <p class="formula">KGV → veelvouden</p>
-
-      <h3>12. Wanneer gebruik je de GGD?</h3>
-      <p>De GGD is nuttig wanneer je iets in <strong>gelijke, zo groot mogelijke groepen</strong> wilt verdelen zonder rest.</p>
-      <p>Bijvoorbeeld: 24 rode en 36 blauwe knikkers verdelen in een zo groot mogelijk aantal identieke pakketjes. Het aantal pakketjes wordt dan bepaald door de GGD van 24 en 36.</p>
-      <p class="formula">GGD(24, 36) = 12</p>
-      <p>Je kunt dus 12 identieke pakketjes maken, met 2 rode en 3 blauwe knikkers per pakketje.</p>
-
-      <h3>13. Wanneer gebruik je het KGV?</h3>
-      <p>Het KGV is nuttig wanneer verschillende regelmatige gebeurtenissen <strong>tegelijk willen samenvallen</strong>.</p>
-      <p>Stel dat een lamp elke 6 seconden knippert en een andere elke 8 seconden. Ze knipperen opnieuw tegelijk na:</p>
-      <p class="formula">KGV(6, 8) = 24</p>
-      <p>Na 24 seconden vallen de twee momenten weer samen.</p>
-
-      <h3>14. De relatie tussen GGD en KGV</h3>
-      <p>Voor twee positieve gehele getallen <strong>a</strong> en <strong>b</strong> bestaat een belangrijke relatie:</p>
-      <p class="formula">GGD(a, b) × KGV(a, b) = a × b</p>
-      <p>Bijvoorbeeld voor 12 en 18:</p>
-      <p class="formula">6 × 36 = 12 × 18 = 216</p>
-      <p>Deze relatie is een handige controle wanneer je de GGD en het KGV hebt berekend.</p>
-
-      <h3>15. Het algoritme van Euclides</h3>
-      <p>Voor grote getallen is het niet praktisch om alle delers op te schrijven. Het <strong>algoritme van Euclides</strong> berekent de GGD met herhaalde delingen.</p>
-      <p>Het basisidee is:</p>
-      <p class="formula">GGD(a, b) = GGD(b, a mod b)</p>
-      <p>Hierbij is <strong>mod</strong> de rest bij een gehele deling.</p>
-
-      <h3>16. Euclides stap voor stap</h3>
-      <p>We berekenen de GGD van 252 en 105.</p>
-      <p class="formula">252 = 2 × 105 + 42</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(252, 105) = GGD(105, 42)</p>
-      <p>Nu:</p>
-      <p class="formula">105 = 2 × 42 + 21</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(105, 42) = GGD(42, 21)</p>
-      <p>En:</p>
-      <p class="formula">42 = 2 × 21 + 0</p>
-      <p>De laatste niet-nul rest is 21. Daarom:</p>
-      <p class="formula">GGD(252, 105) = 21</p>
-
-      <h3>17. Waarom werkt Euclides?</h3>
-      <p>Als we <strong>a</strong> delen door <strong>b</strong> en een rest <strong>r</strong> krijgen, dan geldt:</p>
-      <p class="formula">a = qb + r</p>
-      <p>Elke gemeenschappelijke deler van <strong>a</strong> en <strong>b</strong> deelt dan ook de rest <strong>r = a − qb</strong>. Omgekeerd geldt hetzelfde voor een gemeenschappelijke deler van <strong>b</strong> en <strong>r</strong>. Daarom hebben beide paren dezelfde gemeenschappelijke delers en dus dezelfde GGD.</p>
-
-      <h3>18. Samenvatting en strategie</h3>
-      <ul>
-        <li>De GGD is de grootste positieve gemeenschappelijke deler.</li>
-        <li>Het KGV is het kleinste positieve gemeenschappelijke veelvoud.</li>
-        <li>Voor kleine getallen kun je delers of veelvouden opschrijven.</li>
-        <li>Met priemfactorisatie neem je voor de GGD de gemeenschappelijke factoren en voor het KGV alle benodigde factoren.</li>
-        <li>De relatie <span class="formula-inline">GGD(a,b) × KGV(a,b) = a × b</span> kan als controle dienen.</li>
-        <li>Het algoritme van Euclides is een efficiënte methode om de GGD te berekenen.</li>
-      </ul>
-      <div class="callout"><strong>Vooruitblik:</strong> met GGD en KGV hebben we de belangrijkste bouwstenen van de deelbaarheidsrekenkunde verzameld. In de volgende onderdelen kunnen we deze kennis combineren met machten en wortels.</div>
-    `,
-    practice: [
-      { id: "p19-1", question: "Bereken GGD(12, 18).", answer: ["6"] },
-      { id: "p19-2", question: "Bereken GGD(20, 30).", answer: ["10"] },
-      { id: "p19-3", question: "Bereken GGD(24, 36).", answer: ["12"] },
-      { id: "p19-4", question: "Bereken GGD(45, 60).", answer: ["15"] },
-      { id: "p19-5", question: "Bereken KGV(4, 6).", answer: ["12"] },
-      { id: "p19-6", question: "Bereken KGV(8, 12).", answer: ["24"] },
-      { id: "p19-7", question: "Bereken KGV(6, 8).", answer: ["24"] },
-      { id: "p19-8", question: "Bereken KGV(10, 15).", answer: ["30"] },
-      { id: "p19-9", question: "Bereken GGD(36, 60) met priemfactorisatie.", answer: ["12"] },
-      { id: "p19-10", question: "Bereken KGV(12, 18) met priemfactorisatie.", answer: ["36"] },
-      { id: "p19-11", question: "Je hebt 24 rode en 36 blauwe knikkers. Wat is het grootste aantal identieke pakketjes dat je zonder rest kunt maken?", answer: ["12"] },
-      { id: "p19-12", question: "Een lamp knippert elke 6 seconden en een andere elke 8 seconden. Na hoeveel seconden knipperen ze opnieuw samen?", answer: ["24"] },
-      { id: "p19-13", question: "Bereken GGD(252, 105) met het algoritme van Euclides.", answer: ["21"] },
-      { id: "p19-14", question: "Als GGD(12, 18) = 6, wat is dan KGV(12, 18)?", answer: ["36"] },
-      { id: "p19-15", question: "Vereenvoudig 84/126 met behulp van de GGD.", answer: ["2/3"] }
-    ],
-    exam: [
-      { id: "e19-1", question: "Bereken GGD(48, 72).", answer: ["24"] },
-      { id: "e19-2", question: "Bereken GGD(84, 126).", answer: ["42"] },
-      { id: "e19-3", question: "Bereken KGV(12, 20).", answer: ["60"] },
-      { id: "e19-4", question: "Bereken KGV(18, 24).", answer: ["72"] },
-      { id: "e19-5", question: "Bereken GGD(252, 105) met Euclides.", answer: ["21"] },
-      { id: "e19-6", question: "Bereken GGD(391, 299) met Euclides.", answer: ["23"] },
-      { id: "e19-7", question: "Als GGD(36, 60) = 12, bereken dan KGV(36, 60).", answer: ["180"] },
-      { id: "e19-8", question: "Vereenvoudig 144/216 met behulp van de GGD.", answer: ["2/3"] }
-    ]
-  },
-  {
-    id: "1.8",
-    title: "Priemgetallen en factorisatie",
-    goal: "Priemgetallen herkennen en getallen ontbinden in priemfactoren.",
-    theory: /* html */`
-      <h2>Priemgetallen en factorisatie</h2>
-      <p><strong>Doel:</strong> priemgetallen herkennen, samengestelde getallen ontbinden en priemfactorisatie gebruiken.</p>
-
-      <h3>1. Van delers naar priemgetallen</h3>
-      <p>In 1.7 leerden we dat een getal delers heeft. Sommige getallen hebben precies twee positieve delers: <strong>1 en zichzelf</strong>. Deze getallen noemen we <strong>priemgetallen</strong>.</p>
-      <p>Bijvoorbeeld 7 heeft alleen de delers 1 en 7. Daarom is 7 een priemgetal.</p>
-      <div class="callout"><strong>Een priemgetal</strong> is een natuurlijk getal groter dan 1 met precies twee positieve delers: 1 en het getal zelf.</div>
-
-      <h3>2. Priemgetallen herkennen</h3>
-      <p>De eerste priemgetallen zijn:</p>
-      <p class="formula">2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...</p>
-      <p>Het getal 2 is bijzonder: het is het <strong>enige even priemgetal</strong>. Elk ander even getal is deelbaar door 2 en heeft dus meer dan twee positieve delers.</p>
-
-      <h3>3. Samengestelde getallen</h3>
-      <p>Een natuurlijk getal groter dan 1 dat geen priemgetal is, noemen we een <strong>samengesteld getal</strong>. Zo heeft 12 bijvoorbeeld de delers 1, 2, 3, 4, 6 en 12.</p>
-      <p>Het getal 1 is een uitzondering: <strong>1 is noch priem, noch samengesteld</strong>.</p>
-
-      <h3>4. Elk samengesteld getal heeft priemdelers</h3>
-      <p>Als een getal samengesteld is, kunnen we het schrijven als een product van kleinere natuurlijke getallen. Die factoren kunnen we op hun beurt verder ontbinden.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">12 = 3 × 4 = 3 × 2 × 2</p>
-      <p>We zijn uiteindelijk uitgekomen bij alleen priemgetallen.</p>
-
-      <h3>5. Ontbinden in factoren</h3>
-      <p>Een getal schrijven als een product van factoren noemen we <strong>factoriseren</strong> of <strong>ontbinden in factoren</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">24 = 6 × 4</p>
-      <p>Maar we kunnen verdergaan:</p>
-      <p class="formula">24 = 2 × 3 × 2 × 2</p>
-      <p>Alle factoren zijn nu priem.</p>
-
-      <h3>6. Priemfactorisatie</h3>
-      <p>Een ontbinding waarin alle factoren priemgetallen zijn, noemen we de <strong>priemfactorisatie</strong>.</p>
-      <p>Voor 60 krijgen we bijvoorbeeld:</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>We kunnen dezelfde priemfactoren ook overzichtelijker schrijven met machten. Dat leren we in 1.10; voorlopig is het product voldoende.</p>
-
-      <h3>7. Een factorboom</h3>
-      <p>Een <strong>factorboom</strong> helpt om een getal stap voor stap te ontbinden. Kies telkens een factorisatie en ga door tot elke tak eindigt in een priemgetal.</p>
-      <p>Voor 36 kan dat bijvoorbeeld via:</p>
-      <p class="formula">36 = 4 × 9 = 2 × 2 × 3 × 3</p>
-      <p>De volgorde waarin je de factoren vindt, kan verschillen. De uiteindelijke priemfactoren zijn dezelfde, alleen eventueel in een andere volgorde.</p>
-
-      <h3>8. De fundamentele eigenschap van priemfactorisatie</h3>
-      <p>Elk natuurlijk getal groter dan 1 kan als product van priemgetallen worden geschreven. Bovendien is die priemfactorisatie, afgezien van de volgorde van de factoren, <strong>uniek</strong>.</p>
-      <p>Zo is:</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>en niet een andere verzameling priemfactoren die opnieuw 60 oplevert.</p>
-
-      <h3>9. Factoriseren met kleine priemgetallen</h3>
-      <p>Bij het factoriseren is het handig om eerst te controleren op deelbaarheid door kleine priemgetallen:</p>
-      <p class="formula">2, 3, 5, 7, 11, 13, ...</p>
-      <p>Gebruik de deelbaarheidsregels uit 1.7 wanneer die beschikbaar zijn. Zo zie je snel of een getal verder ontbonden kan worden.</p>
-
-      <h3>10. Een voorbeeld stap voor stap</h3>
-      <p>We ontbinden 84. Het getal is even, dus we delen door 2:</p>
-      <p class="formula">84 = 2 × 42</p>
-      <p>Nogmaals door 2:</p>
-      <p class="formula">42 = 2 × 21</p>
-      <p>En 21 is deelbaar door 3:</p>
-      <p class="formula">21 = 3 × 7</p>
-      <p>Dus:</p>
-      <p class="formula">84 = 2 × 2 × 3 × 7</p>
-
-      <h3>11. Factoriseren vanuit een deler</h3>
-      <p>Je hoeft niet altijd met 2 te beginnen. Je mag iedere geschikte deler kiezen en daarna verder ontbinden.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">90 = 9 × 10 = 3 × 3 × 2 × 5</p>
-      <p>Je krijgt dus dezelfde priemfactorisatie, ook al heb je een andere eerste stap gekozen.</p>
-
-      <h3>12. Priemfactorisatie en delers</h3>
-      <p>De priemfactorisatie laat zien welke priemgetallen als bouwstenen in een getal zitten. Daarmee kunnen we later systematisch de delers van een getal bepalen.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">12 = 2 × 2 × 3</p>
-      <p>De priemfactoren 2 en 3 zijn de belangrijkste bouwstenen van 12.</p>
-
-      <h3>13. Gemeenschappelijke priemfactoren</h3>
-      <p>Als twee getallen dezelfde priemfactor bevatten, noemen we die factor <strong>gemeenschappelijk</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">18 = 2 × 3 × 3</p>
-      <p class="formula">30 = 2 × 3 × 5</p>
-      <p>De getallen 2 en 3 komen in beide priemfactorisaties voor. Dit idee wordt belangrijk bij de GGD in 1.9.</p>
-
-      <h3>14. Priemfactorisatie en breuken</h3>
-      <p>Priemfactorisatie kan helpen om te zien welke factoren in de teller en noemer van een breuk kunnen worden weggewerkt.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">\frac{18}{30} = \frac{2 × 3 × 3}{2 × 3 × 5} = \frac{3}{5}</p>
-      <p>De gemeenschappelijke factoren 2 en 3 kunnen we wegdelen. In 1.9 maken we dit proces systematischer met de grootste gemene deler.</p>
-
-      <h3>15. Is een getal priem?</h3>
-      <p>Om te onderzoeken of een getal priem is, moet je nagaan of het een deler heeft naast 1 en zichzelf. De deelbaarheidsregels helpen daarbij.</p>
-      <p>Voor grotere getallen hoeven we niet alle mogelijke delers te testen. Als een getal <strong>n</strong> samengesteld is, heeft het een deler die niet groter is dan <span class="formula-inline">√n</span>. Daarom volstaat het om priemdelers tot en met <span class="formula-inline">√n</span> te controleren.</p>
-
-      <h3>16. Voorbeeld: is 97 priem?</h3>
-      <p>We controleren de priemgetallen die niet groter zijn dan <span class="formula-inline">√97</span>. Omdat <span class="formula-inline">√97</span> kleiner is dan 10, volstaan 2, 3, 5 en 7.</p>
-      <ul>
-        <li>97 is niet deelbaar door 2;</li>
-        <li>de cijfersom is 16, dus 97 is niet deelbaar door 3;</li>
-        <li>97 eindigt niet op 0 of 5;</li>
-        <li>97 is niet deelbaar door 7.</li>
-      </ul>
-      <p>Daarom is 97 een priemgetal.</p>
-
-      <h3>17. Waarom factorisatie belangrijk is</h3>
-      <p>Priemfactorisatie is een van de belangrijkste manieren om de structuur van natuurlijke getallen zichtbaar te maken. Ze vormt de basis voor het berekenen van de <strong>GGD</strong> en het <strong>KGV</strong>, het vereenvoudigen van breuken en later ook het werken met machten.</p>
-      <div class="callout"><strong>Belangrijk idee:</strong> priemgetallen zijn de ondeelbare bouwstenen van de natuurlijke getallen groter dan 1.</div>
-
-      <h3>18. Samenvatting</h3>
-      <ul>
-        <li>Een priemgetal groter dan 1 heeft precies twee positieve delers: 1 en zichzelf.</li>
-        <li>1 is noch priem, noch samengesteld.</li>
-        <li>Een samengesteld getal kan worden ontbonden in factoren.</li>
-        <li>De priemfactorisatie schrijft een getal als product van priemgetallen.</li>
-        <li>Die priemfactorisatie is uniek, afgezien van de volgorde.</li>
-        <li>Priemfactorisatie wordt in 1.9 gebruikt voor GGD en KGV.</li>
-      </ul>
-    `,
-    practice: [
-      { id: "p18-1", question: "Welke van deze getallen zijn priem: 11, 15, 17, 21?", answer: ["11", "17"] },
-      { id: "p18-2", question: "Is 2 een priemgetal?", answer: ["ja"] },
-      { id: "p18-3", question: "Is 1 een priemgetal?", answer: ["nee"] },
-      { id: "p18-4", question: "Ontbind 18 in priemfactoren.", answer: ["2 × 3 × 3"] },
-      { id: "p18-5", question: "Ontbind 24 in priemfactoren.", answer: ["2 × 2 × 2 × 3"] },
-      { id: "p18-6", question: "Ontbind 30 in priemfactoren.", answer: ["2 × 3 × 5"] },
-      { id: "p18-7", question: "Ontbind 42 in priemfactoren.", answer: ["2 × 3 × 7"] },
-      { id: "p18-8", question: "Ontbind 56 in priemfactoren.", answer: ["2 × 2 × 2 × 7"] },
-      { id: "p18-9", question: "Ontbind 75 in priemfactoren.", answer: ["3 × 5 × 5"] },
-      { id: "p18-10", question: "Ontbind 84 in priemfactoren.", answer: ["2 × 2 × 3 × 7"] },
-      { id: "p18-11", question: "Ontbind 90 in priemfactoren.", answer: ["2 × 3 × 3 × 5"] },
-      { id: "p18-12", question: "Is 91 een priemgetal?", answer: ["nee"] },
-      { id: "p18-13", question: "Is 97 een priemgetal?", answer: ["ja"] },
-      { id: "p18-14", question: "Wat zijn de gemeenschappelijke priemfactoren van 18 en 30?", answer: ["2 en 3", "2, 3"] },
-      { id: "p18-15", question: "Schrijf 60 als product van priemfactoren.", answer: ["2 × 2 × 3 × 5"] }
-    ],
-    exam: [
-      { id: "e18-1", question: "Welke van 29, 35, 37 en 39 zijn priemgetallen?", answer: ["29", "37"] },
-      { id: "e18-2", question: "Ontbind 72 in priemfactoren.", answer: ["2 × 2 × 2 × 3 × 3"] },
-      { id: "e18-3", question: "Ontbind 96 in priemfactoren.", answer: ["2 × 2 × 2 × 2 × 2 × 3"] },
-      { id: "e18-4", question: "Ontbind 105 in priemfactoren.", answer: ["3 × 5 × 7"] },
-      { id: "e18-5", question: "Is 113 een priemgetal?", answer: ["ja"] },
-      { id: "e18-6", question: "Welke priemfactoren komen voor in zowel 84 als 126?", answer: ["2, 3, 7", "2 en 3 en 7"] },
-      { id: "e18-7", question: "Ontbind 180 in priemfactoren.", answer: ["2 × 2 × 3 × 3 × 5"] },
-      { id: "e18-8", question: "Leg uit waarom 1 geen priemgetal is.", answer: ["1 heeft niet precies twee positieve delers", "1 heeft maar één positieve deler"] }
-    ]
-  },
-  {
-    id: "1.9",
-    title: "GGD, KGV en het algoritme van Euclides",
-    goal: "De grootste gemene deler en het kleinste gemene veelvoud berekenen en het algoritme van Euclides begrijpen.",
-    theory: /* html */`
-      <h2>GGD, KGV en het algoritme van Euclides</h2>
-      <p><strong>Doel:</strong> de GGD en het KGV van getallen bepalen en verschillende methoden gebruiken om ze te berekenen.</p>
-
-      <h3>1. Van gemeenschappelijke delers naar de GGD</h3>
-      <p>In 1.7 leerden we wat delers zijn en in 1.8 zagen we hoe priemfactorisatie de bouwstenen van getallen zichtbaar maakt. Als twee getallen dezelfde delers hebben, noemen we die <strong>gemeenschappelijke delers</strong>.</p>
-      <p>Bijvoorbeeld voor 12 en 18:</p>
-      <p class="formula">Delers(12) = {1, 2, 3, 4, 6, 12}</p>
-      <p class="formula">Delers(18) = {1, 2, 3, 6, 9, 18}</p>
-      <p>De gemeenschappelijke delers zijn 1, 2, 3 en 6. De grootste daarvan is 6.</p>
-
-      <h3>2. De grootste gemene deler</h3>
-      <p>De <strong>grootste gemene deler</strong>, afgekort <strong>GGD</strong>, van twee of meer natuurlijke getallen is de grootste positieve deler die ze gemeenschappelijk hebben.</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(12, 18) = 6</p>
-      <div class="callout"><strong>GGD = grootste gemeenschappelijke deler.</strong></div>
-
-      <h3>3. De GGD gebruiken bij breuken</h3>
-      <p>De GGD is handig om een breuk in één stap maximaal te vereenvoudigen.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">GGD(84, 126) = 42</p>
-      <p>Daarom:</p>
-      <p class="formula">\frac{84}{126} = \frac{84 ÷ 42}{126 ÷ 42} = \frac{2}{3}</p>
-      <p>Omdat 2 en 3 geen gemeenschappelijke deler groter dan 1 hebben, is de breuk verder niet te vereenvoudigen.</p>
-
-      <h3>4. GGD vinden door alle delers te zoeken</h3>
-      <p>Voor kleine getallen kun je de GGD bepalen door de delers van beide getallen op te schrijven.</p>
-      <p>Bijvoorbeeld voor 20 en 30:</p>
-      <p class="formula">Delers(20) = {1, 2, 4, 5, 10, 20}</p>
-      <p class="formula">Delers(30) = {1, 2, 3, 5, 6, 10, 15, 30}</p>
-      <p>De grootste gemeenschappelijke deler is 10:</p>
-      <p class="formula">GGD(20, 30) = 10</p>
-
-      <h3>5. GGD met priemfactorisatie</h3>
-      <p>Met priemfactorisatie kunnen we de gemeenschappelijke priemfactoren rechtstreeks zoeken.</p>
-      <p>Neem 36 en 60:</p>
-      <p class="formula">36 = 2 × 2 × 3 × 3</p>
-      <p class="formula">60 = 2 × 2 × 3 × 5</p>
-      <p>De gemeenschappelijke priemfactoren zijn 2, 2 en 3. Hun product is:</p>
-      <p class="formula">2 × 2 × 3 = 12</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(36, 60) = 12</p>
-
-      <h3>6. Gemeenschappelijke factoren tellen</h3>
-      <p>Bij priemfactorisatie moet je opletten dat je een gemeenschappelijke priemfactor niet vaker gebruikt dan hij in beide getallen voorkomt.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">24 = 2 × 2 × 2 × 3</p>
-      <p class="formula">36 = 2 × 2 × 3 × 3</p>
-      <p>Voor de GGD nemen we twee factoren 2 en één factor 3:</p>
-      <p class="formula">GGD(24, 36) = 2 × 2 × 3 = 12</p>
-
-      <h3>7. Van delers naar veelvouden: het KGV</h3>
-      <p>Bij de GGD kijken we naar <strong>delers</strong>. Bij het <strong>kleinste gemene veelvoud</strong>, afgekort <strong>KGV</strong>, kijken we naar veelvouden.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">Veelvouden(4) = 4, 8, 12, 16, 20, 24, ...</p>
-      <p class="formula">Veelvouden(6) = 6, 12, 18, 24, ...</p>
-      <p>Het kleinste positieve veelvoud dat in beide lijsten voorkomt is 12.</p>
-      <p class="formula">KGV(4, 6) = 12</p>
-
-      <h3>8. Het KGV</h3>
-      <p>Het <strong>kleinste gemene veelvoud</strong> van twee of meer natuurlijke getallen is het kleinste positieve veelvoud dat voor alle getallen een veelvoud is.</p>
-      <div class="callout"><strong>KGV = kleinste gemeenschappelijke veelvoud.</strong></div>
-      <p>We zoeken dus niet naar 0, ook al is 0 een veelvoud van elk natuurlijk getal. We nemen het <strong>kleinste positieve</strong> gemeenschappelijke veelvoud.</p>
-
-      <h3>9. KGV vinden door veelvouden op te schrijven</h3>
-      <p>Voor kleine getallen kun je de veelvouden opschrijven tot je een gemeenschappelijk veelvoud vindt.</p>
-      <p>Voor 8 en 12:</p>
-      <p class="formula">8, 16, 24, 32, ...</p>
-      <p class="formula">12, 24, 36, ...</p>
-      <p>Dus:</p>
-      <p class="formula">KGV(8, 12) = 24</p>
-
-      <h3>10. KGV met priemfactorisatie</h3>
-      <p>Ook het KGV kunnen we met priemfactorisatie vinden. Nu nemen we juist <strong>iedere priemfactor zo vaak als hij in minstens één van de getallen voorkomt</strong>.</p>
-      <p>Voor 12 en 18:</p>
-      <p class="formula">12 = 2 × 2 × 3</p>
-      <p class="formula">18 = 2 × 3 × 3</p>
-      <p>We hebben nodig: twee factoren 2 en twee factoren 3.</p>
-      <p class="formula">KGV(12, 18) = 2 × 2 × 3 × 3 = 36</p>
-
-      <h3>11. GGD en KGV: twee verschillende vragen</h3>
-      <p>GGD en KGV lijken op elkaar, maar beantwoorden een andere vraag.</p>
-      <ul>
-        <li><strong>GGD:</strong> welke grootste deler hebben de getallen gemeenschappelijk?</li>
-        <li><strong>KGV:</strong> wat is het kleinste positieve veelvoud dat de getallen gemeenschappelijk hebben?</li>
-      </ul>
-      <p>Een handige geheugensteun:</p>
-      <p class="formula">GGD → delen</p>
-      <p class="formula">KGV → veelvouden</p>
-
-      <h3>12. Wanneer gebruik je de GGD?</h3>
-      <p>De GGD is nuttig wanneer je iets in <strong>gelijke, zo groot mogelijke groepen</strong> wilt verdelen zonder rest.</p>
-      <p>Bijvoorbeeld: 24 rode en 36 blauwe knikkers verdelen in een zo groot mogelijk aantal identieke pakketjes. Het aantal pakketjes wordt dan bepaald door de GGD van 24 en 36.</p>
-      <p class="formula">GGD(24, 36) = 12</p>
-      <p>Je kunt dus 12 identieke pakketjes maken, met 2 rode en 3 blauwe knikkers per pakketje.</p>
-
-      <h3>13. Wanneer gebruik je het KGV?</h3>
-      <p>Het KGV is nuttig wanneer verschillende regelmatige gebeurtenissen <strong>tegelijk willen samenvallen</strong>.</p>
-      <p>Stel dat een lamp elke 6 seconden knippert en een andere elke 8 seconden. Ze knipperen opnieuw tegelijk na:</p>
-      <p class="formula">KGV(6, 8) = 24</p>
-      <p>Na 24 seconden vallen de twee momenten weer samen.</p>
-
-      <h3>14. De relatie tussen GGD en KGV</h3>
-      <p>Voor twee positieve gehele getallen <strong>a</strong> en <strong>b</strong> bestaat een belangrijke relatie:</p>
-      <p class="formula">GGD(a, b) × KGV(a, b) = a × b</p>
-      <p>Bijvoorbeeld voor 12 en 18:</p>
-      <p class="formula">6 × 36 = 12 × 18 = 216</p>
-      <p>Deze relatie is een handige controle wanneer je de GGD en het KGV hebt berekend.</p>
-
-      <h3>15. Het algoritme van Euclides</h3>
-      <p>Voor grote getallen is het niet praktisch om alle delers op te schrijven. Het <strong>algoritme van Euclides</strong> berekent de GGD met herhaalde delingen.</p>
-      <p>Het basisidee is:</p>
-      <p class="formula">GGD(a, b) = GGD(b, a mod b)</p>
-      <p>Hierbij is <strong>mod</strong> de rest bij een gehele deling.</p>
-
-      <h3>16. Euclides stap voor stap</h3>
-      <p>We berekenen de GGD van 252 en 105.</p>
-      <p class="formula">252 = 2 × 105 + 42</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(252, 105) = GGD(105, 42)</p>
-      <p>Nu:</p>
-      <p class="formula">105 = 2 × 42 + 21</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(105, 42) = GGD(42, 21)</p>
-      <p>En:</p>
-      <p class="formula">42 = 2 × 21 + 0</p>
-      <p>De laatste niet-nul rest is 21. Daarom:</p>
-      <p class="formula">GGD(252, 105) = 21</p>
-
-      <h3>17. Waarom werkt Euclides?</h3>
-      <p>Als we <strong>a</strong> delen door <strong>b</strong> en een rest <strong>r</strong> krijgen, dan geldt:</p>
-      <p class="formula">a = qb + r</p>
-      <p>Elke gemeenschappelijke deler van <strong>a</strong> en <strong>b</strong> deelt dan ook de rest <strong>r = a − qb</strong>. Omgekeerd geldt hetzelfde voor een gemeenschappelijke deler van <strong>b</strong> en <strong>r</strong>. Daarom hebben beide paren dezelfde gemeenschappelijke delers en dus dezelfde GGD.</p>
-
-      <h3>18. Samenvatting en strategie</h3>
-      <ul>
-        <li>De GGD is de grootste positieve gemeenschappelijke deler.</li>
-        <li>Het KGV is het kleinste positieve gemeenschappelijke veelvoud.</li>
-        <li>Voor kleine getallen kun je delers of veelvouden opschrijven.</li>
-        <li>Met priemfactorisatie neem je voor de GGD de gemeenschappelijke factoren en voor het KGV alle benodigde factoren.</li>
-        <li>De relatie <span class="formula-inline">GGD(a,b) × KGV(a,b) = a × b</span> kan als controle dienen.</li>
-        <li>Het algoritme van Euclides is een efficiënte methode om de GGD te berekenen.</li>
-      </ul>
-      <div class="callout"><strong>Vooruitblik:</strong> met GGD en KGV hebben we de belangrijkste bouwstenen van de deelbaarheidsrekenkunde verzameld. In de volgende onderdelen kunnen we deze kennis combineren met machten en wortels.</div>
-    `,
-    practice: [
-      { id: "p19-1", question: "Bereken GGD(12, 18).", answer: ["6"] },
-      { id: "p19-2", question: "Bereken GGD(20, 30).", answer: ["10"] },
-      { id: "p19-3", question: "Bereken GGD(24, 36).", answer: ["12"] },
-      { id: "p19-4", question: "Bereken GGD(45, 60).", answer: ["15"] },
-      { id: "p19-5", question: "Bereken KGV(4, 6).", answer: ["12"] },
-      { id: "p19-6", question: "Bereken KGV(8, 12).", answer: ["24"] },
-      { id: "p19-7", question: "Bereken KGV(6, 8).", answer: ["24"] },
-      { id: "p19-8", question: "Bereken KGV(10, 15).", answer: ["30"] },
-      { id: "p19-9", question: "Bereken GGD(36, 60) met priemfactorisatie.", answer: ["12"] },
-      { id: "p19-10", question: "Bereken KGV(12, 18) met priemfactorisatie.", answer: ["36"] },
-      { id: "p19-11", question: "Je hebt 24 rode en 36 blauwe knikkers. Wat is het grootste aantal identieke pakketjes dat je zonder rest kunt maken?", answer: ["12"] },
-      { id: "p19-12", question: "Een lamp knippert elke 6 seconden en een andere elke 8 seconden. Na hoeveel seconden knipperen ze opnieuw samen?", answer: ["24"] },
-      { id: "p19-13", question: "Bereken GGD(252, 105) met het algoritme van Euclides.", answer: ["21"] },
-      { id: "p19-14", question: "Als GGD(12, 18) = 6, wat is dan KGV(12, 18)?", answer: ["36"] },
-      { id: "p19-15", question: "Vereenvoudig 84/126 met behulp van de GGD.", answer: ["2/3"] }
-    ],
-    exam: [
-      { id: "e19-1", question: "Bereken GGD(48, 72).", answer: ["24"] },
-      { id: "e19-2", question: "Bereken GGD(84, 126).", answer: ["42"] },
-      { id: "e19-3", question: "Bereken KGV(12, 20).", answer: ["60"] },
-      { id: "e19-4", question: "Bereken KGV(18, 24).", answer: ["72"] },
-      { id: "e19-5", question: "Bereken GGD(252, 105) met Euclides.", answer: ["21"] },
-      { id: "e19-6", question: "Bereken GGD(391, 299) met Euclides.", answer: ["23"] },
-      { id: "e19-7", question: "Als GGD(36, 60) = 12, bereken dan KGV(36, 60).", answer: ["180"] },
-      { id: "e19-8", question: "Vereenvoudig 144/216 met behulp van de GGD.", answer: ["2/3"] }
+      { id: "e111-1", question: "Bereken √196.", answer: ["14"] },
+      { id: "e111-2", question: "Tussen welke twee gehele getallen ligt √70?", answer: ["8 en 9", "8,9"] },
+      { id: "e111-3", question: "Bereken √(9/16).", answer: ["3/4", "0,75"] },
+      { id: "e111-4", question: "Welke is groter: √48 of √50?", answer: ["√50", "50"] },
+      { id: "e111-5", question: "Vereenvoudig √98 tot de vorm a√2.", answer: ["7√2"] },
+      { id: "e111-6", question: "Bereken √225.", answer: ["15"] },
+      { id: "e111-7", question: "Leg met een berekening uit waarom √121 = 11.", answer: ["11^2=121", "11^2 = 121", "121"] },
+      { id: "e111-8", question: "Is √(−16) een reëel getal?", answer: ["nee"] }
     ]
   }
 ];
