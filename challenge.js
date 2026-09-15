@@ -37,17 +37,6 @@ function challengeValue(ch) {
   return picked ? decodeURIComponent(picked.value) : "";
 }
 
-function challengeOk(ch, raw) {
-  if (ch.type === "target") {
-    const v = Number(String(raw).replace(",", "."));
-    const t = Number(ch.target);
-    const tol = ch.tol != null ? ch.tol : 0.15;
-    return Math.abs(v - t) <= tol;
-  }
-  if (typeof sameAnswer === "function") return sameAnswer(raw, ch.accept || []);
-  return (ch.accept || []).some((a) => String(a) === String(raw).trim());
-}
-
 function paintEffect(kind, ok) {
   const fx = document.getElementById("ch-fx");
   if (!fx) return;
@@ -177,17 +166,4 @@ function applyChallengeCheck() {
         String(raw || "leeg") + ". Hint beschikbaar.</p>";
     }
   }
-}
-
-function applyChallengeHint() {
-  const ch = currentChallenge();
-  if (!ch) return;
-  if (inzichtScore() < HINT_COST) {
-    const box = document.getElementById("ch-hintbox");
-    if (box) box.textContent = "Niet genoeg inzicht. Los eerst een opdracht op.";
-    return;
-  }
-  store.dispatch({ type: "INZICHT_ADD", payload: -HINT_COST });
-  const box = document.getElementById("ch-hintbox");
-  if (box) box.textContent = ch.hint || ("Richting: " + (ch.accept ? ch.accept[0] : ch.target));
 }
