@@ -1,0 +1,48 @@
+name: Voeg Fase 1.12 toe
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  add-milestone:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Voeg fase 1.12 toe
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('fase1.js')
+          s = p.read_text(encoding='utf-8')
+          if 'id: "1.12"' in s:
+              raise SystemExit('Fase 1.12 staat al in fase1.js')
+          marker = '\n];\n'
+          if marker not in s:
+              raise SystemExit('Eindmarker van MILESTONES_1 niet gevonden')
+          frag = Path('fase1-1.12-correct.tmp').read_text(encoding='utf-8')
+          s = s.replace(marker, ',\n' + frag + '\n];\n', 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Valideer JavaScript
+        run: node --check fase1.js
+
+      - name: Verwijder tijdelijke bestanden
+        run: rm -f fase1-1.12.tmp fase1-1.12-correct.tmp .github/workflows/add-fase1-1.12.yml
+
+      - name: Commit en push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fase1.js
+          git add -A
+          git commit -m "Werk fase 1.12 uit: irrationale en reële getallen"
+          git push
