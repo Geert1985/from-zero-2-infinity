@@ -17,7 +17,7 @@ exNum("F1-1.1-03","1.1 Cijfers en Getallen","Welke plaatswaarde heeft het cijfer
 exSymbol("F1-1.1-04","1.1 Cijfers en Getallen","Vergelijk: "+(n-37)+" □ "+n,"<"),
 exOrder("F1-1.1-05","1.1 Cijfers en Getallen","Zet van klein naar groot.",[String(n),String(n-8),String(n+2),String(n-40)],[String(n-40),String(n-8),String(n),String(n+2)]),
 exLine("F1-1.1-06","1.1 Cijfers en Getallen","Plaats 73 op de getallenlijn.",73,0,100),
-exSelect("F1-1.1-07","1.1 Cijfers en Getallen","Selecteer de getallen waarin het cijfer 5 op de plaats van de honderdtallen staat.",["503","2501","451","150","95"],["503","451","150"]),
+exSelect("F1-1.1-07","1.1 Cijfers en Getallen","Selecteer de getallen waarin het cijfer 5 op de plaats van de honderdtallen staat.",["503","2501","451","150","95"],["503","2501"]),
 exNum("F1-1.1-08","1.1 Cijfers en Getallen","Bereken de plaatswaarde-ontbinding van 6 049.",6049,2,2)
 ];},
 "1.2":()=>{const a=examRnd(120,480),b=examRnd(20,90),d=examRnd(4,8),q=examRnd(4,12),r=examRnd(1,3);return[
