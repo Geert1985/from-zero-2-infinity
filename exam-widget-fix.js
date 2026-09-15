@@ -25,7 +25,8 @@
     if(!b)return;
     const qid=b.dataset.qid,s=EXAM_WIDGET_STATE[qid];
     if(!s)return;
-    if(!s.value.includes("."))s.value=s.value||"0"; s.value=s.value.replace(/,/g,".");
+    s.value=(s.value||"").replace(/decimal/g,"").replace(/,/g,".");
+    if(!s.value)s.value="0";
     if(!s.value.includes("."))s.value+=".";
     examUpdateQuestionUI(qid);
   });
