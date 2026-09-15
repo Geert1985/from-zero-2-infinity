@@ -1603,295 +1603,1155 @@ const MILESTONES_1 = [
     title: "Het getallensysteem uitbreiden",
     goal: "Van ℕ naar ℤ en ℚ.",
     theory: /* html */`
-      <h2>Het getallensysteem uitbreiden</h2>
-      <p><strong>Doel:</strong></p>
-<h3>11. Waarom hebben we breuken nodig?</h3>
+        <h2>Negatieve en gehele getallen</h2>
+        <p><strong>Doel:</strong></p>
 
-<p>Met natuurlijke en gehele getallen kunnen we nog steeds niet elke deling
-uitvoeren.</p>
+        <ul>
+          <li>kennismaken met verzamelingen;</li>
+          <li>ontdekken waarom natuurlijke getallen niet altijd voldoende zijn;</li>
+          <li>leren rekenen met negatieve en positieve gehele getallen.</li>
+        </ul>
+        
+        <h3>1. Verzameling en element</h3>
+        <p>Een <strong>verzameling</strong> is een groep objecten die we als één geheel bekijken.</p>
+        <p class="formula"> { 0, 1, 2, 3, 4 } </p>
+        <p>De getallen in de verzameling noemen we <strong>elementen</strong>. Het symbool <strong>∈</strong> betekent “is een element van” en <strong>∉</strong> betekent “is geen element van”.</p>
+        <p>In de verzameling {0, 1, 2, 3, 4} zijn 0, 1, 2, 3 en 4 dus elementen.</p>
+        <div class="callout insight">
+        <strong>Belangrijk inzicht</strong>
+        <p>Een verzameling is een manier om een groep getallen of andere objecten
+        als één geheel te bekijken.</p>
+      </div>
+    <p>In de wiskunde gebruiken we een speciaal symbool om aan te geven dat iets
+    een element van een verzameling is:</p>
 
-<p>Bijvoorbeeld:</p>
+    <p class="formula">3 ∈ {0, 1, 2, 3, 4}</p>
+    <p>We kunnen dus lezen:</p>
 
-<p class="formula">3 ÷ 2 = ?</p>
+    <p><strong>3 is een element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
 
-<p>Er bestaat geen geheel getal dat precies tussen 1 en 2 ligt en het antwoord
-vormt.</p>
+    <p>Voor een getal dat niet in de verzameling zit, gebruiken we
+    <strong>∉</strong>.</p>
 
-<p>Daarom introduceren we <strong>breuken</strong>.</p>
+    <p class="formula">7 ∉ {0, 1, 2, 3, 4}</p>
 
-<p>Een breuk maakt het mogelijk om een geheel in gelijke delen op te splitsen.</p>
+    <p>Dit betekent:</p>
 
-<div data-widget="fractionVisual"></div>
+    <p><strong>7 is geen element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
 
 
-<h3>12. Teller en noemer</h3>
+        <h3>2. De natuurlijke getallen</h3>
+        <p>De verzameling van de natuurlijke getallen krijgt een naam:
+    <strong>ℕ</strong>.</p>
 
-<p>Een breuk bestaat uit twee getallen.</p>
+    <p>We gebruiken ℕ voor alle natuurlijke getallen:</p>
 
-<p class="formula">3/5</p>
+    <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
 
-<p>Het getal boven de streep heet de <strong>teller</strong>.</p>
+    <p>De puntjes betekenen dat de reeks verdergaat.</p>
 
-<p>Het getal onder de streep heet de <strong>noemer</strong>.</p>
+    <p>Zo kunnen we bijvoorbeeld schrijven:</p>
 
-<p>Bij 3/5 is 3 dus de teller en 5 de noemer.</p>
+    <p class="formula">5 ∈ ℕ</p>
 
-<p>De noemer vertelt in hoeveel gelijke delen het geheel is verdeeld.
-De teller vertelt hoeveel van die delen we nemen.</p>
+    <p>Maar:</p>
 
+    <p class="formula">−3 ∉ ℕ</p>
 
-<h3>13. Gelijkwaardige breuken</h3>
+    <p>Een negatief getal behoort dus niet tot de verzameling van de natuurlijke getallen.</p>
 
-<p>Een breuk kan er anders uitzien zonder dat de waarde verandert.</p>
 
-<p>Bijvoorbeeld:</p>
 
-<p class="formula">1/2 = 2/4 = 3/6</p>
+        <h3>3. De getallenlijn wordt uitgebreid</h3>
+        <p>Tot nu toe konden we met natuurlijke getallen heel wat problemen oplossen.
+      Maar er ontstaat een probleem wanneer we een kleiner getal van een groter
+      getal aftrekken.</p>      
+      
+      <p>Bijvoorbeeld:</p>
 
-<p>Deze breuken stellen allemaal dezelfde hoeveelheid voor.</p>
+      <p class="formula">3 − 5 = ?</p>
 
-<p>We noemen ze <strong>gelijkwaardige breuken</strong>.</p>
+      <p>Er bestaat geen natuurlijk getal dat het antwoord is.</p>
 
-<p>Een breuk kunnen we ook vereenvoudigen. Zo kunnen we 4/8 schrijven als
-1/2.</p>
+      <p>We kunnen vanaf 3 drie stappen teruggaan:</p>
 
+      <p class="formula">3 − 3 = 0</p>
 
-<h3>14. Breuken vergelijken</h3>
+      <p>Maar daarna moeten we nog twee stappen verder terug.</p>
 
-<p>Met breuken kunnen we hoeveelheden nauwkeuriger vergelijken.</p>
+      <p>Daarom hebben we nieuwe getallen nodig die links van nul op de getallenlijn
+      staan.</p>
 
-<p>Wanneer twee breuken dezelfde noemer hebben, kunnen we de tellers
-rechtstreeks vergelijken.</p>
+      <div data-widget="ints"></div>
 
-<p>Bijvoorbeeld:</p>
+      <div class="callout insight">
+        <strong>Waarom breiden we het getallensysteem uit?</strong>
+        <p>Niet omdat de bestaande getallen "fout" zijn, maar omdat ze niet meer
+        voldoende zijn om alle problemen op te lossen.</p>
+      </div>
 
-<p class="formula">3/8 &lt; 5/8</p>
 
-<p>Omdat beide breuken in acht gelijke delen zijn verdeeld, zien we dat
-3 delen minder zijn dan 5 delen.</p>
+        <h3>4. De gehele getallen</h3>
+        <p>We voegen de negatieve gehele getallen toe aan de verzameling van de natuurlijke getallen ℕ:</p>
 
+    <p class="formula">..., −3, −2, −1, 0, 1, 2, 3, ...</p>
 
-<h3>15. Breuken optellen en aftrekken</h3>
+    <p>Hierdoor krijgen we een nieuwe, grotere verzameling.</p>
+    <p>Deze nieuwe verzameling noemen we de verzameling van de <strong>gehele getallen</strong>. We gebruiken hiervoor het symbool
+    <strong>ℤ</strong>.</p>
 
-<p>Wanneer breuken dezelfde noemer hebben, kunnen we de tellers optellen of
-aftrekken.</p>
+    <p class="formula">ℤ = {..., −3, −2, −1, 0, 1, 2, 3, ...}</p>
 
-<p>Bijvoorbeeld:</p>
+    <p>Nu kunnen we bijvoorbeeld schrijven:</p>
 
-<p class="formula">2/7 + 3/7 = 5/7</p>
+    <p class="formula">−2 ∈ ℤ</p>
 
-<p>Wanneer de noemers verschillend zijn, moeten we eerst gelijkwaardige
-breuken zoeken met dezelfde noemer.</p>
+    <p>En de eerdere berekening krijgt een oplossing:</p>
 
+    <p class="formula">3 − 5 = −2</p>
 
-<h3>16. Breuken vermenigvuldigen</h3>
+    <p>De gehele getallen lossen dus een probleem op dat met alleen natuurlijke
+    getallen niet opgelost kon worden.</p>
 
-<p>Bij het vermenigvuldigen van breuken vermenigvuldigen we de tellers met
-elkaar en de noemers met elkaar.</p>
 
-<p class="formula">2/3 × 4/5 = 8/15</p>
 
+        <h3>5. Deelverzamelingen</h3>
+        <p>Elk natuurlijk getal uit de verzameling ℕ is dus ook een element van de verzameling ℤ. Daarom is ℕ een <strong>deelverzameling</strong> van ℤ.</p>
+        <p class="formula">ℕ ⊂ ℤ</p>
+        <p>Het symbool <strong>⊂</strong> betekent
+    <strong>"is een deelverzameling van"</strong>.</p>
 
-<h3>17. Breuken delen</h3>
+    <p>We kunnen daarom schrijven:</p>
 
-<p>Een breuk delen door een andere breuk kunnen we omzetten in
-vermenigvuldigen met het omgekeerde.</p>
+    <p class="formula">ℕ ⊂ ℤ</p>
 
-<p>Bijvoorbeeld:</p>
+    <p>Dit lezen we als:</p>
 
-<p class="formula">2/3 ÷ 4/5 = 2/3 × 5/4</p>
+    <p><strong>De natuurlijke getallen zijn een deelverzameling van de gehele
+    getallen.</strong></p>
 
-<p>Dit idee zullen we later verder oefenen.</p>
+    <div class="callout">
+      <strong>Let op het verschil</strong>
+      <p>Het symbool <strong>∈</strong> gebruik je wanneer je een
+      <strong>element (getal) met een verzameling</strong> vergelijkt.</p>
 
+      <p class="formula">3 ∈ ℕ</p>
 
-<h3>18. Decimalen</h3>
+      <p>Het symbool <strong>⊂</strong> gebruik je wanneer je
+      <strong>twee verzamelingen met elkaar</strong> vergelijkt.</p>
 
-<p>Dezelfde getallen kunnen we op verschillende manieren schrijven.</p>
+      <p class="formula">ℕ ⊂ ℤ</p>
+    </div>
 
-<p>Bijvoorbeeld:</p>
 
-<p class="formula">1/2 = 0,5</p>
 
-<p>De komma geeft het begin van het decimale gedeelte aan.</p>
+        <h3>7. Tegenovergestelde getallen</h3>
 
-<p>Decimalen zijn daarom geen volledig nieuwe soort getallen. Ze zijn een
-andere manier om bepaalde getallen te schrijven.</p>
+<p>Op de getallenlijn heeft elk positief getal een getal op precies dezelfde
+afstand van nul aan de andere kant.</p>
 
-<p>Bijvoorbeeld:</p>
+<p>Het tegenovergestelde van 5 is −5.</p>
 
-<p class="formula">0,5 = 0,50 = 0,500</p>
+<p>Het tegenovergestelde van −3 is 3.</p>
 
-<p>Deze drie schrijfwijzen stellen dezelfde waarde voor.</p>
+<p>Het getal 0 is zijn eigen tegenovergestelde.</p>
 
+<p>We kunnen dit voorstellen als:</p>
 
-<h3>19. Percentages</h3>
+<p class="formula">5 ↔ −5</p>
 
-<p>Een percentage is een verhouding waarbij we het geheel opdelen in
-100 gelijke delen.</p>
+<p>en</p>
 
-<div data-widget="percentageBar"></div>
-
-<p>Het symbool <strong>%</strong> betekent "per honderd".</p>
-
-<p>25% betekent dus 25 van de 100 gelijke delen:</p>
-
-<p class="formula">25% = 25/100 = 0,25</p>
-
-<p>Percentages zijn daardoor nauw verbonden met breuken en decimalen.</p>
-
-
-<h3>20. Percentageverandering</h3>
-
-<p>Percentages kunnen ook aangeven hoeveel iets verandert ten opzichte van
-een beginwaarde.</p>
-
-<p>Wanneer een prijs bijvoorbeeld stijgt van €100 naar €110, is de stijging
-€10.</p>
-
-<p>Omdat €10 gelijk is aan 10% van €100, is de stijging 10%.</p>
-
-<p class="formula">10/100 = 0,10 = 10%</p>
-
-
-<h3>21. Verhoudingen</h3>
-
-<p>Een <strong>verhouding</strong> vergelijkt hoeveelheden met elkaar.</p>
-
-<p>Stel dat een groep uit 2 rode en 3 blauwe ballen bestaat.</p>
-
-<p>De verhouding rood tegenover blauw is:</p>
-
-<p class="formula">2 : 3</p>
-
-<p>Verhoudingen komen overal voor: bij recepten, kaarten, snelheid,
-schaalmodellen en percentages.</p>
-
-
-<h3>22. De grote lijn</h3>
-
-<p>We hebben in deze les verschillende soorten getallen gezien.</p>
-
-<p>We begonnen met de natuurlijke getallen:</p>
-
-<p class="formula">ℕ = {0, 1, 2, 3, ...}</p>
-
-<p>Toen we problemen tegenkwamen zoals 3 − 5, hadden we negatieve getallen
-nodig. Zo ontstonden de gehele getallen:</p>
-
-<p class="formula">ℤ = {..., −2, −1, 0, 1, 2, ...}</p>
-
-<p>Omdat ieder natuurlijk getal ook een geheel getal is, geldt:</p>
-
-<p class="formula">ℕ ⊂ ℤ</p>
-
-<p>Het symbool <strong>⊂</strong> betekent dat de verzameling links een
-deelverzameling is van de verzameling rechts.</p>
-
-<p>Toen we vervolgens een probleem kregen met bijvoorbeeld 3 ÷ 2, hadden we
-breuken nodig. Daarmee komen we bij de <strong>rationele getallen</strong>,
-die we later met het symbool ℚ zullen aanduiden.</p>
+<p class="formula">3 ↔ −3</p>
 
 <div class="callout insight">
-  <strong>De rode draad</strong>
-  <p>Het getallensysteem wordt steeds groter omdat we nieuwe problemen
-  ontdekken die met de bestaande getallen niet opgelost kunnen worden.</p>
-
-  <p>Nieuwe getallen zijn dus geen willekeurige toevoegingen. Ze ontstaan
-  omdat we meer rekenproblemen willen kunnen oplossen.</p>
+  <strong>Inzicht</strong>
+  <p>Tegengestelde getallen liggen even ver van nul, maar aan tegenovergestelde
+  kanten van de getallenlijn.</p>
 </div>
 
-<p>In volgende lessen zullen we ontdekken dat ook de rationale getallen niet
-voldoende zijn voor alle problemen. Zo blijven we het getallensysteem
-uitbreiden.</p>
-    `
+        <h3>7. Absolute waarde</h3>
+        <p>De <strong>absolute waarde</strong> van een getal vertelt hoe ver dat getal
+van nul ligt.</p>
+
+<p>De absolute waarde van 5 is 5:</p>
+
+<p class="formula">|5| = 5</p>
+
+<p>De absolute waarde van −5 is ook 5:</p>
+
+<p class="formula">|−5| = 5</p>
+
+<p>De verticale streepjes <strong>| |</strong> betekenen hier:
+"de absolute waarde van".</p>
+
+<p>De absolute waarde is dus altijd positief of nul.</p>
+
+
+
+        <h3>8. Optellen en aftrekken met gehele getallen</h3>
+        <p>De getallenlijn geeft ons een eenvoudige manier om met negatieve getallen
+te rekenen.</p>
+
+<p>Bij optellen beweeg je naar rechts als je een positief getal toevoegt en
+naar links als je een negatief getal toevoegt.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 + (−5) = −2</p>
+
+<p>Je begint bij 3 en beweegt vijf plaatsen naar links.</p>
+
+<p>Aftrekken kunnen we bekijken als het toevoegen van het tegenovergestelde.</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">3 − 5 = 3 + (−5) = −2</p>
+
+<div class="callout insight">
+  <strong>Belangrijk</strong>
+  <p>Aftrekken van een getal komt overeen met optellen van het
+  tegenovergestelde.</p>
+</div>
+
+
+
+<h3>9. Vermenigvuldigen en delen met tekens</h3>
+        <p>Ook bij vermenigvuldigen en delen krijgen we regels voor positieve en
+negatieve getallen.</p>
+
+<p>Bij vermenigvuldigen geldt:</p>
+
+<ul>
+          <li>positief × positief = positief</li>
+          <li>positief × negatief = negatief</li>
+          <li>negatief × positief = negatief</li>
+          <li>negatief × negatief = positief</li>
+        </ul>
+
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">2 × 5 = 10</p>
+<p class="formula">2 × (-5) = -10</p>
+<p class="formula">-2 × 5 = -10</p>
+<p class="formula">-2 × -5 = 10</p>
+
+<p><strong>Bij delen gelden dezelfde regels voor de tekens als bij vermenigvuldigen.</strong></p>
+
+<p class="formula">12 ÷ 3 = 4</p>
+<p class="formula">12 ÷ (-3) = -4</p>
+<p class="formula">(−12) ÷ 3 = −4</p>
+<p class="formula">(−12) ÷ (-3) = 4</p>      
+`
   },
   
   {
     id: "1.4",
-    title: "Getaltheorie en structuur",
-    goal: "Ontdek de structuur van getallen.",
-    theory: `
-      <h2>Milestone 1.4 — Getaltheorie en structuur</h2>
-      <p><strong>Doel:</strong> leren kijken naar de verborgen multiplicatieve structuur van gehele getallen. Je leert wanneer een getal deelbaar is, hoe priemgetallen als bouwstenen functioneren en hoe je GGD en KGV efficiënt berekent.</p>
+    title: "Breuken en rationale getallen",
+    goal: "Breuken begrijpen als getallen en leren rekenen met ℚ.",
+    theory: /* html */`
+        <h2>Breuken en rationale getallen</h2>
+        <p><strong>Doel:</strong></p>
 
-      <h3>1. Delers en deelbaarheid</h3>
-      <p>Een positief geheel getal <strong>d</strong> is een <strong>deler</strong> van <strong>n</strong> als n precies deelbaar is door d.</p>
-      <p>Bijvoorbeeld: 3 is een deler van 12 omdat 12 ÷ 3 = 4.</p>
-      <p>Je kunt dit ook schrijven als:</p>
-      <p class="formula">3 | 12</p>
-      <p>Dit betekent “3 deelt 12”.</p>
+        <ul>
+          <li>ontdekken waarom gehele getallen niet genoeg zijn voor elke deling;</li>
+          <li>leren breuken voorstellen, vergelijken en bewerken.;</li>
+        </ul>
 
-      <h3>2. Handige deelbaarheidsregels</h3>
-      <ul>
-        <li>deelbaar door 2 → laatste cijfer is even;</li>
-        <li>deelbaar door 3 → som van de cijfers is deelbaar door 3;</li>
-        <li>deelbaar door 4 → laatste twee cijfers zijn deelbaar door 4;</li>
-        <li>deelbaar door 5 → laatste cijfer is 0 of 5;</li>
-        <li>deelbaar door 6 → deelbaar door 2 én door 3;</li>
-        <li>deelbaar door 9 → som van de cijfers is deelbaar door 9;</li>
-        <li>deelbaar door 10 → laatste cijfer is 0.</li>
-      </ul>
+        <h3>1. Een geheel</h3>
+        <p>
+      Een <strong>geheel</strong> is iets dat we als één volledige eenheid
+      beschouwen. Bijvoorbeeld een volledige pizza, een chocoladereep,
+      één meter of een taart.
+    </p>
 
-      <h3>3. Even en oneven</h3>
-      <p>Een even getal is deelbaar door 2. Een oneven getal niet.</p>
-      <p class="formula">even = 2k &nbsp;&nbsp; oneven = 2k + 1</p>
-      <p>waarbij k een geheel getal is.</p>
+    <p>
+      We kunnen een geheel verdelen in kleinere stukken.
+      Om met breuken te werken, verdelen we het geheel in
+      <strong>gelijke delen</strong>.
+    </p>
 
-      <h3>4. Priemgetallen</h3>
-      <p>Een <strong>priemgetal</strong> is een natuurlijk getal groter dan 1 met precies twee positieve delers: 1 en zichzelf.</p>
-      <p>Voorbeelden: 2, 3, 5, 7, 11, 13, 17, …</p>
-      <p><strong>1 is geen priemgetal</strong>, want 1 heeft slechts één positieve deler.</p>
-      <p><strong>2 is het enige even priemgetal.</strong></p>
+    <div class="callout">
+      <strong>Belangrijk</strong>
+      <p>
+        De delen van een breuk zijn even groot.
+      </p>
+    </div>
 
-      <h3>5. Priemtesten</h3>
-      <p>Om te onderzoeken of een getal n priem is, hoef je geen delers tot n−1 te testen. Het volstaat om priemdelers tot en met √n te onderzoeken.</p>
-      <p>Voor een eerste kennismaking kun je ook de <strong>zeef van Eratosthenes</strong> gebruiken: schrijf de getallen op, schrap veelvouden van 2, daarna van 3, daarna van 5, enzovoort.</p>
+        <h3>2. Een geheel verdelen</h3>
+        <p>
+      Als we één geheel verdelen in 2 gelijke delen, noemen we elk deel
+      <strong>één helft</strong>.
+    </p>
 
-      <h3>6. Priemfactorisatie</h3>
-      <p>Elk natuurlijk getal groter dan 1 kan als product van priemgetallen worden geschreven.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">60 = 2 × 30 = 2 × 2 × 15 = 2² × 3 × 5</p>
-      <p>Dit heet de <strong>priemfactorisatie</strong>.</p>
+    <p class="formula">1/2</p>
 
-      <h3>7. De fundamentele hoofdstelling van de rekenkunde</h3>
-      <p>Elk natuurlijk getal groter dan 1 heeft precies één priemfactorisatie, afgezien van de volgorde van de factoren.</p>
-      <p>Dat maakt priemgetallen tot de “bouwstenen” van de natuurlijke getallen.</p>
+    <p>
+      Verdelen we hetzelfde geheel in 3 gelijke delen, dan is elk deel
+      <strong>één derde</strong>.
+    </p>
 
-      <h3>8. Aantal delers uit een priemfactorisatie</h3>
-      <p>Als:</p>
-      <p class="formula">n = 2³ × 3² × 5</p>
-      <p>dan kan een deler 2 kiezen met exponent 0, 1, 2 of 3; 3 met exponent 0, 1 of 2; en 5 met exponent 0 of 1.</p>
-      <p>Het aantal positieve delers is daarom:</p>
-      <p class="formula">(3 + 1)(2 + 1)(1 + 1) = 24</p>
+    <p class="formula">1/3</p>
 
-      <h3>9. Grootste gemene deler — GGD</h3>
-      <p>De <strong>GGD</strong> van twee getallen is de grootste positieve gehele getal dat beide getallen deelt.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">GGD(24,36) = 12</p>
-      <p>Via priemfactorisatie neem je van elke gemeenschappelijke priemfactor de kleinste exponent.</p>
+    <p>
+      En bij 4 gelijke delen is elk deel <strong>één vierde</strong>.
+    </p>
 
-      <h3>10. Kleinste gemene veelvoud — KGV</h3>
-      <p>Het <strong>KGV</strong> is het kleinste positieve getal dat een veelvoud is van beide getallen.</p>
-      <p class="formula">KGV(12,18) = 36</p>
-      <p>Via priemfactorisatie neem je van elke priemfactor de grootste exponent die voorkomt.</p>
+    <p class="formula">1/4</p>
 
-      <h3>11. Verband tussen GGD en KGV</h3>
-      <p>Voor positieve gehele getallen a en b geldt:</p>
-      <p class="formula">GGD(a,b) × KGV(a,b) = a × b</p>
-      <p>Dit is ook een handige controle.</p>
+    <div data-widget="fractionWhole"></div>
 
-      <h3>12. Het Euclidische algoritme</h3>
-      <p>De GGD kan efficiënt worden gevonden met herhaald delen.</p>
-      <p>Voor 105 en 28:</p>
-      <p class="formula">105 = 3 × 28 + 21</p>
-      <p class="formula">28 = 1 × 21 + 7</p>
-      <p class="formula">21 = 3 × 7 + 0</p>
-      <p>De laatste niet-nul rest is 7, dus:</p>
-      <p class="formula">GGD(105,28) = 7</p>
 
-      <h3>13. Waarom is dit belangrijk?</h3>
-      <p>Getaltheorie lijkt misschien een verzameling regels, maar onthult structuur. Priemfactorisatie helpt bij breuken vereenvoudigen, GGD en KGV, algoritmen en later bij abstractere wiskunde.</p>
-    `
+
+
+        <h3>3. Meerdere delen nemen</h3>
+        <p>
+      We hoeven natuurlijk niet altijd maar één deel te nemen.
+      Als een geheel in 4 gelijke delen is verdeeld en we nemen
+      3 van die delen, dan hebben we <strong>drie vierde</strong> van
+      het geheel.
+    </p>
+
+    <p class="formula">3/4</p>
+
+    <p>
+      De betekenis daarvan is eenvoudig:
+      <strong>3 van de 4 gelijke delen</strong>.
+    </p>
+
+    <div class="callout">
+      <strong>Inzicht</strong>
+      <p>
+        Een breuk beschrijft hoeveel gelijke delen van een geheel
+        we nemen.
+      </p>
+    </div>
+
+
+
+        <h3>4. Meer delen betekent kleinere stukken</h3>
+<p>
+      Kijk naar eenzelfde geheel. Als we het in steeds meer gelijke delen
+      verdelen, wordt elk afzonderlijk deel kleiner.
+    </p>
+
+    <p>
+      Een half is bijvoorbeeld groter dan een derde:
+    </p>
+
+    <div class="theory-image">
+      <img
+        src="assets/fraction-half-third.png"
+        alt="Een vergelijking van een half en een derde. Een half is groter dan een derde."
+      >
+    </div>
+    <p>
+      Je ziet dat een geheel dat in 2 gelijke delen wordt verdeeld,
+      grotere stukken oplevert dan wanneer hetzelfde geheel in 3 gelijke
+      delen wordt verdeeld.
+    </p>
+
+    <p class="formula">1/2 &gt; 1/3</p>
+
+    <p>
+      En een derde is groter dan een vierde:
+    </p>
+
+    <p class="formula">1/3 &gt; 1/4</p>
+
+    <p>
+      Hoe meer gelijke stukken we van hetzelfde geheel maken,
+      hoe kleiner elk stuk wordt.
+    </p>
+
+    <h3>5. Een breuk is een getal</h3>
+
+    <p>
+      In het dagelijks leven gebruiken we breuken vaak om een deel van
+      iets aan te duiden. Denk aan een halve pizza, een kwartier of
+      drie kwart van een liter.
+    </p>
+
+    <p>
+      Een breuk is echter meer dan alleen een aantal stukjes van een
+      voorwerp. Een breuk stelt ook een <strong>getal</strong> voor.
+    </p>
+
+    <p>
+      Zo ligt <span class="formula-inline">1/2</span> precies tussen
+      0 en 1. Daar komen we straks op terug.
+    </p>
+
+    <div class="callout">
+      <strong>Onthoud</strong>
+      <p>
+        Een breuk geeft aan hoeveel gelijke delen van een geheel
+        we nemen. Later zullen we ontdekken dat een breuk ook gewoon
+        een getal op de getallenlijn is.
+      </p>
+    </div>
+
+
+
+        <h4>Kernidee</h4>
+        <p>
+      Bij een breuk kijken we altijd naar twee dingen:
+    </p>
+
+    <ul>
+      <li>in hoeveel <strong>gelijke delen</strong> het geheel is verdeeld;</li>
+      <li>hoeveel van die delen we nemen.</li>
+    </ul>
+
+    <p>
+      In het volgende onderdeel geven we deze twee onderdelen hun
+      officiële namen: <strong>noemer</strong> en <strong>teller</strong>.
+    </p>
+
+
+        <h3>6. Teller en noemer</h3>
+        <p>
+      Een breuk bestaat uit twee getallen. Elk getal heeft een eigen
+      betekenis.
+    </p>
+
+    <p class="formula">
+      \\frac{3}{5}
+    </p>
+
+    <p>
+      Het getal <strong>boven</strong> de breukstreep noemen we de
+      <strong>teller</strong>. Dat is hier het getal 3</p>
+      <p>Het getal <strong>onder</strong> de
+      breukstreep noemen we de <strong>noemer</strong>. Dat is hier het getal 5.</p>
+      <p>
+        Deze breuk vertelt ons dus dat een geheel (een pizza bijvoorbeeld) in 5 gelijke delen wordt verdeeld en dat we daarvan 3 delen nemen.
+      </p>
+
+    <div class="callout">
+      <strong>Onthoud</strong>
+      <p>
+        De <strong>noemer</strong> vertelt in hoeveel gelijke delen
+        het geheel is verdeeld.
+      </p>
+      
+
+
+        <h3>7. Breuken op de getallenlijn</h3>
+ <p>
+      Net zoals we gehele getallen op een getallenlijn kunnen plaatsen,
+      kunnen we ook breuken een plaats geven.
+    </p>
+
+    <p class="formula">
+      0 \qquad \frac{1}{2} \qquad 1
+    </p>
+
+    <p>
+      Een half ligt precies tussen 0 en 1.
+    </p>
+
+    <div data-widget="fractionNumberLine"></div>
+
+    <h4>Een geheel verdelen op de getallenlijn</h4>
+
+    <p>
+      Om <span class="formula-inline">1/4</span> op de getallenlijn te
+      plaatsen, verdelen we de afstand van 0 tot 1 in 4 gelijke stukken.
+    </p>
+
+    <p class="formula">
+      0 \qquad \frac{1}{4} \qquad \frac{2}{4}
+      \qquad \frac{3}{4} \qquad 1
+    </p>
+
+    <p>
+      De afstand van 0 tot 1 is dus één geheel. Elke stap is
+      één vierde.
+    </p>
+
+    <h4>Breuken groter dan 1</h4>
+
+    <p>
+      Een breuk hoeft niet tussen 0 en 1 te liggen.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \frac{5}{4}
+    </p>
+
+    <p>
+      We kunnen vier vierde samen nemen om één geheel te krijgen.
+      Daarna blijft nog één vierde over:
+    </p>
+
+    <p class="formula">
+      \frac{5}{4} = 1 + \frac{1}{4}
+    </p>
+
+    <p>
+      Het getal <span class="formula-inline">5/4</span> ligt dus
+      rechts van 1 op de getallenlijn.
+    </p>
+
+    <div class="callout">
+      <strong>Inzicht</strong>
+      <p>
+        Een breuk is niet alleen een aantal stukjes van iets.
+        Een breuk stelt een <strong>getal</strong> voor en heeft daarom
+        een vaste plaats op de getallenlijn.
+      </p>
+    </div>
+
+
+        <h3>8. Gelijkwaardige breuken</h3>
+<p>
+      Kijk naar:
+    </p>
+
+    <p class="formula">
+      \frac{1}{2}
+    </p>
+
+    <p>
+      We kunnen een geheel in 2 gelijke delen verdelen en één deel nemen.
+      Maar we kunnen hetzelfde geheel ook in 4 gelijke delen verdelen
+      en 2 delen nemen.
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} = \frac{2}{4}
+    </p>
+
+    <p>
+      Verdelen we het geheel in 6 delen en nemen we er 3, dan krijgen
+      we opnieuw dezelfde hoeveelheid:
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} = \frac{2}{4} = \frac{3}{6}
+    </p>
+
+    <div data-widget="equivalentFractions"></div>
+
+    <h3>Hoe maak je een gelijkwaardige breuk?</h3>
+
+    <p>
+      We mogen de teller en de noemer met hetzelfde getal
+      vermenigvuldigen.
+    </p>
+
+    <p class="formula">
+      \frac{1}{2}
+      =
+      \frac{1 \times 2}{2 \times 2}
+      =
+      \frac{2}{4}
+    </p>
+
+    <p>
+      Nogmaals vermenigvuldigen met 2:
+    </p>
+
+    <p class="formula">
+      \frac{2}{4}
+      =
+      \frac{2 \times 2}{4 \times 2}
+      =
+      \frac{4}{8}
+    </p>
+
+    <p>
+      De teller én de noemer veranderen, maar de waarde van de breuk
+      blijft hetzelfde.
+    </p>
+
+    <div class="callout">
+      <strong>Belangrijk</strong>
+      <p>
+        Om een gelijkwaardige breuk te maken, vermenigvuldig je
+        <strong>teller en noemer met hetzelfde getal</strong>.
+      </p>
+    </div>
+
+    <h4>Waarom mag dat?</h4>
+
+    <p>
+      Vermenigvuldigen met hetzelfde getal boven en onder verandert
+      de verhouding niet.
+    </p>
+
+    <p class="formula">
+      \frac{a}{b}
+      =
+      \frac{a \times c}{b \times c}
+      \qquad(c \neq 0)
+    </p>
+
+    <p>
+      We kunnen dus een breuk op verschillende manieren schrijven
+      zonder dat de waarde verandert.
+    </p>
+
+      <h3>9. Breuken vereenvoudigen</h3>
+      <h4>Een breuk korter schrijven</h4>
+
+    <p>
+      Soms schrijven we een breuk met grotere getallen dan nodig.
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \frac{6}{8}
+    </p>
+
+    <p>
+      Zowel 6 als 8 zijn deelbaar door 2. We kunnen teller en noemer
+      dus door 2 delen:
+    </p>
+
+    <p class="formula">
+      \frac{6}{8}
+      =
+      \frac{6 :  2}{8 : 2}
+      =
+      \frac{3}{4}
+    </p>
+
+    <p>
+      De waarde is niet veranderd. We hebben alleen een eenvoudigere
+      schrijfwijze gevonden.
+    </p>
+
+    <h4>Wanneer zijn we klaar?</h4>
+
+    <p>
+      We kunnen verder vereenvoudigen zolang teller en noemer nog
+      een gemeenschappelijke deler groter dan 1 hebben.
+    </p>
+
+    <p>
+      Bij <span class="formula-inline">3/4</span> kan dat niet meer.
+      3 en 4 hebben geen gemeenschappelijke deler groter dan 1.
+    </p>
+
+    <div class="callout">
+      <strong>Vereenvoudigde breuk</strong>
+      <p>
+        Een breuk is volledig vereenvoudigd wanneer teller en noemer
+        geen gemeenschappelijke deler groter dan 1 meer hebben.
+      </p>
+    </div>
+
+    <h4>De GGD gebruiken</h4>
+
+    <p>
+      Bij grotere getallen is het handig om de
+      <strong>grootste gemene deler</strong> (GGD) te gebruiken.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \frac{18}{24}
+    </p>
+
+    <p>
+      De GGD van 18 en 24 is 6.
+    </p>
+      <p class="formula">
+      \frac{18}{24}
+      =
+      \frac{18 : 6}{24 : 6}
+      =
+      \frac{3}{4}
+    </p>
+
+    <p>
+      De GGD is dus een handige manier om een breuk in één stap
+      volledig te vereenvoudigen. Hier komen we later uitgebreider op terug.
+    </p>
+
+    <div class="callout">
+      <strong>Inzicht</strong>
+      <p>
+        Vereenvoudigen verandert de waarde van een breuk niet.
+        We zoeken alleen een eenvoudigere schrijfwijze.
+      </p>
+    </div>
+
+
+
+<h3>10. Breuken vergelijken</h3>
+<h4>Welke breuk is groter?</h4>
+
+    <p>
+      We kunnen breuken met elkaar vergelijken met de symbolen
+      <span class="formula-inline">&lt;</span>,
+      <span class="formula-inline">&gt;</span> en
+      <span class="formula-inline">=</span>.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} > \frac{1}{3}
+    </p>
+
+    <p>
+      We zagen al waarom: als hetzelfde geheel in 2 stukken wordt
+      verdeeld, is elk stuk groter dan wanneer het in 3 stukken
+      wordt verdeeld.
+    </p>
+
+    <h4>Dezelfde noemer</h4>
+
+    <p>
+      Als twee breuken dezelfde noemer hebben, is vergelijken eenvoudig.
+      De delen zijn dan even groot en we kijken alleen naar de teller.
+    </p>
+
+    <p class="formula">
+      \frac{2}{7} < \frac{5}{7}
+    </p>
+
+    <p>
+      Beide breuken bestaan uit zevende delen. Vijf zevende betekent
+      meer delen dan twee zevende.
+    </p>
+
+    <h4>Dezelfde teller</h4>
+
+    <p>
+      Als twee breuken dezelfde teller hebben, bepaalt de noemer
+      welke stukken kleiner zijn.
+    </p>
+
+    <p class="formula">
+      \frac{1}{4} < \frac{1}{3} < \frac{1}{2}
+    </p>
+
+    <p>
+      We nemen telkens één deel, maar het geheel wordt in steeds
+      minder stukken verdeeld.
+    </p>
+
+    <div data-widget="compareFractions"></div>
+
+    <h4>Verschillende tellers en noemers</h4>
+
+    <p>
+      Als beide getallen verschillen, kunnen we de breuken eerst
+      gelijknamig maken.
+    </p>
+
+    <p class="formula">
+      \frac{2}{3}
+      en
+      \frac{3}{5}
+    </p>
+
+    <p>
+      Een gemeenschappelijke noemer is 15:
+    </p>
+
+    <p class="formula">
+      \frac{2}{3} = \frac{10}{15}
+      \qquad
+      \frac{3}{5} = \frac{9}{15}
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      \frac{2}{3} > \frac{3}{5}
+    </p>
+
+    <div class="callout">
+      <strong>Onthoud</strong>
+      <p>
+        Je kunt breuken vergelijken door ze visueel op een getallenlijn
+        te plaatsen of door ze om te schrijven naar een gemeenschappelijke
+        noemer.
+      </p>
+    </div>
+
+<h3>11. Breuken optellen en aftrekken</h3>
+<h4>Gelijke noemers</h4>
+
+    <p>
+      Als twee breuken dezelfde noemer hebben, zijn de stukken even groot.
+      We kunnen de tellers dan rechtstreeks optellen.
+    </p>
+
+    <p class="formula">
+      \frac{2}{7} + \frac{3}{7}
+      =
+      \frac{5}{7}
+    </p>
+
+    <p>
+      We hebben 2 zevende delen en voegen daar 3 zevende delen aan toe.
+      Samen zijn dat 5 zevende delen.
+    </p>
+
+    <p>
+      Bij aftrekken werkt het op dezelfde manier:
+    </p>
+
+    <p class="formula">
+      \frac{6}{7} - \frac{2}{7}
+      =
+      \frac{4}{7}
+    </p>
+
+    <div class="callout">
+      <strong>Belangrijk</strong>
+      <p>
+        Bij gelijke noemers tel of trek je alleen de
+        <strong>tellers</strong> op. De noemer blijft dezelfde.
+      </p>
+    </div>
+
+    <h4>Verschillende noemers</h4>
+
+    <p>
+      Wat gebeurt er bij:
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} + \frac{1}{3}
+    </p>
+
+    <p>
+      Een helft en een derde bestaan uit stukken van verschillende grootte.
+      We kunnen ze daarom niet zomaar optellen.
+    </p>
+
+    <p><strong>Eerst maken we de noemers gelijk.</strong> Een geschikte gemeenschappelijke
+      noemer is 6.
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} = \frac{3}{6}
+      \qquad
+      \frac{1}{3} = \frac{2}{6}
+    </p>
+
+    <p>
+      Nu hebben beide breuken zesde delen:
+    </p>
+
+    <p class="formula">
+      \frac{3}{6} + \frac{2}{6}
+      =
+      \frac{5}{6}
+    </p>
+
+    <h4>Waarom mag je de noemers niet optellen?</h4>
+
+    <p>
+      Een veelgemaakte fout is:
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} + \frac{1}{3}
+      \neq
+      \frac{2}{5}
+    </p>
+
+    <p>
+      Een noemer vertelt hoe groot de stukken zijn. Bij een helft
+      en een derde zijn die stukken niet even groot. We moeten ze
+      eerst naar dezelfde soort stukken omzetten.
+    </p>
+
+    <div class="callout">
+      <strong>Kernidee</strong>
+      <p>
+        Voor optellen en aftrekken moeten de breuken dezelfde noemer
+        hebben. Daarna kun je de tellers optellen of aftrekken.
+      </p>
+    </div>
+
+<h3>12. Breuken vermenigvuldigen</h3>
+<h4>Een deel van een deel</h4>
+
+    <p>
+      Vermenigvuldigen met een breuk kunnen we eerst begrijpen als
+      <strong>een deel nemen van een ander deel</strong>.
+    </p>
+
+    <p>
+      Neem bijvoorbeeld de helft van drie vierde:
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} \times \frac{3}{4}
+    </p>
+
+    <p>
+      We nemen de helft van de drie vierde. Dat levert drie achtste op:
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} \times \frac{3}{4}
+      =
+      \frac{3}{8}
+    </p>
+
+    <h4>De rekenregel</h4>
+
+    <p>
+      Bij het vermenigvuldigen van breuken vermenigvuldigen we
+      de tellers met elkaar en de noemers met elkaar.
+    </p>
+
+    <p class="formula">
+      \frac{a}{b} \times \frac{c}{d}
+      =
+      \frac{a \times c}{b \times d}
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \frac{2}{3} \times \frac{5}{7}
+      =
+      \frac{2 \times 5}{3 \times 7}
+      =
+      \frac{10}{21}
+    </p>
+
+    <h4>Eerst vereenvoudigen</h4>
+
+    <p>
+      Soms kunnen we vóór het vermenigvuldigen al vereenvoudigen.
+      Dat maakt de berekening eenvoudiger.
+    </p>
+
+    <p class="formula">
+      \frac{2}{3} \times \frac{9}{10}
+    </p>
+
+    <p>
+      2 en 10 kunnen we door 2 delen. Ook 9 en 3 kunnen we door 3 delen.
+    </p>
+
+    <p class="formula">
+      \frac{1}{1} \times \frac{3}{5}
+      =
+      \frac{3}{5}
+    </p>
+
+    <div class="callout">
+      <strong>Onthoud</strong>
+      <p>
+        Bij vermenigvuldigen:
+        <strong>teller × teller, noemer × noemer</strong>.
+        Vereenvoudigen mag vóór of na de vermenigvuldiging.
+      </p>
+    </div>
+
+<h3>13. Breuken delen</h3>
+<h4>Wat betekent delen?</h4>
+
+    <p>
+      Bij delen vragen we ons af:
+      <strong>hoe vaak past het ene getal in het andere?</strong>
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      6 : 2 = 3
+    </p>
+
+    <p>
+      De vraag is: hoeveel keer past 2 in 6? Het antwoord is 3.
+    </p>
+
+    <h4>Een breuk delen door een breuk</h4>
+
+    <p>
+      Kijk naar:
+    </p>
+
+    <p class="formula">
+      \frac{3}{4} : \frac{1}{2}
+    </p>
+
+    <p>
+      We vragen ons af hoeveel helften er in drie vierde passen.
+      Eén helft past één keer, en er blijft nog een kwart over.
+      Dat is nog een halve helft.
+    </p>
+
+    <p>
+      Er passen dus anderhalve halve in drie vierde:
+    </p>
+
+    <p class="formula">
+      \frac{3}{4} : \frac{1}{2}
+      =
+      \frac{3}{2}
+    </p>
+
+    <h4>Het omgekeerde</h4>
+
+    <p>
+      De breuk
+      <span class="formula-inline">1/2</span>
+      heeft als <strong>omgekeerde</strong> breuk
+      <span class="formula-inline">2/1</span>.
+    </p>
+
+    <p>
+      Het bijzondere is:
+    </p>
+
+    <p class="formula">
+      \frac{1}{2} \times \frac{2}{1} = 1
+    </p>
+
+    <p>
+      Daarom kunnen we delen door een breuk omzetten in
+      vermenigvuldigen met het omgekeerde:
+    </p>
+
+    <p class="formula">
+      \frac{a}{b} : \frac{c}{d}
+      =
+      \frac{a}{b} \times \frac{d}{c}
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \frac{2}{3} : \frac{4}{5}
+      =
+      \frac{2}{3} \times \frac{5}{4}
+      =
+      \frac{10}{12}
+      =
+      \frac{5}{6}
+    </p>
+
+    <div class="callout">
+      <strong>Onthoud</strong>
+      <p>
+        Delen door een breuk betekent:
+        <strong>vermenigvuldigen met het omgekeerde</strong>.
+      </p>
+    </div>
+
+<h3>14. Gemengde getallen</h3>
+<h4>Meer dan één geheel</h4>
+
+    <p>
+      We hebben al gezien dat een breuk groter kan zijn dan 1.
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \frac{7}{4}
+    </p>
+
+    <p>
+      Vier vierde vormen één geheel. Er blijven dan drie vierde over:
+    </p>
+
+    <p class="formula">
+      \frac{7}{4}
+      =
+      1 + \frac{3}{4}
+    </p>
+
+    <p>
+      We kunnen dit korter schrijven als een
+      <strong>gemengd getal</strong>:
+    </p>
+
+    <p class="formula">
+      1\frac{3}{4}
+    </p>
+
+    <p>
+      Dit betekent: één geheel en drie vierde.
+    </p>
+
+    <h4>Van een onechte breuk naar een gemengd getal</h4>
+
+    <p>
+      Deel de teller door de noemer.
+    </p>
+
+    <p class="formula">
+      7 \div 4 = 1 \text{ rest } 3
+    </p>
+
+    <p>
+      Het quotiënt wordt het gehele deel en de rest wordt de teller
+      van de breuk:
+    </p>
+
+    <p class="formula">
+      \frac{7}{4} = 1\frac{3}{4}
+    </p>
+
+    <h4>Van een gemengd getal naar een breuk</h4>
+
+    <p>
+      Neem bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      2\frac{1}{3}
+    </p>
+
+    <p>
+      Twee gehele bestaan uit zes derde. Daar komt nog één derde bij:
+    </p>
+
+    <p class="formula">
+      2\frac{1}{3}
+      =
+      \frac{6}{3} + \frac{1}{3}
+      =
+      \frac{7}{3}
+    </p>
+
+    <div class="callout">
+      <strong>Inzicht</strong>
+      <p>
+        Een gemengd getal en een onechte breuk zijn twee verschillende
+        schrijfwijzen voor hetzelfde getal.
+      </p>
+    </div>
+
+    <p>
+      In berekeningen zijn onechte breuken vaak handiger.
+      Voor het dagelijks leven is een gemengd getal soms gemakkelijker
+      te lezen.
+    </p>
+`
   },
   
   {
