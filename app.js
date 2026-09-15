@@ -17,12 +17,6 @@ function milestonePassed(id) {
   return Boolean(progress().milestones[id]?.passed);
 }
 
-function allMilestonesPassed(phaseId) {
-  if (isAdmin()) return true;
-  const list = milestonesFor(phaseId);
-  return list.length > 0 && list.every((m) => milestonePassed(m.id));
-}
-
 function leerstofCollected(id) {
   return Boolean(progress().leerstof && progress().leerstof[id]);
 }
@@ -50,20 +44,6 @@ function allLessonsCollected(phaseId) {
   return t.total > 0 && t.got === t.total;
 }
 
-function testsPassedInPhase(phaseId) {
-  return milestonesFor(phaseId).filter((m) => milestonePassed(m.id)).length;
-}
-
-function testsNeededForExam(phaseId) {
-  const n = milestonesFor(phaseId).length;
-  return Math.min(2, n);
-}
-
-function phaseExamUnlocked(phaseId) {
-  if (isAdmin()) return true;
-  return allLessonsCollected(phaseId) && testsPassedInPhase(phaseId) >= testsNeededForExam(phaseId);
-}
-
 function phasePassed(n) {
   return allLessonsCollected(n);
 }
@@ -87,126 +67,6 @@ function phasePlayable(n) {
 function milestoneUnlocked(id) {
   if (isAdmin()) return true;
   return phaseUnlocked(phaseOfMilestone(id));
-}
-
-function normalize(s) {
-  return String(s ?? "")
-    .trim()
-    .toLowerCase()
-    .replace(/\u00b0/g, "")
-    .replace(/\s+/g, "")
-    .replace(/\u00d7/g, "*")
-    .replace(/\u00b7/g, "*")
-    .replace(/\u00f7/g, "/")
-    .replace(/\u2212/g, "-")
-    .replace(/,/g, ".")
-    .replace(/\u00b2/g, "^2")
-    .replace(/\u00b3/g, "^3")
-    .replace(/\u2074/g, "^4")
-    .replace(/\u2075/g, "^5")
-    .replace(/\u2076/g, "^6")
-    .replace(/\u2077/g, "^7")
-    .replace(/\u2078/g, "^8")
-    .replace(/\u03c0/g, "pi")
-    .replace(/rest/g, "r");
-}
-
-function parseMixedNumber(raw) {
-  const s = String(raw ?? "").trim().replace(/,/g, ".");
-  const m = s.match(/^(-?\d+)\s+(\d+)\s*\/\s*(\d+)\s*$/);
-  if (!m) return null;
-  const whole = Number(m[1]);
-  const num = Number(m[2]);
-  const den = Number(m[3]);
-  if (!den) return null;
-  const sign = whole < 0 ? -1 : 1;
-  return [sign * (Math.abs(whole) * den + num), den];
-}
-
-function parseFraction(raw) {
-  const mixed = parseMixedNumber(raw);
-  if (mixed) return mixed;
-  const s = normalize(raw).replace(/cm\^?[23]?/g, "");
-  if (s.includes("/")) {
-    const [a, b] = s.split("/");
-    if (a && b && !/[a-z]/.test(a + b)) return [Number(a), Number(b)];
-  }
-  if (s !== "" && !Number.isNaN(Number(s))) return [Number(s), 1];
-  return null;
-}
-
-function toMathExpr(raw) {
-  return normalize(raw)
-    .replace(/\^/g, "^")
-    .replace(/(\d)([a-z])/g, "$1*$2")
-    .replace(/([a-z])(\d)/g, "$1^$2")
-    .replace(/\)\(/g, ")*(")
-    .replace(/pi/g, "pi");
-}
-
-function symbolicEqual(a, b) {
-  if (typeof math === "undefined" || !math.parse) return false;
-  try {
-    const ea = math.parse(toMathExpr(a));
-    const eb = math.parse(toMathExpr(b));
-    if (math.simplify(ea).toString() === math.simplify(eb).toString()) return true;
-    const names = {};
-    ea.traverse(function (n) { if (n.isSymbolNode) names[n.name] = true; });
-    eb.traverse(function (n) { if (n.isSymbolNode) names[n.name] = true; });
-    const vars = Object.keys(names).filter((n) => n !== "pi" && n !== "e");
-    if (!vars.length) {
-      return Math.abs(Number(ea.evaluate()) - Number(eb.evaluate())) < 1e-8;
-    }
-    const samples = [0, 1, 2, -1, 0.5, 3, -2];
-    return samples.every((x) => {
-      const scope = {};
-      vars.forEach((v) => { scope[v] = x; });
-      const va = Number(ea.evaluate(scope));
-      const vb = Number(eb.evaluate(scope));
-      if (!Number.isFinite(va) || !Number.isFinite(vb)) return true;
-      return Math.abs(va - vb) < 1e-6;
-    });
-  } catch (e) {
-    return false;
-  }
-}
-
-function variants(raw) {
-  const n = normalize(raw);
-  const out = new Set([n]);
-  out.add(n.replace(/[()[\]]/g, ""));
-  out.add(n.replace(/;/g, ","));
-  return out;
-}
-
-function sameAnswer(given, accepted) {
-  if (given == null || given === "") return false;
-  const gMix = parseMixedNumber(given);
-  for (const a of accepted) {
-    const aMix = parseMixedNumber(a);
-    if (gMix && aMix && gMix[0] * aMix[1] === aMix[0] * gMix[1]) return true;
-    if (gMix && parseFraction(a)) {
-      const af = parseFraction(a);
-      if (gMix[0] * af[1] === af[0] * gMix[1]) return true;
-    }
-    if (aMix && parseFraction(given)) {
-      const gf = parseFraction(given);
-      if (aMix[0] * gf[1] === gf[0] * aMix[1]) return true;
-    }
-  }
-  const gSet = variants(given);
-  for (const a of accepted) {
-    const aSet = variants(a);
-    for (const g of gSet) {
-      if (aSet.has(g)) return true;
-      const gf = parseFraction(g);
-      const af = parseFraction(a);
-      if (gf && af && gf[1] !== 0 && af[1] !== 0 && gf[0] * af[1] === af[0] * gf[1]) return true;
-      if (symbolicEqual(g, a)) return true;
-    }
-    if (symbolicEqual(given, a)) return true;
-  }
-  return false;
 }
 
 function parseHash() {
@@ -261,46 +121,10 @@ function topbar(extra) {
       '<div class="nav-actions">' +
        extra +
       '<button class="btn ghost" data-go="/">Kaart</button>' +
-      '<button class="btn ghost" data-go="/admin">' + (isAdmin() ? "Admin aan" : "Admin") + "</button>" +
+      '<button class="btn ghost" data-go="/admin">' + (isAdmin() ? "Admin aan" : "Admin") + '</button>' +
       '<button class="btn ghost" id="reset-btn">Reset</button>' +
       '</div>' +
     '</div>'
-  );
-}
-
-function renderHome() {
-  const cards = COURSE.phases.map((p) => {
-    const open = phaseUnlocked(p.id);
-    const done = phasePassed(p.id);
-    let status = "Vergrendeld";
-    if (done) status = "Voltooid";
-    else if (open && phasePlayable(p.id)) status = pctDone(p.id) + "% in deze fase";
-    else if (open) status = "Binnenkort";
-    else {
-      const c = phaseCost(p.id);
-      status = "Kost " + c.les + " lesstof, " + c.toets + " toets";
-    }
-    const state = done ? "done" : open ? "open" : "locked";
-    return (
-      '<article class="phase-card ' + state + '" data-phase="' + p.id + '">' +
-      '<div class="phase-icon">' +
-      '<img src="assets/icon-fase' + p.id + '.png" alt="">' +
-      (open ? "" : '<span class="lock-badge" aria-hidden="true">\ud83d\udd12</span>') +
-      (done ? '<span class="done-badge" aria-hidden="true">\u2713</span>' : "") +
-      "</div>" +
-      '<div class="caption">' +
-      '<div class="num">Fase ' + p.id + "</div>" +
-      "<h2>" + p.title + "</h2>" +
-      "<p>" + p.short + "</p>" +
-      '<div class="status ' + state + '">' + status + "</div>" +
-      "</div></article>"
-    );
-  }).join("");
-  return (
-    '<div class="screen" style="background-image:url(\'assets/home.png\')">' +
-    topbar() +
-    '<div class="layout"><div class="panel hero"><h1>' + COURSE.title + "</h1><p>" + COURSE.tagline + "</p></div>" +
-    '<div class="phase-grid">' + cards + "</div></div></div>"
   );
 }
 
@@ -309,7 +133,7 @@ function renderAdmin() {
     return (
       '<div class="screen" style="background-image:url(\'assets/home.png\')">' + topbar() +
       '<div class="layout"><div class="panel"><h1>Admin</h1>' +
-      "<p>Alle fases, lessen, oefeningen en toetsen zijn open.</p>" +
+      "<p>Alle fases, lessen en toetsen zijn open.</p>" +
       '<button class="btn" id="admin-logout">Uitloggen</button></div></div></div>'
     );
   }
@@ -343,94 +167,25 @@ function renderLesson(phaseId, id) {
   );
 }
 
-function questionHTML(q, i) {
-  if (q.type === "choice") {
-    const opts = q.choices.map((c) =>
-      '<label class="choice"><input type="radio" name="' + q.id + '" value="' + encodeURIComponent(c) +
-      '"> <span>' + c + "</span></label>"
-    ).join("");
-    return '<div class="question" data-qid="' + q.id + '"><div class="q-title">' + (i + 1) + ". " +
-      q.prompt + '</div><div class="choices">' + opts + '</div><div class="feedback"></div></div>';
-  }
-  return '<div class="question" data-qid="' + q.id + '"><div class="q-title">' + (i + 1) + ". " +
-    q.prompt + '</div><input type="text" name="' + q.id + '" autocomplete="off"><div class="feedback"></div></div>';
-}
-
-function readAnswer(root, q) {
-  if (q.type === "choice") {
-    const picked = root.querySelector('input[name="' + q.id + '"]:checked');
-    return picked ? decodeURIComponent(picked.value) : "";
-  }
-  const input = root.querySelector('[name="' + q.id + '"]');
-  return input ? input.value : "";
-}
-
-function gradeList(questions, root) {
-  let correct = 0;
-  questions.forEach((q) => {
-    const ok = sameAnswer(readAnswer(root, q), q.accept);
-    if (ok) correct += 1;
-    const box = root.querySelector('[data-qid="' + q.id + '"] .feedback');
-    if (box) {
-      box.textContent = ok ? "Goed" : "Antwoord: " + q.accept[0];
-      box.className = "feedback " + (ok ? "good" : "bad");
-    }
-  });
-  return { correct: correct, total: questions.length, ratio: questions.length ? correct / questions.length : 0 };
-}
-
-function renderPractice(phaseId, id) {
-  const m = getMilestone(id);
-  if (!m) return renderPhase(phaseId);
-  return (
-    '<div class="screen" style="background-image:url(\'' + bgFor(phaseId) + "')\">" +
-    topbar('<button class="btn" data-go="/fase/' + phaseId + '">Fase ' + phaseId + "</button>") +
-    '<div class="layout"><div class="panel"><h1>Oefenen \u2014 ' + m.id + " " + m.title + "</h1>" +
-    "<p>Dit telt niet mee voor ontgrendelen.</p><div id=\"quiz\">" + m.practice.map(questionHTML).join("") +
-    '</div><p><button class="btn primary" id="check-btn">Controleren</button></p><div id="score"></div>' +
-    '<div class="lesson-actions"><button class="btn" data-go="/fase/' + phaseId + '">Terug naar fase ' + phaseId + "</button></div></div></div></div>"
-  );
-}
-
-function renderExam(kind, phaseId, mid) {
-  if (String(phaseId) === "1" && kind !== "phase" && typeof renderChallengeView === "function") {
-    return renderChallengeView(phaseId, mid);
-  }
-  const isPhase = kind === "phase";
-  const m = isPhase ? null : getMilestone(mid);
-  const questions = startExamSession(isPhase ? "phase" : "mile", phaseId, mid);
-  const title = isPhase ? "Eindtoets Fase " + phaseId : "Toets " + m.id + " \u2014 " + m.title;
-  const locked = isPhase ? !phaseExamUnlocked(phaseId) : !milestoneUnlocked(mid);
-  const screen = '<div class="screen" style="background-image:url(\'' + bgFor(phaseId) + "')\">";
-  const bar = topbar('<button class="btn" data-go="/fase/' + phaseId + '">Fase ' + phaseId + "</button>");
-  if (locked) {
-    return screen + bar + '<div class="layout"><div class="panel"><h1>Deze toets is nog vergrendeld</h1></div></div></div>';
-  }
-  return (
-    screen + bar + '<div class="layout"><div class="panel"><h1>' + title + "</h1>" +
-    "<p>Drempel: " + Math.round(COURSE.passRatio * 100) + "%.</p><div id=\"quiz\">" +
-    questions.map(questionHTML).join("") +
-    '</div><p><button class="btn primary" id="submit-exam" data-kind="' + kind +
-    '" data-phase="' + phaseId + '" data-mid="' + (mid || "") +
-    '">Indienen</button></p><div id="score"></div>' +
-    '<div class="lesson-actions"><button class="btn" data-go="/fase/' + phaseId + '">Terug naar fase ' + phaseId + "</button></div></div></div></div>"
-  );
-}
-
 function render() {
   const parts = parseHash();
   const app = document.getElementById("app");
   if (!app) return;
+  const isExamRoute = parts[0] === "fase" && parts[2] === "m" && parts[4] === "toets";
   if (!parts.length) app.innerHTML = renderHome();
   else if (parts[0] === "admin") app.innerHTML = renderAdmin();
   else if (parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") app.innerHTML = renderLesson(parts[1], parts[3]);
-  else if (parts[0] === "fase" && parts[2] === "m" && parts[4] === "oefen") app.innerHTML = renderLesson(parts[1], parts[3]);
-  else if (parts[0] === "fase" && parts[2] === "m" && parts[4] === "toets") app.innerHTML = renderExam("mile", parts[1], parts[3]);
-  else if (parts[0] === "fase" && parts[2] === "examen") app.innerHTML = renderPhase(parts[1]);
+  else if (isExamRoute) app.innerHTML = renderExam("mile", parts[1], parts[3]);
   else if (parts[0] === "fase") app.innerHTML = renderPhase(parts[1]);
   else app.innerHTML = renderHome();
+
   if (typeof bindChallengeUi === "function") bindChallengeUi();
   if (typeof typesetMath === "function") typesetMath(app);
+
+  if (isExamRoute && typeof currentExamQuestions === "function" && typeof examResetWidgetState === "function") {
+    examResetWidgetState(currentExamQuestions("mile", parts[1], parts[3]));
+  }
+
   if (typeof mountWidgets === "function" && parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") {
     if (app.querySelector("[data-widget]")) mountWidgets(app, parts[3]);
   }
@@ -486,38 +241,20 @@ document.addEventListener("click", function (e) {
     render();
     return;
   }
-  if (e.target.id === "check-btn") {
-    const parts = parseHash();
-    const m = getMilestone(parts[3]);
-    const res = gradeList(m.practice, document.getElementById("quiz"));
-    document.getElementById("score").innerHTML = '<p class="score-banner">' + res.correct + " / " + res.total + " goed</p>";
-    return;
-  }
   if (e.target.id === "submit-exam") {
-    const kind = e.target.getAttribute("data-kind");
     const phaseId = e.target.getAttribute("data-phase");
     const mid = e.target.getAttribute("data-mid");
-    const questions = currentExamQuestions(kind, phaseId, mid);
+    const questions = currentExamQuestions("mile", phaseId, mid);
     const res = gradeList(questions, document.getElementById("quiz"));
     const passed = res.ratio >= COURSE.passRatio;
-    if (kind === "phase") {
-      store.dispatch({ type: "PHASE_EXAM_RESULT", payload: { phaseId: phaseId, score: res.correct, total: res.total, passed: passed } });
-    } else {
-      const was = milestonePassed(mid);
-      store.dispatch({ type: "MILESTONE_RESULT", payload: { id: mid, score: res.correct, total: res.total, passed: passed } });
-      if (passed && !was) burstToets(e.target);
-      if (passed && !leerstofCollected(mid)) {
-        store.dispatch({ type: "COLLECT_LEERSTOF", payload: mid });
-        burstLesstof(e.target);
-      }
-    }
+    const was = milestonePassed(mid);
+    store.dispatch({ type: "MILESTONE_RESULT", payload: { id: mid, score: res.correct, total: res.total, passed: passed } });
+    if (passed && !was) burstToets(e.target);
     const next = passed
-      ? (kind === "phase"
-        ? '<p>Fase voltooid.</p><button class="btn primary" data-go="/">Naar de kaart</button>'
-        : '<p>Milestone behaald.</p><button class="btn primary" data-go="/fase/' + phaseId + '">Terug</button>')
+      ? '<p>Milestone behaald.</p><button class="btn primary" data-go="/fase/' + phaseId + '">Terug</button>'
       : '<p>Nog niet gehaald.</p><button class="btn" data-go="/fase/' + phaseId + '">Terug</button>';
     document.getElementById("score").innerHTML =
-      '<p class="score-banner">' + res.correct + " / " + res.total + " \u2014 " + (passed ? "Geslaagd" : "Niet gehaald") + "</p>" + next;
+      '<p class="score-banner">' + res.correct + " / " + res.total + " — " + (passed ? "Geslaagd" : "Niet gehaald") + "</p>" + next;
   }
 });
 
