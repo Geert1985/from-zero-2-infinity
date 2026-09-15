@@ -4164,6 +4164,7 @@ negatieve getallen.</p>
       { id: "e110-8", question: "Bereken 2 + 3^2 × 2.", answer: ["20"] }
     ]
   },
+
   {
     id: "1.11",
     title: "Wortels",
@@ -4348,6 +4349,7 @@ negatieve getallen.</p>
       { id: "e111-8", question: "Is √(−16) een reëel getal?", answer: ["nee"] }
     ]
   },
+
   {
     id: "1.12",
     title: "Irrationale en reële getallen",
@@ -4359,27 +4361,26 @@ negatieve getallen.</p>
       <h3>1. Niet elk getal kan als breuk worden geschreven</h3>
       <p>In 1.5 maakten we kennis met de <strong>rationale getallen</strong>. Dat zijn getallen die we als een breuk van twee gehele getallen kunnen schrijven.</p>
       <p>Bijvoorbeeld:</p>
-      <p class="formula">\frac{1}{2},\quad -\frac{3}{4},\quad 5,\quad 0,75</p>
+      <p class="formula">\\frac{1}{2},\\ \\frac{3}{4},\\ 5,\\ 0,75</p>
       <p>Maar bestaat er ook een getal dat <strong>niet</strong> als zo'n breuk kan worden geschreven?</p>
       <p>Ja. Een bekend voorbeeld is de vierkantswortel van 2:</p>
-      <p class="formula">\sqrt{2}</p>
+      <p class="formula">\\sqrt{2}</p>
       <p>Dit getal kunnen we niet precies schrijven als een breuk van twee gehele getallen.</p>
 
       <h3>2. Een verrassende vierkantswortel</h3>
       <p>We weten uit 1.11 dat:</p>
       <p class="formula">1^2 = 1</p>
       <p class="formula">2^2 = 4</p>
-      <p>Daarom ligt <span class="formula-inline">\sqrt{2}</span> tussen 1 en 2:</p>
-      <p class="formula">1 &lt; \sqrt{2} &lt; 2</p>
+      <p>Daarom:</p>
+      <p class="formula">1 &lt; \\sqrt{2} &lt; 2</p>
       <p>We kunnen de waarde steeds nauwkeuriger benaderen:</p>
-      <p class="formula">\sqrt{2} \approx 1,41421356...</p>
+      <p class="formula">\\sqrt{2} \\approx 1,41421356...</p>
       <p>De decimalen blijven doorgaan en vormen geen zich herhalend patroon.</p>
-      <div class="callout"><strong>Belangrijk:</strong> een decimale benadering is niet hetzelfde als de exacte waarde. <span class="formula-inline">1,414</span> is een benadering van <span class="formula-inline">\sqrt{2}</span>, niet precies <span class="formula-inline">\sqrt{2}</span>.</div>
 
       <h3>3. Rationale getallen</h3>
       <p>Een getal is <strong>rationaal</strong> als het kan worden geschreven als een breuk:</p>
       <p class="formula">\frac{a}{b}</p>
-      <p>waarbij <span class="formula-inline">a</span> en <span class="formula-inline">b</span> gehele getallen zijn en <span class="formula-inline">b \ne 0</span>.</p>
+      <p>waarbij a en b gehele getallen zijn en b niet 0 is.</p>
       <p>We gebruiken het symbool <strong>ℚ</strong> voor de verzameling van de rationale getallen.</p>
       <p>Ook gehele getallen zijn rationaal, want bijvoorbeeld:</p>
       <p class="formula">4 = \frac{4}{1}</p>
@@ -4387,9 +4388,13 @@ negatieve getallen.</p>
       <h3>4. Irrationale getallen</h3>
       <p>Een getal is <strong>irrationaal</strong> als het <strong>niet</strong> als een breuk van twee gehele getallen kan worden geschreven.</p>
       <p>Voorbeelden zijn:</p>
-      <p class="formula">\sqrt{2},\quad \sqrt{3},\quad \pi</p>
+      <p class="formula">\\sqrt{2},\\ \\sqrt{3},\\ \\pi</p>
       <p>Deze getallen hebben een oneindige decimale schrijfwijze zonder een eindeloos herhalend patroon.</p>
       <div class="callout"><strong>Rationaal of irrationaal?</strong><br>Rationaal = wel als breuk van gehele getallen te schrijven.<br>Irrationaal = niet als zo'n breuk te schrijven.</div>
+      <p>Een belangrijke waarschuwing: niet elke vierkantswortel is irrationaal.</p>
+      <p>Ook het getal <span class="formula-inline">\pi</span> is irrationaal. Het is de verhouding tussen de omtrek en de diameter van een cirkel.</p>
+
+
 
       <h3>5. Oneindige decimalen</h3>
       <p>Een decimale schrijfwijze kan eindig of oneindig zijn.</p>
@@ -4413,24 +4418,17 @@ negatieve getallen.</p>
         <li>oneindige niet-repeterende decimalen → irrationaal.</li>
       </ul>
 
-      <h3>7. Waarom √2 irrationaal is</h3>
-      <p>We weten dat <span class="formula-inline">\sqrt{2}</span> geen eindige of repeterende decimale schrijfwijze heeft. Maar we kunnen nog sterker aantonen dat het getal niet als breuk kan worden geschreven.</p>
-      <p>Een volledig bewijs is op dit niveau niet nodig. Het belangrijke inzicht is dat er geen twee gehele getallen <span class="formula-inline">a</span> en <span class="formula-inline">b</span> bestaan waarvoor:</p>
-      <p class="formula">\sqrt{2} = \frac{a}{b}</p>
-      <p>Daarom is <span class="formula-inline">\sqrt{2}</span> irrationaal.</p>
-      <div class="callout"><strong>Vooruitblik:</strong> later in de wiskunde kun je het bewijs van de irrationaliteit van <span class="formula-inline">\sqrt{2}</span> volledig bekijken. Voor deze les is vooral het onderscheid tussen rationaal en irrationaal belangrijk.</div>
 
-      <h3>8. Meer voorbeelden van irrationale getallen</h3>
+      <h3>7. Meer voorbeelden van irrationale getallen</h3>
       <p>Niet alleen <span class="formula-inline">\sqrt{2}</span> is irrationaal.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">\sqrt{3},\quad \sqrt{5},\quad \sqrt{7}</p>
-      <p>Ook het getal <span class="formula-inline">\pi</span> is irrationaal. Het is de verhouding tussen de omtrek en de diameter van een cirkel.</p>
       <p>Een belangrijke waarschuwing: niet elke vierkantswortel is irrationaal.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">\sqrt{9} = 3</p>
       <p>9 heeft dus een rationale vierkantswortel.</p>
 
-      <h3>9. Wanneer is een vierkantswortel rationaal?</h3>
+      <h3>8. Wanneer is een vierkantswortel rationaal?</h3>
       <p>Als een natuurlijk getal een <strong>volmaakt kwadraat</strong> is, is de vierkantswortel een geheel getal.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">\sqrt{16} = 4</p>
