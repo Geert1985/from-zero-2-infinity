@@ -333,25 +333,25 @@ De actuele implementatie in `math.js` ondersteunt onder andere:
 
 Nieuwe cursusinhoud in `fase*.js` moet de bestaande renderingarchitectuur volgen.
 
-### Regels voor exponenten en spaties in formules
+### LaTeX in JavaScript template literals
 
-Bij het schrijven van LaTeX-formules in `fase*.js` gelden de volgende regels:
-
-#### 1. Gebruik accolades voor volledige exponenten
-
-Wanneer een exponent uit meerdere tekens, een bewerking of meerdere termen bestaat, moeten **accolades `{...}`** worden gebruikt om de volledige exponent aan te duiden.
+De cursusinhoud staat in JavaScript template literals. Iedere LaTeX-opdracht die een backslash gebruikt, moet in de JavaScript-bron met **twee backslashes** worden geschreven.
 
 Correct:
 
 ```html
-<p class="formula">a^m × a^n = a^{(m+n)}</p>
-<p class="formula">a^m ÷ a^n = a^{(m−n)}</p>
-<p class="formula">(a^m)^n = a^{(m × n)}</p>
+<p class="formula">\\mathbb{R} = \\mathbb{Q} \\cup \\text{irrationele getallen}</p>
+<span class="formula-inline">\\pi</span>
+<span class="formula-inline">\\sqrt{2}</span>
+<span class="formula-inline">x^2</span>
+<span class="formula-inline">2^{n+1}</span>
 ```
 
-Hierbij zorgen `{(m+n)}`, `{(m−n)}` en `{(m × n)}` ervoor dat de volledige uitdrukking als exponent wordt weergegeven.
+JavaScript geeft dan één backslash door aan KaTeX. Een losse `\pi` in een JavaScript-template-literal is dus niet de correcte bronnotatie.
 
-Dit geldt ook voor bijvoorbeeld:
+### Exponenten
+
+Voor één eenvoudig teken kan `x^2` worden gebruikt. Zodra de exponent uit meerdere tekens of een bewerking bestaat, gebruik je accolades:
 
 ```html
 <p class="formula">2^{n+1}</p>
@@ -359,125 +359,69 @@ Dit geldt ook voor bijvoorbeeld:
 <p class="formula">x^{2k+1}</p>
 ```
 
-Gebruik dus niet alleen `^` zonder accolades wanneer de exponent uit meer dan één teken bestaat.
+### Breuken, wortels en symbolen
 
-#### 2. Gebruik `\\` voor een zichtbare spatie binnen een formule
-
-Binnen een `<p class="formula">` wordt een gewone spatie niet altijd correct weergegeven door LaTeX. Wanneer er bewust een duidelijke spatie tussen tekst of formuleonderdelen moet komen, gebruik dan `\\`.
-
-Bijvoorbeeld:
+Gebruik voor nieuwe inhoud expliciete LaTeX:
 
 ```html
-<p class="formula">√25 = 5\\ omdat\\ 5^2 = 25</p>
+<p class="formula">\\frac{3}{4}</p>
+<span class="formula-inline">\\sqrt{2}</span>
+<span class="formula-inline">\\pi</span>
+<span class="formula-inline">\\mathbb{R}</span>
 ```
 
-Dit wordt weergegeven als:
+### Tekst binnen een formule
 
-**√25 = 5 omdat 5² = 25**
-
-Gebruik deze conventie wanneer gewone tekst binnen een formule wordt gecombineerd met wiskundige notatie.
-
-Bijvoorbeeld:
+Gebruik `\\text{...}` en `\\quad` wanneer gewone woorden onderdeel zijn van een formule:
 
 ```html
-<p class="formula">√49 = 7\\ omdat\\ 7^2 = 49</p>
+<p class="formula">\\sqrt{25} = 5 \\quad \\text{omdat} \\quad 5^2 = 25</p>
 ```
 
-of:
+Gebruik `\\` dus niet als algemene manier om woorden van elkaar te scheiden.
 
-```html
-<p class="formula">3^2 = 9\\ en\\ 4^2 = 16</p>
-```
+### Geen `\[\]` in `.formula`
 
-#### 3. Belangrijk onderscheid met JavaScript-escaping
+Gebruik geen `\[\]` of `$$...$$` binnen `class="formula"`; de renderer behandelt `.formula` al als display-formule.
 
-De `fase*.js`-bestanden gebruiken JavaScript template literals. Daardoor kunnen backslashes door JavaScript als escape-karakters worden geïnterpreteerd.
+### Compatibiliteitslaag
 
-Voor nieuwe content moet daarom altijd worden gecontroleerd dat de uiteindelijke LaTeX-notatie correct in de broncode staat.
-
-De regels zijn:
-
-* LaTeX-opdrachten gebruiken de vereiste backslash.
-* Een samengestelde exponent gebruikt `{...}`.
-* Een expliciete LaTeX-spatie binnen een formule wordt geschreven als `\\`.
-* Gebruik geen `\\frac` wanneer één LaTeX-backslash bedoeld is.
-* Gebruik geen `\[\]` binnen een element met `class="formula"`; de formule wordt daar al door de renderer als display-formule behandeld.
-
-`math-compat-fix.js` mag uitsluitend dienen als **compatibiliteitslaag voor oudere of foutief opgeslagen content**. Nieuwe content moet vanaf het begin correct worden geschreven en mag niet afhankelijk zijn van reparaties in `math-compat-fix.js`.
-
-
-De `.formula`-klasse wordt door `math.js` rechtstreeks aan KaTeX aangeboden.
+`math-compat-fix.js` is uitsluitend een vangnet voor oudere of beschadigde content. Nieuwe cursusinhoud moet vanaf het begin correct worden geschreven en mag niet afhankelijk zijn van deze reparatielaag.
 
 ## 11.2 Inline wiskunde
 
-Wiskunde die midden in een zin staat, gebruikt de bestaande inline-conventie:
+Wiskunde midden in een zin gebruikt:
 
 ```html
 <span class="formula-inline">...</span>
 ```
 
-Daarnaast kan `math.js` bepaalde wiskundige fragmenten in gewone tekst herkennen en automatisch typesetten. Dit automatische herkenningsmechanisme moet niet worden gebruikt als vervanging voor duidelijke `.formula`- of inline-markup wanneer een formule complexer wordt.
+`formula-inline` wordt rechtstreeks door `math.js` met KaTeX in `displayMode: false` gerenderd. De algemene automatische tekstverwerker moet een `formula-inline`-element daarna niet opnieuw verwerken.
+
+Voorbeelden:
+
+```html
+<span class="formula-inline">\\pi</span>
+<span class="formula-inline">\\sqrt{2}</span>
+<span class="formula-inline">\\mathbb{R}</span>
+<span class="formula-inline">x^2</span>
+<span class="formula-inline">2^{n+1}</span>
+```
 
 ## 11.3 JavaScript escaping
 
-LaTeX en JavaScript-strings zijn gevoelig voor backslash-escapes. Combinaties zoals `\f`, `\t` en `\n` kunnen door JavaScript als escape sequences worden geïnterpreteerd voordat KaTeX de tekst ontvangt.
+LaTeX en JavaScript-strings zijn gevoelig voor backslash-escapes. Vooral combinaties die beginnen met `\\f`, `\\t` of `\\n` kunnen door JavaScript als escape sequence worden geïnterpreteerd voordat KaTeX de tekst ontvangt.
 
-Daarom geldt:
-
-> **De cursusbron moet structureel correct zijn. We vertrouwen niet op een herstelmechanisme om nieuwe cursusinhoud te corrigeren.**
-
-Bij wijzigingen in `fase*.js` moet dus altijd worden gecontroleerd hoe de uiteindelijke string die `math.js` ontvangt eruitziet.
+De cursusbron moet daarom structureel correct zijn; nieuwe inhoud mag niet afhankelijk zijn van herstelcode.
 
 ## 11.4 `math-compat-fix.js`
 
-`math-compat-fix.js` is een **compatibiliteitslaag/vangnet** voor reeds bestaande of legacy-inhoud waarin LaTeX door JavaScript escaping beschadigd kan zijn geraakt.
-
-De huidige fix probeert onder andere beschadigde vormen van:
-
-- `\frac`
-- `\times`
-- `\neq`
-- `\qquad`
-
-te herstellen.
-
-Deze file is **geen onderdeel van de gewenste schrijfwijze voor nieuwe cursusinhoud**.
-
-Nieuwe code moet dus niet worden geschreven met extra backslashes of andere workarounds met de bedoeling de compatibiliteitslaag te activeren.
-
-Als nieuwe cursusinhoud zonder de compatibiliteitslaag niet correct zou renderen, moet eerst de broncode en de renderingketen worden gecontroleerd. De compatibiliteitslaag mag niet onbeperkt worden uitgebreid om fouten in nieuwe cursusinhoud te maskeren.
+`math-compat-fix.js` is een compatibiliteitslaag voor legacy-inhoud waarin LaTeX door JavaScript escaping beschadigd is geraakt. Nieuwe cursusinhoud moet deze laag niet nodig hebben.
 
 ## 11.5 `fraction-widget-fix.js`
 
-`fraction-widget-fix.js` heeft **geen functie binnen de LaTeX-rendering**.
+`fraction-widget-fix.js` heeft geen functie binnen de LaTeX-rendering. Het is uitsluitend een technische override voor de `fractionVisual`-widget.
 
-Dit bestand is uitsluitend een override voor de `fractionVisual`-widget uit `widgets.js`.
-
-Het doel is:
-
-- de canvas alleen opnieuw te dimensioneren wanneer de layout werkelijk verandert;
-- bij sliderbewegingen alleen opnieuw te tekenen;
-- `ResizeObserver` te gebruiken voor layoutwijzigingen;
-- ongewenst zoomen/verschuiven van de pagina tijdens het gebruik van de widget te voorkomen.
-
-De scheiding is dus:
-
-```text
-math.js
-    → wiskundige tekst
-    → Unicode/ondersteunde notatie naar LaTeX
-    → KaTeX
-    → formule op het scherm
-
-math-compat-fix.js
-    → tijdelijk/legacy herstel van beschadigde LaTeX
-
-fraction-widget-fix.js
-    → technische fix voor de visuele breukenwidget
-    → geen relatie met LaTeX-rendering
-```
-
-De canvasoplossing van `fraction-widget-fix.js` is door de gebruiker goedgekeurd en moet behouden blijven.
 
 ------------------------------------------------------------------------
 
@@ -570,15 +514,7 @@ niet overslaan.
 
 # 17. Huidige focus
 
-De huidige ontwikkelfocus is:
-
-**Fase 1 verder uitbouwen, met 1.4 en daarna 1.5 als belangrijkste
-inhoudelijke stappen.**
-
-1.4 eindigt bij **gemengde getallen**.
-
-Daarna volgt de overgang naar: - decimalen; - percentages; - rationale
-getallen.
+De huidige ontwikkelfocus is **Fase 1 verder uitbouwen**. De milestones 1.1 t/m 1.12 zijn aanwezig; 1.13 behandelt **afronden en wetenschappelijke notatie** en vormt voorlopig het einde van de huidige Fase 1-inhoud.
 
 ------------------------------------------------------------------------
 

@@ -120,7 +120,7 @@ function decorateText(text) {
 
 function typesetMixed(el) {
   if (typeof katex === "undefined" || !el) return;
-  if (el.classList.contains("formula") || el.classList.contains("math") || el.closest(".katex, svg, .fig")) return;
+  if (el.classList.contains("formula") || el.classList.contains("formula-inline") || el.classList.contains("math") || el.closest(".katex, svg, .fig")) return;
   const kids = Array.from(el.childNodes);
   kids.forEach((node) => {
     if (node.nodeType === 3) {
@@ -148,6 +148,11 @@ function typesetMath(root) {
   root.querySelectorAll(".formula").forEach((el) => {
     try {
       katex.render(toTex(el.textContent), el, { displayMode: true, throwOnError: false, output: "html" });
+    } catch { /* laat tekst staan */ }
+  });
+  root.querySelectorAll(".formula-inline").forEach((el) => {
+    try {
+      katex.render(toTex(el.textContent), el, { displayMode: false, throwOnError: false, output: "html" });
     } catch { /* laat tekst staan */ }
   });
   root.querySelectorAll("span.math").forEach((el) => {

@@ -4482,5 +4482,208 @@ negatieve getallen.</p>
       { id: "e112-7", question: "Geef de inclusieketen van natuurlijke tot en met reële getallen.", answer: ["ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ"] },
       { id: "e112-8", question: "Welke is groter: √20 of 4?", answer: ["√20"] }
     ]
+  },
+  {
+    id: "1.13",
+    title: "Afronden en wetenschappelijke notatie",
+    goal: "Getallen doelgericht afronden, schattingen maken en grote en kleine getallen compact schrijven met wetenschappelijke notatie.",
+    theory: /* html */`
+      <h2>Afronden en wetenschappelijke notatie</h2>
+      <p><strong>Doel:</strong> getallen afronden met een duidelijke nauwkeurigheid, schattingen gebruiken en zeer grote of kleine getallen compact schrijven.</p>
+
+      <div class="callout">
+        <strong>Vertrekpunt</strong>
+        <p>In de vorige lessen hebben we geleerd om met steeds meer soorten getallen te werken. We kunnen nu exacte waarden schrijven, maar in de praktijk is een exacte schrijfwijze niet altijd nodig. Soms willen we een getal juist <strong>eenvoudiger en overzichtelijker</strong> weergeven.</p>
+      </div>
+
+      <h3>1. Waarom ronden we getallen af?</h3>
+      <p>Een getal kan veel cijfers bevatten. Soms zijn al die cijfers niet belangrijk voor wat we willen weten.</p>
+      <p>Stel dat een afstand precies 12,4837 km is. Als we alleen willen weten hoeveel kilometer dit ongeveer is, kunnen we schrijven:</p>
+      <p class="formula">12,4837 \\approx 12,5</p>
+      <p>Het teken <strong>≈</strong> betekent: <strong>ongeveer gelijk aan</strong>.</p>
+      <p>We hebben het getal niet veranderd omdat we denken dat 12,5 exact 12,4837 is. We hebben bewust gekozen voor een <strong>benadering</strong>.</p>
+
+      <h3>2. Afronden op hele getallen</h3>
+      <p>Bij afronden op een geheel getal kijken we naar het cijfer direct <strong>rechts van de eenheden</strong>.</p>
+      <p>Bij 7,3 is dat cijfer 3. Omdat 3 kleiner is dan 5, blijft het gehele deel hetzelfde:</p>
+      <p class="formula">7,3 \\approx 7</p>
+      <p>Bij 7,8 is het cijfer rechts van de eenheden 8. Daarom verhogen we 7 met 1:</p>
+      <p class="formula">7,8 \\approx 8</p>
+
+      <h3>3. De afrondingsregel</h3>
+      <p>De basisregel is:</p>
+      <ul>
+        <li>cijfer rechts van de afrondingsplaats is <strong>0, 1, 2, 3 of 4</strong> → naar beneden afronden;</li>
+        <li>cijfer rechts van de afrondingsplaats is <strong>5, 6, 7, 8 of 9</strong> → naar boven afronden.</li>
+      </ul>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">23,4 \\approx 23</p>
+      <p class="formula">23,5 \\approx 24</p>
+      <p class="formula">23,9 \\approx 24</p>
+      <div class="callout"><strong>Onthoud:</strong> kijk naar het eerste cijfer dat je <strong>niet</strong> wilt behouden. Dat cijfer bepaalt hoe je afrondt.</div>
+
+      <h3>4. Afronden op tienden</h3>
+      <p>Bij afronden op één decimaal willen we één cijfer na de komma behouden.</p>
+      <p>Neem 4,26. We behouden de 2 en kijken naar het volgende cijfer, de 6:</p>
+      <p class="formula">4,26 \\approx 4,3</p>
+      <p>Bij 4,23 kijken we naar de 3:</p>
+      <p class="formula">4,23 \\approx 4,2</p>
+
+      <h3>5. Afronden op honderdsten en duizendsten</h3>
+      <p>Dezelfde regel werkt op elke plaats.</p>
+      <p>Op honderdsten:</p>
+      <p class="formula">7,386 \\approx 7,39</p>
+      <p>We behouden 8 als honderdste en kijken naar de 6. Daarom wordt 8 verhoogd naar 9.</p>
+      <p>Op duizendsten:</p>
+      <p class="formula">7,3864 \\approx 7,386</p>
+      <p>We behouden 386 en kijken naar de volgende 4. Omdat 4 kleiner is dan 5, verandert 386 niet.</p>
+
+      <h3>6. Afronden van gehele getallen</h3>
+      <p>Ook grote gehele getallen kunnen we afronden.</p>
+      <p>Op tientallen:</p>
+      <p class="formula">347 \\approx 350</p>
+      <p>Op honderdtallen:</p>
+      <p class="formula">1 249 \\approx 1 200</p>
+      <p>Op duizendtallen:</p>
+      <p class="formula">8 650 \\approx 9 000</p>
+      <p>Ook hier bepaalt het eerste cijfer dat we weggooien of we naar beneden of naar boven afronden.</p>
+
+      <h3>7. Afronden is een keuze van nauwkeurigheid</h3>
+      <p>Een afgerond getal is alleen zinvol als duidelijk is <strong>waarop</strong> we hebben afgerond.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">3,14159 \\approx 3,1</p>
+      <p>is minder nauwkeurig dan:</p>
+      <p class="formula">3,14159 \\approx 3,142</p>
+      <p>Beide kunnen correct zijn, afhankelijk van de gewenste nauwkeurigheid.</p>
+      <div class="callout"><strong>Belangrijk:</strong> afronden betekent niet automatisch "zo weinig mogelijk cijfers schrijven". Je kiest eerst de gewenste nauwkeurigheid.</div>
+
+      <h3>8. Afronden en schatten</h3>
+      <p>We kunnen afronden gebruiken om snel een berekening te schatten.</p>
+      <p>Stel:</p>
+      <p class="formula">198 × 49</p>
+      <p>We kunnen dit benaderen door:</p>
+      <p class="formula">200 × 50 = 10 000</p>
+      <p>Het exacte antwoord ligt in de buurt van 10 000:</p>
+      <p class="formula">198 × 49 = 9 702</p>
+      <p>De schatting helpt ons om te beoordelen of een antwoord redelijk is.</p>
+
+      <h3>9. Afronden vóór een berekening</h3>
+      <p>Als we vooraf afronden, krijgen we meestal een <strong>benadering</strong> en geen exact antwoord.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">39,8 × 5,1</p>
+      <p>Afgerond geeft dit:</p>
+      <p class="formula">40 × 5 = 200</p>
+      <p>Het exacte antwoord is:</p>
+      <p class="formula">39,8 × 5,1 = 202,98</p>
+      <p>De afgeronde berekening is dus een snelle schatting.</p>
+
+      <h3>10. Afrondingsfout</h3>
+      <p>Door af te ronden ontstaat meestal een klein verschil tussen de exacte waarde en de benadering.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">12,48 \\approx 12,5</p>
+      <p>Het verschil is:</p>
+      <p class="formula">12,5 − 12,48 = 0,02</p>
+      <p>Dit noemen we de <strong>absolute afrondingsfout</strong> in deze eenvoudige context.</p>
+      <p>Hoe meer cijfers we behouden, hoe kleiner de afrondingsfout meestal wordt.</p>
+
+      <h3>11. Wanneer is een benadering goed genoeg?</h3>
+      <p>Dat hangt af van de situatie.</p>
+      <p>Bij een afstand van 12,4837 km kan 12,5 km voldoende zijn voor een ruwe planning. Bij een laboratoriummeting kan veel meer nauwkeurigheid nodig zijn.</p>
+      <p>Er bestaat dus geen universeel "juist aantal cijfers". De gewenste nauwkeurigheid komt voort uit de <strong>context</strong>.</p>
+
+      <h3>12. Zeer grote getallen overzichtelijk schrijven</h3>
+      <p>Grote getallen kunnen veel cijfers bevatten.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">300 000 000</p>
+      <p>Dit kunnen we ook schrijven als:</p>
+      <p class="formula">3 × 10^8</p>
+      <p>Dit is veel compacter en maakt meteen zichtbaar hoeveel nullen er zijn.</p>
+
+      <h3>13. Wetenschappelijke notatie</h3>
+      <p>Een getal staat in <strong>wetenschappelijke notatie</strong> als het geschreven wordt als:</p>
+      <p class="formula">a × 10^n</p>
+      <p>waarbij <strong>a</strong> minstens 1 maar kleiner dan 10 is.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">300 000 000 = 3 × 10^8</p>
+      <p>en:</p>
+      <p class="formula">4 500 000 = 4,5 × 10^6</p>
+      <div class="callout"><strong>Kernregel:</strong> in wetenschappelijke notatie staat er precies één niet-nul cijfer vóór de komma.</div>
+
+      <h3>14. Van een groot getal naar wetenschappelijke notatie</h3>
+      <p>Kijk naar:</p>
+      <p class="formula">72 000</p>
+      <p>We verplaatsen de komma zodat één cijfer vóór de komma overblijft:</p>
+      <p class="formula">72 000 = 7,2 × 10^4</p>
+      <p>De komma is vier plaatsen naar links verplaatst. Daarom is de exponent 4.</p>
+      <p>Controle:</p>
+      <p class="formula">7,2 × 10^4 = 7,2 × 10 000 = 72 000</p>
+
+      <h3>15. Kleine getallen in wetenschappelijke notatie</h3>
+      <p>Wetenschappelijke notatie werkt ook voor getallen kleiner dan 1.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">0,00045 = 4,5 × 10^{-4}</p>
+      <p>De negatieve exponent vertelt dat we door een macht van 10 delen.</p>
+      <p>Want:</p>
+      <p class="formula">10^{-4} = 0,0001</p>
+      <p>Dus:</p>
+      <p class="formula">4,5 × 10^{-4} = 0,00045</p>
+
+      <h3>16. Wetenschappelijke notatie en machten</h3>
+      <p>In 1.10 leerden we machten van 10. Die kennis gebruiken we nu om wetenschappelijke notatie te begrijpen.</p>
+      <p>Bij positieve exponenten wordt het getal groter:</p>
+      <p class="formula">10^3 = 1 000</p>
+      <p>Bij negatieve exponenten krijgen we een getal kleiner dan 1:</p>
+      <p class="formula">10^{-3} = 0,001</p>
+      <p>Daarom kunnen we zowel zeer grote als zeer kleine getallen compact schrijven.</p>
+
+      <h3>17. Veelgemaakte fouten</h3>
+      <ul>
+        <li><strong>Verkeerd afronden:</strong> kijk altijd naar het eerste cijfer dat je weglaat.</li>
+        <li><strong>Denken dat meer decimalen altijd beter zijn:</strong> de gewenste nauwkeurigheid hangt af van de context.</li>
+        <li><strong>Een negatief exponent verwarren met een negatief getal:</strong> <span class="formula-inline">10^{-3}</span> is positief, maar kleiner dan 1.</li>
+        <li><strong>Wetenschappelijke notatie verkeerd schrijven:</strong> het getal vóór de macht van 10 moet minstens 1 en kleiner dan 10 zijn.</li>
+        <li><strong>Een benadering als exact antwoord behandelen:</strong> gebruik <span class="formula-inline">\\approx</span> wanneer het om een benadering gaat.</li>
+      </ul>
+
+      <h3>18. Samenvatting</h3>
+      <div class="callout">
+        <p>Bij afronden kies je eerst de gewenste nauwkeurigheid en kijk je daarna naar het eerste cijfer dat je weglaat.</p>
+        <p class="formula">0,05 → 0,1 \\qquad 0,04 → 0,0</p>
+        <p>Een afgerond getal is een <strong>benadering</strong> van de exacte waarde.</p>
+        <p>Wetenschappelijke notatie gebruikt de vorm:</p>
+        <p class="formula">a × 10^n</p>
+        <p>waarbij <span class="formula-inline">1 ≤ a &lt; 10</span>.</p>
+        <p>Voorbeelden:</p>
+        <p class="formula">450 000 = 4,5 × 10^5</p>
+        <p class="formula">0,00032 = 3,2 × 10^{-4}</p>
+      </div>
+    `,
+    practice: [
+      { id: "p113-1", question: "Rond 7,3 af op een geheel getal.", answer: ["7"] },
+      { id: "p113-2", question: "Rond 7,8 af op een geheel getal.", answer: ["8"] },
+      { id: "p113-3", question: "Rond 4,26 af op één cijfer na de komma.", answer: ["4,3", "4.3"] },
+      { id: "p113-4", question: "Rond 7,386 af op twee cijfers na de komma.", answer: ["7,39", "7.39"] },
+      { id: "p113-5", question: "Rond 1 249 af op honderdtallen.", answer: ["1 200", "1200"] },
+      { id: "p113-6", question: "Rond 8 650 af op duizendtallen.", answer: ["9 000", "9000"] },
+      { id: "p113-7", question: "Welke schatting is geschikt voor 198 × 49?", answer: ["10 000", "10000"] },
+      { id: "p113-8", question: "Schrijf 300 000 000 in wetenschappelijke notatie.", answer: ["3 × 10^8", "3x10^8", "3 · 10^8"] },
+      { id: "p113-9", question: "Schrijf 4 500 000 in wetenschappelijke notatie.", answer: ["4,5 × 10^6", "4.5 × 10^6", "4,5x10^6"] },
+      { id: "p113-10", question: "Schrijf 72 000 in wetenschappelijke notatie.", answer: ["7,2 × 10^4", "7.2 × 10^4"] },
+      { id: "p113-11", question: "Schrijf 0,00045 in wetenschappelijke notatie.", answer: ["4,5 × 10^-4", "4.5 × 10^-4"] },
+      { id: "p113-12", question: "Schrijf 3,2 × 10^5 als gewoon getal.", answer: ["320 000", "320000"] },
+      { id: "p113-13", question: "Schrijf 6 × 10^-3 als gewoon decimaal getal.", answer: ["0,006", "0.006"] },
+      { id: "p113-14", question: "Rond 39,8 × 5,1 af door eerst beide factoren op hele getallen af te ronden. Geef de schatting.", answer: ["200"] },
+      { id: "p113-15", question: "Is 5,7 × 10^3 correcte wetenschappelijke notatie? Antwoord ja of nee.", answer: ["ja", "Ja"] }
+    ],
+    exam: [
+      { id: "e113-1", question: "Rond 18,746 af op twee cijfers na de komma.", answer: ["18,75", "18.75"] },
+      { id: "e113-2", question: "Rond 54 650 af op duizendtallen.", answer: ["55 000", "55000"] },
+      { id: "e113-3", question: "Rond 0,00486 af op vier cijfers na de komma.", answer: ["0,0049", "0.0049"] },
+      { id: "e113-4", question: "Schrijf 6 020 000 in wetenschappelijke notatie.", answer: ["6,02 × 10^6", "6.02 × 10^6"] },
+      { id: "e113-5", question: "Schrijf 0,000072 in wetenschappelijke notatie.", answer: ["7,2 × 10^-5", "7.2 × 10^-5"] },
+      { id: "e113-6", question: "Schrijf 8,4 × 10^4 als gewoon getal.", answer: ["84 000", "84000"] },
+      { id: "e113-7", question: "Een berekening geeft exact 12,4837. Welke benadering is nauwkeuriger: 12,5 of 12,484? Geef het antwoord.", answer: ["12,484", "12.484"] },
+      { id: "e113-8", question: "Is 12,5 × 10^3 correcte wetenschappelijke notatie? Leg kort uit.", answer: ["nee", "Nee", "nee, 12,5 is groter dan 10"] }
+    ]
   }
 ];
