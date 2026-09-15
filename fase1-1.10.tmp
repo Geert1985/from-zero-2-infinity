@@ -1,0 +1,171 @@
+  {
+    id: "1.10",
+    title: "Machten",
+    goal: "Machten begrijpen en gebruiken om herhaalde vermenigvuldigingen kort te schrijven en te berekenen.",
+    theory: /* html */` 
+      <h2>Machten</h2>
+      <p><strong>Doel:</strong> machten begrijpen, lezen, berekenen en gebruiken in eenvoudige berekeningen.</p>
+
+      <h3>1. Van herhaald vermenigvuldigen naar een macht</h3>
+      <p>Soms vermenigvuldigen we hetzelfde getal meerdere keren met zichzelf.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">2 × 2 × 2 × 2 = 16</p>
+      <p>In plaats van vier keer 2 te schrijven, kunnen we dit korter noteren:</p>
+      <p class="formula">2^4 = 16</p>
+      <p>Dit noemen we een <strong>macht</strong>.</p>
+
+      <h3>2. Grondtal en exponent</h3>
+      <p>In de macht <span class="formula-inline">2^4</span> heeft elk getal een eigen naam.</p>
+      <ul>
+        <li><strong>2</strong> is het <strong>grondtal</strong>;</li>
+        <li><strong>4</strong> is de <strong>exponent</strong>.</li>
+      </ul>
+      <p>De exponent vertelt hoeveel keer het grondtal als factor voorkomt.</p>
+      <div class="callout"><strong>Onthoud:</strong> in <span class="formula-inline">a^n</span> is <span class="formula-inline">a</span> het grondtal en <span class="formula-inline">n</span> de exponent.</div>
+
+      <h3>3. Een macht uitschrijven</h3>
+      <p>Een macht kunnen we altijd terugschrijven als een vermenigvuldiging.</p>
+      <p class="formula">5^3 = 5 × 5 × 5</p>
+      <p>Dus:</p>
+      <p class="formula">5^3 = 125</p>
+      <p>De exponent 3 betekent dat we drie factoren 5 hebben.</p>
+
+      <h3>4. Een macht berekenen</h3>
+      <p>Om een macht te berekenen, schrijven we de herhaalde vermenigvuldiging uit en rekenen we die uit.</p>
+      <p class="formula">3^4 = 3 × 3 × 3 × 3 = 81</p>
+      <p>Let goed op: <strong>3^4 is niet 3 × 4</strong>. De exponent geeft aan hoe vaak het grondtal voorkomt.</p>
+
+      <h3>5. Speciale macht: exponent 1</h3>
+      <p>Als de exponent 1 is, komt het grondtal één keer voor.</p>
+      <p class="formula">7^1 = 7</p>
+      <p>Voor elk getal geldt:</p>
+      <p class="formula">a^1 = a</p>
+
+      <h3>6. Speciale macht: exponent 0</h3>
+      <p>Voor elk getal dat niet nul is, geldt:</p>
+      <p class="formula">a^0 = 1</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">5^0 = 1</p>
+      <p>Dit lijkt misschien vreemd, maar deze regel zorgt ervoor dat de rekenregels voor machten netjes blijven aansluiten.</p>
+
+      <h3>7. Machten van 10</h3>
+      <p>Machten van 10 geven een handig patroon:</p>
+      <p class="formula">10^1 = 10</p>
+      <p class="formula">10^2 = 100</p>
+      <p class="formula">10^3 = 1 000</p>
+      <p class="formula">10^4 = 10 000</p>
+      <p>Bij een macht van 10 komt er bij iedere stap één nul bij.</p>
+
+      <h3>8. Machten en plaatswaarde</h3>
+      <p>De machten van 10 helpen ons het tientallig stelsel beter te begrijpen.</p>
+      <p>De eenheden, tientallen, honderdtallen en duizendtallen zijn opeenvolgende machten van 10:</p>
+      <p class="formula">10^0 = 1, &nbsp; 10^1 = 10, &nbsp; 10^2 = 100, &nbsp; 10^3 = 1 000</p>
+      <p>Zo kunnen we bijvoorbeeld schrijven:</p>
+      <p class="formula">4 705 = 4 × 10^3 + 7 × 10^2 + 0 × 10^1 + 5 × 10^0</p>
+
+      <h3>9. Vermenigvuldigen van machten met hetzelfde grondtal</h3>
+      <p>Wanneer we machten met hetzelfde grondtal vermenigvuldigen, mogen we de exponenten optellen.</p>
+      <p class="formula">2^3 × 2^2 = 2^5</p>
+      <p>Dat komt doordat:</p>
+      <p class="formula">2^3 × 2^2 = (2 × 2 × 2) × (2 × 2) = 2^5</p>
+      <div class="callout"><strong>Regel:</strong> <span class="formula-inline">a^m × a^n = a^(m+n)</span>.</div>
+
+      <h3>10. Delen van machten met hetzelfde grondtal</h3>
+      <p>Bij het delen van machten met hetzelfde grondtal trekken we de exponenten van elkaar af, zolang de deler niet nul is.</p>
+      <p class="formula">2^5 ÷ 2^2 = 2^3</p>
+      <p>Want van vijf factoren 2 blijven er na het wegnemen van twee factoren drie over.</p>
+      <div class="callout"><strong>Regel:</strong> <span class="formula-inline">a^m ÷ a^n = a^(m−n)</span>, wanneer <span class="formula-inline">a ≠ 0</span> en <span class="formula-inline">m ≥ n</span>.</div>
+
+      <h3>11. Een macht van een macht</h3>
+      <p>Soms staat er een macht bovenop een andere macht.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">(2^3)^2</p>
+      <p>De macht 2<sup>3</sup> komt twee keer voor:</p>
+      <p class="formula">(2^3)^2 = 2^3 × 2^3 = 2^6</p>
+      <div class="callout"><strong>Regel:</strong> bij een macht van een macht vermenigvuldig je de exponenten: <span class="formula-inline">(a^m)^n = a^(m×n)</span>.</div>
+
+      <h3>12. Product als macht</h3>
+      <p>Als een product uit dezelfde factoren bestaat, kunnen we het als een macht schrijven.</p>
+      <p class="formula">6 × 6 × 6 = 6^3</p>
+      <p>Maar bij verschillende factoren kan dat niet zomaar:</p>
+      <p class="formula">2 × 3 × 2 ≠ 2^3</p>
+      <p>Een macht bestaat altijd uit meerdere keren <strong>hetzelfde grondtal</strong>.</p>
+
+      <h3>13. Machten met negatieve grondtallen</h3>
+      <p>Ook negatieve getallen kunnen een grondtal zijn.</p>
+      <p>Bij een even exponent wordt het resultaat positief:</p>
+      <p class="formula">(−3)^2 = (−3) × (−3) = 9</p>
+      <p>Bij een oneven exponent blijft het resultaat negatief:</p>
+      <p class="formula">(−3)^3 = (−3) × (−3) × (−3) = −27</p>
+      <p>De haakjes zijn belangrijk: <span class="formula-inline">(−3)^2</span> is iets anders dan <span class="formula-inline">−3^2</span>.</p>
+
+      <h3>14. Machten en volgorde van bewerkingen</h3>
+      <p>Machten hebben voorrang op vermenigvuldigen, delen, optellen en aftrekken.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">3 + 2^3 = 3 + 8 = 11</p>
+      <p>We berekenen dus eerst de macht.</p>
+      <p>Haakjes kunnen de volgorde veranderen:</p>
+      <p class="formula">(3 + 2)^3 = 5^3 = 125</p>
+
+      <h3>15. Machten gebruiken om grote getallen te schrijven</h3>
+      <p>Grote getallen kunnen we compact schrijven met machten van 10.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">1 000 000 = 10^6</p>
+      <p>Dit is een eerste stap naar <strong>wetenschappelijke notatie</strong>, die we later behandelen.</p>
+
+      <h3>16. Veelgemaakte fouten</h3>
+      <ul>
+        <li><span class="formula-inline">2^4</span> is niet <span class="formula-inline">2 × 4</span>, maar <span class="formula-inline">2 × 2 × 2 × 2</span>.</li>
+        <li>Bij <span class="formula-inline">3^2</span> is het antwoord 9, niet 6.</li>
+        <li>Bij een negatieve basis zijn haakjes belangrijk.</li>
+        <li>Bij <span class="formula-inline">a^m × a^n</span> tel je de exponenten op; je vermenigvuldigt ze niet.</li>
+      </ul>
+
+      <h3>17. Een handige strategie</h3>
+      <p>Wanneer je een macht tegenkomt:</p>
+      <ol>
+        <li>zoek het <strong>grondtal</strong>;</li>
+        <li>zoek de <strong>exponent</strong>;</li>
+        <li>schrijf de macht eventueel als herhaalde vermenigvuldiging;</li>
+        <li>reken daarna uit of gebruik een passende rekenregel.</li>
+      </ol>
+
+      <h3>18. Samenvatting</h3>
+      <div class="callout">
+        <p>Een macht is een korte schrijfwijze voor een herhaalde vermenigvuldiging.</p>
+        <p class="formula">a^n = a × a × ... × a</p>
+        <p>Het getal <span class="formula-inline">a</span> is het grondtal en <span class="formula-inline">n</span> is de exponent.</p>
+        <p>Belangrijke regels zijn:</p>
+        <p class="formula">a^m × a^n = a^(m+n)</p>
+        <p class="formula">a^m ÷ a^n = a^(m−n)</p>
+        <p class="formula">(a^m)^n = a^(m×n)</p>
+      </div>
+    `,
+    practice: [
+      { id: "p110-1", question: "Schrijf 3 × 3 × 3 × 3 als een macht.", answer: ["3^4"] },
+      { id: "p110-2", question: "Bereken 2^5.", answer: ["32"] },
+      { id: "p110-3", question: "Wat is het grondtal in 7^3?", answer: ["7"] },
+      { id: "p110-4", question: "Wat is de exponent in 5^4?", answer: ["4"] },
+      { id: "p110-5", question: "Bereken 10^3.", answer: ["1000", "1 000"] },
+      { id: "p110-6", question: "Bereken 6^2.", answer: ["36"] },
+      { id: "p110-7", question: "Bereken 9^1.", answer: ["9"] },
+      { id: "p110-8", question: "Bereken 8^0.", answer: ["1"] },
+      { id: "p110-9", question: "Bereken 2^3 × 2^2.", answer: ["32"] },
+      { id: "p110-10", question: "Bereken 3^5 ÷ 3^2.", answer: ["27"] },
+      { id: "p110-11", question: "Bereken (2^2)^3.", answer: ["64"] },
+      { id: "p110-12", question: "Bereken (−4)^2.", answer: ["16"] },
+      { id: "p110-13", question: "Bereken (−2)^3.", answer: ["-8", "−8"] },
+      { id: "p110-14", question: "Bereken 4 + 2^3.", answer: ["12"] },
+      { id: "p110-15", question: "Schrijf 100 000 als een macht van 10.", answer: ["10^5"] }
+    ],
+    exam: [
+      { id: "e110-1", question: "Schrijf 5 × 5 × 5 × 5 × 5 als een macht.", answer: ["5^5"] },
+      { id: "e110-2", question: "Bereken 4^3.", answer: ["64"] },
+      { id: "e110-3", question: "Bereken 10^6.", answer: ["1000000", "1 000 000"] },
+      { id: "e110-4", question: "Bereken 2^4 × 2^3.", answer: ["128"] },
+      { id: "e110-5", question: "Bereken 5^4 ÷ 5^2.", answer: ["25"] },
+      { id: "e110-6", question: "Bereken (3^2)^2.", answer: ["81"] },
+      { id: "e110-7", question: "Bereken (−5)^2 + 2^3.", answer: ["33"] },
+      { id: "e110-8", question: "Bereken 2 + 3^2 × 2.", answer: ["20"] }
+    ]
+  },
