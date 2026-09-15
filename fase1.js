@@ -4315,7 +4315,7 @@ negatieve getallen.</p>
       <h3>18. Samenvatting</h3>
       <div class="callout">
         <p>De vierkantswortel is de omgekeerde bewerking van kwadrateren.</p>
-        <p class="formula">√25 = 5 omdat 5^2 = 25</p>
+        <p class="formula">√25 = 5\\ omdat\\ 5^2 = 25</p>
         <p>Bij volmaakte kwadraten kunnen we de wortel exact bepalen.</p>
         <p>Bij andere getallen kunnen we de wortel bijvoorbeeld tussen twee gehele getallen plaatsen.</p>
       </div>
