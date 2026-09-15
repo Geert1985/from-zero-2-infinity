@@ -4418,50 +4418,25 @@ negatieve getallen.</p>
         <li>oneindige niet-repeterende decimalen → irrationaal.</li>
       </ul>
 
-
-      <h3>7. Meer voorbeelden van irrationale getallen</h3>
-      <p>Niet alleen <span class="formula-inline">\sqrt{2}</span> is irrationaal.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">\sqrt{3},\quad \sqrt{5},\quad \sqrt{7}</p>
-      <p>Een belangrijke waarschuwing: niet elke vierkantswortel is irrationaal.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">\sqrt{9} = 3</p>
-      <p>9 heeft dus een rationale vierkantswortel.</p>
-
-      <h3>8. Wanneer is een vierkantswortel rationaal?</h3>
-      <p>Als een natuurlijk getal een <strong>volmaakt kwadraat</strong> is, is de vierkantswortel een geheel getal.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">\sqrt{16} = 4</p>
-      <p class="formula">\sqrt{25} = 5</p>
-      <p>Maar:</p>
-      <p class="formula">\sqrt{2},\quad \sqrt{6},\quad \sqrt{10}</p>
-      <p>zijn irrationaal.</p>
-      <p>Voor positieve gehele getallen geldt dus: de vierkantswortel is rationaal als het getal een volmaakt kwadraat is.</p>
-
-      <h3>10. Rationale en irrationale getallen samen</h3>
+      <h3>7. Rationale en irrationale getallen samen</h3>
       <p>We hebben nu twee groepen getallen gezien:</p>
       <ul>
         <li><strong>rationale getallen</strong>: kunnen als breuk worden geschreven;</li>
         <li><strong>irrationale getallen</strong>: kunnen niet als zo'n breuk worden geschreven.</li>
       </ul>
       <p>Deze twee groepen vormen samen de <strong>reële getallen</strong>.</p>
-      <p class="formula">\mathbb{R} = \mathbb{Q} \cup \{\text{irrationale getallen}\}</p>
+      <p class="formula">
+          \\mathbb{R} = \\mathbb{Q} \\cup \\text{irrationele getallen}
+      </p>      
       <p>Het symbool <strong>ℝ</strong> staat voor de verzameling van alle reële getallen.</p>
 
-      <h3>11. De getallenlijn bevat reële getallen</h3>
-      <p>De reële getallen kunnen allemaal op de getallenlijn worden geplaatst.</p>
-      <p>We kunnen bijvoorbeeld de rationale getallen 1 en 2 plaatsen, maar ook het irrationale getal <span class="formula-inline">\sqrt{2}</span>:</p>
-      <p class="formula">1 &lt; \sqrt{2} &lt; 2</p>
-      <p>Het punt dat bij <span class="formula-inline">\sqrt{2}</span> hoort, ligt dus ergens tussen 1 en 2.</p>
-      <p>De getallenlijn bevat daarom niet alleen gehele getallen en breuken, maar ook irrationale getallen.</p>
-
-      <h3>12. Tussen twee getallen zitten altijd meer reële getallen</h3>
+      <h3>8. Tussen twee getallen zitten altijd meer reële getallen</h3>
       <p>Neem bijvoorbeeld 1 en 2. Daartussen ligt 1,5. Maar ook 1,25 en 1,75.</p>
       <p>Er zijn zelfs oneindig veel reële getallen tussen 1 en 2.</p>
       <p>Dit geldt voor elk tweetal verschillende reële getallen.</p>
       <p>De getallenlijn is dus niet opgebouwd uit losse puntjes met lege ruimte ertussen. Tussen twee verschillende reële getallen kunnen we altijd nog andere reële getallen vinden.</p>
 
-      <h3>13. De belangrijkste verzamelingen tot nu toe</h3>
+      <h3>9. De belangrijkste verzamelingen tot nu toe</h3>
       <p>We hebben in Fase 1 verschillende soorten getallen opgebouwd:</p>
       <p class="formula">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</p>
       <p>Elke verzameling bevat de vorige.</p>
@@ -4471,51 +4446,14 @@ negatieve getallen.</p>
         <li><strong>ℚ</strong>: rationale getallen;</li>
         <li><strong>ℝ</strong>: reële getallen.</li>
       </ul>
-      <p>De irrationale getallen liggen wel in <span class="formula-inline">\mathbb{R}</span>, maar niet in <span class="formula-inline">\mathbb{Q}</span>.</p>
 
-      <h3>14. Een irrationaal getal is geen 'onbekend' getal</h3>
-      <p>Een irrationaal getal is niet onnauwkeurig of onbepaald. Het heeft een <strong>exacte waarde</strong>.</p>
-      <p>Bijvoorbeeld <span class="formula-inline">\sqrt{2}</span> is een exact getal. De schrijfwijze 1,4142... is slechts een decimale benadering ervan.</p>
-      <p>Ook <span class="formula-inline">\pi</span> heeft een exacte betekenis. Wanneer we voor een berekening 3,14 gebruiken, werken we met een benadering.</p>
-      <div class="callout"><strong>Exact ≠ afgerond.</strong> <span class="formula-inline">\sqrt{2}</span> is exact. <span class="formula-inline">1,41</span> is een benadering van <span class="formula-inline">\sqrt{2}</span>.</div>
-
-      <h3>15. Irrationale getallen vergelijken en schatten</h3>
-      <p>Ook irrationale getallen kunnen we vergelijken.</p>
-      <p>Omdat:</p>
-      <p class="formula">1^2 &lt; 2 &lt; 2^2</p>
-      <p>volgt:</p>
-      <p class="formula">1 &lt; \sqrt{2} &lt; 2</p>
-      <p>En omdat:</p>
-      <p class="formula">3^2 &lt; 10 &lt; 4^2</p>
-      <p>geldt:</p>
-      <p class="formula">3 &lt; \sqrt{10} &lt; 4</p>
-      <p>Zo kunnen we een irrationaal getal plaatsen en vergelijken zonder de exacte decimale waarde te kennen.</p>
-
-      <h3>16. Rekenbewerkingen met irrationale getallen</h3>
-      <p>Irrationale getallen kunnen gewoon worden gebruikt in berekeningen.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">\sqrt{2} + 1</p>
-      <p>is een reëel getal. We hoeven <span class="formula-inline">\sqrt{2}</span> niet eerst als decimaal te schrijven.</p>
-      <p>Soms kunnen irrationale uitdrukkingen zelfs vereenvoudigd worden. Bijvoorbeeld:</p>
-      <p class="formula">\sqrt{4} = 2</p>
-      <p>Maar <span class="formula-inline">\sqrt{2}</span> kan niet worden vervangen door een eindige decimale schrijfwijze zonder benadering.</p>
-
-      <h3>17. Veelgemaakte fouten</h3>
+      <h3>10. Veelgemaakte fouten</h3>
       <ul>
         <li><strong>Fout:</strong> denken dat elk oneindig decimaal getal irrationaal is. <strong>Correct:</strong> een repeterende oneindige decimale schrijfwijze is rationaal.</li>
-        <li><strong>Fout:</strong> denken dat <span class="formula-inline">\sqrt{2} = 1,41</span>. <strong>Correct:</strong> 1,41 is slechts een benadering.</li>
-        <li><strong>Fout:</strong> denken dat elke vierkantswortel irrationaal is. <strong>Correct:</strong> <span class="formula-inline">\sqrt{25}=5</span> is rationaal.</li>
+        <li><strong>Fout:</strong> denken dat de vierkantswortel van 2 = 1,41. <strong>Correct:</strong> 1,41 is slechts een benadering.</li>
+        <li><strong>Fout:</strong> denken dat elke vierkantswortel irrationaal is.</li>
         <li><strong>Fout:</strong> denken dat irrationale getallen niet op de getallenlijn passen. <strong>Correct:</strong> ze zijn reële getallen en hebben dus een plaats op de getallenlijn.</li>
       </ul>
-
-      <h3>18. Samenvatting</h3>
-      <p>Een <strong>rationaal getal</strong> kan als breuk van twee gehele getallen worden geschreven.</p>
-      <p>Een <strong>irrationaal getal</strong> kan niet als zo'n breuk worden geschreven.</p>
-      <p>Rationale en irrationale getallen vormen samen de <strong>reële getallen</strong>.</p>
-      <p class="formula">\mathbb{R} = \mathbb{Q} \cup \{\text{irrationale getallen}\}</p>
-      <p>De belangrijkste structuur die we nu kennen is:</p>
-      <p class="formula">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</p>
-      <div class="callout"><strong>Kernidee:</strong> de getallenwereld wordt steeds groter omdat we nieuwe getallen nodig hebben om nieuwe wiskundige problemen en bewerkingen te kunnen beschrijven.</div>
     `,
     practice: [
       { id: "p112-1", question: "Is 3/4 een rationaal getal?", answer: ["ja"] },
