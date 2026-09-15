@@ -3688,6 +3688,13 @@ negatieve getallen.</p>
       <p>De gemeenschappelijke factoren 2 en 3 kunnen we wegdelen. In 1.9 maken we dit proces systematischer met de grootste gemene deler.</p>
 
       <h3>15. Is een getal priem?</h3>
+      <p><strong>Uitbreiding: een snelle priemtest</strong></p>
+      <p>Er bestaat een handige manier om grotere getallen snel op priemheid te testen.</p>
+      <p>Daarbij hoef je alleen te controleren of het getal deelbaar is door priemgetallen die niet groter zijn dan de vierkantswortel van het getal.</p>
+      
+      <p><strong>Let op: het begrip vierkantswortel behandelen we pas in 1.11 Wortels.</strong></p>
+      <p>Voorlopig hoef je deze methode dus niet zelfstandig te kunnen toepassen. Je kunt de methode alvast bekijken als een vooruitblik.</p>
+      
       <p>Om te onderzoeken of een getal priem is, moet je nagaan of het een deler heeft naast 1 en zichzelf. De deelbaarheidsregels helpen daarbij.</p>
       <p>Voor grotere getallen hoeven we niet alle mogelijke delers te testen. Als een getal <strong>n</strong> samengesteld is, heeft het een deler die niet groter is dan <span class="formula-inline">√n</span>. Daarom volstaat het om priemdelers tot en met <span class="formula-inline">√n</span> te controleren.</p>
 
@@ -3856,30 +3863,104 @@ negatieve getallen.</p>
       <p class="formula">6 × 36 = 12 × 18 = 216</p>
       <p>Deze relatie is een handige controle wanneer je de GGD en het KGV hebt berekend.</p>
 
-      <h3>15. Het algoritme van Euclides</h3>
-      <p>Voor grote getallen is het niet praktisch om alle delers op te schrijven. Het <strong>algoritme van Euclides</strong> berekent de GGD met herhaalde delingen.</p>
-      <p>Het basisidee is:</p>
-      <p class="formula">GGD(a, b) = GGD(b, a mod b)</p>
-      <p>Hierbij is <strong>mod</strong> de rest bij een gehele deling.</p>
+<h3>15. Het algoritme van Euclides</h3>
 
-      <h3>16. Euclides stap voor stap</h3>
-      <p>We berekenen de GGD van 252 en 105.</p>
-      <p class="formula">252 = 2 × 105 + 42</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(252, 105) = GGD(105, 42)</p>
-      <p>Nu:</p>
-      <p class="formula">105 = 2 × 42 + 21</p>
-      <p>Dus:</p>
-      <p class="formula">GGD(105, 42) = GGD(42, 21)</p>
-      <p>En:</p>
-      <p class="formula">42 = 2 × 21 + 0</p>
-      <p>De laatste niet-nul rest is 21. Daarom:</p>
-      <p class="formula">GGD(252, 105) = 21</p>
+<p>We hebben geleerd hoe we de <strong>GGD</strong> van twee getallen kunnen vinden door hun delers te vergelijken.</p>
 
-      <h3>17. Waarom werkt Euclides?</h3>
-      <p>Als we <strong>a</strong> delen door <strong>b</strong> en een rest <strong>r</strong> krijgen, dan geldt:</p>
-      <p class="formula">a = qb + r</p>
-      <p>Elke gemeenschappelijke deler van <strong>a</strong> en <strong>b</strong> deelt dan ook de rest <strong>r = a − qb</strong>. Omgekeerd geldt hetzelfde voor een gemeenschappelijke deler van <strong>b</strong> en <strong>r</strong>. Daarom hebben beide paren dezelfde gemeenschappelijke delers en dus dezelfde GGD.</p>
+<p>Bij kleine getallen werkt dat prima. Maar wat als de getallen veel groter worden?</p>
+
+<p>Daarvoor bestaat een handige methode: het <strong>algoritme van Euclides</strong>.</p>
+
+<div class="callout">
+  <p><strong>Het idee is eenvoudig:</strong></p>
+  <p>We delen het grootste getal door het kleinste getal en kijken naar de <strong>rest</strong>.</p>
+  <p>Daarna gaan we verder met het kleinste getal en de rest.</p>
+</div>
+
+<h4>Een voorbeeld: de GGD van 48 en 18</h4>
+
+<p>We willen de GGD van 48 en 18 vinden.</p>
+
+<p>We beginnen met een deling:</p>
+
+<p class="formula">48 ÷ 18 = 2\\ rest\\ 12</p>
+
+<p>De rest is dus <strong>12</strong>.</p>
+
+<p>Nu laten we 48 even los. We gaan verder met <strong>18 en 12</strong>.</p>
+
+<p>Opnieuw delen we:</p>
+
+<p class="formula">18 ÷ 12 = 1\\ rest\\ 6</p>
+
+<p>De nieuwe rest is <strong>6</strong>.</p>
+
+<p>We gaan verder met <strong>12 en 6</strong>:</p>
+
+<p class="formula">12 ÷ 6 = 2\\ rest\\ 0</p>
+
+<p>Nu is de rest <strong>0</strong>. We zijn klaar.</p>
+
+<div class="callout">
+  <p><strong>De laatste rest die niet nul was, is de GGD.</strong></p>
+  <p class="formula">GGD(48,18) = 6</p>
+</div>
+
+<h4>Waarom werkt dit?</h4>
+
+<p>Bij iedere stap vervangen we het grootste getal door de rest van de deling.</p>
+
+<p>Bij ons voorbeeld krijgen we:</p>
+
+<p class="formula">48\\ en\\ 18 → 18\\ en\\ 12 → 12\\ en\\ 6 → 6\\ en\\ 0</p>
+
+<p>De gemeenschappelijke delers veranderen daarbij niet. Daarom blijft de GGD dezelfde.</p>
+
+<p>We hoeven dus niet alle delers van de twee getallen op te schrijven.</p>
+
+<h4>De stappen op een rij</h4>
+
+<ol>
+  <li>Neem de twee getallen.</li>
+  <li>Deel het grootste getal door het kleinste.</li>
+  <li>Noteer de rest.</li>
+  <li>Neem het vorige kleinste getal en de rest.</li>
+  <li>Herhaal dit totdat de rest 0 is.</li>
+  <li>De laatste rest die niet 0 was, is de GGD.</li>
+</ol>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Bij het algoritme van Euclides schuift de rest telkens naar voren.</p>
+  <p class="formula">groot getal → klein getal → rest</p>
+  <p>Wanneer de rest 0 wordt, hebben we de GGD gevonden.</p>
+</div>
+
+<h4>Nog een voorbeeld</h4>
+
+<p>We zoeken de GGD van 84 en 30.</p>
+
+<p>Stap 1:</p>
+<p class="formula">84 ÷ 30 = 2 rest 24</p>
+
+<p>Stap 2:</p>
+<p class="formula">30 ÷ 24 = 1 rest 6</p>
+
+<p>Stap 3:</p>
+<p class="formula">24 ÷ 6 = 4 rest 0</p>
+
+<p>De laatste rest die niet nul was, is 6.</p>
+
+<p>Dus:</p>
+
+<p class="formula">GGD(84,30) = 6</p>
+
+<div class="callout">
+  <p><strong>Het algoritme van Euclides is eigenlijk steeds dezelfde vraag:</strong></p>
+  <p>“Wat is de rest als ik het grootste getal door het kleinste deel?”</p>
+  <p>Met die rest gaan we verder totdat de rest 0 wordt.</p>
+</div>
+
 
       <h3>18. Samenvatting en strategie</h3>
       <ul>
