@@ -79,7 +79,8 @@ function go(path) {
 
 function bgFor(phaseId) {
   const n = Number(phaseId);
-  if (n >= 1 && n <= 7) return "assets/fase" + n + ".png";
+  if (n === 1) return "assets/fase1/fase1.png";
+  if (n >= 2 && n <= 7) return "assets/fase" + n + ".png";
   return "assets/home.png";
 }
 
