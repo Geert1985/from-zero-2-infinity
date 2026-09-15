@@ -2775,7 +2775,7 @@ negatieve getallen.</p>
 
                 <p>Ook</p>
       <p class="formula">
-                \frac{1}{4} en  \frac{3}{4} en \frac{7}{10}
+                \frac{1}{4}\\ en\\ \frac{3}{4}\\ en\\ \frac{7}{10}
               </p>
 
                 <p>zijn getallen die tussen 0 en 1 liggen.</p>
@@ -2840,7 +2840,7 @@ negatieve getallen.</p>
         <li>8 duizendsten = 8/1000</li>
       </ul>
       <p>We kunnen het getal dus schrijven als:</p>
-      <p class="formula">37,428 = 30 + 7 + 4/10 + 2/100 + 8/1000</p>
+      <p class="formula">37,428 = 30 + 7 + \frac{4}{10} + \frac{2}{100} + \frac{8}{1000}</p>
       <p>De cijfers rechts van de komma geven steeds kleinere delen van één geheel aan.</p>
       <table>
         <tr><th>Plaats</th><th>Voorbeeld</th><th>Betekenis</th></tr>
@@ -2853,24 +2853,24 @@ negatieve getallen.</p>
 
       <h3>2. Decimalen en breuken</h3>
       <p>Een eindig decimaal getal kunnen we altijd als een breuk schrijven.</p>
-      <p class="formula">0,7 = 7/10</p>
-      <p class="formula">0,42 = 42/100 = 21/50</p>
-      <p class="formula">0,375 = 375/1000 = 3/8</p>
+      <p class="formula">0,7 = \frac{7}{10}</p>
+      <p class="formula">0,42 = \frac{42}{100} = \frac{21}{50}</p>
+      <p class="formula">0,375 = \frac{375}{1000} = \frac{3}{8}</p>
       <p>Ook een getal groter dan 1 kunnen we zo schrijven:</p>
-      <p class="formula">2,35 = 235/100 = 47/20</p>
+      <p class="formula">2,35 = \frac{235}{100} = \frac{47}{20}</p>
       <p>Het is belangrijk om de breuk daarna, wanneer mogelijk, te vereenvoudigen.</p>
       <h4>Van een breuk naar een decimaal</h4>
       <p>Als de breuk een noemer heeft die gemakkelijk in tienden, honderdsten of duizendsten kan worden omgezet, kunnen we dat rechtstreeks doen.</p>
-      <p class="formula">3/4 = 75/100 = 0,75</p>
-      <p class="formula">7/20 = 35/100 = 0,35</p>
+      <p class="formula">\frac{3}{4} = \frac{75}{100} = 0,75</p>
+      <p class="formula">\frac{7}{20} = \frac{35}{100} = 0,35</p>
 
       <h3>3. Eindige en repeterende decimalen</h3>
       <p>Sommige breuken geven een decimaal getal dat eindigt:</p>
-      <p class="formula">1/2 = 0,5</p>
-      <p class="formula">1/4 = 0,25</p>
+      <p class="formula">\frac{1}{2} = 0,5</p>
+      <p class="formula">\frac{1}{4} = 0,25</p>
       <p>Andere breuken blijven cijfers produceren:</p>
-      <p class="formula">1/3 = 0,333333...</p>
-      <p class="formula">2/7 = 0,285714285714...</p>
+      <p class="formula">\frac{1}{3} = 0,333333...</p>
+      <p class="formula">\frac{2}{7} = 0,285714285714...</p>
       <p>Bij zulke getallen herhaalt zich een patroon. We noemen dit een <strong>repeterend decimaal getal</strong>.</p>
       <div class="callout"><strong>Belangrijk</strong><p>Rationale getallen kunnen worden geschreven als een eindig decimaal getal of als een repeterend decimaal getal.</p></div>
 
@@ -2896,9 +2896,9 @@ negatieve getallen.</p>
       <p>Ook bij decimalen blijft vermenigvuldigen dezelfde bewerking.</p>
       <p class="formula">1,2 × 0,3 = 0,36</p>
       <p>We kunnen dit begrijpen vanuit breuken:</p>
-      <p class="formula">1,2 = 12/10</p>
-      <p class="formula">0,3 = 3/10</p>
-      <p class="formula">12/10 × 3/10 = 36/100 = 0,36</p>
+      <p class="formula">1,2 = \frac{12}{10}</p>
+      <p class="formula">0,3 = \frac{3}{10}</p>
+      <p class="formula">\frac{12}{10} × \frac{3}{10} = \frac{36}{100} = 0,36</p>
       <p>Een iets moeilijker voorbeeld:</p>
       <p class="formula">2,35 × 1,4 = 3,29</p>
 
@@ -2914,26 +2914,26 @@ negatieve getallen.</p>
 
       <h3>8. Procent betekent "per honderd"</h3>
       <p>Het woord <strong>procent</strong> betekent letterlijk <strong>per honderd</strong>.</p>
-      <p class="formula">1\\% = 1/100 = 0,01</p>
-      <p class="formula">25\\% = 25/100 = 0,25</p>
-      <p class="formula">50\\% = 50/100 = 0,5</p>
-      <p class="formula">100\\% = 100/100 = 1</p>
+      <p class="formula">1\\% = \frac{1}{100} = 0,01</p>
+      <p class="formula">25\\% = \frac{25}{100} = 0,25</p>
+      <p class="formula">50\\% = \frac{50}{100} = 0,5</p>
+      <p class="formula">100\\% = \frac{100}{100} = 1</p>
       <p>Een percentage hoeft niet tussen 0% en 100% te liggen.</p>
-      <p class="formula">125\\% = 125/100 = 1,25</p>
+      <p class="formula">125\\% = \frac{125}{100} = 1,25</p>
       <div class="callout"><strong>Onthoud</strong><p>100% stelt altijd het volledige geheel voor.</p></div>
 
       <h3>9. Breuk, decimaal en percentage</h3>
       <p>Een breuk, een decimaal en een percentage kunnen drie verschillende schrijfwijzen voor dezelfde waarde zijn.</p>
-      <p class="formula">1/2 = 0,5 = 50\\%</p>
-      <p class="formula">1/4 = 0,25 = 25\\%</p>
-      <p class="formula">3/8 = 0,375 = 37,5\\%</p>
-      <p class="formula">5/4 = 1,25 = 125\\%</p>
+      <p class="formula">\frac{1}{2} = 0,5 = 50\\%</p>
+      <p class="formula">\frac{1}{4} = 0,25 = 25\\%</p>
+      <p class="formula">\frac{3}{8} = 0,375 = 37,5\\%</p>
+      <p class="formula">\frac{5}{4} = 1,25 = 125\\%</p>
       <p>Je kunt dus tussen de drie schrijfwijzen heen en weer gaan.</p>
 
       <h3>10. Een percentage van een hoeveelheid</h3>
       <p>Stel dat we willen weten hoeveel 25% van 80 is.</p>
       <p>Omdat:</p>
-      <p class="formula">25\\% = 1/4</p>
+      <p class="formula">25\\% = \frac{1}{4}</p>
       <p>is 25% van 80:</p>
       <p class="formula">80 ÷ 4 = 20</p>
       <p>We kunnen ook eerst 1% bepalen:</p>
@@ -2955,12 +2955,12 @@ negatieve getallen.</p>
       <h3>12. Een percentage bepalen</h3>
       <p>Stel dat 18 van de 24 leerlingen geslaagd zijn. Welk percentage is dat?</p>
       <p>We schrijven eerst de verhouding als breuk:</p>
-      <p class="formula">18/24 = 3/4</p>
+      <p class="formula">\frac{18}{24} = \frac{3}{4}</p>
       <p>Daarna:</p>
-      <p class="formula">3/4 = 0,75 = 75\\%</p>
+      <p class="formula">\frac{3}{4} = 0,75 = 75\\%</p>
       <p>Dus 18 van de 24 leerlingen is <strong>75%</strong>.</p>
       <p>De algemene rekenwijze is:</p>
-      <p class="formula">percentage = deel / geheel × 100%</p>
+      <p class="formula">percentage = \frac{deel}{geheel} × 100%</p>
       <p>Het belangrijkste is dat je eerst bepaalt wat het <strong>geheel</strong> is. Dat geheel stelt 100% voor.</p>
 
       <h3>13. Procentuele stijging</h3>
@@ -2969,7 +2969,7 @@ negatieve getallen.</p>
       <p>De absolute stijging is:</p>
       <p class="formula">€100 − €80 = €20</p>
       <p>We vergelijken die €20 met de beginprijs van €80:</p>
-      <p class="formula">20/80 = 1/4 = 25\\%</p>
+      <p class="formula">20/80 = \frac{1}{4} = 25\\%</p>
       <p>De prijs is dus met <strong>25%</strong> gestegen.</p>
       <div class="callout"><strong>Let op</strong><p>Bij een procentuele stijging vergelijken we altijd met de oorspronkelijke waarde, niet met de nieuwe waarde.</p></div>
 
@@ -2979,7 +2979,7 @@ negatieve getallen.</p>
       <p>De daling is:</p>
       <p class="formula">€200 − €150 = €50</p>
       <p>Die €50 vergelijken we met de beginwaarde van €200:</p>
-      <p class="formula">50/200 = 1/4 = 25\\%</p>
+      <p class="formula">\frac{50}{200} = \frac{1}{4} = 25\\%</p>
       <p>De prijs is dus met <strong>25%</strong> gedaald.</p>
 
       <h3>15. Een stijging of daling als factor</h3>
@@ -3006,7 +3006,7 @@ negatieve getallen.</p>
       <p>Een verandering van 60% naar 70% is een stijging van:</p>
       <p class="formula">70\\% − 60\\% = 10\\ procentpunt</p>
       <p>Relatief gezien is de stijging:</p>
-      <p class="formula">10/60 ≈ 0,1667 ≈ 16,67\\%</p>
+      <p class="formula">\frac{10}{60} ≈ 0,1667 ≈ 16,67\\%</p>
       <p>Dus:</p>
       <ul>
         <li>60% → 70% = <strong>10 procentpunten</strong>;</li>
@@ -3017,10 +3017,10 @@ negatieve getallen.</p>
 
       <h3>18. Samenvatting</h3>
       <ul>
-        <li><span class="formula-inline">0,5 = 1/2 = 50%</span></li>
-        <li><span class="formula-inline">0,25 = 1/4 = 25%</span></li>
-        <li><span class="formula-inline">0,375 = 3/8 = 37,5%</span></li>
-        <li><span class="formula-inline">1% = 0,01 = 1/100</span></li>
+        <li><span class="formula-inline">0,5 = \frac{1}{2} = 50%</span></li>
+        <li><span class="formula-inline">0,25 = \frac{1}{4} = 25%</span></li>
+        <li><span class="formula-inline">0,375 = \frac{3}{8} = 37,5%</span></li>
+        <li><span class="formula-inline">1\\% = 0,01 = \frac{1}{100}</span></li>
         <li>Bij een procentuele stijging of daling is de beginwaarde de referentie.</li>
         <li>Een tweede procentuele verandering werkt op de nieuwe waarde.</li>
         <li>Procentpunten zijn niet hetzelfde als een procentuele verandering.</li>
@@ -3077,7 +3077,7 @@ negatieve getallen.</p>
       <p>We lezen dit als <strong>2 staat tot 3</strong>.</p>
       <p>De verhouding vertelt ons niet alleen hoeveel rode en groene appels er zijn, maar vooral hoe hun aantallen zich tot elkaar verhouden.</p>
       <p>We kunnen dezelfde verhouding ook als een breuk schrijven:</p>
-      <p class="formula">2/3</p>
+      <p class="formula">\frac{2}{3}</p>
       <p>Daarbij moeten we wel goed zeggen <strong>welke hoeveelheid we met welke hoeveelheid vergelijken</strong>. De volgorde is belangrijk.</p>
       <p>Rood tegenover groen is:</p>
       <p class="formula">2 : 3</p>
@@ -3144,11 +3144,11 @@ negatieve getallen.</p>
       <p>en:</p>
       <p class="formula">3 : 5</p>
       <p>We kunnen beide verhoudingen bekijken als breuken:</p>
-      <p class="formula">2/3</p>
-      <p class="formula">3/5</p>
+      <p class="formula">\frac{2}{3}</p>
+      <p class="formula">\frac{3}{5}</p>
       <p>Een gemeenschappelijke noemer is 15:</p>
-      <p class="formula">2/3 = 10/15</p>
-      <p class="formula">3/5 = 9/15</p>
+      <p class="formula">\frac{2}{3} = \frac{10}{15}</p>
+      <p class="formula">\frac{3}{5} = \frac{9}{15}</p>
       <p>Daarom:</p>
       <p class="formula">2 : 3 &gt; 3 : 5</p>
       <p>Het is dus belangrijk om niet alleen naar de losse getallen te kijken. We vergelijken de <strong>verhouding als geheel</strong>.</p>
@@ -3157,11 +3157,11 @@ negatieve getallen.</p>
       <p>Een verhouding kunnen we gebruiken om een deel van een geheel te bepalen.</p>
       <p>Bij een verhouding van 2 rode op 3 blauwe voorwerpen zijn er in totaal 5 verhoudingseenheden.</p>
       <p>Het aandeel rood is dus:</p>
-      <p class="formula">2/5</p>
+      <p class="formula">\frac{2}{5}</p>
       <p>Als percentage is dat:</p>
-      <p class="formula">2/5 = 0,4 = 40\\%</p>
+      <p class="formula">\frac{2}{5} = 0,4 = 40\\%</p>
       <p>Het aandeel blauw is:</p>
-      <p class="formula">3/5 = 0,6 = 60\\%</p>
+      <p class="formula">\frac{3}{5} = 0,6 = 60\\%</p>
       <p>Samen krijgen we:</p>
       <p class="formula">40\\% + 60\\% = 100\\%</p>
       <p>Een verhouding vertelt dus ook hoe een geheel over verschillende groepen verdeeld is.</p>
@@ -3192,10 +3192,10 @@ negatieve getallen.</p>
       <p>Stel:</p>
       <p class="formula">4 : 7</p>
       <p>Als beide termen met 3 worden vermenigvuldigd, krijgen we:</p>
-      <p class="formula">4 × 3 : 7 × 3 = 12 : 21</p>
+      <p class="formula">(4 × 3) :(7 × 3) = 12 : 21</p>
       <p>De factor is hier 3.</p>
       <p>Omgekeerd kunnen we van 12 : 21 teruggaan naar 4 : 7 door beide termen door 3 te delen.</p>
-      <p class="formula">12 ÷ 3 : 21 ÷ 3 = 4 : 7</p>
+      <p class="formula">(12 ÷ 3) : (21 ÷ 3) = 4 : 7</p>
       <p>Bij concrete problemen is het handig om eerst te zoeken naar de factor waarmee de ene hoeveelheid is veranderd. Als de verhouding gelijk blijft, moet de andere hoeveelheid met <strong>dezelfde factor</strong> veranderen.</p>
 
       <h3>9. Direct evenredige grootheden</h3>
@@ -3216,9 +3216,9 @@ negatieve getallen.</p>
       <h3>10. De constante verhouding</h3>
       <p>Bij direct evenredige grootheden blijft de verhouding tussen de twee grootheden constant.</p>
       <p>Bij een prijs van €2 per broodje krijgen we bijvoorbeeld:</p>
-      <p class="formula">€6/3 = €2</p>
-      <p class="formula">€10/5 = €2</p>
-      <p class="formula">€14/7 = €2</p>
+      <p class="formula">\frac{€6}{3} = €2</p>
+      <p class="formula">\frac{€10}{5} = €2</p>
+      <p class="formula">\frac{€14}{7} = €2</p>
       <p>De prijs per broodje blijft dus steeds €2.</p>
       <p>Dit noemen we de <strong>evenredigheidsconstante</strong>: de vaste hoeveelheid die bij één eenheid van de andere grootheid hoort.</p>
       <p>In dit voorbeeld is dat:</p>
@@ -3304,7 +3304,7 @@ negatieve getallen.</p>
       <p>Een verhouding van 2 op 3 kan als verhouding worden geschreven:</p>
       <p class="formula">2 : 3</p>
       <p>en als breuk:</p>
-      <p class="formula">2/3</p>
+      <p class="formula">\frac{2}{3}</p>
       <p>Maar de betekenis van de breuk hangt af van wat we vergelijken.</p>
       <p>Als 2 rode appels tegenover 3 groene appels staan, betekent 2/3: <strong>het aantal rode appels gedeeld door het aantal groene appels</strong>.</p>
       <p>Als 2 van de 3 leerlingen een fiets hebben, betekent 2/3: <strong>het deel van de leerlingen dat een fiets heeft</strong>.</p>
