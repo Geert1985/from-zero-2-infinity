@@ -184,10 +184,6 @@ function render() {
 
   if (isExamRoute && typeof currentExamQuestions === "function" && typeof examResetWidgetState === "function") {
     examResetWidgetState(currentExamQuestions("mile", parts[1], parts[3]));
-    if (typeof examBindWidgets === "function" && !window._examWidgetsBound) {
-      examBindWidgets();
-      window._examWidgetsBound = true;
-    }
   }
 
   if (typeof mountWidgets === "function" && parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") {
