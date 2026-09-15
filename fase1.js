@@ -1843,7 +1843,7 @@ negatieve getallen.</p>
 <p class="formula">12 ÷ (-3) = -4</p>
 <p class="formula">(−12) ÷ 3 = −4</p>
 <p class="formula">(−12) ÷ (-3) = 4</p>      
-`
+    `
   },
   
   {
@@ -2751,7 +2751,7 @@ negatieve getallen.</p>
       Voor het dagelijks leven is een gemengd getal soms gemakkelijker
       te lezen.
     </p>
-`
+    `
   },
   
   {
