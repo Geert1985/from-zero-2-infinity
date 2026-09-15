@@ -5,12 +5,12 @@ const COURSE = {
   /* Kost om fase N te openen: cumulatieve Lesstof- en Toetspunten. Fase 1 is vrij. Punten worden niet afgetrokken. */
   phaseCost: {
     1: { les: 0, toets: 0 },
-    2: { les: 5, toets: 3 },
-    3: { les: 9, toets: 6 },
-    4: { les: 13, toets: 9 },
-    5: { les: 16, toets: 12 },
-    6: { les: 19, toets: 15 },
-    7: { les: 22, toets: 18 }
+    2: { les: 10, toets: 8 },
+    3: { les: 14, toets: 11 },
+    4: { les: 18, toets: 14 },
+    5: { les: 21, toets: 17 },
+    6: { les: 24, toets: 20 },
+    7: { les: 27, toets: 23 }
   },
   phases: [
     {
