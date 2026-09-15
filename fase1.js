@@ -3054,4 +3054,316 @@ negatieve getallen.</p>
       { id: "e15-8", question: "Een score stijgt van 40% naar 50%. Is dat een stijging van 10% of 10 procentpunten? Geef ook de relatieve procentuele stijging.", answer: ["10 procentpunten; 25%", "10 procentpunt; 25%", "10 procentpunten en 25%"] }
     ]
   }
+,
+  {
+    id: "1.6",
+    title: "Verhoudingen en evenredigheid",
+    goal: "Verhoudingen begrijpen, vereenvoudigen en gebruiken om hoeveelheden en evenredige verbanden te berekenen.",
+    theory: /* html */`
+      <h2>Verhoudingen en evenredigheid</h2>
+
+      <p><strong>Doel:</strong> leren wat een verhouding betekent, verhoudingen vergelijken en vereenvoudigen, werken met verhoudingstabellen en herkennen wanneer twee grootheden evenredig zijn.</p>
+
+      <div class="callout">
+        <strong>Vertrekpunt</strong>
+        <p>In 1.4 hebben we geleerd dat een breuk een getal is. In 1.5 zagen we dat een breuk, een decimaal en een percentage verschillende schrijfwijzen voor dezelfde waarde kunnen zijn. In deze les gebruiken we die kennis om <strong>verhoudingen</strong> tussen hoeveelheden te beschrijven.</p>
+      </div>
+
+      <h3>1. Wat is een verhouding?</h3>
+      <p>Een <strong>verhouding</strong> vergelijkt twee hoeveelheden met elkaar.</p>
+      <p>Stel dat er in een mand 2 rode appels en 3 groene appels liggen.</p>
+      <p>We kunnen de verhouding van rode tot groene appels schrijven als:</p>
+      <p class="formula">2 : 3</p>
+      <p>We lezen dit als <strong>2 staat tot 3</strong>.</p>
+      <p>De verhouding vertelt ons niet alleen hoeveel rode en groene appels er zijn, maar vooral hoe hun aantallen zich tot elkaar verhouden.</p>
+      <p>We kunnen dezelfde verhouding ook als een breuk schrijven:</p>
+      <p class="formula">2/3</p>
+      <p>Daarbij moeten we wel goed zeggen <strong>welke hoeveelheid we met welke hoeveelheid vergelijken</strong>. De volgorde is belangrijk.</p>
+      <p>Rood tegenover groen is:</p>
+      <p class="formula">2 : 3</p>
+      <p>Groen tegenover rood is:</p>
+      <p class="formula">3 : 2</p>
+
+      <div class="callout">
+        <strong>Belangrijk</strong>
+        <p>Een verhouding vergelijkt twee hoeveelheden. De volgorde waarin we de hoeveelheden noemen, hoort bij de verhouding.</p>
+      </div>
+
+      <h3>2. Verhouding als verdeling</h3>
+      <p>Een verhouding kunnen we ook gebruiken om een geheel in delen te verdelen.</p>
+      <p>Stel dat een groep uit 2 kinderen met een rode trui en 3 kinderen met een blauwe trui bestaat.</p>
+      <p>De verhouding rood tot blauw is:</p>
+      <p class="formula">2 : 3</p>
+      <p>In totaal zijn er:</p>
+      <p class="formula">2 + 3 = 5</p>
+      <p>Het geheel bestaat dus uit <strong>5 gelijke verhoudingseenheden</strong>: 2 daarvan horen bij rood en 3 bij blauw.</p>
+      <p>Als we bijvoorbeeld 20 kinderen hebben en dezelfde verhouding willen behouden, moeten we de 5 verhoudingseenheden samen over 20 kinderen verdelen.</p>
+      <p>We bepalen eerst hoeveel kinderen bij één verhoudingseenheid horen:</p>
+      <p class="formula">20 ÷ 5 = 4</p>
+      <p>Elke verhoudingseenheid stelt dus 4 kinderen voor.</p>
+      <p>Rood:</p>
+      <p class="formula">2 × 4 = 8</p>
+      <p>Blauw:</p>
+      <p class="formula">3 × 4 = 12</p>
+      <p>De verhouding blijft:</p>
+      <p class="formula">8 : 12</p>
+
+      <h3>3. Gelijkwaardige verhoudingen</h3>
+      <p>Net zoals we bij breuken gelijkwaardige breuken hebben gezien, kunnen we ook <strong>gelijkwaardige verhoudingen</strong> maken.</p>
+      <p>De verhouding:</p>
+      <p class="formula">2 : 3</p>
+      <p>blijft dezelfde als we beide getallen met hetzelfde getal vermenigvuldigen:</p>
+      <p class="formula">2 : 3 = 4 : 6 = 6 : 9 = 10 : 15</p>
+      <p>In elk geval blijft de verhouding tussen de twee hoeveelheden gelijk.</p>
+      <p>We mogen dus beide termen van een verhouding met hetzelfde <strong>niet-nulgetal</strong> vermenigvuldigen.</p>
+      <p>Ook delen kan, zolang beide getallen deelbaar zijn door hetzelfde getal:</p>
+      <p class="formula">12 : 18 = 6 : 9 = 2 : 3</p>
+
+      <div class="callout">
+        <strong>Onthoud</strong>
+        <p>Om een gelijkwaardige verhouding te maken, vermenigvuldig of deel je <strong>beide termen door hetzelfde getal</strong>.</p>
+      </div>
+
+      <h3>4. Een verhouding vereenvoudigen</h3>
+      <p>Een verhouding kan soms onnodig grote getallen bevatten.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">18 : 24</p>
+      <p>18 en 24 zijn beide deelbaar door 6:</p>
+      <p class="formula">18 ÷ 6 = 3</p>
+      <p class="formula">24 ÷ 6 = 4</p>
+      <p>Dus:</p>
+      <p class="formula">18 : 24 = 3 : 4</p>
+      <p>We hebben de verhouding <strong>vereenvoudigd</strong>.</p>
+      <p>Net zoals bij breuken kunnen we hiervoor de <strong>grootste gemene deler</strong> gebruiken. De GGD van 18 en 24 is 6, waardoor we meteen de eenvoudigste verhouding krijgen.</p>
+      <p>Een verhouding staat in de eenvoudigste vorm wanneer de twee termen geen gemeenschappelijke deler groter dan 1 meer hebben.</p>
+
+      <h3>5. Verhoudingen vergelijken</h3>
+      <p>Niet elke verhouding met verschillende getallen is automatisch groter of kleiner. We moeten de verhoudingen vergelijken.</p>
+      <p>Neem:</p>
+      <p class="formula">2 : 3</p>
+      <p>en:</p>
+      <p class="formula">3 : 5</p>
+      <p>We kunnen beide verhoudingen bekijken als breuken:</p>
+      <p class="formula">2/3</p>
+      <p class="formula">3/5</p>
+      <p>Een gemeenschappelijke noemer is 15:</p>
+      <p class="formula">2/3 = 10/15</p>
+      <p class="formula">3/5 = 9/15</p>
+      <p>Daarom:</p>
+      <p class="formula">2 : 3 &gt; 3 : 5</p>
+      <p>Het is dus belangrijk om niet alleen naar de losse getallen te kijken. We vergelijken de <strong>verhouding als geheel</strong>.</p>
+
+      <h3>6. Verhouding en percentage</h3>
+      <p>Een verhouding kunnen we gebruiken om een deel van een geheel te bepalen.</p>
+      <p>Bij een verhouding van 2 rode op 3 blauwe voorwerpen zijn er in totaal 5 verhoudingseenheden.</p>
+      <p>Het aandeel rood is dus:</p>
+      <p class="formula">2/5</p>
+      <p>Als percentage is dat:</p>
+      <p class="formula">2/5 = 0,4 = 40\\%</p>
+      <p>Het aandeel blauw is:</p>
+      <p class="formula">3/5 = 0,6 = 60\\%</p>
+      <p>Samen krijgen we:</p>
+      <p class="formula">40\\% + 60\\% = 100\\%</p>
+      <p>Een verhouding vertelt dus ook hoe een geheel over verschillende groepen verdeeld is.</p>
+
+      <h3>7. Verhoudingstabellen</h3>
+      <p>Een <strong>verhoudingstabel</strong> helpt ons om overzichtelijk te rekenen met gelijkwaardige verhoudingen.</p>
+      <p>Stel dat 3 broodjes €6 kosten. We willen weten wat 5 broodjes kosten.</p>
+      <table>
+        <tr><th>Aantal broodjes</th><th>Prijs</th></tr>
+        <tr><td>3</td><td>€6</td></tr>
+        <tr><td>1</td><td>€2</td></tr>
+        <tr><td>5</td><td>€10</td></tr>
+      </table>
+      <p>We hebben eerst beide waarden door 3 gedeeld:</p>
+      <p class="formula">3 ÷ 3 = 1</p>
+      <p class="formula">€6 ÷ 3 = €2</p>
+      <p>Daarna vermenigvuldigen we beide waarden met 5:</p>
+      <p class="formula">1 × 5 = 5</p>
+      <p class="formula">€2 × 5 = €10</p>
+      <p>De verhouding blijft dus behouden.</p>
+      <div class="callout">
+        <strong>Strategie</strong>
+        <p>Bij een verhoudingstabel kun je vaak eerst naar <strong>1</strong> gaan. Daarna bouw je de gevraagde hoeveelheid weer op.</p>
+      </div>
+
+      <h3>8. Werken met een vermenigvuldigingsfactor</h3>
+      <p>We kunnen een verhouding ook rechtstreeks vergroten of verkleinen met een <strong>vermenigvuldigingsfactor</strong>. Dat begrip kennen we al uit 1.5.</p>
+      <p>Stel:</p>
+      <p class="formula">4 : 7</p>
+      <p>Als beide termen met 3 worden vermenigvuldigd, krijgen we:</p>
+      <p class="formula">4 × 3 : 7 × 3 = 12 : 21</p>
+      <p>De factor is hier 3.</p>
+      <p>Omgekeerd kunnen we van 12 : 21 teruggaan naar 4 : 7 door beide termen door 3 te delen.</p>
+      <p class="formula">12 ÷ 3 : 21 ÷ 3 = 4 : 7</p>
+      <p>Bij concrete problemen is het handig om eerst te zoeken naar de factor waarmee de ene hoeveelheid is veranderd. Als de verhouding gelijk blijft, moet de andere hoeveelheid met <strong>dezelfde factor</strong> veranderen.</p>
+
+      <h3>9. Direct evenredige grootheden</h3>
+      <p>Soms veranderen twee grootheden samen volgens een vaste verhouding. We noemen zulke grootheden <strong>recht evenredig</strong> of <strong>direct evenredig</strong>.</p>
+      <p>Neem opnieuw broodjes en prijs. Als één broodje €2 kost, dan geldt:</p>
+      <p class="formula">1\\ broodje → €2</p>
+      <p class="formula">2\\ broodjes → €4</p>
+      <p class="formula">3\\ broodjes → €6</p>
+      <p class="formula">5\\ broodjes → €10</p>
+      <p>Als het aantal broodjes bijvoorbeeld verdubbelt, verdubbelt de prijs ook:</p>
+      <p class="formula">3 → 6</p>
+      <p class="formula">€6 → €12</p>
+      <p>Als het aantal broodjes halveert, halveert de prijs:</p>
+      <p class="formula">4 → 2</p>
+      <p class="formula">€8 → €4</p>
+      <p>Dat is het kenmerk van directe evenredigheid: <strong>dezelfde vermenigvuldigingsfactor werkt op beide grootheden</strong>.</p>
+
+      <h3>10. De constante verhouding</h3>
+      <p>Bij direct evenredige grootheden blijft de verhouding tussen de twee grootheden constant.</p>
+      <p>Bij een prijs van €2 per broodje krijgen we bijvoorbeeld:</p>
+      <p class="formula">€6/3 = €2</p>
+      <p class="formula">€10/5 = €2</p>
+      <p class="formula">€14/7 = €2</p>
+      <p>De prijs per broodje blijft dus steeds €2.</p>
+      <p>Dit noemen we de <strong>evenredigheidsconstante</strong>: de vaste hoeveelheid die bij één eenheid van de andere grootheid hoort.</p>
+      <p>In dit voorbeeld is dat:</p>
+      <p class="formula">€2\\ per\\ broodje</p>
+      <p>Deze manier van denken is bijzonder nuttig in concrete situaties: prijs per stuk, afstand per tijdseenheid bij constante snelheid, hoeveelheden in recepten en schaalmodellen.</p>
+
+      <h3>11. Controleren of een verband evenredig is</h3>
+      <p>We kunnen met een verhoudingstabel controleren of twee grootheden recht evenredig zijn.</p>
+      <table>
+        <tr><th>Aantal</th><th>Prijs</th><th>Prijs per stuk</th></tr>
+        <tr><td>2</td><td>€6</td><td>€3</td></tr>
+        <tr><td>4</td><td>€12</td><td>€3</td></tr>
+        <tr><td>6</td><td>€18</td><td>€3</td></tr>
+      </table>
+      <p>De prijs per stuk blijft constant. Daarom zijn aantal en prijs hier recht evenredig.</p>
+      <p>Maar kijk naar een situatie met een vaste startkost van €5 en daarnaast €2 per artikel:</p>
+      <table>
+        <tr><th>Aantal</th><th>Prijs</th><th>Prijs per stuk</th></tr>
+        <tr><td>1</td><td>€7</td><td>€7</td></tr>
+        <tr><td>2</td><td>€9</td><td>€4,50</td></tr>
+        <tr><td>3</td><td>€11</td><td>€3,67</td></tr>
+      </table>
+      <p>De prijs per stuk blijft niet constant. Dit verband is dus <strong>niet recht evenredig</strong>.</p>
+
+      <h3>12. Schaal en schaalmodellen</h3>
+      <p>Een schaal is een verhouding tussen een afstand op een tekening of model en de werkelijke afstand.</p>
+      <p>Bij schaal 1 : 100 betekent dit dat 1 eenheid op de tekening overeenkomt met 100 dezelfde eenheden in werkelijkheid.</p>
+      <p>Bijvoorbeeld: 1 cm op een plan komt overeen met:</p>
+      <p class="formula">1 × 100 = 100\\ cm</p>
+      <p>Dat is 1 meter.</p>
+      <p>Een muur die op een plan 4 cm lang is, is in werkelijkheid:</p>
+      <p class="formula">4 × 100 = 400\\ cm = 4\\ m</p>
+      <p>Let goed op de <strong>eenheden</strong>. Eerst moeten de twee afstanden in dezelfde eenheid staan.</p>
+      <div class="callout">
+        <strong>Onthoud</strong>
+        <p>Bij een schaalverhouding moet je altijd weten welke grootheid bij welke hoort en moeten de eenheden correct worden omgerekend.</p>
+      </div>
+
+      <h3>13. Recepten en evenredig vergroten</h3>
+      <p>Een recept is een mooi voorbeeld van directe evenredigheid.</p>
+      <p>Voor 4 personen heb je bijvoorbeeld 300 g bloem nodig. Voor 8 personen heb je twee keer zoveel mensen:</p>
+      <p class="formula">8 ÷ 4 = 2</p>
+      <p>Dezelfde factor 2 passen we toe op de hoeveelheid bloem:</p>
+      <p class="formula">300 × 2 = 600\\ g</p>
+      <p>Voor 6 personen is de factor:</p>
+      <p class="formula">6 ÷ 4 = 1,5</p>
+      <p>Dus:</p>
+      <p class="formula">300 × 1,5 = 450\\ g</p>
+      <p>De hoeveelheden in het recept blijven in dezelfde verhouding.</p>
+
+      <h3>14. Evenredigheid oplossen met bekende waarden</h3>
+      <p>Bij een evenredigheidsprobleem kennen we vaak drie waarden en moeten we de vierde vinden.</p>
+      <p>Stel: 5 kg appels kosten €12. Hoeveel kosten 8 kg?</p>
+      <p>We kunnen eerst de prijs van 1 kg bepalen:</p>
+      <p class="formula">€12 ÷ 5 = €2,40</p>
+      <p>Daarna rekenen we voor 8 kg:</p>
+      <p class="formula">€2,40 × 8 = €19,20</p>
+      <p>Dus:</p>
+      <p class="formula">8\\ kg → €19,20</p>
+      <p>We hadden ook rechtstreeks kunnen kijken naar de factor:</p>
+      <p class="formula">8 ÷ 5 = 1,6</p>
+      <p>en vervolgens:</p>
+      <p class="formula">€12 × 1,6 = €19,20</p>
+      <p>Beide methoden geven hetzelfde resultaat.</p>
+
+      <h3>15. De verhouding tussen drie of meer hoeveelheden</h3>
+      <p>Een verhouding hoeft niet altijd maar twee hoeveelheden te vergelijken.</p>
+      <p>Stel dat een verf wordt gemengd in de verhouding 2 delen geel, 1 deel rood en 3 delen wit.</p>
+      <p>We schrijven:</p>
+      <p class="formula">2 : 1 : 3</p>
+      <p>In totaal zijn er:</p>
+      <p class="formula">2 + 1 + 3 = 6\\ delen</p>
+      <p>Als we 12 liter verf willen maken, hoort bij één deel:</p>
+      <p class="formula">12 ÷ 6 = 2\\ liter</p>
+      <p>Dan hebben we:</p>
+      <p class="formula">2 × 2 = 4\\ liter\\ geel</p>
+      <p class="formula">1 × 2 = 2\\ liter\\ rood</p>
+      <p class="formula">3 × 2 = 6\\ liter\\ wit</p>
+      <p>Controle:</p>
+      <p class="formula">4 + 2 + 6 = 12\\ liter</p>
+
+      <h3>16. Verhoudingen en breuken: hetzelfde getal, andere context</h3>
+      <p>Een verhouding van 2 op 3 kan als verhouding worden geschreven:</p>
+      <p class="formula">2 : 3</p>
+      <p>en als breuk:</p>
+      <p class="formula">2/3</p>
+      <p>Maar de betekenis van de breuk hangt af van wat we vergelijken.</p>
+      <p>Als 2 rode appels tegenover 3 groene appels staan, betekent 2/3: <strong>het aantal rode appels gedeeld door het aantal groene appels</strong>.</p>
+      <p>Als 2 van de 3 leerlingen een fiets hebben, betekent 2/3: <strong>het deel van de leerlingen dat een fiets heeft</strong>.</p>
+      <p>Dezelfde breuknotatie kan dus verschillende concrete situaties beschrijven. Daarom moeten we altijd duidelijk zijn over <strong>wat de twee hoeveelheden voorstellen</strong>.</p>
+
+      <h3>17. Veelgemaakte fouten</h3>
+      <ul>
+        <li><strong>Slechts één term veranderen:</strong> bij een gelijkwaardige verhouding moeten beide termen met dezelfde factor worden vermenigvuldigd of gedeeld.</li>
+        <li><strong>De volgorde verwisselen:</strong> 2 : 3 is niet hetzelfde als 3 : 2.</li>
+        <li><strong>Losse getallen vergelijken:</strong> bij verhoudingen moeten we de verhouding als geheel vergelijken.</li>
+        <li><strong>Eenheden vergeten:</strong> bij schaal en concrete grootheden moeten de eenheden kloppen.</li>
+        <li><strong>Een vaste kost als evenredig behandelen:</strong> als er een startkost is, blijft de prijs per stuk meestal niet constant.</li>
+      </ul>
+
+      <div class="callout insight">
+        <strong>Het kernidee van evenredigheid</strong>
+        <p>Bij een recht evenredig verband veranderen twee grootheden met <strong>dezelfde vermenigvuldigingsfactor</strong>. Daardoor blijft hun verhouding constant.</p>
+        <p>Als één grootheid bijvoorbeeld met factor 2 wordt vermenigvuldigd, moet de andere grootheid ook met factor 2 worden vermenigvuldigd.</p>
+      </div>
+
+      <h3>18. Samenvatting</h3>
+      <ul>
+        <li>Een verhouding vergelijkt twee of meer hoeveelheden.</li>
+        <li>De volgorde van de termen is belangrijk.</li>
+        <li>Gelijkwaardige verhoudingen krijg je door alle termen met dezelfde niet-nulfactor te vermenigvuldigen of te delen.</li>
+        <li>Een verhouding kun je vereenvoudigen, bijvoorbeeld met de GGD.</li>
+        <li>Een verhouding kan ook als breuk worden voorgesteld, maar de context bepaalt wat die breuk betekent.</li>
+        <li>Bij directe evenredigheid blijft de verhouding tussen de grootheden constant.</li>
+        <li>Een verhoudingstabel helpt om evenredige hoeveelheden te berekenen.</li>
+        <li>Bij schaalmodellen en recepten moet dezelfde factor op alle bijbehorende hoeveelheden worden toegepast.</li>
+      </ul>
+    `,
+    practice: [
+      { id: "p16-1", question: "Een mand bevat 4 rode en 6 blauwe knikkers. Wat is de verhouding rood : blauw in de eenvoudigste vorm?", answer: ["2:3", "2 : 3"] },
+      { id: "p16-2", question: "Maak de verhouding 3 : 5 gelijkwaardig door beide termen met 4 te vermenigvuldigen.", answer: ["12:20", "12 : 20"] },
+      { id: "p16-3", question: "Vereenvoudig de verhouding 24 : 36.", answer: ["2:3", "2 : 3"] },
+      { id: "p16-4", question: "Welke verhouding is groter: 3 : 5 of 4 : 7?", answer: ["3:5", "3 : 5"] },
+      { id: "p16-5", question: "In een groep is de verhouding meisjes : jongens = 2 : 3. Er zijn 25 leerlingen. Hoeveel zijn er meisjes?", answer: ["10"] },
+      { id: "p16-6", question: "3 broodjes kosten €7,50. Wat kosten 8 broodjes als de prijs recht evenredig is?", answer: ["20", "€20", "€20,00"] },
+      { id: "p16-7", question: "Een kaart heeft schaal 1 : 200. Een afstand op de kaart is 6 cm. Hoe groot is de werkelijke afstand in meter?", answer: ["12", "12 m", "12 meter"] },
+      { id: "p16-8", question: "Een recept voor 4 personen gebruikt 300 g bloem. Hoeveel bloem heb je nodig voor 10 personen?", answer: ["750", "750 g", "750 gram"] },
+      { id: "p16-9", question: "De verhouding rood : groen : blauw is 2 : 3 : 5. Hoeveel groene onderdelen zijn er als het totaal 40 onderdelen is?", answer: ["12"] },
+      { id: "p16-10", question: "Een fietsrit van 30 km duurt 2 uur bij constante snelheid. Hoe ver rijd je in 5 uur?", answer: ["75", "75 km"] },
+      { id: "p16-11", question: "Is het verband recht evenredig? Bij 2 stuks kost iets €8, bij 4 stuks €16 en bij 6 stuks €24.", answer: ["ja", "Ja"] },
+      { id: "p16-12", question: "Is het verband recht evenredig? Bij 1 artikel betaal je €7, bij 2 artikelen €9 en bij 3 artikelen €11.", answer: ["nee", "Nee"] },
+      { id: "p16-13", question: "5 kg appels kost €12. Wat kost 8 kg als de prijs recht evenredig is?", answer: ["19,20", "€19,20", "19.20"] },
+      { id: "p16-14", question: "Een verfverhouding is geel : rood : wit = 2 : 1 : 3. Hoeveel liter geel heb je nodig voor 18 liter verf in totaal?", answer: ["6", "6 liter"] },
+      { id: "p16-15", question: "De verhouding leerlingen met fiets : zonder fiets is 3 : 2. Welk percentage van de leerlingen heeft een fiets?", answer: ["60%", "60"] }
+    ],
+    exam: [
+      { id: "e16-1", question: "Vereenvoudig de verhouding 42 : 56.", answer: ["3:4", "3 : 4"] },
+      { id: "e16-2", question: "In een klas is de verhouding meisjes : jongens = 5 : 3. Er zijn 32 leerlingen. Hoeveel meisjes zijn er?", answer: ["20"] },
+      { id: "e16-3", question: "Welke verhouding is groter: 5 : 8 of 7 : 12?", answer: ["5:8", "5 : 8"] },
+      { id: "e16-4", question: "4 kg appels kost €9,60. Wat kosten 7,5 kg bij een recht evenredig verband?", answer: ["18", "€18", "€18,00"] },
+      { id: "e16-5", question: "Een plan heeft schaal 1 : 250. Een gang is op het plan 7,2 cm lang. Hoe lang is de gang in werkelijkheid, in meter?", answer: ["18", "18 m", "18 meter"] },
+      { id: "e16-6", question: "Een recept voor 6 personen gebruikt 450 g rijst. Hoeveel rijst is nodig voor 10 personen?", answer: ["750", "750 g", "750 gram"] },
+      { id: "e16-7", question: "De verhouding A : B : C = 2 : 3 : 5. Samen zijn er 80 eenheden. Hoeveel zijn er van B en welk percentage van het totaal is dat?", answer: ["24 en 30%", "24; 30%", "24 = 30%"] },
+      { id: "e16-8", question: "Een abonnement kost €5 vaste kosten plus €2 per maand per extra dienst. Is de totale prijs recht evenredig met het aantal diensten? Leg kort uit waarom wel of niet.", answer: ["nee", "Nee", "niet recht evenredig"] }
+    ]
+  }
+
 ];
