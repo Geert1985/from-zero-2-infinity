@@ -2,7 +2,7 @@ function costLabel(c) {
   return (
     c.les +
     ' <img class="cost-ico" src="assets/book-open.png" alt="lesstof"> ' +
-    " en " + c.toets + 
+    " en " + c.toets +
     ' <img class="cost-ico" src="assets/medaille.png" alt="toets">'
   );
 }
@@ -54,8 +54,8 @@ function renderPhase(phaseId) {
   const screen = '<div class="screen" style="background-image:url(\'' + bgFor(phaseId) + "')\">";
   if (!phaseUnlocked(phaseId)) {
     const c = phaseCost(phaseId);
-    return screen + topbar() + 
-      '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + " is nog vergrendeld</h1>" + 
+    return screen + topbar() +
+      '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + " is nog vergrendeld</h1>" +
       "Nodig om te ontgrendelen: " + costLabel(c) + '.</p>' +
       '<button class="btn primary" data-go="/">Naar de kaart</button></div></div></div>';
   }
@@ -64,21 +64,38 @@ function renderPhase(phaseId) {
       '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + ": " + phase.title +
       "</h1><p>Deze fase volgt later.</p></div></div></div>";
   }
+
   const list = milestonesFor(phaseId);
   const stones = list.map((m, index) => {
     const done = milestonePassed(m.id);
     const st = done ? "done" : "";
-    const art = index + 1;
     const testIco = done ? "assets/medaille.png" : "assets/toets.png";
+
+    let artHTML;
+    if (phaseId === 2) {
+      const cellW = 220;
+      const cellH = 214;
+      const col = index % 5;
+      const row = Math.floor(index / 5);
+      artHTML =
+        '<div class="stone-art stone-art-sprite" role="img" aria-label="' +
+        String(m.title).replace(/"/g, "&quot;") +
+        '" style="background-image:url(\'assets/fase2-panels.jpg?v=1\');background-repeat:no-repeat;background-size:1100px 642px;background-position:' +
+        (-col * cellW) + 'px ' + (-row * cellH) + 'px;height:' + cellH + 'px !important;flex:0 0 ' + cellH + 'px;"></div>';
+    } else {
+      artHTML = '<img class="stone-art" src="assets/mile-' + (index + 1) + '.png?v=2" alt="">';
+    }
+
     return (
       '<article class="stone ' + st + '">' +
-      '<img class="stone-art" src="assets/mile-' + art + '.png?v=2" alt="">' +
+      artHTML +
       '<div class="stone-actions">' +
       '<button class="btn lesstof-btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/les">' +
       '<img class="book-ico" src="assets/' + (leerstofCollected(m.id) ? "book-open.png" : "book-closed.png") + '" alt=""> Lesstof</button>' +
       '<button class="btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/toets"><img class="book-ico" src="' + testIco + '" alt=""> Toets</button></div></article>'
     );
   }).join("");
+
   const next = COURSE.phases.find((p) => p.id === phaseId + 1);
   const nextCost = next ? phaseCost(next.id) : null;
   return (
