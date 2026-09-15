@@ -24,10 +24,13 @@ function renderHome() {
     else if (open) status = "Binnenkort";
     else status = costLabel(phaseCost(p.id));
     const state = done ? "done" : open ? "open" : "locked";
+    const phaseIcon = p.id === 1
+      ? "assets/fase1/icon-fase1.png"
+      : "assets/icon-fase" + p.id + ".png";
     return (
       '<article class="phase-card ' + state + '" data-phase="' + p.id + '">' +
       '<div class="phase-icon">' +
-      '<img src="assets/icon-fase' + p.id + '.png" alt="">' +
+      '<img src="' + phaseIcon + '" alt="">' +
       (open ? "" : '<span class="lock-badge" aria-hidden="true">🔒</span>') +
       (done ? '<span class="done-badge" aria-hidden="true">✓</span>' : "") +
       "</div>" +
@@ -70,9 +73,12 @@ function renderPhase(phaseId) {
     const st = done ? "done" : "";
     const art = index + 1;
     const testIco = done ? "assets/medaille.png" : "assets/toets.png";
+    const stoneArt = phaseId === 1
+      ? "assets/fase1/mile-" + art + ".png?v=2"
+      : "assets/mile-" + art + ".png?v=2";
     return (
       '<article class="stone ' + st + '">' +
-      '<img class="stone-art" src="assets/mile-' + art + '.png?v=2" alt="">' +
+      '<img class="stone-art" src="' + stoneArt + '" alt="">' +
       '<div class="stone-actions">' +
       '<button class="btn lesstof-btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/les">' +
       '<img class="book-ico" src="assets/' + (leerstofCollected(m.id) ? "book-open.png" : "book-closed.png") + '" alt=""> Lesstof</button>' +
