@@ -4,6 +4,7 @@
   const HINT_USED={};
   const baseQuestionHTML=window.examQuestionHTML;
   const baseRenderExam=window.renderExam;
+  let examSubmissionActive=false;
 
   function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\"/g,"&quot;").replace(/'/g,"&#39;");}
 
@@ -61,6 +62,24 @@
     Object.keys(HINT_USED).forEach(k=>delete HINT_USED[k]);
     return baseRenderExam(kind,phaseId,mid);
   };
+
+  /* A passed milestone exam must never automatically award its lesson-score point.
+     Lesson material is collected only through the explicit "Verzamel lesstof" action.
+     The capture flag is set before app.js's submit handler runs, so its legacy
+     COLLECT_LEERSTOF dispatch can be ignored without affecting explicit collection. */
+  if(typeof store!=="undefined"&&store&&typeof store.dispatch==="function"){
+    const baseDispatch=store.dispatch.bind(store);
+    store.dispatch=function(action){
+      if(examSubmissionActive&&action&&action.type==="COLLECT_LEERSTOF")return action;
+      return baseDispatch(action);
+    };
+  }
+  document.addEventListener("click",function(e){
+    if(e.target.closest("#submit-exam"))examSubmissionActive=true;
+  },true);
+  document.addEventListener("click",function(){
+    if(examSubmissionActive)setTimeout(function(){examSubmissionActive=false;},0);
+  });
 
   const style=document.createElement('style');
   style.textContent='.exam-hint-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}.exam-hint-btn{font-size:.9rem;padding:7px 11px}.exam-hint-btn:disabled{opacity:.55}.exam-hint-text{font-size:.92rem;line-height:1.45;opacity:.9}';
