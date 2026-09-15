@@ -133,7 +133,7 @@ function renderAdmin() {
     return (
       '<div class="screen" style="background-image:url(\'assets/home.png\')">' + topbar() +
       '<div class="layout"><div class="panel"><h1>Admin</h1>' +
-      "<p>Alle fases, lessen, oefeningen en toetsen zijn open.</p>" +
+      "<p>Alle fases, lessen en toetsen zijn open.</p>" +
       '<button class="btn" id="admin-logout">Uitloggen</button></div></div></div>'
     );
   }
@@ -171,14 +171,25 @@ function render() {
   const parts = parseHash();
   const app = document.getElementById("app");
   if (!app) return;
+  const isExamRoute = parts[0] === "fase" && parts[2] === "m" && parts[4] === "toets";
   if (!parts.length) app.innerHTML = renderHome();
   else if (parts[0] === "admin") app.innerHTML = renderAdmin();
   else if (parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") app.innerHTML = renderLesson(parts[1], parts[3]);
-  else if (parts[0] === "fase" && parts[2] === "m" && parts[4] === "toets") app.innerHTML = renderExam("mile", parts[1], parts[3]);
+  else if (isExamRoute) app.innerHTML = renderExam("mile", parts[1], parts[3]);
   else if (parts[0] === "fase") app.innerHTML = renderPhase(parts[1]);
   else app.innerHTML = renderHome();
+
   if (typeof bindChallengeUi === "function") bindChallengeUi();
   if (typeof typesetMath === "function") typesetMath(app);
+
+  if (isExamRoute && typeof currentExamQuestions === "function" && typeof examResetWidgetState === "function") {
+    examResetWidgetState(currentExamQuestions("mile", parts[1], parts[3]));
+    if (typeof examBindWidgets === "function" && !window._examWidgetsBound) {
+      examBindWidgets();
+      window._examWidgetsBound = true;
+    }
+  }
+
   if (typeof mountWidgets === "function" && parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") {
     if (app.querySelector("[data-widget]")) mountWidgets(app, parts[3]);
   }
