@@ -2762,13 +2762,72 @@ negatieve getallen.</p>
       <h2>Decimalen en percentages</h2>
 
       <p><strong>Doel:</strong> leren werken met decimalen en percentages en begrijpen hoe ze samenhangen met breuken.</p>
+      <h3>1. Getallen tussen 0 en 1</h3>
+      <p>In de vorige les hebben we gezien dat een getal niet noodzakelijk groter dan 1 hoeft te zijn.</p>
 
-      <div class="callout">
-        <strong>Belangrijk uitgangspunt</strong>
-        <p>In deze les gebruiken we nog <strong>geen machten</strong> en <strong>geen algebraïsche letters</strong> zoals <em>x</em> en <em>y</em>. We werken uitsluitend met concrete getallen en hoeveelheden.</p>
-      </div>
+                <p>We kunnen bijvoorbeeld de breuk</p>
 
-      <h3>1. Decimalen als uitbreiding van ons getallensysteem</h3>
+                <p class="formula">
+                    \frac{1}{2}
+                </p>
+
+                <p>gebruiken om een hoeveelheid aan te geven die kleiner is dan 1, maar groter dan 0.</p>
+
+                <p>Ook</p>
+      <p class="formula">
+                \frac{1}{4} en  \frac{3}{4} en \frac{7}{10}
+              </p>
+
+                <p>zijn getallen die tussen 0 en 1 liggen.</p>
+
+                <p>We hebben geleerd hoe we zulke getallen als een <strong>breuk</strong> kunnen schrijven. Maar er bestaat ook een andere manier om deze getallen te schrijven.</p>
+
+                <p>Zo kunnen we bijvoorbeeld schrijven:</p>
+
+                <p class="formula">
+                    \frac{1}{2}=0,5
+                </p>
+
+                <p>en</p>
+
+                <p class="formula">
+                   \frac{1}{4}=0,25
+                </p>
+
+                <p>Het getal <strong>0,5</strong> is dus geen nieuw getal. Het is een andere schrijfwijze voor hetzelfde getal als</p>
+
+                <p class="formula">
+                    \frac{1}{2}
+                </p>
+
+                <p>Ook:</p>
+
+                <p class="formula">
+                  \frac{3}{4}=0,75
+                   
+                </p>
+                   <p>De komma in <strong>0,5</strong> en <strong>0,75</strong> geeft aan dat we naast het gehele deel ook een deel van één geheel aangeven.</p>
+
+                <p>We noemen zulke getallen <strong>decimale getallen</strong> of kortweg <strong>decimalen</strong>.</p>
+
+                <div class="callout">
+                    <strong>Een nieuwe schrijfwijze, geen nieuw soort getal</strong>
+                    <p>Een decimaal getal kan hetzelfde getal voorstellen als een breuk. Zo zijn</p>
+
+                    <p class="formula">
+                        \frac{1}{2} = 0,5 = 50\\%
+              
+                    </p>
+
+                    <p>drie verschillende schrijfwijzen voor dezelfde hoeveelheid.</p>
+                </div>
+
+                <p>In deze les gaan we onderzoeken hoe deze decimale schrijfwijze werkt, hoe we decimalen kunnen vergelijken en ermee kunnen rekenen. Daarna bekijken we hoe decimalen verbonden zijn met percentages.</p>
+            
+      
+      
+      
+      <h3>2. Decimalen als uitbreiding van ons getallensysteem</h3>
       <p>We hebben in eerdere lessen gezien dat de plaats van een cijfer bepaalt welke waarde het heeft. Dat principe werkt ook rechts van de komma.</p>
       <p>Neem bijvoorbeeld:</p>
       <p class="formula">37,428</p>
@@ -2855,31 +2914,31 @@ negatieve getallen.</p>
 
       <h3>8. Procent betekent "per honderd"</h3>
       <p>Het woord <strong>procent</strong> betekent letterlijk <strong>per honderd</strong>.</p>
-      <p class="formula">1% = 1/100 = 0,01</p>
-      <p class="formula">25% = 25/100 = 0,25</p>
-      <p class="formula">50% = 50/100 = 0,5</p>
-      <p class="formula">100% = 100/100 = 1</p>
+      <p class="formula">1\\% = 1/100 = 0,01</p>
+      <p class="formula">25\\% = 25/100 = 0,25</p>
+      <p class="formula">50\\% = 50/100 = 0,5</p>
+      <p class="formula">100\\% = 100/100 = 1</p>
       <p>Een percentage hoeft niet tussen 0% en 100% te liggen.</p>
-      <p class="formula">125% = 125/100 = 1,25</p>
+      <p class="formula">125\\% = 125/100 = 1,25</p>
       <div class="callout"><strong>Onthoud</strong><p>100% stelt altijd het volledige geheel voor.</p></div>
 
       <h3>9. Breuk, decimaal en percentage</h3>
       <p>Een breuk, een decimaal en een percentage kunnen drie verschillende schrijfwijzen voor dezelfde waarde zijn.</p>
-      <p class="formula">1/2 = 0,5 = 50%</p>
-      <p class="formula">1/4 = 0,25 = 25%</p>
-      <p class="formula">3/8 = 0,375 = 37,5%</p>
-      <p class="formula">5/4 = 1,25 = 125%</p>
+      <p class="formula">1/2 = 0,5 = 50\\%</p>
+      <p class="formula">1/4 = 0,25 = 25\\%</p>
+      <p class="formula">3/8 = 0,375 = 37,5\\%</p>
+      <p class="formula">5/4 = 1,25 = 125\\%</p>
       <p>Je kunt dus tussen de drie schrijfwijzen heen en weer gaan.</p>
 
       <h3>10. Een percentage van een hoeveelheid</h3>
       <p>Stel dat we willen weten hoeveel 25% van 80 is.</p>
       <p>Omdat:</p>
-      <p class="formula">25% = 1/4</p>
+      <p class="formula">25\\% = 1/4</p>
       <p>is 25% van 80:</p>
       <p class="formula">80 ÷ 4 = 20</p>
       <p>We kunnen ook eerst 1% bepalen:</p>
-      <p class="formula">1% van 80 = 0,8</p>
-      <p class="formula">25% van 80 = 25 × 0,8 = 20</p>
+      <p class="formula">1\\%\\ van\\ 80 = 0,8</p>
+      <p class="formula">25\\%\\ van\\ 80 = 25 × 0,8 = 20</p>
       <p>Of we gebruiken de decimale schrijfwijze:</p>
       <p class="formula">0,25 × 80 = 20</p>
       <div class="callout"><strong>Drie manieren</strong><p>Je mag de methode kiezen die je het duidelijkst vindt: via een breuk, via 1% of via de decimale schrijfwijze.</p></div>
@@ -2898,7 +2957,7 @@ negatieve getallen.</p>
       <p>We schrijven eerst de verhouding als breuk:</p>
       <p class="formula">18/24 = 3/4</p>
       <p>Daarna:</p>
-      <p class="formula">3/4 = 0,75 = 75%</p>
+      <p class="formula">3/4 = 0,75 = 75\\%</p>
       <p>Dus 18 van de 24 leerlingen is <strong>75%</strong>.</p>
       <p>De algemene rekenwijze is:</p>
       <p class="formula">percentage = deel / geheel × 100%</p>
@@ -2910,7 +2969,7 @@ negatieve getallen.</p>
       <p>De absolute stijging is:</p>
       <p class="formula">€100 − €80 = €20</p>
       <p>We vergelijken die €20 met de beginprijs van €80:</p>
-      <p class="formula">20/80 = 1/4 = 25%</p>
+      <p class="formula">20/80 = 1/4 = 25\\%</p>
       <p>De prijs is dus met <strong>25%</strong> gestegen.</p>
       <div class="callout"><strong>Let op</strong><p>Bij een procentuele stijging vergelijken we altijd met de oorspronkelijke waarde, niet met de nieuwe waarde.</p></div>
 
@@ -2920,17 +2979,17 @@ negatieve getallen.</p>
       <p>De daling is:</p>
       <p class="formula">€200 − €150 = €50</p>
       <p>Die €50 vergelijken we met de beginwaarde van €200:</p>
-      <p class="formula">50/200 = 1/4 = 25%</p>
+      <p class="formula">50/200 = 1/4 = 25\\%</p>
       <p>De prijs is dus met <strong>25%</strong> gedaald.</p>
 
       <h3>15. Een stijging of daling als factor</h3>
       <p>Een procentuele verandering kan ook rechtstreeks worden toegepast op een bedrag.</p>
       <p>Een stijging van 20% betekent dat we uiteindelijk 120% van de oorspronkelijke waarde hebben:</p>
-      <p class="formula">120% = 1,20</p>
+      <p class="formula">120\\% = 1,20</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">€50 × 1,20 = €60</p>
       <p>Een daling van 20% betekent dat 80% overblijft:</p>
-      <p class="formula">80% = 0,80</p>
+      <p class="formula">80\\% = 0,80</p>
       <p class="formula">€50 × 0,80 = €40</p>
       <p>We spreken hier over een <strong>vermenigvuldigingsfactor</strong>. Dit is gewoon een getal waarmee we de oorspronkelijke hoeveelheid vermenigvuldigen.</p>
 
@@ -2945,9 +3004,9 @@ negatieve getallen.</p>
 
       <h3>17. Procent en procentpunt</h3>
       <p>Een verandering van 60% naar 70% is een stijging van:</p>
-      <p class="formula">70% − 60% = 10 procentpunt</p>
+      <p class="formula">70\\% − 60\\% = 10\\ procentpunt</p>
       <p>Relatief gezien is de stijging:</p>
-      <p class="formula">10/60 ≈ 0,1667 ≈ 16,67%</p>
+      <p class="formula">10/60 ≈ 0,1667 ≈ 16,67\\%</p>
       <p>Dus:</p>
       <ul>
         <li>60% → 70% = <strong>10 procentpunten</strong>;</li>
