@@ -2,8 +2,7 @@ name: Publish fase 1.13 on assistant branch
 
 on:
   push:
-    branches:
-      - 'chatGPT/fase1'
+  workflow_dispatch:
 
 permissions:
   contents: write
