@@ -1,7 +1,7 @@
 /* Bundelt de fasebestanden tot MILESTONES en PHASE_EXAMS. Pas lessen aan in fase1.js … fase7.js. */
 const PHASE_EXAMS = {
   1: [],
-  2: PHASE_EXAM_2,
+  2: [],
   3: PHASE_EXAM_3,
   4: PHASE_EXAM_4,
   5: PHASE_EXAM_5,
