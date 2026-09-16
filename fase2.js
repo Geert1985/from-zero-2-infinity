@@ -8,30 +8,123 @@ const MILESTONES_2 = [
       <h2>Variabelen & algebraïsche uitdrukkingen</h2>
       <p><strong>Doel:</strong></p>
       <ul>
-        <li>begrijpen waarom we letters gebruiken in plaats van alleen bekende getallen</li>
-        <li>een algebraïsche uitdrukking lezen: termen, coëfficiënten en constanten</li>
-        <li>een uitdrukking berekenen door een waarde in te vullen</li>
+        <li>begrijpen waarom we letters gebruiken om getallen voor te stellen</li>
+        <li>het verschil begrijpen tussen een onbekende en een veranderlijke</li>
+        <li>een algebraïsche uitdrukking lezen en de termen, coëfficiënten en constanten herkennen</li>
+        <li>waarden correct invullen in een uitdrukking</li>
         <li>gelijksoortige termen herkennen en samennemen</li>
       </ul>
+
       <h3>1. Van een bekend getal naar een letter</h3>
       <p>In Fase 1 rekenden we met concrete getallen. Een tas kost 12 euro. Twee tassen kosten:</p>
       <p class="formula">2 · 12 = 24</p>
-      <p>Maar wat als de prijs nog niet bekend is, of als die kan veranderen? Dan willen we het patroon opschrijven, niet één specifiek geval.</p>
-      <p>Noem de prijs van één tas <strong>p</strong>. Twee tassen kosten dan <span class="formula">2p</span>.</p>
-      <p>Als later blijkt dat p = 12, vullen we in en krijgen we opnieuw 24. Als p = 15, krijgen we 30. Dezelfde uitdrukking beschrijft alle mogelijke prijzen.</p>
-      <div class="callout"><strong>Een variabele is een letter die een getal voorstelt.</strong> Dat getal kan nog onbekend zijn, of het kan verschillende waarden aannemen.</div>
+      <p>Maar wat als de prijs nog niet bekend is, of als die kan veranderen? Dan willen we niet één specifiek geval beschrijven, maar het algemene verband.</p>
+      <p>Noem de prijs van één tas <strong>p</strong>. Twee tassen kosten dan:</p>
+      <p class="formula">2p</p>
+      <p>Als later blijkt dat p = 12, krijgen we:</p>
+      <p class="formula">2 · 12 = 24</p>
+      <p>Als p = 15, krijgen we:</p>
+      <p class="formula">2 · 15 = 30</p>
+      <p>De uitdrukking <span class="formula">2p</span> beschrijft dus alle mogelijke prijzen tegelijk.</p>
+      <div class="callout"><strong>Een variabele is een letter die een getal voorstelt.</strong> De waarde van die variabele kan nog onbekend zijn, of verschillende toegelaten waarden aannemen.</div>
+
       <h3>2. Onbekende of veranderlijke?</h3>
-      <p>In <span class="formula">x + 3 = 7</span> zoeken we één waarde van x. Hier is x een <strong>onbekende</strong>.</p>
-      <p>In <span class="formula">y = 2x + 1</span> mag x verschillende waarden aannemen. Hier is x een <strong>veranderlijke</strong>.</p>
-      <h3>3. 3x betekent 3 keer x</h3>
-      <p><span class="formula">3x</span> betekent <span class="formula">3 · x</span>, niet 3 + x. Zonder getal vóór de letter is de factor 1: <span class="formula">x = 1x</span>.</p>
-      <h3>4. Onderdelen van een uitdrukking</h3>
-      <p>Een algebraïsche uitdrukking bevat geen gelijkheidsteken. In <span class="formula">3x + 5</span> is 3 de coëfficiënt, x de variabele en 5 de constante term. Termen worden gescheiden door + of −.</p>
-      <h3>5. Invullen</h3>
-      <p>Voor <span class="formula">3x + 5</span> en x = 4: <span class="formula">3 · 4 + 5 = 17</span>. Bij een negatieve waarde gebruik je haakjes.</p>
-      <h3>6. Gelijksoortige termen</h3>
-      <p>Termen zijn gelijksoortig bij dezelfde letter(s) en exponent(en). <span class="formula">3x + 5x = 8x</span>, maar <span class="formula">3x + 5</span> blijft zo.</p>
-      <div class="callout"><strong>Kernidee:</strong> algebra schrijft een hele familie berekeningen in één keer. <span class="formula">3x + 5x = 8x</span> geldt voor elk getal x.</div>
+      <p>Hetzelfde symbool kan in verschillende situaties een andere rol spelen.</p>
+      <p>In:</p>
+      <p class="formula">x + 3 = 7</p>
+      <p>zoeken we naar de waarde van x die de vergelijking waar maakt. Hier spreken we over een <strong>onbekende</strong>.</p>
+      <p>In:</p>
+      <p class="formula">y = 2x + 1</p>
+      <p>kan x verschillende waarden aannemen. Voor elke toegelaten waarde van x krijgen we een waarde van y. Hier is x een <strong>veranderlijke</strong>.</p>
+      <p>De begrippen overlappen dus, maar leggen een ander accent: bij een onbekende willen we een waarde bepalen; bij een veranderlijke onderzoeken we hoe een uitdrukking of grootheid verandert wanneer de waarde verandert.</p>
+
+      <h3>3. Letters zijn getallen</h3>
+      <p>Wanneer we met algebra werken, behandelen we letters op dezelfde manier als getallen. Een getal vóór een letter betekent vermenigvuldiging:</p>
+      <p class="formula">3x = 3 · x</p>
+      <p>De vermenigvuldiging wordt meestal niet uitgeschreven. Ook:</p>
+      <p class="formula">ab = a · b</p>
+      <p>en:</p>
+      <p class="formula">4xy = 4 · x · y</p>
+      <p>Een factor 1 wordt meestal niet geschreven:</p>
+      <p class="formula">x = 1x</p>
+      <p>Ook een factor −1 wordt meestal verkort geschreven:</p>
+      <p class="formula">−x = −1x</p>
+      <div class="callout"><strong>Let op:</strong> <span class="formula">3x</span> betekent <strong>3 keer x</strong>, niet 3 + x. Het ontbreken van het vermenigvuldigingsteken is een belangrijke afspraak in de algebra.</div>
+
+      <h3>4. Onderdelen van een algebraïsche uitdrukking</h3>
+      <p>Een <strong>algebraïsche uitdrukking</strong> is een combinatie van getallen, letters en bewerkingen. Bijvoorbeeld:</p>
+      <p class="formula">3x + 5</p>
+      <p>We onderscheiden verschillende onderdelen.</p>
+      <ul>
+        <li><strong>variabele:</strong> de letter waarvan de waarde kan veranderen, hier x;</li>
+        <li><strong>coëfficiënt:</strong> het getal dat een variabele vermenigvuldigt, hier 3;</li>
+        <li><strong>constante:</strong> een getal zonder variabele, hier 5;</li>
+        <li><strong>term:</strong> een onderdeel dat door + of − van andere termen is gescheiden.</li>
+      </ul>
+      <p>De uitdrukking <span class="formula">3x + 5</span> bestaat dus uit twee termen: <span class="formula">3x</span> en <span class="formula">5</span>.</p>
+      <p>Bij:</p>
+      <p class="formula">−4x + 7 − 2x</p>
+      <p>zijn de termen <span class="formula">−4x</span>, <span class="formula">7</span> en <span class="formula">−2x</span>. Het minteken hoort bij de term die erop volgt.</p>
+
+      <h3>5. Uitdrukking of vergelijking?</h3>
+      <p>Het onderscheid tussen een uitdrukking en een vergelijking is belangrijk.</p>
+      <p>Een uitdrukking zoals:</p>
+      <p class="formula">3x + 5</p>
+      <p>heeft geen gelijkheidsteken. We kunnen de uitdrukking berekenen of vereenvoudigen.</p>
+      <p>Een vergelijking zoals:</p>
+      <p class="formula">3x + 5 = 17</p>
+      <p>bevat wel een gelijkheidsteken. We zoeken dan naar waarden van x waarvoor de linker- en rechterkant dezelfde waarde hebben.</p>
+      <div class="callout"><strong>Onthoud:</strong> een uitdrukking geeft een hoeveelheid of berekening weer; een vergelijking stelt dat twee uitdrukkingen gelijk zijn.</div>
+
+      <h3>6. Een waarde invullen</h3>
+      <p>Een algebraïsche uitdrukking krijgt een concrete waarde zodra we een waarde voor de variabele kiezen.</p>
+      <p>Neem:</p>
+      <p class="formula">3x + 5</p>
+      <p>en stel x = 4. Dan vervangen we x door 4:</p>
+      <p class="formula">3 · 4 + 5 = 12 + 5 = 17</p>
+      <p>De waarde van <span class="formula">3x + 5</span> is dus 17 voor x = 4.</p>
+      <p>Bij een negatieve waarde gebruiken we haakjes om duidelijk te maken dat de volledige waarde wordt ingevuld:</p>
+      <p class="formula">x = −2</p>
+      <p class="formula">3x + 5 = 3(−2) + 5 = −6 + 5 = −1</p>
+      <p>Ook bij machten zijn haakjes belangrijk:</p>
+      <p class="formula">x = −3 → x² = (−3)² = 9</p>
+      <p>Dit is iets anders dan <span class="formula">−3²</span>, waarvoor de gebruikelijke rekenvolgorde eerst de macht berekent.</p>
+
+      <h3>7. Dezelfde letter kan verschillende waarden aannemen</h3>
+      <p>Een variabele staat niet vast op één getal. Als:</p>
+      <p class="formula">A = 2x + 1</p>
+      <p>dan kunnen we bijvoorbeeld berekenen:</p>
+      <p class="formula">x = 0 → A = 1</p>
+      <p class="formula">x = 1 → A = 3</p>
+      <p class="formula">x = 5 → A = 11</p>
+      <p>De formule beschrijft daarmee een hele verzameling mogelijke situaties. Welke waarden werkelijk zijn toegestaan, hangt af van de context. Een lengte kan bijvoorbeeld niet negatief zijn.</p>
+      <div class="callout"><strong>Een formule krijgt betekenis door haar context.</strong> Niet elke wiskundig mogelijke waarde van een variabele hoeft in de werkelijkheid toegelaten te zijn.</div>
+
+      <h3>8. Gelijksoortige termen</h3>
+      <p>We kunnen sommige termen samenvoegen omdat ze dezelfde algebraïsche structuur hebben.</p>
+      <p>Zo zijn <span class="formula">3x</span> en <span class="formula">5x</span> gelijksoortige termen:</p>
+      <p class="formula">3x + 5x = 8x</p>
+      <p>Ook:</p>
+      <p class="formula">7a − 2a = 5a</p>
+      <p>en:</p>
+      <p class="formula">4x² + 3x² = 7x²</p>
+      <p>Termen zijn gelijksoortig wanneer dezelfde variabelen met dezelfde exponenten voorkomen.</p>
+      <p>Daarom zijn <span class="formula">3x</span> en <span class="formula">3x²</span> <strong>niet</strong> gelijksoortig. Ook <span class="formula">3x</span> en 5 zijn niet gelijksoortig.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">3x + 5 + 2x − 1 = 5x + 4</p>
+      <p>We hebben alleen gelijksoortige termen samengenomen:</p>
+      <p class="formula">3x + 2x = 5x</p>
+      <p>en:</p>
+      <p class="formula">5 − 1 = 4</p>
+      <p>Dit betekent niet dat we zomaar alle termen met elkaar mogen combineren.</p>
+
+      <h3>9. Een variabele kan ook een complexe uitdrukking vertegenwoordigen</h3>
+      <p>Een letter hoeft niet altijd één eenvoudig getal te vervangen. Soms gebruiken we een letter als afkorting voor een grootheid of voor een waarde die uit een andere berekening komt.</p>
+      <p>Als bijvoorbeeld <span class="formula">l = 8</span> en <span class="formula">b = 5</span>, dan is de oppervlakte van een rechthoek:</p>
+      <p class="formula">A = l · b = 8 · 5 = 40</p>
+      <p>De letters maken het mogelijk om eerst een algemene formule op te stellen en pas daarna concrete waarden in te vullen.</p>
+
+      <div class="callout"><strong>Kernidee:</strong> algebra is een taal om algemene patronen en verbanden te beschrijven. In plaats van telkens met één concreet getal te rekenen, gebruiken we symbolen zodat één uitdrukking veel verschillende situaties kan beschrijven.</div>
     `
   },
   {
