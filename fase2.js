@@ -2278,19 +2278,19 @@ const MILESTONES_2 = [
         <span class="formula-inline">1/2</span> worden geschreven:
       </p>
 
-      <p class="formula">√a = a^{1/2}</p>
+      <p class="formula">\\sqrt{a} = a^{1/2}</p>
 
       <p>
         Bijvoorbeeld:
       </p>
 
-      <p class="formula">√9 = 9^{1/2} = 3</p>
+      <p class="formula">\\sqrt{9} = 9^{1/2} = 3</p>
 
       <p>
         Ook een derdemachtswortel kan op die manier worden geschreven:
       </p>
 
-      <p class="formula">∛a = a^{1/3}</p>
+      <p class="formula">\\sqrt[3]{a} = a^{1/3}</p>
 
       <p>
         In deze fase is het vooral belangrijk om deze schrijfwijze
@@ -2303,7 +2303,7 @@ const MILESTONES_2 = [
         onder het wortelteken niet-negatief zijn:
       </p>
 
-      <p class="formula">√x ≥ 0</p>
+      <p class="formula">\\sqrt{x} ≥ 0</p>
       <p>
         De wortel √x bestaat in de reële getallen alleen voor x ≥ 0.
         Die beperking hoort bij elke formule waarin een vierkantswortel voorkomt.
@@ -2316,7 +2316,7 @@ const MILESTONES_2 = [
         Bij getallen weten we bijvoorbeeld:
       </p>
 
-      <p class="formula">√(3^{2}) = 3</p>
+      <p class="formula">\\sqrt{3^{2}} = 3</p>
 
       <p>
         Maar wat gebeurt er bij een negatieve waarde van x?
@@ -2334,7 +2334,7 @@ const MILESTONES_2 = [
         en dus:
       </p>
 
-      <p class="formula">√(x^{2}) = √9 = 3</p>
+      <p class="formula">\\sqrt{x^{2}} = \\sqrt{9} = 3</p>
 
       <p>
         Het resultaat is dus niet −3.
@@ -2345,7 +2345,7 @@ const MILESTONES_2 = [
         Daarom geldt in de reële getallen:
       </p>
 
-      <p class="formula">√(x^{2}) = |x|</p>
+      <p class="formula">\\sqrt{x^{2}} = |x|</p>
 
       <p>
         Het symbool <span class="formula-inline">|x|</span> betekent de
@@ -2393,7 +2393,7 @@ const MILESTONES_2 = [
 
       <p>Bijvoorbeeld:</p>
 
-      <p class="formula">\frac{3x}{x + 2}</p>
+      <p class="formula">\\frac{3x}{x + 2}</p>
 
       <p class="formula">\frac{x^{2} − 9}{x − 3}</p>
 
@@ -2750,9 +2750,7 @@ const MILESTONES_2 = [
         Dus:
       </p>
 
-      <p class="formula">\frac{1}{x} + \frac{1}{2}
-      = \frac{x + 2}{2x},
-      \quad x ≠ 0</p>
+      <p class="formula">\frac{1}{x} + \frac{1}{2} = \frac{x + 2}{2x},\\ en\\ x ≠ 0</p>
 
       <p>
         Wat je <strong>niet</strong> mag doen:
