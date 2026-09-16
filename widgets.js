@@ -3194,6 +3194,49 @@ function mountSine(root) {
   draw();
 }
 
+
+function mountAlgebraMachine(root) {
+  root.innerHTML = widgetShell(
+    "Algebramachine",
+    "<p>Vul een waarde in voor x en volg de berekening stap voor stap.</p>",
+    `<div class="algebra-machine" aria-live="polite">
+       <p class="small">Uitdrukking</p>
+       <p class="formula">3x + 5</p>
+       <p class="small">Invullen</p>
+       <p class="formula" data-k="substitution">3 · 2 + 5 = 6 + 5</p>
+       <p class="formula" data-k="result">= 11</p>
+     </div>
+     <div class="widget-controls">
+       <label>
+         Kies x
+         <input type="range" min="-5" max="10" step="1" value="2" data-k="x" aria-label="Waarde van x">
+         <output data-o="x">2</output>
+       </label>
+     </div>
+     <p class="widget-readout" data-k="readout">Voor x = 2 is 3x + 5 = 11.</p>`
+  );
+
+  const xEl = root.querySelector("[data-k=x]");
+  const xOut = root.querySelector("[data-o=x]");
+  const substitution = root.querySelector("[data-k=substitution]");
+  const result = root.querySelector("[data-k=result]");
+  const readout = root.querySelector("[data-k=readout]");
+
+  const draw = function () {
+    const x = Number(xEl.value);
+    const product = 3 * x;
+    const value = product + 5;
+    const xText = x < 0 ? "(" + x + ")" : String(x);
+    xOut.textContent = String(x);
+    substitution.textContent = "3 · " + xText + " + 5 = " + product + " + 5";
+    result.textContent = "= " + value;
+    readout.textContent = "Voor x = " + x + " is 3x + 5 = " + value + ".";
+  };
+
+  xEl.addEventListener("input", draw);
+  draw();
+}
+
 const WIDGET_BUILDERS = {
   numberline: mountNumberline,
   nats: mountNats,
@@ -3217,6 +3260,7 @@ const WIDGET_BUILDERS = {
   fractionNumberLine: mountFractionNumberLine,
   equivalentFractions: mountEquivalentFractions,
   compareFractions: mountCompareFractions,
+  algebraMachine: mountAlgebraMachine,
   sine: mountSine
 };
 
