@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">(a + b)² als oppervlakte</title>
+  <desc id="desc">Een vierkant met zijde a + b, verdeeld in a², twee rechthoeken ab en b².</desc>
+  <rect width="900" height="620" fill="#161410"/>
+  <text x="450" y="48" text-anchor="middle" fill="#e6c77a" font-family="Georgia, 'Times New Roman', serif" font-size="28">(a + b)² = a² + 2ab + b²</text>
+  <g transform="translate(230,95)">
+    <!-- outer square 440 -->
+    <rect x="0" y="0" width="440" height="440" fill="none" stroke="#e6c77a" stroke-width="3"/>
+    <!-- a^2 : 280x280 -->
+    <rect x="0" y="0" width="280" height="280" fill="#2a2418" stroke="#c4a45a" stroke-width="2"/>
+    <text x="140" y="150" text-anchor="middle" fill="#f3e2b0" font-family="Georgia, serif" font-size="36">a²</text>
+    <!-- top-right ab 160x280 -->
+    <rect x="280" y="0" width="160" height="280" fill="#3a2a18" stroke="#c4a45a" stroke-width="2"/>
+    <text x="360" y="150" text-anchor="middle" fill="#f3e2b0" font-family="Georgia, serif" font-size="32">ab</text>
+    <!-- bottom-left ab 280x160 -->
+    <rect x="0" y="280" width="280" height="160" fill="#3a2a18" stroke="#c4a45a" stroke-width="2"/>
+    <text x="140" y="372" text-anchor="middle" fill="#f3e2b0" font-family="Georgia, serif" font-size="32">ab</text>
+    <!-- b^2 160x160 -->
+    <rect x="280" y="280" width="160" height="160" fill="#4a3418" stroke="#c4a45a" stroke-width="2"/>
+    <text x="360" y="372" text-anchor="middle" fill="#f3e2b0" font-family="Georgia, serif" font-size="32">b²</text>
+    <!-- labels top -->
+    <text x="140" y="-12" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="22">a</text>
+    <text x="360" y="-12" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="22">b</text>
+    <!-- labels left -->
+    <text x="-18" y="148" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="22">a</text>
+    <text x="-18" y="368" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="22">b</text>
+    <!-- bracket labels -->
+    <text x="220" y="478" text-anchor="middle" fill="#d7c49a" font-family="Georgia, serif" font-size="22">zijde a + b</text>
+  </g>
+  <text x="450" y="590" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="18">De twee rechthoeken ab samen geven de middelste term 2ab.</text>
+</svg>

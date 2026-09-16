@@ -149,168 +149,181 @@ const MILESTONES_2 = [
     goal: "Hoe rekenen we met letters?",
     theory: /* html */`
       <h2>Algebraïsche bewerkingen</h2>
-      <p><strong>Doel:</strong> leren optellen, aftrekken en vermenigvuldigen met algebraïsche termen, haakjes correct uitwerken, merkwaardige producten herkennen en algebraïsche uitdrukkingen ontbinden in factoren.</p>
+      <p><strong>Doel:</strong></p>
+      <ul>
+        <li>gelijksoortige termen herkennen en samennemen</li>
+        <li>termen vermenigvuldigen: coëfficiënten vermenigvuldigen, exponenten optellen</li>
+        <li>haakjes wegwerken met distributiviteit, ook bij een minteken</li>
+        <li>twee tweetermen vermenigvuldigen</li>
+        <li>merkwaardige producten herkennen</li>
+        <li>een gemeenschappelijke factor of een verschil van kwadraten ontbinden</li>
+      </ul>
+      <p>In les 2.1 leerden we letters lezen. Nu rekenen we ermee. De rekenwetten uit Fase 1 blijven gelden; we herkennen ze terug in termen en haakjes.</p>
 
       <h3>1. Optellen en aftrekken: alleen gelijksoortige termen</h3>
-      <p>In Fase 1 konden we bijvoorbeeld drie appels en twee appels samen nemen:</p>
-      <p class="formula">3 appels + 2 appels = 5 appels</p>
-      <p>In algebra werkt hetzelfde idee. Als <span class="formula-inline">x</span> een aantal voorstelt, dan geldt:</p>
+      <p>Drie appels en twee appels geven vijf appels. Drie stoelen en twee appels kun je niet tot één soort optellen.</p>
+      <p>In algebra is <span class="formula-inline">x</span> zo’n soort. Daarom:</p>
       <p class="formula">3x + 2x = 5x</p>
-      <p>We tellen de <strong>coëfficiënten</strong> op, maar de variabele blijft dezelfde.</p>
+      <p>We tellen de <strong>coëfficiënten</strong> op. De letter blijft staan:</p>
       <p class="formula">3x + 2x = (3 + 2)x = 5x</p>
-      <p>Hetzelfde geldt bij aftrekken:</p>
+      <p>Aftrekken werkt hetzelfde:</p>
       <p class="formula">7x − 3x = 4x</p>
-      <p>Ook constanten kunnen we samen nemen:</p>
+      <p>Constanten zijn onderling ook gelijksoortig:</p>
       <p class="formula">8 + 5 − 3 = 10</p>
-      <p>Een uitdrukking met verschillende soorten termen vereenvoudigen we door de gelijksoortige termen te groeperen:</p>
-      <p class="formula">3x + 7 + 2x − 4 = 3x + 2x + 7 − 4 = 5x + 3</p>
-      <div class="callout"><strong>Gelijksoortige termen gedragen zich als dezelfde soort eenheid.</strong> Je kunt 3x en 2x samenvoegen, maar 3x en 2y niet.</div>
+      <p>Een gemengde uitdrukking vereenvoudig je door eerst te groeperen:</p>
+      <p class="formula">3x + 7 + 2x − 4 = (3x + 2x) + (7 − 4) = 5x + 3</p>
+      <div class="callout">
+        <p><strong>Gelijksoortige termen gedragen zich als dezelfde eenheid.</strong></p>
+        <p>Je mag 3x en 2x samenvoegen, maar 3x en 2y niet. Ook 3x en 3 zijn niet gelijksoortig.</p>
+      </div>
 
-      <h3>2. Welke termen zijn gelijksoortig?</h3>
-      <p>Termen zijn gelijksoortig wanneer ze hetzelfde lettergedeelte hebben: dezelfde variabelen met dezelfde exponenten.</p>
+      <h3>2. Wanneer zijn termen gelijksoortig?</h3>
+      <p>Termen zijn gelijksoortig als ze <strong>dezelfde letters met dezelfde exponenten</strong> hebben. De coëfficiënt mag verschillen, het teken ook.</p>
+      <p>Gelijksoortig:</p>
       <p class="formula">3x, −5x, 12x</p>
-      <p>zijn gelijksoortig.</p>
-      <p>Maar:</p>
-      <p class="formula">3x, 3x^{2}, 3y</p>
-      <p>zijn niet gelijksoortig.</p>
-      <p>Ook:</p>
+      <p>Ook gelijksoortig:</p>
       <p class="formula">2xy, −7xy, 4xy</p>
-      <p>zijn gelijksoortig, terwijl <span class="formula-inline">2xy</span> en <span class="formula-inline">2x^{2}y</span> dat niet zijn.</p>
-      <p>Bijvoorbeeld:</p>
+      <p>Niet gelijksoortig:</p>
+      <p class="formula">3x, 3x^{2}, 3y</p>
+      <p><span class="formula-inline">2xy</span> en <span class="formula-inline">2x^{2}y</span> zijn dat evenmin: de macht van x verschilt.</p>
+      <p>Daarom:</p>
       <p class="formula">4x^{2} + 3x − 2x^{2} + 5x = 2x^{2} + 8x</p>
-      <p>We mogen dus wel <span class="formula-inline">4x^{2}</span> en <span class="formula-inline">−2x^{2}</span> combineren, en <span class="formula-inline">3x</span> en <span class="formula-inline">5x</span>, maar niet alle vier samenvoegen tot één term.</p>
+      <p>We combineren <span class="formula-inline">4x^{2}</span> met <span class="formula-inline">−2x^{2}</span>, en <span class="formula-inline">3x</span> met <span class="formula-inline">5x</span>. Vier termen tot één term maken mag niet.</p>
 
-      <h3>3. Vermenigvuldigen met monomen</h3>
-      <p>Bij vermenigvuldigen vermenigvuldigen we de getallen met elkaar en gebruiken we de machtsregels voor dezelfde variabelen.</p>
-      <p class="formula">2x · 3x = 6x^{2}</p>
-      <p>Want:</p>
-      <p class="formula">2x · 3x = (2 · 3)(x · x) = 6x^{2}</p>
-      <p>Met verschillende variabelen:</p>
+      <h3>3. Termen vermenigvuldigen</h3>
+      <p>Een enkele term, zoals <span class="formula-inline">3x</span> of <span class="formula-inline">−2x^{2}</span>, heet een <strong>monoom</strong>. Bij het vermenigvuldigen van monomen gebeuren twee dingen tegelijk:</p>
+      <ul>
+        <li>de coëfficiënten worden vermenigvuldigd;</li>
+        <li>gelijke letters krijgen hun exponenten opgeteld.</li>
+      </ul>
+      <p class="formula">2x · 3x = (2 · 3) · (x · x) = 6x^{2}</p>
+      <p>Verschillende letters blijven naast elkaar staan:</p>
       <p class="formula">3a · 4b = 12ab</p>
-      <p>En:</p>
+      <p>Met hogere machten:</p>
       <p class="formula">2x^{2} · 3x^{3} = 6x^{5}</p>
-      <p>De exponenten worden opgeteld omdat we machten met hetzelfde grondtal vermenigvuldigen.</p>
+      <p>Want <span class="formula-inline">x^{2} · x^{3} = x^{2+3} = x^{5}</span>.</p>
+      <div class="callout">
+        <p><strong>Klassieke fout:</strong> <span class="formula-inline">2x · 3x</span> is niet <span class="formula-inline">6x</span>.</p>
+        <p>De letters worden ook vermenigvuldigd. Twee factoren x geven x².</p>
+      </div>
 
-      <h3>4. Distributiviteit: een getal voor een haakje</h3>
-      <p>In Fase 1 leerden we dat een factor buiten een haakje met <strong>elk onderdeel</strong> binnen het haakje moet worden vermenigvuldigd.</p>
+      <h3>4. Distributiviteit: een factor voor een haakje</h3>
+      <p>Uit Fase 1:</p>
       <p class="formula">3(4 + 5) = 3 · 4 + 3 · 5</p>
-      <p>Dezelfde wet geldt met variabelen:</p>
+      <p>De factor buiten het haakje gaat naar <strong>elke term</strong> erin. Met letters is de wet hetzelfde:</p>
       <p class="formula">a(b + c) = ab + ac</p>
-      <p>Bijvoorbeeld:</p>
+      <p>Voorbeelden:</p>
       <p class="formula">3(x + 4) = 3x + 12</p>
-      <p>Of:</p>
       <p class="formula">5(2x − 3) = 10x − 15</p>
-      <p>De factor 5 wordt dus zowel met <span class="formula-inline">2x</span> als met <span class="formula-inline">−3</span> vermenigvuldigd.</p>
-      <div class="callout"><strong>Veelgemaakte fout:</strong> <span class="formula-inline">3(x + 4)</span> is <strong>niet</strong> <span class="formula-inline">3x + 4</span>. De 3 moet naar elke term in het haakje.</div>
+      <p>Ook een letter mag buiten het haakje staan:</p>
+      <p class="formula">2x(x + 3) = 2x · x + 2x · 3 = 2x^{2} + 6x</p>
+      <div class="callout">
+        <p><strong>Veelgemaakte fout:</strong> <span class="formula-inline">3(x + 4)</span> is niet <span class="formula-inline">3x + 4</span>.</p>
+        <p>De 3 moet ook de 4 raken.</p>
+      </div>
 
       <h3>5. Een minteken vóór een haakje</h3>
-      <p>Een minteken vóór een haakje betekent vermenigvuldigen met −1:</p>
-      <p class="formula">−(x + 4) = −1(x + 4)</p>
-      <p>Daarom krijgen beide termen een minteken:</p>
-      <p class="formula">−(x + 4) = −x − 4</p>
-      <p>Bij een min voor een verschil:</p>
+      <p>Een min vóór een haakje is vermenigvuldigen met −1:</p>
+      <p class="formula">−(x + 4) = −1 · (x + 4) = −x − 4</p>
+      <p>Elke term in het haakje wisselt van teken, niet alleen de eerste:</p>
       <p class="formula">−(x − 5) = −x + 5</p>
-      <p>Het minteken verandert dus het teken van <strong>elke term</strong> in het haakje.</p>
-      <p>Bijvoorbeeld:</p>
+      <p>In een langere uitdrukking:</p>
       <p class="formula">7 − (2x − 3) = 7 − 2x + 3 = 10 − 2x</p>
-      <div class="callout"><strong>Onthoud:</strong> een min voor een haakje is hetzelfde als vermenigvuldigen met −1. Het is niet alleen het eerste teken dat verandert.</div>
+      <p>De −3 in het haakje wordt +3, omdat min keer min plus is.</p>
+      <div class="callout">
+        <p><strong>Onthoud:</strong> een min voor een haakje keert elk teken om.</p>
+        <p>Het is niet genoeg om alleen de eerste term aan te passen.</p>
+      </div>
 
       <h3>6. Twee haakjes vermenigvuldigen</h3>
-      <p>Wanneer twee haakjes met elkaar worden vermenigvuldigd, moet <strong>elke term van het eerste haakje</strong> worden vermenigvuldigd met <strong>elke term van het tweede haakje</strong>.</p>
-      <p>Neem:</p>
+      <p>Bij twee haakjes vermenigvuldigt <strong>elke term van het eerste</strong> met <strong>elke term van het tweede</strong>. Dat is twee keer distributiviteit.</p>
       <p class="formula">(x + 2)(x + 3)</p>
-      <p>We werken stap voor stap:</p>
-      <p class="formula">x(x + 3) + 2(x + 3)</p>
-      <p class="formula">= x^{2} + 3x + 2x + 6</p>
-      <p>Nu nemen we de gelijksoortige termen samen:</p>
+      <p>Eerst de x naar het tweede haakje, daarna de 2:</p>
+      <p class="formula">x(x + 3) + 2(x + 3) = x^{2} + 3x + 2x + 6</p>
+      <p>Gelijksoortige termen:</p>
       <p class="formula">= x^{2} + 5x + 6</p>
-      <p>Dit is eigenlijk <strong>twee keer distributiviteit</strong>.</p>
-      <p>Ook met negatieve termen werkt dezelfde methode:</p>
+      <p>Met een minteken in een haakje verandert de methode niet:</p>
       <p class="formula">(x − 2)(x + 3) = x^{2} + 3x − 2x − 6 = x^{2} + x − 6</p>
-      <p>De veiligste methode is altijd: schrijf alle tussenstappen op en controleer daarna of gelijksoortige termen zijn samengenomen.</p>
+      <p>Ook als er coëfficiënten staan:</p>
+      <p class="formula">(2x + 1)(x + 3) = 2x · x + 2x · 3 + 1 · x + 1 · 3 = 2x^{2} + 6x + x + 3 = 2x^{2} + 7x + 3</p>
+      <p>Schrijf de vier tussenproducten op. Dan verdwijnt er geen kruisterm.</p>
 
       <h3>7. Merkwaardige producten</h3>
-      <p>Sommige producten komen zo vaak voor dat we hun uitwerking als vaste regel kunnen herkennen. Ze volgen rechtstreeks uit distributiviteit.</p>
-      <p>Het kwadraat van een som:</p>
-      <p class="formula">(a + b)^{2} = a^{2} + 2ab + b^{2}</p>
-      <p>Want:</p>
-      <p class="formula">(a + b)^{2} = (a + b)(a + b)</p>
-      <p>en dus:</p>
-      <p class="formula">a^{2} + ab + ab + b^{2} = a^{2} + 2ab + b^{2}</p>
-      <p>Het kwadraat van een verschil:</p>
+      <p>Sommige producten komen zo vaak terug dat we de uitwerking herkennen. Ze volgen uit dezelfde distributiviteit.</p>
+      <p>Kwadraat van een som:</p>
+      <p class="formula">(a + b)^{2} = (a + b)(a + b) = a^{2} + 2ab + b^{2}</p>
+      <p>Kwadraat van een verschil:</p>
       <p class="formula">(a − b)^{2} = a^{2} − 2ab + b^{2}</p>
-      <p>En het verschil van twee kwadraten:</p>
+      <p>Verschil van twee kwadraten:</p>
       <p class="formula">(a + b)(a − b) = a^{2} − b^{2}</p>
-      <p>Bijvoorbeeld:</p>
+      
+      <h4>Visuele voorstelling van het kwadraad van een som</h4>
+      <p>Een vierkant met zijde a + b valt in vier stukken.</p> 
+      <p>Die stukken zijn de vier producten die je ook krijgt als je (a + b)(a + b) uitschrijft.</p>
+      <div class="theory-image">
+        <img
+          src="assets/kwadraat-som.svg"
+          alt="Een vierkant met zijde a + b, verdeeld in a², twee rechthoeken ab en een vierkant b². Samen: a² + 2ab + b²."
+        >
+      </div>
+      
+      <p>Concreet:</p>
       <p class="formula">(x + 3)^{2} = x^{2} + 6x + 9</p>
-      <div class="callout"><strong>Klassieke fout:</strong> <span class="formula-inline">(x + 3)^{2}</span> is niet <span class="formula-inline">x^{2} + 9</span>. De middelste term <span class="formula-inline">6x</span> ontstaat doordat beide kruisproducten meetellen.</div>
+      <p class="formula">(x − 4)^{2} = x^{2} − 8x + 16</p>
+      <p class="formula">(x + 5)(x − 5) = x^{2} − 25</p>
+      <div class="callout">
+        <p><strong>Klassieke fout:</strong> <span class="formula-inline">(x + 3)^{2}</span> is niet <span class="formula-inline">x^{2} + 9</span>.</p>
+        <p>De middelste term 6x ontstaat doordat beide kruisproducten meetellen: 3x + 3x.</p>
+      </div>
 
-      <h3>8. Ontbinden in factoren: distributiviteit achteruit</h3>
-      <p>Distributiviteit kunnen we ook in de omgekeerde richting gebruiken. We noemen dat <strong>ontbinden in factoren</strong> of <strong>factoriseren</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">6x + 9 = 3(2x + 3)</p>
-      <p>We halen de gemeenschappelijke factor 3 buiten het haakje:</p>
+      <h3>8. Ontbinden: distributiviteit achteruit</h3>
+      <p>Uitwerken gaat van product naar som. <strong>Ontbinden</strong> (factoriseren) gaat de andere kant op: we maken van een som weer een product.</p>
+      <p>Eerst een gemeenschappelijke factor:</p>
       <p class="formula">6x + 9 = 3 · 2x + 3 · 3 = 3(2x + 3)</p>
-      <p>Ook:</p>
-      <p class="formula">x^{2} + 5x = x(x + 5)</p>
-      <p>We zoeken dus naar wat de termen gemeenschappelijk hebben.</p>
-      <p>Een belangrijk speciaal geval is het verschil van twee kwadraten. We herkennen:</p>
+      <p class="formula">x^{2} + 5x = x · x + x · 5 = x(x + 5)</p>
+      <p>Zoek wat alle termen delen, en haal dat buiten het haakje.</p>
+      <p>Een vast patroon is het verschil van twee kwadraten:</p>
       <p class="formula">a^{2} − b^{2} = (a + b)(a − b)</p>
       <p>Dus:</p>
       <p class="formula">x^{2} − 9 = x^{2} − 3^{2} = (x + 3)(x − 3)</p>
-      <p>Ontbinden is nuttig omdat een product vaak gemakkelijker te gebruiken of verder te onderzoeken is dan een som.</p>
+      <p class="formula">x^{2} − 16 = (x + 4)(x − 4)</p>
+      <p>Kwadratische sommen zoals <span class="formula-inline">x^{2} + 5x + 6</span> ontbinden we later, bij de kwadratische vergelijking. Nu is het genoeg de gemeenschappelijke factor en dit verschil te herkennen.</p>
 
-      <h3>9. Uitwerken en ontbinden zijn tegengestelde bewerkingen</h3>
-      <p>De twee richtingen vormen samen één structuur:</p>
+      <h3>9. Twee richtingen van dezelfde structuur</h3>
+      <p>Uitwerken en ontbinden zijn elkaars omgekeerde:</p>
       <p class="formula">3(x + 4) = 3x + 12</p>
-      <p>Uitwerken gaat van links naar rechts; ontbinden kan van rechts naar links:</p>
       <p class="formula">3x + 12 = 3(x + 4)</p>
-      <p>Hetzelfde geldt voor een merkwaardig product:</p>
+      <p>En bij een merkwaardig product:</p>
       <p class="formula">(x + 2)^{2} = x^{2} + 4x + 4</p>
-      <p>en omgekeerd:</p>
       <p class="formula">x^{2} + 4x + 4 = (x + 2)^{2}</p>
-      <div class="callout"><strong>De bewerkingen zijn twee richtingen van dezelfde algebraïsche structuur.</strong> Uitwerken maakt de structuur zichtbaar als som; ontbinden maakt een verborgen productstructuur zichtbaar.</div>
+      <div class="callout">
+        <p><strong>De bewerkingen zijn twee richtingen van dezelfde structuur.</strong></p>
+        <p>Uitwerken maakt een som zichtbaar. Ontbinden maakt een verborgen product zichtbaar.</p>
+      </div>
 
-      <h3>10. De rekenvolgorde blijft gelden</h3>
-      <p>De aanwezigheid van letters verandert de gewone rekenregels niet. We werken nog steeds volgens de afgesproken volgorde:</p>
-      <ol>
-        <li>haakjes;</li>
-        <li>machten en wortels;</li>
-        <li>vermenigvuldigen en delen;</li>
-        <li>optellen en aftrekken.</li>
-      </ol>
-      <p>Bijvoorbeeld:</p>
+      <h3>10. Werkwijze en rekenvolgorde</h3>
+      <p>Letters veranderen de rekenvolgorde niet: eerst haakjes, dan machten, dan vermenigvuldigen en delen, dan optellen en aftrekken.</p>
       <p class="formula">2x + 3 · 4 = 2x + 12</p>
-      <p>De vermenigvuldiging <span class="formula-inline">3 · 4</span> gebeurt vóór de optelling.</p>
-      <p>En:</p>
-      <p class="formula">2(x + 3)^{2}</p>
-      <p>betekent eerst het kwadraat van <span class="formula-inline">(x + 3)</span>, daarna vermenigvuldigen met 2.</p>
-
-      <h3>11. Een vaste aanpak bij algebraïsche bewerkingen</h3>
-      <p>Wanneer een uitdrukking meerdere bewerkingen bevat, helpt een vaste werkwijze:</p>
+      <p>En <span class="formula-inline">2(x + 3)^{2}</span> betekent eerst het kwadraat van het haakje, daarna vermenigvuldigen met 2.</p>
+      <p>Bij een langere uitdrukking helpt een vaste volgorde:</p>
       <ol>
-        <li>werk haakjes zorgvuldig weg;</li>
-        <li>werk machten uit wanneer dat nodig is;</li>
-        <li>verzamel gelijksoortige termen;</li>
-        <li>vereenvoudig het resultaat;</li>
-        <li>controleer eventueel door een concrete waarde voor een variabele in te vullen.</li>
+        <li>haakjes wegwerken, inclusief mintekens;</li>
+        <li>producten en machten uitwerken;</li>
+        <li>gelijksoortige termen verzamelen;</li>
+        <li>controleren door een getal voor x in te vullen.</li>
       </ol>
-      <p>Neem bijvoorbeeld:</p>
+      <p>Voorbeeld:</p>
       <p class="formula">2(x + 3) − (x − 4)</p>
-      <p>Eerst de haakjes:</p>
-      <p class="formula">2x + 6 − x + 4</p>
-      <p>Daarna gelijksoortige termen:</p>
-      <p class="formula">x + 10</p>
-      <p>De algebraïsche bewerking bestaat dus niet uit zomaar symbolen verschuiven. Elke stap volgt uit een rekenwet die we al kennen.</p>
-
+      <p class="formula">= 2x + 6 − x + 4</p>
+      <p class="formula">= x + 10</p>
+      <p>Controle met x = 1: links 2(4) − (1 − 4) = 8 − (−3) = 11, rechts 1 + 10 = 11.</p>
       <div class="callout">
         <p><strong>Kernidee:</strong></p>
-        <p>De rekenwetten uit Fase 1 blijven geldig wanneer getallen door variabelen worden vervangen.</p>
-        <p>We leren nu dezelfde structuur herkennen in termen, haakjes en producten: gelijksoortige termen kunnen worden samengenomen, distributiviteit werkt vooruit én achteruit, en producten kunnen worden uitgewerkt of ontbonden.</p>
+        <p>De rekenwetten uit Fase 1 blijven geldig als getallen door letters worden vervangen.</p>
+        <p>Gelijksoortige termen mogen samen, distributiviteit werkt vooruit en achteruit, en een product kun je uitwerken of ontbinden.</p>
       </div>
     `
-  },
-  {
+  },  {
     id: "2.3",
     title: "Vergelijkingen",
     goal: "Hoe vinden we een onbekende?",
