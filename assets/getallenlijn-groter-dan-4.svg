@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" role="img" aria-labelledby="t1 d1">
+  <title id="t1">x groter dan 4</title>
+  <desc id="d1">Getallenlijn met open bol op 4 en een pijl naar rechts. De 4 telt niet mee.</desc>
+  <rect width="900" height="320" fill="#161410"/>
+  <text x="450" y="48" text-anchor="middle" fill="#e6c77a" font-family="Georgia, 'Times New Roman', serif" font-size="28">x &gt; 4</text>
+  <g transform="translate(80,160)">
+    <line x1="0" y1="0" x2="700" y2="0" stroke="#e6c77a" stroke-width="3"/>
+    <polygon points="700,-8 728,0 700,8" fill="#e6c77a"/>
+    <polygon points="0,-8 -28,0 0,8" fill="#e6c77a"/>
+    <!-- ticks 0 to 8 -->
+    <g fill="#d7c49a" font-family="Georgia, serif" font-size="18" text-anchor="middle">
+      <g transform="translate(80,0)"><line y1="-8" y2="8" stroke="#c4a45a" stroke-width="2"/><text y="32">0</text></g>
+      <g transform="translate(160,0)"><line y1="-8" y2="8" stroke="#c4a45a" stroke-width="2"/><text y="32">1</text></g>
+      <g transform="translate(240,0)"><line y1="-8" y2="8" stroke="#c4a45a" stroke-width="2"/><text y="32">2</text></g>
+      <g transform="translate(320,0)"><line y1="-8" y2="8" stroke="#c4a45a" stroke-width="2"/><text y="32">3</text></g>
+      <g transform="translate(400,0)"><line y1="-8" y2="8" stroke="#e6c77a" stroke-width="2"/><text y="32">4</text></g>
+      <g transform="translate(480,0)"><line y1="-8" y2="8" stroke="#c4a45a" stroke-width="2"/><text y="32">5</text></g>
+      <g transform="translate(560,0)"><line y1="-8" y2="8" stroke="#c4a45a" stroke-width="2"/><text y="32">6</text></g>
+    </g>
+    <!-- solution ray from 4 to the right -->
+    <line x1="400" y1="0" x2="690" y2="0" stroke="#f3e2b0" stroke-width="8" stroke-linecap="butt"/>
+    <!-- open circle at 4 -->
+    <circle cx="400" cy="0" r="12" fill="#161410" stroke="#f3e2b0" stroke-width="4"/>
+  </g>
+  <text x="450" y="280" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="18">Open bol: 4 hoort er niet bij. De pijl loopt door naar rechts.</text>
+</svg>
