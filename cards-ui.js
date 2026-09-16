@@ -24,10 +24,13 @@ function renderHome() {
     else if (open) status = "Binnenkort";
     else status = costLabel(phaseCost(p.id));
     const state = done ? "done" : open ? "open" : "locked";
+    const phaseIcon = p.id === 1
+      ? "assets/fase1/icon-fase1.png"
+      : "assets/icon-fase" + p.id + ".png";
     return (
       '<article class="phase-card ' + state + '" data-phase="' + p.id + '">' +
       '<div class="phase-icon">' +
-      '<img src="assets/icon-fase' + p.id + '.png" alt="">' +
+      '<img src="' + phaseIcon + '" alt="">' +
       (open ? "" : '<span class="lock-badge" aria-hidden="true">🔒</span>') +
       (done ? '<span class="done-badge" aria-hidden="true">✓</span>' : "") +
       "</div>" +
