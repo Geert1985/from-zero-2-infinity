@@ -68,11 +68,10 @@ function renderPhase(phaseId) {
   const stones = list.map((m, index) => {
     const done = milestonePassed(m.id);
     const st = done ? "done" : "";
-    const art = index + 1;
     const testIco = done ? "assets/medaille.png" : "assets/toets.png";
     return (
       '<article class="stone ' + st + '">' +
-      '<img class="stone-art" src="assets/mile-' + art + '.png?v=2" alt="">' +
+      '<img class="stone-art" src="assets/mile-' + m.id + '.png?v=3" alt="">' +
       '<div class="stone-actions">' +
       '<button class="btn lesstof-btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/les">' +
       '<img class="book-ico" src="assets/' + (leerstofCollected(m.id) ? "book-open.png" : "book-closed.png") + '" alt=""> Lesstof</button>' +
