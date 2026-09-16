@@ -1,246 +1,308 @@
-# Cursus Fase 1 — Rekenkunde & Basisgetallen
+# From Zero 2 Infinity --- Cursus Fase 1
 
-**Leerpad:** van nul kennis van getallen tot de poort van algebra  
-**Doel van deze fase:** je kunt vlot en zonder twijfel rekenen met natuurlijke, gehele en rationale getallen, je begrijpt de structuur van getallen en je kunt machten, wortels en schattingen gebruiken. Je hebt bovendien gezien waarom de rationale getallen niet voldoende zijn en hoe de reële getallen ontstaan.
+## Rekenkunde & basisgetallen
 
-**Volgende stap:** Fase 2 — Algebra & Geometrie
+**Leerpad:** van elementaire getallenkennis naar de poort van algebra\
+**Fase:** 1 van 7\
+**Doel:** leren denken met getallen, bewerkingen en de structuur van het
+getallensysteem.
 
----
+------------------------------------------------------------------------
 
-## Hoe je deze cursus gebruikt
+# Hoe Fase 1 is opgebouwd
 
-1. Lees de uitleg en probeer de voorbeelden eerst zelf te begrijpen.
-2. Werk elk voorbeeld met de hand na, zonder vooruit te kijken.
-3. Maak de oefeningen schriftelijk.
-4. Controleer met de antwoorden.
-5. Als iets fout is: zoek **waar** je redenering knakte, niet alleen welk getal fout was.
-6. Ga pas verder wanneer je de kernvaardigheden van de milestone beheerst.
-7. Gebruik de eindtoets als echte toets: geen rekenmachine en geen naslagwerk.
+Fase 1 bestaat uit **13 milestones**. Elke milestone bevat:
 
-**Gereedschap:** papier, potlood en eventueel een zelfgetekende getallenlijn.
+-   **lesstof** --- de theorie en uitgewerkte voorbeelden;
+-   **toets** --- een afzonderlijke milestone-toets.
 
-**Rekenmachine:** in deze fase alleen gebruiken om een zelfgemaakt antwoord te controleren.
+Er is in de cursus geen aparte oefenlaag. Oefenen en toetsen gebeuren
+via de leeromgeving. De voorbeelden in de theorie zijn wel bedoeld om
+stap voor stap mee te redeneren.
 
-> **Belangrijk:** deze versie gebruikt bewust geen LaTeX-markeringen zoals `\( ... \)` of `$$ ... $$`. Formules worden geschreven met gewone Markdown en Unicode-symbolen, zodat ze ook in eenvoudige Markdown-readers leesbaar blijven.
+De opbouw volgt telkens dezelfde didactische lijn:
 
----
+> **concreet voorbeeld → intuïtief begrip → voorstelling/notatie →
+> formele regel → toepassing → transfer**
 
-# Overzicht van de vijf milestones
+Nieuwe symbolen en begrippen worden eerst uitgelegd. Een formule is
+nooit alleen een regel om uit het hoofd te leren: we proberen ook te
+begrijpen **wat ze betekent, waarom ze werkt en wanneer ze bruikbaar
+is**.
 
-| Milestone | Thema | Belangrijkste unlock |
-|---|---|---|
-| 1.1 | Getalbegrip en positiestelsel | Natuurlijke getallen |
-| 1.2 | De vier hoofdbewerkingen | Rekenwetten |
-| 1.3 | Het getallensysteem uitbreiden | Gehele en rationale getallen |
-| 1.4 | Getaltheorie en structuur | Priemfactoren, GGD en KGV |
-| 1.5 | Machten, wortels en schatten | Machten, wortels en reële getallen |
+Een terugkerend idee in Fase 1 is:
 
-De vijf milestones vormen geen verzameling losse onderwerpen. Ze vertellen één verhaal:
+> **Een bestaand getallensysteem stuit op een probleem → we breiden het
+> systeem uit zodat het probleem opgelost kan worden.**
 
-**Hoeveelheden → getallen → bewerkingen → nieuwe soorten getallen → structuur → machten en wortels → reële getallen → algebra.**
+Zo ontstaat stap voor stap:
 
----
+**ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ**
 
-# Milestone 1.1 — Getalbegrip en het positiestelsel
+Aan het einde van Fase 1 vormen de rekenwetten de brug naar algebra:
+getallen kunnen later worden vervangen door letters, zonder dat de
+fundamentele rekenwetten verdwijnen.
 
-**Doel:** begrijpen wat een hoeveelheid is, hoe we die met symbolen vastleggen, hoe het tientallig stelsel werkt en hoe getallen op een getallenlijn geordend worden.
+------------------------------------------------------------------------
 
-## 1.1.1 Hoeveelheid en aantal
+# Overzicht van de 13 milestones
 
-Een verzameling objecten heeft een **aantal**. Dat aantal hangt niet af van wat de objecten zijn.
+  -----------------------------------------------------------------------
+  Milestone               Titel                   Centrale vraag
+  ----------------------- ----------------------- -----------------------
+  **1.1**                 Cijfers en Getallen     Hoe beschrijven we
+                                                  hoeveelheden met
+                                                  getallen?
 
-- Drie appels, drie stenen en drie stoelen hebben allemaal het aantal **drie**.
-- Het getal is de abstracte naam waarmee we die hoeveelheid aanduiden.
+  **1.2**                 De vier                 Hoe kunnen we
+                          hoofdbewerkingen        hoeveelheden
+                                                  combineren, wegnemen,
+                                                  herhalen en verdelen?
 
-Wiskunde begint wanneer we de hoeveelheid loskoppelen van de concrete dingen.
+  **1.3**                 Het getallensysteem     Wat doen we wanneer
+                          uitbreiden              natuurlijke getallen
+                                                  niet meer volstaan?
 
-We schrijven hoeveelheden met **cijfers**:
+  **1.4**                 Breuken en rationale    Hoe beschrijven we
+                          getallen                delen van een geheel én
+                                                  getallen tussen gehele
+                                                  getallen?
+
+  **1.5**                 Decimalen en            Hoe schrijven en
+                          percentages             interpreteren we
+                                                  rationale getallen in
+                                                  andere vormen?
+
+  **1.6**                 Verhoudingen en         Hoe vergelijken en
+                          evenredigheid           schalen we
+                                                  hoeveelheden?
+
+  **1.7**                 Delers en deelbaarheid  Hoe zit de structuur
+                                                  van natuurlijke
+                                                  getallen in elkaar?
+
+  **1.8**                 Priemgetallen en        Uit welke fundamentele
+                          factorisatie            bouwstenen bestaan
+                                                  natuurlijke getallen?
+
+  **1.9**                 GGD, KGV en het         Hoe vinden we
+                          algoritme van Euclides  gemeenschappelijke
+                                                  delers en veelvouden
+                                                  efficiënt?
+
+  **1.10**                Machten                 Hoe schrijven we
+                                                  herhaalde
+                                                  vermenigvuldiging
+                                                  compact en
+                                                  systematisch?
+
+  **1.11**                Wortels                 Hoe draaien we
+                                                  machtsverheffen om?
+
+  **1.12**                Irrationale en reële    Welke getallen
+                          getallen                ontbreken nog op de
+                                                  getallenlijn?
+
+  **1.13**                Afronden en             Hoe werken we efficiënt
+                          wetenschappelijke       met benaderingen en
+                          notatie                 zeer grote of kleine
+                                                  getallen?
+  -----------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Milestone 1.1 --- Cijfers en Getallen
+
+**Doel:** begrijpen wat een getal is, het verschil tussen een cijfer en
+een getal begrijpen, het tientallig positiestelsel kunnen lezen en
+getallen op een getallenlijn kunnen ordenen.
+
+## Hoeveelheid en aantal
+
+Stel dat er drie appels op een tafel liggen. We kunnen de appels één
+voor één tellen:
+
+**één, twee, drie.**
+
+Het interessante is dat hetzelfde aantal ook kan voorkomen bij drie
+stenen, drie treinen of drie personen. De concrete objecten zijn
+verschillend, maar de hoeveelheid is dezelfde.
+
+Het getal **3** is de abstracte manier om die hoeveelheid te
+beschrijven.
+
+Dat is een fundamentele stap in de wiskunde:
+
+> We kunnen een hoeveelheid bestuderen zonder de concrete objecten zelf
+> te hoeven bestuderen.
+
+## Cijfers en getallen
+
+De tien cijfers van ons tientallig stelsel zijn:
 
 **0, 1, 2, 3, 4, 5, 6, 7, 8, 9**
 
-Dit zijn tien symbolen. Met alleen deze tien cijfers kunnen we elk natuurlijk getal schrijven.
+Een **cijfer** is een symbool. Een **getal** is de wiskundige grootheid
+die we met één of meer cijfers kunnen voorstellen.
 
-Dat is mogelijk door het **positionele talstelsel**.
+Zo bestaat het getal 572 uit de cijfers 5, 7 en 2.
 
----
+Met slechts tien cijfers kunnen we oneindig veel getallen schrijven. Dat
+komt doordat de **positie** van een cijfer betekenis geeft.
 
-## 1.1.2 Natuurlijke getallen
+------------------------------------------------------------------------
 
-De natuurlijke getallen zijn de telgetallen.
+## Natuurlijke getallen
 
-**ℕ = {0, 1, 2, 3, 4, …}**
+De natuurlijke getallen zijn de getallen die we gebruiken om te tellen.
 
-In deze cursus nemen we 0 mee in ℕ. Sommige boeken beginnen ℕ bij 1. Dat is een conventie.
+In deze cursus nemen we 0 mee:
 
-Eigenschappen:
+**ℕ = {0, 1, 2, 3, 4, ...}**
 
-- Elk natuurlijk getal heeft een opvolger: na n komt n + 1.
-- Er is een kleinste natuurlijk getal: 0.
-- Er is geen grootste natuurlijk getal.
+Het symbool **ℕ** staat voor de verzameling van de natuurlijke getallen.
 
-### Nieuwe ontdekking
+Belangrijke eigenschappen:
 
-De natuurlijke getallen zijn voldoende om te tellen.
+-   0 is het kleinste natuurlijke getal;
+-   elk natuurlijk getal heeft een opvolger;
+-   na n komt n + 1;
+-   er bestaat geen grootste natuurlijk getal.
 
-Maar ze zijn nog niet voldoende om alle eenvoudige rekenproblemen op te lossen.
+Het opnemen van 0 in ℕ is een conventie. Andere bronnen kunnen ℕ
+gebruiken voor {1, 2, 3, ...}. De gekozen conventie moet dus altijd
+duidelijk zijn.
 
-Bijvoorbeeld:
+------------------------------------------------------------------------
 
-**3 − 5**
+## Het tientallig positiestelsel
 
-heeft geen natuurlijk antwoord.
+Ons getallensysteem is **positioneel**. Dat betekent dat de waarde van
+een cijfer niet alleen afhangt van het cijfer zelf, maar ook van zijn
+positie.
 
-Dat probleem zal ons naar een groter getallensysteem leiden.
+Neem:
 
----
+**4 705**
 
-## 1.1.3 Het tientallig positiestelsel
+Dan geldt:
 
-De plaats van een cijfer bepaalt zijn waarde.
+**4 705 = 4 × 1 000 + 7 × 100 + 0 × 10 + 5 × 1**
 
-Voorbeeld:
+Met machten van 10:
 
-**134 = 1 × 100 + 3 × 10 + 4 × 1**
+**4 705 = 4 × 10³ + 7 × 10² + 0 × 10¹ + 5 × 10⁰**
 
-Of:
+De posities zijn:
 
-**134 = 1 × 10² + 3 × 10¹ + 4 × 10⁰**
+  Positie                Waarde
+  --------------- -------------
+  eenheden              10⁰ = 1
+  tientallen           10¹ = 10
+  honderdtallen       10² = 100
+  duizendtallen     10³ = 1 000
 
-| Positie | Naam | Waarde | Voorbeeld in 4 705 |
-|---|---|---:|---:|
-| 1e van rechts | eenheden | 10⁰ = 1 | 5 |
-| 2e | tientallen | 10¹ = 10 | 0 |
-| 3e | honderdtallen | 10² = 100 | 7 |
-| 4e | duizendtallen | 10³ = 1 000 | 4 |
+### Nul als plaatshouder
 
-### De dubbele rol van nul
+Nul heeft hierbij een bijzondere rol.
 
-Nul heeft minstens twee belangrijke rollen.
+In:
 
-**1. Niets**
+**405**
 
-0 appels betekent: geen appels.
+betekent de 0 dat er geen tientallen zijn:
 
-**2. Plaatshouder**
+**405 = 4 × 100 + 0 × 10 + 5**
 
-In 405 betekent de 0 dat er geen tientallen zijn.
+Zonder de nul zou de positie-informatie veranderen. **405** is niet
+hetzelfde getal als **45**.
 
-Zonder die nul zou 405 gemakkelijk met 45 verward kunnen worden.
+Nul betekent dus niet alleen "geen hoeveelheid"; het kan ook een
+**positie bewaren**.
 
-Voorbeeld:
+------------------------------------------------------------------------
 
-**2 086 = 2 × 1 000 + 0 × 100 + 8 × 10 + 6 × 1**
+## De getallenlijn
 
-De nul is dus geen versiering. Hij bewaart een positie.
+Getallen kunnen ook geometrisch worden voorgesteld:
 
----
-
-## 1.1.4 Getallenlijn en ordening
-
-Een getallenlijn geeft de volgorde van getallen weer.
-
-```text
+``` text
 ←────|────|────|────|────|────|────→
      0    1    2    3    4    5    6
 ```
 
-Voor natuurlijke getallen betekent naar rechts:
+Naar rechts gaan betekent dat de getallen groter worden. Naar links gaan
+betekent dat ze kleiner worden.
 
-**groter**
+De belangrijkste symbolen zijn:
 
-en naar links:
-
-**kleiner**
-
-De belangrijkste vergelijkingssymbolen:
-
-- **a = b** betekent: a en b zijn gelijk.
-- **a > b** betekent: a is groter dan b.
-- **a < b** betekent: a is kleiner dan b.
+-   **a = b** : a en b zijn gelijk;
+-   **a \< b** : a is kleiner dan b;
+-   **a \> b** : a is groter dan b.
 
 Voorbeelden:
 
-- 7 > 3
-- 0 < 12
-- 15 = 15
-- 99 < 100
+**7 \> 3**
 
-Als a > b, dan is automatisch b < a.
+**0 \< 12**
 
-Voor gewone getallen geldt bovendien precies één van:
+**15 = 15**
 
-**a < b**, **a = b** of **a > b**
+**99 \< 100**
 
----
+Voor twee gewone getallen geldt steeds precies één van deze drie
+mogelijkheden:
 
-## Oefeningen 1.1
+**a \< b**, **a = b** of **a \> b**
 
-### A. Positiestelsel
+Dit wordt later belangrijk wanneer ook negatieve en rationale getallen
+op dezelfde getallenlijn worden geplaatst.
 
-1. Schrijf 572 uit in honderdtallen, tientallen en eenheden.
-2. Welk getal is 6 × 1 000 + 0 × 100 + 4 × 10 + 9?
-3. Wat verandert er als je in 308 de 0 weglaat?
-4. Hoeveel honderdtallen, tientallen en eenheden heeft 1 040?
-5. Schrijf 7 305 uit met machten van 10.
+------------------------------------------------------------------------
 
-### B. Ordening
+## Kerninzicht
 
-6. Zet van klein naar groot: 12, 3, 30, 21, 0, 8.
-7. Klopt 107 > 98? Leg uit met behulp van posities.
-8. Vul in met <, > of =:
-   - 45 □ 54
-   - 200 □ 199
-   - 070 □ 70
-9. Welk getal ligt precies tussen 19 en 21?
+Een getal is geen object zoals een appel of een steen. Het is een
+abstracte manier om een hoeveelheid of positie te beschrijven.
 
-### C. Begrip
+Het tientallig stelsel maakt het mogelijk om met slechts tien cijfers
+oneindig veel getallen te schrijven doordat **positie betekenis
+draagt**.
 
-10. Waarom is 0 belangrijk in 405?
-11. Waarom kun je met tien cijfers oneindig veel verschillende getallen schrijven?
+------------------------------------------------------------------------
 
-### Antwoorden 1.1
+# Milestone 1.2 --- De vier hoofdbewerkingen
 
-1. 5 × 100 + 7 × 10 + 2 × 1
-2. 6 049
-3. Je krijgt 38. De plaats van de 3 verandert.
-4. 10 honderdtallen, 4 tientallen en 0 eenheden.
-5. 7 × 10³ + 3 × 10² + 0 × 10¹ + 5 × 10⁰
-6. 0, 3, 8, 12, 21, 30
-7. Ja. 107 heeft een honderdtal; 98 heeft er geen.
-8. 45 < 54; 200 > 199; 070 = 70
-9. 20
-10. De 0 bewaart de tientallenpositie.
-11. Omdat de positie van elk cijfer extra informatie geeft. Door steeds nieuwe posities toe te voegen kunnen we grotere getallen schrijven.
+**Doel:** optellen, aftrekken, vermenigvuldigen en delen begrijpen; de
+belangrijkste rekenwetten herkennen; en de bewerkingsvolgorde correct
+gebruiken.
 
----
+## Optellen --- hoeveelheden samenbrengen
 
-# Milestone 1.2 — De vier hoofdbewerkingen
-
-**Doel:** optellen, aftrekken, vermenigvuldigen en delen begrijpen en uitvoeren, inclusief rest, rekenwetten en bewerkingsvolgorde.
-
-## 1.2.1 Optellen
-
-Optellen combineert hoeveelheden.
+Als je drie objecten hebt en er vijf bij krijgt, heb je:
 
 **3 + 5 = 8**
 
-Op de getallenlijn:
+Op een getallenlijn betekent dit:
 
-- start bij 3;
-- beweeg 5 plaatsen naar rechts;
-- eindig bij 8.
+-   begin bij 3;
+-   ga vijf stappen naar rechts;
+-   eindig bij 8.
 
-Belangrijke eigenschap:
+Optellen combineert hoeveelheden.
+
+Een belangrijke eigenschap is:
 
 **a + 0 = a**
 
-Nul is het **neutrale element** van de optelling.
+Nul verandert een getal dus niet wanneer je het erbij optelt. Nul is het
+**neutrale element** van de optelling.
 
----
+------------------------------------------------------------------------
 
-## 1.2.2 Aftrekken
+## Aftrekken --- een hoeveelheid wegnemen
 
-Aftrekken is het omgekeerde van optellen.
+Aftrekken werkt als het omgekeerde van optellen.
 
 **8 − 5 = 3**
 
@@ -250,62 +312,54 @@ want:
 
 Op de getallenlijn beweeg je bij aftrekken naar links.
 
-In ℕ kunnen we voorlopig alleen aftrekken wanneer het resultaat niet negatief wordt.
-
-**8 − 5 = 3**
-
-maar:
+Binnen de natuurlijke getallen ontstaat echter een probleem:
 
 **3 − 5**
 
-is geen natuurlijk getal.
+heeft geen natuurlijk antwoord.
 
-In de volgende milestone lossen we dit probleem op door het getallensysteem uit te breiden.
+Dat probleem is niet zomaar een fout in onze berekening. Het toont dat ℕ
+te klein is om deze bewerking altijd uit te voeren. In milestone 1.3
+breiden we het getallensysteem daarom uit.
 
-### Controle
+### Controle van een aftrekking
 
-Elke aftrekking kun je controleren met een optelling.
+Elke aftrekking kan worden gecontroleerd met een optelling.
 
 Als:
 
 **17 − 9 = 8**
 
-dan moet:
+dan moet ook gelden:
 
 **8 + 9 = 17**
 
----
+------------------------------------------------------------------------
 
-## 1.2.3 Vermenigvuldigen
+## Vermenigvuldigen --- herhaalde gelijke groepen
 
-Vermenigvuldigen kan je zien als herhaald optellen.
+Vermenigvuldigen kan worden geïnterpreteerd als herhaald optellen.
 
 **4 × 3 = 3 + 3 + 3 + 3 = 12**
 
-Dit betekent: vier groepen van drie.
+Dit kun je lezen als vier groepen van drie.
 
 Belangrijke eigenschappen:
 
-- n × 0 = 0
-- n × 1 = n
-- n × 10 = 10n
+**n × 0 = 0**
 
-### Tafels
+**n × 1 = n**
 
-De tafels 1 tot en met 10 horen uiteindelijk in het langetermijngeheugen.
+**n × 10 = 10n**
 
-Nuttige ankers:
+De tafels zijn nuttig om te automatiseren. Daardoor blijft er tijdens
+moeilijkere berekeningen meer aandacht over voor het redeneren zelf.
 
-- 5 × 6 = 30
-- 7 × 8 = 56
-- 9 × 9 = 81
-- 12 × 12 = 144
+------------------------------------------------------------------------
 
----
+## Delen --- verdelen in gelijke groepen
 
-## 1.2.4 Delen en rest
-
-Delen is verdelen in gelijke groepen.
+Delen is het omgekeerde van vermenigvuldigen.
 
 **12 ÷ 3 = 4**
 
@@ -313,7 +367,9 @@ want:
 
 **4 × 3 = 12**
 
-Soms blijft er een rest over.
+Niet iedere deling geeft een geheel resultaat.
+
+Bijvoorbeeld:
 
 **7 ÷ 3 = 2 rest 1**
 
@@ -321,59 +377,53 @@ want:
 
 **2 × 3 + 1 = 7**
 
-Algemene vorm:
+Algemeen kunnen we schrijven:
 
 **a = q × d + r**
 
 waarbij:
 
-- a = deeltal
-- d = deler
-- q = quotiënt
-- r = rest
-- 0 ≤ r < d
+-   **a** het deeltal is;
+-   **d** de deler is;
+-   **q** het quotiënt is;
+-   **r** de rest is;
+-   **0 ≤ r \< d**.
 
 Voorbeeld:
 
-**23 ÷ 5**
-
-Het grootste veelvoud van 5 dat niet groter is dan 23 is 20.
-
-Dus:
-
 **23 = 4 × 5 + 3**
 
-Het quotiënt is 4 en de rest is 3.
+Dus bij 23 ÷ 5 is het quotiënt 4 en de rest 3.
 
----
+------------------------------------------------------------------------
 
-## 1.2.5 De fundamentele rekenwetten
+## Commutativiteit
 
-Deze regels zijn geen trucjes. Het zijn eigenschappen van de bewerkingen.
-
-### Commutativiteit
-
-De volgorde mag bij optellen en vermenigvuldigen worden verwisseld.
+Bij optellen en vermenigvuldigen maakt de volgorde niet uit:
 
 **a + b = b + a**
 
 **a × b = b × a**
 
-Maar niet bij aftrekken en delen:
+Dit noemen we **commutativiteit**.
+
+Bij aftrekken en delen geldt dit niet algemeen:
 
 **7 − 2 ≠ 2 − 7**
 
 **8 ÷ 2 ≠ 2 ÷ 8**
 
-### Associativiteit
+------------------------------------------------------------------------
 
-De groepering mag bij optellen en vermenigvuldigen veranderen.
+## Associativiteit
+
+Bij optellen en vermenigvuldigen mogen we de groepering veranderen:
 
 **(a + b) + c = a + (b + c)**
 
 **(a × b) × c = a × (b × c)**
 
-Niet bij aftrekken:
+Bij aftrekken kan dat niet zomaar:
 
 **(8 − 3) − 2 = 3**
 
@@ -381,153 +431,154 @@ maar:
 
 **8 − (3 − 2) = 7**
 
-### Distributiviteit
+De haakjes veranderen hier dus de betekenis.
 
-Vermenigvuldiging verdeelt zich over optelling.
+------------------------------------------------------------------------
+
+## Distributiviteit
+
+Vermenigvuldiging kan worden verdeeld over een optelling:
 
 **a × (b + c) = a × b + a × c**
 
-Voorbeeld:
+Bijvoorbeeld:
 
-**4 × (10 + 3) = 4 × 10 + 4 × 3 = 40 + 12 = 52**
+**4 × (10 + 3) = 4 × 10 + 4 × 3 = 52**
 
-Deze regel is later cruciaal voor algebra:
+Dit is veel meer dan een handige rekentruc. Dezelfde wet blijft geldig
+wanneer we later letters gebruiken:
 
 **4(x + 3) = 4x + 12**
 
----
+Daarmee vormt distributiviteit een belangrijke brug naar algebra.
 
-## 1.2.6 Bewerkingsvolgorde
+------------------------------------------------------------------------
 
-Gebruik deze volgorde:
+## Bewerkingsvolgorde
 
-1. Haakjes
-2. Machten en wortels
-3. Vermenigvuldigen en delen, van links naar rechts
-4. Optellen en aftrekken, van links naar rechts
+Wanneer verschillende bewerkingen in één uitdrukking voorkomen, moeten
+we een vaste conventie gebruiken:
 
-Voorbeelden:
+1.  haakjes;
+2.  machten en wortels;
+3.  vermenigvuldigen en delen, van links naar rechts;
+4.  optellen en aftrekken, van links naar rechts.
+
+Voorbeeld:
 
 **2 + 3 × 4 = 2 + 12 = 14**
 
-niet 20.
+Niet 20.
+
+Met haakjes verandert de situatie:
 
 **(2 + 3) × 4 = 5 × 4 = 20**
 
-En:
+Vermenigvuldigen en delen hebben dezelfde prioriteit. Daarom:
 
 **20 ÷ 4 × 5 = 5 × 5 = 25**
 
-Delen en vermenigvuldigen zijn gelijkwaardig; je werkt van links naar rechts.
+en niet:
 
----
+**20 ÷ (4 × 5)**
 
-## Oefeningen 1.2
+------------------------------------------------------------------------
 
-### A. Basis
+## Kerninzicht
 
-1. 47 + 38
-2. 91 − 57
-3. 12 × 8
-4. 144 ÷ 12
-5. 29 ÷ 6: geef quotiënt en rest.
-6. Controleer 83 − 47 met een optelling.
+De hoofdbewerkingen zijn niet vier losse trucjes. Ze vormen een
+samenhangend systeem waarin de ene bewerking vaak als omgekeerde van een
+andere kan worden gezien.
 
-### B. Eigenschappen
+De rekenwetten --- vooral commutativiteit, associativiteit en
+distributiviteit --- zullen later rechtstreeks terugkeren in de algebra.
 
-7. Maak 7 × 19 eenvoudig met distributiviteit.
-8. Is 15 − 6 − 3 gelijk aan 15 − (6 − 3)?
-9. Welke bewerking is commutatief: a − b of a + b?
-10. Gebruik distributiviteit om 19 × 6 uit te rekenen.
+------------------------------------------------------------------------
 
-### C. Volgorde
+# Milestone 1.3 --- Het getallensysteem uitbreiden
 
-11. 3 + 6 × 2 − 4
-12. 24 ÷ 3 × 2 + 5
-13. 5 × (8 − 3) + 2 × 4
-14. 100 − 4 × (6 + 7)
-15. 18 − 6 − 4
+**Doel:** begrijpen waarom natuurlijke getallen worden uitgebreid tot
+gehele getallen en hoe met positieve en negatieve getallen wordt
+gerekend.
 
-### D. Begrip
+## Waarom zijn nieuwe getallen nodig?
 
-16. Waarom is 20 ÷ 4 × 5 niet hetzelfde als 20 ÷ (4 × 5)?
-17. Leg in eigen woorden uit waarom distributiviteit belangrijk wordt in algebra.
-
-### Antwoorden 1.2
-
-1. 85
-2. 34
-3. 96
-4. 12
-5. 4 rest 5
-6. 36 + 47 = 83
-7. 7 × (20 − 1) = 140 − 7 = 133
-8. Nee. Links = 6; rechts = 12.
-9. a + b
-10. 19 × 6 = (20 − 1) × 6 = 120 − 6 = 114
-11. 11
-12. 21
-13. 33
-14. 48
-15. 8
-16. Omdat delen en vermenigvuldigen van links naar rechts worden uitgevoerd.
-17. Omdat dezelfde rekenwet met letters blijft gelden: a(b + c) = ab + ac.
-
----
-
-# Milestone 1.3 — Het getallensysteem uitbreiden
-
-**Doel:** begrijpen waarom nieuwe soorten getallen nodig zijn en leren rekenen met gehele en rationale getallen, decimalen, procenten en verhoudingen.
-
----
-
-## 1.3.1 Gehele getallen
-
-We hadden een probleem:
+We zagen:
 
 **3 − 5**
 
-heeft geen antwoord in ℕ.
+Binnen ℕ bestaat hiervoor geen antwoord.
 
-Breid daarom de getallenlijn naar links uit.
+We kunnen het probleem oplossen door de getallenlijn uit te breiden naar
+links:
 
-```text
+``` text
 ←────|────|────|────|────|────|────|────→
     -4   -3   -2   -1    0    1    2    3
 ```
 
-De gehele getallen zijn:
+We voegen negatieve getallen toe.
 
-**ℤ = {…, −3, −2, −1, 0, 1, 2, 3, …}**
+De verzameling van de gehele getallen is:
 
-Elk positief getal n heeft een tegengestelde −n:
+**ℤ = {..., −3, −2, −1, 0, 1, 2, 3, ...}**
 
-**n + (−n) = 0**
+Het symbool **ℤ** staat voor de gehele getallen.
 
-Voorbeelden uit de werkelijkheid:
+De natuurlijke getallen zitten hierin:
 
-- schuld
-- temperatuur onder nul
-- hoogte onder zeeniveau
-- beweging in tegengestelde richting
+**ℕ ⊂ ℤ**
 
-### Optellen met tekens
+------------------------------------------------------------------------
 
-Zelfde teken:
+## Tegengestelde getallen
+
+Bij elk getal n hoort een tegengesteld getal −n.
+
+Ze liggen even ver van nul maar aan tegenovergestelde kanten.
+
+Bijvoorbeeld:
+
+**3 + (−3) = 0**
+
+**−7 + 7 = 0**
+
+Dit getal is het **additieve tegengestelde**.
+
+Het getal 0 ligt precies in het midden tussen een getal en zijn
+tegengestelde.
+
+------------------------------------------------------------------------
+
+## Optellen met positieve en negatieve getallen
+
+Bij gelijke tekens tel je de absolute waarden op en behoud je het teken.
 
 **(−3) + (−5) = −8**
 
-Verschillend teken:
+Bij verschillende tekens trek je de absolute waarden af en neem je het
+teken van het getal met de grootste absolute waarde.
 
 **7 + (−3) = 4**
 
 **(−7) + 3 = −4**
 
-Bij verschillende tekens trek je de absolute waarden van elkaar af en behoud je het teken van de grootste absolute waarde.
+De **absolute waarde** \|a\| is de afstand van a tot nul op de
+getallenlijn.
 
-### Aftrekken
+Dus:
 
-Aftrekken is optellen van het tegenovergestelde:
+**\|−7\| = 7**
+
+en:
+
+**\|7\| = 7**
+
+------------------------------------------------------------------------
+
+## Aftrekken als optellen van het tegenovergestelde
+
+De betekenis van aftrekken kan worden uitgebreid tot:
 
 **a − b = a + (−b)**
 
@@ -535,184 +586,345 @@ Daarom:
 
 **5 − (−3) = 5 + 3 = 8**
 
-"Min min wordt plus" is dus geen magische regel. Het volgt uit de definitie van aftrekken.
+De bekende regel "min min wordt plus" is dus geen afzonderlijk trucje.
+Hij volgt uit de definitie van aftrekken.
 
-### Vermenigvuldigen en delen
+------------------------------------------------------------------------
 
-Gelijke tekens geven een positief resultaat.
+## Vermenigvuldigen en delen met tekens
+
+Bij vermenigvuldiging en deling geldt:
+
+-   gelijke tekens → positief;
+-   verschillende tekens → negatief.
+
+Voorbeelden:
 
 **(−3) × (−4) = 12**
 
-**(−12) ÷ (−3) = 4**
-
-Ongelijke tekens geven een negatief resultaat.
-
 **(−3) × 4 = −12**
+
+**(−12) ÷ (−3) = 4**
 
 **12 ÷ (−3) = −4**
 
 ### Waarom is min × min positief?
 
-Dit volgt uit distributiviteit.
+Dit kan worden afgeleid uit distributiviteit.
 
 Omdat:
 
-**3 × 0 = 0**
-
-en:
-
-**0 = 4 + (−4)**
+**4 + (−4) = 0**
 
 geldt:
 
-**3 × (4 + (−4)) = 0**
+**3 × (4 + (−4)) = 3 × 0 = 0**
 
-Dus:
+Met distributiviteit:
+
+**3 × 4 + 3 × (−4) = 0**
+
+dus:
 
 **12 + 3 × (−4) = 0**
 
-Daarom:
+en daarom:
 
 **3 × (−4) = −12**
 
-Dezelfde soort redenering leidt uiteindelijk tot:
+Een vergelijkbare redenering met een negatieve factor leidt tot:
 
 **(−3) × (−4) = 12**
 
----
+Het teken van een product is dus geen willekeurige afspraak; het moet
+consistent zijn met de rekenwetten.
 
-## 1.3.2 Breuken en rationale getallen
+------------------------------------------------------------------------
 
-De gehele getallen zijn nog steeds niet voldoende.
+## Kerninzicht
 
-Bijvoorbeeld:
+Een uitbreiding van het getallensysteem is nodig wanneer een bestaande
+bewerking niet altijd uitvoerbaar is.
+
+**3 − 5** dwingt ons om negatieve getallen in te voeren.
+
+Dit patroon --- een bestaand systeem is te klein en wordt uitgebreid ---
+komt later opnieuw terug.
+
+------------------------------------------------------------------------
+
+# Milestone 1.4 --- Breuken en rationale getallen
+
+**Doel:** breuken begrijpen als delen van een geheel én als getallen op
+de getallenlijn; gelijkwaardige breuken herkennen en met breuken
+rekenen.
+
+## Van delen naar breuken
+
+De gehele getallen zijn nog niet voldoende voor:
 
 **1 ÷ 2**
 
-is geen geheel getal.
+Het antwoord ligt tussen 0 en 1.
 
-We voeren daarom breuken in.
+Wanneer we een geheel in twee gelijke delen verdelen, is elk deel:
 
-Een breuk:
+**1/2**
+
+Een breuk kan worden geschreven als:
 
 **a/b**
 
-met b ≠ 0 betekent:
+waarbij **b ≠ 0**.
 
-- a stukken van grootte 1/b, of
-- a gedeeld door b.
+-   **a** is de teller;
+-   **b** is de noemer.
 
-a heet de **teller** en b de **noemer**.
+De noemer vertelt in hoeveel gelijke delen het geheel is verdeeld. De
+teller vertelt hoeveel van die delen we nemen.
 
-De rationale getallen zijn:
+Bij:
 
-**ℚ = {a/b | a en b zijn gehele getallen, b ≠ 0}**
+**3/5**
 
-We hebben nu:
+is het geheel verdeeld in vijf gelijke delen en nemen we er drie.
+
+------------------------------------------------------------------------
+
+## Een breuk is ook een getal
+
+Een breuk is niet alleen een stukje van een taart of een object dat
+verdeeld wordt. Een breuk heeft een **eigen positie op de
+getallenlijn**.
+
+Bijvoorbeeld:
+
+**1/2**
+
+ligt precies tussen 0 en 1.
+
+Dit perspectief wordt belangrijk wanneer we breuken gaan vergelijken,
+optellen en gebruiken als getallen.
+
+------------------------------------------------------------------------
+
+## Rationale getallen
+
+De verzameling van rationale getallen bestaat uit alle getallen die als
+verhouding van twee gehele getallen kunnen worden geschreven:
+
+**ℚ = {a/b \| a, b ∈ ℤ en b ≠ 0}**
+
+Hiermee ontstaat:
 
 **ℕ ⊂ ℤ ⊂ ℚ**
 
-Elk natuurlijk getal is dus ook een geheel getal en elk geheel getal kan als rationale breuk worden geschreven.
-
-Voorbeeld:
+Elk geheel getal is rationaal, want:
 
 **5 = 5/1**
 
-### Gelijkwaardige breuken
+Ook negatieve breuken zijn rationaal:
 
-**1/2 = 2/4 = 3/6**
+**−3/4**
 
-De schrijfwijze verandert, maar de positie op de getallenlijn niet.
+------------------------------------------------------------------------
 
-Een gelijkwaardige breuk ontstaat wanneer teller en noemer met hetzelfde niet-nul getal worden vermenigvuldigd of gedeeld.
+## Gelijkwaardige breuken
 
-### Vereenvoudigen
+De schrijfwijzen:
 
-**12/18 = 2/3**
+**1/2**
 
-We delen teller en noemer door hun GGD:
+**2/4**
 
-**12 ÷ 6 = 2**
+**3/6**
 
-**18 ÷ 6 = 3**
+stellen hetzelfde getal voor.
 
----
+We kunnen teller en noemer met hetzelfde niet-nul getal
+vermenigvuldigen:
 
-## 1.3.3 Breuken optellen en aftrekken
+**1/2 = (1 × 2)/(2 × 2) = 2/4**
 
-Met dezelfde noemer:
+Op de getallenlijn verandert de positie niet.
 
-**2/7 + 3/7 = 5/7**
+------------------------------------------------------------------------
 
-Met verschillende noemers moeten we dezelfde onderverdeling maken.
+## Vereenvoudigen
 
-Voorbeeld:
+Het omgekeerde proces heet vereenvoudigen.
 
-**2/3 + 3/5**
+Bijvoorbeeld:
 
-Een gemeenschappelijke noemer is 15.
+**12/18**
+
+De grootste gemeenschappelijke deler van 12 en 18 is 6.
+
+Dus:
+
+**12/18 = (12 ÷ 6)/(18 ÷ 6) = 2/3**
+
+Een breuk is volledig vereenvoudigd wanneer teller en noemer geen
+gemeenschappelijke deler groter dan 1 meer hebben.
+
+------------------------------------------------------------------------
+
+## Breuken vergelijken
+
+Voor dezelfde noemer is vergelijken eenvoudig:
+
+**3/7 \> 2/7**
+
+Bij verschillende noemers moeten we ze naar een gemeenschappelijke
+schaal brengen.
+
+Bijvoorbeeld:
+
+**2/3** en **3/5**
+
+Een gemeenschappelijke noemer is 15:
 
 **2/3 = 10/15**
 
 **3/5 = 9/15**
 
-Dus:
+Daarom:
 
-**2/3 + 3/5 = 10/15 + 9/15 = 19/15**
+**2/3 \> 3/5**
 
----
+------------------------------------------------------------------------
 
-## 1.3.4 Breuken vermenigvuldigen
+## Breuken optellen en aftrekken
 
-Teller × teller en noemer × noemer:
+Bij dezelfde noemer:
+
+**2/7 + 3/7 = 5/7**
+
+We voegen de aantallen zevenden samen. De noemer blijft dus dezelfde.
+
+Bij verschillende noemers maken we eerst dezelfde onderverdeling:
+
+**2/3 + 3/5**
+
+**2/3 = 10/15**
+
+**3/5 = 9/15**
+
+dus:
+
+**2/3 + 3/5 = 19/15**
+
+De noemers mogen niet zomaar worden opgeteld:
+
+**1/2 + 1/3 ≠ 2/5**
+
+De twee breuken gebruiken aanvankelijk verschillende eenheden: helften
+en derden.
+
+------------------------------------------------------------------------
+
+## Breuken vermenigvuldigen
+
+Bij vermenigvuldiging:
+
+**a/b × c/d = (a × c)/(b × d)**
+
+Bijvoorbeeld:
 
 **2/3 × 5/7 = 10/21**
 
-Je kunt soms eerst kruislings vereenvoudigen.
+Je kunt vóór het vermenigvuldigen soms gemeenschappelijke factoren
+wegstrepen. Dat is een vorm van vereenvoudigen.
 
----
+------------------------------------------------------------------------
 
-## 1.3.5 Breuken delen
+## Breuken delen
 
-Delen door een breuk betekent vermenigvuldigen met het omgekeerde.
+Delen door een breuk betekent vermenigvuldigen met het omgekeerde:
 
 **a/b ÷ c/d = a/b × d/c**
 
 Voorbeeld:
 
-**2/3 ÷ 4/5**
-
-= **2/3 × 5/4**
-
-= **10/12**
-
-= **5/6**
+**2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6**
 
 Waarom werkt dit?
 
-Omdat een getal maal zijn omgekeerde 1 geeft:
+Omdat een getal maal zijn omgekeerde gelijk is aan 1:
 
 **4/5 × 5/4 = 1**
 
-Het omgekeerde is dus het getal dat nodig is om de oorspronkelijke breuk tot 1 te maken.
+Delen door 4/5 betekent dus zoeken naar de factor waarmee je 4/5 terug
+naar 1 brengt.
 
----
+------------------------------------------------------------------------
 
-## 1.3.6 Gemengde getallen
+## Gemengde getallen
 
-Een gemengd getal combineert een geheel getal met een breuk.
+Een gemengd getal combineert een geheel getal met een breuk:
+
+**2 1/3**
+
+Dit betekent:
+
+**2 + 1/3**
+
+Als onechte breuk:
 
 **2 1/3 = 7/3**
 
-Voor rekenwerk is de onechte breuk meestal het handigst.
+Voor rekenwerk is de onechte breuk meestal de handigste vorm.
 
----
+------------------------------------------------------------------------
 
-## 1.3.7 Decimale getallen
+## Kerninzicht
 
-Decimalen zijn breuken met een macht van 10 als noemer.
+Een breuk is tegelijk:
 
-Voorbeelden:
+-   een manier om een verdeling te beschrijven;
+-   een quotiënt van twee gehele getallen;
+-   een getal op de getallenlijn;
+-   een verhouding tussen twee hoeveelheden.
+
+Die verschillende interpretaties zijn geen aparte onderwerpen: ze
+beschrijven hetzelfde wiskundige object vanuit verschillende
+invalshoeken.
+
+------------------------------------------------------------------------
+
+# Milestone 1.5 --- Decimalen en percentages
+
+**Doel:** rationale getallen schrijven als decimalen en percentages en
+veranderingen correct interpreteren.
+
+## Decimalen als plaatswaarde
+
+Een decimaal getal is een uitbreiding van het positiestelsel voorbij de
+eenheden.
+
+Bij:
+
+**3,142**
+
+is:
+
+-   1 het aantal tienden;
+-   4 het aantal honderdsten;
+-   2 het aantal duizendsten.
+
+Dus:
+
+**3,142 = 3 + 1/10 + 4/100 + 2/1000**
+
+De eerste cijfers na de komma hebben dus waarden:
+
+**10⁻¹, 10⁻², 10⁻³, ...**
+
+------------------------------------------------------------------------
+
+## Breuk en decimaal
+
+Veel rationale getallen kunnen als eindige decimaal worden geschreven:
 
 **1/2 = 0,5**
 
@@ -720,262 +932,399 @@ Voorbeelden:
 
 **3/10 = 0,3**
 
-**7/100 = 0,07**
+Maar sommige hebben een oneindig herhalend decimaal:
 
-| Plaats na de komma | Naam | Voorbeeld in 3,142 |
-|---|---|---:|
-| 1e | tienden | 1 |
-| 2e | honderdsten | 4 |
-| 3e | duizendsten | 2 |
+**1/3 = 0,333...**
 
-Sommige breuken hebben een eindige decimale vorm:
+De verschillende schrijfwijzen beschrijven hetzelfde getal.
 
-**1/4 = 0,25**
+------------------------------------------------------------------------
 
-Andere hebben een oneindig herhalende vorm:
+## Decimalen optellen en aftrekken
 
-**1/3 = 0,333…**
+Bij optellen en aftrekken moeten de plaatswaarden overeenkomen.
 
-### Optellen en aftrekken
+Bijvoorbeeld:
 
-Zet de komma's onder elkaar.
+**1,25 + 0,70 = 1,95**
 
-### Vermenigvuldigen
+De komma's staan onder elkaar omdat tienden met tienden en honderdsten
+met honderdsten moeten worden gecombineerd.
 
-Vermenigvuldig eerst alsof er geen komma staat en plaats daarna de komma correct.
+------------------------------------------------------------------------
 
-**1,2 × 0,4 = 12 × 4 = 48 → 0,48**
+## Decimalen vermenigvuldigen
 
-Er staan in totaal twee cijfers na de komma.
+Bijvoorbeeld:
 
----
+**1,2 × 0,4**
 
-## 1.3.8 Procenten
+Eerst rekenen we zonder komma:
 
-Procent betekent **per honderd**.
+**12 × 4 = 48**
+
+Er waren samen twee cijfers na de komma. Daarom:
+
+**1,2 × 0,4 = 0,48**
+
+De plaatswaarde is hier essentieel: 12 × 4 is niet het uiteindelijke
+antwoord.
+
+------------------------------------------------------------------------
+
+## Procenten
+
+"Procent" betekent letterlijk **per honderd**.
+
+Dus:
 
 **25% = 25/100 = 1/4 = 0,25**
 
-Omrekenen:
+Omrekeningen:
 
-- percentage → decimaal: deel door 100
-- decimaal → percentage: vermenigvuldig met 100
-- p% van n = p/100 × n
+-   percentage → decimaal: deel door 100;
+-   decimaal → percentage: vermenigvuldig met 100;
+-   p% van n = p/100 × n.
 
 Voorbeeld:
 
 **20% van 45 = 0,20 × 45 = 9**
 
-### Veranderingen
+------------------------------------------------------------------------
 
-40 verhogen met 10%:
+## Procentuele verandering
+
+Een stijging met 10% betekent dat het oorspronkelijke bedrag wordt
+vermenigvuldigd met:
+
+**1 + 0,10 = 1,10**
+
+Een daling met 10% betekent vermenigvuldigen met:
+
+**1 − 0,10 = 0,90**
+
+Voor 40:
 
 **40 × 1,10 = 44**
 
-40 verlagen met 10%:
+en:
 
 **40 × 0,90 = 36**
 
-Een stijging van 10% gevolgd door een daling van 10% brengt je dus niet terug naar het begin.
+Een stijging van 10% gevolgd door een daling van 10% brengt je niet
+terug naar 40:
 
-**44 × 0,90 = 39,6**
+**40 × 1,10 × 0,90 = 39,6**
 
----
+De tweede procentuele verandering wordt namelijk toegepast op een ander
+bedrag.
 
-## 1.3.9 Verhoudingen
+### Percentage versus procentpunt
 
-Een verhouding:
+Een verandering van bijvoorbeeld 20% naar 25% is:
 
-**a : b**
+-   een stijging van **5 procentpunten**;
+-   maar een relatieve stijging van **25%** ten opzichte van 20%.
 
-beschrijft dezelfde relatie als:
+Deze twee begrippen mogen niet met elkaar worden verward.
 
-**a/b**
+------------------------------------------------------------------------
 
-Voorbeeld:
+## Kerninzicht
 
-Een schaal van 1 : 200 betekent dat 1 cm op de kaart overeenkomt met 200 cm in werkelijkheid.
+Breuken, decimalen en percentages zijn verschillende representaties van
+hetzelfde soort getallen.
 
-Als:
+Bijvoorbeeld:
+
+**1/4 = 0,25 = 25%**
+
+Het kunnen wisselen tussen deze representaties is belangrijker dan het
+uit het hoofd kennen van afzonderlijke omzettingsregels.
+
+------------------------------------------------------------------------
+
+# Milestone 1.6 --- Verhoudingen en evenredigheid
+
+**Doel:** verhoudingen begrijpen als relaties tussen hoeveelheden en
+eenvoudige evenredigheidsproblemen kunnen modelleren.
+
+## Wat is een verhouding?
+
+Een verhouding vergelijkt twee hoeveelheden.
+
+Bijvoorbeeld:
+
+**2 : 3**
+
+betekent dat er tegenover elke 2 eenheden van de eerste hoeveelheid 3
+eenheden van de tweede staan.
+
+Een verhouding kan ook worden geschreven als:
+
+**2/3**
+
+Wanneer we twee hoeveelheden vergelijken, moeten we dus steeds weten
+**welke hoeveelheid bij welk getal hoort**.
+
+------------------------------------------------------------------------
+
+## Gelijkwaardige verhoudingen
+
+Net zoals bij breuken kunnen we een verhouding vergroten zonder de
+relatie te veranderen.
+
+**2 : 5 = 4 : 10 = 6 : 15**
+
+We vermenigvuldigen beide componenten met dezelfde factor.
+
+Dit is de kern van schaalvergroting.
+
+------------------------------------------------------------------------
+
+## Evenredigheid
+
+Stel:
 
 **2 : 5 = x : 20**
 
-dan:
+We kunnen dit schrijven als:
 
 **2/5 = x/20**
 
-dus:
+Omdat 20 vier keer 5 is, moet x ook vier keer 2 zijn:
 
 **x = 8**
 
----
+Een andere methode is kruislings vermenigvuldigen:
 
-## Oefeningen 1.3
+**2 × 20 = 5 × x**
 
-### A. Gehele getallen
+dus:
 
-1. (−6) + 11
-2. 4 − (−9)
-3. (−3) × (−7)
-4. (−48) ÷ 6
-5. −8 × (4 − 7)
-6. Bereken: −12 + 7 − (−4)
+**40 = 5x**
 
-### B. Breuken
+en:
 
-7. Vereenvoudig 18/24.
-8. 2/3 + 3/5
-9. 5/6 − 1/4
-10. 3/4 × 8/9
-11. 5/6 ÷ 2/3
-12. Leg uit waarom 1/2 + 1/3 niet gelijk is aan 2/5.
+**x = 8**
 
-### C. Decimalen, procenten en verhoudingen
+------------------------------------------------------------------------
 
-13. 1,5 + 0,75
-14. 0,6 × 0,05
-15. Wat is 20% van 45?
-16. Schrijf 0,125 als vereenvoudigde breuk.
-17. 3 : 8 = x : 24. Vind x.
-18. Een prijs van 80 euro stijgt met 15%. Wat is de nieuwe prijs?
+## Schalen
 
-### D. Foutenanalyse
+Verhoudingen komen voor bij schaalmodellen, kaarten, recepten en
+technische tekeningen.
 
-19. Iemand beweert: 30% + 20% = 50% en daarom is een stijging van 30% gevolgd door een stijging van 20% altijd een totale stijging van 50%. Klopt dat? Leg uit.
+Bij een schaal van:
 
-### Antwoorden 1.3
+**1 : 200**
 
-1. 5
-2. 13
-3. 21
-4. −8
-5. 24
-6. −1
-7. 3/4
-8. 19/15
-9. 7/12
-10. 2/3
-11. 5/4
-12. Omdat de noemers niet dezelfde eenheid voorstellen. 1/2 + 1/3 = 3/6 + 2/6 = 5/6.
-13. 2,25
-14. 0,03
-15. 9
-16. 1/8
-17. 9
-18. 92 euro
-19. Nee. De tweede stijging wordt toegepast op het al verhoogde bedrag. De totale factor is 1,30 × 1,20 = 1,56, dus 56%.
+komt 1 cm op de tekening overeen met 200 cm in werkelijkheid.
 
----
+Bij 2 cm:
 
-# Milestone 1.4 — Getaltheorie en structuur
+**2 × 200 = 400 cm**
 
-**Doel:** de interne structuur van natuurlijke getallen begrijpen: even/oneven, deelbaarheid, factoren, priemgetallen, priemfactorisatie, GGD en KGV.
+oftewel:
 
----
+**4 m**
 
-## 1.4.1 Even en oneven
+Een verhouding geeft dus een **schaalfactor** waarmee een hoeveelheid
+kan worden omgezet.
+
+------------------------------------------------------------------------
+
+## Recht evenredig verband
+
+Twee grootheden zijn recht evenredig wanneer een constante
+vermenigvuldigingsfactor de ene grootheid aan de andere koppelt.
+
+Bijvoorbeeld:
+
+**y = kx**
+
+Hier is **k** de evenredigheidsconstante.
+
+Als x verdubbelt, verdubbelt y ook.
+
+Als x driemaal zo groot wordt, wordt y driemaal zo groot.
+
+Dit idee vormt later een belangrijke brug naar functies en algebra.
+
+------------------------------------------------------------------------
+
+## Kerninzicht
+
+Een verhouding zegt niet alleen "er zijn twee getallen". Ze beschrijft
+een **relatie** tussen twee hoeveelheden.
+
+Bij evenredigheid blijft die relatie behouden wanneer beide hoeveelheden
+volgens dezelfde factor worden geschaald.
+
+------------------------------------------------------------------------
+
+# Milestone 1.7 --- Delers en deelbaarheid
+
+**Doel:** deelbaarheid herkennen, delers en veelvouden begrijpen en
+eenvoudige deelbaarheidsregels gebruiken.
+
+## Delers en veelvouden
+
+Een natuurlijk getal **d** is een deler van **n** wanneer n zonder rest
+door d kan worden gedeeld.
+
+Bijvoorbeeld, de positieve delers van 12 zijn:
+
+**1, 2, 3, 4, 6, 12**
+
+Want elk van deze getallen deelt 12 zonder rest.
+
+De veelvouden van 4 zijn:
+
+**4, 8, 12, 16, 20, ...**
+
+De begrippen zijn nauw verbonden:
+
+**4 is een deler van 12**
+
+en:
+
+**12 is een veelvoud van 4**
+
+------------------------------------------------------------------------
+
+## Deelbaarheid
+
+Voor sommige delers kunnen we snel bepalen of een getal deelbaar is.
+
+  Deler   Deelbaarheidsregel
+  ------- ----------------------------------------------
+  2       het laatste cijfer is even
+  3       de cijfersom is deelbaar door 3
+  4       de laatste twee cijfers zijn deelbaar door 4
+  5       het laatste cijfer is 0 of 5
+  6       deelbaar door 2 én door 3
+  9       de cijfersom is deelbaar door 9
+  10      het laatste cijfer is 0
+
+### Voorbeeld
+
+Neem:
+
+**147**
+
+De cijfersom is:
+
+**1 + 4 + 7 = 12**
+
+12 is deelbaar door 3, maar niet door 9.
+
+Daarom is 147:
+
+-   deelbaar door 3;
+-   niet deelbaar door 9;
+-   niet deelbaar door 2, want het is oneven.
+
+------------------------------------------------------------------------
+
+## Even en oneven
 
 Een getal is **even** als het deelbaar is door 2.
-
-Een getal is **oneven** als het bij deling door 2 rest 1 geeft.
 
 Even getallen eindigen op:
 
 **0, 2, 4, 6, 8**
 
+Een getal is **oneven** als het bij deling door 2 rest 1 geeft.
+
 Oneven getallen eindigen op:
 
 **1, 3, 5, 7, 9**
 
-### Somregels
+Bij optelling:
 
-- even + even = even
-- oneven + oneven = even
-- even + oneven = oneven
+-   even + even = even;
+-   oneven + oneven = even;
+-   even + oneven = oneven.
 
-Bij een product is één even factor voldoende om het product even te maken.
+Bij vermenigvuldiging is één even factor voldoende om het product even
+te maken.
 
----
+------------------------------------------------------------------------
 
-## 1.4.2 Deelbaarheid en factoren
+## Kerninzicht
 
-d is een **deler** van n als n ÷ d een geheel getal is.
+De natuurlijke getallen zijn geen willekeurige rij losse waarden. Ze
+hebben een interne structuur.
 
-Voorbeeld:
+Delers, veelvouden en deelbaarheid geven ons toegang tot die structuur.
+In de volgende milestone zoeken we de meest fundamentele bouwstenen van
+die structuur: de priemgetallen.
 
-De delers van 12 zijn:
+------------------------------------------------------------------------
 
-**1, 2, 3, 4, 6, 12**
+# Milestone 1.8 --- Priemgetallen en factorisatie
 
-Handige deelbaarheidsregels:
+**Doel:** priemgetallen herkennen en natuurlijke getallen ontbinden in
+hun priemfactoren.
 
-| Deler | Regel |
-|---|---|
-| 2 | laatste cijfer is even |
-| 3 | cijfersom is deelbaar door 3 |
-| 4 | laatste twee cijfers zijn deelbaar door 4 |
-| 5 | laatste cijfer is 0 of 5 |
-| 6 | deelbaar door 2 én 3 |
-| 9 | cijfersom is deelbaar door 9 |
-| 10 | laatste cijfer is 0 |
+## Priemgetallen
 
-Voorbeeld: 147
-
-Cijfersom:
-
-**1 + 4 + 7 = 12**
-
-Dus 147 is deelbaar door 3, maar niet door 9.
-
-147 is oneven en dus niet deelbaar door 2.
-
----
-
-## 1.4.3 Priemgetallen
-
-Een priemgetal is een natuurlijk getal groter dan 1 met precies twee positieve delers:
+Een **priemgetal** is een natuurlijk getal groter dan 1 met precies twee
+positieve delers:
 
 **1 en zichzelf**
 
 Voorbeelden:
 
-**2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, …**
+**2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...**
 
-2 is het enige even priemgetal.
+Het getal 2 is het enige even priemgetal.
 
-Getallen groter dan 1 die niet priem zijn, heten **samengesteld**.
+Een getal groter dan 1 dat niet priem is, noemen we **samengesteld**.
 
 Voorbeelden:
 
-**4, 6, 8, 9, 10, 12, …**
+**4, 6, 8, 9, 10, 12, ...**
 
-1 is noch priem, noch samengesteld.
+Het getal 1 is noch priem, noch samengesteld. Het heeft slechts één
+positieve deler.
 
-### Zeef van Eratosthenes
+------------------------------------------------------------------------
 
-Een eenvoudige manier om priemgetallen te vinden:
+## De zeef van Eratosthenes
 
-1. Schrijf de getallen vanaf 2 op.
-2. Neem het eerste nog niet doorgestreepte getal.
-3. Het is priem.
-4. Streep alle veelvouden ervan weg.
-5. Herhaal.
+Een klassieke methode om priemgetallen te vinden is de **zeef van
+Eratosthenes**.
 
-Dit is de **zeef van Eratosthenes**.
+1.  Schrijf de natuurlijke getallen vanaf 2 op.
+2.  Neem het eerste nog niet doorgestreepte getal.
+3.  Dat getal is priem.
+4.  Streep de veelvouden ervan weg.
+5.  Herhaal.
 
----
+De methode laat mooi zien dat samengestelde getallen opgebouwd zijn uit
+kleinere factoren.
 
-## 1.4.4 Hoofdstelling van de rekenkunde
+------------------------------------------------------------------------
 
-Elk natuurlijk getal groter dan 1 kan op precies één manier als product van priemgetallen worden geschreven, afgezien van de volgorde.
+## Factorisatie
 
-Voorbeeld:
+Een getal kan als product van factoren worden geschreven.
 
-**60 = 2 × 2 × 3 × 5**
+Bijvoorbeeld:
 
-of:
+**60 = 6 × 10**
+
+We kunnen verder ontbinden:
+
+**60 = 2 × 3 × 2 × 5**
+
+dus:
 
 **60 = 2² × 3 × 5**
+
+Dit is de **priemfactorisatie**.
 
 Andere voorbeelden:
 
@@ -985,43 +1334,111 @@ Andere voorbeelden:
 
 **17 = 17**
 
-Priemfactorisatie is als een soort "DNA-analyse" van een natuurlijk getal.
+------------------------------------------------------------------------
 
----
+## De hoofdstelling van de rekenkunde
 
-## 1.4.5 GGD en KGV
+Elk natuurlijk getal groter dan 1 kan op precies één manier als product
+van priemgetallen worden geschreven, afgezien van de volgorde.
 
-**GGD** = grootste gemene deler.
+Dat betekent dat priemgetallen fungeren als de fundamentele bouwstenen
+van de natuurlijke getallen.
 
-De GGD van a en b is het grootste natuurlijke getal dat beide getallen deelt.
+Je kunt priemfactorisatie daarom zien als een soort "DNA-analyse" van
+een getal: ze onthult uit welke elementaire factoren het getal bestaat.
 
-**KGV** = kleinste gemene veelvoud.
+------------------------------------------------------------------------
 
-Het KGV is het kleinste positieve getal dat een veelvoud is van beide getallen.
+## Waarom factorisatie nuttig is
 
-### Via priemfactoren
+Priemfactorisatie maakt het eenvoudiger om:
 
-Voor de GGD neem je van gemeenschappelijke priemfactoren de **laagste exponent**.
+-   delers te vinden;
+-   breuken te vereenvoudigen;
+-   GGD en KGV te bepalen;
+-   deelbaarheidsstructuren te begrijpen.
 
-Voor het KGV neem je van alle aanwezige priemfactoren de **hoogste exponent**.
+Ze vormt dus een verbinding tussen verschillende onderdelen van de
+rekenkunde.
 
-Voorbeeld:
+------------------------------------------------------------------------
+
+# Milestone 1.9 --- GGD, KGV en het algoritme van Euclides
+
+**Doel:** de grootste gemeenschappelijke deler en het kleinste
+gemeenschappelijke veelvoud begrijpen en efficiënt bepalen.
+
+## Grootste gemeenschappelijke deler
+
+De **GGD** van twee getallen is de grootste natuurlijke getal dat beide
+getallen deelt.
+
+Bijvoorbeeld voor 12 en 18:
+
+Delers van 12:
+
+**1, 2, 3, 4, 6, 12**
+
+Delers van 18:
+
+**1, 2, 3, 6, 9, 18**
+
+De gemeenschappelijke delers zijn:
+
+**1, 2, 3, 6**
+
+Dus:
+
+**GGD(12, 18) = 6**
+
+------------------------------------------------------------------------
+
+## Kleinste gemeenschappelijke veelvoud
+
+Het **KGV** is het kleinste positieve getal dat een veelvoud is van
+beide getallen.
+
+Veelvouden van 12:
+
+**12, 24, 36, 48, ...**
+
+Veelvouden van 18:
+
+**18, 36, 54, ...**
+
+Het eerste gemeenschappelijke positieve veelvoud is 36:
+
+**KGV(12, 18) = 36**
+
+------------------------------------------------------------------------
+
+## GGD en KGV via priemfactorisatie
+
+Schrijf:
 
 **12 = 2² × 3**
 
 **18 = 2 × 3²**
 
-Dus:
+Voor de GGD nemen we van de gemeenschappelijke priemfactoren de
+**laagste exponent**:
 
-**GGD(12, 18) = 2 × 3 = 6**
+**GGD = 2 × 3 = 6**
 
-**KGV(12, 18) = 2² × 3² = 36**
+Voor het KGV nemen we van alle aanwezige priemfactoren de **hoogste
+exponent**:
+
+**KGV = 2² × 3² = 36**
+
+------------------------------------------------------------------------
+
+## Een nuttige controle
 
 Voor positieve gehele getallen geldt:
 
 **GGD(a, b) × KGV(a, b) = a × b**
 
-Controle:
+Voor 12 en 18:
 
 **6 × 36 = 216**
 
@@ -1029,15 +1446,21 @@ en:
 
 **12 × 18 = 216**
 
----
+De relatie geeft een krachtige controle op een berekening.
 
-## 1.4.6 Algoritme van Euclides
+------------------------------------------------------------------------
 
-Voor grote getallen is herhaald delen efficiënter dan alle factoren opsommen.
+## Het algoritme van Euclides
 
-Voorbeeld:
+Bij grote getallen is het opsommen van alle delers onhandig.
 
-GGD(48, 18)
+Het algoritme van Euclides gebruikt herhaaldelijk de rest bij deling.
+
+Voor:
+
+**GGD(48, 18)**
+
+geldt:
 
 **48 = 2 × 18 + 12**
 
@@ -1055,59 +1478,52 @@ Het onderliggende principe is:
 
 **GGD(a, b) = GGD(b, rest van a ÷ b)**
 
----
+Dit is een vroeg voorbeeld van een **algoritme**: een eindige,
+systematische reeks stappen waarmee een probleem kan worden opgelost.
 
-## Oefeningen 1.4
+------------------------------------------------------------------------
 
-1. Is 91 priem? Zo niet, ontbind.
-2. Geef de priemfactorisatie van 60.
-3. Geef de priemfactorisatie van 84.
-4. Bereken GGD(24, 36) en KGV(24, 36).
-5. Vereenvoudig 42/56 via de GGD.
-6. Welke positieve delers heeft 45?
-7. Is 234 deelbaar door 3, 9 en 2?
-8. Bereken GGD(105, 28) met Euclides.
-9. Waarom is 1 geen priemgetal?
-10. Gebruik priemfactorisatie om GGD(72, 90) te bepalen.
-11. Gebruik priemfactorisatie om KGV(72, 90) te bepalen.
-12. Waarom is priemfactorisatie nuttig bij breuken?
+## Kerninzicht
 
-### Antwoorden 1.4
+GGD en KGV zijn niet zomaar twee nieuwe rekentrucs. Ze gebruiken de
+onderliggende factorstructuur van natuurlijke getallen.
 
-1. Nee. 91 = 7 × 13.
-2. 2² × 3 × 5.
-3. 2² × 3 × 7.
-4. GGD = 12; KGV = 72.
-5. 3/4.
-6. 1, 3, 5, 9, 15, 45.
-7. Cijfersom = 9, dus deelbaar door 3 en 9. Het getal is even, dus deelbaar door 2.
-8. GGD = 7.
-9. Een priemgetal moet precies twee positieve delers hebben. 1 heeft er maar één.
-10. 72 = 2³ × 3²; 90 = 2 × 3² × 5. Dus GGD = 2 × 3² = 18.
-11. KGV = 2³ × 3² × 5 = 360.
-12. De GGD van teller en noemer geeft direct een manier om een breuk te vereenvoudigen.
+Priemfactorisatie geeft inzicht in de structuur; het algoritme van
+Euclides geeft een efficiënte procedure.
 
----
+------------------------------------------------------------------------
 
-# Milestone 1.5 — Machten, wortels, schatten en de reële getallen
+# Milestone 1.10 --- Machten
 
-**Doel:** herhaald vermenigvuldigen compact schrijven, machtswetten gebruiken, wortels begrijpen, schatten en ontdekken waarom ℚ niet het einde van het getallensysteem is.
+**Doel:** herhaalde vermenigvuldiging compact schrijven, machtswetten
+begrijpen en machten van 10 gebruiken.
 
----
+## Van herhaalde vermenigvuldiging naar een macht
 
-## 1.5.1 Machten
+Bijvoorbeeld:
 
-Een macht is herhaald vermenigvuldigen.
+**3 × 3 × 3 × 3**
 
-**aⁿ = a × a × … × a**
+kan compacter worden geschreven als:
 
-waarbij a n keer voorkomt.
+**3⁴**
 
-a is het **grondtal** en n de **exponent**.
+Dit noemen we een macht.
+
+In:
+
+**aⁿ**
+
+is:
+
+-   **a** het grondtal;
+-   **n** de exponent.
+
+De exponent geeft aan hoe vaak het grondtal als factor voorkomt.
 
 Voorbeelden:
 
-**3⁴ = 3 × 3 × 3 × 3 = 81**
+**3⁴ = 81**
 
 **2³ = 8**
 
@@ -1115,21 +1531,27 @@ Voorbeelden:
 
 **10³ = 1 000**
 
-### Speciale gevallen
+------------------------------------------------------------------------
+
+## Speciale gevallen
+
+Voor een geschikt niet-nul grondtal:
 
 **a¹ = a**
 
-**a⁰ = 1** voor a ≠ 0
+**a⁰ = 1**
 
-**0ⁿ = 0** voor n > 0
+Verder:
 
-In deze fase laten we **0⁰ ongedefinieerd**.
+**0ⁿ = 0** voor n \> 0.
 
----
+In deze fase laten we **0⁰** ongedefinieerd.
 
-## 1.5.2 Waarom is a⁰ = 1?
+------------------------------------------------------------------------
 
-Kijk naar de rij:
+## Waarom is a⁰ = 1?
+
+Bekijk:
 
 **2³ = 8**
 
@@ -1137,47 +1559,43 @@ Kijk naar de rij:
 
 **2¹ = 2**
 
-Elke stap naar beneden deelt door 2:
+Elke stap naar beneden deelt door 2. De volgende waarde moet dus zijn:
 
 **2⁰ = 1**
 
-Dit is ook nodig om de machtswetten consistent te houden.
+Dit is bovendien noodzakelijk om de machtswetten consistent te houden.
 
-Omdat:
+------------------------------------------------------------------------
 
-**a³ ÷ a³ = 1**
-
-en volgens de machtsregel:
-
-**a³ ÷ a³ = a³⁻³ = a⁰**
-
-moet gelden:
-
-**a⁰ = 1**
-
-voor a ≠ 0.
-
----
-
-## 1.5.3 Rekenregels voor machten
+## Machtswetten
 
 Bij hetzelfde grondtal:
 
 **aᵐ × aⁿ = aᵐ⁺ⁿ**
 
+want we voegen het aantal factoren samen.
+
+Bij delen:
+
 **aᵐ ÷ aⁿ = aᵐ⁻ⁿ**
+
+waar de uitdrukking gedefinieerd is.
+
+Voor een macht van een macht:
 
 **(aᵐ)ⁿ = aᵐⁿ**
 
-Bij een product in het grondtal:
+Voor een product:
 
 **(ab)ⁿ = aⁿbⁿ**
 
-Bij een breuk:
+Voor een breuk:
 
 **(a/b)ⁿ = aⁿ/bⁿ**
 
-### Voorbeelden
+------------------------------------------------------------------------
+
+## Voorbeelden
 
 **2³ × 2⁴ = 2⁷ = 128**
 
@@ -1185,19 +1603,20 @@ Bij een breuk:
 
 **(2 × 5)² = 2² × 5² = 100**
 
-Let op:
-
-**2³ × 5³ = (2 × 5)³ = 10³**
-
-maar:
+Maar:
 
 **2³ × 5²**
 
-kan niet tot één macht worden samengevoegd met deze regel.
+kan niet met dezelfde regel tot één macht met grondtal 10 worden
+samengevoegd.
 
----
+De machtswetten hebben dus specifieke voorwaarden.
 
-## 1.5.4 Machten van 10
+------------------------------------------------------------------------
+
+## Machten van 10
+
+Machten van 10 zijn rechtstreeks verbonden met het positiestelsel:
 
 **10⁰ = 1**
 
@@ -1209,35 +1628,38 @@ kan niet tot één macht worden samengevoegd met deze regel.
 
 **10⁶ = 1 000 000**
 
-Een exponent vertelt hoeveel factoren 10 er zijn.
+Een positieve exponent geeft aan hoeveel factoren 10 voorkomen.
 
----
+Negatieve exponenten zullen later dezelfde structuur uitbreiden:
 
-## 1.5.5 Wetenschappelijke notatie
+**10⁻¹ = 1/10**
 
-Wetenschappelijke notatie heeft de vorm:
+**10⁻² = 1/100**
 
-**a × 10ⁿ**
+------------------------------------------------------------------------
 
-waarbij:
+## Kerninzicht
 
-**1 ≤ |a| < 10**
+Een macht is niet een nieuwe soort vermenigvuldiging. Het is een
+**compacte notatie voor herhaalde vermenigvuldiging**.
 
-Voorbeelden:
+De machtswetten ontstaan uit die betekenis en zijn daarom geen
+willekeurige formules.
 
-**4 500 = 4,5 × 10³**
+------------------------------------------------------------------------
 
-**0,0032 = 3,2 × 10⁻³**
+# Milestone 1.11 --- Wortels
 
-Dit is later bijzonder nuttig in natuurkunde en scheikunde.
+**Doel:** wortels begrijpen als omgekeerde bewerkingen van
+machtsverheffen en onderscheid maken tussen exacte wortels en
+benaderingen.
 
----
+## De vierkantswortel
 
-## 1.5.6 Wortels
+De vierkantswortel van een niet-negatief getal n is het niet-negatieve
+getal waarvan het kwadraat n is.
 
-De vierkantswortel √n is het niet-negatieve getal waarvan het kwadraat n is.
-
-Voorbeeld:
+Bijvoorbeeld:
 
 **√25 = 5**
 
@@ -1253,11 +1675,80 @@ Verder:
 
 **√144 = 12**
 
-Volkomen kwadraten zijn bijvoorbeeld:
+De voorwaarde "niet-negatief" is belangrijk. Hoewel:
 
-**1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, …**
+**5² = 25**
 
-Ook derde machtswortels bestaan:
+en:
+
+**(−5)² = 25**
+
+is:
+
+**√25 = 5**
+
+De wortelnotatie kiest de **hoofdwortel**, dus de niet-negatieve wortel.
+
+------------------------------------------------------------------------
+
+## Volkomen kwadraten
+
+Getallen zoals:
+
+**1, 4, 9, 16, 25, 36, 49, 64, 81, 100, ...**
+
+zijn volkomen kwadraten.
+
+Hun vierkantswortels zijn gehele getallen.
+
+Niet elke positieve wortel is echter een geheel getal.
+
+Bijvoorbeeld:
+
+**√2**
+
+ligt tussen 1 en 2, want:
+
+**1² \< 2 \< 2²**
+
+------------------------------------------------------------------------
+
+## Wortels en vermenigvuldiging
+
+Voor niet-negatieve a en b:
+
+**√(ab) = √a × √b**
+
+Bijvoorbeeld:
+
+**√(4 × 36) = √4 × √36 = 2 × 6 = 12**
+
+Ook:
+
+**√(a/b) = √a / √b**
+
+voor a ≥ 0 en b \> 0.
+
+Maar de wortel verdeelt zich niet over een optelling:
+
+**√(a + b) ≠ √a + √b**
+
+Bijvoorbeeld:
+
+**√(9 + 16) = √25 = 5**
+
+terwijl:
+
+**√9 + √16 = 3 + 4 = 7**
+
+Dit is een typische fout die voortkomt uit het toepassen van een regel
+buiten het domein waarvoor hij geldt.
+
+------------------------------------------------------------------------
+
+## Hogere wortels
+
+Naast vierkantswortels bestaan bijvoorbeeld derdemachtswortels:
 
 **∛8 = 2**
 
@@ -1265,37 +1756,43 @@ want:
 
 **2³ = 8**
 
-### Wortelregels
+Algemeen is de n-de machtswortel verbonden met de n-de macht:
 
-Voor niet-negatieve a en b:
+**√\[n\]{a} = a\^(1/n)**
 
-**√(ab) = √a × √b**
+De precieze eigenschappen van zulke wortels worden later verder
+ontwikkeld.
 
-Voor a ≥ 0 en b > 0:
+------------------------------------------------------------------------
 
-**√(a/b) = √a / √b**
+## Kerninzicht
 
-Maar:
+Een wortel draait een machtsbewerking om:
 
-**√(a + b) ≠ √a + √b**
+**2² = 4**
 
-Tegenvoorbeeld:
+leidt tot:
 
-**√(9 + 16) = √25 = 5**
+**√4 = 2**
 
-maar:
+Maar wortels leveren niet altijd gehele of rationale getallen op. Dat
+brengt ons rechtstreeks naar de volgende milestone.
 
-**√9 + √16 = 3 + 4 = 7**
+------------------------------------------------------------------------
 
----
+# Milestone 1.12 --- Irrationale en reële getallen
 
-# 1.5.7 De ontdekking van irrationale getallen
+**Doel:** begrijpen waarom rationale getallen niet de volledige
+getallenlijn vormen en kennismaken met de reële getallen.
 
-Tot nu toe hebben we:
+## Zijn rationale getallen voldoende?
+
+We hebben inmiddels:
 
 **ℕ ⊂ ℤ ⊂ ℚ**
 
-Maar zijn de rationale getallen voldoende voor elke wortel?
+De vraag is: bevat ℚ alle getallen die we op de getallenlijn nodig
+hebben?
 
 Bekijk:
 
@@ -1311,9 +1808,9 @@ en:
 
 dus:
 
-**1 < √2 < 2**
+**1 \< √2 \< 2**
 
-Met decimalen vinden we:
+Met steeds betere benaderingen krijgen we bijvoorbeeld:
 
 **√2 ≈ 1,4**
 
@@ -1323,27 +1820,83 @@ Met decimalen vinden we:
 
 **√2 ≈ 1,4142**
 
-Maar √2 kan niet als een breuk van twee gehele getallen worden geschreven.
+Maar geen enkele eindige decimale benadering is exact gelijk aan √2.
 
-Dus:
+------------------------------------------------------------------------
+
+## √2 is irrationaal
+
+Een irrationaal getal kan niet worden geschreven als een verhouding van
+twee gehele getallen.
 
 **√2 ∉ ℚ**
 
-√2 is een **irrationaal getal**.
+De klassieke bewijsstrategie gebruikt een tegenspraak.
 
-### Waarom is dit belangrijk?
+Stel dat √2 rationaal zou zijn. Dan zouden er gehele getallen p en q
+bestaan, zonder gemeenschappelijke factor groter dan 1, zodat:
 
-We hebben een nieuwe ontdekking gedaan:
+**√2 = p/q**
 
-> De rationale getallen vormen niet de volledige getallenlijn.
+Kwadrateren geeft:
 
-We hebben een groter getallensysteem nodig: de **reële getallen**.
+**2 = p²/q²**
 
-We schrijven:
+dus:
 
-**ℝ = de verzameling van alle reële getallen**
+**p² = 2q²**
 
-Daarin zitten zowel rationale als irrationale getallen.
+Daaruit volgt dat p² even is en dus p even. Schrijf:
+
+**p = 2k**
+
+Invullen geeft:
+
+**4k² = 2q²**
+
+dus:
+
+**q² = 2k²**
+
+Daaruit volgt dat q eveneens even is.
+
+Maar dan hebben p en q allebei een factor 2, in tegenspraak met de
+veronderstelling dat de breuk volledig vereenvoudigd was.
+
+Dus:
+
+**√2 is irrationaal.**
+
+------------------------------------------------------------------------
+
+## De getallenlijn bevat meer dan rationale getallen
+
+Dit is een belangrijke conceptuele ontdekking:
+
+> De rationale getallen vullen de getallenlijn niet volledig.
+
+Er bestaan dus getallen die wel een plaats op de getallenlijn hebben,
+maar niet als breuk van twee gehele getallen kunnen worden geschreven.
+
+We noemen zulke getallen **irrationale getallen**.
+
+Voorbeelden zijn:
+
+**√2**
+
+**√3**
+
+**π**
+
+------------------------------------------------------------------------
+
+## De reële getallen
+
+We breiden het systeem uit tot de verzameling van de **reële getallen**:
+
+**ℝ**
+
+Daarin zitten zowel de rationale als de irrationale getallen.
 
 De structuur is:
 
@@ -1351,309 +1904,394 @@ De structuur is:
 
 Voorbeelden:
 
-- 5 ∈ ℕ
-- −3 ∈ ℤ
-- 2/7 ∈ ℚ
-- √2 ∈ ℝ maar √2 ∉ ℚ
+-   **5 ∈ ℕ**
+-   **−3 ∈ ℤ**
+-   **2/7 ∈ ℚ**
+-   **√2 ∈ ℝ**, maar **√2 ∉ ℚ**
 
-De reële getallen vormen de getallenlijn die we in latere fases voortdurend zullen gebruiken.
+De reële getallen vormen de getallenlijn die in latere wiskunde
+voortdurend wordt gebruikt.
 
----
+------------------------------------------------------------------------
 
-## 1.5.8 Afronden en schatten
+## Waarom dit een fundamenteel idee is
 
-Afronden:
+We zijn begonnen met telgetallen.
 
-- kijk naar het volgende cijfer;
-- 0, 1, 2, 3, 4 → laat het vorige cijfer staan;
-- 5, 6, 7, 8, 9 → verhoog het vorige cijfer met 1.
+Toen bleek:
 
-Voorbeeld:
+**3 − 5**
 
-**3,14159** afgerond op twee decimalen = **3,14**
+niet oplosbaar binnen ℕ.
 
-**2,75** afgerond op één decimaal = **2,8**
+Daarom ontstonden de gehele getallen.
 
-### Schatten
+Daarna bleek:
 
-Schatten betekent dat je vóór het exacte rekenen bepaalt in welke buurt het antwoord hoort.
+**1 ÷ 2**
 
-Voorbeeld:
+niet oplosbaar binnen ℤ.
 
-**19 × 21**
+Daarom introduceerden we rationale getallen.
 
-Schat:
+Vervolgens bleek:
 
-**20 × 20 = 400**
+**√2**
 
-Exact:
+niet rationaal.
 
-**19 × 21 = 399**
+Daarom hebben we de reële getallen nodig.
 
-De schatting helpt een fout zoals 4 000 onmiddellijk te herkennen.
+De ontwikkeling kan dus worden samengevat als:
 
-### Orde van grootte
-
-Bijvoorbeeld:
-
-**4 872 × 32**
-
-ongeveer:
-
-**5 × 10³ × 3 × 10¹**
-
-= **15 × 10⁴**
-
-= **1,5 × 10⁵**
-
-= **150 000**
-
-Het exacte antwoord is 155 904, dus de schatting zit in de juiste grootteorde.
-
-Schatten is een **alarmbel**, geen vervanging voor exact rekenen.
-
----
-
-## Oefeningen 1.5
-
-1. 5³
-2. 2⁵ × 2³
-3. (3²)³
-4. 10⁴
-5. Schrijf 63 000 in wetenschappelijke notatie.
-6. √81
-7. 2³ × √16
-8. √(4 × 36)
-9. Rond 7,458 af op twee decimalen en op één decimaal.
-10. Schat 48 × 21 en bereken daarna exact.
-11. Vul aan: 2³, 2², 2¹, 2⁰, 2⁻¹. Wat moet 2⁻¹ zijn om het patroon voort te zetten?
-12. Leg uit waarom √(9 + 16) niet gelijk is aan √9 + √16.
-13. Tussen welke twee gehele getallen ligt √20?
-14. Is √49 rationaal? Waarom?
-15. Is √2 rationaal? Wat betekent dat voor de verzameling ℚ?
-
-### Antwoorden 1.5
-
-1. 125
-2. 2⁸ = 256
-3. 3⁶ = 729
-4. 10 000
-5. 6,3 × 10⁴
-6. 9
-7. 32
-8. 12
-9. 7,46 en 7,5
-10. Schatting ≈ 1 000; exact = 1 008
-11. 2⁻¹ = 1/2. De machten worden telkens door 2 gedeeld.
-12. Links = 5; rechts = 7. De wortel verdeelt zich niet over een optelling.
-13. 4 < √20 < 5, want 4² < 20 < 5².
-14. Ja. √49 = 7 en 7 is rationaal.
-15. Nee. √2 kan niet als verhouding van twee gehele getallen worden geschreven. ℚ bevat dus niet alle reële getallen.
-
----
-
-# De grote structuur van Fase 1
-
-Aan het einde van Fase 1 moet je niet alleen afzonderlijke regels kennen. Je moet de ontwikkeling van het getallensysteem kunnen volgen.
-
-```text
+``` text
 Natuurlijke getallen
 ℕ
-│
-│  3 − 5 heeft geen antwoord in ℕ
-↓
+    │
+    │  3 − 5 heeft geen antwoord in ℕ
+    ↓
 Gehele getallen
 ℤ
-│
-│  1 ÷ 2 heeft geen antwoord in ℤ
-↓
+    │
+    │  1 ÷ 2 heeft geen antwoord in ℤ
+    ↓
 Rationale getallen
 ℚ
-│
-│  √2 heeft geen antwoord in ℚ
-↓
+    │
+    │  √2 heeft geen antwoord in ℚ
+    ↓
 Reële getallen
 ℝ
 ```
 
-Dit is één van de belangrijkste ideeën uit deze fase:
+Dit patroon --- een systeem uitbreiden omdat een probleem anders niet
+kan worden opgelost --- is een van de belangrijkste ideeën van Fase 1.
 
-> **Wanneer een bestaand getallensysteem een probleem niet kan oplossen, breiden we het systeem uit.**
+------------------------------------------------------------------------
 
-Die gedachte komt later opnieuw terug.
+# Milestone 1.13 --- Afronden en wetenschappelijke notatie
 
----
+**Doel:** onderscheid maken tussen exacte en benaderde waarden, zinvol
+afronden, schatten en grote of kleine getallen compact noteren.
 
-# Eindtoets Fase 1
+## Exacte en benaderde waarden
 
-## Instructies
+Sommige getallen kunnen exact worden weergegeven:
 
-Maak de toets zonder:
+**1/4 = 0,25**
 
-- rekenmachine;
-- cursus;
-- antwoorden;
-- hulp van iemand anders.
+Andere waarden hebben een oneindige decimale ontwikkeling:
 
-Neem de tijd om niet alleen correcte antwoorden te geven, maar ook helder te redeneren.
+**√2 = 1,41421356...**
 
-**Aanbevolen beheersingsniveau:** minstens 80% correct én geen fundamentele begripsfouten.
+Wanneer we schrijven:
 
----
+**√2 ≈ 1,414**
 
-## Deel A — Rekenen
+gebruiken we het symbool **≈** voor "ongeveer gelijk aan".
 
-1. 738 + 496
-2. 1 002 − 587
-3. 37 × 24
-4. 157 ÷ 12. Geef quotiënt en rest.
-5. 3 + 7 × 4 − 5
-6. 18 ÷ 3 × 4 + 2
+Het is belangrijk het verschil te zien tussen een exacte gelijkheid en
+een benadering.
 
----
+**1/4 = 0,25**
 
-## Deel B — Gehele en rationale getallen
+maar:
 
-7. −8 × (4 − 7)
-8. −15 + 8 − (−6)
-9. 2/3 + 3/5
-10. 5/6 − 1/4
-11. 3/4 × 8/9
-12. 3/8 ÷ 9/4
-13. Schrijf 0,375 als vereenvoudigde breuk.
-14. Wat is 17,5% van 80?
+**√2 ≈ 1,414**
 
----
+------------------------------------------------------------------------
 
-## Deel C — Getaltheorie
+## Afronden
 
-15. Ontbind 60 in priemfactoren.
-16. Bereken GGD(48, 18).
-17. Bereken KGV(48, 18).
-18. Is 97 priem? Leg uit hoe je dat weet.
-19. Geef alle positieve delers van 36.
+Bij afronden kijken we naar het eerste cijfer dat we niet behouden.
 
----
+Voor de gebruikelijke afrondingsregel:
 
-## Deel D — Machten en wortels
+-   0, 1, 2, 3, 4 → vorige cijfer blijft staan;
+-   5, 6, 7, 8, 9 → vorige cijfer wordt met 1 verhoogd.
 
-20. 2³ × 2⁴
-21. (3²)³
-22. 4 500 in wetenschappelijke notatie.
-23. √144
-24. Waarom is (3 + 4)² niet gelijk aan 3² + 4²?
-25. Tussen welke gehele getallen ligt √30?
+Voorbeeld:
 
----
+**3,14159**
 
-## Deel E — Begrip en redeneren
+afgerond op twee decimalen:
 
-26. Waarom is 0 geen priemgetal?
-27. Waarom is delen door 0 niet gedefinieerd?
-28. Waarom is 1/2 = 2/4?
-29. Waarom is √2 geen rationaal getal?
-30. Leg uit hoe de distributieve eigenschap later in algebra wordt gebruikt.
+**3,14**
 
----
+Afgerond op drie decimalen:
 
-# Antwoorden eindtoets
+**3,142**
 
-## Deel A
+Een afgerond getal is een **benadering** van het oorspronkelijke getal.
 
-1. 1 234
-2. 415
-3. 888
-4. 13 rest 1
-5. 26
-6. 26
+------------------------------------------------------------------------
 
-## Deel B
+## Schatten
 
-7. 24
-8. −1
-9. 19/15
-10. 7/12
-11. 2/3
-12. 1/6
-13. 3/8
-14. 14
+Schatten betekent dat je vóór of tijdens een berekening bepaalt in welke
+buurt het antwoord zou moeten liggen.
 
-## Deel C
+Neem:
 
-15. 2² × 3 × 5
-16. 6
-17. 144
-18. Ja. Je hoeft alleen priemdelers tot en met √97 te controleren. Geen daarvan deelt 97.
-19. 1, 2, 3, 4, 6, 9, 12, 18, 36
+**19 × 21**
 
-## Deel D
+Een snelle schatting is:
 
-20. 2⁷ = 128
-21. 3⁶ = 729
-22. 4,5 × 10³
-23. 12
-24. 3² + 4² = 25, terwijl (3 + 4)² = 49. In het algemeen geldt: (a + b)² = a² + 2ab + b².
-25. 5 < √30 < 6
+**20 × 20 = 400**
 
-## Deel E
+Het exacte antwoord is:
 
-26. 0 heeft niet precies twee positieve delers; bovendien is de priemgetaldefinitie alleen voor natuurlijke getallen groter dan 1.
-27. Als a/0 = b zou bestaan, dan zou 0 × b = a moeten gelden. Maar 0 × b = 0. Voor a ≠ 0 is dat onmogelijk.
-28. Omdat teller en noemer van 1/2 met hetzelfde niet-nul getal zijn vermenigvuldigd: 1 × 2 / (2 × 2) = 2/4.
-29. √2 kan niet worden geschreven als verhouding van twee gehele getallen. Daarom is √2 irrationaal.
-30. Dezelfde rekenwet werkt met letters: a(b + c) = ab + ac. Bijvoorbeeld x(x + 3) = x² + 3x.
+**399**
 
----
+De schatting maakt onmiddellijk duidelijk dat een antwoord zoals 4 000
+onmogelijk is.
 
-# Poort naar Fase 2 — Algebra
+Schatten is daarom een controlemechanisme.
 
-Je hebt in Fase 1 voortdurend met concrete getallen gewerkt.
+------------------------------------------------------------------------
 
-Nu verandert één ding:
+## Orde van grootte
 
-**getallen kunnen door letters worden vervangen.**
+Soms is het niet nodig het exacte getal te kennen. We willen vooral
+weten in welke grootteorde het ligt.
 
-De rekenwetten veranderen niet.
+Neem:
 
-Je kent:
+**4 872 × 32**
+
+We kunnen benaderen als:
+
+**5 × 10³ × 3 × 10¹**
+
+Dat geeft:
+
+**15 × 10⁴ = 1,5 × 10⁵**
+
+oftewel ongeveer:
+
+**150 000**
+
+Het exacte product is:
+
+**155 904**
+
+De schatting zit dus in dezelfde grootteorde.
+
+------------------------------------------------------------------------
+
+## Wetenschappelijke notatie
+
+Voor zeer grote of zeer kleine getallen is de gewone decimale
+schrijfwijze onhandig.
+
+Wetenschappelijke notatie heeft de vorm:
+
+**a × 10ⁿ**
+
+waarbij:
+
+**1 ≤ \|a\| \< 10**
+
+Voorbeelden:
+
+**4 500 = 4,5 × 10³**
+
+**63 000 = 6,3 × 10⁴**
+
+**0,0032 = 3,2 × 10⁻³**
+
+Wetenschappelijke notatie maakt de orde van grootte onmiddellijk
+zichtbaar.
+
+------------------------------------------------------------------------
+
+## Positieve en negatieve exponenten
+
+Een positieve exponent verschuift de komma naar rechts:
+
+**4,5 × 10³ = 4 500**
+
+Een negatieve exponent verschuift de komma naar links:
+
+**3,2 × 10⁻³ = 0,0032**
+
+De negatieve exponent betekent hier dat we delen door een macht van 10:
+
+**10⁻³ = 1/10³ = 1/1000**
+
+Dit is een natuurlijke uitbreiding van de machtswetten.
+
+------------------------------------------------------------------------
+
+## Waarom is dit belangrijk voor wetenschap?
+
+In natuurkunde, chemie en techniek komen waarden voor die vele ordes van
+grootte verschillen.
+
+Voorbeelden van de notatie:
+
+-   massa's of afstanden op microscopische schaal;
+-   astronomische afstanden;
+-   elektrische ladingen;
+-   frequenties;
+-   concentraties.
+
+Wetenschappelijke notatie koppelt daarom rekenkundige structuur aan
+praktisch wetenschappelijk rekenen.
+
+------------------------------------------------------------------------
+
+# De grote structuur van Fase 1
+
+Fase 1 is geen verzameling van dertien losse hoofdstukken.
+
+De milestones bouwen een keten op:
+
+``` text
+Hoeveelheid
+   ↓
+Cijfers en getallen
+   ↓
+Positiestelsel en getallenlijn
+   ↓
+Hoofdbewerkingen
+   ↓
+Uitbreiding naar negatieve getallen
+   ↓
+Breuken en rationale getallen
+   ↓
+Decimalen en percentages
+   ↓
+Verhoudingen en evenredigheid
+   ↓
+Delers en deelbaarheid
+   ↓
+Priemfactorisatie
+   ↓
+GGD, KGV en algoritmen
+   ↓
+Machten
+   ↓
+Wortels
+   ↓
+Irrationale getallen
+   ↓
+Reële getallen
+   ↓
+Schatten en wetenschappelijke notatie
+   ↓
+ALGEBRA
+```
+
+De uitbreiding van het getallensysteem is daarbij een rode draad:
+
+**ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ**
+
+De aanleiding voor iedere uitbreiding is een concreet probleem:
+
+  Bestaand systeem   Probleem   Uitbreiding
+  ------------------ ---------- -------------
+  ℕ                  3 − 5      ℤ
+  ℤ                  1 ÷ 2      ℚ
+  ℚ                  √2         ℝ
+
+Dit is niet alleen een historisch verhaal. Het illustreert een algemeen
+wiskundig principe:
+
+> **Wanneer de bestaande structuur niet voldoende is om een gewenste
+> bewerking of probleem te beschrijven, zoeken we een ruimere structuur
+> waarin dat wel mogelijk is.**
+
+------------------------------------------------------------------------
+
+# Brug naar Fase 2 --- Algebra
+
+Tot nu toe hebben we vooral met concrete getallen gerekend.
+
+Nu maken we een belangrijke abstractiestap.
+
+Neem:
 
 **3(4 + 5) = 3 × 4 + 3 × 5**
 
-Nu vervangen we 4 door x:
+De distributieve eigenschap werkt omdat de rekenwetten gelden voor de
+betrokken getallen.
+
+Maar we kunnen een getal vervangen door een letter:
 
 **3(x + 5) = 3x + 15**
 
-En uiteindelijk vervangen we ook 3:
+En uiteindelijk kunnen we ook het getal 3 vervangen:
 
 **a(x + 5) = ax + 5a**
 
-Dezelfde wet blijft gelden.
+De rekenwet is dezelfde.
 
-> **Algebra is geen nieuwe rekenkunde. Het is rekenkunde waarbij sommige getallen nog onbekend of algemeen zijn.**
+Letters stellen in algebra geen "nieuwe soort getallen" voor. Ze kunnen
+een onbekende waarde voorstellen, maar ook een willekeurige waarde of
+een hele verzameling mogelijke waarden.
+
+Daarmee verandert de aard van het rekenen:
+
+> **Rekenen met concrete getallen wordt rekenen met algemene relaties.**
 
 Dat is de poort naar Fase 2.
 
----
+------------------------------------------------------------------------
 
-# Beheersingscheck
+# Beheersingsdoelen van Fase 1
 
-Je bent klaar voor Fase 2 wanneer je:
+Aan het einde van Fase 1 moet je de volgende ideeën en vaardigheden
+beheersen:
 
-- het positiestelsel zonder moeite kunt gebruiken;
-- de vier hoofdbewerkingen beheerst;
-- de rekenwetten begrijpt;
-- de bewerkingsvolgorde correct toepast;
-- met positieve en negatieve gehele getallen kunt rekenen;
-- breuken kunt vereenvoudigen en bewerken;
-- decimalen, procenten en verhoudingen kunt omrekenen;
-- priemfactorisaties kunt maken;
-- GGD en KGV kunt bepalen;
-- machten en wortels kunt gebruiken;
-- antwoorden kunt schatten en controleren;
-- het onderscheid tussen ℕ, ℤ, ℚ en ℝ kunt uitleggen;
-- kunt uitleggen waarom √2 niet rationaal is;
-- de distributieve eigenschap kunt herkennen als basis voor algebra.
+-   het verschil tussen een cijfer en een getal uitleggen;
+-   het tientallig positiestelsel gebruiken;
+-   de betekenis van nul als hoeveelheid en als plaatshouder begrijpen;
+-   getallen op een getallenlijn plaatsen en vergelijken;
+-   optellen, aftrekken, vermenigvuldigen en delen begrijpen;
+-   delingen met een rest interpreteren;
+-   commutativiteit, associativiteit en distributiviteit herkennen;
+-   de bewerkingsvolgorde correct toepassen;
+-   uitleggen waarom negatieve getallen nodig zijn;
+-   rekenen met gehele getallen;
+-   absolute waarde als afstand tot nul begrijpen;
+-   breuken interpreteren als verdeling én als getallen;
+-   breuken vereenvoudigen en vergelijken;
+-   breuken optellen, aftrekken, vermenigvuldigen en delen;
+-   rationale getallen herkennen;
+-   decimalen als plaatswaarden begrijpen;
+-   breuken, decimalen en percentages met elkaar verbinden;
+-   procentuele veranderingen onderscheiden van procentpunten;
+-   verhoudingen en eenvoudige evenredigheden interpreteren;
+-   delers en veelvouden herkennen;
+-   deelbaarheidsregels gebruiken;
+-   priemgetallen herkennen;
+-   natuurlijke getallen ontbinden in priemfactoren;
+-   GGD en KGV bepalen;
+-   het algoritme van Euclides begrijpen;
+-   machten en de belangrijkste machtswetten gebruiken;
+-   vierkantswortels en hogere wortels interpreteren;
+-   typische foutregels rond wortels herkennen;
+-   uitleggen waarom √2 irrationaal is;
+-   het onderscheid tussen ℕ, ℤ, ℚ en ℝ uitleggen;
+-   exacte waarden van benaderingen onderscheiden;
+-   afronden en schatten gebruiken als controle;
+-   wetenschappelijke notatie lezen en gebruiken;
+-   herkennen hoe de rekenwetten de overgang naar algebra voorbereiden.
 
-Als één van deze onderdelen nog onzeker is, herhaal dan de betreffende milestone en maak nieuwe oefeningen.
+## Het belangrijkste eindinzicht
 
-**Fase 1 is niet geslaagd wanneer je alleen de regels kunt reproduceren. Fase 1 is geslaagd wanneer je de regels kunt gebruiken, verklaren en herkennen in een nieuw probleem.**
+Fase 1 gaat uiteindelijk niet over het uit het hoofd leren van honderden
+rekenregels.
+
+Het gaat over het ontdekken van **structuur**.
+
+Getallen hebben eigenschappen. Bewerkingen hebben wetten. Nieuwe
+getallen ontstaan omdat bestaande getallen niet voldoende zijn. En
+dezelfde wetten die we eerst met concrete getallen ontdekken, kunnen
+later worden geformuleerd met abstracte symbolen.
+
+Daarmee is de overgang naar algebra geen breuk met de rekenkunde.
+
+**Algebra is de volgende abstractielaag van dezelfde wiskundige
+structuur.**
