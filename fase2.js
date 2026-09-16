@@ -168,13 +168,13 @@ const MILESTONES_2 = [
 
       <h3>2. Welke termen zijn gelijksoortig?</h3>
       <p>Termen zijn gelijksoortig wanneer ze hetzelfde lettergedeelte hebben: dezelfde variabelen met dezelfde exponenten.</p>
-      <p class="formula">3x,\; −5x,\; 12x</p>
+      <p class="formula">3x, −5x, 12x</p>
       <p>zijn gelijksoortig.</p>
       <p>Maar:</p>
-      <p class="formula">3x,\; 3x^{2},\; 3y</p>
+      <p class="formula">3x, 3x^{2}, 3y</p>
       <p>zijn niet gelijksoortig.</p>
       <p>Ook:</p>
-      <p class="formula">2xy,\; −7xy,\; 4xy</p>
+      <p class="formula">2xy, −7xy, 4xy</p>
       <p>zijn gelijksoortig, terwijl <span class="formula-inline">2xy</span> en <span class="formula-inline">2x^{2}y</span> dat niet zijn.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">4x^{2} + 3x − 2x^{2} + 5x = 2x^{2} + 8x</p>
