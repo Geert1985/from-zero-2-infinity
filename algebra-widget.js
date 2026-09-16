@@ -57,4 +57,32 @@
   if (typeof WIDGET_BUILDERS !== "undefined") {
     WIDGET_BUILDERS.algebraMachine = mountAlgebraMachine;
   }
+
+  // app.js roept render() pas aan nadat alle scripts geladen zijn. De les
+  // wordt daarom via een microtask na de render voorzien van het widget-slot.
+  // Zo blijft fase2.js zelf volledig inhoudelijk en declaratief.
+  function installLessonSlot() {
+    const app = document.getElementById("app");
+    if (!app || typeof mountWidgets !== "function") return;
+
+    const lesson = app.querySelector(".lesson");
+    if (!lesson) return;
+
+    const path = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
+    if (path[0] !== "fase" || path[2] !== "m" || path[3] !== "2.1" || path[4] !== "les") return;
+
+    const host = lesson.querySelector('.widget-host[data-mid="2.1"]');
+    if (!host) return;
+
+    const slot = document.createElement("div");
+    slot.setAttribute("data-widget", "algebraMachine");
+    host.replaceWith(slot);
+    mountWidgets(app, "2.1");
+  }
+
+  const app = document.getElementById("app");
+  if (app && typeof MutationObserver !== "undefined") {
+    const observer = new MutationObserver(() => installLessonSlot());
+    observer.observe(app, { childList: true, subtree: true });
+  }
 })();
