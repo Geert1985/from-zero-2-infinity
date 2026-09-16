@@ -30,7 +30,9 @@ const MILESTONES_1 = [
           </ul>
         </div>
 
-        <div class="callout"><strong>Cijfer ≠ getal.</strong> Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</div>
+        <div class="callout"><p><strong>Cijfer ≠ getal.</strong></p> 
+        <p>Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</p>
+        </div>
 
       <h3>2. Cijfers en de tien symbolen</h3>
         <p>In het decimale stelsel gebruiken we precies tien cijfers:</p>
@@ -107,6 +109,7 @@ const MILESTONES_1 = [
             <li>De <strong>plaatswaarde</strong> is wat het cijfer betekent door zijn plaats in het getal.</li>
           </ul>
         </div>
+
         <p>Bijvoorbeeld in <strong>4 705</strong>:</p>
         <ul>
           <li>het cijfer is <strong>7</strong>;</li>
@@ -1865,11 +1868,8 @@ negatieve getallen.</p>
       één meter of een taart.
     </p>
 
-    <p>
-      We kunnen een geheel verdelen in kleinere stukken.
-      Om met breuken te werken, verdelen we het geheel in
-      <strong>gelijke delen</strong>.
-    </p>
+    <p>We kunnen een geheel verdelen in kleinere stukken.</p> Om met breuken te werken, verdelen we het geheel in <strong>gelijke delen</strong>.</p>
+    <p>Zoals we een pizza in 4 gelijke delen zouden verdelen zodat iedereen een even groot stuk krijgt.</p>
 
     <div class="callout">
       <strong>Belangrijk</strong>
@@ -1903,25 +1903,24 @@ negatieve getallen.</p>
 
         <h3>3. Meerdere delen nemen</h3>
         <p>
-      We hoeven natuurlijk niet altijd maar één deel te nemen.
-      Als een geheel in 4 gelijke delen is verdeeld en we nemen
+      We hoeven natuurlijk niet altijd maar één deel te nemen.</p>
+      <p>Als een geheel in 4 gelijke delen is verdeeld en we nemen</p>
       3 van die delen, dan hebben we <strong>drie vierde</strong> van
-      het geheel.
-    </p>
+      het geheel.</p>
+
 
     <p class="formula">\frac{3}{4}</p>
 
     <p>
       De betekenis daarvan is eenvoudig:
-      <strong>3 van de 4 gelijke delen</strong>.
-    </p>
+      <strong>3 van de 4 gelijke delen</strong>.</p>
+      <p>Denken we terug aan de pizza, dan kunnen we zeggen dat we 3 gelijke pizza delen van de 4 opeten.</p>
 
     <div class="callout">
       <strong>Inzicht</strong>
       <p>
-        Een breuk beschrijft hoeveel gelijke delen van een geheel
-        we nemen.
-      </p>
+        Een breuk beschrijft hoeveel gelijke delen van een geheel we nemen.</p>
+        <p>Het onderste getal geeft weer hoeveel delen er in totaal zijn, het bovenste getal hoeveel delen we ervan nemen.</p>
     </div>
 
         <h3>4. Meer delen betekent kleinere stukken</h3>
@@ -2029,6 +2028,7 @@ negatieve getallen.</p>
         De <strong>noemer</strong> vertelt in hoeveel gelijke delen
         het geheel is verdeeld.
       </p>
+    </div>
       
 
 
