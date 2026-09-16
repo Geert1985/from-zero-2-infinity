@@ -18,15 +18,19 @@ const MILESTONES_2 = [
       <h3>1. Van een bekend getal naar een letter</h3>
       <p>In Fase 1 rekenden we met concrete getallen. Een tas kost 12 euro. Twee tassen kosten:</p>
       <p class="formula">2 · 12 = 24</p>
+      <div class="callout"><strong>Vanaf nu schrijven we het maalteken als een punt (·).</strong>
+      <p>Dat doen we omdat we in de algebra ook letters gebruiken.</p> 
+      <p>Het gewone maalteken × kan dan gemakkelijk verward worden met de letter x, die we als variabele gebruiken zoals we straks zullen zien.</p></div>
       <p>Maar wat als de prijs nog niet bekend is, of als die kan veranderen? Dan willen we niet één specifiek geval beschrijven, maar het algemene verband.</p>
       <p>Noem de prijs van één tas <strong>p</strong>. Twee tassen kosten dan:</p>
-      <p class="formula">2p</p>
+      <p class="formula">2 · p</p>
       <p>Als later blijkt dat p = 12, krijgen we:</p>
       <p class="formula">2 · 12 = 24</p>
       <p>Als p = 15, krijgen we:</p>
       <p class="formula">2 · 15 = 30</p>
-      <p>De uitdrukking <span class="formula">2p</span> beschrijft dus alle mogelijke prijzen tegelijk.</p>
-      <div class="callout"><strong>Een variabele is een letter die een getal voorstelt.</strong> De waarde van die variabele kan nog onbekend zijn, of verschillende toegelaten waarden aannemen.</div>
+      <p>De uitdrukking <span class="formula-inline">2p</span> beschrijft dus alle mogelijke prijzen tegelijk.</p>
+      <div class="callout"><strong>Een variabele is een letter die een getal voorstelt.</strong> 
+      <p>De waarde van die variabele kan nog onbekend zijn, of verschillende toegelaten waarden aannemen.</p></div>
 
       <h3>2. Onbekende of veranderlijke?</h3>
       <p>Hetzelfde symbool kan in verschillende situaties een andere rol spelen.</p>
@@ -49,7 +53,7 @@ const MILESTONES_2 = [
       <p class="formula">x = 1x</p>
       <p>Ook een factor −1 wordt meestal verkort geschreven:</p>
       <p class="formula">−x = −1x</p>
-      <div class="callout"><strong>Let op:</strong> <span class="formula">3x</span> betekent <strong>3 keer x</strong>, niet 3 + x. Het ontbreken van het vermenigvuldigingsteken is een belangrijke afspraak in de algebra.</div>
+      <div class="callout"><strong>Let op:</strong> <span class="formula-inline">3x</span> betekent <strong>3 keer x</strong>, niet 3 + x. Het ontbreken van het vermenigvuldigingsteken is een belangrijke afspraak in de algebra.</div>
 
       <h3>4. Onderdelen van een algebraïsche uitdrukking</h3>
       <p>Een <strong>algebraïsche uitdrukking</strong> is een combinatie van getallen, letters en bewerkingen. Bijvoorbeeld:</p>
@@ -61,10 +65,10 @@ const MILESTONES_2 = [
         <li><strong>constante:</strong> een getal zonder variabele, hier 5;</li>
         <li><strong>term:</strong> een onderdeel dat door + of − van andere termen is gescheiden.</li>
       </ul>
-      <p>De uitdrukking <span class="formula">3x + 5</span> bestaat dus uit twee termen: <span class="formula">3x</span> en <span class="formula">5</span>.</p>
+      <p>De uitdrukking <span class="formula-inline">3x + 5</span> bestaat dus uit twee termen: <span class="formula-inline">3x</span> en <sspan class="formula-inline">5</span>.</p>
       <p>Bij:</p>
       <p class="formula">−4x + 7 − 2x</p>
-      <p>zijn de termen <span class="formula">−4x</span>, <span class="formula">7</span> en <span class="formula">−2x</span>. Het minteken hoort bij de term die erop volgt.</p>
+      <p>zijn de termen <span class="formula-inline">−4x</span>, <span class="formula-inline">7</span> en <span class="formula-inline">−2x</span>. Het minteken hoort bij de term die erop volgt.</p>
 
       <h3>5. Uitdrukking of vergelijking?</h3>
       <p>Het onderscheid tussen een uitdrukking en een vergelijking is belangrijk.</p>
@@ -74,7 +78,11 @@ const MILESTONES_2 = [
       <p>Een vergelijking zoals:</p>
       <p class="formula">3x + 5 = 17</p>
       <p>bevat wel een gelijkheidsteken. We zoeken dan naar waarden van x waarvoor de linker- en rechterkant dezelfde waarde hebben.</p>
-      <div class="callout"><strong>Onthoud:</strong> een uitdrukking geeft een hoeveelheid of berekening weer; een vergelijking stelt dat twee uitdrukkingen gelijk zijn.</div>
+      <div class="callout">
+        <p><strong>Onthoud:</strong></p> 
+        <p>Een uitdrukking geeft een hoeveelheid of berekening weer;</p> 
+        <p>een vergelijking stelt dat twee uitdrukkingen gelijk zijn.</p>
+      </div>
 
       <h3>6. Een waarde invullen</h3>
       <p>Een algebraïsche uitdrukking krijgt een concrete waarde zodra we een waarde voor de variabele kiezen.</p>
@@ -82,14 +90,14 @@ const MILESTONES_2 = [
       <p class="formula">3x + 5</p>
       <p>en stel x = 4. Dan vervangen we x door 4:</p>
       <p class="formula">3 · 4 + 5 = 12 + 5 = 17</p>
-      <p>De waarde van <span class="formula">3x + 5</span> is dus 17 voor x = 4.</p>
+      <p>De waarde van <span class="formula-inline">3x + 5</span> is dus 17 voor x = 4.</p>
       <p>Bij een negatieve waarde gebruiken we haakjes om duidelijk te maken dat de volledige waarde wordt ingevuld:</p>
       <p class="formula">x = −2</p>
       <p class="formula">3x + 5 = 3(−2) + 5 = −6 + 5 = −1</p>
       <div data-widget="algebraMachine"></div>
       <p>Ook bij machten zijn haakjes belangrijk:</p>
       <p class="formula">x = −3 → x² = (−3)² = 9</p>
-      <p>Dit is iets anders dan <span class="formula">−3²</span>, waarvoor de gebruikelijke rekenvolgorde eerst de macht berekent.</p>
+      <p>Dit is iets anders dan <span class="formula-inline">−3²</span>, waarvoor de gebruikelijke rekenvolgorde eerst de macht berekent.</p>
 
       <h3>7. Dezelfde letter kan verschillende waarden aannemen</h3>
       <p>Een variabele staat niet vast op één getal. Als:</p>
@@ -99,18 +107,21 @@ const MILESTONES_2 = [
       <p class="formula">x = 1 → A = 3</p>
       <p class="formula">x = 5 → A = 11</p>
       <p>De formule beschrijft daarmee een hele verzameling mogelijke situaties. Welke waarden werkelijk zijn toegestaan, hangt af van de context. Een lengte kan bijvoorbeeld niet negatief zijn.</p>
-      <div class="callout"><strong>Een formule krijgt betekenis door haar context.</strong> Niet elke wiskundig mogelijke waarde van een variabele hoeft in de werkelijkheid toegelaten te zijn.</div>
+      <div class="callout">
+        <p><strong>Een formule krijgt betekenis door haar context.</strong></p> 
+        <p>Niet elke wiskundig mogelijke waarde van een variabele hoeft in de werkelijkheid toegelaten te zijn.</p>
+      </div>
 
       <h3>8. Gelijksoortige termen</h3>
       <p>We kunnen sommige termen samenvoegen omdat ze dezelfde algebraïsche structuur hebben.</p>
-      <p>Zo zijn <span class="formula">3x</span> en <span class="formula">5x</span> gelijksoortige termen:</p>
+      <p>Zo zijn <span class="formula-inline">3x</span> en <span class="formula-inline">5x</span> gelijksoortige termen:</p>
       <p class="formula">3x + 5x = 8x</p>
       <p>Ook:</p>
       <p class="formula">7a − 2a = 5a</p>
       <p>en:</p>
       <p class="formula">4x² + 3x² = 7x²</p>
       <p>Termen zijn gelijksoortig wanneer dezelfde variabelen met dezelfde exponenten voorkomen.</p>
-      <p>Daarom zijn <span class="formula">3x</span> en <span class="formula">3x²</span> <strong>niet</strong> gelijksoortig. Ook <span class="formula">3x</span> en 5 zijn niet gelijksoortig.</p>
+      <p>Daarom zijn <span class="formula-inline">3x</span> en <span class="formula-inline">3x²</span> <strong>niet</strong> gelijksoortig. Ook <span class="formula-inline">3x</span> en 5 zijn niet gelijksoortig.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">3x + 5 + 2x − 1 = 5x + 4</p>
       <p>We hebben alleen gelijksoortige termen samengenomen:</p>
@@ -121,11 +132,15 @@ const MILESTONES_2 = [
 
       <h3>9. Een variabele kan ook een complexe uitdrukking vertegenwoordigen</h3>
       <p>Een letter hoeft niet altijd één eenvoudig getal te vervangen. Soms gebruiken we een letter als afkorting voor een grootheid of voor een waarde die uit een andere berekening komt.</p>
-      <p>Als bijvoorbeeld <span class="formula">l = 8</span> en <span class="formula">b = 5</span>, dan is de oppervlakte van een rechthoek:</p>
+      <p>Als bijvoorbeeld <span class="formula-inline">l = 8</span> en <span class="formula-inline">b = 5</span>, dan is de oppervlakte van een rechthoek:</p>
       <p class="formula">A = l · b = 8 · 5 = 40</p>
       <p>De letters maken het mogelijk om eerst een algemene formule op te stellen en pas daarna concrete waarden in te vullen.</p>
 
-      <div class="callout"><strong>Kernidee:</strong> algebra is een taal om algemene patronen en verbanden te beschrijven. In plaats van telkens met één concreet getal te rekenen, gebruiken we symbolen zodat één uitdrukking veel verschillende situaties kan beschrijven.</div>
+      <div class="callout"><p><strong>Kernidee:</strong></p> 
+      <p>Algebra is een taal om algemene patronen en verbanden te beschrijven.</p>
+      <p>In plaats van telkens met één concreet getal te rekenen, gebruiken we symbolen zodat één uitdrukking veel verschillende situaties kan 
+        beschrijven.</p>
+      </div>
     `
   },
   {
@@ -136,11 +151,11 @@ const MILESTONES_2 = [
       <h2>Algebraïsche bewerkingen</h2>
       <p><strong>Doel:</strong> gelijksoortige termen samennemen, haakjes wegwerken, tweetermen vermenigvuldigen, merkwaardige producten herkennen en ontbinden.</p>
       <h3>1. Optellen en aftrekken</h3>
-      <p>Alleen gelijksoortige termen. <span class="formula">3x + 7 + 2x − 4 = 5x + 3</span>.</p>
+      <p>Alleen gelijksoortige termen. <span class="formula-inline">3x + 7 + 2x − 4 = 5x + 3</span>.</p>
       <h3>2. Distributiviteit</h3>
       <p class="formula">a(b + c) = ab + ac</p>
       <p class="formula">3(x + 4) = 3x + 12</p>
-      <p>Elke term in het haakje wordt vermenigvuldigd. <span class="formula">3(x + 4)</span> is niet <span class="formula">3x + 4</span>.</p>
+      <p>Elke term in het haakje wordt vermenigvuldigd. <span class="formula-inline">3(x + 4)</span> is niet <span class="formula-inline">3x + 4</span>.</p>
       <h3>3. Minteken vóór een haakje</h3>
       <p class="formula">−(x − 5) = −x + 5</p>
       <p>Een min vóór een haakje is vermenigvuldigen met −1: elk teken in het haakje wisselt.</p>
@@ -151,7 +166,7 @@ const MILESTONES_2 = [
       <p class="formula">(a + b)^{2} = a^{2} + 2ab + b^{2}</p>
       <p class="formula">(a − b)^{2} = a^{2} − 2ab + b^{2}</p>
       <p class="formula">(a + b)(a − b) = a^{2} − b^{2}</p>
-      <p>Klassieke fout: <span class="formula">(x + 3)^{2}</span> is niet x² + 9, maar x² + 6x + 9.</p>
+      <p>Klassieke fout: <span class="formula-inline">(x + 3)^{2}</span> is niet x² + 9, maar x² + 6x + 9.</p>
       <h3>6. Ontbinden</h3>
       <p class="formula">6x + 9 = 3(2x + 3)</p>
       <p class="formula">x^{2} − 9 = (x − 3)(x + 3)</p>
@@ -166,14 +181,14 @@ const MILESTONES_2 = [
       <h2>Vergelijkingen</h2>
       <p><strong>Doel:</strong> een lineaire vergelijking oplossen met de balansgedachte en de oplossing controleren.</p>
       <h3>1. Uitdrukking of vergelijking?</h3>
-      <p><span class="formula">2x + 3</span> is een uitdrukking. <span class="formula">2x + 3 = 11</span> is een vergelijking. Een oplossing maakt de gelijkheid waar.</p>
+      <p><span class="formula-inline">2x + 3</span> is een uitdrukking. <span class="formula-inline">2x + 3 = 11</span> is een vergelijking. Een oplossing maakt de gelijkheid waar.</p>
       <h3>2. Balans</h3>
-      <p>Wat je links doet, doe je rechts. Trek 3 af: <span class="formula">2x = 8</span>. Deel door 2: <span class="formula">x = 4</span>. Je brengt x niet zomaar naar de andere kant; je voert een bewerking uit op beide leden.</p>
+      <p>Wat je links doet, doe je rechts. Trek 3 af: <span class="formula-inline">2x = 8</span>. Deel door 2: <span class="formula-inline">x = 4</span>. Je brengt x niet zomaar naar de andere kant; je voert een bewerking uit op beide leden.</p>
       <div class="callout"><strong>Oplossen is niet toveren met x.</strong> Elke stap bewaart de gelijkheid. Vraag bij elke regel: waarom mag dit?</div>
       <h3>3. Omgekeerde bewerkingen</h3>
       <p>Maak x vrij in omgekeerde volgorde: eerst + en − ongedaan, daarna × en ÷ (niet door 0).</p>
       <h3>4. x aan beide kanten</h3>
-      <p><span class="formula">3x − 7 = 2x + 5</span> wordt na aftrekken van 2x: <span class="formula">x − 7 = 5</span>, dus x = 12. Controle in het origineel: beide kanten 29.</p>
+      <p><span class="formula-inline">3x − 7 = 2x + 5</span> wordt na aftrekken van 2x: <span class="formula-inline">x − 7 = 5</span>, dus x = 12. Controle in het origineel: beide kanten 29.</p>
       <h3>5. Haakjes en breuken</h3>
       <p>Eerst haakjes wegwerken, of beide kanten door dezelfde factor delen. Bij een noemer beide kanten met die noemer vermenigvuldigen. Bij twee noemers met een gemeenschappelijk veelvoud.</p>
       <h3>6. Controle</h3>
@@ -188,14 +203,14 @@ const MILESTONES_2 = [
       <h2>Formules & algebraïsch modelleren</h2>
       <p><strong>Doel:</strong> een situatie vertalen naar letters, invullen, omvormen en de grenzen van een model zien.</p>
       <h3>1. Van verhaal naar formule</h3>
-      <p>Taxi: 4 euro instap en 2 euro per km. Met x kilometer: <span class="formula">P = 4 + 2x</span>. Voor 7 km is P = 18 euro.</p>
+      <p>Taxi: 4 euro instap en 2 euro per km. Met x kilometer: <span class="formula-inline">P = 4 + 2x</span>. Voor 7 km is P = 18 euro.</p>
       <h3>2. Eenheden</h3>
       <p>Elke letter heeft een eenheid. De 2 is euro per kilometer. Eenheden zijn een alarmbel: als de dimensies niet kloppen, beschrijft de formule iets anders dan je denkt.</p>
       <div class="callout"><strong>Eenheden zijn een alarmbel.</strong> Een formule moet in de eenheden kloppen.</div>
       <h3>3. Invullen en omvormen</h3>
-      <p><span class="formula">s = v t</span> met v = 80 km/u en t = 2,5 u geeft s = 200 km. Maak t vrij: <span class="formula">t = s / v</span>. Omvormen is dezelfde algebra als in les 2.3, met een andere letter als onbekende.</p>
+      <p><span class="formula-inline">s = v t</span> met v = 80 km/u en t = 2,5 u geeft s = 200 km. Maak t vrij: <span class="formula-inline">t = s / v</span>. Omvormen is dezelfde algebra als in les 2.3, met een andere letter als onbekende.</p>
       <h3>4. Lineair model</h3>
-      <p><span class="formula">y = a x + b</span>: a is de verandering per stap, b de startwaarde. Een model geldt niet overal: geen negatieve kilometers, geen oneindige rit tegen hetzelfde tarief.</p>
+      <p><span class="formula-inline">y = a x + b</span>: a is de verandering per stap, b de startwaarde. Een model geldt niet overal: geen negatieve kilometers, geen oneindige rit tegen hetzelfde tarief.</p>
       <div class="callout"><strong>Modelleerkring:</strong> situatie → letters → formule → berekenen → terugvertalen → controleren of het zinvol is.</div>
     `
   },
@@ -209,7 +224,7 @@ const MILESTONES_2 = [
       <h3>1. Een bereik, geen enkel getal</h3>
       <p>x > 12 betekent alle getallen groter dan 12, niet alleen 12. ≤ en ≥ sluiten de grens in; < en > doen dat niet.</p>
       <h3>2. Bijna zoals een vergelijking</h3>
-      <p><span class="formula">2x + 1 ≤ 9</span> geeft x ≤ 4. Alle getallen ≤ 4 zijn oplossingen.</p>
+      <p><span class="formula-inline">2x + 1 ≤ 9</span> geeft x ≤ 4. Alle getallen ≤ 4 zijn oplossingen.</p>
       <h3>3. Negatieve factor</h3>
       <p>Vermenigvuldigen of delen door een negatief getal keert het teken om. Want 3 < 5, maar −3 > −5. Dus −2x > 6 wordt x < −3.</p>
       <div class="callout"><strong>Het teken keert om bij een negatieve factor.</strong> Dat is de meest gemaakte fout bij lineaire ongelijkheden.</div>
