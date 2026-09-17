@@ -1,1 +1,24 @@
-see-file
+:root {
+  --gold: #e6c77a;
+  --gold-deep: #b8892d;
+  --ink: #14110c;
+  --parchment: #f4ead3;
+  --parchment-dim: rgba(244, 234, 211, 0.92);
+  --panel: rgba(16, 14, 12, 0.78);
+  --panel-strong: rgba(12, 10, 8, 0.9);
+  --line: rgba(230, 199, 122, 0.35);
+  --good: #7dcea0;
+  --bad: #e07a6a;
+  --locked: rgba(20, 18, 16, 0.55);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; overflow-x: hidden; max-width: 100%; }
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  color: var(--parchment);
+  background: #070705;
+}
+
+#app { min-height: 100vh; }
