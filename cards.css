@@ -36,3 +36,13 @@
   text-transform: none;
   letter-spacing: 0.02em;
 }
+
+.stone.done {
+  background: rgba(22, 42, 30, 0.92);
+  border-color: #7dcea0;
+  box-shadow: 0 0 0 1px rgba(125, 206, 160, 0.25), var(--shadow);
+}
+
+.stone.done .stone-art {
+  border-bottom-color: rgba(125, 206, 160, 0.45);
+}

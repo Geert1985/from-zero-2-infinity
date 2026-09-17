@@ -83,3 +83,22 @@ window.render = function renderPaged() {
 window.addEventListener("hashchange", window.render);
 window.addEventListener("load", window.render);
 if (document.readyState !== "loading") window.render();
+
+document.addEventListener("keydown", function (e) {
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  if (e.target && e.target.closest("input, textarea, select, [contenteditable='true']")) return;
+
+  const parts = parseHash();
+  if (!(parts[0] === "fase" && parts[2] === "m" && parts[4] === "les")) return;
+
+  const btn = document.querySelector(
+    e.key === "ArrowLeft"
+      ? ".lesson-pager .pager-btn:first-child"
+      : ".lesson-pager .pager-btn:last-child"
+  );
+  const href = btn && btn.getAttribute("data-go");
+  if (!href || btn.disabled) return;
+
+  e.preventDefault();
+  go(href);
+});

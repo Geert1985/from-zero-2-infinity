@@ -66,7 +66,7 @@ function renderPhase(phaseId) {
   }
   const list = milestonesFor(phaseId);
   const stones = list.map((m, index) => {
-    const done = milestonePassed(m.id);
+    const done = milestonePassed(m.id) && leerstofCollected(m.id);
     const st = done ? "done" : "";
     const testIco = done ? "assets/medaille.png" : "assets/toets.png";
     return (
