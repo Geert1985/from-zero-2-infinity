@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="tn dn">
+  <title id="tn">Parabool met a kleiner dan 0</title>
+  <desc id="dn">f(x)=−x²+4 gaat door het maximum (0, 4) en opent naar beneden.</desc>
+  <rect width="900" height="420" fill="#161410"/>
+  <text x="450" y="34" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="24">a &lt; 0 — opent naar beneden</text>
+  <g transform="translate(450,50)">
+    <line x1="-280" y1="260" x2="280" y2="260" stroke="#e6c77a" stroke-width="2"/>
+    <line x1="0" y1="300" x2="0" y2="16" stroke="#e6c77a" stroke-width="2"/>
+    <polygon points="280,253 296,260 280,267" fill="#e6c77a"/>
+    <polygon points="-7,16 0,0 7,16" fill="#e6c77a"/>
+    <text x="286" y="248" fill="#e6c77a" font-family="Georgia, serif" font-size="16">x</text>
+    <text x="10" y="12" fill="#e6c77a" font-family="Georgia, serif" font-size="16">y</text>
+    <path d="M -220 260 Q 0 -180 220 260" fill="none" stroke="#f3e2b0" stroke-width="3"/>
+    <circle cx="0" cy="40" r="6" fill="#f3e2b0"/>
+    <text x="14" y="34" fill="#f3e2b0" font-family="Georgia, serif" font-size="15">(0, 4) maximum</text>
+  </g>
+  <text x="450" y="396" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">f(x) = −x² + 4. De parabool is een berg.</text>
+</svg>

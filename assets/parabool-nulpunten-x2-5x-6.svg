@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="tz dz">
+  <title id="tz">Nulpunten van x² − 5x + 6</title>
+  <desc id="dz">Gladde parabool, snijpunten 2 en 3, top op x = 2,5.</desc>
+  <rect width="900" height="460" fill="#161410"/>
+  <text x="450" y="36" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="24">f(x) = x² − 5x + 6</text>
+  <g transform="translate(110,30)" font-family="Georgia, serif">
+    <line x1="20" y1="280" x2="660" y2="280" stroke="#e6c77a" stroke-width="2"/>
+    <line x1="80" y1="350" x2="80" y2="18" stroke="#e6c77a" stroke-width="2"/>
+    <polygon points="660,273 676,280 660,287" fill="#e6c77a"/>
+    <polygon points="73,18 80,2 87,18" fill="#e6c77a"/>
+    <text x="666" y="268" fill="#e6c77a" font-size="16">x</text>
+    <text x="92" y="16" fill="#e6c77a" font-size="16">y</text>
+    <!-- 70 px / x, 28 px / y; oorsprong (80,280). Van x=0 tot x=5. Controle (2.5, −6.5) → (255, 462) -->
+    <path d="M 80 112 Q 255 462 430 112" fill="none" stroke="#f3e2b0" stroke-width="3"/>
+    <circle cx="220" cy="280" r="7" fill="#c4a45a"/>
+    <circle cx="290" cy="280" r="7" fill="#c4a45a"/>
+    <circle cx="255" cy="287" r="5" fill="#f3e2b0"/>
+    <text x="208" y="266" fill="#f3e2b0" font-size="16">2</text>
+    <text x="298" y="266" fill="#f3e2b0" font-size="16">3</text>
+    <text x="88" y="108" fill="#8a7a58" font-size="14">6</text>
+  </g>
+  <text x="450" y="432" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">Nulpunten x = 2 en x = 3. De top ligt ertussen, op x = 2,5.</text>
+</svg>

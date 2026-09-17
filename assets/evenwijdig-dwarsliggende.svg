@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="te de">
+  <title id="te">Evenwijdige lijnen en een dwarsliggende</title>
+  <desc id="de">Twee evenwijdige lijnen gesneden door een dwarsliggende. Overstaande hoeken zijn gelijk.</desc>
+  <rect width="900" height="420" fill="#161410"/>
+  <text x="450" y="36" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="24">Evenwijdig + dwarsliggende</text>
+  <g transform="translate(200,80)">
+    <line x1="0" y1="80" x2="500" y2="80" stroke="#e6c77a" stroke-width="3"/>
+    <line x1="0" y1="240" x2="500" y2="240" stroke="#e6c77a" stroke-width="3"/>
+    <line x1="120" y1="20" x2="380" y2="300" stroke="#f3e2b0" stroke-width="3"/>
+    <text x="510" y="86" fill="#e6c77a" font-family="Georgia, serif" font-size="18">a</text>
+    <text x="510" y="246" fill="#e6c77a" font-family="Georgia, serif" font-size="18">b</text>
+    <text x="390" y="310" fill="#f3e2b0" font-family="Georgia, serif" font-size="18">d</text>
+    <!-- corresponding acute angles, gold arcs -->
+    <path d="M 195 80 A 28 28 0 0 1 214 102" fill="none" stroke="#c4a45a" stroke-width="2.2"/>
+    <path d="M 315 240 A 28 28 0 0 1 334 262" fill="none" stroke="#c4a45a" stroke-width="2.2"/>
+    <text x="228" y="108" fill="#c4a45a" font-family="Georgia, serif" font-size="16">α</text>
+    <text x="348" y="268" fill="#c4a45a" font-family="Georgia, serif" font-size="16">α</text>
+  </g>
+  <text x="450" y="392" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">a ∥ b. Een dwarsliggende d maakt op beide lijnen dezelfde soort hoek α.</text>
+</svg>

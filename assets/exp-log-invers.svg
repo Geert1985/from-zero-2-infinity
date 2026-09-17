@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="ti di">
+  <title id="ti">Exponentiële functie en logaritmische inverse</title>
+  <desc id="di">y=2^x en y=log2(x) zijn elkaars spiegelbeeld over y=x.</desc>
+  <rect width="900" height="460" fill="#161410"/>
+  <text x="450" y="34" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="22">y = 2ˣ en y = log₂ x</text>
+  <g font-family="Georgia, serif">
+    <line x1="80" y1="340" x2="620" y2="340" stroke="#e6c77a" stroke-width="1.8"/>
+    <line x1="220" y1="420" x2="220" y2="40" stroke="#e6c77a" stroke-width="1.8"/>
+    <polygon points="620,334 636,340 620,346" fill="#e6c77a"/>
+    <polygon points="214,40 220,24 226,40" fill="#e6c77a"/>
+    <text x="628" y="328" fill="#e6c77a" font-size="16">x</text>
+    <text x="230" y="36" fill="#e6c77a" font-size="16">y</text>
+    <line x1="172" y1="388" x2="460" y2="100" stroke="#8a7a58" stroke-width="1.5" stroke-dasharray="7 5"/>
+    <text x="468" y="96" fill="#8a7a58" font-size="14">y = x</text>
+    <path fill="none" stroke="#f3e2b0" stroke-width="2.2" d="M 172.0,316.0 L 175.8,314.6 L 179.7,313.2 L 183.5,311.7 L 187.4,310.0 L 191.2,308.3 L 195.0,306.5 L 198.9,304.6 L 202.7,302.6 L 206.6,300.5 L 210.4,298.2 L 214.2,295.8 L 218.1,293.3 L 221.9,290.7 L 225.8,287.8 L 229.6,284.9 L 233.4,281.7 L 237.3,278.4 L 241.1,274.9 L 245.0,271.2 L 248.8,267.2 L 252.6,263.1 L 256.5,258.7 L 260.3,254.1 L 264.2,249.2 L 268.0,244.0 L 271.8,238.5 L 275.7,232.7 L 279.5,226.6 L 283.4,220.2 L 287.2,213.3 L 291.0,206.1 L 294.9,198.5 L 298.7,190.4 L 302.6,181.9 L 306.4,172.9 L 310.2,163.3 L 314.1,153.3 L 317.9,142.6 L 321.8,131.3 L 325.6,119.4"/>
+    <path fill="none" stroke="#c4a45a" stroke-width="2.2" d="M 244.5,386.6 L 248.3,376.5 L 252.2,367.7 L 256.0,359.9 L 259.8,352.9 L 263.7,346.5 L 267.5,340.7 L 271.4,335.3 L 275.2,330.3 L 279.0,325.7 L 282.9,321.3 L 286.7,317.2 L 290.6,313.3 L 294.4,309.7 L 298.2,306.2 L 302.1,302.8 L 305.9,299.7 L 309.8,296.7 L 313.6,293.8 L 317.4,291.0 L 321.3,288.3 L 325.1,285.7 L 329.0,283.2 L 332.8,280.8 L 336.6,278.5 L 340.5,276.3 L 344.3,274.1 L 348.2,272.0 L 352.0,269.9 L 355.8,268.0 L 359.7,266.0 L 363.5,264.2 L 367.4,262.3 L 371.2,260.5 L 375.0,258.8 L 378.9,257.1 L 382.7,255.5 L 386.6,253.8 L 390.4,252.3 L 394.2,250.7 L 398.1,249.2 L 401.9,247.7 L 405.8,246.3 L 409.6,244.9 L 413.4,243.5 L 417.3,242.1 L 421.1,240.8 L 425.0,239.5 L 428.8,238.2 L 432.6,236.9 L 436.5,235.7 L 440.3,234.5 L 444.2,233.3 L 448.0,232.1 L 451.8,230.9 L 455.7,229.8 L 459.5,228.7"/>
+    <circle cx="220" cy="292" r="5" fill="#f3e2b0"/>
+    <circle cx="268" cy="244" r="5" fill="#f3e2b0"/>
+    <circle cx="268" cy="340" r="5" fill="#c4a45a"/>
+    <circle cx="316" cy="292" r="5" fill="#c4a45a"/>
+    <text x="328" y="130" fill="#f3e2b0" font-size="16">y = 2ˣ</text>
+    <text x="470" y="232" fill="#c4a45a" font-size="16">y = log₂ x</text>
+  </g>
+  <text x="450" y="438" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="15">De grafieken zijn elkaars spiegelbeeld over de stippellijn y = x.</text>
+</svg>

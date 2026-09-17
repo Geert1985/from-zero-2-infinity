@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="tg dg">
+  <title id="tg">Exponentiële groei naast een rechte</title>
+  <desc id="dg">100 keer 2 tot de t en 100 plus 100t starten gelijk; na t=1 loopt de exponentiële weg.</desc>
+  <rect width="900" height="460" fill="#161410"/>
+  <text x="450" y="34" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="22">Zelfde start, andere regel</text>
+  <g font-family="Georgia, serif">
+    <line x1="70" y1="390" x2="700" y2="390" stroke="#e6c77a" stroke-width="1.8"/>
+    <line x1="90" y1="410" x2="90" y2="50" stroke="#e6c77a" stroke-width="1.8"/>
+    <polygon points="700,384 716,390 700,396" fill="#e6c77a"/>
+    <polygon points="84,50 90,34 96,50" fill="#e6c77a"/>
+    <text x="708" y="378" fill="#e6c77a" font-size="16">t</text>
+    <text x="100" y="46" fill="#e6c77a" font-size="16">f</text>
+    <line x1="250" y1="386" x2="250" y2="394" stroke="#cbb98a" stroke-width="1.5"/>
+    <line x1="410" y1="386" x2="410" y2="394" stroke="#cbb98a" stroke-width="1.5"/>
+    <line x1="570" y1="386" x2="570" y2="394" stroke="#cbb98a" stroke-width="1.5"/>
+    <text x="84" y="408" fill="#8a7a58" font-size="13">0</text>
+    <text x="244" y="408" fill="#8a7a58" font-size="13">1</text>
+    <text x="404" y="408" fill="#8a7a58" font-size="13">2</text>
+    <text x="564" y="408" fill="#8a7a58" font-size="13">3</text>
+    <line x1="90" y1="354" x2="570" y2="246" stroke="#8a7a58" stroke-width="2"/>
+    <path fill="none" stroke="#f3e2b0" stroke-width="2.2" d="M 90.0,354.0 L 98.0,352.7 L 106.0,351.4 L 114.0,350.1 L 122.0,348.6 L 130.0,347.2 L 138.0,345.7 L 146.0,344.1 L 154.0,342.5 L 162.0,340.8 L 170.0,339.1 L 178.0,337.3 L 186.0,335.4 L 194.0,333.5 L 202.0,331.5 L 210.0,329.5 L 218.0,327.3 L 226.0,325.1 L 234.0,322.8 L 242.0,320.5 L 250.0,318.0 L 258.0,315.5 L 266.0,312.8 L 274.0,310.1 L 282.0,307.3 L 290.0,304.4 L 298.0,301.4 L 306.0,298.2 L 314.0,295.0 L 322.0,291.6 L 330.0,288.2 L 338.0,284.6 L 346.0,280.9 L 354.0,277.0 L 362.0,273.0 L 370.0,268.9 L 378.0,264.6 L 386.0,260.2 L 394.0,255.6 L 402.0,250.9 L 410.0,246.0 L 418.0,240.9 L 426.0,235.7 L 434.0,230.2 L 442.0,224.6 L 450.0,218.8 L 458.0,212.7 L 466.0,206.5 L 474.0,200.0 L 482.0,193.3 L 490.0,186.4 L 498.0,179.2 L 506.0,171.7 L 514.0,164.0 L 522.0,156.1 L 530.0,147.8 L 538.0,139.3 L 546.0,130.4 L 554.0,121.3 L 562.0,111.8 L 570.0,102.0"/>
+    <circle cx="90" cy="354" r="5" fill="#f3e2b0"/>
+    <circle cx="250" cy="318" r="5" fill="#f3e2b0"/>
+    <text x="578" y="108" fill="#f3e2b0" font-size="15">100 · 2ᵗ</text>
+    <text x="578" y="250" fill="#8a7a58" font-size="15">100 + 100t</text>
+  </g>
+  <text x="450" y="438" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="15">t = 0 en t = 1 vallen samen. Daarna wint de factor.</text>
+</svg>

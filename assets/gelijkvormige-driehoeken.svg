@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-labelledby="tg dg">
+  <title id="tg">Twee gelijkvormige driehoeken</title>
+  <desc id="dg">Kleine driehoek 3-4-5 en grote 6-8-10. Overeenkomstige hoeken gelijk, zijden in verhouding 2.</desc>
+  <rect width="900" height="480" fill="#161410"/>
+  <text x="450" y="38" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="24">Gelijkvormig: k = 2</text>
+
+  <!-- kleine driehoek: 3*28=84, 4*28=112 -->
+  <g transform="translate(80,360)">
+    <polygon points="0,0 84,0 0,-112" fill="#2a2418" stroke="#f3e2b0" stroke-width="2.5"/>
+    <rect x="0" y="-16" width="16" height="16" fill="none" stroke="#c4a45a" stroke-width="1.8"/>
+    <!-- angle marks: acute at (84,0) one arc, at top two arcs -->
+    <path d="M 64 0 A 20 20 0 0 0 67.4 -11.2" fill="none" stroke="#c4a45a" stroke-width="1.8"/>
+    <path d="M 0 -92 A 20 20 0 0 0 12.6 -97.3" fill="none" stroke="#c4a45a" stroke-width="1.8"/>
+    <path d="M 0 -86 A 26 26 0 0 0 16.4 -93" fill="none" stroke="#c4a45a" stroke-width="1.8"/>
+    <!-- side ticks -->
+    <line x1="38" y1="8" x2="46" y2="-4" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="-8" y1="-52" x2="4" y2="-60" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="-2" y1="-58" x2="10" y2="-66" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="46" y1="-48" x2="56" y2="-42" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="42" y1="-54" x2="52" y2="-48" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="38" y1="-60" x2="48" y2="-54" stroke="#f3e2b0" stroke-width="2"/>
+    <text x="42" y="36" fill="#d7c49a" font-family="Georgia, serif" font-size="17">3</text>
+    <text x="-28" y="-52" fill="#d7c49a" font-family="Georgia, serif" font-size="17">4</text>
+    <text x="58" y="-62" fill="#f3e2b0" font-family="Georgia, serif" font-size="17">5</text>
+    <text x="42" y="62" fill="#cbb98a" font-family="Georgia, serif" font-size="16">klein</text>
+  </g>
+
+  <!-- grote driehoek: 6*28=168, 8*28=224 -->
+  <g transform="translate(430,400)">
+    <polygon points="0,0 168,0 0,-224" fill="#2a2418" stroke="#f3e2b0" stroke-width="2.5"/>
+    <rect x="0" y="-16" width="16" height="16" fill="none" stroke="#c4a45a" stroke-width="1.8"/>
+    <path d="M 148 0 A 20 20 0 0 0 151.4 -11.2" fill="none" stroke="#c4a45a" stroke-width="1.8"/>
+    <path d="M 0 -204 A 20 20 0 0 0 12.6 -209.3" fill="none" stroke="#c4a45a" stroke-width="1.8"/>
+    <path d="M 0 -198 A 26 26 0 0 0 16.4 -205" fill="none" stroke="#c4a45a" stroke-width="1.8"/>
+    <line x1="80" y1="8" x2="88" y2="-4" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="-8" y1="-108" x2="4" y2="-116" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="-2" y1="-114" x2="10" y2="-122" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="88" y1="-104" x2="98" y2="-98" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="84" y1="-110" x2="94" y2="-104" stroke="#f3e2b0" stroke-width="2"/>
+    <line x1="80" y1="-116" x2="90" y2="-110" stroke="#f3e2b0" stroke-width="2"/>
+    <text x="84" y="36" fill="#d7c49a" font-family="Georgia, serif" font-size="17">6</text>
+    <text x="-32" y="-108" fill="#d7c49a" font-family="Georgia, serif" font-size="17">8</text>
+    <text x="102" y="-124" fill="#f3e2b0" font-family="Georgia, serif" font-size="17">10</text>
+    <text x="84" y="62" fill="#cbb98a" font-family="Georgia, serif" font-size="16">groot</text>
+  </g>
+
+  <text x="450" y="452" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">Zelfde hoeken (zelfde streepjes). Zijden: 3/6 = 4/8 = 5/10 = 1/2, dus k = 2 van klein naar groot.</text>
+</svg>

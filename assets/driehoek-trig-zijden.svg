@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="tt dt">
+  <title id="tt">Overstaande, aanliggende en schuine zijde</title>
+  <desc id="dt">Rechthoekige driehoek. Bij hoek theta: onderaan de aanliggende, links de overstaande, schuin de schuine zijde.</desc>
+  <rect width="900" height="420" fill="#161410"/>
+  <text x="450" y="32" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="22">Zijden vanuit één hoek</text>
+  <g font-family="Georgia, serif">
+    <polygon points="220,330 220,110 620,330" fill="none" stroke="#f3e2b0" stroke-width="2.2"/>
+    <rect x="220" y="314" width="16" height="16" fill="none" stroke="#8a7a58" stroke-width="1.5"/>
+    <path d="M 580 330 A 40 40 0 0 1 584.4 310.2" fill="none" stroke="#c4a45a" stroke-width="2"/>
+    <text x="548" y="318" fill="#c4a45a" font-size="20">θ</text>
+    <text x="400" y="358" text-anchor="middle" fill="#c4a45a" font-size="18">aanliggende</text>
+    <text x="198" y="230" text-anchor="end" fill="#8a7a58" font-size="18">overstaande</text>
+    <text x="460" y="200" fill="#f3e2b0" font-size="18">schuine zijde</text>
+  </g>
+  <text x="450" y="396" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="15">Overstaand: tegenover θ. Aanliggend: naast θ, niet de schuine. Schuin: tegenover de rechte hoek.</text>
+</svg>

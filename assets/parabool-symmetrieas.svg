@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="ts ds">
+  <title id="ts">Parabool met symmetrieas</title>
+  <desc id="ds">Gladde parabool f(x)=x²−4x+3, top (2, −1), as x=2, nulpunten 1 en 3.</desc>
+  <rect width="900" height="460" fill="#161410"/>
+  <text x="450" y="36" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="24">As door de top</text>
+  <g transform="translate(170,36)" font-family="Georgia, serif">
+    <line x1="20" y1="250" x2="560" y2="250" stroke="#e6c77a" stroke-width="2"/>
+    <line x1="80" y1="340" x2="80" y2="20" stroke="#e6c77a" stroke-width="2"/>
+    <polygon points="560,243 576,250 560,257" fill="#e6c77a"/>
+    <polygon points="73,20 80,4 87,20" fill="#e6c77a"/>
+    <text x="566" y="238" fill="#e6c77a" font-size="16">x</text>
+    <text x="92" y="18" fill="#e6c77a" font-size="16">y</text>
+    <line x1="240" y1="20" x2="240" y2="340" stroke="#c4a45a" stroke-width="2" stroke-dasharray="7 5"/>
+    <!-- 80 px / x, 50 px / y; oorsprong (80,250). Q-controle (2,−5) → (240,500) -->
+    <path d="M 80 100 Q 240 500 400 100" fill="none" stroke="#f3e2b0" stroke-width="3"/>
+    <circle cx="160" cy="250" r="6" fill="#c4a45a"/>
+    <circle cx="320" cy="250" r="6" fill="#c4a45a"/>
+    <circle cx="240" cy="300" r="6" fill="#f3e2b0"/>
+    <text x="148" y="238" fill="#d7c49a" font-size="15">1</text>
+    <text x="328" y="238" fill="#d7c49a" font-size="15">3</text>
+    <text x="252" y="318" fill="#f3e2b0" font-size="15">top (2, −1)</text>
+    <text x="252" y="40" fill="#c4a45a" font-size="15">x = 2</text>
+  </g>
+  <text x="450" y="432" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">f(x) = x² − 4x + 3. Links van x = 2 is het spiegelbeeld van rechts.</text>
+</svg>

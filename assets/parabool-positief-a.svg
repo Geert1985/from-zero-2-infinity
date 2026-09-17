@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="tp da">
+  <title id="tp">Parabool met a groter dan 0</title>
+  <desc id="da">f(x)=x² gaat door het minimum (0, 0) en opent naar boven.</desc>
+  <rect width="900" height="420" fill="#161410"/>
+  <text x="450" y="34" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="24">a &gt; 0 — opent naar boven</text>
+  <g transform="translate(450,50)">
+    <line x1="-280" y1="220" x2="280" y2="220" stroke="#e6c77a" stroke-width="2"/>
+    <line x1="0" y1="300" x2="0" y2="16" stroke="#e6c77a" stroke-width="2"/>
+    <polygon points="280,213 296,220 280,227" fill="#e6c77a"/>
+    <polygon points="-7,16 0,0 7,16" fill="#e6c77a"/>
+    <text x="286" y="208" fill="#e6c77a" font-family="Georgia, serif" font-size="16">x</text>
+    <text x="10" y="12" fill="#e6c77a" font-family="Georgia, serif" font-size="16">y</text>
+    <path d="M -220 40 Q 0 400 220 40" fill="none" stroke="#f3e2b0" stroke-width="3"/>
+    <circle cx="0" cy="220" r="6" fill="#f3e2b0"/>
+    <text x="14" y="210" fill="#f3e2b0" font-family="Georgia, serif" font-size="15">(0, 0) minimum</text>
+  </g>
+  <text x="450" y="396" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">f(x) = x². De parabool is een dal.</text>
+</svg>

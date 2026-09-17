@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Afstand als rechthoekige driehoek</title>
+  <desc id="d2">Van (1, 2) naar (4, 6): 3 naar rechts, 4 omhoog, afstand 5.</desc>
+  <rect width="900" height="520" fill="#161410"/>
+  <text x="450" y="40" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="26">d = √(3² + 4²) = 5</text>
+  <g transform="translate(220,450)">
+    <g stroke="#3a3428" stroke-width="1">
+      <line x1="-40" y1="0" x2="360" y2="0"/>
+      <line x1="-40" y1="-50" x2="360" y2="-50"/>
+      <line x1="-40" y1="-100" x2="360" y2="-100"/>
+      <line x1="-40" y1="-150" x2="360" y2="-150"/>
+      <line x1="-40" y1="-200" x2="360" y2="-200"/>
+      <line x1="-40" y1="-250" x2="360" y2="-250"/>
+      <line x1="-40" y1="-300" x2="360" y2="-300"/>
+      <line x1="-40" y1="-350" x2="360" y2="-350"/>
+      <line x1="0" y1="16" x2="0" y2="-360"/>
+      <line x1="50" y1="16" x2="50" y2="-360"/>
+      <line x1="100" y1="16" x2="100" y2="-360"/>
+      <line x1="150" y1="16" x2="150" y2="-360"/>
+      <line x1="200" y1="16" x2="200" y2="-360"/>
+      <line x1="250" y1="16" x2="250" y2="-360"/>
+      <line x1="300" y1="16" x2="300" y2="-360"/>
+    </g>
+    <line x1="-40" y1="0" x2="360" y2="0" stroke="#e6c77a" stroke-width="2"/>
+    <line x1="0" y1="16" x2="0" y2="-360" stroke="#e6c77a" stroke-width="2"/>
+    <polygon points="360,-6 378,0 360,6" fill="#e6c77a"/>
+    <polygon points="-6,-360 0,-378 6,-360" fill="#e6c77a"/>
+    <text x="368" y="-14" fill="#e6c77a" font-family="Georgia, serif" font-size="18">x</text>
+    <text x="10" y="-368" fill="#e6c77a" font-family="Georgia, serif" font-size="18">y</text>
+    <line x1="50" y1="-100" x2="200" y2="-100" stroke="#c4a45a" stroke-width="2" stroke-dasharray="6 5"/>
+    <line x1="200" y1="-100" x2="200" y2="-300" stroke="#c4a45a" stroke-width="2" stroke-dasharray="6 5"/>
+    <line x1="50" y1="-100" x2="200" y2="-300" stroke="#f3e2b0" stroke-width="3"/>
+    <rect x="50" y="-116" width="16" height="16" fill="none" stroke="#c4a45a" stroke-width="1.5"/>
+    <circle cx="50" cy="-100" r="6" fill="#f3e2b0"/>
+    <circle cx="200" cy="-300" r="6" fill="#f3e2b0"/>
+    <text x="58" y="-114" fill="#f3e2b0" font-family="Georgia, serif" font-size="16">A(1, 2)</text>
+    <text x="212" y="-308" fill="#f3e2b0" font-family="Georgia, serif" font-size="16">B(4, 6)</text>
+    <text x="110" y="-82" fill="#d7c49a" font-family="Georgia, serif" font-size="16">3</text>
+    <text x="212" y="-190" fill="#d7c49a" font-family="Georgia, serif" font-size="16">4</text>
+    <text x="88" y="-218" fill="#f3e2b0" font-family="Georgia, serif" font-size="18">d = 5</text>
+  </g>
+  <text x="450" y="500" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="17">De afstand is de schuine zijde van de rechthoekige driehoek op het rooster.</text>
+</svg>

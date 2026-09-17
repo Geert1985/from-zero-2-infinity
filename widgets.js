@@ -3237,6 +3237,136 @@ function mountAlgebraMachine(root) {
   draw();
 }
 
+function mountLineGraph(root) {
+  if (!root || root.dataset.mounted === "1") return;
+  root.dataset.mounted = "1";
+  root.innerHTML =
+    '<div class="widget-panel" style="max-width:640px">' +
+    '<p class="formula" style="margin:0 0 10px">f(x) = <span data-k="eq"></span></p>' +
+    '<div style="display:flex;flex-direction:column;gap:8px;margin:0 0 12px;font-size:15px">' +
+    '<label style="display:flex;align-items:center;gap:10px"><span style="width:72px">m = <span data-o="m">2</span></span><input type="range" min="-3" max="3" step="0.5" value="2" data-k="m" style="flex:1"></label>' +
+    '<label style="display:flex;align-items:center;gap:10px"><span style="width:72px">b = <span data-o="b">1</span></span><input type="range" min="-4" max="4" step="0.5" value="1" data-k="b" style="flex:1"></label>' +
+    '</div>' +
+    '<svg viewBox="0 0 320 220" width="100%" aria-label="Grafiek van een rechte">' +
+    '<rect width="320" height="220" fill="#161410"/>' +
+    '<clipPath id="clip-line"><rect x="20" y="16" width="284" height="188"/></clipPath>' +
+    '<line x1="24" y1="110" x2="300" y2="110" stroke="#e6c77a" stroke-width="1.4"/>' +
+    '<line x1="160" y1="200" x2="160" y2="20" stroke="#e6c77a" stroke-width="1.4"/>' +
+    '<polygon points="300,106 310,110 300,114" fill="#e6c77a"/>' +
+    '<polygon points="156,20 160,11 164,20" fill="#e6c77a"/>' +
+    '<text x="304" y="102" fill="#e6c77a" font-size="11" font-family="Georgia,serif">x</text>' +
+    '<text x="166" y="18" fill="#e6c77a" font-size="11" font-family="Georgia,serif">y</text>' +
+    '<line data-k="graph" clip-path="url(#clip-line)" x1="20" y1="110" x2="300" y2="110" stroke="#f3e2b0" stroke-width="1.6"/>' +
+    '</svg>' +
+    '<p data-k="readout" style="margin:8px 0 0;font-size:14px"></p>' +
+    "</div>";
+
+  const mEl = root.querySelector("[data-k=m]");
+  const bEl = root.querySelector("[data-k=b]");
+  const line = root.querySelector("[data-k=graph]");
+  const eq = root.querySelector("[data-k=eq]");
+  const readout = root.querySelector("[data-k=readout]");
+  const ox = 160, oy = 110, s = 22;
+  const fmt = function (n) { return String(n).replace(".", ","); };
+
+  const draw = function () {
+    const m = Number(mEl.value);
+    const b = Number(bEl.value);
+    root.querySelector("[data-o=m]").textContent = fmt(m);
+    root.querySelector("[data-o=b]").textContent = fmt(b);
+    const x1 = -7, x2 = 7;
+    line.setAttribute("x1", ox + s * x1);
+    line.setAttribute("y1", oy - s * (m * x1 + b));
+    line.setAttribute("x2", ox + s * x2);
+    line.setAttribute("y2", oy - s * (m * x2 + b));
+    const bTxt = b < 0 ? " − " + fmt(-b) : " + " + fmt(b);
+    eq.textContent = fmt(m) + "x" + bTxt;
+    readout.textContent = "Helling " + fmt(m) + ", snijpunt met de y-as (0, " + fmt(b) + ").";
+  };
+  mEl.addEventListener("input", draw);
+  bEl.addEventListener("input", draw);
+  draw();
+}
+
+function mountParabolaGraph(root) {
+  if (!root || root.dataset.mounted === "1") return;
+  root.dataset.mounted = "1";
+  const clipId = "clip-par-" + Math.random().toString(36).slice(2, 7);
+  root.innerHTML =
+    '<div class="widget-panel" style="max-width:640px;margin:0 auto">' +
+    '<p class="formula" style="margin:0 0 10px">f(x) = <span data-k="eq"></span></p>' +
+    '<div style="display:flex;flex-direction:column;gap:8px;margin:0 0 12px;font-size:15px">' +
+    '<label style="display:flex;align-items:center;gap:10px"><span style="width:80px">a = <span data-o="a">1</span></span><input type="range" min="-2" max="2" step="0.25" value="1" data-k="a" style="flex:1"></label>' +
+    '<label style="display:flex;align-items:center;gap:10px"><span style="width:80px">b = <span data-o="b">-4</span></span><input type="range" min="-6" max="6" step="0.5" value="-4" data-k="b" style="flex:1"></label>' +
+    '<label style="display:flex;align-items:center;gap:10px"><span style="width:80px">c = <span data-o="c">3</span></span><input type="range" min="-4" max="6" step="0.5" value="3" data-k="c" style="flex:1"></label>' +
+    '</div>' +
+    '<svg viewBox="0 0 320 220" width="100%" aria-label="Grafiek van een parabool">' +
+    '<rect width="320" height="220" fill="#161410"/>' +
+    '<clipPath id="' + clipId + '"><rect x="20" y="16" width="284" height="188"/></clipPath>' +
+    '<line x1="24" y1="110" x2="300" y2="110" stroke="#e6c77a" stroke-width="1.4"/>' +
+    '<line x1="160" y1="200" x2="160" y2="20" stroke="#e6c77a" stroke-width="1.4"/>' +
+    '<polygon points="300,106 310,110 300,114" fill="#e6c77a"/>' +
+    '<polygon points="156,20 160,11 164,20" fill="#e6c77a"/>' +
+    '<text x="304" y="102" fill="#e6c77a" font-size="11" font-family="Georgia,serif">x</text>' +
+    '<text x="166" y="18" fill="#e6c77a" font-size="11" font-family="Georgia,serif">y</text>' +
+    '<path data-k="graph" clip-path="url(#' + clipId + ')" d="" fill="none" stroke="#f3e2b0" stroke-width="1.6"/>' +
+    '</svg>' +
+    '<p data-k="readout" style="margin:8px 0 0;font-size:14px"></p>' +
+    "</div>";
+
+  const aEl = root.querySelector("[data-k=a]");
+  const bEl = root.querySelector("[data-k=b]");
+  const cEl = root.querySelector("[data-k=c]");
+  const path = root.querySelector("[data-k=graph]");
+  const eq = root.querySelector("[data-k=eq]");
+  const readout = root.querySelector("[data-k=readout]");
+  const ox = 160, oy = 110, s = 22;
+  const fmt = function (n) { return String(n).replace(".", ","); };
+  const term = function (n, letter) {
+    if (n === 0) return "";
+    const sign = n < 0 ? " − " : " + ";
+    const abs = Math.abs(n);
+    const coef = abs === 1 && letter ? "" : fmt(abs);
+    return sign + coef + letter;
+  };
+
+  const draw = function () {
+    const a = Number(aEl.value);
+    const b = Number(bEl.value);
+    const c = Number(cEl.value);
+    root.querySelector("[data-o=a]").textContent = fmt(a);
+    root.querySelector("[data-o=b]").textContent = fmt(b);
+    root.querySelector("[data-o=c]").textContent = fmt(c);
+    const pts = [];
+    for (let i = 0; i <= 60; i++) {
+      const x = -7 + i * (14 / 60);
+      const y = a * x * x + b * x + c;
+      pts.push((ox + s * x).toFixed(1) + "," + (oy - s * y).toFixed(1));
+    }
+    path.setAttribute("d", "M " + pts.join(" L "));
+    let eqTxt = (a === -1 ? "−x²" : a === 1 ? "x²" : fmt(a) + "x²");
+    eqTxt += term(b, "x") + term(c, "");
+    eq.textContent = eqTxt;
+    const D = b * b - 4 * a * c;
+    let msg;
+    if (a === 0) {
+      msg = "a = 0: dit is geen parabool meer, maar een rechte.";
+    } else {
+      msg = "D = " + fmt(D) + ". ";
+      if (D > 0) msg += "Twee snijpunten met de x-as.";
+      else if (D === 0) msg += "Eén raakpunt met de x-as.";
+      else msg += "Geen reële nulpunten.";
+      msg += " Top bij x = " + fmt(Number((-b / (2 * a)).toFixed(2))) + ".";
+    }
+    readout.textContent = msg;
+  };
+  aEl.addEventListener("input", draw);
+  bEl.addEventListener("input", draw);
+  cEl.addEventListener("input", draw);
+  draw();
+}
+
+
 const WIDGET_BUILDERS = {
   numberline: mountNumberline,
   nats: mountNats,
@@ -3261,7 +3391,9 @@ const WIDGET_BUILDERS = {
   equivalentFractions: mountEquivalentFractions,
   compareFractions: mountCompareFractions,
   algebraMachine: mountAlgebraMachine,
-  sine: mountSine
+  sine: mountSine,
+  lineGraph:mountLineGraph,
+  parabolaGraph:mountParabolaGraph
 };
 
 function mountWidgets(root, milestoneId) {

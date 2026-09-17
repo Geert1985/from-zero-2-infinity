@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" role="img" aria-labelledby="tm dm">
+  <title id="tm">Functie als machine</title>
+  <desc id="dm">Invoer 4 gaat door f(x)=2x+3 en geeft uitvoer 11. Domein links, bereik rechts.</desc>
+  <rect width="900" height="380" fill="#161410"/>
+  <text x="450" y="36" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="24">Eén invoer, één uitvoer</text>
+
+  <g font-family="Georgia, serif">
+    <rect x="40" y="90" width="160" height="88" rx="8" fill="#2a2418" stroke="#c4a45a" stroke-width="2"/>
+    <text x="120" y="128" text-anchor="middle" fill="#f3e2b0" font-size="22">4</text>
+    <text x="120" y="154" text-anchor="middle" fill="#cbb98a" font-size="14">invoer x</text>
+
+    <polygon points="218,134 258,134 258,122 292,144 258,166 258,154 218,154" fill="#e6c77a"/>
+
+    <rect x="310" y="78" width="280" height="112" rx="10" fill="#3a2a18" stroke="#e6c77a" stroke-width="2.5"/>
+    <text x="450" y="124" text-anchor="middle" fill="#f3e2b0" font-size="22">f(x) = 2x + 3</text>
+    <text x="450" y="154" text-anchor="middle" fill="#cbb98a" font-size="14">regel</text>
+
+    <polygon points="608,134 648,134 648,122 682,144 648,166 648,154 608,154" fill="#e6c77a"/>
+
+    <rect x="700" y="90" width="160" height="88" rx="8" fill="#2a2418" stroke="#c4a45a" stroke-width="2"/>
+    <text x="780" y="128" text-anchor="middle" fill="#f3e2b0" font-size="22">11</text>
+    <text x="780" y="154" text-anchor="middle" fill="#cbb98a" font-size="14">uitvoer f(x)</text>
+
+    <rect x="40" y="230" width="160" height="72" rx="8" fill="none" stroke="#8a7a58" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="120" y="262" text-anchor="middle" fill="#d7c49a" font-size="16">domein</text>
+    <text x="120" y="284" text-anchor="middle" fill="#8a7a58" font-size="13">wat erin mag</text>
+
+    <rect x="700" y="230" width="160" height="72" rx="8" fill="none" stroke="#8a7a58" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="780" y="262" text-anchor="middle" fill="#d7c49a" font-size="16">bereik</text>
+    <text x="780" y="284" text-anchor="middle" fill="#8a7a58" font-size="13">wat eruit kan</text>
+  </g>
+  <text x="450" y="350" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">De regel koppelt elke toegelaten x aan precies één f(x).</text>
+</svg>

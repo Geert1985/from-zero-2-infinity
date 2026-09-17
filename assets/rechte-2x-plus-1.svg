@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="t3 d3">
+  <title id="t3">De rechte y = 2x + 1</title>
+  <desc id="d3">Lijn met helling 2 door de punten (0, 1) en (3, 7).</desc>
+  <rect width="900" height="540" fill="#161410"/>
+  <text x="450" y="36" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="26">y = 2x + 1</text>
+  <g transform="translate(280,450)">
+    <g stroke="#3a3428" stroke-width="1">
+      <line x1="-80" y1="40" x2="280" y2="40"/>
+      <line x1="-80" y1="0" x2="280" y2="0"/>
+      <line x1="-80" y1="-40" x2="280" y2="-40"/>
+      <line x1="-80" y1="-80" x2="280" y2="-80"/>
+      <line x1="-80" y1="-120" x2="280" y2="-120"/>
+      <line x1="-80" y1="-160" x2="280" y2="-160"/>
+      <line x1="-80" y1="-200" x2="280" y2="-200"/>
+      <line x1="-80" y1="-240" x2="280" y2="-240"/>
+      <line x1="-80" y1="-280" x2="280" y2="-280"/>
+      <line x1="-80" y1="-320" x2="280" y2="-320"/>
+      <line x1="-80" y1="-360" x2="280" y2="-360"/>
+      <line x1="-40" y1="50" x2="-40" y2="-370"/>
+      <line x1="0" y1="50" x2="0" y2="-370"/>
+      <line x1="40" y1="50" x2="40" y2="-370"/>
+      <line x1="80" y1="50" x2="80" y2="-370"/>
+      <line x1="120" y1="50" x2="120" y2="-370"/>
+      <line x1="160" y1="50" x2="160" y2="-370"/>
+      <line x1="200" y1="50" x2="200" y2="-370"/>
+      <line x1="240" y1="50" x2="240" y2="-370"/>
+    </g>
+    <line x1="-80" y1="0" x2="270" y2="0" stroke="#e6c77a" stroke-width="2.5"/>
+    <line x1="0" y1="50" x2="0" y2="-370" stroke="#e6c77a" stroke-width="2.5"/>
+    <polygon points="270,-7 290,0 270,7" fill="#e6c77a"/>
+    <polygon points="-7,-370 0,-390 7,-370" fill="#e6c77a"/>
+    <text x="278" y="-16" fill="#e6c77a" font-family="Georgia, serif" font-size="18">x</text>
+    <text x="12" y="-378" fill="#e6c77a" font-family="Georgia, serif" font-size="18">y</text>
+    <line x1="-60" y1="80" x2="160" y2="-360" stroke="#f3e2b0" stroke-width="3"/>
+    <circle cx="0" cy="-40" r="7" fill="#f3e2b0"/>
+    <circle cx="120" cy="-280" r="7" fill="#f3e2b0"/>
+    <text x="-78" y="-48" fill="#f3e2b0" font-family="Georgia, serif" font-size="16">(0, 1)</text>
+    <text x="132" y="-292" fill="#f3e2b0" font-family="Georgia, serif" font-size="16">(3, 7)</text>
+    <path d="M 0 -40 H 40 V -120" fill="none" stroke="#c4a45a" stroke-width="2"/>
+    <text x="48" y="-52" fill="#d7c49a" font-family="Georgia, serif" font-size="14">+1</text>
+    <text x="48" y="-96" fill="#d7c49a" font-family="Georgia, serif" font-size="14">+2</text>
+  </g>
+  <text x="450" y="518" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="17">De lijn gaat door (0, 1) en (3, 7). Helling 2: +1 in x geeft +2 in y.</text>
+</svg>
