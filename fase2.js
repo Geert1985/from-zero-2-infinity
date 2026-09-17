@@ -1886,11 +1886,13 @@ const MILESTONES_2 = [
 
     <p>Een ongelijkheid kunnen we zichtbaar maken op de getallenlijn.</p>
 
+
     <p>Voor:</p>
 
     <p class="formula">x &lt; 4</p>
 
     <p>nemen we alle getallen links van 4.</p>
+    
 
     <p>Het getal 4 zelf hoort er niet bij, want 4 is niet kleiner dan 4.</p>
 
@@ -1899,7 +1901,7 @@ const MILESTONES_2 = [
     <p class="formula">x ≤ 4</p>
 
     <p>hoort 4 er wel bij.</p>
-
+    
     <div class="callout">
       <strong>De grens is belangrijk.</strong>
       <p>Bij &lt; en &gt; hoort de grens niet bij de oplossing.</p>
@@ -1908,22 +1910,31 @@ const MILESTONES_2 = [
 
 
     <h3>4. Open en gesloten grenzen</h3>
+<div class="theory-image">
+        <img
+          src="assets/getallenlijn-kleiner-dan-4.svg"
+          alt="Getallenlijn voor x kleiner dan 4. Open bol op 4, pijl naar links."
+        >
+      </div>
+      <div class="theory-image">
+        <img
+          src="assets/getallenlijn-kleiner-gelijk-4.svg"
+          alt="Getallenlijn voor x kleiner dan of gelijk aan 4. Dichte bol op 4, pijl naar links."
+        >
+      </div>    
+    <div class="theory-image">
+        <img
+          src="assets/getallenlijn-groter-dan-4.svg"
+          alt="Getallenlijn: open bol op 4 en een pijl naar rechts. x groter dan 4, de 4 telt niet mee."
+        >
+      </div>
 
-    <p>Op een getallenlijn kunnen we dit onderscheid voorstellen met een punt.</p>
-
-    <p>Een <strong>open punt</strong> betekent dat de grens niet inbegrepen is:</p>
-
-    <p class="formula">x &lt; 4</p>
-
-    <p>Een <strong>gesloten punt</strong> betekent dat de grens wel inbegrepen is:</p>
-
-    <p class="formula">x ≤ 4</p>
-
-    <p>Hetzelfde geldt aan de rechterkant:</p>
-
-    <p class="formula">x &gt; 4</p>
-
-    <p class="formula">x ≥ 4</p>
+    <div class="theory-image">
+        <img
+          src="assets/getallenlijn-groter-gelijk-4.svg"
+          alt="Getallenlijn voor x groter dan of gelijk aan 4. Dichte bol op 4, pijl naar rechts."
+        >
+      </div>
 
     <p>De richting van de oplossing wordt bepaald door het ongelijkheidsteken.</p>
 
@@ -2111,7 +2122,6 @@ const MILESTONES_2 = [
     <p>Het symbool ∞ is geen gewoon getal. Het geeft aan dat de verzameling onbeperkt doorgaat.</p>
 
     <p>Daarom gebruiken we bij ∞ altijd een ronde haak.</p>
-
 
     <h3>13. Absolute waarde als afstand</h3>
 
@@ -2638,13 +2648,13 @@ const MILESTONES_2 = [
       Een vierkantswortel kan ook als een macht met exponent 1/2 worden geschreven:
     </p>
 
-    <p class="formula">√a = a¹ᐟ²</p>
+    <p class="formula">\\sqrt{a} = a^{1/2}</p>
 
     <p>
       Een derdemachtswortel komt overeen met exponent 1/3:
     </p>
 
-    <p class="formula">∛a = a¹ᐟ³</p>
+   <p class="formula">\\sqrt[3]{a} = a^{1/3}</p>
 
     <p>
       Dit is geen nieuwe soort bewerking.
@@ -2655,7 +2665,7 @@ const MILESTONES_2 = [
       In het algemeen:
     </p>
 
-    <p class="formula">a¹ᐟⁿ = ⁿ√a</p>
+    <p class="formula">\\sqrt[n]{a} = a^{1/n}</p>
 
     <p>
       Op deze manier kunnen we wortels en machten met elkaar verbinden.
@@ -2669,9 +2679,9 @@ const MILESTONES_2 = [
       kunnen we bijvoorbeeld schrijven:
     </p>
 
-    <p class="formula">x¹ᐟ² = √x</p>
-
-    <p class="formula">x³ᐟ² = (√x)³</p>
+    <p class="formula">x^{1/2} = \\sqrt{x}</p>
+   
+    <p class="formula">x^{3/2} = (\\sqrt{x})^3</p>
 
     <p>
       Een gebroken exponent kan dus worden opgesplitst in een
@@ -2682,7 +2692,7 @@ const MILESTONES_2 = [
       Bijvoorbeeld:
     </p>
 
-    <p class="formula">8²ᐟ³ = (∛8)² = 2² = 4</p>
+    <p class="formula">8^{2/3} = (\\sqrt[3]{8})^2 = 2^2 = 4</p>
 
     <p>
       De exponent 2/3 vertelt ons dus dat we eerst een derdemachtswortel
@@ -3392,7 +3402,7 @@ const MILESTONES_2 = [
       kan alleen waar zijn als minstens één van de factoren nul is:
     </p>
 
-    <p class="formula">a = 0 of b = 0</p>
+    <p class="formula">a = 0\\ of\\ b = 0</p>
 
     <p>
       Dit noemen we de <strong>nulproductregel</strong>.
@@ -3805,11 +3815,11 @@ const MILESTONES_2 = [
       We kunnen alles samenvatten:
     </p>
 
-    <p class="formula">D &gt; 0 → twee verschillende reële oplossingen</p>
+    <p class="formula">D &gt; 0 → twee\\ verschillende\\ reële\\ oplossingen</p>
 
-    <p class="formula">D = 0 → één reële oplossing</p>
+    <p class="formula">D = 0 → één\\ reële\\ oplossing</p>
 
-    <p class="formula">D &lt; 0 → geen reële oplossingen</p>
+    <p class="formula">D &lt; 0 → geen\\ reële\\ oplossingen</p>
 
     <p>
       Dit is één van de belangrijkste ideeën van deze les.
@@ -4435,7 +4445,6 @@ const MILESTONES_2 = [
     <p class="formula">A = (x₁, y₁)</p>
 
     <p class="formula">B = (x₂, y₂)</p>
-
     <p>
       We kunnen vanuit A eerst horizontaal en daarna verticaal naar B gaan.
       De twee verplaatsingen zijn:
@@ -4460,7 +4469,7 @@ const MILESTONES_2 = [
       Dus:
     </p>
 
-    <p class="formula">d = √((x₂ − x₁)² + (y₂ − y₁)²)</p>
+    <p class="formula">d = \\sqrt{((x₂ − x₁)² + (y₂ − y₁)²)}</p>
 
     <p>
       De afstandsformule is dus geen nieuwe willekeurige formule.
@@ -4499,6 +4508,13 @@ const MILESTONES_2 = [
     <p>
       De twee punten liggen dus 5 eenheden uit elkaar.
     </p>
+
+    <div class="theory-image">
+        <img
+          src="assets/afstand-driehoek.svg"
+          alt="Van A(1, 2) naar B(4, 6): 3 naar rechts, 4 omhoog, afstand 5 als schuine zijde."
+        >
+      </div>
 
 
     <h3>8. Het midden van een lijnstuk</h3>
@@ -4539,7 +4555,7 @@ const MILESTONES_2 = [
       Algemeen:
     </p>
 
-    <p class="formula">M = ((x₁ + x₂) / 2, (y₁ + y₂) / 2)</p>
+    <p class="formula">M = (\\frac{x₁ + x₂}{2},\\frac{y₁ + y₂}{2})</p>
 
 
     <h3>9. Van een lijnstuk naar een richting</h3>
@@ -4581,7 +4597,7 @@ const MILESTONES_2 = [
       Voor twee punten:
     </p>
 
-    <p class="formula">m = (y₂ − y₁) / (x₂ − x₁)</p>
+    <p class="formula">m = \\frac{y₂ − y₁}{x₂ − x₁}</p>
 
     <p>
       Een positieve helling betekent dat de rechte stijgt wanneer we
@@ -4683,16 +4699,22 @@ const MILESTONES_2 = [
     </ul>
 
     <p>
-      Bijvoorbeeld:
+      Bijvoorbeeld: een rechte gaat door de punten (3,7) en (0,1)
     </p>
+    <div class="theory-image">
+        <img
+          src="assets/rechte-2x-plus-1.svg"
+          alt="De lijn y = 2x + 1: helling 2, snijpunt (0, 1), punt (3, 7) erop."
+        >
+      </div>
 
-    <p class="formula">y = 2x + 3</p>
+    <p class="formula">y = 2x + 1</p>
 
     <p>
       heeft helling 2 en snijdt de y-as in het punt:
     </p>
 
-    <p class="formula">(0, 3)</p>
+    <p class="formula">(0, 1)</p>
 
     <p>
       Wanneer x met 1 toeneemt, neemt y met 2 toe.
@@ -5229,11 +5251,18 @@ const MILESTONES_2 = [
       De bekendste eenheid is de <strong>graad</strong>.
     </p>
 
-    <p class="formula">volle draai = 360°</p>
+    <p class="formula">volle\\ draai = 360°</p>
 
-    <p class="formula">halve draai = 180°</p>
+    <p class="formula">halve\\ draai\\ (gestrekt) = 180°</p>
 
-    <p class="formula">rechte hoek = 90°</p>
+    <p class="formula">rechte\\ hoek = 90°</p>
+
+    <div class="theory-image">
+        <img
+          src="assets/hoektypen.svg"
+          alt="Vier hoeken: scherp, recht, stomp en gestrekt."
+        >
+      </div>
 
     <p>
       Een hoek kleiner dan 90° noemen we scherp.
