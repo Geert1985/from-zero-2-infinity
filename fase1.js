@@ -1129,8 +1129,6 @@ const MILESTONES_1 = [
 
 <p class="formula">84 ÷ 4 = 20 + 1 = 21</p>
 
-<div data-widget="smartdivision"></div>
-
 <h4>Een handige splitsing zoeken</h4>
 
 <p>Je kunt een getal op verschillende manieren opsplitsen. Kies bij voorkeur een splitsing waardoor de afzonderlijke delingen gemakkelijk worden.</p>

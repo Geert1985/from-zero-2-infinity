@@ -1,9 +1,28 @@
 
 function widgetShell(title, hint, body) {
   return `<section class="widget">
-    <header><strong>${title}</strong><span>${hint}</span></header>
+    <header class="widget-header"><strong>${title}</strong><span>${hint}</span></header>
     ${body}
   </section>`;
+}
+
+function paintRangeFill(el) {
+  if (!el || el.type !== "range") return;
+  const min = Number(el.min === "" ? 0 : el.min);
+  const max = Number(el.max === "" ? 100 : el.max);
+  const val = Number(el.value);
+  const pct = max === min ? 0 : ((val - min) / (max - min)) * 100;
+  el.style.setProperty("--fill", pct + "%");
+}
+
+function bindWidgetRanges(scope) {
+  if (!scope) return;
+  scope.querySelectorAll("input[type=range]").forEach((el) => {
+    if (el.dataset.goldBound === "1") return;
+    el.dataset.goldBound = "1";
+    paintRangeFill(el);
+    el.addEventListener("input", () => paintRangeFill(el));
+  });
 }
 
 function prepCanvas(canvas) {
@@ -879,279 +898,6 @@ function mountDivisionRemainder(root) {
 
   totalEl.addEventListener("input", draw);
   divisorEl.addEventListener("input", draw);
-
-  draw();
-}
-
-function mountSmartDivision(root) {
-  root.innerHTML = widgetShell(
-    "Slim delen",
-    "Splits een getal op in twee delen die zonder rest deelbaar zijn.",
-    `<canvas data-h="320"></canvas>
-     <div class="widget-controls">
-       <label>
-         Getal
-         <input
-           type="range"
-           min="20"
-           max="150"
-           step="1"
-           value="84"
-           data-k="total"
-         >
-         <output data-o="total">84</output>
-       </label>
-
-       <label>
-         Deler
-         <input
-           type="range"
-           min="2"
-           max="10"
-           step="1"
-           value="4"
-           data-k="divisor"
-         >
-         <output data-o="divisor">4</output>
-       </label>
-
-       <label>
-         Splitsing
-         <input
-           type="range"
-           min="1"
-           max="1"
-           step="1"
-           value="1"
-           data-k="split"
-         >
-         <output data-o="split">80 + 4</output>
-       </label>
-     </div>
-     <p class="widget-readout"></p>`
-  );
-
-  const canvas = root.querySelector("canvas");
-  const totalEl = root.querySelector("[data-k=total]");
-  const divisorEl = root.querySelector("[data-k=divisor]");
-  const splitEl = root.querySelector("[data-k=split]");
-
-  const totalOut = root.querySelector("[data-o=total]");
-  const divisorOut = root.querySelector("[data-o=divisor]");
-  const splitOut = root.querySelector("[data-o=split]");
-  const readout = root.querySelector(".widget-readout");
-
-  /*
-   * Bepaal alle splitsingen waarbij beide delen
-   * zonder rest deelbaar zijn door de deler.
-   */
-  const getValidSplits = (total, divisor) => {
-    const splits = [];
-
-    for (let split = 1; split < total; split++) {
-      const remainder = total - split;
-
-      if (
-        split % divisor === 0 &&
-        remainder % divisor === 0
-      ) {
-        splits.push(split);
-      }
-    }
-
-    return splits;
-  };
-
-  const draw = () => {
-    const total = Number(totalEl.value);
-    const divisor = Number(divisorEl.value);
-
-    const validSplits = getValidSplits(total, divisor);
-
-    /*
-     * Als het totaal zelf niet deelbaar is door de deler,
-     * bestaat er geen splitsing waarbij beide delen zonder
-     * rest deelbaar zijn.
-     */
-    if (validSplits.length === 0) {
-      totalOut.textContent = total;
-      divisorOut.textContent = divisor;
-      splitOut.textContent = "geen geldige splitsing";
-
-      splitEl.disabled = true;
-
-      const { ctx, w, h } = prepCanvas(canvas);
-
-      ctx.fillStyle = "#fff6df";
-      ctx.font = "22px Cinzel, serif";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-
-      ctx.fillText(
-        `${total} ÷ ${divisor}`,
-        w / 2,
-        80
-      );
-
-      ctx.font = "18px 'Source Sans 3', sans-serif";
-
-      ctx.fillText(
-        "Geen splitsing waarbij beide delen",
-        w / 2,
-        145
-      );
-
-      ctx.fillText(
-        "zonder rest deelbaar zijn.",
-        w / 2,
-        175
-      );
-
-      readout.textContent =
-        `${total} ÷ ${divisor} kan hier niet met deze methode worden opgesplitst.`;
-
-      return;
-    }
-
-    splitEl.disabled = false;
-
-    /*
-     * De slider gebruikt een index in de lijst met geldige
-     * splitsingen.
-     */
-    splitEl.min = 0;
-    splitEl.max = validSplits.length - 1;
-    splitEl.step = 1;
-
-    let splitIndex = Number(splitEl.value);
-
-    if (
-      !Number.isInteger(splitIndex) ||
-      splitIndex < 0 ||
-      splitIndex >= validSplits.length
-    ) {
-      splitIndex = 0;
-      splitEl.value = 0;
-    }
-
-    const split = validSplits[splitIndex];
-    const remainder = total - split;
-
-    const leftQuotient = split / divisor;
-    const rightQuotient = remainder / divisor;
-    const result = total / divisor;
-
-    totalOut.textContent = total;
-    divisorOut.textContent = divisor;
-    splitOut.textContent = `${split} + ${remainder}`;
-
-    const { ctx, w, h } = prepCanvas(canvas);
-
-    ctx.fillStyle = "#0d0b08";
-    ctx.fillRect(0, 0, w, h);
-
-    /*
-     * Hoofdequatie
-     */
-    ctx.fillStyle = "#fff6df";
-    ctx.font = "22px Cinzel, serif";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-
-    ctx.fillText(
-      `${total} ÷ ${divisor} = ${result}`,
-      w / 2,
-      28
-    );
-
-    /*
-     * De twee delen.
-     */
-    const centerY = 125;
-
-    const leftX = w * 0.28;
-    const rightX = w * 0.72;
-
-    /*
-     * Eerste deel
-     */
-    ctx.fillStyle = "#7dcea0";
-    ctx.font = "26px Cinzel, serif";
-
-    ctx.fillText(
-      `${split} ÷ ${divisor}`,
-      leftX,
-      centerY
-    );
-
-    /*
-     * Tweede deel
-     */
-    ctx.fillStyle = "#6ab0e0";
-
-    ctx.fillText(
-      `${remainder} ÷ ${divisor}`,
-      rightX,
-      centerY
-    );
-
-    /*
-     * Verbindingslijnen
-     */
-    ctx.strokeStyle = "rgba(230,199,122,0.55)";
-    ctx.lineWidth = 2;
-
-    ctx.beginPath();
-    ctx.moveTo(leftX, centerY + 30);
-    ctx.lineTo(leftX, centerY + 55);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.moveTo(rightX, centerY + 30);
-    ctx.lineTo(rightX, centerY + 55);
-    ctx.stroke();
-
-    /*
-     * Resultaten van beide eenvoudige delingen.
-     */
-    ctx.font = "20px 'Source Sans 3', sans-serif";
-
-    ctx.fillStyle = "#7dcea0";
-
-    ctx.fillText(
-      `= ${leftQuotient}`,
-      leftX,
-      centerY + 85
-    );
-
-    ctx.fillStyle = "#6ab0e0";
-
-    ctx.fillText(
-      `= ${rightQuotient}`,
-      rightX,
-      centerY + 85
-    );
-
-    /*
-     * Eindresultaat.
-     */
-    ctx.fillStyle = "#fff6df";
-    ctx.font = "18px 'Source Sans 3', sans-serif";
-
-    ctx.fillText(
-      `${split} ÷ ${divisor} + ${remainder} ÷ ${divisor} = ${result}`,
-      w / 2,
-      h - 40
-    );
-
-    readout.textContent =
-      `${total} ÷ ${divisor} = ` +
-      `${split} ÷ ${divisor} + ${remainder} ÷ ${divisor}`;
-  };
-
-  totalEl.addEventListener("input", draw);
-  divisorEl.addEventListener("input", draw);
-  splitEl.addEventListener("input", draw);
 
   draw();
 }
@@ -3197,14 +2943,22 @@ function mountSine(root) {
 
 function mountAlgebraMachine(root) {
   root.innerHTML = widgetShell(
-    "Algebramachine",
-    "<p>Vul een waarde in voor x en volg de berekening stap voor stap.</p>",
-    `<div class="algebra-machine" aria-live="polite">
-       <p class="small">Uitdrukking</p>
-       <p class="formula">3x + 5</p>
-       <p class="small">Invullen</p>
-       <p class="formula" data-k="substitution">3 · 2 + 5 = 6 + 5</p>
-       <p class="formula" data-k="result">= 11</p>
+    "Invullen — 3x + 5",
+    "Kies een waarde voor x en volg hoe de uitdrukking verandert.",
+    `<div class="algebra-flow" aria-live="polite">
+       <div class="widget-plate">
+         <span class="widget-plate__label">x</span>
+         <span class="widget-plate__value" data-k="xval">2</span>
+       </div>
+       <span class="widget-arrow" aria-hidden="true">→</span>
+       <div class="widget-plate widget-plate--wide">
+         <span class="widget-plate__value" data-k="substitution">3 · 2 + 5</span>
+         <span class="widget-plate__label">regel</span>
+       </div>
+       <span class="widget-arrow" aria-hidden="true">→</span>
+       <div class="widget-plate">
+         <span class="widget-plate__value" data-k="result">= 11</span>
+       </div>
      </div>
      <div class="widget-controls">
        <label>
@@ -3228,7 +2982,9 @@ function mountAlgebraMachine(root) {
     const value = product + 5;
     const xText = x < 0 ? "(" + x + ")" : String(x);
     xOut.textContent = String(x);
-    substitution.textContent = "3 · " + xText + " + 5 = " + product + " + 5";
+    const xVal = root.querySelector("[data-k=xval]");
+    if (xVal) xVal.textContent = String(x);
+    substitution.textContent = "3 · " + xText + " + 5";
     result.textContent = "= " + value;
     readout.textContent = "Voor x = " + x + " is 3x + 5 = " + value + ".";
   };
@@ -3375,7 +3131,6 @@ const WIDGET_BUILDERS = {
   smartmult: mountSmartMultiplication,
   divisionGroups: mountDivisionGroups,
   divisionRemainder: mountDivisionRemainder,
-  smartdivision: mountSmartDivision,
   commutative: mountCommutative,
   associative: mountAssociative,
   fractionWhole: mountFractionWhole,
@@ -3409,6 +3164,7 @@ function mountWidgets(root, milestoneId) {
       const builder = WIDGET_BUILDERS[kind];
       if (builder) builder(slot);
     });
+    bindWidgetRanges(page);
     return;
   }
 
