@@ -234,6 +234,16 @@ document.addEventListener("click", function (e) {
     setTimeout(render, already ? 0 : 700);
     return;
   }
+  const networkUnlock = e.target.closest("[data-math-network-unlock]");
+  if (networkUnlock) {
+    e.preventDefault();
+    const id = networkUnlock.getAttribute("data-math-network-unlock");
+    if (typeof mathNetworkUnlock === "function" && mathNetworkUnlock(id)) {
+      if (typeof mathNetworkRender === "function") mathNetworkRender(id);
+    }
+    return;
+  }
+
   const collectInzicht = e.target.closest(".collect-inzicht");
   if (collectInzicht) {
     const key = collectInzicht.getAttribute("data-ikey");
