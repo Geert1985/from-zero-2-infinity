@@ -1,182 +1,705 @@
 /* Lesstof Fase 3 — Calculus. Breid theory/practice/exam hier uit. */
 const MILESTONES_3 = [
+// Fase 3 — Calculus & Analyse
+// Van verandering naar afgeleiden, integralen en multivariabele calculus.
   {
     id: "3.1",
-    phase: 3,
-    title: "Limieten & continuïteit",
-    goal: "Begrijpen wat het betekent dat een functie een waarde nadert, en wanneer een limiet bestaat.",
-    theory: `
-      <h2>Milestone 3.1 — Limieten & continuïteit</h2>
-      <p>Fase 3 vraagt: hoe verandert een grootheid? Voor f(x) = x² nadert f(x) naar 4 als x naar 2 gaat: lim x→2 f(x) = 4.</p>
-      <h3>Limiet ≠ functiewaarde</h3>
-      <p>f(x) = (x² − 1)/(x − 1) is niet gedefinieerd in x = 1, maar vereenvoudigt tot x + 1. Dus lim x→1 f(x) = 2. De limiet beschrijft het gedrag <em>in de buurt</em> van een punt.</p>
-      <h3>Links, rechts en sprongen</h3>
-      <p>lim x→a⁻ en lim x→a⁺ moeten gelijk zijn, anders bestaat de gewone limiet niet (sprongdiscontinuïteit).</p>
-      <h3>Oneindigheid</h3>
-      <p>x → ∞ betekent: x groeit zonder bovengrens. Bijvoorbeeld 1/x → 0 als x → ∞.</p>
-      <h3>Continuïteit</h3>
-      <p>f is continu in x = a als f(a) bestaat, de limiet bestaat, en beide gelijk zijn. Polynomen zoals x² zijn overal continu. 1/x is niet continu in 0.</p>
-      <h3>0/0 is geen antwoord</h3>
-      <p>Invullen kan 0/0 geven: een onbepaalde vorm. Factoriseer en schrap, daarna opnieuw de limiet.</p>
-      <div class="callout">ε-δ in één zin: je kunt f(x) zo dicht bij L krijgen als je wilt, door x voldoende dicht bij a te nemen.</div>
-    `,
-    practice: [
-      { id: "p31-1", prompt: "lim x→3 van x²", accept: ["9"] },
-      { id: "p31-2", prompt: "lim x→2 van (3x + 5)", accept: ["11"] },
-      { id: "p31-3", prompt: "lim x→1 van (x² − 1)/(x − 1)", accept: ["2"] },
-      { id: "p31-4", prompt: "Bestaat de gewone limiet als links 3 en rechts 7? ja/nee", accept: ["nee"] },
-      { id: "p31-5", prompt: "Is x³ continu in x = 2? ja/nee", accept: ["ja"] },
-      { id: "p31-6", prompt: "Is 1/x continu in x = 0? ja/nee", accept: ["nee"] },
-      { id: "p31-7", prompt: "0/0 is… Kies.", type: "choice",
-        choices: ["gelijk aan 0", "gelijk aan 1", "een onbepaalde vorm", "oneindig"],
-        accept: ["een onbepaalde vorm"] }
-    ],
-    exam: [
-      { id: "e31-1", prompt: "lim x→2 van (x² + 1)", accept: ["5"] },
-      { id: "e31-2", prompt: "lim x→3 van (2x − 5)", accept: ["1"] },
-      { id: "e31-3", prompt: "lim x→1 van (x² − 1)/(x − 1)", accept: ["2"] },
-      { id: "e31-4", prompt: "Als linker- en rechterlimiet verschillen, bestaat de gewone limiet? ja/nee", accept: ["nee"] },
-      { id: "e31-5", prompt: "Is x² continu bij x = 3? ja/nee", accept: ["ja"] },
-      { id: "e31-6", prompt: "Wat is 0/0 bij een limiet? Kies.", type: "choice",
-        choices: ["Het antwoord 0", "Een onbepaalde vorm, geen eindantwoord", "Delen door oneindig", "De functiewaarde"],
-        accept: ["Een onbepaalde vorm, geen eindantwoord"] }
-    ]
+    title: "Verandering & gemiddelde snelheid",
+    goal: "Hoe meten we verandering?",
+    theory: /*html*/
+    `
+    <h2>Verandering & gemiddelde snelheid</h2>
+
+    <p>
+      In Fase 2 leerden we hoe we situaties kunnen beschrijven met getallen,
+      formules en functies. In Fase 3 stellen we een nieuwe vraag:
+    </p>
+
+    <div class="callout">
+      <strong>Hoe kunnen we precies beschrijven hoe iets verandert?</strong>
+    </div>
+
+    <p>
+      Denk bijvoorbeeld aan een trein. De positie van de trein verandert voortdurend.
+      Soms rijdt hij sneller, soms langzamer en soms staat hij stil.
+      Om zulke processen wiskundig te beschrijven, moeten we leren meten
+      <strong>hoeveel iets verandert</strong>.
+    </p>
+
+
+    <h3>Van plaats naar verandering</h3>
+
+    <p>
+      Stel dat een trein vertrekt uit een station.
+      Na 1 uur bevindt hij zich 80 km verderop.
+      Na 2 uur bevindt hij zich 160 km verderop.
+    </p>
+
+    <p>
+      We kunnen dan zeggen dat de trein in die twee uur
+      <strong>160 km van positie is veranderd</strong>.
+    </p>
+
+    <p class="formula">
+      \\Delta s = 160 - 0 = 160\\ \\text{km}
+    </p>
+
+    <p>
+      Het symbool <strong>Δ</strong> (delta) betekent:
+      <strong>verandering in</strong>.
+    </p>
+
+    <p>
+      We kunnen dus schrijven:
+    </p>
+
+    <p class="formula">
+      \\Delta s = s_2 - s_1
+    </p>
+
+    <p>
+      waarbij:
+    </p>
+
+    <ul>
+      <li><strong>s₁</strong> de beginpositie is;</li>
+      <li><strong>s₂</strong> de eindpositie is;</li>
+      <li><strong>Δs</strong> de verandering in positie is.</li>
+    </ul>
+
+
+    <h3>Verandering per tijdseenheid</h3>
+
+    <p>
+      Alleen weten dat een trein 160 km heeft afgelegd, vertelt ons nog niet
+      hoe snel dat gebeurde.
+    </p>
+
+    <p>
+      Daarvoor moeten we ook weten <strong>hoeveel tijd</strong> daarvoor nodig was.
+    </p>
+
+    <p>
+      In ons voorbeeld duurt de rit 2 uur:
+    </p>
+
+    <p class="formula">
+      \\Delta t = 2 - 0 = 2\\ \\text{uur}
+    </p>
+
+    <p>
+      De trein verandert dus 160 km van positie in 2 uur.
+      Per uur is dat gemiddeld:
+    </p>
+
+    <p class="formula">
+      \\frac{160\\ \\text{km}}{2\\ \\text{uur}}
+      =
+      80\\ \\text{km/u}
+    </p>
+
+    <div class="callout">
+      <strong>
+        Gemiddelde snelheid = verandering in positie gedeeld door verandering in tijd.
+      </strong>
+    </div>
+
+    <p>
+      Dit is het eerste belangrijke idee van calculus:
+      we kijken niet alleen naar een waarde, maar naar
+      <strong>hoe die waarde verandert</strong>.
+    </p>
+
+
+    <h3>Een algemener voorbeeld</h3>
+
+    <p>
+      Stel dat een auto op tijdstip 2 uur een positie van 50 km heeft
+      en op tijdstip 4 uur een positie van 170 km.
+    </p>
+
+    <p>
+      De verandering in positie is:
+    </p>
+
+    <p class="formula">
+      \\Delta s = 170 - 50 = 120\\ \\text{km}
+    </p>
+
+    <p>
+      De verandering in tijd is:
+    </p>
+
+    <p class="formula">
+      \\Delta t = 4 - 2 = 2\\ \\text{uur}
+    </p>
+
+    <p>
+      De gemiddelde snelheid is dus:
+    </p>
+
+    <p class="formula">
+      v_{\\text{gem}}
+      =
+      \\frac{\\Delta s}{\\Delta t}
+      =
+      \\frac{120}{2}
+      =
+      60\\ \\text{km/u}
+    </p>
+
+    <p>
+      Let op: dit betekent niet noodzakelijk dat de auto voortdurend 60 km/u reed.
+      Misschien reed hij eerst 40 km/u, daarna 80 km/u en later 60 km/u.
+      <strong>60 km/u is de gemiddelde snelheid over het hele interval.</strong>
+    </p>
+
+
+    <h3>Van gemiddelde snelheid naar gemiddelde verandering</h3>
+
+    <p>
+      Hetzelfde idee werkt ook buiten beweging.
+      We kunnen bijvoorbeeld kijken naar temperatuur, afstand, massa,
+      energie, kosten of een algemene wiskundige functie.
+    </p>
+
+    <p>
+      Stel dat de temperatuur stijgt van 10 °C naar 25 °C
+      gedurende 3 uur.
+    </p>
+
+    <p class="formula">
+      \\Delta T = 25 - 10 = 15\\ ^\\circ\\text{C}
+    </p>
+
+    <p class="formula">
+      \\Delta t = 3\\ \\text{uur}
+    </p>
+
+    <p>
+      De gemiddelde verandering per uur is:
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta T}{\\Delta t}
+      =
+      \\frac{15}{3}
+      =
+      5\\ ^\\circ\\text{C/u}
+    </p>
+
+    <p>
+      We spreken daarom niet alleen over gemiddelde snelheid,
+      maar algemener over <strong>gemiddelde veranderingssnelheid</strong>.
+    </p>
+
+    <div class="callout">
+      <strong>
+        De gemiddelde veranderingssnelheid vertelt hoeveel een grootheid
+        gemiddeld verandert per eenheid van de onafhankelijke variabele.
+      </strong>
+    </div>
+
+
+    <h3>Verandering bij een functie</h3>
+
+    <p>
+      Nu maken we de stap van concrete situaties naar functies.
+    </p>
+
+    <p>
+      Stel dat:
+    </p>
+
+    <p class="formula">
+      f(x) = x^2
+    </p>
+
+    <p>
+      We willen weten hoe sterk de functie gemiddeld verandert
+      tussen <strong>x = 1</strong> en <strong>x = 4</strong>.
+    </p>
+
+    <p>
+      Eerst bepalen we de twee functiewaarden:
+    </p>
+
+    <p class="formula">
+      f(1)=1
+    </p>
+
+    <p class="formula">
+      f(4)=16
+    </p>
+
+    <p>
+      De verandering in de functiewaarde is:
+    </p>
+
+    <p class="formula">
+      \\Delta f = 16-1=15
+    </p>
+
+    <p>
+      De verandering in x is:
+    </p>
+
+    <p class="formula">
+      \\Delta x = 4-1=3
+    </p>
+
+    <p>
+      De gemiddelde veranderingssnelheid is daarom:
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta f}{\\Delta x}
+      =
+      \\frac{15}{3}
+      =
+      5
+    </p>
+
+
+    <h3>De algemene regel</h3>
+
+    <p>
+      Voor een functie <span class="math">f(x)</span> tussen
+      twee waarden <span class="math">x_1</span> en
+      <span class="math">x_2</span> berekenen we de gemiddelde
+      veranderingssnelheid met:
+    </p>
+
+    <p class="formula">
+      \\frac{f(x_2)-f(x_1)}{x_2-x_1}
+    </p>
+
+    <p>
+      Dit is gewoon:
+    </p>
+
+    <p class="formula">
+      \\frac{\\text{verandering in }f}{\\text{verandering in }x}
+    </p>
+
+    <p>
+      Met delta-notatie kunnen we dit korter schrijven als:
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta f}{\\Delta x}
+    </p>
+
+    <div class="callout">
+      <strong>
+        Onthoud vooral de structuur:
+        <br><br>
+        verandering gedeeld door verandering.
+      </strong>
+    </div>
+
+
+    <h3>Dezelfde gedachte in verschillende situaties</h3>
+
+    <p>
+      De formule verandert niet wanneer de context verandert.
+    </p>
+
+    <p>
+      Bij beweging:
+    </p>
+
+    <p class="formula">
+      v_{\\text{gem}}=\\frac{\\Delta s}{\\Delta t}
+    </p>
+
+    <p>
+      Bij temperatuur:
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta T}{\\Delta t}
+    </p>
+
+    <p>
+      Bij een algemene functie:
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta f}{\\Delta x}
+    </p>
+
+    <p>
+      Het onderliggende idee is steeds hetzelfde:
+    </p>
+
+    <div class="callout">
+      <strong>
+        Hoeveel verandert de ene grootheid wanneer de andere grootheid
+        met een bepaalde hoeveelheid verandert?
+      </strong>
+    </div>
+
+
+    <h3>De grafiek: verandering wordt helling</h3>
+
+    <p>
+      We kunnen hetzelfde idee ook geometrisch bekijken.
+    </p>
+
+    <p>
+      Een functie geeft punten in een coördinatenstelsel.
+      Neem twee punten op de grafiek:
+    </p>
+
+    <p class="formula">
+      P=(x_1,f(x_1))
+    </p>
+
+    <p class="formula">
+      Q=(x_2,f(x_2))
+    </p>
+
+    <p>
+      De verticale verandering tussen deze punten is:
+    </p>
+
+    <p class="formula">
+      \\Delta y=f(x_2)-f(x_1)
+    </p>
+
+    <p>
+      De horizontale verandering is:
+    </p>
+
+    <p class="formula">
+      \\Delta x=x_2-x_1
+    </p>
+
+    <p>
+      Daarom is:
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta y}{\\Delta x}
+    </p>
+
+    <p>
+      precies de <strong>helling van de rechte door de twee punten</strong>.
+    </p>
+
+    <p>
+      Zo ontstaat een belangrijke verbinding:
+    </p>
+
+    <div class="callout">
+      <strong>
+        verandering → verhouding van veranderingen → helling
+      </strong>
+    </div>
+
+
+    <h3>Een positieve, negatieve of nulverandering</h3>
+
+    <p>
+      De gemiddelde veranderingssnelheid kan positief, negatief of nul zijn.
+    </p>
+
+    <p>
+      Als een waarde toeneemt:
+    </p>
+
+    <p class="formula">
+      \\Delta y > 0
+    </p>
+
+    <p>
+      en de veranderingssnelheid is positief.
+    </p>
+
+    <p>
+      Als een waarde afneemt:
+    </p>
+
+    <p class="formula">
+      \\Delta y < 0
+    </p>
+
+    <p>
+      en de veranderingssnelheid is negatief.
+    </p>
+
+    <p>
+      Als de waarde niet verandert:
+    </p>
+
+    <p class="formula">
+      \\Delta y = 0
+    </p>
+
+    <p>
+      en de gemiddelde veranderingssnelheid is nul,
+      zolang <span class="math">\\Delta x \\neq 0</span>.
+    </p>
+
+
+    <h3>Een belangrijk onderscheid</h3>
+
+    <p>
+      Er zijn twee verschillende vragen die gemakkelijk door elkaar gehaald worden.
+    </p>
+
+    <p>
+      <strong>Vraag 1:</strong>
+      Hoe snel verandert iets gemiddeld tussen twee momenten?
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta y}{\\Delta x}
+    </p>
+
+    <p>
+      <strong>Vraag 2:</strong>
+      Hoe snel verandert iets precies op één bepaald moment?
+    </p>
+
+    <p>
+      De eerste vraag kunnen we met de kennis van deze milestone beantwoorden.
+      Voor de tweede hebben we een nieuw idee nodig.
+    </p>
+
+    <div class="callout">
+      <strong>
+        De gemiddelde veranderingssnelheid kijkt naar een interval.
+        <br><br>
+        De volgende stap is ontdekken hoe we de verandering op één punt
+        kunnen bepalen.
+      </strong>
+    </div>
+
+
+    <h3>Het interval steeds kleiner maken</h3>
+
+    <p>
+      Stel dat we willen weten hoe snel een auto precies op tijdstip
+      <strong>2 uur</strong> rijdt.
+    </p>
+
+    <p>
+      We kunnen eerst kijken naar de gemiddelde snelheid tussen 2 en 3 uur.
+      Maar dat is een heel groot interval.
+    </p>
+
+    <p>
+      We kunnen het interval kleiner maken:
+    </p>
+
+    <p class="formula">
+      [2,3]
+    </p>
+
+    <p class="formula">
+      [2,2{,}5]
+    </p>
+
+    <p class="formula">
+      [2,2{,}1]
+    </p>
+
+    <p class="formula">
+      [2,2{,}01]
+    </p>
+
+    <p>
+      Telkens berekenen we opnieuw de gemiddelde veranderingssnelheid.
+      We bekijken vervolgens wat er gebeurt wanneer het tweede punt
+      steeds dichter bij het eerste punt komt.
+    </p>
+
+    <p>
+      Daarmee staan we aan de grens van een nieuw wiskundig begrip:
+      <strong>de limiet</strong>.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Van gemiddelde verandering naar ogenblikkelijke verandering:
+        we maken het interval steeds kleiner.
+      </strong>
+    </div>
+
+
+    <h3>De brug naar de afgeleide</h3>
+
+    <p>
+      De centrale gedachte van Fase 3 begint nu zichtbaar te worden:
+    </p>
+
+    <p class="formula">
+      \\text{gemiddelde verandering}
+      =
+      \\frac{\\text{verandering}}{\\text{interval}}
+    </p>
+
+    <p>
+      Als we het interval steeds kleiner maken, ontstaat de vraag:
+    </p>
+
+    <div class="callout">
+      <strong>
+        Welke waarde nadert de gemiddelde veranderingssnelheid
+        wanneer het interval naar nul gaat?
+      </strong>
+    </div>
+
+    <p>
+      Dat is precies de vraag die we in de volgende milestone zullen onderzoeken.
+    </p>
+
+    <p>
+      Daar ontstaat de overgang:
+    </p>
+
+    <p class="formula">
+      \\text{gemiddelde veranderingssnelheid}
+      \\rightarrow
+      \\text{limiet}
+      \\rightarrow
+      \\text{ogenblikkelijke veranderingssnelheid}
+    </p>
+
+    <p>
+      En die ogenblikkelijke veranderingssnelheid noemen we
+      <strong>de afgeleide</strong>.
+    </p>
+
+
+    <h3>Samenvatting</h3>
+
+    <p>
+      In deze milestone hebben we geleerd dat verandering meetbaar is.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Verandering:</strong>
+        \\(\\Delta y=y_2-y_1\\)
+      </li>
+      <li>
+        <strong>Verandering in de onafhankelijke variabele:</strong>
+        \\(\\Delta x=x_2-x_1\\)
+      </li>
+      <li>
+        <strong>Gemiddelde veranderingssnelheid:</strong>
+        verandering gedeeld door verandering
+      </li>
+      <li>
+        <strong>Geometrisch:</strong>
+        de gemiddelde veranderingssnelheid is de helling van de secant.
+      </li>
+      <li>
+        <strong>Belangrijke volgende vraag:</strong>
+        wat gebeurt er wanneer het interval steeds kleiner wordt?
+      </li>
+    </ul>
+
+    <div class="callout">
+      <strong>De rode draad:</strong>
+      <br><br>
+      verandering → gemiddelde veranderingssnelheid → helling
+      → steeds kleiner interval → limiet → afgeleide
+    </div>
+  `
   },
+
   {
     id: "3.2",
-    phase: 3,
-    title: "Differentiaalrekening",
-    goal: "Afgeleiden berekenen en duiden als helling en ogenblikkelijke verandering.",
-    theory: `
-      <h2>Milestone 3.2 — Differentiaalrekening</h2>
-      <p>Gemiddelde verandering van x² tussen 2 en 3 is (9−4)/(3−2) = 5: helling van de secant.</p>
-      <p class="formula">f'(x) = lim h→0 [f(x + h) − f(x)]/h</p>
-      <p>Dat is de ogenblikkelijke verandering: helling van de raaklijn. Voor x² bij x = 2 is f'(2) = 4.</p>
-      <h3>Betekenis</h3>
-      <p>Geometrie: raaklijn. Fysica: als s(t) positie is, dan v = s' en a = s''.</p>
-      <h3>Rekenregels</h3>
-      <p class="formula">\\frac{\\mathrm{d}}{\\mathrm{d}x}(c)=0,\\quad \\frac{\\mathrm{d}}{\\mathrm{d}x}(x^n)=n x^{n-1},\\quad (f+g)'=f'+g',\\quad (cf)'=cf'</p>
-      <p>Productregel: <span class="math">(fg)' = f'g + fg'</span>. Kettingregel: <span class="math">[g(h(x))]' = g'(h(x))\\cdot h'(x)</span>.</p>
-      <p>Voorbeeld: <span class="math">(3x+1)^2</span> heeft afgeleide <span class="math">2(3x+1)\\cdot 3 = 18x+6</span>.</p>
-      <h3>Optimalisatie</h3>
-      <p>f'(x) = 0 geeft kandidaten voor max/min, geen garantie. Voor A = 10x − x² is A' = 10 − 2x, dus x = 5.</p>
-    `,
-    practice: [
-      { id: "p32-1", prompt: "Gemiddelde verandering van x² tussen x = 1 en x = 4", accept: ["5"] },
-      { id: "p32-2", prompt: "Afgeleide van x²", accept: ["2x"] },
-      { id: "p32-3", prompt: "Afgeleide van x³", accept: ["3x^2", "3x²"] },
-      { id: "p32-4", prompt: "Afgeleide van 5x⁴", accept: ["20x^3", "20x³"] },
-      { id: "p32-5", prompt: "Afgeleide van x² + 3x + 7", accept: ["2x+3"] },
-      { id: "p32-6", prompt: "f'(2) voor f(x) = x²", accept: ["4"] },
-      { id: "p32-7", prompt: "f'(3) voor f(x) = 2x³", accept: ["54"] },
-      { id: "p32-8", prompt: "Afgeleide van x²(x + 1)", accept: ["3x^2+2x", "3x²+2x"] },
-      { id: "p32-9", prompt: "Kritiek punt van f(x) = x² − 6x + 5", accept: ["x=3", "3"] }
-    ],
-    exam: [
-      { id: "e32-1", prompt: "Afgeleide van x⁴", accept: ["4x^3", "4x³"] },
-      { id: "e32-2", prompt: "Afgeleide van 3x³ − 2x + 7", accept: ["9x^2-2", "9x²-2"] },
-      { id: "e32-3", prompt: "f'(2) voor f(x) = x² + 3x", accept: ["7"] },
-      { id: "e32-4", prompt: "Afgeleide van x²(x + 1)", accept: ["3x^2+2x", "3x²+2x"] },
-      { id: "e32-5", prompt: "Kritiek punt van f(x) = x² − 4x + 1", accept: ["x=2", "2"] },
-      { id: "e32-6", prompt: "Wat is een afgeleide geometrisch? Kies.", type: "choice",
-        choices: ["De oppervlakte onder de grafiek", "De helling van de raaklijn", "Het y-as-snijpunt", "De omtrek van een cirkel"],
-        accept: ["De helling van de raaklijn"] }
-    ]
+    title: "Het idee van de limiet",
+    goal: "Wat gebeurt er als we steeds dichterbij komen?",
+    theory: ``
   },
+
   {
     id: "3.3",
-    phase: 3,
-    title: "Integraalrekening",
-    goal: "Integralen als oppervlakte en accumulatie, plus de hoofdstelling.",
-    theory: `
-      <h2>Milestone 3.3 — Integraalrekening</h2>
-      <p>Oppervlakte onder een kromme benaderen we met smalle rechthoeken (Riemannsommen). De limiet is de bepaalde integraal ∫ₐᵇ f(x) dx.</p>
-      <p>Voor f(x) = x op [0, 2] is dat een driehoek met oppervlakte 2, dus ∫₀² x dx = 2.</p>
-      <h3>Primitieve</h3>
-      <p>F is een primitieve van f als F' = f. ∫ f(x) dx = F(x) + C, omdat een constante afleidt naar 0.</p>
-      <p class="formula">∫ xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp; (n ≠ −1)</p>
-      <h3>Hoofdstelling</h3>
-      <p class="formula">∫ₐᵇ f(x) dx = F(b) − F(a)</p>
-      <p>Differentiëren: functie → verandering. Integreren: verandering → totale verandering. Als v de snelheid is, is ∫ v dt de verandering in positie.</p>
-      <p>Bepaalde integralen geven <strong>getekende</strong> oppervlakte: onder de x-as telt negatief.</p>
-      <p>Gemiddelde waarde op [a,b]: 1/(b−a) × ∫ₐᵇ f(x) dx. Voor f(x)=x op [0,4] is dat 2.</p>
-    `,
-    practice: [
-      { id: "p33-1", prompt: "∫ van 0 tot 2 van x dx", accept: ["2"] },
-      { id: "p33-2", prompt: "Een primitieve van x³ (zonder +C mag)", accept: ["x^4/4", "x⁴/4", "x^4/4+c", "x⁴/4+c"] },
-      { id: "p33-3", prompt: "∫ van 0 tot 1 van 3x² dx", accept: ["1"] },
-      { id: "p33-4", prompt: "∫ van 1 tot 3 van 2x dx", accept: ["8"] },
-      { id: "p33-5", prompt: "Gemiddelde waarde van f(x)=x op [0, 4]", accept: ["2"] },
-      { id: "p33-6", prompt: "Waarom +C bij een onbepaalde integraal? Kies.", type: "choice",
-        choices: ["Omdat π irrationaal is", "Omdat primitieve functies een constante mogen verschillen", "Omdat de limiet niet bestaat", "Omdat x altijd positief is"],
-        accept: ["Omdat primitieve functies een constante mogen verschillen"] }
-    ],
-    exam: [
-      { id: "e33-1", prompt: "Een primitieve van x³", accept: ["x^4/4", "x⁴/4", "x^4/4+c", "x⁴/4+c"] },
-      { id: "e33-2", prompt: "Een primitieve van 6x² + 4", accept: ["2x^3+4x", "2x³+4x", "2x^3+4x+c", "2x³+4x+c"] },
-      { id: "e33-3", prompt: "∫ van 0 tot 2 van x dx", accept: ["2"] },
-      { id: "e33-4", prompt: "∫ van 1 tot 3 van 2x dx", accept: ["8"] },
-      { id: "e33-5", prompt: "Als v(t) de snelheid is, wat is ∫ v dt van a tot b? Kies.", type: "choice",
-        choices: ["De versnelling", "De verandering in positie tussen a en b", "De gemiddelde helling van x²", "Een sprongdiscontinuïteit"],
-        accept: ["De verandering in positie tussen a en b"] }
-    ]
+    title: "Continuïteit",
+    goal: "Wanneer vormt een functie één ononderbroken geheel?",
+    theory: ``
   },
+
   {
     id: "3.4",
-    phase: 3,
-    title: "Multivariabele calculus",
-    goal: "Partiële afgeleiden, gradiënt en het idee van meervoudige integralen.",
-    theory: `
-      <h2>Milestone 3.4 — Multivariabele calculus</h2>
-      <p>z = f(x, y) hangt van twee variabelen af. Voorbeeld: f(x,y) = x² + y², een oppervlak in 3D.</p>
-      <h3>Partiële afgeleiden</h3>
-      <p>Voor f = x² + 3xy + y² is ∂f/∂x = 2x + 3y (y constant) en ∂f/∂y = 3x + 2y (x constant).</p>
-      <h3>Gradiënt</h3>
-      <p class="formula">∇f = (∂f/∂x, ∂f/∂y)</p>
-      <p>Voor x² + y² is ∇f = (2x, 2y). In (1,2) dus (2,4). De gradiënt wijst naar de steilste toename. Richtingsafgeleide: ∇f · u.</p>
-      <h3>Kritieke punten</h3>
-      <p>Los tegelijk ∂f/∂x = 0 en ∂f/∂y = 0. Voor x² + y² is dat (0,0), een minimum.</p>
-      <h3>Meervoudige integralen</h3>
-      <p>∬_D f dA somt over een gebied (volume onder een oppervlak als f ≥ 0). ∭ f dV somt over een volume. Vectoren horen bij Fase 4.</p>
-    `,
-    practice: [
-      { id: "p34-1", prompt: "<span class=\"math\">\\partial f/\\partial x</span> voor f = x² + 3xy + y²", accept: ["2x+3y"] },
-      { id: "p34-2", prompt: "<span class=\"math\">\\partial f/\\partial y</span> voor dezelfde functie", accept: ["3x+2y"] },
-      { id: "p34-3", prompt: "Gradiënt van x² + y² (als ( , ))", accept: ["(2x,2y)", "2x,2y"] },
-      { id: "p34-4", prompt: "Gradiënt van x² + y² in (1, 2)", accept: ["(2,4)", "2,4"] },
-      { id: "p34-5", prompt: "Kritiek punt van x² + y²", accept: ["(0,0)", "0,0"] },
-      { id: "p34-6", prompt: "Wat meet <span class=\"math\">\\partial f/\\partial x</span>? Kies.", type: "choice",
-        choices: ["Verandering in x terwijl y constant blijft", "Altijd de oppervlakte onder de grafiek", "Alleen de y-richting", "De omtrek van D"],
-        accept: ["Verandering in x terwijl y constant blijft"] }
-    ],
-    exam: [
-      { id: "e34-1", prompt: "<span class=\"math\">\\partial f/\\partial x</span> voor f = x² + 4xy + y²", accept: ["2x+4y"] },
-      { id: "e34-2", prompt: "<span class=\"math\">\\partial f/\\partial y</span> voor dezelfde functie", accept: ["4x+2y"] },
-      { id: "e34-3", prompt: "Gradiënt van x² + y²", accept: ["(2x,2y)", "2x,2y"] },
-      { id: "e34-4", prompt: "Kritiek punt van x² + y²", accept: ["(0,0)", "0,0"] },
-      { id: "e34-5", prompt: "Wat doet de gradiënt intuïtief? Kies.", type: "choice",
-        choices: ["Hij geeft de omtrek van een cirkel", "Hij wijst naar de sterkste lokale toename", "Hij is altijd gelijk aan 0/0", "Hij vervangt de integraal"],
-        accept: ["Hij wijst naar de sterkste lokale toename"] }
-    ]
-  }
-];
+    title: "De afgeleide",
+    goal: "Hoe snel verandert iets precies op één moment?",
+    theory: ``
+  },
 
-const PHASE_EXAM_3 = [
-  { id: "f3-1", prompt: "lim x→2 van (x² + 1)", accept: ["5"] },
-  { id: "f3-2", prompt: "lim x→3 van (2x − 5)", accept: ["1"] },
-  { id: "f3-3", prompt: "lim x→1 van (x² − 1)/(x − 1)", accept: ["2"] },
-  { id: "f3-4", prompt: "Afgeleide van x⁴", accept: ["4x^3", "4x³"] },
-  { id: "f3-5", prompt: "Afgeleide van 3x³ − 2x + 7", accept: ["9x^2-2", "9x²-2"] },
-  { id: "f3-6", prompt: "f'(2) voor f(x) = x² + 3x", accept: ["7"] },
-  { id: "f3-7", prompt: "Afgeleide van x²(x + 1)", accept: ["3x^2+2x", "3x²+2x"] },
-  { id: "f3-8", prompt: "Kritiek punt van f(x) = x² − 4x + 1", accept: ["x=2", "2"] },
-  { id: "f3-9", prompt: "Een primitieve van x³", accept: ["x^4/4", "x⁴/4", "x^4/4+c", "x⁴/4+c"] },
-  { id: "f3-10", prompt: "∫ van 0 tot 2 van x dx", accept: ["2"] },
-  { id: "f3-11", prompt: "∫ van 1 tot 3 van 2x dx", accept: ["8"] },
-  { id: "f3-12", prompt: "<span class=\"math\">\\partial f/\\partial x</span> voor f = x² + 4xy + y²", accept: ["2x+4y"] },
-  { id: "f3-13", prompt: "<span class=\"math\">\\partial f/\\partial y</span> voor dezelfde functie", accept: ["4x+2y"] },
-  { id: "f3-14", prompt: "Gradiënt van x² + y²", accept: ["(2x,2y)", "2x,2y"] },
-  { id: "f3-15", prompt: "Wat is een afgeleide geometrisch? Kies.", type: "choice",
-    choices: ["De helling van de raaklijn", "De oppervlakte onder de grafiek", "Een onbepaalde vorm", "Een Riemannsom van oneindig"],
-    accept: ["De helling van de raaklijn"] }
+  {
+    id: "3.5",
+    title: "Afgeleiden van basisfuncties",
+    goal: "Kunnen we veranderingssnelheden berekenen?",
+    theory: ``
+  },
+
+  {
+    id: "3.6",
+    title: "Product-, quotiënt- & kettingregel",
+    goal: "Wat gebeurt er wanneer functies worden gecombineerd?",
+    theory: ``
+  },
+
+  {
+    id: "3.7",
+    title: "Afgeleiden van belangrijke functies",
+    goal: "Hoe laten we exponentiële, logaritmische en goniometrische functies veranderen?",
+    theory: ``
+  },
+
+  {
+    id: "3.8",
+    title: "Toepassingen van afgeleiden",
+    goal: "Wat kunnen we met veranderingssnelheden?",
+    theory: ``
+  },
+
+  {
+    id: "3.9",
+    title: "De integraal als omgekeerde verandering",
+    goal: "Kunnen we verandering weer optellen?",
+    theory: ``
+  },
+
+  {
+    id: "3.10",
+    title: "De fundamentele stelling van de calculus",
+    goal: "Waarom zijn afgeleiden en integralen verbonden?",
+    theory: ``
+  },
+
+  {
+    id: "3.11",
+    title: "Integraalrekenen",
+    goal: "Hoe berekenen we integralen?",
+    theory: ``
+  },
+
+  {
+    id: "3.12",
+    title: "Toepassingen van integralen",
+    goal: "Hoe tellen we oneindig veel kleine bijdragen op?",
+    theory: ``
+  },
+
+  {
+    id: "3.13",
+    title: "Functies van meerdere variabelen",
+    goal: "Wat verandert er als meerdere grootheden tegelijk veranderen?",
+    theory: ``
+  },
+
+  {
+    id: "3.14",
+    title: "Multivariabele calculus & vectorvelden",
+    goal: "Hoe beschrijven we verandering in een ruimte?",
+    theory: ``
+  }
 ];

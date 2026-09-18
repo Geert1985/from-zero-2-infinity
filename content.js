@@ -2,7 +2,7 @@
 const PHASE_EXAMS = {
   1: [],
   2: [],
-  3: PHASE_EXAM_3,
+  3: [],
   4: PHASE_EXAM_4,
   5: PHASE_EXAM_5,
   6: PHASE_EXAM_6,
