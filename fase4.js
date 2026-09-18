@@ -14,27 +14,7 @@ const MILESTONES_4 = [
       <p>Een matrix is een getallenrooster. Optellen en scalaire vermenigvuldiging gaan per element. Vermenigvuldigen van matrices: rij × kolom. AB bestaat alleen als het aantal kolommen van A gelijk is aan het aantal rijen van B.</p>
       <div class="callout">AB is in het algemeen niet gelijk aan BA.</div>
       <p>I = [1 0; 0 1] laat elke vector ongemoeid. Een matrix A stuurt v naar Av: [2 0; 0 2] verdubbelt lengtes; [1 0; 0 −1] spiegelt in de x-as. Rotatie 90° tegenwijzerzin stuurt (1, 2) naar (−2, 1).</p>
-    `,
-    practice: [
-      { id: "p41-1", prompt: "Lengte van v = (6, 8)", accept: ["10"] },
-      { id: "p41-2", prompt: "(3, −2) + (−1, 5)", accept: ["(2,3)", "2,3"] },
-      { id: "p41-3", prompt: "4(2, −3)", accept: ["(8,-12)", "8,-12"] },
-      { id: "p41-4", prompt: "Dot product van (1, 4) en (2, −1)", accept: ["-2"] },
-      { id: "p41-5", prompt: "Zijn (2, 3) en (3, −2) loodrecht? ja/nee", accept: ["ja"] },
-      { id: "p41-6", prompt: "AB als A=[1 2; 0 1] en B=[3 0; 2 4] (vorm [a b; c d])", accept: ["[7 8;2 4]", "[7,8;2,4]", "7 8;2 4"] },
-      { id: "p41-7", prompt: "Afmetingen van AB als A 3×2 is en B 2×5 (bijv. 3×5)", accept: ["3x5", "3×5"] },
-      { id: "p41-8", prompt: "(1, 2) na rotatie 90° tegenwijzerzin", accept: ["(-2,1)", "-2,1"] }
-    ],
-    exam: [
-      { id: "e41-1", prompt: "(3, −1) + (5, 4)", accept: ["(8,3)", "8,3"] },
-      { id: "e41-2", prompt: "−2(4, −3)", accept: ["(-8,6)", "-8,6"] },
-      { id: "e41-3", prompt: "Lengte van (5, 12)", accept: ["13"] },
-      { id: "e41-4", prompt: "Dot product van (2, 1) en (3, −6)", accept: ["0"] },
-      { id: "e41-5", prompt: "Zijn die twee loodrecht? ja/nee", accept: ["ja"] },
-      { id: "e41-6", prompt: "Wat doet [2 0; 0 2] met een vector? Kies.", type: "choice",
-        choices: ["Spiegelen in de y-as", "Alle lengtes verdubbelen, richting behouden", "Naar de nulvector sturen", "90° draaien"],
-        accept: ["Alle lengtes verdubbelen, richting behouden"] }
-    ]
+    `
   },
   {
     id: "4.2",
@@ -49,29 +29,8 @@ const MILESTONES_4 = [
       <h3>Lineaire transformaties</h3>
       <p>T is lineair als T(u+v)=T(u)+T(v) en T(cv)=cT(v). Gevolg: T(0)=0. Daarom is T(x,y)=(x+1, y) niet lineair.</p>
       <p>T(x,y)=(3x−y, 2x+4y) heeft matrix [3 −1; 2 4]. De <strong>kern</strong> is {v | T(v)=0}. det[3 2; 1 4]=10 ≠ 0, dus inverteerbaar. det[2 4; 1 2]=0, niet inverteerbaar: informatie gaat verloren.</p>
-    `,
-    practice: [
-      { id: "p42-1", prompt: "(1, 2) + (3, 4)", accept: ["(4,6)", "4,6"] },
-      { id: "p42-2", prompt: "Zijn (1, 2) en (2, 4) lineair onafhankelijk? ja/nee", accept: ["nee"] },
-      { id: "p42-3", prompt: "Dimensie van ℝ⁵", accept: ["5"] },
-      { id: "p42-4", prompt: "Is T(x,y)=(x+y, 2x) lineair? ja/nee", accept: ["ja"] },
-      { id: "p42-5", prompt: "Is T(x,y)=(x+1, y) lineair? ja/nee", accept: ["nee"] },
-      { id: "p42-6", prompt: "Matrix van T(x,y)=(3x−y, 2x+4y) als [a b; c d]", accept: ["[3 -1;2 4]", "[3,-1;2,4]", "3 -1;2 4"] },
-      { id: "p42-7", prompt: "det van [3 2; 1 4]", accept: ["10"] },
-      { id: "p42-8", prompt: "Is [2 4; 1 2] inverteerbaar? ja/nee", accept: ["nee"] }
-    ],
-    exam: [
-      { id: "e42-1", prompt: "Zijn (1, 2) en (2, 4) lineair onafhankelijk? ja/nee", accept: ["nee"] },
-      { id: "e42-2", prompt: "Dimensie van ℝ³", accept: ["3"] },
-      { id: "e42-3", prompt: "Is T(x,y)=(2x−y, x+3y) lineair? ja/nee", accept: ["ja"] },
-      { id: "e42-4", prompt: "Waarom is T(x,y)=(2x+1, y) niet lineair? Kies.", type: "choice",
-        choices: ["Omdat 2 oneven is", "Omdat T(0,0)=(1,0), dus T(0) ≠ 0", "Omdat matrices niet bestaan", "Omdat de determinant 1 is"],
-        accept: ["Omdat T(0,0)=(1,0), dus T(0) ≠ 0"] },
-      { id: "e42-5", prompt: "det van [4 1; 2 3]", accept: ["10"] },
-      { id: "e42-6", prompt: "Wat is de kern van een lineaire transformatie? Kies.", type: "choice",
-        choices: ["Alle vectoren die naar de nulvector gaan", "De langste kolom van A", "Het y-as-snijpunt", "Een eigenwaarde λ=0 die altijd bestaat"],
-        accept: ["Alle vectoren die naar de nulvector gaan"] }
-    ]
+    `
+    
   },
   {
     id: "4.3",

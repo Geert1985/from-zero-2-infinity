@@ -17,7 +17,7 @@ const MILESTONES_2 = [
       <li>gelijksoortige termen herkennen en samennemen</li>
     </ul>
 
-    <h3>1. Van een bekend getal naar een letter</h3>
+    <h3>Van een bekend getal naar een letter</h3>
 
     <p>In Fase 1 rekenden we met concrete getallen. Een tas kost 12 euro. Twee tassen kosten:</p>
 
@@ -51,7 +51,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>2. Onbekende of veranderlijke?</h3>
+    <h3>Onbekende of veranderlijke?</h3>
 
     <p>Hetzelfde symbool kan in verschillende situaties een andere rol spelen.</p>
 
@@ -75,7 +75,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>3. Letters zijn getallen</h3>
+    <h3>Letters zijn getallen</h3>
 
     <p>Wanneer we met algebra werken, behandelen we letters op dezelfde manier als getallen. Een getal vóór een letter betekent vermenigvuldiging:</p>
 
@@ -104,7 +104,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>4. Onderdelen van een algebraïsche uitdrukking</h3>
+    <h3>Onderdelen van een algebraïsche uitdrukking</h3>
 
     <p>Een <strong>algebraïsche uitdrukking</strong> is een combinatie van getallen, letters en bewerkingen. Bijvoorbeeld:</p>
 
@@ -130,7 +130,7 @@ const MILESTONES_2 = [
     <p>Het minteken hoort bij de term die erop volgt.</p>
 
 
-    <h3>5. Uitdrukking of vergelijking?</h3>
+    <h3>Uitdrukking of vergelijking?</h3>
 
     <p>Het onderscheid tussen een uitdrukking en een vergelijking is belangrijk.</p>
 
@@ -153,7 +153,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>6. Een uitdrukking is een algemene structuur</h3>
+    <h3>Een uitdrukking is een algemene structuur</h3>
 
     <p>Een belangrijk idee van algebra is dat een uitdrukking niet één specifieke berekening hoeft te zijn.</p>
 
@@ -179,7 +179,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>7. Een waarde invullen</h3>
+    <h3>Een waarde invullen</h3>
 
     <p>Een algebraïsche uitdrukking krijgt een concrete waarde zodra we een waarde voor de variabele kiezen.</p>
 
@@ -208,7 +208,7 @@ const MILESTONES_2 = [
     <p>Dit is iets anders dan <span class="formula-inline">−3²</span>, waarvoor de gebruikelijke rekenvolgorde eerst de macht berekent.</p>
 
 
-    <h3>8. Dezelfde letter kan verschillende waarden aannemen</h3>
+    <h3>Dezelfde letter kan verschillende waarden aannemen</h3>
 
     <p>Een variabele staat niet vast op één getal.</p>
 
@@ -234,7 +234,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>9. Gelijksoortige termen</h3>
+    <h3>Gelijksoortige termen</h3>
 
     <p>We kunnen sommige termen samenvoegen omdat ze dezelfde algebraïsche structuur hebben.</p>
 
@@ -269,7 +269,7 @@ const MILESTONES_2 = [
     <p>Dit betekent niet dat we zomaar alle termen met elkaar mogen combineren.</p>
 
 
-    <h3>10. Van één situatie naar veel situaties</h3>
+    <h3>Van één situatie naar veel situaties</h3>
 
     <p>Algebra wordt vooral krachtig wanneer we een algemene regel kunnen formuleren.</p>
 
@@ -295,7 +295,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>11. Een variabele kan een grootheid voorstellen</h3>
+    <h3>Een variabele kan een grootheid voorstellen</h3>
 
     <p>Een variabele kan ook een fysische of meetkundige grootheid voorstellen.</p>
 
@@ -316,7 +316,7 @@ const MILESTONES_2 = [
     <p>De letters maken het mogelijk om eerst een algemene formule op te stellen en pas daarna concrete waarden in te vullen.</p>
 
 
-    <h3>12. Wat we nu met algebra kunnen doen</h3>
+    <h3>Wat we nu met algebra kunnen doen</h3>
 
     <p>Met de ideeën uit deze les kunnen we:</p>
 
@@ -332,7 +332,7 @@ const MILESTONES_2 = [
     <p>We zijn daarmee een stap verder gegaan dan rekenen met afzonderlijke getallen: we kunnen nu <strong>structuren en verbanden</strong> beschrijven.</p>
 
 
-    <h3>13. Vooruitblik: van uitdrukking naar functie</h3>
+    <h3>Vooruitblik: van uitdrukking naar functie</h3>
 
     <p>Een uitdrukking zoals:</p>
 
@@ -374,7 +374,7 @@ const MILESTONES_2 = [
       </ul>
       <p>In les 2.1 leerden we letters lezen. Nu rekenen we ermee. De rekenwetten uit Fase 1 blijven gelden; we herkennen ze terug in termen en haakjes.</p>
 
-      <h3>1. Optellen en aftrekken: alleen gelijksoortige termen</h3>
+      <h3>Optellen en aftrekken: alleen gelijksoortige termen</h3>
       <p>Drie appels en twee appels geven vijf appels. Drie stoelen en twee appels kun je niet tot één soort optellen.</p>
       <p>In algebra is <span class="formula-inline">x</span> zo’n soort. Daarom:</p>
       <p class="formula">3x + 2x = 5x</p>
@@ -391,7 +391,7 @@ const MILESTONES_2 = [
         <p>Je mag 3x en 2x samenvoegen, maar 3x en 2y niet. Ook 3x en 3 zijn niet gelijksoortig.</p>
       </div>
 
-      <h3>2. Wanneer zijn termen gelijksoortig?</h3>
+      <h3>Wanneer zijn termen gelijksoortig?</h3>
       <p>Termen zijn gelijksoortig als ze <strong>dezelfde letters met dezelfde exponenten</strong> hebben. De coëfficiënt mag verschillen, het teken ook.</p>
       <p>Gelijksoortig:</p>
       <p class="formula">3x, −5x, 12x</p>
@@ -404,7 +404,7 @@ const MILESTONES_2 = [
       <p class="formula">4x^{2} + 3x − 2x^{2} + 5x = 2x^{2} + 8x</p>
       <p>We combineren <span class="formula-inline">4x^{2}</span> met <span class="formula-inline">−2x^{2}</span>, en <span class="formula-inline">3x</span> met <span class="formula-inline">5x</span>. Vier termen tot één term maken mag niet.</p>
 
-      <h3>3. Termen vermenigvuldigen</h3>
+      <h3>Termen vermenigvuldigen</h3>
       <p>Een enkele term, zoals <span class="formula-inline">3x</span> of <span class="formula-inline">−2x^{2}</span>, heet een <strong>monoom</strong>. Bij het vermenigvuldigen van monomen gebeuren twee dingen tegelijk:</p>
       <ul>
         <li>de coëfficiënten worden vermenigvuldigd;</li>
@@ -421,7 +421,7 @@ const MILESTONES_2 = [
         <p>De letters worden ook vermenigvuldigd. Twee factoren x geven x².</p>
       </div>
 
-      <h3>4. Distributiviteit: een factor voor een haakje</h3>
+      <h3>Distributiviteit: een factor voor een haakje</h3>
       <p>Uit Fase 1:</p>
       <p class="formula">3(4 + 5) = 3 · 4 + 3 · 5</p>
       <p>De factor buiten het haakje gaat naar <strong>elke term</strong> erin. Met letters is de wet hetzelfde:</p>
@@ -436,7 +436,7 @@ const MILESTONES_2 = [
         <p>De 3 moet ook de 4 raken.</p>
       </div>
 
-      <h3>5. Een minteken vóór een haakje</h3>
+      <h3>Een minteken vóór een haakje</h3>
       <p>Een min vóór een haakje is vermenigvuldigen met −1:</p>
       <p class="formula">−(x + 4) = −1 · (x + 4) = −x − 4</p>
       <p>Elke term in het haakje wisselt van teken, niet alleen de eerste:</p>
@@ -449,7 +449,7 @@ const MILESTONES_2 = [
         <p>Het is niet genoeg om alleen de eerste term aan te passen.</p>
       </div>
 
-      <h3>6. Twee haakjes vermenigvuldigen</h3>
+      <h3>Twee haakjes vermenigvuldigen</h3>
       <p>Bij twee haakjes vermenigvuldigt <strong>elke term van het eerste</strong> met <strong>elke term van het tweede</strong>. Dat is twee keer distributiviteit.</p>
       <p class="formula">(x + 2)(x + 3)</p>
       <p>Eerst de x naar het tweede haakje, daarna de 2:</p>
@@ -462,7 +462,7 @@ const MILESTONES_2 = [
       <p class="formula">(2x + 1)(x + 3) = 2x · x + 2x · 3 + 1 · x + 1 · 3 = 2x^{2} + 6x + x + 3 = 2x^{2} + 7x + 3</p>
       <p>Schrijf de vier tussenproducten op. Dan verdwijnt er geen kruisterm.</p>
 
-      <h3>7. Merkwaardige producten</h3>
+      <h3>Merkwaardige producten</h3>
       <p>Sommige producten komen zo vaak terug dat we de uitwerking herkennen. Ze volgen uit dezelfde distributiviteit.</p>
       <p>Kwadraat van een som:</p>
       <p class="formula">(a + b)^{2} = (a + b)(a + b) = a^{2} + 2ab + b^{2}</p>
@@ -490,7 +490,7 @@ const MILESTONES_2 = [
         <p>De middelste term 6x ontstaat doordat beide kruisproducten meetellen: 3x + 3x.</p>
       </div>
 
-      <h3>8. Ontbinden: distributiviteit achteruit</h3>
+      <h3>Ontbinden: distributiviteit achteruit</h3>
       <p>Uitwerken gaat van product naar som. <strong>Ontbinden</strong> (factoriseren) gaat de andere kant op: we maken van een som weer een product.</p>
       <p>Eerst een gemeenschappelijke factor:</p>
       <p class="formula">6x + 9 = 3 · 2x + 3 · 3 = 3(2x + 3)</p>
@@ -503,7 +503,7 @@ const MILESTONES_2 = [
       <p class="formula">x^{2} − 16 = (x + 4)(x − 4)</p>
       <p>Kwadratische sommen zoals <span class="formula-inline">x^{2} + 5x + 6</span> ontbinden we later, bij de kwadratische vergelijking. Nu is het genoeg de gemeenschappelijke factor en dit verschil te herkennen.</p>
 
-      <h3>9. Twee richtingen van dezelfde structuur</h3>
+      <h3>Twee richtingen van dezelfde structuur</h3>
       <p>Uitwerken en ontbinden zijn elkaars omgekeerde:</p>
       <p class="formula">3(x + 4) = 3x + 12</p>
       <p class="formula">3x + 12 = 3(x + 4)</p>
@@ -515,7 +515,7 @@ const MILESTONES_2 = [
         <p>Uitwerken maakt een som zichtbaar. Ontbinden maakt een verborgen product zichtbaar.</p>
       </div>
 
-      <h3>10. Werkwijze en rekenvolgorde</h3>
+      <h3>Werkwijze en rekenvolgorde</h3>
       <p>Letters veranderen de rekenvolgorde niet: eerst haakjes, dan machten, dan vermenigvuldigen en delen, dan optellen en aftrekken.</p>
       <p class="formula">2x + 3 · 4 = 2x + 12</p>
       <p>En <span class="formula-inline">2(x + 3)^{2}</span> betekent eerst het kwadraat van het haakje, daarna vermenigvuldigen met 2.</p>
@@ -554,7 +554,7 @@ const MILESTONES_2 = [
       <li>controleren of een gevonden oplossing werkelijk klopt</li>
     </ul>
 
-    <h3>1. Wat is een vergelijking?</h3>
+    <h3>Wat is een vergelijking?</h3>
 
     <p>In 2.1 maakten we onderscheid tussen een algebraïsche uitdrukking en een vergelijking.</p>
 
@@ -576,7 +576,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>2. De vergelijking als een balans</h3>
+    <h3>De vergelijking als een balans</h3>
 
     <p>Een handige manier om een vergelijking te begrijpen is als een balans.</p>
 
@@ -594,7 +594,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>3. De onbekende vrijmaken</h3>
+    <h3>De onbekende vrijmaken</h3>
 
     <p>Neem:</p>
 
@@ -619,7 +619,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>4. Waarom mogen we aan beide kanten hetzelfde doen?</h3>
+    <h3>Waarom mogen we aan beide kanten hetzelfde doen?</h3>
 
     <p>Dit volgt rechtstreeks uit de eigenschappen van gelijkheid.</p>
 
@@ -648,7 +648,7 @@ const MILESTONES_2 = [
     <p>Deze regels geven de formele rechtvaardiging voor wat we bij het oplossen van vergelijkingen doen.</p>
 
 
-    <h3>5. Een vergelijking oplossen door aftrekken</h3>
+    <h3>Een vergelijking oplossen door aftrekken</h3>
 
     <p>Bekijk:</p>
 
@@ -667,7 +667,7 @@ const MILESTONES_2 = [
     <p>We hebben de vergelijking stap voor stap vereenvoudigd zonder de gelijkheid te verbreken.</p>
 
 
-    <h3>6. Een vergelijking oplossen door optellen</h3>
+    <h3>Een vergelijking oplossen door optellen</h3>
 
     <p>Niet elke vergelijking bevat een positieve term.</p>
 
@@ -689,7 +689,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>7. Vermenigvuldiging ongedaan maken</h3>
+    <h3>Vermenigvuldiging ongedaan maken</h3>
 
     <p>Stel:</p>
 
@@ -708,7 +708,7 @@ const MILESTONES_2 = [
     <p>Ook hier voeren we dezelfde bewerking aan beide kanten uit.</p>
 
 
-    <h3>8. Delen ongedaan maken</h3>
+    <h3>Delen ongedaan maken</h3>
 
     <p>Neem:</p>
 
@@ -725,7 +725,7 @@ const MILESTONES_2 = [
     <p class="formula">x = 28</p>
 
 
-    <h3>9. Twee bewerkingen in één vergelijking</h3>
+    <h3>Twee bewerkingen in één vergelijking</h3>
 
     <p>In veel vergelijkingen komen verschillende bewerkingen voor.</p>
 
@@ -749,7 +749,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>10. Vergelijkingen met de onbekende aan beide kanten</h3>
+    <h3>Vergelijkingen met de onbekende aan beide kanten</h3>
 
     <p>Soms komt de onbekende aan beide kanten voor.</p>
 
@@ -778,7 +778,7 @@ const MILESTONES_2 = [
     <p>Ook hier blijft het principe hetzelfde: elke bewerking wordt aan beide kanten uitgevoerd.</p>
 
 
-    <h3>11. Haakjes in een vergelijking</h3>
+    <h3>Haakjes in een vergelijking</h3>
 
     <p>Ook haakjes kunnen voorkomen:</p>
 
@@ -797,7 +797,7 @@ const MILESTONES_2 = [
     <p>De algebraïsche bewerkingen uit 2.2 zijn dus hulpmiddelen om vergelijkingen stap voor stap te vereenvoudigen.</p>
 
 
-    <h3>12. Controleer je oplossing</h3>
+    <h3>Controleer je oplossing</h3>
 
     <p>Een oplossing is pas overtuigend wanneer we controleren of ze werkelijk aan de oorspronkelijke vergelijking voldoet.</p>
 
@@ -826,7 +826,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>13. Niet elke vergelijking heeft één oplossing</h3>
+    <h3>Niet elke vergelijking heeft één oplossing</h3>
 
     <p>Het is belangrijk om niet automatisch te denken dat elke vergelijking precies één oplossing heeft.</p>
 
@@ -854,7 +854,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>14. Gelijkwaardige vergelijkingen</h3>
+    <h3>Gelijkwaardige vergelijkingen</h3>
 
     <p>Wanneer we een vergelijking stap voor stap bewerken, willen we een nieuwe vergelijking krijgen die precies dezelfde oplossingen heeft.</p>
 
@@ -878,7 +878,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>15. Van verhaal naar vergelijking</h3>
+    <h3>Van verhaal naar vergelijking</h3>
 
     <p>Vergelijkingen ontstaan vaak uit een probleem uit de werkelijkheid.</p>
 
@@ -899,7 +899,7 @@ const MILESTONES_2 = [
     <p>De belangrijke stap is hier niet alleen het rekenen, maar het <strong>vertalen van de situatie naar een vergelijking</strong>.</p>
 
 
-    <h3>16. Een vergelijking is een probleem met een voorwaarde</h3>
+    <h3>Een vergelijking is een probleem met een voorwaarde</h3>
 
     <p>Een algebraïsche uitdrukking kan voor veel verschillende waarden worden berekend.</p>
 
@@ -917,7 +917,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>17. Een vaste werkwijze</h3>
+    <h3>Een vaste werkwijze</h3>
 
     <p>Bij eenvoudige lineaire vergelijkingen kunnen we een vaste strategie gebruiken:</p>
 
@@ -933,7 +933,7 @@ const MILESTONES_2 = [
     <p>De precieze volgorde kan soms verschillen, maar het onderliggende principe blijft hetzelfde: <strong>maak de onbekende stap voor stap vrij zonder de gelijkheid te verbreken.</strong></p>
 
 
-    <h3>18. Wat hebben we eigenlijk geleerd?</h3>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>Een vergelijking oplossen is meer dan een trucje met "naar de andere kant brengen".</p>
 
@@ -996,7 +996,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>1. Van een verhaal naar wiskunde</h3>
+      <h3>Van een verhaal naar wiskunde</h3>
 
       <p>
         Stel dat een taxi een vast startbedrag van 4 euro vraagt en daarna
@@ -1048,7 +1048,7 @@ const MILESTONES_2 = [
       </div>
 
 
-      <h3>2. Wat betekenen de letters?</h3>
+      <h3>Wat betekenen de letters?</h3>
 
       <p>
         Een formule heeft pas betekenis als we weten wat de symbolen voorstellen.
@@ -1083,7 +1083,7 @@ const MILESTONES_2 = [
       </div>
 
 
-      <h3>3. Variabele, constante en parameter</h3>
+      <h3>Variabele, constante en parameter</h3>
 
       <p>
         In een model is het nuttig om onderscheid te maken tussen waarden
@@ -1126,7 +1126,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>4. Een formule opstellen uit woorden</h3>
+      <h3>Een formule opstellen uit woorden</h3>
 
       <p>
         De moeilijkste stap bij modelleren is vaak niet het rekenen,
@@ -1177,7 +1177,7 @@ const MILESTONES_2 = [
       </div>
 
 
-      <h3>5. Invullen in een formule</h3>
+      <h3>Invullen in een formule</h3>
 
       <p>
         Zodra een formule is opgesteld, kunnen we concrete waarden invullen.
@@ -1217,7 +1217,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>6. Eenheden horen bij de formule</h3>
+      <h3>Eenheden horen bij de formule</h3>
 
       <p>
         Getallen in een formule hebben vaak een eenheid.
@@ -1257,7 +1257,7 @@ const MILESTONES_2 = [
       </div>
 
 
-      <h3>7. Een formule gebruiken om een onbekende te vinden</h3>
+      <h3>Een formule gebruiken om een onbekende te vinden</h3>
 
       <p>
         Een formule kan ook gebruikt worden om een andere grootheid te bepalen.
@@ -1295,7 +1295,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>8. Een formule omvormen</h3>
+      <h3>Een formule omvormen</h3>
 
       <p>
         In les 2.3 leerden we een onbekende vrijmaken in een vergelijking.
@@ -1345,7 +1345,7 @@ const MILESTONES_2 = [
       </div>
 
 
-      <h3>9. Verschillende vormen van dezelfde formule</h3>
+      <h3>Verschillende vormen van dezelfde formule</h3>
 
       <p>
         Eén relatie kan vaak op verschillende manieren worden geschreven,
@@ -1394,7 +1394,7 @@ const MILESTONES_2 = [
       <p class="formula">t = s / v</p>
 
 
-      <h3>10. Controle met eenheden</h3>
+      <h3>Controle met eenheden</h3>
 
       <p>
         De eenheden kunnen ook controleren of de omgevormde formule klopt.
@@ -1439,7 +1439,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>11. Een formule kan verschillende grootheden verbinden</h3>
+      <h3>Een formule kan verschillende grootheden verbinden</h3>
 
       <p>
         Formules beschrijven vaak een verband tussen meerdere grootheden.
@@ -1490,7 +1490,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>12. Niet elke formule is zomaar geldig voor elke waarde</h3>
+      <h3>Niet elke formule is zomaar geldig voor elke waarde</h3>
 
       <p>
         Een formule kan algebraïsch waarden toelaten die in de werkelijkheid
@@ -1531,7 +1531,7 @@ const MILESTONES_2 = [
       </div>
 
 
-      <h3>13. Een model is een vereenvoudiging</h3>
+      <h3>Een model is een vereenvoudiging</h3>
 
       <p>
         Een formule is meestal geen volledige kopie van de werkelijkheid.
@@ -1567,7 +1567,7 @@ const MILESTONES_2 = [
       </div>
 
 
-      <h3>14. Een model controleren</h3>
+      <h3>Een model controleren</h3>
 
       <p>
         Nadat je een formule hebt opgesteld, kun je verschillende controles
@@ -1604,7 +1604,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>15. Een volledig voorbeeld</h3>
+      <h3>Een volledig voorbeeld</h3>
 
       <p>
         Een zwembad heeft een vaste inhoud van 10 000 liter water.
@@ -1667,7 +1667,7 @@ const MILESTONES_2 = [
       </div>
 
 
-      <h3>16. Van werkelijkheid naar formule en terug</h3>
+      <h3>Van werkelijkheid naar formule en terug</h3>
 
       <p>
         Algebraïsch modelleren heeft dus twee richtingen.
@@ -1700,7 +1700,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>17. Verband met vergelijkingen</h3>
+      <h3>Verband met vergelijkingen</h3>
 
       <p>
         In les 2.3 gebruikten we een vergelijking om een onbekende te vinden.
@@ -1744,7 +1744,7 @@ const MILESTONES_2 = [
       </p>
 
 
-      <h3>18. Een formule is een compacte beschrijving van een structuur</h3>
+      <h3>Een formule is een compacte beschrijving van een structuur</h3>
 
       <p>
         Een goede formule vertelt meer dan alleen hoe je een getal moet
@@ -1834,7 +1834,7 @@ const MILESTONES_2 = [
     </ul>
 
 
-    <h3>1. Niet één oplossing, maar een bereik</h3>
+    <h3>Niet één oplossing, maar een bereik</h3>
 
     <p>Bij een vergelijking zoals:</p>
 
@@ -1858,7 +1858,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>2. De belangrijkste ongelijkheidstekens</h3>
+    <h3>De belangrijkste ongelijkheidstekens</h3>
 
     <p>We gebruiken verschillende tekens om waarden met elkaar te vergelijken.</p>
 
@@ -1882,7 +1882,7 @@ const MILESTONES_2 = [
     <p>betekent dat x groter dan of gelijk aan 5 is.</p>
 
 
-    <h3>3. Een ongelijkheid op de getallenlijn</h3>
+    <h3>Een ongelijkheid op de getallenlijn</h3>
 
     <p>Een ongelijkheid kunnen we zichtbaar maken op de getallenlijn.</p>
 
@@ -1909,7 +1909,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>4. Open en gesloten grenzen</h3>
+    <h3>Open en gesloten grenzen</h3>
 <div class="theory-image">
         <img
           src="assets/getallenlijn-kleiner-dan-4.svg"
@@ -1939,7 +1939,7 @@ const MILESTONES_2 = [
     <p>De richting van de oplossing wordt bepaald door het ongelijkheidsteken.</p>
 
 
-    <h3>5. Ongelijkheden oplossen zoals vergelijkingen</h3>
+    <h3>Ongelijkheden oplossen zoals vergelijkingen</h3>
 
     <p>Veel regels uit 2.3 blijven geldig.</p>
 
@@ -1962,7 +1962,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>6. Vermenigvuldigen en delen door een positief getal</h3>
+    <h3>Vermenigvuldigen en delen door een positief getal</h3>
 
     <p>Ook vermenigvuldigen en delen kunnen we gebruiken.</p>
 
@@ -1983,7 +1983,7 @@ const MILESTONES_2 = [
     <p>Hetzelfde geldt voor delen door of vermenigvuldigen met elk <strong>positief</strong> getal.</p>
 
 
-    <h3>7. Waarom keert het teken om bij een negatief getal?</h3>
+    <h3>Waarom keert het teken om bij een negatief getal?</h3>
 
     <p>Hier wijkt een ongelijkheid af van een vergelijking.</p>
 
@@ -2005,7 +2005,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>8. Een voorbeeld met een negatief getal</h3>
+    <h3>Een voorbeeld met een negatief getal</h3>
 
     <p>Neem:</p>
 
@@ -2020,7 +2020,7 @@ const MILESTONES_2 = [
     <p>Dit is een veelgemaakte fout: wie vergeet het teken om te keren, krijgt de verkeerde oplossingsverzameling.</p>
 
 
-    <h3>9. Een tweede manier om de tekenomkering te begrijpen</h3>
+    <h3>Een tweede manier om de tekenomkering te begrijpen</h3>
 
     <p>We kunnen hetzelfde idee bekijken met concrete getallen.</p>
 
@@ -2043,7 +2043,7 @@ const MILESTONES_2 = [
     <p>Dit is geen aparte truc voor ongelijkheden, maar een gevolg van de eigenschappen van negatieve getallen.</p>
 
 
-    <h3>10. Twee grenzen tegelijk</h3>
+    <h3>Twee grenzen tegelijk</h3>
 
     <p>Soms leggen we tegelijk een onder- en een bovengrens op.</p>
 
@@ -2068,7 +2068,7 @@ const MILESTONES_2 = [
     <p>Dan behoren 2 en 7 wel tot de oplossingen.</p>
 
 
-    <h3>11. Intervallen</h3>
+    <h3>Intervallen</h3>
 
     <p>Een hele verzameling getallen kunnen we compact beschrijven met een <strong>interval</strong>.</p>
 
@@ -2099,7 +2099,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>12. Een interval kan ook maar één grens hebben</h3>
+    <h3>Een interval kan ook maar één grens hebben</h3>
 
     <p>Bij:</p>
 
@@ -2123,7 +2123,7 @@ const MILESTONES_2 = [
 
     <p>Daarom gebruiken we bij ∞ altijd een ronde haak.</p>
 
-    <h3>13. Absolute waarde als afstand</h3>
+    <h3>Absolute waarde als afstand</h3>
 
     <p>Op de getallenlijn kunnen we ook de <strong>afstand van een getal tot nul</strong> bekijken.</p>
 
@@ -2143,7 +2143,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>14. Absolute waarde en afstand tussen twee getallen</h3>
+    <h3>Absolute waarde en afstand tussen twee getallen</h3>
 
     <p>Absolute waarde is niet alleen nuttig voor de afstand tot nul.</p>
 
@@ -2162,7 +2162,7 @@ const MILESTONES_2 = [
     <p>Omdat afstand nooit negatief kan zijn, geeft de absolute waarde precies de juiste afstand.</p>
 
 
-    <h3>15. Absolute waarde als voorwaarde</h3>
+    <h3>Absolute waarde als voorwaarde</h3>
 
     <p>We kunnen absolute waarde ook gebruiken om een afstandsvoorwaarde te beschrijven.</p>
 
@@ -2191,7 +2191,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>16. Ongelijkheden uit de werkelijkheid</h3>
+    <h3>Ongelijkheden uit de werkelijkheid</h3>
 
     <p>Ongelijkheden zijn bijzonder geschikt wanneer een grenswaarde belangrijk is.</p>
 
@@ -2210,7 +2210,7 @@ const MILESTONES_2 = [
     <p>Het verschil tussen <strong>&lt;</strong> en <strong>≤</strong> kan dus een echte betekenis hebben.</p>
 
 
-    <h3>17. Niet elke wiskundige oplossing is fysisch mogelijk</h3>
+    <h3>Niet elke wiskundige oplossing is fysisch mogelijk</h3>
 
     <p>Net zoals bij algebraïsche formules moet je rekening houden met de betekenis van een variabele.</p>
 
@@ -2228,7 +2228,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>18. Een volledige ongelijkheid oplossen</h3>
+    <h3>Een volledige ongelijkheid oplossen</h3>
 
     <p>Bekijk:</p>
 
@@ -2249,7 +2249,7 @@ const MILESTONES_2 = [
     <p>De grens 5 hoort erbij omdat het teken ≥ is.</p>
 
 
-    <h3>19. Een volledige ongelijkheid met een negatieve factor</h3>
+    <h3>Een volledige ongelijkheid met een negatieve factor</h3>
 
     <p>Neem:</p>
 
@@ -2270,7 +2270,7 @@ const MILESTONES_2 = [
     <p class="formula">(−∞, −3)</p>
 
 
-    <h3>20. Vergelijking versus ongelijkheid</h3>
+    <h3>Vergelijking versus ongelijkheid</h3>
 
     <p>Het verschil kunnen we nu scherp formuleren.</p>
 
@@ -2289,7 +2289,7 @@ const MILESTONES_2 = [
     <p>Een vergelijking leidt vaak tot een afzonderlijke waarde; een ongelijkheid vaak tot een interval of een combinatie van intervallen.</p>
 
 
-    <h3>21. Een vaste werkwijze</h3>
+    <h3>Een vaste werkwijze</h3>
 
     <p>Bij een eenvoudige ongelijkheid kunnen we deze werkwijze gebruiken:</p>
 
@@ -2307,7 +2307,7 @@ const MILESTONES_2 = [
     <p>Controleer tenslotte of de gevonden oplossingen passen bij de context.</p>
 
 
-    <h3>22. Wat hebben we eigenlijk geleerd?</h3>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>Een ongelijkheid is geen ingewikkelde versie van een vergelijking. Het is een andere manier om een voorwaarde te beschrijven.</p>
 
@@ -2362,7 +2362,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>1. Een macht is herhaalde vermenigvuldiging</h3>
+    <h3>Een macht is herhaalde vermenigvuldiging</h3>
 
     <p>
       Een macht is een compacte manier om dezelfde factor meerdere keren
@@ -2396,7 +2396,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>2. Vermenigvuldigen van machten met hetzelfde grondtal</h3>
+    <h3>Vermenigvuldigen van machten met hetzelfde grondtal</h3>
 
     <p>
       Kijk naar:
@@ -2437,7 +2437,7 @@ const MILESTONES_2 = [
     <p class="formula">2x² · 3x⁴ = 6x⁶</p>
 
 
-    <h3>3. Delen van machten met hetzelfde grondtal</h3>
+    <h3>Delen van machten met hetzelfde grondtal</h3>
 
     <p>
       Bij delen verdwijnen factoren die zowel boven als onder voorkomen.
@@ -2470,7 +2470,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>4. De macht nul</h3>
+    <h3>De macht nul</h3>
 
     <p>
       Wanneer we dezelfde macht door zichzelf delen, krijgen we 1:
@@ -2508,7 +2508,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>5. Negatieve exponenten</h3>
+    <h3>Negatieve exponenten</h3>
 
     <p>
       We zagen:
@@ -2553,7 +2553,7 @@ const MILESTONES_2 = [
     <p class="formula">2⁻³ = 1 / 2³ = 1 / 8</p>
 
 
-    <h3>6. Een macht van een macht</h3>
+    <h3>Een macht van een macht</h3>
 
     <p>
       Beschouw:
@@ -2599,7 +2599,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>7. Wortels maken een macht ongedaan</h3>
+    <h3>Wortels maken een macht ongedaan</h3>
 
     <p>
       We weten:
@@ -2642,7 +2642,7 @@ const MILESTONES_2 = [
     <p class="formula">√(x²) = |x|</p>
 
 
-    <h3>8. Wortels en machten horen bij elkaar</h3>
+    <h3>Wortels en machten horen bij elkaar</h3>
 
     <p>
       Een vierkantswortel kan ook als een macht met exponent 1/2 worden geschreven:
@@ -2672,7 +2672,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>9. Gebroken exponenten</h3>
+    <h3>Gebroken exponenten</h3>
 
     <p>
       Omdat een wortel een macht met een gebroken exponent is,
@@ -2700,7 +2700,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>10. Wanneer is een wortel gedefinieerd?</h3>
+    <h3>Wanneer is een wortel gedefinieerd?</h3>
 
     <p>
       Bij reële getallen bestaat een vierkantswortel alleen wanneer
@@ -2731,7 +2731,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>11. Algebraïsche breuken</h3>
+    <h3>Algebraïsche breuken</h3>
 
     <p>
       In algebra kunnen zowel de teller als de noemer letters bevatten.
@@ -2749,7 +2749,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>12. De noemer mag niet nul zijn</h3>
+    <h3>De noemer mag niet nul zijn</h3>
 
     <p>
       Delen door nul is niet gedefinieerd.
@@ -2792,7 +2792,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>13. Breuken vereenvoudigen door factoren weg te delen</h3>
+    <h3>Breuken vereenvoudigen door factoren weg te delen</h3>
 
     <p>
       Neem:
@@ -2840,7 +2840,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>14. Je mag geen termen wegstrepen</h3>
+    <h3>Je mag geen termen wegstrepen</h3>
 
     <p>
       Een veelgemaakte fout is het wegstrepen van onderdelen die
@@ -2876,7 +2876,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>15. Breuken vermenigvuldigen</h3>
+    <h3>Breuken vermenigvuldigen</h3>
 
     <p>
       Bij het vermenigvuldigen van breuken vermenigvuldigen we
@@ -2903,7 +2903,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>16. Breuken delen</h3>
+    <h3>Breuken delen</h3>
 
     <p>
       Delen door een breuk betekent vermenigvuldigen met het omgekeerde.
@@ -2919,7 +2919,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>17. Breuken optellen en aftrekken</h3>
+    <h3>Breuken optellen en aftrekken</h3>
 
     <p>
       Bij optellen en aftrekken moeten de breuken eerst een
@@ -2948,7 +2948,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>18. Verschillende bewerkingen komen samen</h3>
+    <h3>Verschillende bewerkingen komen samen</h3>
 
     <p>
       In een algebraïsche uitdrukking kunnen machten, wortels en breuken
@@ -2977,7 +2977,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>19. Een volledig voorbeeld</h3>
+    <h3>Een volledig voorbeeld</h3>
 
     <p>
       Vereenvoudig:
@@ -3027,7 +3027,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>20. De belangrijkste rekenregels samen</h3>
+    <h3>De belangrijkste rekenregels samen</h3>
 
     <p>
       De belangrijkste regels uit deze les kunnen we nu samenbrengen.
@@ -3056,7 +3056,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>21. Veelgemaakte fouten</h3>
+    <h3>Veelgemaakte fouten</h3>
 
     <p><strong>Fout 1: exponenten vermenigvuldigen bij een product</strong></p>
 
@@ -3093,7 +3093,7 @@ const MILESTONES_2 = [
     <p class="formula">√(x²) = |x|</p>
 
 
-    <h3>22. Een vaste werkwijze</h3>
+    <h3>Een vaste werkwijze</h3>
 
     <p>
       Wanneer je een algebraïsche uitdrukking met machten, wortels
@@ -3116,7 +3116,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>23. Wat hebben we eigenlijk geleerd?</h3>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>
       We begonnen met een eenvoudige vraag:
@@ -3207,7 +3207,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>1. Wat maakt een vergelijking kwadratisch?</h3>
+    <h3>Wat maakt een vergelijking kwadratisch?</h3>
 
     <p>
       Een kwadratische vergelijking is een vergelijking waarin de hoogste
@@ -3249,7 +3249,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>2. Eerst alles naar één kant</h3>
+    <h3>Eerst alles naar één kant</h3>
 
     <p>
       De standaardvorm van een kwadratische vergelijking heeft aan één
@@ -3284,7 +3284,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>3. De eenvoudigste soort: x² = a</h3>
+    <h3>De eenvoudigste soort: x² = a</h3>
 
     <p>
       We beginnen met een vergelijking waarin alleen x² voorkomt:
@@ -3326,7 +3326,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>4. Waarom zijn er soms twee oplossingen?</h3>
+    <h3>Waarom zijn er soms twee oplossingen?</h3>
 
     <p>
       Het kwadrateren maakt een positief en een negatief getal gelijk:
@@ -3356,7 +3356,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>5. Factoriseren</h3>
+    <h3>Factoriseren</h3>
 
     <p>
       Sommige kwadratische vergelijkingen kunnen we schrijven als
@@ -3389,7 +3389,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>6. De nulproductregel</h3>
+    <h3>De nulproductregel</h3>
 
     <p>
       De reden waarom factoriseren zo nuttig is, volgt uit een eenvoudige
@@ -3443,7 +3443,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>7. Een kwadratische vergelijking oplossen door factoriseren</h3>
+    <h3>Een kwadratische vergelijking oplossen door factoriseren</h3>
 
     <p>
       Neem:
@@ -3486,7 +3486,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>8. Waarom je niet zomaar door x mag delen</h3>
+    <h3>Waarom je niet zomaar door x mag delen</h3>
 
     <p>
       Stel:
@@ -3537,7 +3537,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>9. Een bijzonder geval: verschil van kwadraten</h3>
+    <h3>Een bijzonder geval: verschil van kwadraten</h3>
 
     <p>
       Een belangrijke factorisatie is:
@@ -3584,7 +3584,7 @@ const MILESTONES_2 = [
     <p class="formula">x = −5</p>
 
 
-    <h3>10. Niet elke kwadratische vergelijking factoriseert eenvoudig</h3>
+    <h3>Niet elke kwadratische vergelijking factoriseert eenvoudig</h3>
 
     <p>
       Factoriseren is handig wanneer het gemakkelijk lukt.
@@ -3612,7 +3612,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>11. De abc-formule</h3>
+    <h3>De abc-formule</h3>
 
     <p>
       Voor een vergelijking in de vorm:
@@ -3643,7 +3643,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>12. Waar komt de discriminant vandaan?</h3>
+    <h3>Waar komt de discriminant vandaan?</h3>
 
     <p>
       In de abc-formule staat:
@@ -3676,7 +3676,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>13. D &gt; 0: twee verschillende oplossingen</h3>
+    <h3>D &gt; 0: twee verschillende oplossingen</h3>
 
     <p>
       Stel:
@@ -3724,7 +3724,7 @@ const MILESTONES_2 = [
     <p class="formula">x = 3</p>
 
 
-    <h3>14. D = 0: één oplossing</h3>
+    <h3>D = 0: één oplossing</h3>
 
     <p>
       Stel:
@@ -3768,7 +3768,7 @@ const MILESTONES_2 = [
     <p class="formula">(x − 2)² = 0</p>
 
 
-    <h3>15. D &lt; 0: geen reële oplossingen</h3>
+    <h3>D &lt; 0: geen reële oplossingen</h3>
 
     <p>
       Stel:
@@ -3809,7 +3809,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>16. De drie gevallen van de discriminant</h3>
+    <h3>De drie gevallen van de discriminant</h3>
 
     <p>
       We kunnen alles samenvatten:
@@ -3836,7 +3836,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>17. De grafische betekenis van de discriminant</h3>
+    <h3>De grafische betekenis van de discriminant</h3>
 
     <p>
       Een kwadratische vergelijking hangt nauw samen met een parabool.
@@ -3893,7 +3893,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>18. De abc-formule stap voor stap gebruiken</h3>
+    <h3>De abc-formule stap voor stap gebruiken</h3>
 
     <p>
       Neem:
@@ -3948,7 +3948,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>19. Een andere methode: kwadraat afsplitsen</h3>
+    <h3>Een andere methode: kwadraat afsplitsen</h3>
 
     <p>
       Er bestaat nog een algemene manier om een kwadratische vergelijking
@@ -3999,7 +3999,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>20. Welke methode gebruik je?</h3>
+    <h3>Welke methode gebruik je?</h3>
 
     <p>
       Er zijn verschillende manieren om een kwadratische vergelijking op te lossen.
@@ -4031,7 +4031,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>21. Controleer altijd je oplossingen</h3>
+    <h3>Controleer altijd je oplossingen</h3>
 
     <p>
       Een gevonden waarde is pas een oplossing wanneer ze de
@@ -4066,7 +4066,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>22. Veelgemaakte fouten</h3>
+    <h3>Veelgemaakte fouten</h3>
 
     <p><strong>Fout 1: slechts één wortel nemen</strong></p>
 
@@ -4120,7 +4120,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>23. Een vaste werkwijze</h3>
+    <h3>Een vaste werkwijze</h3>
 
     <p>
       Bij een kwadratische vergelijking kun je deze werkwijze gebruiken:
@@ -4139,7 +4139,7 @@ const MILESTONES_2 = [
     </ol>
 
 
-    <h3>24. Van vergelijking naar parabool</h3>
+    <h3>Van vergelijking naar parabool</h3>
 
     <p>
       We kunnen nu een belangrijke verbinding leggen tussen algebra en meetkunde.
@@ -4172,7 +4172,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>25. Wat hebben we eigenlijk geleerd?</h3>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>
       Een kwadratische vergelijking is meer dan een moeilijkere versie
@@ -4251,7 +4251,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>1. Van plaats naar getallen</h3>
+    <h3>Van plaats naar getallen</h3>
 
     <p>
       Stel dat je op een kaart wilt aangeven waar een bepaalde plaats ligt.
@@ -4287,7 +4287,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>2. Het cartesisch coördinatenstelsel</h3>
+    <h3>Het cartesisch coördinatenstelsel</h3>
 
     <p>
       Het referentiepunt noemen we de <strong>oorsprong</strong>.
@@ -4326,7 +4326,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>3. De vier kwadranten</h3>
+    <h3>De vier kwadranten</h3>
 
     <p>
       De twee assen verdelen het vlak in vier gebieden.
@@ -4368,7 +4368,7 @@ const MILESTONES_2 = [
     <p class="formula">x = 0</p>
 
 
-    <h3>4. Een punt lezen en schrijven</h3>
+    <h3>Een punt lezen en schrijven</h3>
 
     <p>
       De volgorde van de coördinaten is belangrijk.
@@ -4398,7 +4398,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>5. Afstand horizontaal en verticaal</h3>
+    <h3>Afstand horizontaal en verticaal</h3>
 
     <p>
       Als twee punten dezelfde y-coördinaat hebben, liggen ze op dezelfde
@@ -4436,7 +4436,7 @@ const MILESTONES_2 = [
     <p class="formula">afstand = |y₂ − y₁|</p>
 
 
-    <h3>6. De afstand tussen twee willekeurige punten</h3>
+    <h3>De afstand tussen twee willekeurige punten</h3>
 
     <p>
       Nu nemen we twee willekeurige punten:
@@ -4477,7 +4477,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>7. Een afstand berekenen</h3>
+    <h3>Een afstand berekenen</h3>
 
     <p>
       Neem:
@@ -4517,7 +4517,7 @@ const MILESTONES_2 = [
       </div>
 
 
-    <h3>8. Het midden van een lijnstuk</h3>
+    <h3>Het midden van een lijnstuk</h3>
 
     <p>
       Soms willen we niet de afstand tussen twee punten weten,
@@ -4558,7 +4558,7 @@ const MILESTONES_2 = [
     <p class="formula">M = (\\frac{x₁ + x₂}{2},\\frac{y₁ + y₂}{2})</p>
 
 
-    <h3>9. Van een lijnstuk naar een richting</h3>
+    <h3>Van een lijnstuk naar een richting</h3>
 
     <p>
       Twee punten vertellen ons niet alleen hoe ver ze uit elkaar liggen.
@@ -4584,7 +4584,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>10. De helling van een rechte</h3>
+    <h3>De helling van een rechte</h3>
 
     <p>
       De helling geeft de verhouding tussen de verticale en horizontale
@@ -4613,7 +4613,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>11. Een helling berekenen</h3>
+    <h3>Een helling berekenen</h3>
 
     <p>
       Neem opnieuw:
@@ -4643,7 +4643,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>12. Horizontale en verticale rechten</h3>
+    <h3>Horizontale en verticale rechten</h3>
 
     <p>
       Bij een horizontale rechte verandert y niet.
@@ -4681,7 +4681,7 @@ const MILESTONES_2 = [
     <p class="formula">x = a</p>
 
 
-    <h3>13. De vergelijking van een rechte</h3>
+    <h3>De vergelijking van een rechte</h3>
 
     <p>
       Een rechte met helling m kan worden geschreven als:
@@ -4721,7 +4721,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>14. Een rechte bepalen uit een punt en een helling</h3>
+    <h3>Een rechte bepalen uit een punt en een helling</h3>
 
     <p>
       Stel dat we de helling kennen:
@@ -4767,7 +4767,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>15. De punt-hellingvorm</h3>
+    <h3>De punt-hellingvorm</h3>
 
     <p>
       We kunnen dezelfde redenering rechtstreeks schrijven als:
@@ -4810,7 +4810,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>16. Parallelle rechten</h3>
+    <h3>Parallelle rechten</h3>
 
     <p>
       Twee verschillende rechten zijn parallel wanneer ze dezelfde richting
@@ -4840,7 +4840,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>17. Loodrechte rechten</h3>
+    <h3>Loodrechte rechten</h3>
 
     <p>
       Twee rechten staan loodrecht op elkaar wanneer hun richtingen
@@ -4878,7 +4878,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>18. Het snijpunt van twee rechten</h3>
+    <h3>Het snijpunt van twee rechten</h3>
 
     <p>
       Wanneer twee rechten elkaar snijden, heeft hun snijpunt
@@ -4926,7 +4926,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>19. Geen of oneindig veel snijpunten</h3>
+    <h3>Geen of oneindig veel snijpunten</h3>
 
     <p>
       Niet iedere combinatie van twee rechten heeft precies één snijpunt.
@@ -4958,7 +4958,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>20. Een rechte vanuit twee punten</h3>
+    <h3>Een rechte vanuit twee punten</h3>
 
     <p>
       Wanneer twee punten op dezelfde rechte liggen, bepalen ze samen
@@ -4998,7 +4998,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>21. Een geometrisch probleem wordt algebra</h3>
+    <h3>Een geometrisch probleem wordt algebra</h3>
 
     <p>
       Stel dat we willen weten waar een rechte een bepaalde verticale
@@ -5035,7 +5035,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>22. De verbinding met Pythagoras</h3>
+    <h3>De verbinding met Pythagoras</h3>
 
     <p>
       De afstandsformule lijkt misschien een nieuwe formule,
@@ -5063,7 +5063,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>23. Van geometrie naar algebra en terug</h3>
+    <h3>Van geometrie naar algebra en terug</h3>
 
     <p>
       We kunnen nu in beide richtingen werken.
@@ -5087,7 +5087,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>24. Een vaste werkwijze</h3>
+    <h3>Een vaste werkwijze</h3>
 
     <p>
       Bij een probleem in het coördinatenvlak kun je deze werkwijze gebruiken:
@@ -5104,7 +5104,7 @@ const MILESTONES_2 = [
     </ol>
 
 
-    <h3>25. Wat hebben we eigenlijk geleerd?</h3>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>
       We begonnen met een eenvoudige vraag:
@@ -5183,7 +5183,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>1. Ideale vormen</h3>
+    <h3>Ideale vormen</h3>
 
     <p>
       In de werkelijkheid bestaan geen perfecte wiskundige punten,
@@ -5212,7 +5212,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>2. Lijnstukken, rechten en stralen</h3>
+    <h3>Lijnstukken, rechten en stralen</h3>
 
     <p>
       Een <strong>lijnstuk</strong> heeft twee eindpunten.
@@ -5235,7 +5235,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>3. Hoeken meten</h3>
+    <h3>Hoeken meten</h3>
 
     <p>
       Wanneer twee stralen vanuit hetzelfde punt vertrekken,
@@ -5270,7 +5270,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>4. Hoeken op een rechte lijn</h3>
+    <h3>Hoeken op een rechte lijn</h3>
 
     <p>
       Een halve draai vormt een rechte hoeklijn van 180°.
@@ -5298,7 +5298,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>5. Overstaande hoeken</h3>
+    <h3>Overstaande hoeken</h3>
 
     <p>
       Wanneer twee rechten elkaar snijden, ontstaan vier hoeken.
@@ -5323,7 +5323,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>6. Parallelle en loodrechte lijnen</h3>
+    <h3>Parallelle en loodrechte lijnen</h3>
 
     <p>
       Twee rechten zijn <strong>parallel</strong> wanneer ze in hetzelfde
@@ -5344,7 +5344,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>7. Hoeken bij parallelle lijnen</h3>
+    <h3>Hoeken bij parallelle lijnen</h3>
 
     <p>
       Wanneer een derde rechte twee parallelle rechten snijdt,
@@ -5368,7 +5368,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>8. Driehoeken</h3>
+    <h3>Driehoeken</h3>
 
     <p>
       Een driehoek is een veelhoek met drie zijden en drie hoeken.
@@ -5399,7 +5399,7 @@ const MILESTONES_2 = [
     <p class="formula">γ = 180° − 50° − 60° = 70°</p>
 
 
-    <h3>9. Bijzondere driehoeken</h3>
+    <h3>Bijzondere driehoeken</h3>
 
     <p>
       Sommige driehoeken hebben extra eigenschappen.
@@ -5429,7 +5429,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>10. Buitenhoeken van een driehoek</h3>
+    <h3>Buitenhoeken van een driehoek</h3>
 
     <p>
       Verlengen we één zijde van een driehoek, dan ontstaat een
@@ -5456,7 +5456,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>11. Rechthoekige driehoeken</h3>
+    <h3>Rechthoekige driehoeken</h3>
 
     <p>
       Een <strong>rechthoekige driehoek</strong> heeft één hoek van 90°.
@@ -5477,7 +5477,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>12. De stelling van Pythagoras</h3>
+    <h3>De stelling van Pythagoras</h3>
 
     <p>
       Voor een rechthoekige driehoek met rechthoekszijden a en b
@@ -5498,7 +5498,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>13. Waarom Pythagoras werkt</h3>
+    <h3>Waarom Pythagoras werkt</h3>
 
     <p>
       De relatie van Pythagoras kan geometrisch worden gezien door op
@@ -5535,7 +5535,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>14. Pythagoras gebruiken</h3>
+    <h3>Pythagoras gebruiken</h3>
 
     <p>
       Stel dat de rechthoekszijden 3 en 4 zijn.
@@ -5566,7 +5566,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>15. Een onbekende rechthoekszijde</h3>
+    <h3>Een onbekende rechthoekszijde</h3>
 
     <p>
       Pythagoras kunnen we ook gebruiken wanneer de hypotenusa bekend is.
@@ -5596,7 +5596,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>16. Omtrek</h3>
+    <h3>Omtrek</h3>
 
     <p>
       De <strong>omtrek</strong> van een figuur is de totale lengte
@@ -5627,7 +5627,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>17. Oppervlakte</h3>
+    <h3>Oppervlakte</h3>
 
     <p>
       De <strong>oppervlakte</strong> vertelt hoeveel vlak een figuur inneemt.
@@ -5668,7 +5668,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>18. Waarom oppervlakte-eenheden kwadratisch zijn</h3>
+    <h3>Waarom oppervlakte-eenheden kwadratisch zijn</h3>
 
     <p>
       Stel dat een vierkant een zijde van 3 meter heeft.
@@ -5694,7 +5694,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>19. Inhoud van ruimtelijke figuren</h3>
+    <h3>Inhoud van ruimtelijke figuren</h3>
 
     <p>
       Bij driedimensionale objecten komt er een derde dimensie bij:
@@ -5723,7 +5723,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>20. Eenheden vertellen wat je berekent</h3>
+    <h3>Eenheden vertellen wat je berekent</h3>
 
     <p>
       De eenheden vormen een belangrijke controle.
@@ -5760,7 +5760,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>21. Van geometrie naar algebra</h3>
+    <h3>Van geometrie naar algebra</h3>
 
     <p>
       Meetkunde en algebra zijn geen volledig afzonderlijke werelden.
@@ -5795,7 +5795,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>22. Een figuur kan meerdere eigenschappen tegelijk hebben</h3>
+    <h3>Een figuur kan meerdere eigenschappen tegelijk hebben</h3>
 
     <p>
       Een rechthoek heeft bijvoorbeeld tegelijkertijd eigenschappen
@@ -5820,7 +5820,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>23. Een volledige toepassing</h3>
+    <h3>Een volledige toepassing</h3>
 
     <p>
       Een ladder van 5 meter lang staat tegen een verticale muur.
@@ -5870,7 +5870,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>24. Bewijzen versus meten</h3>
+    <h3>Bewijzen versus meten</h3>
 
     <p>
       Een belangrijk verschil tussen wiskunde en meten in de werkelijkheid
@@ -5904,7 +5904,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>25. Van eigenschappen naar stellingen</h3>
+    <h3>Van eigenschappen naar stellingen</h3>
 
     <p>
       In de meetkunde kunnen we een keten van redeneringen opbouwen.
@@ -5938,7 +5938,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>26. Een vaste werkwijze</h3>
+    <h3>Een vaste werkwijze</h3>
 
     <p>
       Bij een meetkundig probleem kun je deze werkwijze gebruiken:
@@ -5956,7 +5956,7 @@ const MILESTONES_2 = [
     </ol>
 
 
-    <h3>27. Wat hebben we eigenlijk geleerd?</h3>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>
       We begonnen met eenvoudige ideale vormen:
@@ -6041,7 +6041,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>1. Dezelfde vorm, andere grootte</h3>
+    <h3>Dezelfde vorm, andere grootte</h3>
 
     <p>
       Stel dat we een rechthoek hebben van 3 cm bij 5 cm.
@@ -6077,7 +6077,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>2. Wat betekent gelijkvormig?</h3>
+    <h3>Wat betekent gelijkvormig?</h3>
 
     <p>
       Twee figuren zijn <strong>gelijkvormig</strong> wanneer ze dezelfde vorm hebben.
@@ -6111,7 +6111,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>3. Overeenkomstige hoeken</h3>
+    <h3>Overeenkomstige hoeken</h3>
 
     <p>
       Om twee figuren met elkaar te vergelijken, moeten we weten
@@ -6152,7 +6152,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>4. Overeenkomstige zijden</h3>
+    <h3>Overeenkomstige zijden</h3>
 
     <p>
       Bij gelijkvormige figuren zijn niet alleen de overeenkomstige hoeken gelijk.
@@ -6188,7 +6188,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>5. De schaalfactor</h3>
+    <h3>De schaalfactor</h3>
 
     <p>
       De factor waarmee alle lengtes veranderen noemen we de
@@ -6223,7 +6223,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>6. Van klein naar groot</h3>
+    <h3>Van klein naar groot</h3>
 
     <p>
       Stel dat een kleine driehoek een zijde van 7 cm heeft.
@@ -6254,7 +6254,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>7. Van groot naar klein</h3>
+    <h3>Van groot naar klein</h3>
 
     <p>
       We kunnen natuurlijk ook terugrekenen.
@@ -6291,7 +6291,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>8. Een onbekende lengte berekenen</h3>
+    <h3>Een onbekende lengte berekenen</h3>
 
     <p>
       Gelijkvormigheid is bijzonder nuttig wanneer één lengte onbekend is.
@@ -6331,7 +6331,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>9. Verhoudingen zijn belangrijker dan verschillen</h3>
+    <h3>Verhoudingen zijn belangrijker dan verschillen</h3>
 
     <p>
       Stel dat een figuur wordt vergroot van 4 cm naar 6 cm.
@@ -6374,7 +6374,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>10. Gelijkvormige driehoeken</h3>
+    <h3>Gelijkvormige driehoeken</h3>
 
     <p>
       Driehoeken zijn bijzonder belangrijk omdat we later in trigonometrie
@@ -6412,7 +6412,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>11. Gelijkvormigheid herkennen</h3>
+    <h3>Gelijkvormigheid herkennen</h3>
 
     <p>
       We kunnen gelijkvormigheid op verschillende manieren herkennen.
@@ -6454,7 +6454,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>12. Oppervlakte verandert anders dan lengte</h3>
+    <h3>Oppervlakte verandert anders dan lengte</h3>
 
     <p>
       Tot nu toe keken we naar lengtes.
@@ -6499,7 +6499,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>13. Waarom verschijnt k²?</h3>
+    <h3>Waarom verschijnt k²?</h3>
 
     <p>
       Dat is geen nieuwe mysterieuze regel.
@@ -6544,7 +6544,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>14. Een oppervlakte berekenen na een vergroting</h3>
+    <h3>Een oppervlakte berekenen na een vergroting</h3>
 
     <p>
       Stel dat een figuur een oppervlakte van 12 cm² heeft
@@ -6569,7 +6569,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>15. Volume verandert met k³</h3>
+    <h3>Volume verandert met k³</h3>
 
     <p>
       Bij een driedimensionaal object hebben we drie lengterichtingen:
@@ -6622,7 +6622,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>16. Schaaltekeningen</h3>
+    <h3>Schaaltekeningen</h3>
 
     <p>
       Gelijkvormigheid wordt veel gebruikt om grote objecten
@@ -6660,7 +6660,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>17. Schaal is een verhouding</h3>
+    <h3>Schaal is een verhouding</h3>
 
     <p>
       Een schaal zoals 1 : 50 betekent niet dat er ergens een
@@ -6703,7 +6703,7 @@ const MILESTONES_2 = [
     <p class="formula">750 m = 0,75 km</p>
 
 
-    <h3>18. Van werkelijkheid naar tekening</h3>
+    <h3>Van werkelijkheid naar tekening</h3>
 
     <p>
       We kunnen ook de andere richting uit rekenen.
@@ -6735,7 +6735,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>19. De schaalfactor kan kleiner zijn dan 1</h3>
+    <h3>De schaalfactor kan kleiner zijn dan 1</h3>
 
     <p>
       Een schaaltekening is meestal kleiner dan de werkelijkheid.
@@ -6767,7 +6767,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>20. Een volledig schaalprobleem</h3>
+    <h3>Een volledig schaalprobleem</h3>
 
     <p>
       Stel dat een plattegrond van een tuin schaal 1 : 200 heeft.
@@ -6807,7 +6807,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>21. Waarom is gelijkvormigheid zo krachtig?</h3>
+    <h3>Waarom is gelijkvormigheid zo krachtig?</h3>
 
     <p>
       Gelijkvormigheid laat ons eigenschappen van een figuur
@@ -6835,7 +6835,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>22. Gelijkvormigheid en verhoudingen in driehoeken</h3>
+    <h3>Gelijkvormigheid en verhoudingen in driehoeken</h3>
 
     <p>
       Hier begint de verbinding met de volgende belangrijke stap
@@ -6887,7 +6887,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>23. Veelgemaakte fouten</h3>
+    <h3>Veelgemaakte fouten</h3>
 
     <p>
       Bij gelijkvormigheid ontstaan vaak fouten doordat lengtes,
@@ -6923,7 +6923,7 @@ const MILESTONES_2 = [
     </ul>
 
 
-    <h3>24. Een vaste werkwijze</h3>
+    <h3>Een vaste werkwijze</h3>
 
     <p>
       Bij een probleem met gelijkvormige figuren kun je steeds dezelfde
@@ -6949,7 +6949,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>25. Wat hebben we eigenlijk geleerd?</h3>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>
       Gelijkvormigheid gaat over figuren die dezelfde vorm hebben,
@@ -7719,7 +7719,7 @@ const MILESTONES_2 = [
   id: "2.12",
   title: "Lineaire & kwadratische functies",
   goal: "Hoe zien algebraïsche relaties eruit?",
-  theory: `
+  theory:/*html*/ `
     <h3>Van functie naar grafiek</h3>
 
     <p>In de vorige milestone leerden we dat een functie een verband beschrijft tussen een invoer en een uitvoer.</p>
@@ -7853,7 +7853,7 @@ const MILESTONES_2 = [
 
     <p>Dat betekent:</p>
 
-    <p class="formula">Δy = 5 wanneer Δx = 1</p>
+    <p class="formula">Δy = 5\\ wanneer\\ Δx = 1</p>
 
     <p>In:</p>
 

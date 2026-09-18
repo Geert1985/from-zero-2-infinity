@@ -15,7 +15,7 @@ const MILESTONES_1 = [
           </ul>
         </p>
 
-      <h3>1. Het verschil tussen een getal en een cijfer</h3>
+      <h3>Het verschil tussen een getal en een cijfer</h3>
         <p>Stel dat er drie appels op tafel liggen. We kunnen ook drie stenen of drie stoelen hebben.</p>
         <p>De voorwerpen zijn verschillend, maar de <strong>hoeveelheid is dezelfde: drie</strong></p>
         <p>Het <strong>getal 3</strong> geeft die hoeveelheid aan</p>
@@ -30,13 +30,18 @@ const MILESTONES_1 = [
           </ul>
         </div>
 
-        <div class="callout"><strong>Cijfer ≠ getal.</strong> Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</div>
+        <div class="callout">
+          <p><strong>Cijfer ≠ getal.</strong></p>  
+          <p>Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</p>
+        </div>
 
-      <h3>2. Cijfers en de tien symbolen</h3>
+      <h3>Cijfers en de tien symbolen</h3>
         <p>In het decimale stelsel gebruiken we precies tien cijfers:</p>
         <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
         
-        <div class="callout"><strong>Elk cijfer heeft een naam en een symbool.</strong> 
+        <div class="callout">
+          <p><strong>Elk cijfer heeft een naam en een symbool.</strong></p>
+
           <p class="formula">0 = nul</p>
           <p class="formula">1 = één</p>
           <p class="formula">2 = twee</p>
@@ -51,7 +56,7 @@ const MILESTONES_1 = [
 
         <p>Met deze tien cijfers kunnen we oneindig veel verschillende getallen schrijven. Het verschil tussen bijvoorbeeld 2, 20 en 200 komt niet door nieuwe cijfers, maar door de <strong>positie</strong> van het cijfer.</p>
 
-      <h3>3. Getallen groter dan 9</h3>
+      <h3>Getallen groter dan 9</h3>
         <p>We hebben nu de <strong>10 cijfers</strong> geleerd:</p>
         <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
         <p>Maar met deze 10 cijfers kunnen we nog veel meer getallen maken.</p>
@@ -100,13 +105,16 @@ const MILESTONES_1 = [
         <p>Het cijfer <strong>4</strong> staat op de plaats van de duizendtallen. Daarom betekent het hier <strong>4 000</strong>.</p>
         <p>Het cijfer <strong>7</strong> staat op de plaats van de honderdtallen. Daarom betekent het hier <strong>700</strong>.</p>
         <p>Het cijfer <strong>5</strong> staat op de plaats van de eenheden. Daarom betekent het hier <strong>5</strong>.</p>
-        <div class="callout"><strong>Bepalen van de waarde van een cijfer in een getal.</strong> 
+        
+        <div class="callout">
+          <p><strong>Bepalen van de waarde van een cijfer in een getal.</strong></p> 
           <p>We maken hierbij onderscheid tussen twee dingen:</p>
           <ul>
             <li>De <strong>cijferwaarde</strong> is het cijfer zelf.</li>
             <li>De <strong>plaatswaarde</strong> is wat het cijfer betekent door zijn plaats in het getal.</li>
           </ul>
         </div>
+
         <p>Bijvoorbeeld in <strong>4 705</strong>:</p>
         <ul>
           <li>het cijfer is <strong>7</strong>;</li>
@@ -118,7 +126,7 @@ const MILESTONES_1 = [
       <p>Daarom noemen we ons getallensysteem het <strong>tientallig stelsel</strong>.</p>
       <p>Met slechts 10 cijfers kunnen we zo alle getallen schrijven: van kleine getallen tot getallen met miljoenen, miljarden en nog veel meer cijfers.</p>
 
-      <h3>4. De natuurlijke getallen</h3>
+      <h3>De natuurlijke getallen</h3>
       <p>Als we dingen tellen, gebruiken we de <strong>natuurlijke getallen</strong>.</p>
 
       <p>Bijvoorbeeld:</p>
@@ -207,7 +215,7 @@ const MILESTONES_1 = [
 
       <p>Later zullen we daarom kennismaken met <strong>negatieve getallen</strong> en met een grotere verzameling getallen.</p>
       
-      <h3>5. Getallen vergelijken</h3>
+      <h3>Getallen vergelijken</h3>
 
 <p>We kunnen getallen op een <strong>getallenlijn</strong> zetten.</p>
 
@@ -302,9 +310,9 @@ const MILESTONES_1 = [
     <li>Het eerste cijfer dat verschilt, bepaalt welk getal groter is.</li>
   </ol>
 </div>
-    `   
+    `
   },
-  
+
   {
     id: "1.2",
     title: "De vier hoofdbewerkingen",
@@ -322,7 +330,7 @@ const MILESTONES_1 = [
           <li>ontdekken welke rol 0 speelt bij het rekenen.</li>
         </ul>
        
-        <h3>1. Optellen</h3>
+        <h3>Optellen</h3>
 
         <p>Met <strong>optellen</strong> voegen we hoeveelheden samen.</p>
 
@@ -376,7 +384,7 @@ const MILESTONES_1 = [
         <p>We noemen 0 daarom het <strong>neutrale element van de optelling</strong>.</p>
 
 
-        <h3>2. Schriftelijk optellen</h3>
+        <h3>Schriftelijk optellen</h3>
 
         <p>Bij kleine getallen kunnen we gemakkelijk uit het hoofd optellen. Bij grotere getallen is het handig om de getallen <strong>onder elkaar</strong> te schrijven.</p>
 
@@ -551,7 +559,7 @@ const MILESTONES_1 = [
           </ul>
         </div>
 
-      <h3>3. Aftrekken</h3>
+      <h3>Aftrekken</h3>
 
 <p>Met <strong>aftrekken</strong> halen we een hoeveelheid weg van een andere hoeveelheid.</p>
 
@@ -591,7 +599,7 @@ const MILESTONES_1 = [
 </div>
 
 
-<h3>4. Schriftelijk aftrekken</h3>
+<h3>Schriftelijk aftrekken</h3>
 
 <p>Bij grote getallen is het handig om de getallen <strong>onder elkaar</strong> te schrijven.</p>
 
@@ -804,7 +812,7 @@ const MILESTONES_1 = [
   </ul>
 
 </div>
-      <h3>5. Vermenigvuldigen</h3>
+      <h3>Vermenigvuldigen</h3>
 
 <p>Met <strong>vermenigvuldigen</strong> kunnen we meerdere gelijke hoeveelheden snel samenrekenen.</p>
 
@@ -886,7 +894,7 @@ const MILESTONES_1 = [
 </div>
 
 
-<h3>6. Eenvoudige tafels</h3>
+<h3>Eenvoudige tafels</h3>
 
 <p>Nu we begrijpen wat vermenigvuldigen betekent, kunnen we de eenvoudigste vermenigvuldigingen oefenen.</p>
 
@@ -916,7 +924,7 @@ const MILESTONES_1 = [
 </div>
 
 
-<h3>7. Slim rekenen met vermenigvuldigen</h3>
+<h3>Slim rekenen met vermenigvuldigen</h3>
 
 <p>Je hoeft niet elke vermenigvuldiging uit het hoofd te kennen. Vaak kun je een moeilijke vermenigvuldiging veranderen in een paar eenvoudige vermenigvuldigingen.</p>
 
@@ -1010,7 +1018,7 @@ const MILESTONES_1 = [
   <p><strong>Goed rekenen betekent dus niet alleen veel uit het hoofd kennen, maar ook slimme strategieën gebruiken.</strong></p>
 </div>
 
-<h3>8. Delen</h3>
+<h3>Delen</h3>
 
 <p>Delen is het verdelen van een aantal in <strong>gelijke groepen</strong>. Het is de omgekeerde bewerking van vermenigvuldigen.</p>
 
@@ -1060,7 +1068,7 @@ const MILESTONES_1 = [
   <p class="formula">12 ÷ 4 = 3</p>
 </div>
 
-<h3>9. Delen met rest</h3>
+<h3>Delen met rest</h3>
 
 <p>Niet elke hoeveelheid kan precies in gelijke groepen worden verdeeld.</p>
 
@@ -1107,7 +1115,7 @@ const MILESTONES_1 = [
 </div>
 
 
-<h3>10. Slim delen</h3>
+<h3>Slim delen</h3>
 
 <p>Een deling met grotere getallen lijkt soms moeilijk. Maar net zoals bij vermenigvuldigen kunnen we een getal vaak <strong>opsplitsen in eenvoudigere delen</strong>.</p>
 <p>In deze eerste kennismaking met slim delen gebruiken we alleen voorbeelden waarbij de getallen <strong>zonder rest</strong> deelbaar zijn. Als er een rest ontstaat, gebruiken we de methode van <em>delen met rest</em> die we eerder hebben geleerd.</p>
@@ -1171,7 +1179,7 @@ const MILESTONES_1 = [
 
 
 
-<h3>11. Delen door nul</h3>
+<h3>Delen door nul</h3>
 
 <p>Bij delen vragen we ons af: <strong>hoeveel groepjes van de deler passen in het getal?</strong></p>
 
@@ -1232,7 +1240,7 @@ const MILESTONES_1 = [
   <p>Bij <strong>0 ÷ 0</strong> zijn er oneindig veel mogelijke oplossingen, en dus geen uniek antwoord.</p>
 </div>
 
-<h3>12. Commutatieve eigenschap</h3>
+<h3>Commutatieve eigenschap</h3>
 
 <p>Bij vermenigvuldigen maakt de volgorde van de getallen niet uit.</p>
 
@@ -1286,7 +1294,7 @@ const MILESTONES_1 = [
   <p>Bij aftrekken en delen mag dat niet zomaar.</p>
 </div>
 
-<h3>13. Haakjes</h3>
+<h3>Haakjes</h3>
 
 
 <p>Haakjes geven aan dat de berekening die ertussen staat, als één geheel moet worden bekeken.</p>
@@ -1339,7 +1347,7 @@ const MILESTONES_1 = [
 <p class="formula">(2 + 3) × 4 = 20</p>
 
 
-<h3>14. Associatieve eigenschap</h3>
+<h3>Associatieve eigenschap</h3>
 
 <p>Bij optellen en vermenigvuldigen kunnen we niet alleen de volgorde veranderen. We kunnen ook bepalen <strong>welke getallen we eerst samen nemen</strong>.</p>
 
@@ -1393,7 +1401,7 @@ const MILESTONES_1 = [
   <p class="formula">(a × b) × c = a × (b × c)</p>
 </div>
 
-<h3>15. Distributieve eigenschap</h3>
+<h3>Distributieve eigenschap</h3>
 
 <p>Bij <strong>slim rekenen met vermenigvuldigen</strong> hebben we al gezien dat we een vermenigvuldiging kunnen opsplitsen in eenvoudigere delen.</p>
 
@@ -1433,7 +1441,7 @@ const MILESTONES_1 = [
 </div>
 
 
-<h3>16. Bewerkingsvolgorde</h3>
+<h3>Bewerkingsvolgorde</h3>
 
 <h4>De volgorde van bewerkingen</h4>
 
@@ -1500,7 +1508,7 @@ const MILESTONES_1 = [
   <p>Bij bewerkingen van hetzelfde niveau rekenen we van links naar rechts.</p>
 </div>
 
-<h3>17. Schatten en controleren</h3>
+<h3>Schatten en controleren</h3>
 
 <p>Je kunt een berekening op verschillende manieren controleren. Een handige manier is eerst een <strong>schatting</strong> te maken.</p>
 
@@ -1594,7 +1602,7 @@ const MILESTONES_1 = [
 </div>
     `
   },
-  
+
   {
     id: "1.3",
     title: "Het getallensysteem uitbreiden",
@@ -1609,7 +1617,7 @@ const MILESTONES_1 = [
           <li>leren rekenen met negatieve en positieve gehele getallen.</li>
         </ul>
         
-        <h3>1. Verzameling en element</h3>
+        <h3>Verzameling en element</h3>
         <p>Een <strong>verzameling</strong> is een groep objecten die we als één geheel bekijken.</p>
         <p class="formula"> { 0, 1, 2, 3, 4 } </p>
         <p>De getallen in de verzameling noemen we <strong>elementen</strong>. Het symbool <strong>∈</strong> betekent “is een element van” en <strong>∉</strong> betekent “is geen element van”.</p>
@@ -1637,7 +1645,7 @@ const MILESTONES_1 = [
     <p><strong>7 is geen element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
 
 
-        <h3>2. De natuurlijke getallen</h3>
+        <h3>De natuurlijke getallen</h3>
         <p>De verzameling van de natuurlijke getallen krijgt een naam:
     <strong>ℕ</strong>.</p>
 
@@ -1659,7 +1667,7 @@ const MILESTONES_1 = [
 
 
 
-        <h3>3. De getallenlijn wordt uitgebreid</h3>
+        <h3>De getallenlijn wordt uitgebreid</h3>
         <p>Tot nu toe konden we met natuurlijke getallen heel wat problemen oplossen.
       Maar er ontstaat een probleem wanneer we een kleiner getal van een groter
       getal aftrekken.</p>      
@@ -1688,7 +1696,7 @@ const MILESTONES_1 = [
       </div>
 
 
-        <h3>4. De gehele getallen</h3>
+        <h3>De gehele getallen</h3>
         <p>We voegen de negatieve gehele getallen toe aan de verzameling van de natuurlijke getallen ℕ:</p>
 
     <p class="formula">..., −3, −2, −1, 0, 1, 2, 3, ...</p>
@@ -1712,7 +1720,7 @@ const MILESTONES_1 = [
 
 
 
-        <h3>5. Deelverzamelingen</h3>
+        <h3>Deelverzamelingen</h3>
         <p>Elk natuurlijk getal uit de verzameling ℕ is dus ook een element van de verzameling ℤ. Daarom is ℕ een <strong>deelverzameling</strong> van ℤ.</p>
         <p class="formula">ℕ ⊂ ℤ</p>
         <p>Het symbool <strong>⊂</strong> betekent
@@ -1742,7 +1750,7 @@ const MILESTONES_1 = [
 
 
 
-        <h3>6. Tegenovergestelde getallen</h3>
+        <h3>Tegenovergestelde getallen</h3>
 
 <p>Op de getallenlijn heeft elk positief getal een getal op precies dezelfde
 afstand van nul aan de andere kant.</p>
@@ -1767,7 +1775,7 @@ afstand van nul aan de andere kant.</p>
   kanten van de getallenlijn.</p>
 </div>
 
-        <h3>7. Absolute waarde</h3>
+        <h3>Absolute waarde</h3>
         <p>De <strong>absolute waarde</strong> van een getal vertelt hoe ver dat getal
 van nul ligt.</p>
 
@@ -1786,7 +1794,7 @@ van nul ligt.</p>
 
 
 
-        <h3>8. Optellen en aftrekken met gehele getallen</h3>
+        <h3>Optellen en aftrekken met gehele getallen</h3>
         <p>De getallenlijn geeft ons een eenvoudige manier om met negatieve getallen
 te rekenen.</p>
 
@@ -1813,7 +1821,7 @@ naar links als je een negatief getal toevoegt.</p>
 
 
 
-<h3>9. Vermenigvuldigen en delen met tekens</h3>
+<h3>Vermenigvuldigen en delen met tekens</h3>
         <p>Ook bij vermenigvuldigen en delen krijgen we regels voor positieve en
 negatieve getallen.</p>
 
@@ -1842,7 +1850,7 @@ negatieve getallen.</p>
 <p class="formula">(−12) ÷ (-3) = 4</p>      
     `
   },
-  
+
   {
     id: "1.4",
     title: "Breuken en rationale getallen",
@@ -1856,7 +1864,7 @@ negatieve getallen.</p>
           <li>leren breuken voorstellen, vergelijken en bewerken.;</li>
         </ul>
 
-        <h3>1. Een geheel</h3>
+        <h3>Een geheel</h3>
         <p>
       Een <strong>geheel</strong> is iets dat we als één volledige eenheid
       beschouwen. Bijvoorbeeld een volledige pizza, een chocoladereep,
@@ -1876,7 +1884,7 @@ negatieve getallen.</p>
       </p>
     </div>
 
-        <h3>2. Een geheel verdelen</h3>
+        <h3>Een geheel verdelen</h3>
         <p>
       Als we één geheel verdelen in 2 gelijke delen, noemen we elk deel
       <strong>één helft</strong>.
@@ -1899,7 +1907,7 @@ negatieve getallen.</p>
 
     <div data-widget="fractionWhole"></div>
 
-        <h3>3. Meerdere delen nemen</h3>
+        <h3>Meerdere delen nemen</h3>
         <p>
       We hoeven natuurlijk niet altijd maar één deel te nemen.
       Als een geheel in 4 gelijke delen is verdeeld en we nemen
@@ -1922,7 +1930,7 @@ negatieve getallen.</p>
       </p>
     </div>
 
-        <h3>4. Meer delen betekent kleinere stukken</h3>
+        <h3>Meer delen betekent kleinere stukken</h3>
 <p>
       Kijk naar eenzelfde geheel. Als we het in steeds meer gelijke delen
       verdelen, wordt elk afzonderlijk deel kleiner.
@@ -1957,7 +1965,7 @@ negatieve getallen.</p>
       hoe kleiner elk stuk wordt.
     </p>
 
-    <h3>5. Een breuk is een getal</h3>
+    <h3>Een breuk is een getal</h3>
 
     <p>
       In het dagelijks leven gebruiken we breuken vaak om een deel van
@@ -2002,7 +2010,7 @@ negatieve getallen.</p>
     </p>
 
 
-        <h3>6. Teller en noemer</h3>
+        <h3>Teller en noemer</h3>
         <p>
       Een breuk bestaat uit twee getallen. Elk getal heeft een eigen
       betekenis.
@@ -2030,7 +2038,7 @@ negatieve getallen.</p>
       
 
 
-        <h3>7. Breuken op de getallenlijn</h3>
+        <h3>Breuken op de getallenlijn</h3>
  <p>
       Net zoals we gehele getallen op een getallenlijn kunnen plaatsen,
       kunnen we ook breuken een plaats geven.
@@ -2101,7 +2109,7 @@ negatieve getallen.</p>
     </div>
 
 
-        <h3>8. Gelijkwaardige breuken</h3>
+        <h3>Gelijkwaardige breuken</h3>
 <p>
       Kijk naar:
     </p>
@@ -2190,7 +2198,7 @@ negatieve getallen.</p>
       zonder dat de waarde verandert.
     </p>
 
-      <h3>9. Breuken vereenvoudigen</h3>
+      <h3>Breuken vereenvoudigen</h3>
       <h4>Een breuk korter schrijven</h4>
 
     <p>
@@ -2281,7 +2289,7 @@ negatieve getallen.</p>
 
 
 
-<h3>10. Breuken vergelijken</h3>
+<h3>Breuken vergelijken</h3>
 <h4>Welke breuk is groter?</h4>
 
     <p>
@@ -2377,7 +2385,7 @@ negatieve getallen.</p>
       </p>
     </div>
 
-<h3>11. Breuken optellen en aftrekken</h3>
+<h3>Breuken optellen en aftrekken</h3>
 <h4>Gelijke noemers</h4>
 
     <p>
@@ -2475,7 +2483,7 @@ negatieve getallen.</p>
       </p>
     </div>
 
-<h3>12. Breuken vermenigvuldigen</h3>
+<h3>Breuken vermenigvuldigen</h3>
 <h4>Een deel van een deel</h4>
 
     <p>
@@ -2556,7 +2564,7 @@ negatieve getallen.</p>
       </p>
     </div>
 
-<h3>13. Breuken delen</h3>
+<h3>Breuken delen</h3>
 <h4>Wat betekent delen?</h4>
 
     <p>
@@ -2652,7 +2660,7 @@ negatieve getallen.</p>
       </p>
     </div>
 
-<h3>14. Gemengde getallen</h3>
+<h3>Gemengde getallen</h3>
 <h4>Meer dan één geheel</h4>
 
     <p>
@@ -2741,7 +2749,7 @@ negatieve getallen.</p>
     </p>
     `
   },
-  
+
   {
     id: "1.5",
     title: "Decimalen en percentages",
@@ -2750,7 +2758,7 @@ negatieve getallen.</p>
       <h2>Decimalen en percentages</h2>
 
       <p><strong>Doel:</strong> leren werken met decimalen en percentages en begrijpen hoe ze samenhangen met breuken.</p>
-      <h3>1. Getallen tussen 0 en 1</h3>
+      <h3>Getallen tussen 0 en 1</h3>
       <p>In de vorige les hebben we gezien dat een getal niet noodzakelijk groter dan 1 hoeft te zijn.</p>
 
                 <p>We kunnen bijvoorbeeld de breuk</p>
@@ -2815,7 +2823,7 @@ negatieve getallen.</p>
       
       
       
-      <h3>2. Decimalen als uitbreiding van ons getallensysteem</h3>
+      <h3>Decimalen als uitbreiding van ons getallensysteem</h3>
       <p>We hebben in eerdere lessen gezien dat de plaats van een cijfer bepaalt welke waarde het heeft. Dat principe werkt ook rechts van de komma.</p>
       <p>Neem bijvoorbeeld:</p>
       <p class="formula">37,428</p>
@@ -2827,9 +2835,11 @@ negatieve getallen.</p>
         <li>2 honderdsten = 2/100</li>
         <li>8 duizendsten = 8/1000</li>
       </ul>
+      
       <p>We kunnen het getal dus schrijven als:</p>
       <p class="formula">37,428 = 30 + 7 + \frac{4}{10} + \frac{2}{100} + \frac{8}{1000}</p>
       <p>De cijfers rechts van de komma geven steeds kleinere delen van één geheel aan.</p>
+      
       <table>
         <tr><th>Plaats</th><th>Voorbeeld</th><th>Betekenis</th></tr>
         <tr><td>eenheden</td><td>7</td><td>7</td></tr>
@@ -2837,9 +2847,13 @@ negatieve getallen.</p>
         <tr><td>honderdsten</td><td>2</td><td>2/100</td></tr>
         <tr><td>duizendsten</td><td>8</td><td>8/1000</td></tr>
       </table>
-      <div class="callout"><strong>Onthoud</strong><p>De komma scheidt de hele getallen van de delen van een geheel.</p></div>
+      
+      <div class="callout">
+        <p><strong>Onthoud</strong></p>
+        <p>De komma scheidt de hele getallen van de delen van een geheel.</p>
+      </div>
 
-      <h3>3. Decimalen en breuken</h3>
+      <h3>Decimalen en breuken</h3>
       <p>Een eindig decimaal getal kunnen we altijd als een breuk schrijven.</p>
       <p class="formula">0,7 = \frac{7}{10}</p>
       <p class="formula">0,42 = \frac{42}{100} = \frac{21}{50}</p>
@@ -2852,7 +2866,8 @@ negatieve getallen.</p>
       <p class="formula">\frac{3}{4} = \frac{75}{100} = 0,75</p>
       <p class="formula">\frac{7}{20} = \frac{35}{100} = 0,35</p>
 
-      <h3>4. Eindige en repeterende decimalen</h3>
+      <h3>Eindige en repeterende decimalen</h3>
+      
       <p>Sommige breuken geven een decimaal getal dat eindigt:</p>
       <p class="formula">\frac{1}{2} = 0,5</p>
       <p class="formula">\frac{1}{4} = 0,25</p>
@@ -2860,9 +2875,13 @@ negatieve getallen.</p>
       <p class="formula">\frac{1}{3} = 0,333333...</p>
       <p class="formula">\frac{2}{7} = 0,285714285714...</p>
       <p>Bij zulke getallen herhaalt zich een patroon. We noemen dit een <strong>repeterend decimaal getal</strong>.</p>
-      <div class="callout"><strong>Belangrijk</strong><p>Rationale getallen kunnen worden geschreven als een eindig decimaal getal of als een repeterend decimaal getal.</p></div>
+      
+      <div class="callout">
+        <p><strong>Belangrijk</strong></p>
+        <p>Rationale getallen kunnen worden geschreven als een eindig decimaal getal of als een repeterend decimaal getal.</p>
+      </div>
 
-      <h3>5. Decimalen vergelijken</h3>
+      <h3>Decimalen vergelijken</h3>
       <p>Om decimalen goed te vergelijken, mogen we nullen achteraan toevoegen zonder de waarde te veranderen.</p>
       <p class="formula">0,7 = 0,70 = 0,700</p>
       <p>Daardoor wordt vergelijken eenvoudiger:</p>
@@ -2874,13 +2893,13 @@ negatieve getallen.</p>
       <p>Want:</p>
       <p class="formula">0,099 &lt; 0,100</p>
 
-      <h3>6. Optellen en aftrekken met decimalen</h3>
+      <h3>Optellen en aftrekken met decimalen</h3>
       <p>Bij optellen en aftrekken zetten we dezelfde plaatswaarden onder elkaar.</p>
       <p class="formula">12,70 + 3,45 = 16,15</p>
       <p class="formula">15,20 − 7,85 = 7,35</p>
       <p>De komma's moeten dus recht onder elkaar staan.</p>
 
-      <h3>7. Vermenigvuldigen met decimalen</h3>
+      <h3>Vermenigvuldigen met decimalen</h3>
       <p>Ook bij decimalen blijft vermenigvuldigen dezelfde bewerking.</p>
       <p class="formula">1,2 × 0,3 = 0,36</p>
       <p>We kunnen dit begrijpen vanuit breuken:</p>
@@ -2890,7 +2909,7 @@ negatieve getallen.</p>
       <p>Een iets moeilijker voorbeeld:</p>
       <p class="formula">2,35 × 1,4 = 3,29</p>
 
-      <h3>8. Delen met decimalen</h3>
+      <h3>Delen met decimalen</h3>
       <p>Ook delen kunnen we met decimalen uitvoeren.</p>
       <p class="formula">3,6 ÷ 0,6 = 6</p>
       <p>We kunnen dit controleren:</p>
@@ -2900,25 +2919,38 @@ negatieve getallen.</p>
       <p class="formula">36 ÷ 100 = 0,36</p>
       <p class="formula">36 ÷ 1000 = 0,036</p>
 
-      <h3>9. Procent betekent "per honderd"</h3>
+      <h3>Procent betekent "per honderd"</h3>
+      
       <p>Het woord <strong>procent</strong> betekent letterlijk <strong>per honderd</strong>.</p>
       <p class="formula">1\\% = \frac{1}{100} = 0,01</p>
       <p class="formula">25\\% = \frac{25}{100} = 0,25</p>
       <p class="formula">50\\% = \frac{50}{100} = 0,5</p>
       <p class="formula">100\\% = \frac{100}{100} = 1</p>
       <p>Een percentage hoeft niet tussen 0% en 100% te liggen.</p>
+      
       <p class="formula">125\\% = \frac{125}{100} = 1,25</p>
-      <div class="callout"><strong>Onthoud</strong><p>100% stelt altijd het volledige geheel voor.</p></div>
+      
+      <div class="callout">
+        <p><strong>Onthoud</strong></p>
+        <p>100% stelt altijd het volledige geheel voor.</p>
+      </div>
 
-      <h3>10. Breuk, decimaal en percentage</h3>
-      <p>Een breuk, een decimaal en een percentage kunnen drie verschillende schrijfwijzen voor dezelfde waarde zijn.</p>
-      <p class="formula">\frac{1}{2} = 0,5 = 50\\%</p>
-      <p class="formula">\frac{1}{4} = 0,25 = 25\\%</p>
-      <p class="formula">\frac{3}{8} = 0,375 = 37,5\\%</p>
-      <p class="formula">\frac{5}{4} = 1,25 = 125\\%</p>
+      <h3>Breuk, decimaal en percentage</h3>
+      
+        <p>Een breuk, een decimaal en een percentage kunnen drie verschillende schrijfwijzen voor dezelfde waarde zijn.</p>
+        
+        <p class="formula">\frac{1}{2} = 0,5 = 50\\%</p>
+        
+        <p class="formula">\frac{1}{4} = 0,25 = 25\\%</p>
+        
+        <p class="formula">\frac{3}{8} = 0,375 = 37,5\\%</p>
+        
+        <p class="formula">\frac{5}{4} = 1,25 = 125\\%</p>
+      
       <p>Je kunt dus tussen de drie schrijfwijzen heen en weer gaan.</p>
 
-      <h3>11. Een percentage van een hoeveelheid</h3>
+      <h3>Een percentage van een hoeveelheid</h3>
+      
       <p>Stel dat we willen weten hoeveel 25% van 80 is.</p>
       <p>Omdat:</p>
       <p class="formula">25\\% = \frac{1}{4}</p>
@@ -2929,9 +2961,12 @@ negatieve getallen.</p>
       <p class="formula">25\\%\\ van\\ 80 = 25 × 0,8 = 20</p>
       <p>Of we gebruiken de decimale schrijfwijze:</p>
       <p class="formula">0,25 × 80 = 20</p>
-      <div class="callout"><strong>Drie manieren</strong><p>Je mag de methode kiezen die je het duidelijkst vindt: via een breuk, via 1% of via de decimale schrijfwijze.</p></div>
+      <div class="callout">
+        <p><strong>Drie manieren</strong></p>
+        <p>Je mag de methode kiezen die je het duidelijkst vindt: via een breuk, via 1% of via de decimale schrijfwijze.</p>
+      </div>
 
-      <h3>12. Het geheel bepalen</h3>
+      <h3>Het geheel bepalen</h3>
       <p>Soms kennen we een percentage en de bijbehorende hoeveelheid en zoeken we het volledige geheel.</p>
       <p><strong>30% van een bedrag is €45. Hoe groot is het volledige bedrag?</strong></p>
       <p>Als 30% €45 is, dan is 10%:</p>
@@ -2940,7 +2975,7 @@ negatieve getallen.</p>
       <p class="formula">€15 × 10 = €150</p>
       <p>Het volledige bedrag is dus <strong>€150</strong>.</p>
 
-      <h3>13. Een percentage bepalen</h3>
+      <h3>Een percentage bepalen</h3>
       <p>Stel dat 18 van de 24 leerlingen geslaagd zijn. Welk percentage is dat?</p>
       <p>We schrijven eerst de verhouding als breuk:</p>
       <p class="formula">\frac{18}{24} = \frac{3}{4}</p>
@@ -2951,7 +2986,8 @@ negatieve getallen.</p>
       <p class="formula">percentage = \frac{deel}{geheel} × 100%</p>
       <p>Het belangrijkste is dat je eerst bepaalt wat het <strong>geheel</strong> is. Dat geheel stelt 100% voor.</p>
 
-      <h3>14. Procentuele stijging</h3>
+      <h3>Procentuele stijging</h3>
+      
       <p>Een procentuele stijging vergelijkt de toename met de <strong>beginwaarde</strong>.</p>
       <p>Een prijs stijgt bijvoorbeeld van €80 naar €100.</p>
       <p>De absolute stijging is:</p>
@@ -2959,9 +2995,14 @@ negatieve getallen.</p>
       <p>We vergelijken die €20 met de beginprijs van €80:</p>
       <p class="formula">20/80 = \frac{1}{4} = 25\\%</p>
       <p>De prijs is dus met <strong>25%</strong> gestegen.</p>
-      <div class="callout"><strong>Let op</strong><p>Bij een procentuele stijging vergelijken we altijd met de oorspronkelijke waarde, niet met de nieuwe waarde.</p></div>
+      
+      <div class="callout">
+        <p><strong>Let op</strong></p>
+        <p>Bij een procentuele stijging vergelijken we altijd met de oorspronkelijke waarde, niet met de nieuwe waarde.</p>
+      </div>
 
-      <h3>15. Procentuele daling</h3>
+      <h3>Procentuele daling</h3>
+      
       <p>Bij een daling doen we hetzelfde.</p>
       <p>Een prijs daalt van €200 naar €150.</p>
       <p>De daling is:</p>
@@ -2970,7 +3011,7 @@ negatieve getallen.</p>
       <p class="formula">\frac{50}{200} = \frac{1}{4} = 25\\%</p>
       <p>De prijs is dus met <strong>25%</strong> gedaald.</p>
 
-      <h3>16. Een stijging of daling als factor</h3>
+      <h3>Een stijging of daling als factor</h3>
       <p>Een procentuele verandering kan ook rechtstreeks worden toegepast op een bedrag.</p>
       <p>Een stijging van 20% betekent dat we uiteindelijk 120% van de oorspronkelijke waarde hebben:</p>
       <p class="formula">120\\% = 1,20</p>
@@ -2981,7 +3022,7 @@ negatieve getallen.</p>
       <p class="formula">€50 × 0,80 = €40</p>
       <p>We spreken hier over een <strong>vermenigvuldigingsfactor</strong>. Dit is gewoon een getal waarmee we de oorspronkelijke hoeveelheid vermenigvuldigen.</p>
 
-      <h3>17. Meerdere procentuele veranderingen</h3>
+      <h3>Meerdere procentuele veranderingen</h3>
       <p>Een tweede procentuele verandering wordt berekend op de waarde die op dat moment bestaat.</p>
       <p>Een bedrag van €100 stijgt eerst met 20%:</p>
       <p class="formula">€100 × 1,20 = €120</p>
@@ -2990,7 +3031,7 @@ negatieve getallen.</p>
       <p>Het eindbedrag is dus <strong>€96</strong>, niet €100.</p>
       <p>De twee veranderingen heffen elkaar niet op, omdat de tweede 20% wordt berekend op €120 en niet meer op €100.</p>
 
-      <h3>18. Procent en procentpunt</h3>
+      <h3>Procent en procentpunt</h3>
       <p>Een verandering van 60% naar 70% is een stijging van:</p>
       <p class="formula">70\\% − 60\\% = 10\\ procentpunt</p>
       <p>Relatief gezien is de stijging:</p>
@@ -3003,7 +3044,7 @@ negatieve getallen.</p>
 
       <div class="callout insight"><strong>Eén hoeveelheid, verschillende schrijfwijzen</strong><p>Decimalen, breuken en percentages zijn geen drie verschillende soorten getallen. Ze kunnen verschillende manieren zijn om dezelfde waarde te schrijven. Bij procentvragen moet je vooral goed bepalen wat het volledige geheel — de 100% — is.</p></div>
 
-      <h3>19. Samenvatting</h3>
+      <h3>Samenvatting</h3>
       <ul>
         <li><span class="formula-inline">0,5 = \frac{1}{2} = 50%</span></li>
         <li><span class="formula-inline">0,25 = \frac{1}{4} = 25%</span></li>
@@ -3015,7 +3056,7 @@ negatieve getallen.</p>
       </ul>
     `
   }
-,
+  ,
   {
     id: "1.6",
     title: "Verhoudingen en evenredigheid",
@@ -3030,7 +3071,7 @@ negatieve getallen.</p>
         <p>In 1.4 hebben we geleerd dat een breuk een getal is. In 1.5 zagen we dat een breuk, een decimaal en een percentage verschillende schrijfwijzen voor dezelfde waarde kunnen zijn. In deze les gebruiken we die kennis om <strong>verhoudingen</strong> tussen hoeveelheden te beschrijven.</p>
       </div>
 
-      <h3>1. Wat is een verhouding?</h3>
+      <h3>Wat is een verhouding?</h3>
       <p>Een <strong>verhouding</strong> vergelijkt twee hoeveelheden met elkaar.</p>
       <p>Stel dat er in een mand 2 rode appels en 3 groene appels liggen.</p>
       <p>We kunnen de verhouding van rode tot groene appels schrijven als:</p>
@@ -3050,7 +3091,7 @@ negatieve getallen.</p>
         <p>Een verhouding vergelijkt twee hoeveelheden. De volgorde waarin we de hoeveelheden noemen, hoort bij de verhouding.</p>
       </div>
 
-      <h3>2. Verhouding als verdeling</h3>
+      <h3>Verhouding als verdeling</h3>
       <p>Een verhouding kunnen we ook gebruiken om een geheel in delen te verdelen.</p>
       <p>Stel dat een groep uit 2 kinderen met een rode trui en 3 kinderen met een blauwe trui bestaat.</p>
       <p>De verhouding rood tot blauw is:</p>
@@ -3069,7 +3110,7 @@ negatieve getallen.</p>
       <p>De verhouding blijft:</p>
       <p class="formula">8 : 12</p>
 
-      <h3>3. Gelijkwaardige verhoudingen</h3>
+      <h3>Gelijkwaardige verhoudingen</h3>
       <p>Net zoals we bij breuken gelijkwaardige breuken hebben gezien, kunnen we ook <strong>gelijkwaardige verhoudingen</strong> maken.</p>
       <p>De verhouding:</p>
       <p class="formula">2 : 3</p>
@@ -3085,7 +3126,7 @@ negatieve getallen.</p>
         <p>Om een gelijkwaardige verhouding te maken, vermenigvuldig of deel je <strong>beide termen door hetzelfde getal</strong>.</p>
       </div>
 
-      <h3>4. Een verhouding vereenvoudigen</h3>
+      <h3>Een verhouding vereenvoudigen</h3>
       <p>Een verhouding kan soms onnodig grote getallen bevatten.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">18 : 24</p>
@@ -3098,7 +3139,7 @@ negatieve getallen.</p>
       <p>Net zoals bij breuken kunnen we hiervoor de <strong>grootste gemene deler</strong> gebruiken. De GGD van 18 en 24 is 6, waardoor we meteen de eenvoudigste verhouding krijgen.</p>
       <p>Een verhouding staat in de eenvoudigste vorm wanneer de twee termen geen gemeenschappelijke deler groter dan 1 meer hebben.</p>
 
-      <h3>5. Verhoudingen vergelijken</h3>
+      <h3>Verhoudingen vergelijken</h3>
       <p>Niet elke verhouding met verschillende getallen is automatisch groter of kleiner. We moeten de verhoudingen vergelijken.</p>
       <p>Neem:</p>
       <p class="formula">2 : 3</p>
@@ -3114,7 +3155,7 @@ negatieve getallen.</p>
       <p class="formula">2 : 3 &gt; 3 : 5</p>
       <p>Het is dus belangrijk om niet alleen naar de losse getallen te kijken. We vergelijken de <strong>verhouding als geheel</strong>.</p>
 
-      <h3>6. Verhouding en percentage</h3>
+      <h3>Verhouding en percentage</h3>
       <p>Een verhouding kunnen we gebruiken om een deel van een geheel te bepalen.</p>
       <p>Bij een verhouding van 2 rode op 3 blauwe voorwerpen zijn er in totaal 5 verhoudingseenheden.</p>
       <p>Het aandeel rood is dus:</p>
@@ -3127,7 +3168,7 @@ negatieve getallen.</p>
       <p class="formula">40\\% + 60\\% = 100\\%</p>
       <p>Een verhouding vertelt dus ook hoe een geheel over verschillende groepen verdeeld is.</p>
 
-      <h3>7. Verhoudingstabellen</h3>
+      <h3>Verhoudingstabellen</h3>
       <p>Een <strong>verhoudingstabel</strong> helpt ons om overzichtelijk te rekenen met gelijkwaardige verhoudingen.</p>
       <p>Stel dat 3 broodjes €6 kosten. We willen weten wat 5 broodjes kosten.</p>
       <table>
@@ -3148,7 +3189,7 @@ negatieve getallen.</p>
         <p>Bij een verhoudingstabel kun je vaak eerst naar <strong>1</strong> gaan. Daarna bouw je de gevraagde hoeveelheid weer op.</p>
       </div>
 
-      <h3>8. Werken met een vermenigvuldigingsfactor</h3>
+      <h3>Werken met een vermenigvuldigingsfactor</h3>
       <p>We kunnen een verhouding ook rechtstreeks vergroten of verkleinen met een <strong>vermenigvuldigingsfactor</strong>. Dat begrip kennen we al uit 1.5.</p>
       <p>Stel:</p>
       <p class="formula">4 : 7</p>
@@ -3159,7 +3200,7 @@ negatieve getallen.</p>
       <p class="formula">(12 ÷ 3) : (21 ÷ 3) = 4 : 7</p>
       <p>Bij concrete problemen is het handig om eerst te zoeken naar de factor waarmee de ene hoeveelheid is veranderd. Als de verhouding gelijk blijft, moet de andere hoeveelheid met <strong>dezelfde factor</strong> veranderen.</p>
 
-      <h3>9. Direct evenredige grootheden</h3>
+      <h3>Direct evenredige grootheden</h3>
       <p>Soms veranderen twee grootheden samen volgens een vaste verhouding. We noemen zulke grootheden <strong>recht evenredig</strong> of <strong>direct evenredig</strong>.</p>
       <p>Neem opnieuw broodjes en prijs. Als één broodje €2 kost, dan geldt:</p>
       <p class="formula">1\\ broodje → €2</p>
@@ -3174,7 +3215,7 @@ negatieve getallen.</p>
       <p class="formula">€8 → €4</p>
       <p>Dat is het kenmerk van directe evenredigheid: <strong>dezelfde vermenigvuldigingsfactor werkt op beide grootheden</strong>.</p>
 
-      <h3>10. De constante verhouding</h3>
+      <h3>De constante verhouding</h3>
       <p>Bij direct evenredige grootheden blijft de verhouding tussen de twee grootheden constant.</p>
       <p>Bij een prijs van €2 per broodje krijgen we bijvoorbeeld:</p>
       <p class="formula">\frac{€6}{3} = €2</p>
@@ -3186,7 +3227,7 @@ negatieve getallen.</p>
       <p class="formula">€2\\ per\\ broodje</p>
       <p>Deze manier van denken is bijzonder nuttig in concrete situaties: prijs per stuk, afstand per tijdseenheid bij constante snelheid, hoeveelheden in recepten en schaalmodellen.</p>
 
-      <h3>11. Controleren of een verband evenredig is</h3>
+      <h3>Controleren of een verband evenredig is</h3>
       <p>We kunnen met een verhoudingstabel controleren of twee grootheden recht evenredig zijn.</p>
       <table>
         <tr><th>Aantal</th><th>Prijs</th><th>Prijs per stuk</th></tr>
@@ -3204,7 +3245,7 @@ negatieve getallen.</p>
       </table>
       <p>De prijs per stuk blijft niet constant. Dit verband is dus <strong>niet recht evenredig</strong>.</p>
 
-      <h3>12. Schaal en schaalmodellen</h3>
+      <h3>Schaal en schaalmodellen</h3>
       <p>Een schaal is een verhouding tussen een afstand op een tekening of model en de werkelijke afstand.</p>
       <p>Bij schaal 1 : 100 betekent dit dat 1 eenheid op de tekening overeenkomt met 100 dezelfde eenheden in werkelijkheid.</p>
       <p>Bijvoorbeeld: 1 cm op een plan komt overeen met:</p>
@@ -3218,7 +3259,7 @@ negatieve getallen.</p>
         <p>Bij een schaalverhouding moet je altijd weten welke grootheid bij welke hoort en moeten de eenheden correct worden omgerekend.</p>
       </div>
 
-      <h3>13. Recepten en evenredig vergroten</h3>
+      <h3>Recepten en evenredig vergroten</h3>
       <p>Een recept is een mooi voorbeeld van directe evenredigheid.</p>
       <p>Voor 4 personen heb je bijvoorbeeld 300 g bloem nodig. Voor 8 personen heb je twee keer zoveel mensen:</p>
       <p class="formula">8 ÷ 4 = 2</p>
@@ -3230,7 +3271,7 @@ negatieve getallen.</p>
       <p class="formula">300 × 1,5 = 450\\ g</p>
       <p>De hoeveelheden in het recept blijven in dezelfde verhouding.</p>
 
-      <h3>14. Evenredigheid oplossen met bekende waarden</h3>
+      <h3>Evenredigheid oplossen met bekende waarden</h3>
       <p>Bij een evenredigheidsprobleem kennen we vaak drie waarden en moeten we de vierde vinden.</p>
       <p>Stel: 5 kg appels kosten €12. Hoeveel kosten 8 kg?</p>
       <p>We kunnen eerst de prijs van 1 kg bepalen:</p>
@@ -3245,7 +3286,7 @@ negatieve getallen.</p>
       <p class="formula">€12 × 1,6 = €19,20</p>
       <p>Beide methoden geven hetzelfde resultaat.</p>
 
-      <h3>15. De verhouding tussen drie of meer hoeveelheden</h3>
+      <h3>De verhouding tussen drie of meer hoeveelheden</h3>
       <p>Een verhouding hoeft niet altijd maar twee hoeveelheden te vergelijken.</p>
       <p>Stel dat een verf wordt gemengd in de verhouding 2 delen geel, 1 deel rood en 3 delen wit.</p>
       <p>We schrijven:</p>
@@ -3261,7 +3302,7 @@ negatieve getallen.</p>
       <p>Controle:</p>
       <p class="formula">4 + 2 + 6 = 12\\ liter</p>
 
-      <h3>16. Verhoudingen en breuken: hetzelfde getal, andere context</h3>
+      <h3>Verhoudingen en breuken: hetzelfde getal, andere context</h3>
       <p>Een verhouding van 2 op 3 kan als verhouding worden geschreven:</p>
       <p class="formula">2 : 3</p>
       <p>en als breuk:</p>
@@ -3271,7 +3312,7 @@ negatieve getallen.</p>
       <p>Als 2 van de 3 leerlingen een fiets hebben, betekent 2/3: <strong>het deel van de leerlingen dat een fiets heeft</strong>.</p>
       <p>Dezelfde breuknotatie kan dus verschillende concrete situaties beschrijven. Daarom moeten we altijd duidelijk zijn over <strong>wat de twee hoeveelheden voorstellen</strong>.</p>
 
-      <h3>17. Veelgemaakte fouten</h3>
+      <h3>Veelgemaakte fouten</h3>
       <ul>
         <li><strong>Slechts één term veranderen:</strong> bij een gelijkwaardige verhouding moeten beide termen met dezelfde factor worden vermenigvuldigd of gedeeld.</li>
         <li><strong>De volgorde verwisselen:</strong> 2 : 3 is niet hetzelfde als 3 : 2.</li>
@@ -3286,7 +3327,7 @@ negatieve getallen.</p>
         <p>Als één grootheid bijvoorbeeld met factor 2 wordt vermenigvuldigd, moet de andere grootheid ook met factor 2 worden vermenigvuldigd.</p>
       </div>
 
-      <h3>18. Samenvatting</h3>
+      <h3>Samenvatting</h3>
       <ul>
         <li>Een verhouding vergelijkt twee of meer hoeveelheden.</li>
         <li>De volgorde van de termen is belangrijk.</li>
@@ -3313,7 +3354,7 @@ negatieve getallen.</p>
         <p>In 1.6 leerden we verhoudingen vereenvoudigen. Daarbij gebruikten we al delers: we deelden bijvoorbeeld 18 en 24 door 6 om de verhouding <span class="formula-inline">18 : 24</span> te vereenvoudigen. In deze les onderzoeken we precies wat een <strong>deler</strong> is en wanneer een getal <strong>deelbaar</strong> is door een ander getal.</p>
       </div>
 
-      <h3>1. Wat is een deler?</h3>
+      <h3>Wat is een deler?</h3>
       <p>Een <strong>deler</strong> van een getal is een natuurlijk getal waarmee je dat getal kunt delen zonder rest.</p>
       <p>Kijk naar 12. We kunnen 12 delen door 1, 2, 3, 4, 6 en 12 zonder rest:</p>
       <p class="formula">12 ÷ 1 = 12</p>
@@ -3323,9 +3364,13 @@ negatieve getallen.</p>
       <p class="formula">12 ÷ 6 = 2</p>
       <p class="formula">12 ÷ 12 = 1</p>
       <p>Daarom zijn 1, 2, 3, 4, 6 en 12 de delers van 12.</p>
-      <div class="callout"><strong>Definitie</strong><p>Een natuurlijk getal <span class="formula-inline">a</span> is een deler van <span class="formula-inline">b</span> als <span class="formula-inline">b ÷ a</span> een natuurlijk getal is.</p></div>
+      
+      <div class="callout">
+        <p><strong>Definitie</strong></p>
+        <p>Een natuurlijk getal <span class="formula-inline">a</span> is een deler van <span class="formula-inline">b</span> als <span class="formula-inline">b ÷ a</span> een natuurlijk getal is.</p>
+      </div>
 
-      <h3>2. Delen zonder rest</h3>
+      <h3>Delen zonder rest</h3>
       <p>De betekenis van een deler kunnen we ook schrijven met een vermenigvuldiging.</p>
       <p>Omdat:</p>
       <p class="formula">12 ÷ 3 = 4</p>
@@ -3337,7 +3382,7 @@ negatieve getallen.</p>
       <p>Dus 2 is een deler van 12.</p>
       <p>Maar 5 is geen deler van 12, want er bestaat geen natuurlijk getal <span class="formula-inline">k</span> waarvoor <span class="formula-inline">5 × k = 12</span>.</p>
 
-      <h3>3. Alle delers van een getal vinden</h3>
+      <h3>Alle delers van een getal vinden</h3>
       <p>We kunnen de delers van een getal systematisch zoeken. Neem 24.</p>
       <p>We vinden de delerparen:</p>
       <p class="formula">1 × 24 = 24</p>
@@ -3348,7 +3393,7 @@ negatieve getallen.</p>
       <p class="formula">1, 2, 3, 4, 6, 8, 12, 24</p>
       <p>Elk productpaar levert twee delers. Zodra de factoren elkaar kruisen, heb je alle delers gevonden.</p>
 
-      <h3>4. Delerparen</h3>
+      <h3>Delerparen</h3>
       <p>Als <span class="formula-inline">a × b = n</span>, dan zijn zowel <span class="formula-inline">a</span> als <span class="formula-inline">b</span> delers van <span class="formula-inline">n</span>.</p>
       <p>Voor 36 krijgen we:</p>
       <p class="formula">1 × 36 = 36</p>
@@ -3360,7 +3405,7 @@ negatieve getallen.</p>
       <p class="formula">1, 2, 3, 4, 6, 9, 12, 18, 36</p>
       <p>Bij 6 × 6 verschijnt dezelfde deler twee keer. In de lijst schrijven we 6 daarom maar één keer.</p>
 
-      <h3>5. Wat betekent deelbaar?</h3>
+      <h3>Wat betekent deelbaar?</h3>
       <p>We zeggen dat een getal <strong>deelbaar</strong> is door een ander getal als de deling geen rest heeft.</p>
       <p>Omdat:</p>
       <p class="formula">24 ÷ 6 = 4</p>
@@ -3371,7 +3416,7 @@ negatieve getallen.</p>
       <p>De drie begrippen horen bij elkaar:</p>
       <ul><li>6 is een <strong>deler</strong> van 24;</li><li>24 is <strong>deelbaar</strong> door 6;</li><li>24 is een <strong>veelvoud</strong> van 6.</li></ul>
 
-      <h3>6. Veelvouden</h3>
+      <h3>Veelvouden</h3>
       <p>Een <strong>veelvoud</strong> van een getal krijg je door dat getal met een natuurlijk getal te vermenigvuldigen.</p>
       <p>De veelvouden van 5 zijn bijvoorbeeld:</p>
       <p class="formula">0, 5, 10, 15, 20, 25, 30, ...</p>
@@ -3382,15 +3427,24 @@ negatieve getallen.</p>
       <p class="formula">5 × 3 = 15</p>
       <p>enzovoort.</p>
 
-      <h3>7. De relatie tussen delers en veelvouden</h3>
+      <h3>De relatie tussen delers en veelvouden</h3>
       <p>Delers en veelvouden zijn twee kanten van hetzelfde verband.</p>
       <p>Als:</p>
       <p class="formula">4 × 7 = 28</p>
       <p>dan geldt tegelijk:</p>
-      <ul><li>4 is een deler van 28;</li><li>7 is een deler van 28;</li><li>28 is een veelvoud van 4;</li><li>28 is een veelvoud van 7.</li></ul>
-      <div class="callout"><strong>Onthoud</strong><p>Als <span class="formula-inline">a × b = c</span>, dan zijn <span class="formula-inline">a</span> en <span class="formula-inline">b</span> delers van <span class="formula-inline">c</span>, en is <span class="formula-inline">c</span> een veelvoud van zowel <span class="formula-inline">a</span> als <span class="formula-inline">b</span>.</p></div>
+      <ul>
+        <li>4 is een deler van 28;</li>
+        <li>7 is een deler van 28;</li>
+        <li>28 is een veelvoud van 4;</li>
+        <li>28 is een veelvoud van 7.</li>
+      </ul>
+      
+      <div class="callout">
+        <p><strong>Onthoud</strong></p>
+        <p>Als <span class="formula-inline">a × b = c</span>, dan zijn <span class="formula-inline">a</span> en <span class="formula-inline">b</span> delers van <span class="formula-inline">c</span>, en is <span class="formula-inline">c</span> een veelvoud van zowel <span class="formula-inline">a</span> als <span class="formula-inline">b</span>.</p>
+      </div>
 
-      <h3>8. Deelbaarheid door 2</h3>
+      <h3>Deelbaarheid door 2</h3>
       <p>Een getal is deelbaar door 2 als het <strong>even</strong> is.</p>
       <p>Je kunt dit in het tientallig stelsel herkennen aan het laatste cijfer. Het getal moet eindigen op:</p>
       <p class="formula">0, 2, 4, 6\\ of\\ 8</p>
@@ -3399,7 +3453,7 @@ negatieve getallen.</p>
       <p class="formula">1 026 ÷ 2 = 513</p>
       <p>Maar 347 is niet deelbaar door 2.</p>
 
-      <h3>9. Deelbaarheid door 5 en 10</h3>
+      <h3>Deelbaarheid door 5 en 10</h3>
       <p>Een getal is deelbaar door 5 als het eindigt op 0 of 5.</p>
       <p class="formula">125 ÷ 5 = 25</p>
       <p class="formula">340 ÷ 5 = 68</p>
@@ -3407,7 +3461,7 @@ negatieve getallen.</p>
       <p class="formula">450 ÷ 10 = 45</p>
       <p>Deze regels zijn rechtstreeks verbonden met ons tientallig stelsel.</p>
 
-      <h3>10. Deelbaarheid door 3</h3>
+      <h3>Deelbaarheid door 3</h3>
       <p>Tel alle cijfers van het getal op. Als die som deelbaar is door 3, dan is het oorspronkelijke getal ook deelbaar door 3.</p>
       <p>Neem 372:</p>
       <p class="formula">3 + 7 + 2 = 12</p>
@@ -3418,7 +3472,7 @@ negatieve getallen.</p>
       <p class="formula">3 + 7 + 4 = 14</p>
       <p>14 is niet deelbaar door 3, dus 374 ook niet.</p>
 
-      <h3>11. Deelbaarheid door 9</h3>
+      <h3>Deelbaarheid door 9</h3>
       <p>Voor 9 geldt een vergelijkbare regel: een getal is deelbaar door 9 als de som van zijn cijfers deelbaar is door 9.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">729 → 7 + 2 + 9 = 18</p>
@@ -3427,14 +3481,14 @@ negatieve getallen.</p>
       <p class="formula">5 472 → 5 + 4 + 7 + 2 = 18</p>
       <p>Dus 5 472 is deelbaar door 9.</p>
 
-      <h3>12. Deelbaarheid door 4</h3>
+      <h3>Deelbaarheid door 4</h3>
       <p>Een getal is deelbaar door 4 als het getal dat gevormd wordt door de <strong>laatste twee cijfers</strong> deelbaar is door 4.</p>
       <p>Bijvoorbeeld 1 236. We kijken naar 36:</p>
       <p class="formula">36 ÷ 4 = 9</p>
       <p>Dus 1 236 is deelbaar door 4.</p>
       <p>Bij 1 238 kijken we naar 38. 38 is niet deelbaar door 4, dus 1 238 is niet deelbaar door 4.</p>
 
-      <h3>13. Deelbaarheid door 6</h3>
+      <h3>Deelbaarheid door 6</h3>
       <p>Omdat:</p>
       <p class="formula">6 = 2 × 3</p>
       <p>moet een getal zowel deelbaar zijn door 2 als door 3 om deelbaar te zijn door 6.</p>
@@ -3442,7 +3496,7 @@ negatieve getallen.</p>
       <p class="formula">4 + 3 + 8 = 15</p>
       <p>15 is deelbaar door 3. Daarom is 438 deelbaar door 6.</p>
 
-      <h3>14. Deelbaarheid door 12</h3>
+      <h3>Deelbaarheid door 12</h3>
       <p>Ook 12 kunnen we ontbinden:</p>
       <p class="formula">12 = 3 × 4</p>
       <p>Een getal is deelbaar door 12 als het zowel deelbaar is door 3 als door 4.</p>
@@ -3452,7 +3506,7 @@ negatieve getallen.</p>
       <p class="formula">48 ÷ 4 = 12</p>
       <p>Dus 1 248 is ook deelbaar door 4 en bijgevolg door 12.</p>
 
-      <h3>15. Delers gebruiken bij vereenvoudigen</h3>
+      <h3>Delers gebruiken bij vereenvoudigen</h3>
       <p>De kennis van delers is ook nuttig bij breuken en verhoudingen.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">24/36</p>
@@ -3463,7 +3517,7 @@ negatieve getallen.</p>
       <p class="formula">\frac{24}{36} = \frac{2}{3}</p>
       <p>Hetzelfde idee gebruikten we in 1.6 bij het vereenvoudigen van verhoudingen. In 1.9 zullen we leren hoe we zulke gemeenschappelijke delers systematisch kunnen vinden met de <strong>GGD</strong>.</p>
 
-      <h3>16. Samenvatting en strategie</h3>
+      <h3>Samenvatting en strategie</h3>
       <ul>
         <li>Een <strong>deler</strong> deelt een getal zonder rest.</li>
         <li>Een getal is <strong>deelbaar</strong> door een ander getal als de deling geen rest heeft.</li>
@@ -3478,7 +3532,7 @@ negatieve getallen.</p>
       <div class="callout insight"><strong>Het kernidee</strong><p>Delers vertellen <strong>waarmee je een getal zonder rest kunt delen</strong>. Veelvouden vertellen <strong>welke getallen je krijgt door een getal te vermenigvuldigen</strong>. Deelbaarheidsregels laten ons deze structuur herkennen zonder telkens de volledige deling uit te voeren.</p></div>
     `
   }
-,
+  ,
   {
     id: "1.8",
     title: "Priemgetallen en factorisatie",
@@ -3487,27 +3541,30 @@ negatieve getallen.</p>
       <h2>Priemgetallen en factorisatie</h2>
       <p><strong>Doel:</strong> priemgetallen herkennen, samengestelde getallen ontbinden en priemfactorisatie gebruiken.</p>
 
-      <h3>1. Van delers naar priemgetallen</h3>
+      <h3>Van delers naar priemgetallen</h3>
       <p>In 1.7 leerden we dat een getal delers heeft. Sommige getallen hebben precies twee positieve delers: <strong>1 en zichzelf</strong>. Deze getallen noemen we <strong>priemgetallen</strong>.</p>
       <p>Bijvoorbeeld 7 heeft alleen de delers 1 en 7. Daarom is 7 een priemgetal.</p>
-      <div class="callout"><strong>Een priemgetal</strong> is een natuurlijk getal groter dan 1 met precies twee positieve delers: 1 en het getal zelf.</div>
+      
+      <div class="callout">
+        <p><strong>Een priemgetal</strong> is een natuurlijk getal groter dan 1 met precies twee positieve delers: 1 en het getal zelf.</p>
+      </div>
 
-      <h3>2. Priemgetallen herkennen</h3>
+      <h3>Priemgetallen herkennen</h3>
       <p>De eerste priemgetallen zijn:</p>
       <p class="formula">2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...</p>
       <p>Het getal 2 is bijzonder: het is het <strong>enige even priemgetal</strong>. Elk ander even getal is deelbaar door 2 en heeft dus meer dan twee positieve delers.</p>
 
-      <h3>3. Samengestelde getallen</h3>
+      <h3>Samengestelde getallen</h3>
       <p>Een natuurlijk getal groter dan 1 dat geen priemgetal is, noemen we een <strong>samengesteld getal</strong>. Zo heeft 12 bijvoorbeeld de delers 1, 2, 3, 4, 6 en 12.</p>
       <p>Het getal 1 is een uitzondering: <strong>1 is noch priem, noch samengesteld</strong>.</p>
 
-      <h3>4. Elk samengesteld getal heeft priemdelers</h3>
+      <h3>Elk samengesteld getal heeft priemdelers</h3>
       <p>Als een getal samengesteld is, kunnen we het schrijven als een product van kleinere natuurlijke getallen. Die factoren kunnen we op hun beurt verder ontbinden.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">12 = 3 × 4 = 3 × 2 × 2</p>
       <p>We zijn uiteindelijk uitgekomen bij alleen priemgetallen.</p>
 
-      <h3>5. Ontbinden in factoren</h3>
+      <h3>Ontbinden in factoren</h3>
       <p>Een getal schrijven als een product van factoren noemen we <strong>factoriseren</strong> of <strong>ontbinden in factoren</strong>.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">24 = 6 × 4</p>
@@ -3515,30 +3572,30 @@ negatieve getallen.</p>
       <p class="formula">24 = 2 × 3 × 2 × 2</p>
       <p>Alle factoren zijn nu priem.</p>
 
-      <h3>6. Priemfactorisatie</h3>
+      <h3>Priemfactorisatie</h3>
       <p>Een ontbinding waarin alle factoren priemgetallen zijn, noemen we de <strong>priemfactorisatie</strong>.</p>
       <p>Voor 60 krijgen we bijvoorbeeld:</p>
       <p class="formula">60 = 2 × 2 × 3 × 5</p>
       <p>We kunnen dezelfde priemfactoren ook overzichtelijker schrijven met machten. Dat leren we in 1.10; voorlopig is het product voldoende.</p>
 
-      <h3>7. Een factorboom</h3>
+      <h3>Een factorboom</h3>
       <p>Een <strong>factorboom</strong> helpt om een getal stap voor stap te ontbinden. Kies telkens een factorisatie en ga door tot elke tak eindigt in een priemgetal.</p>
       <p>Voor 36 kan dat bijvoorbeeld via:</p>
       <p class="formula">36 = 4 × 9 = 2 × 2 × 3 × 3</p>
       <p>De volgorde waarin je de factoren vindt, kan verschillen. De uiteindelijke priemfactoren zijn dezelfde, alleen eventueel in een andere volgorde.</p>
 
-      <h3>8. De fundamentele eigenschap van priemfactorisatie</h3>
+      <h3>De fundamentele eigenschap van priemfactorisatie</h3>
       <p>Elk natuurlijk getal groter dan 1 kan als product van priemgetallen worden geschreven. Bovendien is die priemfactorisatie, afgezien van de volgorde van de factoren, <strong>uniek</strong>.</p>
       <p>Zo is:</p>
       <p class="formula">60 = 2 × 2 × 3 × 5</p>
       <p>en niet een andere verzameling priemfactoren die opnieuw 60 oplevert.</p>
 
-      <h3>9. Factoriseren met kleine priemgetallen</h3>
+      <h3>Factoriseren met kleine priemgetallen</h3>
       <p>Bij het factoriseren is het handig om eerst te controleren op deelbaarheid door kleine priemgetallen:</p>
       <p class="formula">2, 3, 5, 7, 11, 13, ...</p>
       <p>Gebruik de deelbaarheidsregels uit 1.7 wanneer die beschikbaar zijn. Zo zie je snel of een getal verder ontbonden kan worden.</p>
 
-      <h3>10. Een voorbeeld stap voor stap</h3>
+      <h3>Een voorbeeld stap voor stap</h3>
       <p>We ontbinden 84. Het getal is even, dus we delen door 2:</p>
       <p class="formula">84 = 2 × 42</p>
       <p>Nogmaals door 2:</p>
@@ -3548,32 +3605,32 @@ negatieve getallen.</p>
       <p>Dus:</p>
       <p class="formula">84 = 2 × 2 × 3 × 7</p>
 
-      <h3>11. Factoriseren vanuit een deler</h3>
+      <h3>Factoriseren vanuit een deler</h3>
       <p>Je hoeft niet altijd met 2 te beginnen. Je mag iedere geschikte deler kiezen en daarna verder ontbinden.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">90 = 9 × 10 = 3 × 3 × 2 × 5</p>
       <p>Je krijgt dus dezelfde priemfactorisatie, ook al heb je een andere eerste stap gekozen.</p>
 
-      <h3>12. Priemfactorisatie en delers</h3>
+      <h3>Priemfactorisatie en delers</h3>
       <p>De priemfactorisatie laat zien welke priemgetallen als bouwstenen in een getal zitten. Daarmee kunnen we later systematisch de delers van een getal bepalen.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">12 = 2 × 2 × 3</p>
       <p>De priemfactoren 2 en 3 zijn de belangrijkste bouwstenen van 12.</p>
 
-      <h3>13. Gemeenschappelijke priemfactoren</h3>
+      <h3>Gemeenschappelijke priemfactoren</h3>
       <p>Als twee getallen dezelfde priemfactor bevatten, noemen we die factor <strong>gemeenschappelijk</strong>.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">18 = 2 × 3 × 3</p>
       <p class="formula">30 = 2 × 3 × 5</p>
       <p>De getallen 2 en 3 komen in beide priemfactorisaties voor. Dit idee wordt belangrijk bij de GGD in 1.9.</p>
 
-      <h3>14. Priemfactorisatie en breuken</h3>
+      <h3>Priemfactorisatie en breuken</h3>
       <p>Priemfactorisatie kan helpen om te zien welke factoren in de teller en noemer van een breuk kunnen worden weggewerkt.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">\frac{18}{30} = \frac{2 × 3 × 3}{2 × 3 × 5} = \frac{3}{5}</p>
       <p>De gemeenschappelijke factoren 2 en 3 kunnen we wegdelen. In 1.9 maken we dit proces systematischer met de grootste gemene deler.</p>
 
-      <h3>15. Is een getal priem?</h3>
+      <h3>Is een getal priem?</h3>
       <p><strong>Uitbreiding: een snelle priemtest</strong></p>
       <p>Er bestaat een handige manier om grotere getallen snel op priemheid te testen.</p>
       <p>Daarbij hoef je alleen te controleren of het getal deelbaar is door priemgetallen die niet groter zijn dan de vierkantswortel van het getal.</p>
@@ -3584,7 +3641,7 @@ negatieve getallen.</p>
       <p>Om te onderzoeken of een getal priem is, moet je nagaan of het een deler heeft naast 1 en zichzelf. De deelbaarheidsregels helpen daarbij.</p>
       <p>Voor grotere getallen hoeven we niet alle mogelijke delers te testen. Als een getal <strong>n</strong> samengesteld is, heeft het een deler die niet groter is dan <span class="formula-inline">√n</span>. Daarom volstaat het om priemdelers tot en met <span class="formula-inline">√n</span> te controleren.</p>
 
-      <h3>16. Voorbeeld: is 97 priem?</h3>
+      <h3>Voorbeeld: is 97 priem?</h3>
       <p>We controleren de priemgetallen die niet groter zijn dan <span class="formula-inline">√97</span>. Omdat <span class="formula-inline">√97</span> kleiner is dan 10, volstaan 2, 3, 5 en 7.</p>
       <ul>
         <li>97 is niet deelbaar door 2;</li>
@@ -3594,11 +3651,15 @@ negatieve getallen.</p>
       </ul>
       <p>Daarom is 97 een priemgetal.</p>
 
-      <h3>17. Waarom factorisatie belangrijk is</h3>
+      <h3>Waarom factorisatie belangrijk is</h3>
       <p>Priemfactorisatie is een van de belangrijkste manieren om de structuur van natuurlijke getallen zichtbaar te maken. Ze vormt de basis voor het berekenen van de <strong>GGD</strong> en het <strong>KGV</strong>, het vereenvoudigen van breuken en later ook het werken met machten.</p>
-      <div class="callout"><strong>Belangrijk idee:</strong> priemgetallen zijn de ondeelbare bouwstenen van de natuurlijke getallen groter dan 1.</div>
+      
+      <div class="callout">
+        <p><strong>Belangrijk idee:</strong></p> 
+        <p>Priemgetallen zijn de ondeelbare bouwstenen van de natuurlijke getallen groter dan 1.</p>
+      </div>
 
-      <h3>18. Samenvatting</h3>
+      <h3>Samenvatting</h3>
       <ul>
         <li>Een priemgetal groter dan 1 heeft precies twee positieve delers: 1 en zichzelf.</li>
         <li>1 is noch priem, noch samengesteld.</li>
@@ -3617,20 +3678,23 @@ negatieve getallen.</p>
       <h2>GGD, KGV en het algoritme van Euclides</h2>
       <p><strong>Doel:</strong> de GGD en het KGV van getallen bepalen en verschillende methoden gebruiken om ze te berekenen.</p>
 
-      <h3>1. Van gemeenschappelijke delers naar de GGD</h3>
+      <h3>Van gemeenschappelijke delers naar de GGD</h3>
       <p>In 1.7 leerden we wat delers zijn en in 1.8 zagen we hoe priemfactorisatie de bouwstenen van getallen zichtbaar maakt. Als twee getallen dezelfde delers hebben, noemen we die <strong>gemeenschappelijke delers</strong>.</p>
       <p>Bijvoorbeeld voor 12 en 18:</p>
       <p class="formula">Delers(12) = {1, 2, 3, 4, 6, 12}</p>
       <p class="formula">Delers(18) = {1, 2, 3, 6, 9, 18}</p>
       <p>De gemeenschappelijke delers zijn 1, 2, 3 en 6. De grootste daarvan is 6.</p>
 
-      <h3>2. De grootste gemene deler</h3>
+      <h3>De grootste gemene deler</h3>
       <p>De <strong>grootste gemene deler</strong>, afgekort <strong>GGD</strong>, van twee of meer natuurlijke getallen is de grootste positieve deler die ze gemeenschappelijk hebben.</p>
       <p>Dus:</p>
       <p class="formula">GGD(12, 18) = 6</p>
-      <div class="callout"><strong>GGD = grootste gemeenschappelijke deler.</strong></div>
+      
+      <div class="callout">
+        <p><strong>GGD = Grootste Gemeenschappelijke Deler.</strong></p>
+      </div>
 
-      <h3>3. De GGD gebruiken bij breuken</h3>
+      <h3>De GGD gebruiken bij breuken</h3>
       <p>De GGD is handig om een breuk in één stap maximaal te vereenvoudigen.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">GGD(84, 126) = 42</p>
@@ -3638,7 +3702,7 @@ negatieve getallen.</p>
       <p class="formula">\frac{84}{126} = \frac{84 ÷ 42}{126 ÷ 42} = \frac{2}{3}</p>
       <p>Omdat 2 en 3 geen gemeenschappelijke deler groter dan 1 hebben, is de breuk verder niet te vereenvoudigen.</p>
 
-      <h3>4. GGD vinden door alle delers te zoeken</h3>
+      <h3>GGD vinden door alle delers te zoeken</h3>
       <p>Voor kleine getallen kun je de GGD bepalen door de delers van beide getallen op te schrijven.</p>
       <p>Bijvoorbeeld voor 20 en 30:</p>
       <p class="formula">Delers(20) = {1, 2, 4, 5, 10, 20}</p>
@@ -3646,7 +3710,7 @@ negatieve getallen.</p>
       <p>De grootste gemeenschappelijke deler is 10:</p>
       <p class="formula">GGD(20, 30) = 10</p>
 
-      <h3>5. GGD met priemfactorisatie</h3>
+      <h3>GGD met priemfactorisatie</h3>
       <p>Met priemfactorisatie kunnen we de gemeenschappelijke priemfactoren rechtstreeks zoeken.</p>
       <p>Neem 36 en 60:</p>
       <p class="formula">36 = 2 × 2 × 3 × 3</p>
@@ -3656,7 +3720,7 @@ negatieve getallen.</p>
       <p>Dus:</p>
       <p class="formula">GGD(36, 60) = 12</p>
 
-      <h3>6. Gemeenschappelijke factoren tellen</h3>
+      <h3>Gemeenschappelijke factoren tellen</h3>
       <p>Bij priemfactorisatie moet je opletten dat je een gemeenschappelijke priemfactor niet vaker gebruikt dan hij in beide getallen voorkomt.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">24 = 2 × 2 × 2 × 3</p>
@@ -3664,7 +3728,7 @@ negatieve getallen.</p>
       <p>Voor de GGD nemen we twee factoren 2 en één factor 3:</p>
       <p class="formula">GGD(24, 36) = 2 × 2 × 3 = 12</p>
 
-      <h3>7. Van delers naar veelvouden: het KGV</h3>
+      <h3>Van delers naar veelvouden: het KGV</h3>
       <p>Bij de GGD kijken we naar <strong>delers</strong>. Bij het <strong>kleinste gemene veelvoud</strong>, afgekort <strong>KGV</strong>, kijken we naar veelvouden.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">Veelvouden(4) = 4, 8, 12, 16, 20, 24, ...</p>
@@ -3672,12 +3736,16 @@ negatieve getallen.</p>
       <p>Het kleinste positieve veelvoud dat in beide lijsten voorkomt is 12.</p>
       <p class="formula">KGV(4, 6) = 12</p>
 
-      <h3>8. Het KGV</h3>
+      <h3>Het KGV</h3>
       <p>Het <strong>kleinste gemene veelvoud</strong> van twee of meer natuurlijke getallen is het kleinste positieve veelvoud dat voor alle getallen een veelvoud is.</p>
-      <div class="callout"><strong>KGV = kleinste gemeenschappelijke veelvoud.</strong></div>
+      
+      <div class="callout">
+        <p><strong>KGV = kleinste gemeenschappelijke veelvoud.</strong></p>
+      </div>
+
       <p>We zoeken dus niet naar 0, ook al is 0 een veelvoud van elk natuurlijk getal. We nemen het <strong>kleinste positieve</strong> gemeenschappelijke veelvoud.</p>
 
-      <h3>9. KGV vinden door veelvouden op te schrijven</h3>
+      <h3>KGV vinden door veelvouden op te schrijven</h3>
       <p>Voor kleine getallen kun je de veelvouden opschrijven tot je een gemeenschappelijk veelvoud vindt.</p>
       <p>Voor 8 en 12:</p>
       <p class="formula">8, 16, 24, 32, ...</p>
@@ -3685,7 +3753,7 @@ negatieve getallen.</p>
       <p>Dus:</p>
       <p class="formula">KGV(8, 12) = 24</p>
 
-      <h3>10. KGV met priemfactorisatie</h3>
+      <h3>KGV met priemfactorisatie</h3>
       <p>Ook het KGV kunnen we met priemfactorisatie vinden. Nu nemen we juist <strong>iedere priemfactor zo vaak als hij in minstens één van de getallen voorkomt</strong>.</p>
       <p>Voor 12 en 18:</p>
       <p class="formula">12 = 2 × 2 × 3</p>
@@ -3693,7 +3761,7 @@ negatieve getallen.</p>
       <p>We hebben nodig: twee factoren 2 en twee factoren 3.</p>
       <p class="formula">KGV(12, 18) = 2 × 2 × 3 × 3 = 36</p>
 
-      <h3>11. GGD en KGV: twee verschillende vragen</h3>
+      <h3>GGD en KGV: twee verschillende vragen</h3>
       <p>GGD en KGV lijken op elkaar, maar beantwoorden een andere vraag.</p>
       <ul>
         <li><strong>GGD:</strong> welke grootste deler hebben de getallen gemeenschappelijk?</li>
@@ -3703,26 +3771,26 @@ negatieve getallen.</p>
       <p class="formula">GGD → delen</p>
       <p class="formula">KGV → veelvouden</p>
 
-      <h3>12. Wanneer gebruik je de GGD?</h3>
+      <h3>Wanneer gebruik je de GGD?</h3>
       <p>De GGD is nuttig wanneer je iets in <strong>gelijke, zo groot mogelijke groepen</strong> wilt verdelen zonder rest.</p>
       <p>Bijvoorbeeld: 24 rode en 36 blauwe knikkers verdelen in een zo groot mogelijk aantal identieke pakketjes. Het aantal pakketjes wordt dan bepaald door de GGD van 24 en 36.</p>
       <p class="formula">GGD(24, 36) = 12</p>
       <p>Je kunt dus 12 identieke pakketjes maken, met 2 rode en 3 blauwe knikkers per pakketje.</p>
 
-      <h3>13. Wanneer gebruik je het KGV?</h3>
+      <h3>Wanneer gebruik je het KGV?</h3>
       <p>Het KGV is nuttig wanneer verschillende regelmatige gebeurtenissen <strong>tegelijk willen samenvallen</strong>.</p>
       <p>Stel dat een lamp elke 6 seconden knippert en een andere elke 8 seconden. Ze knipperen opnieuw tegelijk na:</p>
       <p class="formula">KGV(6, 8) = 24</p>
       <p>Na 24 seconden vallen de twee momenten weer samen.</p>
 
-      <h3>14. De relatie tussen GGD en KGV</h3>
+      <h3>De relatie tussen GGD en KGV</h3>
       <p>Voor twee positieve gehele getallen <strong>a</strong> en <strong>b</strong> bestaat een belangrijke relatie:</p>
       <p class="formula">GGD(a, b) × KGV(a, b) = a × b</p>
       <p>Bijvoorbeeld voor 12 en 18:</p>
       <p class="formula">6 × 36 = 12 × 18 = 216</p>
       <p>Deze relatie is een handige controle wanneer je de GGD en het KGV hebt berekend.</p>
 
-<h3>15. Het algoritme van Euclides</h3>
+<h3>Het algoritme van Euclides</h3>
 
 <p>We hebben geleerd hoe we de <strong>GGD</strong> van twee getallen kunnen vinden door hun delers te vergelijken.</p>
 
@@ -3821,7 +3889,8 @@ negatieve getallen.</p>
 </div>
 
 
-      <h3>18. Samenvatting en strategie</h3>
+      <h3>Samenvatting en strategie</h3>
+      
       <ul>
         <li>De GGD is de grootste positieve gemeenschappelijke deler.</li>
         <li>Het KGV is het kleinste positieve gemeenschappelijke veelvoud.</li>
@@ -3830,10 +3899,14 @@ negatieve getallen.</p>
         <li>De relatie <span class="formula-inline">GGD(a,b) × KGV(a,b) = a × b</span> kan als controle dienen.</li>
         <li>Het algoritme van Euclides is een efficiënte methode om de GGD te berekenen.</li>
       </ul>
-      <div class="callout"><strong>Vooruitblik:</strong> met GGD en KGV hebben we de belangrijkste bouwstenen van de deelbaarheidsrekenkunde verzameld. In de volgende onderdelen kunnen we deze kennis combineren met machten en wortels.</div>
+
+      <div class="callout">
+        <p><strong>Vooruitblik:</strong></p> 
+        <p>Met GGD en KGV hebben we de belangrijkste bouwstenen van de deelbaarheidsrekenkunde verzameld. In de volgende onderdelen kunnen we deze kennis combineren met machten en wortels.</p>
+      </div>
     `
   },
-{
+  {
     id: "1.10",
     title: "Machten",
     goal: "Lees en bereken machten met gehele niet-negatieve exponent, inclusief de rekenregels voor hetzelfde grondtal.",
@@ -3841,44 +3914,56 @@ negatieve getallen.</p>
       <h2>Machten</h2>
       <p><strong>Doel:</strong> machten begrijpen, lezen, berekenen en gebruiken in eenvoudige berekeningen.</p>
 
-      <h3>1. Van herhaald vermenigvuldigen naar een macht</h3>
+      <h3>Van herhaald vermenigvuldigen naar een macht</h3>
       <p>Soms vermenigvuldigen we hetzelfde getal meerdere keren met zichzelf.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">2 × 2 × 2 × 2 = 16</p>
       <p>In plaats van vier keer 2 te schrijven, kunnen we dit korter noteren:</p>
       <p class="formula">2^4 = 16</p>
-      <p>Dit noemen we een <strong>macht</strong>.</p> We lezen dit als: 2 tot de macht 4.
+      <p>Dit noemen we een <strong>macht</strong>.</p> 
+      <p>We lezen dit als: 2 tot de macht 4.</p>
 
       <ul>
         <li><strong>2</strong> is het <strong>grondtal</strong>;</li>
         <li><strong>4</strong> is de <strong>exponent</strong>.</li>
       </ul>
 
-      <h3>2. Grondtal en exponent</h3>
+      <h3>Grondtal en exponent</h3>
+      
+      <p>Voorbeeld: 2 tot de macht 4.</p>
 
-      <div class="callout"><strong>Onthoud:</strong> de exponent vertelt hoeveel keer het grondtal als factor voorkomt.</div>
+      <p class="formula">2^4 = 2 × 2 × 2 × 2 = 16</p> 
+      <ul>
+        <li><strong>2</strong> is het <strong>grondtal</strong>;</li>
+        <li><strong>4</strong> is de <strong>exponent</strong>.</li>
+      </ul>
+      
+      <div class="callout">
+        <p><strong>Onthoud:</strong></p> 
+        <p>De exponent vertelt hoeveel keer het grondtal als factor voorkomt.</p>
+      </div>
 
-      <h3>3. Een macht uitschrijven</h3>
+      <h3>Een macht uitschrijven</h3>
       <p>Een macht kunnen we altijd terugschrijven als een vermenigvuldiging.</p>
       <p class="formula">5^3 = 5 × 5 × 5</p>
       <p>Dus:</p>
       <p class="formula">5^3 = 125</p>
       <p>De exponent 3 betekent dat we drie factoren 5 hebben.</p>
 
-      <h3>4. Speciale macht: exponent 1</h3>
+      <h3>Speciale macht: exponent 1</h3>
       <p>Als de exponent 1 is, komt het grondtal één keer voor.</p>
       <p class="formula">7^1 = 7</p>
       <p>Voor elk getal geldt:</p>
       <p class="formula">a^1 = a</p>
 
-      <h3>5. Speciale macht: exponent 0</h3>
+      <h3>Speciale macht: exponent 0</h3>
       <p>Voor elk getal dat niet nul is, geldt:</p>
       <p class="formula">a^0 = 1</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">5^0 = 1</p>
       <p>Dit lijkt misschien vreemd, maar deze regel zorgt ervoor dat de rekenregels voor machten netjes blijven aansluiten.</p>
 
-      <h3>6. Machten van 10</h3>
+      <h3>Machten van 10</h3>
       <p>Machten van 10 geven een handig patroon:</p>
       <p class="formula">10^1 = 10</p>
       <p class="formula">10^2 = 100</p>
@@ -3892,7 +3977,7 @@ negatieve getallen.</p>
       <p>Zo kunnen we bijvoorbeeld schrijven:</p>
       <p class="formula">4 705 = 4 × 10^3 + 7 × 10^2 + 0 × 10^1 + 5 × 10^0</p>
 
-      <h3>7. Vermenigvuldigen en delen van machten met hetzelfde grondtal</h3>
+      <h3>Vermenigvuldigen en delen van machten met hetzelfde grondtal</h3>
       <p>Wanneer we machten met hetzelfde grondtal vermenigvuldigen, mogen we de exponenten optellen.</p>
       <p class="formula">2^3 × 2^2 = 2^5</p>
       <p>Dat komt doordat:</p>
@@ -3902,14 +3987,14 @@ negatieve getallen.</p>
       <p class="formula">2^5 ÷ 2^2 = 2^3</p>
       <p>Want van vijf factoren 2 blijven er na het wegnemen van twee factoren drie over.</p>
 
-      <h3>8. Een macht van een macht</h3>
+      <h3>Een macht van een macht</h3>
       <p>Soms staat er een macht bovenop een andere macht.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">(2^3)^2</p>
       <p>De macht 2<sup>3</sup> komt twee keer voor:</p>
       <p class="formula">(2^3)^2 = 2^3 × 2^3 = 2^6</p>
 
-      <h3>9. Machten met negatieve grondtallen</h3>
+      <h3>Machten met negatieve grondtallen</h3>
       <p>Ook negatieve getallen kunnen een grondtal zijn.</p>
       <p>Bij een even exponent wordt het resultaat positief:</p>
       <p class="formula">(−3)^2 = (−3) × (−3) = 9</p>
@@ -3925,7 +4010,10 @@ negatieve getallen.</p>
 
 <p class="formula"> −3^2 = −(3^2) = −9 </p>
 
-<div class="callout"> <strong>Onthoud:</strong> staan de haakjes rond het negatieve getal, dan wordt het hele getal verheven tot de macht. Zonder haakjes wordt eerst de macht berekend en komt het minteken daarna. </div>
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+  <p>Staan de haakjes rond het negatieve getal, dan wordt het hele getal verheven tot de macht. Zonder haakjes wordt eerst de macht berekend en komt het minteken daarna.</p>
+</div>
 
 <p>Dit verschil wordt vooral duidelijk bij een even exponent.</p>
 
@@ -3937,7 +4025,7 @@ negatieve getallen.</p>
       
 
 
-<h3>10. Machten en volgorde van bewerkingen</h3>
+<h3>Machten en volgorde van bewerkingen</h3>
       <p><strong>Machten hebben voorrang op vermenigvuldigen, delen, optellen en aftrekken.</strong></p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">3 + 2^3 = 3 + 8 = 11</p>
@@ -3945,13 +4033,13 @@ negatieve getallen.</p>
       <p>Haakjes kunnen de volgorde veranderen:</p>
       <p class="formula">(3 + 2)^3 = 5^3 = 125</p>
 
-      <h3>11. Machten gebruiken om grote getallen te schrijven</h3>
+      <h3>Machten gebruiken om grote getallen te schrijven</h3>
       <p>Grote getallen kunnen we compact schrijven met machten van 10.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">1 000 000 = 10^6</p>
       <p>Dit is een eerste stap naar <strong>wetenschappelijke notatie</strong>, die we later behandelen.</p>
 
-      <h3>12. Een handige strategie</h3>
+      <h3>Een handige strategie</h3>
       <p>Wanneer je een macht tegenkomt:</p>
       <ol>
         <li>zoek het <strong>grondtal</strong>;</li>
@@ -3960,7 +4048,7 @@ negatieve getallen.</p>
         <li>reken daarna uit of gebruik een passende rekenregel.</li>
       </ol>
 
-      <h3>13. Samenvatting</h3>
+      <h3>Samenvatting</h3>
       <div class="callout">
         <p>Een macht is een korte schrijfwijze voor een herhaalde vermenigvuldiging.</p>
         <p class="formula">a^n = a × a × ... × a</p>
@@ -3981,7 +4069,7 @@ negatieve getallen.</p>
       <h2>Wortels</h2>
       <p><strong>Doel:</strong> vierkantswortels begrijpen, berekenen, schatten en gebruiken.</p>
 
-      <h3>1. Van kwadrateren naar terugrekenen</h3>
+      <h3>Van kwadrateren naar terugrekenen</h3>
       <p>In 1.10 leerden we machten. In het bijzonder leerden we kwadrateren: een getal vermenigvuldigen met zichzelf.</p>
       <p class="formula">5^2 = 5 × 5 = 25</p>
       <p>Nu stellen we de omgekeerde vraag:</p>
@@ -3989,19 +4077,23 @@ negatieve getallen.</p>
       <p>Het antwoord is 5.</p>
       <p>Deze omgekeerde bewerking noemen we de <strong>vierkantswortel</strong>.</p>
 
-      <h3>2. Het wortelteken</h3>
+      <h3>Het wortelteken</h3>
       <p>We schrijven de vierkantswortel met het teken <strong>√</strong>.</p>
       <p class="formula">√25 = 5</p>
       <p>We lezen dit als: “de vierkantswortel van 25 is 5”.</p>
-      <div class="callout"><strong>Belangrijk:</strong> √25 betekent het niet-negatieve getal dat in het kwadraat 25 geeft.</div>
+      
+      <div class="callout">
+        <p><strong>Belangrijk:</strong></p>
+        <p>√25 betekent het niet-negatieve getal dat in het kwadraat 25 geeft.</p>
+      </div>
 
-      <h3>3. Kwadrateren en worteltrekken zijn omgekeerde bewerkingen</h3>
+      <h3>Kwadrateren en worteltrekken zijn omgekeerde bewerkingen</h3>
       <p>Kwadrateren en de vierkantswortel zijn elkaars omgekeerde bewerkingen.</p>
       <p class="formula">7^2 = 49</p>
       <p class="formula">√49 = 7</p>
       <p>Je kunt dus vanuit 7 naar 49 gaan door te kwadrateren en vanuit 49 terug naar 7 door de vierkantswortel te nemen.</p>
 
-      <h3>4. Volmaakte kwadraten</h3>
+      <h3>Volmaakte kwadraten</h3>
       <p>Een getal dat het kwadraat is van een geheel getal noemen we een <strong>volmaakt kwadraat</strong>.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">1, 4, 9, 16, 25, 36, 49, 64, 81, 100</p>
@@ -4012,7 +4104,7 @@ negatieve getallen.</p>
       <p class="formula">4^2 = 16</p>
       <p>enzovoort.</p>
 
-      <h3>5. Vierkantswortels uitrekenen</h3>
+      <h3>Vierkantswortels uitrekenen</h3>
       <p>Als je een volmaakt kwadraat herkent, kun je de wortel meteen bepalen.</p>
       <p class="formula">√36 = 6</p>
       <p>want:</p>
@@ -4020,7 +4112,7 @@ negatieve getallen.</p>
       <p>Evenzo:</p>
       <p class="formula">√81 = 9</p>
 
-      <h3>6. De vierkantswortel is niet hetzelfde als delen door 2</h3>
+      <h3>De vierkantswortel is niet hetzelfde als delen door 2</h3>
       <p>Een veelgemaakte fout is denken dat je voor een vierkantswortel het getal door 2 moet delen.</p>
       <p>Dat klopt niet.</p>
       <p>Bijvoorbeeld:</p>
@@ -4029,7 +4121,7 @@ negatieve getallen.</p>
       <p class="formula">36 ÷ 2 = 18</p>
       <p>De vierkantswortel vraagt dus niet naar de helft, maar naar het getal dat je met zichzelf moet vermenigvuldigen.</p>
 
-      <h3>7. Wortels van 0 en 1</h3>
+      <h3>Wortels van 0 en 1</h3>
       <p>Ook 0 en 1 hebben een vierkantswortel.</p>
       <p class="formula">√0 = 0</p>
       <p class="formula">√1 = 1</p>
@@ -4037,7 +4129,7 @@ negatieve getallen.</p>
       <p class="formula">0^2 = 0</p>
       <p class="formula">1^2 = 1</p>
 
-      <h3>8. Waarom √25 niet −5 is</h3>
+      <h3>Waarom √25 niet −5 is</h3>
       <p>We weten dat:</p>
       <p class="formula">5^2 = 25</p>
       <p>maar ook:</p>
@@ -4047,7 +4139,7 @@ negatieve getallen.</p>
       <p>Het wortelteken verwijst naar de <strong>niet-negatieve</strong> vierkantswortel.</p>
       <p>Dit is belangrijk om het begrip vierkantswortel eenduidig te maken.</p>
 
-      <h3>9. Wortels schatten</h3>
+      <h3>Wortels schatten</h3>
       <p>Niet elk getal heeft een gehele vierkantswortel.</p>
       <p>Neem bijvoorbeeld 20.</p>
       <p>We weten:</p>
@@ -4057,7 +4149,7 @@ negatieve getallen.</p>
       <p class="formula">4 &lt; √20 &lt; 5</p>
       <p>Zo kunnen we een wortel al schatten zonder hem precies te berekenen.</p>
 
-      <h3>10. Wortels vergelijken</h3>
+      <h3>Wortels vergelijken</h3>
       <p>We kunnen wortels vergelijken door eerst te kijken tussen welke kwadraten ze liggen.</p>
       <p>Bijvoorbeeld: welke is groter, √30 of √40?</p>
       <p>Omdat:</p>
@@ -4066,7 +4158,7 @@ negatieve getallen.</p>
       <p class="formula">√30 &lt; √40</p>
       <p>Voor niet-negatieve getallen blijft de volgorde behouden wanneer we de vierkantswortel nemen.</p>
 
-      <h3>11. Een wortel controleren</h3>
+      <h3>Een wortel controleren</h3>
       <p>Je kunt een berekende vierkantswortel altijd controleren door het antwoord te kwadrateren.</p>
       <p>Stel dat je denkt dat:</p>
       <p class="formula">√144 = 12</p>
@@ -4074,7 +4166,7 @@ negatieve getallen.</p>
       <p class="formula">12^2 = 144</p>
       <p>De uitkomst klopt dus.</p>
 
-      <h3>12. Wortels en machten</h3>
+      <h3>Wortels en machten</h3>
       <p>Het verband tussen machten en wortels kunnen we kort schrijven als:</p>
       <p class="formula">√(a^2) = a</p>
       <p>voor niet-negatieve <span class="formula-inline">a</span>.</p>
@@ -4082,14 +4174,14 @@ negatieve getallen.</p>
       <p class="formula">√(8^2) = 8</p>
       <p>Dit laat opnieuw zien dat worteltrekken en kwadrateren elkaars omgekeerde bewerkingen zijn.</p>
 
-      <h3>13. Wortels en negatieve getallen</h3>
+      <h3>Wortels en negatieve getallen</h3>
       <p>In deze cursus werken we hier met <strong>reële getallen</strong>.</p>
       <p>Daarom bestaat bijvoorbeeld √9 wel:</p>
       <p class="formula">√9 = 3</p>
       <p>maar √(−9) is geen reëel getal.</p>
       <p>Complexe getallen behandelen we later in de cursus.</p>
 
-      <h3>14. Wortels in breuken</h3>
+      <h3>Wortels in breuken</h3>
       <p>Ook breuken kunnen een vierkantswortel hebben.</p>
       <p>Bij eenvoudige gevallen kunnen we teller en noemer afzonderlijk herkennen:</p>
       <p class="formula">√(1/4) = 1/2</p>
@@ -4097,14 +4189,14 @@ negatieve getallen.</p>
       <p class="formula">(1/2)^2 = 1/4</p>
       <p>We gebruiken dit voorlopig alleen bij eenvoudige, herkenbare wortels.</p>
 
-      <h3>15. Wortels van producten</h3>
+      <h3>Wortels van producten</h3>
       <p>Voor niet-negatieve getallen geldt een belangrijke eigenschap:</p>
       <p class="formula">√(a × b) = √a × √b</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">√36 = √(4 × 9) = √4 × √9 = 2 × 3 = 6</p>
       <p>Deze regel kan handig zijn om een wortel eenvoudiger te maken.</p>
 
-      <h3>16. Een wortel vereenvoudigen</h3>
+      <h3>Een wortel vereenvoudigen</h3>
       <p>Soms zit er een volmaakt kwadraat in een getal.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">√72 = √(36 × 2)</p>
@@ -4112,7 +4204,7 @@ negatieve getallen.</p>
       <p class="formula">√72 = √36 × √2 = 6√2</p>
       <p>We hebben de wortel dus vereenvoudigd, ook al is √2 zelf geen geheel getal.</p>
 
-      <h3>17. Veelgemaakte fouten</h3>
+      <h3>Veelgemaakte fouten</h3>
       <ul>
         <li>√36 is 6, niet 18. Worteltrekken is terugrekenen uit een kwadraad, niet "halveren"</li>
         <li>√25 is 5, niet ±5. Dit is een afspraak die we maken. Later gaan we zien dat we soms wel beide oplossingen gebruiken (5 en -5).</li>
@@ -4121,7 +4213,7 @@ negatieve getallen.</p>
         <li>Bij een negatieve waarde onder het wortelteken bestaat in de reële getallen geen uitkomst.</li>
       </ul>
 
-      <h3>18. Samenvatting</h3>
+      <h3>Samenvatting</h3>
       <div class="callout">
         <p>De vierkantswortel is de omgekeerde bewerking van kwadrateren.</p>
         <p class="formula">√25 = 5\\ omdat\\ 5^2 = 25</p>
@@ -4139,7 +4231,7 @@ negatieve getallen.</p>
       <h2>Irrationale en reële getallen</h2>
       <p><strong>Doel:</strong> begrijpen waarom sommige getallen niet als breuk kunnen worden geschreven, en ontdekken hoe rationale en irrationale getallen samen de reële getallen vormen.</p>
 
-      <h3>1. Niet elk getal kan als breuk worden geschreven</h3>
+      <h3>Niet elk getal kan als breuk worden geschreven</h3>
       <p>In 1.5 maakten we kennis met de <strong>rationale getallen</strong>. Dat zijn getallen die we als een breuk van twee gehele getallen kunnen schrijven.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">\\frac{1}{2},\\ \\frac{3}{4},\\ 5,\\ 0,75</p>
@@ -4148,7 +4240,7 @@ negatieve getallen.</p>
       <p class="formula">\\sqrt{2}</p>
       <p>Dit getal kunnen we niet precies schrijven als een breuk van twee gehele getallen.</p>
 
-      <h3>2. Een verrassende vierkantswortel</h3>
+      <h3>Een verrassende vierkantswortel</h3>
       <p>We weten uit 1.11 dat:</p>
       <p class="formula">1^2 = 1</p>
       <p class="formula">2^2 = 4</p>
@@ -4158,7 +4250,7 @@ negatieve getallen.</p>
       <p class="formula">\\sqrt{2} \\approx 1,41421356...</p>
       <p>De decimalen blijven doorgaan en vormen geen zich herhalend patroon.</p>
 
-      <h3>3. Rationale getallen</h3>
+      <h3>Rationale getallen</h3>
       <p>Een getal is <strong>rationaal</strong> als het kan worden geschreven als een breuk:</p>
       <p class="formula">\frac{a}{b}</p>
       <p>waarbij a en b gehele getallen zijn en b niet 0 is.</p>
@@ -4166,18 +4258,24 @@ negatieve getallen.</p>
       <p>Ook gehele getallen zijn rationaal, want bijvoorbeeld:</p>
       <p class="formula">4 = \frac{4}{1}</p>
 
-      <h3>4. Irrationale getallen</h3>
+      <h3>Irrationale getallen</h3>
       <p>Een getal is <strong>irrationaal</strong> als het <strong>niet</strong> als een breuk van twee gehele getallen kan worden geschreven.</p>
       <p>Voorbeelden zijn:</p>
       <p class="formula">\\sqrt{2},\\ \\sqrt{3},\\ \\pi</p>
       <p>Deze getallen hebben een oneindige decimale schrijfwijze zonder een eindeloos herhalend patroon.</p>
-      <div class="callout"><strong>Rationaal of irrationaal?</strong><br>Rationaal = wel als breuk van gehele getallen te schrijven.<br>Irrationaal = niet als zo'n breuk te schrijven.</div>
+      
+      <div class="callout">
+        <p><strong>Rationaal of irrationaal?</strong></p>
+        <p>Rationaal = wel als breuk van gehele getallen te schrijven.</p> 
+        <p>Irrationaal = niet als zo'n breuk te schrijven.</p>
+      </div>
+      
       <p>Een belangrijke waarschuwing: niet elke vierkantswortel is irrationaal.</p>
       <p>Ook het getal <span class="formula-inline">\\pi</span> is irrationaal. Het is de verhouding tussen de omtrek en de diameter van een cirkel.</p>
 
 
 
-      <h3>5. Oneindige decimalen</h3>
+      <h3>Oneindige decimalen</h3>
       <p>Een decimale schrijfwijze kan eindig of oneindig zijn.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">0,5 = \frac{1}{2}</p>
@@ -4186,7 +4284,7 @@ negatieve getallen.</p>
       <p>De 3 blijft zich herhalen.</p>
       <p>Bij een irrationaal getal blijven de decimalen ook doorgaan, maar zonder een zich herhalend patroon. Daarom is <strong>oneindig veel decimalen op zichzelf niet voldoende</strong> om te bepalen of een getal irrationaal is.</p>
 
-      <h3>6. Eindige en repeterende decimalen zijn rationaal</h3>
+      <h3>Eindige en repeterende decimalen zijn rationaal</h3>
       <p>Elke eindige decimale schrijfwijze kan als breuk worden geschreven.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">0,75 = \frac{75}{100} = \frac{3}{4}</p>
@@ -4199,7 +4297,7 @@ negatieve getallen.</p>
         <li>oneindige niet-repeterende decimalen → irrationaal.</li>
       </ul>
 
-      <h3>7. Rationale en irrationale getallen samen</h3>
+      <h3>Rationale en irrationale getallen samen</h3>
       <p>We hebben nu twee groepen getallen gezien:</p>
       <ul>
         <li><strong>rationale getallen</strong>: kunnen als breuk worden geschreven;</li>
@@ -4211,13 +4309,13 @@ negatieve getallen.</p>
       </p>      
       <p>Het symbool <strong>ℝ</strong> staat voor de verzameling van alle reële getallen.</p>
 
-      <h3>8. Tussen twee getallen zitten altijd meer reële getallen</h3>
+      <h3>Tussen twee getallen zitten altijd meer reële getallen</h3>
       <p>Neem bijvoorbeeld 1 en 2. Daartussen ligt 1,5. Maar ook 1,25 en 1,75.</p>
       <p>Er zijn zelfs oneindig veel reële getallen tussen 1 en 2.</p>
       <p>Dit geldt voor elk tweetal verschillende reële getallen.</p>
       <p>De getallenlijn is dus niet opgebouwd uit losse puntjes met lege ruimte ertussen. Tussen twee verschillende reële getallen kunnen we altijd nog andere reële getallen vinden.</p>
 
-      <h3>9. De belangrijkste verzamelingen tot nu toe</h3>
+      <h3>De belangrijkste verzamelingen tot nu toe</h3>
       <p>We hebben in Fase 1 verschillende soorten getallen opgebouwd:</p>
       <p class="formula">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</p>
       <p>Elke verzameling bevat de vorige.</p>
@@ -4228,7 +4326,7 @@ negatieve getallen.</p>
         <li><strong>ℝ</strong>: reële getallen.</li>
       </ul>
 
-      <h3>10. Veelgemaakte fouten</h3>
+      <h3>Veelgemaakte fouten</h3>
       <ul>
         <li><strong>Fout:</strong> denken dat elk oneindig decimaal getal irrationaal is. <strong>Correct:</strong> een repeterende oneindige decimale schrijfwijze is rationaal.</li>
         <li><strong>Fout:</strong> denken dat de vierkantswortel van 2 = 1,41. <strong>Correct:</strong> 1,41 is slechts een benadering.</li>
@@ -4251,21 +4349,21 @@ negatieve getallen.</p>
         <p>In de vorige lessen hebben we geleerd om met steeds meer soorten getallen te werken. We kunnen nu exacte waarden schrijven, maar in de praktijk is een exacte schrijfwijze niet altijd nodig. Soms willen we een getal juist <strong>eenvoudiger en overzichtelijker</strong> weergeven.</p>
       </div>
 
-      <h3>1. Waarom ronden we getallen af?</h3>
+      <h3>Waarom ronden we getallen af?</h3>
       <p>Een getal kan veel cijfers bevatten. Soms zijn al die cijfers niet belangrijk voor wat we willen weten.</p>
       <p>Stel dat een afstand precies 12,4837 km is. Als we alleen willen weten hoeveel kilometer dit ongeveer is, kunnen we schrijven:</p>
       <p class="formula">12,4837 \\approx 12,5</p>
       <p>Het teken <strong>≈</strong> betekent: <strong>ongeveer gelijk aan</strong>.</p>
       <p>We hebben het getal niet veranderd omdat we denken dat 12,5 exact 12,4837 is. We hebben bewust gekozen voor een <strong>benadering</strong>.</p>
 
-      <h3>2. Afronden op hele getallen</h3>
+      <h3>Afronden op hele getallen</h3>
       <p>Bij afronden op een geheel getal kijken we naar het cijfer direct <strong>rechts van de eenheden</strong>.</p>
       <p>Bij 7,3 is dat cijfer 3. Omdat 3 kleiner is dan 5, blijft het gehele deel hetzelfde:</p>
       <p class="formula">7,3 \\approx 7</p>
       <p>Bij 7,8 is het cijfer rechts van de eenheden 8. Daarom verhogen we 7 met 1:</p>
       <p class="formula">7,8 \\approx 8</p>
 
-      <h3>3. De afrondingsregel</h3>
+      <h3>De afrondingsregel</h3>
       <p>De basisregel is:</p>
       <ul>
         <li>cijfer rechts van de afrondingsplaats is <strong>0, 1, 2, 3 of 4</strong> → naar beneden afronden;</li>
@@ -4275,16 +4373,20 @@ negatieve getallen.</p>
       <p class="formula">23,4 \\approx 23</p>
       <p class="formula">23,5 \\approx 24</p>
       <p class="formula">23,9 \\approx 24</p>
-      <div class="callout"><strong>Onthoud:</strong> kijk naar het eerste cijfer dat je <strong>niet</strong> wilt behouden. Dat cijfer bepaalt hoe je afrondt.</div>
+      
+      <div class="callout">
+        <p><strong>Onthoud:</strong></p>
+        <p>Kijk naar het eerste cijfer dat je <strong>niet</strong> wilt behouden. Dat cijfer bepaalt hoe je afrondt.</p>
+      </div>
 
-      <h3>4. Afronden op tienden</h3>
+      <h3>Afronden op tienden</h3>
       <p>Bij afronden op één decimaal willen we één cijfer na de komma behouden.</p>
       <p>Neem 4,26. We behouden de 2 en kijken naar het volgende cijfer, de 6:</p>
       <p class="formula">4,26 \\approx 4,3</p>
       <p>Bij 4,23 kijken we naar de 3:</p>
       <p class="formula">4,23 \\approx 4,2</p>
 
-      <h3>5. Afronden op honderdsten en duizendsten</h3>
+      <h3>Afronden op honderdsten en duizendsten</h3>
       <p>Dezelfde regel werkt op elke plaats.</p>
       <p>Op honderdsten:</p>
       <p class="formula">7,386 \\approx 7,39</p>
@@ -4293,7 +4395,7 @@ negatieve getallen.</p>
       <p class="formula">7,3864 \\approx 7,386</p>
       <p>We behouden 386 en kijken naar de volgende 4. Omdat 4 kleiner is dan 5, verandert 386 niet.</p>
 
-      <h3>6. Afronden van gehele getallen</h3>
+      <h3>Afronden van gehele getallen</h3>
       <p>Ook grote gehele getallen kunnen we afronden.</p>
       <p>Op tientallen:</p>
       <p class="formula">347 \\approx 350</p>
@@ -4303,16 +4405,20 @@ negatieve getallen.</p>
       <p class="formula">8 650 \\approx 9 000</p>
       <p>Ook hier bepaalt het eerste cijfer dat we weggooien of we naar beneden of naar boven afronden.</p>
 
-      <h3>7. Afronden is een keuze van nauwkeurigheid</h3>
+      <h3>Afronden is een keuze van nauwkeurigheid</h3>
       <p>Een afgerond getal is alleen zinvol als duidelijk is <strong>waarop</strong> we hebben afgerond.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">3,14159 \\approx 3,1</p>
       <p>is minder nauwkeurig dan:</p>
       <p class="formula">3,14159 \\approx 3,142</p>
       <p>Beide kunnen correct zijn, afhankelijk van de gewenste nauwkeurigheid.</p>
-      <div class="callout"><strong>Belangrijk:</strong> afronden betekent niet automatisch "zo weinig mogelijk cijfers schrijven". Je kiest eerst de gewenste nauwkeurigheid.</div>
+      
+      <div class="callout">
+        <p><strong>Belangrijk:</strong></p>
+        <p>Afronden betekent niet automatisch "zo weinig mogelijk cijfers schrijven". Je kiest eerst de gewenste nauwkeurigheid.</p>
+      </div>
 
-      <h3>8. Afronden en schatten</h3>
+      <h3>Afronden en schatten</h3>
       <p>We kunnen afronden gebruiken om snel een berekening te schatten.</p>
       <p>Stel:</p>
       <p class="formula">198 × 49</p>
@@ -4322,7 +4428,7 @@ negatieve getallen.</p>
       <p class="formula">198 × 49 = 9 702</p>
       <p>De schatting helpt ons om te beoordelen of een antwoord redelijk is.</p>
 
-      <h3>9. Afronden vóór een berekening</h3>
+      <h3>Afronden vóór een berekening</h3>
       <p>Als we vooraf afronden, krijgen we meestal een <strong>benadering</strong> en geen exact antwoord.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">39,8 × 5,1</p>
@@ -4332,7 +4438,7 @@ negatieve getallen.</p>
       <p class="formula">39,8 × 5,1 = 202,98</p>
       <p>De afgeronde berekening is dus een snelle schatting.</p>
 
-      <h3>10. Afrondingsfout</h3>
+      <h3>Afrondingsfout</h3>
       <p>Door af te ronden ontstaat meestal een klein verschil tussen de exacte waarde en de benadering.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">12,48 \\approx 12,5</p>
@@ -4341,12 +4447,12 @@ negatieve getallen.</p>
       <p>Dit noemen we de <strong>absolute afrondingsfout</strong> in deze eenvoudige context.</p>
       <p>Hoe meer cijfers we behouden, hoe kleiner de afrondingsfout meestal wordt.</p>
 
-      <h3>11. Wanneer is een benadering goed genoeg?</h3>
+      <h3>Wanneer is een benadering goed genoeg?</h3>
       <p>Dat hangt af van de situatie.</p>
       <p>Bij een afstand van 12,4837 km kan 12,5 km voldoende zijn voor een ruwe planning. Bij een laboratoriummeting kan veel meer nauwkeurigheid nodig zijn.</p>
       <p>Er bestaat dus geen universeel "juist aantal cijfers". De gewenste nauwkeurigheid komt voort uit de <strong>context</strong>.</p>
 
-      <h3>12. Zeer grote getallen overzichtelijk schrijven</h3>
+      <h3>Zeer grote getallen overzichtelijk schrijven</h3>
       <p>Grote getallen kunnen veel cijfers bevatten.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">300 000 000</p>
@@ -4354,7 +4460,7 @@ negatieve getallen.</p>
       <p class="formula">3 × 10^8</p>
       <p>Dit is veel compacter en maakt meteen zichtbaar hoeveel nullen er zijn.</p>
 
-      <h3>13. Wetenschappelijke notatie</h3>
+      <h3>Wetenschappelijke notatie</h3>
       <p>Een getal staat in <strong>wetenschappelijke notatie</strong> als het geschreven wordt als:</p>
       <p class="formula">a × 10^n</p>
       <p>waarbij <strong>a</strong> minstens 1 maar kleiner dan 10 is.</p>
@@ -4362,9 +4468,13 @@ negatieve getallen.</p>
       <p class="formula">300 000 000 = 3 × 10^8</p>
       <p>en:</p>
       <p class="formula">4 500 000 = 4,5 × 10^6</p>
-      <div class="callout"><strong>Kernregel:</strong> in wetenschappelijke notatie staat er precies één niet-nul cijfer vóór de komma.</div>
+      
+      <div class="callout">
+        <p><strong>Kernregel:</strong></p>
+        <p>In wetenschappelijke notatie staat er precies één niet-nul cijfer vóór de komma.</p>
+      </div>
 
-      <h3>14. Van een groot getal naar wetenschappelijke notatie</h3>
+      <h3>Van een groot getal naar wetenschappelijke notatie</h3>
       <p>Kijk naar:</p>
       <p class="formula">72 000</p>
       <p>We verplaatsen de komma zodat één cijfer vóór de komma overblijft:</p>
@@ -4373,7 +4483,7 @@ negatieve getallen.</p>
       <p>Controle:</p>
       <p class="formula">7,2 × 10^4 = 7,2 × 10 000 = 72 000</p>
 
-      <h3>15. Kleine getallen in wetenschappelijke notatie</h3>
+      <h3>Kleine getallen in wetenschappelijke notatie</h3>
       <p>Wetenschappelijke notatie werkt ook voor getallen kleiner dan 1.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">0,00045 = 4,5 × 10^{-4}</p>
@@ -4383,7 +4493,7 @@ negatieve getallen.</p>
       <p>Dus:</p>
       <p class="formula">4,5 × 10^{-4} = 0,00045</p>
 
-      <h3>16. Wetenschappelijke notatie en machten</h3>
+      <h3>Wetenschappelijke notatie en machten</h3>
       <p>In 1.10 leerden we machten van 10. Die kennis gebruiken we nu om wetenschappelijke notatie te begrijpen.</p>
       <p>Bij positieve exponenten wordt het getal groter:</p>
       <p class="formula">10^3 = 1 000</p>
@@ -4391,7 +4501,7 @@ negatieve getallen.</p>
       <p class="formula">10^{-3} = 0,001</p>
       <p>Daarom kunnen we zowel zeer grote als zeer kleine getallen compact schrijven.</p>
 
-      <h3>17. Veelgemaakte fouten</h3>
+      <h3>Veelgemaakte fouten</h3>
       <ul>
         <li><strong>Verkeerd afronden:</strong> kijk altijd naar het eerste cijfer dat je weglaat.</li>
         <li><strong>Denken dat meer decimalen altijd beter zijn:</strong> de gewenste nauwkeurigheid hangt af van de context.</li>
@@ -4400,7 +4510,7 @@ negatieve getallen.</p>
         <li><strong>Een benadering als exact antwoord behandelen:</strong> gebruik <span class="formula-inline">\\approx</span> wanneer het om een benadering gaat.</li>
       </ul>
 
-      <h3>18. Samenvatting</h3>
+      <h3>Samenvatting</h3>
       <div class="callout">
         <p>Bij afronden kies je eerst de gewenste nauwkeurigheid en kijk je daarna naar het eerste cijfer dat je weglaat.</p>
         <p class="formula">0,05 → 0,1 \\qquad 0,04 → 0,0</p>

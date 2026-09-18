@@ -1,5 +1,9 @@
 const ADMIN_USER = "admin";
 const ADMIN_PASS = "infinity";
+const MILESTONES = [].concat(
+  MILESTONES_1, MILESTONES_2, MILESTONES_3,
+  MILESTONES_4, MILESTONES_5, MILESTONES_6, MILESTONES_7
+);
 
 function progress() {
   return store.getState();
@@ -31,6 +35,10 @@ function leerstofScore() {
 
 function toetsScore() {
   return Object.values(progress().milestones || {}).filter((m) => m && m.passed).length;
+}
+
+function inzichtScore() {
+  return Number((progress() && progress().inzicht) || 0);
 }
 
 function leerstofInPhase(phaseId) {
