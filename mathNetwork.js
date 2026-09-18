@@ -677,76 +677,96 @@ function mathNetworkConnectedEdges() {
   return MATH_NETWORK_EDGES.filter(([a, b]) => mathNetworkNodeById(a) && mathNetworkNodeById(b));
 }
 
+const MATH_NETWORK_VIEW = { width: 1480, height: 2200 };
+const MATH_NETWORK_GRID = { originX: 130, originY: 96, colW: 160, rowH: 132 };
+const MATH_NETWORK_CAMERA = { x: 0, y: 0, scale: 1 };
+const MATH_NETWORK_ZOOM = { min: 0.5, max: 1.85, step: 0.15 };
+let MATH_NETWORK_OPEN_ID = null;
+
+function mathNetworkGrid(col, row) {
+  return [
+    MATH_NETWORK_GRID.originX + col * MATH_NETWORK_GRID.colW,
+    MATH_NETWORK_GRID.originY + row * MATH_NETWORK_GRID.rowH
+  ];
+}
+
 function mathNetworkLayout() {
   /*
-   * Vaste posities maken de eerste versie voorspelbaar en eenvoudig aanpasbaar.
-   * x/y zijn percentages van de SVG-viewBox.
-   *
-   * Bij uitbreiding:
-   * 1. voeg een node toe;
-   * 2. voeg indien gewenst x/y toe in MATH_NETWORK_POSITIONS;
-   * 3. zonder positie krijgt de node automatisch een rasterpositie.
+   * Top-down vertakking: vroege ideeën boven, latere takken onder.
+   * Coördinaten zijn pixels in MATH_NETWORK_VIEW.
+   * col = horizontale tak, row = diepte / periode.
    */
+  const g = mathNetworkGrid;
   const positions = {
-    "tellen": [8, 12],
-    "getal": [18, 12],
-    "natuurlijke-getallen": [29, 12],
-    "nul": [39, 8],
-    "plaatswaarde": [39, 18],
-    "breuken": [18, 27],
-    "negatieve-getallen": [50, 8],
-    "pythagoras": [29, 34],
-    "bewijs": [40, 34],
-    "euclides": [51, 34],
-    "priemgetallen": [62, 27],
-    "archimedes": [62, 41],
-    "kegelsneden": [62, 50],
-    "brahmagupta": [61, 8],
-    "al-khwarizmi": [50, 18],
-    "algoritme": [61, 18],
-    "algebra": [50, 27],
-    "fibonacci": [73, 18],
-    "descartes": [61, 58],
-    "fermat": [73, 27],
-    "pascal": [73, 38],
-    "kansrekening": [84, 32],
-    "newton": [73, 57],
-    "leibniz": [84, 51],
-    "calculus": [84, 62],
-    "de-moivre": [84, 20],
-    "euler": [84, 72],
-    "differentiaalvergelijkingen": [72, 72],
-    "lagrange": [61, 70],
-    "laplace": [94, 40],
-    "gauss": [94, 53],
-    "fourier": [94, 64],
-    "cauchy": [94, 75],
-    "galois": [50, 47],
-    "niet-euclidische-geometrie": [39, 50],
-    "riemann": [39, 62],
-    "cantor": [28, 60],
-    "topologie": [28, 72],
-    "hilbert": [28, 82],
-    "noether": [39, 82],
-    "godel": [50, 82],
-    "turing": [61, 88],
-    "formele-bewijzen": [73, 88],
-    "ai-wiskunde": [84, 88],
-    "navier-stokes-ai-2026": [95, 88]
+    "tellen": g(4, 0),
+    "getal": g(4, 1),
+    "natuurlijke-getallen": g(2, 2),
+    "breuken": g(6, 2),
+    "nul": g(1, 3),
+    "plaatswaarde": g(3, 3),
+    "pythagoras": g(6, 3),
+    "negatieve-getallen": g(1, 4),
+    "al-khwarizmi": g(3, 4),
+    "bewijs": g(6, 4),
+    "brahmagupta": g(0, 5),
+    "algoritme": g(2, 5),
+    "algebra": g(4, 5),
+    "fibonacci": g(5, 5),
+    "euclides": g(7, 5),
+    "pascal": g(3, 6),
+    "descartes": g(4, 6),
+    "fermat": g(5, 6),
+    "priemgetallen": g(6, 6),
+    "archimedes": g(7, 6),
+    "kegelsneden": g(8, 6),
+    "kansrekening": g(3, 7),
+    "newton": g(5, 7),
+    "leibniz": g(7, 7),
+    "de-moivre": g(2, 8),
+    "calculus": g(6, 8),
+    "lagrange": g(3, 9),
+    "euler": g(5, 9),
+    "differentiaalvergelijkingen": g(7, 9),
+    "niet-euclidische-geometrie": g(8, 9),
+    "galois": g(1, 10),
+    "laplace": g(3, 10),
+    "gauss": g(5, 10),
+    "fourier": g(6, 10),
+    "cauchy": g(8, 10),
+    "cantor": g(1, 11),
+    "riemann": g(6, 11),
+    "hilbert": g(2, 12),
+    "topologie": g(5, 12),
+    "noether": g(3, 13),
+    "godel": g(5, 13),
+    "turing": g(4, 14),
+    "formele-bewijzen": g(6, 14),
+    "ai-wiskunde": g(5, 15),
+    "navier-stokes-ai-2026": g(7, 15)
   };
 
-  const fallback = [];
   MATH_NETWORK_NODES.forEach((node, index) => {
     if (!positions[node.id]) {
-      const col = index % 8;
-      const row = Math.floor(index / 8);
-      fallback.push([node.id, [8 + col * 12, 12 + row * 12]]);
+      positions[node.id] = g(index % 8, 16 + Math.floor(index / 8));
     }
   });
-
-  fallback.forEach(([id, pos]) => { positions[id] = pos; });
   return positions;
 }
+
+const MATH_NETWORK_SHORT_TITLES = {
+  "natuurlijke-getallen": "Natuurlijke\ngetallen",
+  "negatieve-getallen": "Negatieve\ngetallen",
+  "plaatswaarde": "Plaatswaarde",
+  "niet-euclidische-geometrie": "Niet-Euclidische\ngeometrie",
+  "differentiaalvergelijkingen": "Differentiaal-\nvergelijkingen",
+  "formele-bewijzen": "Formele bewijzen",
+  "ai-wiskunde": "AI-wiskunde",
+  "navier-stokes-ai-2026": "Navier–Stokes AI",
+  "de-moivre": "De Moivre",
+  "leibniz": "G.W. Leibniz",
+  "descartes": "Descartes",
+  "al-khwarizmi": "Al-Khwarizmi"
+};
 
 function mathNetworkEsc(text) {
   return String(text == null ? "" : text)
@@ -757,8 +777,43 @@ function mathNetworkEsc(text) {
     .replace(/'/g, "&#039;");
 }
 
+function mathNetworkMapTitle(node) {
+  if (!node) return "";
+  return MATH_NETWORK_SHORT_TITLES[node.id] || node.title || "";
+}
+
+function mathNetworkWrapTitle(title) {
+  const t = String(title || "");
+  if (t.includes("\n")) return t.split("\n").filter(Boolean).slice(0, 2);
+  if (t.length <= 15) return [t];
+  const dash = t.indexOf("-");
+  if (dash >= 5 && dash <= t.length - 4) {
+    return [t.slice(0, dash), t.slice(dash + 1)];
+  }
+  const mid = Math.ceil(t.length / 2);
+  let space = t.lastIndexOf(" ", mid + 5);
+  if (space < 5) space = t.indexOf(" ", 5);
+  if (space >= 5 && space < t.length - 2) {
+    return [t.slice(0, space), t.slice(space + 1)];
+  }
+  return [t];
+}
+
+function mathNetworkLabelWidth(lines) {
+  const longest = lines.reduce((n, line) => Math.max(n, line.length), 0);
+  return Math.min(168, Math.max(76, longest * 7.1 + 20));
+}
+
+function mathNetworkNodeState(node) {
+  if (mathNetworkIsAdmin()) return "admin";
+  if (mathNetworkUnlocked(node.id)) return "unlocked";
+  if (mathNetworkCanUnlock(node)) return "available";
+  return "locked";
+}
+
 function mathNetworkInjectStyles() {
-  if (document.getElementById("math-network-styles")) return;
+  const existing = document.getElementById("math-network-styles");
+  if (existing) existing.remove();
 
   const style = document.createElement("style");
   style.id = "math-network-styles";
@@ -791,98 +846,160 @@ function mathNetworkInjectStyles() {
       object-fit: contain;
     }
     .math-network-canvas {
+      position: relative;
       width: 100%;
-      overflow: auto;
-      border: 1px solid rgba(230,199,122,.2);
+      overflow: hidden;
+      border: 1px solid rgba(230,199,122,.22);
       border-radius: 16px;
       background:
-        radial-gradient(circle at center, rgba(230,199,122,.07), transparent 55%),
-        rgba(5,4,3,.72);
-      min-height: 620px;
+        radial-gradient(circle at 50% 18%, rgba(230,199,122,.08), transparent 42%),
+        linear-gradient(180deg, rgba(18,14,10,.2), rgba(5,4,3,.55));
+      height: min(72vh, 760px);
+      cursor: grab;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      touch-action: none;
+    }
+    .math-network-canvas.is-panning {
+      cursor: grabbing;
+    }
+    .math-network-canvas,
+    .math-network-canvas * {
+      user-select: none;
+      -webkit-user-select: none;
     }
     .math-network-svg {
       display: block;
-      width: 1200px;
-      min-width: 100%;
-      height: 760px;
+      width: ${MATH_NETWORK_VIEW.width}px;
+      height: ${MATH_NETWORK_VIEW.height}px;
+      transform-origin: 0 0;
+      pointer-events: auto;
+    }
+    .math-network-zoom {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .math-network-zoom button {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid rgba(230,199,122,.45);
+      background: rgba(12,9,6,.82);
+      color: #f4ead3;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .math-network-zoom button:hover {
+      border-color: var(--gold);
+      color: #fff6d8;
+    }
+    .math-network-region {
+      fill: #cbb98a;
+      fill-opacity: .28;
+      font-family: Cinzel, "Times New Roman", serif;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-anchor: middle;
+      pointer-events: none;
     }
     .math-network-edge {
-      stroke: rgba(230,199,122,.25);
-      stroke-width: 1.4;
+      stroke: rgba(230,199,122,.18);
+      stroke-width: 1.35;
+      fill: none;
       vector-effect: non-scaling-stroke;
     }
     .math-network-edge.edge-unlocked {
-      stroke: rgba(230,199,122,.62);
+      stroke: rgba(230,199,122,.58);
       stroke-width: 2;
+    }
+    .math-network-edge.edge-focus {
+      stroke: rgba(246,220,150,.92);
+      stroke-width: 2.4;
     }
     .math-network-node {
       cursor: pointer;
     }
-    .math-network-node circle {
-      stroke: rgba(230,199,122,.65);
+    .math-network-node .node-hit {
+      fill: transparent;
+      stroke: none;
+    }
+    .math-network-node .node-core {
       stroke-width: 2;
       vector-effect: non-scaling-stroke;
     }
-    .math-network-node.locked circle {
-      fill: #191612;
-      stroke: #5b513f;
+    .math-network-node .node-ring {
+      fill: none;
+      stroke-width: 1.25;
+      stroke: transparent;
+      vector-effect: non-scaling-stroke;
     }
-    .math-network-node.available circle {
-      fill: #302512;
+    .math-network-node.locked .node-core {
+      fill: #161310;
+      stroke: #5a513f;
+    }
+    .math-network-node.available .node-core {
+      fill: #2c2312;
       stroke: var(--gold);
-      filter: drop-shadow(0 0 6px rgba(230,199,122,.25));
+      filter: drop-shadow(0 0 7px rgba(230,199,122,.32));
     }
-    .math-network-node.unlocked circle {
-      fill: #3b2d18;
-      stroke: var(--gold);
-      filter: drop-shadow(0 0 9px rgba(230,199,122,.42));
+    .math-network-node.unlocked .node-core {
+      fill: #4a3918;
+      stroke: #f0d48a;
+      filter: drop-shadow(0 0 10px rgba(230,199,122,.45));
     }
-    .math-network-node.admin circle {
+    .math-network-node.admin .node-core {
       fill: #263c2e;
       stroke: var(--good);
     }
-    .math-network-node text {
+    .math-network-node.selected .node-ring {
+      stroke: #f6de9a;
+    }
+    .math-network-node.selected .node-core {
+      filter: drop-shadow(0 0 12px rgba(230,199,122,.62));
+    }
+    .math-network-node .node-symbol {
       pointer-events: none;
       fill: #f4ead3;
       font-family: "Source Sans 3", system-ui, sans-serif;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 16px;
+      font-weight: 700;
       text-anchor: middle;
     }
-    .math-network-node .node-symbol {
-      font-size: 18px;
+    .math-network-node.locked .node-symbol {
+      fill: #9a8d74;
     }
-    .math-network-node.locked text {
-      fill: #8f836e;
+    .math-network-node .node-pill {
+      fill: rgba(8,6,4,.82);
+      stroke: rgba(230,199,122,.22);
+      stroke-width: 1;
+    }
+    .math-network-node.unlocked .node-pill,
+    .math-network-node.available .node-pill {
+      stroke: rgba(230,199,122,.4);
+    }
+    .math-network-node .node-label,
+    .math-network-node .node-cost {
+      pointer-events: none;
+      fill: #f4ead3;
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 650;
+      text-anchor: middle;
+    }
+    .math-network-node.locked .node-label {
+      fill: #b3a68a;
     }
     .math-network-node .node-cost {
       font-size: 10px;
-      fill: var(--gold);
       font-weight: 700;
-    }
-    .math-network-detail {
-      margin-top: 16px;
-      min-height: 170px;
-      border: 1px solid rgba(230,199,122,.28);
-      border-radius: 16px;
-      padding: 18px;
-      background: rgba(0,0,0,.24);
-    }
-    .math-network-detail h3 {
-      margin-bottom: 6px;
-    }
-    .math-network-meta {
-      color: #cbb98a;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    .math-network-prereqs {
-      color: #cbb98a;
-      font-size: 14px;
-      margin: 8px 0;
-    }
-    .math-network-detail .btn {
-      margin-top: 8px;
+      fill: var(--gold);
     }
     .math-network-legend {
       display: flex;
@@ -895,44 +1012,226 @@ function mathNetworkInjectStyles() {
     .math-network-legend span {
       white-space: nowrap;
     }
+    .math-network-legend .swatch {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+      border: 1px solid rgba(230,199,122,.45);
+    }
+    .math-network-legend .swatch.open { background: #4a3918; }
+    .math-network-legend .swatch.ready { background: #2c2312; box-shadow: 0 0 0 1px #e6c77a; }
+    .math-network-legend .swatch.shut { background: #161310; }
     .math-network-notice {
       margin-top: 10px;
       color: #cbb98a;
       font-size: 13px;
     }
+    .math-network-float {
+      position: absolute;
+      z-index: 5;
+      width: min(340px, calc(100% - 24px));
+      max-height: calc(100% - 24px);
+      overflow: auto;
+      border: 1px solid rgba(230,199,122,.38);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      background: rgba(10,8,6,.94);
+      box-shadow: 0 16px 40px rgba(0,0,0,.45);
+      pointer-events: auto;
+    }
+    .math-network-float[hidden] { display: none; }
+    .math-network-float-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 28px;
+      height: 28px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: #cbb98a;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .inzicht-ico {
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+      vertical-align: -3px;
+      margin: 0 3px;
+    }
+    .math-network-detail { display: none; }
+    .math-network-detail-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .math-network-tile {
+      flex: 0 0 88px;
+      width: 88px;
+      height: 88px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: #f4ead3;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(230,199,122,.22), transparent 55%),
+        #1a1610;
+      border: 1px solid rgba(230,199,122,.35);
+    }
+    .math-network-tile.type-person { background: radial-gradient(circle at 30% 25%, rgba(230,199,122,.2), transparent 55%), #241c12; }
+    .math-network-tile.type-idea { background: radial-gradient(circle at 30% 25%, rgba(230,199,122,.2), transparent 55%), #1b1711; }
+    .math-network-tile.type-breakthrough { background: radial-gradient(circle at 30% 25%, rgba(230,199,122,.28), transparent 55%), #2a1f10; }
+    .math-network-detail-body { min-width: 0; flex: 1; }
+    .math-network-detail h3 {
+      margin: 0 0 8px;
+    }
+    .math-network-meta {
+      color: #cbb98a;
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin-bottom: 8px;
+      text-transform: none;
+    }
+    .math-network-kvs {
+      margin: 0 0 10px;
+      padding: 0;
+      list-style: none;
+      color: #e8dcc0;
+      font-size: 14px;
+    }
+    .math-network-kvs li { margin: 3px 0; }
+    .math-network-kvs strong {
+      display: inline-block;
+      min-width: 7.5rem;
+      color: #cbb98a;
+      font-weight: 650;
+    }
+    .math-network-prereqs {
+      color: #cbb98a;
+      font-size: 14px;
+      margin: 8px 0;
+    }
+    .math-network-detail .btn { margin-top: 8px; }
+    .math-network-threshold {
+      display: block;
+      margin-top: 6px;
+      color: #cbb98a;
+      font-size: 13px;
+    }
+    @media (max-width: 720px) {
+      .math-network-detail-card { display: block; }
+      .math-network-tile { margin-bottom: 12px; }
+    }
   `;
   document.head.appendChild(style);
 }
 
-function mathNetworkNodeSvg(node, pos) {
+const MATH_NETWORK_REGION_LABELS = [
+  { text: "OORSPRONG", col: 4, row: -0.42 },
+  { text: "GETALLEN", col: 2, row: 1.58 },
+  { text: "GRIEKEN", col: 6.4, row: 2.58 },
+  { text: "ALGEBRA", col: 3.2, row: 3.58 },
+  { text: "CALCULUS", col: 6, row: 7.58 },
+  { text: "GRONDSLAGEN", col: 3.5, row: 11.58 }
+];
+
+function mathNetworkNodeSvg(node, pos, selectedId) {
   const [x, y] = pos;
-  const state = mathNetworkUnlocked(node.id) ? "unlocked"
-    : mathNetworkCanUnlock(node) ? "available"
-    : "locked";
-  const admin = mathNetworkIsAdmin();
-  const stateClass = admin ? "admin" : state;
+  const state = mathNetworkNodeState(node);
+  const selected = selectedId === node.id ? " selected" : "";
   const symbol = MATH_NETWORK_TYPE_SYMBOLS[node.type] || "◆";
+  const lines = mathNetworkWrapTitle(mathNetworkMapTitle(node));
+  const admin = mathNetworkIsAdmin();
+  const pillW = Math.max(mathNetworkLabelWidth(lines), 78);
+  const pillH = 18 + lines.length * 13 + 14;
+  const pillY = 32;
+  const costY = pillY + 14 + lines.length * 13 + 2;
+  const showCost = !mathNetworkUnlocked(node.id) && !admin;
+  const costMark = showCost
+    ? `<text class="node-cost" x="-8" y="${costY}" text-anchor="end">${Number(node.cost || 0)}</text>
+       <image href="assets/inzicht.png" x="-6" y="${costY - 10}" width="13" height="13"></image>`
+    : `<text class="node-cost" y="${costY}">✓</text>`;
+
+  const labelTs = lines.map((line, i) => {
+    const ly = pillY + 14 + i * 13;
+    return `<text class="node-label" y="${ly}">${mathNetworkEsc(line)}</text>`;
+  }).join("");
 
   return `
-    <g class="math-network-node ${stateClass}" data-network-node="${mathNetworkEsc(node.id)}"
-       transform="translate(${x * 12},${y * 7.6})">
-      <circle r="28"></circle>
-      <text class="node-symbol" y="-2">${mathNetworkEsc(symbol)}</text>
-      <text y="45">${mathNetworkEsc(node.title)}</text>
-      ${!mathNetworkUnlocked(node.id) && !admin
-        ? `<text class="node-cost" y="58">${Number(node.cost || 0)} ✦</text>`
-        : `<text class="node-cost" y="58">✓</text>`}
+    <g class="math-network-node ${state}${selected}" data-network-node="${mathNetworkEsc(node.id)}"
+       transform="translate(${x},${y})">
+      <circle class="node-hit" r="52"></circle>
+      <circle class="node-ring" r="34"></circle>
+      <circle class="node-core" r="24"></circle>
+      <text class="node-symbol" y="5">${mathNetworkEsc(symbol)}</text>
+      <rect class="node-pill" x="${-pillW / 2}" y="${pillY}" width="${pillW}" height="${pillH}" rx="12"></rect>
+      ${labelTs}
+      ${costMark}
     </g>
   `;
 }
 
+function mathNetworkMarkSelected(nodeId) {
+  document.querySelectorAll(".math-network-node").forEach((el) => {
+    el.classList.toggle("selected", el.getAttribute("data-network-node") === nodeId);
+  });
+  document.querySelectorAll(".math-network-edge").forEach((el) => {
+    const a = el.getAttribute("data-from");
+    const b = el.getAttribute("data-to");
+    el.classList.toggle("edge-focus", Boolean(nodeId) && (a === nodeId || b === nodeId));
+  });
+}
+
+function mathNetworkInzichtIco() {
+  return '<img class="inzicht-ico" src="assets/inzicht.png" alt="">';
+}
+
+function mathNetworkPlaceFloat() {
+  const host = document.getElementById("math-network-float");
+  const canvas = document.querySelector(".math-network-canvas");
+  if (!host || !canvas || !MATH_NETWORK_OPEN_ID) return;
+  const pos = mathNetworkLayout()[MATH_NETWORK_OPEN_ID];
+  if (!pos) return;
+  const scale = MATH_NETWORK_CAMERA.scale;
+  const sx = MATH_NETWORK_CAMERA.x + pos[0] * scale;
+  const sy = MATH_NETWORK_CAMERA.y + pos[1] * scale;
+  const box = canvas.getBoundingClientRect();
+  const cardW = Math.min(340, box.width - 24);
+  const cardH = host.offsetHeight || 220;
+  const gap = 42 * scale;
+  let left = sx + gap;
+  if (left + cardW > box.width - 12) left = sx - gap - cardW;
+  left = Math.max(12, Math.min(left, box.width - cardW - 12));
+  let top = sy - 28;
+  top = Math.max(12, Math.min(top, box.height - cardH - 12));
+  host.style.left = left + "px";
+  host.style.top = top + "px";
+}
+
 function mathNetworkRenderDetail(nodeId) {
-  const host = document.getElementById("math-network-detail");
+  const host = document.getElementById("math-network-float");
   if (!host) return;
+
+  if (!nodeId) {
+    MATH_NETWORK_OPEN_ID = null;
+    host.hidden = true;
+    host.innerHTML = "";
+    mathNetworkMarkSelected(null);
+    return;
+  }
+
+  MATH_NETWORK_OPEN_ID = nodeId;
+  mathNetworkMarkSelected(nodeId);
 
   const node = mathNetworkNodeById(nodeId);
   if (!node) {
-    host.innerHTML = "<p>Selecteer een knooppunt om de historische informatie te bekijken.</p>";
+    host.hidden = true;
     return;
   }
 
@@ -940,69 +1239,205 @@ function mathNetworkRenderDetail(nodeId) {
   const admin = mathNetworkIsAdmin();
   const can = mathNetworkCanUnlock(node);
   const prereqs = (node.prerequisites || []).map(mathNetworkNodeById).filter(Boolean);
+  const cost = Number(node.cost || 0);
+  const need = Math.max(0, cost - mathNetworkInsightScore());
+  const typeLabel = MATH_NETWORK_TYPE_LABELS[node.type] || node.type;
+  const symbol = MATH_NETWORK_TYPE_SYMBOLS[node.type] || "◆";
 
   let action = "";
   if (unlocked || admin) {
     action = '<span class="status done">Ontgrendeld</span>';
   } else if (can) {
     action = `<button class="btn primary" data-math-network-unlock="${mathNetworkEsc(node.id)}">
-      Ontgrendel voor ${Number(node.cost || 0)} Inzichtpunt${Number(node.cost || 0) === 1 ? "" : "en"}
-    </button>`;
+      Ontgrendel
+    </button>
+    <span class="math-network-threshold">Drempel: ${mathNetworkInzichtIco()}${cost} — je score daalt niet.</span>`;
   } else {
-    const missing = prereqs.filter(p => !mathNetworkUnlocked(p.id));
+    const missing = prereqs.filter((p) => !mathNetworkUnlocked(p.id));
     const missingText = missing.length
-      ? "Vereist eerst: " + missing.map(p => p.title).join(", ") + "."
-      : `Nog ${Math.max(0, Number(node.cost || 0) - mathNetworkInsightScore())} Inzichtpunt(en) nodig.`;
-    action = `<span class="status locked">${mathNetworkEsc(missingText)}</span>`;
+      ? "Vereist eerst: " + missing.map((p) => p.title).join(", ") + "."
+      : (need
+          ? "Nog " + need + " " + "inzichtpunt" + (need === 1 ? "" : "en") + " nodig."
+          : "Nog niet beschikbaar.");
+    action = `<span class="status locked">${mathNetworkEsc(missingText)}</span>
+    <span class="math-network-threshold">Drempel: ${mathNetworkInzichtIco()}${cost} — je score daalt niet.</span>`;
   }
 
+  const open = unlocked || admin;
+
+  host.hidden = false;
   host.innerHTML = `
-    <h3>${mathNetworkEsc(MATH_NETWORK_TYPE_SYMBOLS[node.type] || "◆")} ${mathNetworkEsc(node.title)}</h3>
-    <div class="math-network-meta">
-      ${mathNetworkEsc(MATH_NETWORK_TYPE_LABELS[node.type] || node.type)}
-      ${node.year ? " · " + mathNetworkEsc(node.year) : ""}
-      ${node.era ? " · " + mathNetworkEsc(node.era) : ""}
+    <button type="button" class="math-network-float-close" data-network-close="1" aria-label="Sluiten">×</button>
+    <div class="math-network-detail-card">
+      <div class="math-network-tile type-${mathNetworkEsc(node.type || "idea")}" aria-hidden="true">${mathNetworkEsc(symbol)}</div>
+      <div class="math-network-detail-body">
+        <div class="math-network-meta">${mathNetworkEsc(typeLabel)}${node.year ? " · " + mathNetworkEsc(node.year) : ""}${node.era ? " · " + mathNetworkEsc(node.era) : ""}</div>
+        <h3>${mathNetworkEsc(node.title)}</h3>
+        ${open
+          ? `<ul class="math-network-kvs">
+               <li><strong>Idee</strong> ${mathNetworkEsc(node.description || "")}</li>
+               <li><strong>Waarom het telt</strong> ${mathNetworkEsc(node.unlockText || "")}</li>
+             </ul>`
+          : `<p>Dit knooppunt is nog niet ontgrendeld.</p>
+             <p class="small">De historische beschrijving verschijnt na het ontgrendelen.</p>`
+        }
+        ${prereqs.length
+          ? `<div class="math-network-prereqs"><strong>Voorwaarden:</strong> ${prereqs.map((p) => mathNetworkEsc(p.title)).join(" · ")}</div>`
+          : ""
+        }
+        ${node.note && open ? `<p class="small">${mathNetworkEsc(node.note)}</p>` : ""}
+        ${action}
+      </div>
     </div>
-    ${unlocked || admin
-      ? `<p>${mathNetworkEsc(node.description || "")}</p>
-         <div class="callout">${mathNetworkEsc(node.unlockText || "")}</div>`
-      : `<p>Dit knooppunt is nog niet ontgrendeld.</p>
-         <p class="small">De historische beschrijving verschijnt na het ontgrendelen.</p>`
-    }
-    ${prereqs.length
-      ? `<div class="math-network-prereqs"><strong>Voorwaarden:</strong> ${prereqs.map(p => mathNetworkEsc(p.title)).join(" · ")}</div>`
-      : ""
-    }
-    ${node.note ? `<p class="small">${mathNetworkEsc(node.note)}</p>` : ""}
-    ${action}
   `;
+  const closeBtn = host.querySelector("[data-network-close]");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      mathNetworkRenderDetail(null);
+    });
+  }
+  mathNetworkPlaceFloat();
+}
+
+function mathNetworkApplyCamera() {
+  const svg = document.querySelector(".math-network-svg");
+  if (!svg) return;
+  const c = MATH_NETWORK_CAMERA;
+  svg.style.transform = "translate(" + c.x + "px," + c.y + "px) scale(" + c.scale + ")";
+  mathNetworkPlaceFloat();
+}
+
+function mathNetworkZoomBy(direction) {
+  const canvas = document.querySelector(".math-network-canvas");
+  const old = MATH_NETWORK_CAMERA.scale;
+  if (direction === "reset") {
+    MATH_NETWORK_CAMERA.x = 0;
+    MATH_NETWORK_CAMERA.y = 0;
+    MATH_NETWORK_CAMERA.scale = 1;
+    mathNetworkApplyCamera();
+    return;
+  }
+  const delta = direction === "in" ? MATH_NETWORK_ZOOM.step : -MATH_NETWORK_ZOOM.step;
+  const next = Math.min(MATH_NETWORK_ZOOM.max, Math.max(MATH_NETWORK_ZOOM.min, old + delta));
+  if (next === old) return;
+  const rect = canvas ? canvas.getBoundingClientRect() : { width: 800, height: 600 };
+  const cx = rect.width / 2;
+  const cy = rect.height / 2;
+  const worldX = (cx - MATH_NETWORK_CAMERA.x) / old;
+  const worldY = (cy - MATH_NETWORK_CAMERA.y) / old;
+  MATH_NETWORK_CAMERA.scale = next;
+  MATH_NETWORK_CAMERA.x = cx - worldX * next;
+  MATH_NETWORK_CAMERA.y = cy - worldY * next;
+  mathNetworkApplyCamera();
+}
+
+function mathNetworkBindPanZoom() {
+  const canvas = document.querySelector(".math-network-canvas");
+  if (!canvas || canvas.dataset.panBound === "1") return;
+  canvas.dataset.panBound = "1";
+  mathNetworkApplyCamera();
+
+  let dragging = false;
+  let moved = false;
+  let lastX = 0;
+  let lastY = 0;
+  let nodeId = null;
+
+  canvas.addEventListener("dragstart", function (e) {
+    e.preventDefault();
+  });
+
+  canvas.addEventListener("selectstart", function (e) {
+    e.preventDefault();
+  });
+
+  canvas.addEventListener("pointerdown", function (e) {
+    if (e.target.closest("[data-network-zoom]")) return;
+    if (e.target.closest("#math-network-float")) return;
+    if (e.button != null && e.button !== 0) return;
+    dragging = true;
+    moved = false;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    const node = e.target.closest("[data-network-node]");
+    nodeId = node ? node.getAttribute("data-network-node") : null;
+    canvas.classList.add("is-panning");
+    if (canvas.setPointerCapture) canvas.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+
+  canvas.addEventListener("pointermove", function (e) {
+    if (!dragging) return;
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+    if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    MATH_NETWORK_CAMERA.x += dx;
+    MATH_NETWORK_CAMERA.y += dy;
+    mathNetworkApplyCamera();
+    e.preventDefault();
+  });
+
+  function endPan(e) {
+    if (!dragging) return;
+    dragging = false;
+    canvas.classList.remove("is-panning");
+    if (canvas.releasePointerCapture && e && e.pointerId != null) {
+      try { canvas.releasePointerCapture(e.pointerId); } catch (err) {}
+    }
+    if (!moved && nodeId) mathNetworkRenderDetail(nodeId);
+    else if (!moved && !nodeId) mathNetworkRenderDetail(null);
+    nodeId = null;
+  }
+
+  canvas.addEventListener("pointerup", endPan);
+  canvas.addEventListener("pointercancel", endPan);
+  canvas.addEventListener("pointerleave", function (e) {
+    if (dragging && e.buttons === 0) endPan(e);
+  });
+
+  canvas.querySelectorAll("[data-network-zoom]").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      mathNetworkZoomBy(btn.getAttribute("data-network-zoom"));
+    });
+  });
 }
 
 function mathNetworkRender(selectedNodeId) {
+  mathNetworkInjectStyles();
+
   const app = document.getElementById("app");
   if (!app) return;
 
-  mathNetworkInjectStyles();
-
   const positions = mathNetworkLayout();
-  const edges = mathNetworkConnectedEdges();
 
-  const edgeSvg = edges.map(([a, b]) => {
-    const pa = positions[a], pb = positions[b];
-    if (!pa || !pb) return "";
-    const unlocked = mathNetworkUnlocked(a) && mathNetworkUnlocked(b);
-    return `<line class="math-network-edge ${unlocked ? "edge-unlocked" : ""}"
-      x1="${pa[0] * 12}" y1="${pa[1] * 7.6}"
-      x2="${pb[0] * 12}" y2="${pb[1] * 7.6}"></line>`;
+  const regionSvg = MATH_NETWORK_REGION_LABELS.map((r) => {
+    const [x, y] = mathNetworkGrid(r.col, r.row);
+    return `<text class="math-network-region" x="${x}" y="${y}">${mathNetworkEsc(r.text)}</text>`;
   }).join("");
 
-  const nodeSvg = MATH_NETWORK_NODES.map(n => mathNetworkNodeSvg(n, positions[n.id])).join("");
+  const edgeSvg = mathNetworkConnectedEdges().map(([a, b]) => {
+    const pa = positions[a];
+    const pb = positions[b];
+    if (!pa || !pb) return "";
+    const unlocked = mathNetworkUnlocked(a) && mathNetworkUnlocked(b);
+    const focus = selectedNodeId && (selectedNodeId === a || selectedNodeId === b);
+    return `<line class="math-network-edge${unlocked ? " edge-unlocked" : ""}${focus ? " edge-focus" : ""}"
+      data-from="${mathNetworkEsc(a)}" data-to="${mathNetworkEsc(b)}"
+      x1="${pa[0]}" y1="${pa[1]}"
+      x2="${pb[0]}" y2="${pb[1]}"></line>`;
+  }).join("");
+
+  const nodeSvg = MATH_NETWORK_NODES.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
 
   app.innerHTML = `
     <div class="screen" style="background-image:url('assets/home.png')">
-      ${typeof topbar === "function"
-        ? topbar()
-        : ""}
+      ${typeof topbar === "function" ? topbar() : ""}
       <div class="layout">
         <div class="panel math-network-panel">
           <div class="math-network-head">
@@ -1021,40 +1456,40 @@ function mathNetworkRender(selectedNodeId) {
           </div>
 
           <div class="math-network-canvas">
-            <svg class="math-network-svg" viewBox="0 0 1200 760"
+            <div class="math-network-zoom">
+              <button type="button" data-network-zoom="in" title="Zoom in">+</button>
+              <button type="button" data-network-zoom="out" title="Zoom uit">−</button>
+              <button type="button" data-network-zoom="reset" title="Reset weergave">↺</button>
+            </div>
+            <svg class="math-network-svg" viewBox="0 0 ${MATH_NETWORK_VIEW.width} ${MATH_NETWORK_VIEW.height}"
                  role="img" aria-label="Historisch netwerk van wiskundige kennis">
+              <g class="math-network-regions">${regionSvg}</g>
               <g class="math-network-edges">${edgeSvg}</g>
               <g class="math-network-nodes">${nodeSvg}</g>
             </svg>
+            <div id="math-network-float" class="math-network-float" hidden></div>
           </div>
 
           <div class="math-network-legend">
+            <span><i class="swatch open"></i>Ontgrendeld</span>
+            <span><i class="swatch ready"></i>Beschikbaar</span>
+            <span><i class="swatch shut"></i>Vergrendeld</span>
             <span>👤 Persoon</span>
             <span>◆ Idee</span>
             <span>📜 Werk</span>
             <span>❓ Probleem</span>
             <span>✦ Doorbraak</span>
-            <span>Goud = beschikbaar / ontgrendeld</span>
           </div>
 
           <div class="math-network-notice">
-            Inzichtpunten zijn cumulatief: een historische node gebruiken kost punten
-            om te voldoen aan de ontgrendelvoorwaarde, maar vermindert je inzichtscore niet.
-          </div>
-
-          <div id="math-network-detail" class="math-network-detail">
-            <p>Selecteer een knooppunt om de historische informatie te bekijken.</p>
+            Inzichtpunten zijn een drempel, geen munt. Ontgrendelen houdt je score gelijk.
           </div>
         </div>
       </div>
     </div>
   `;
 
-  document.querySelectorAll("[data-network-node]").forEach(el => {
-    el.addEventListener("click", () => {
-      mathNetworkRenderDetail(el.getAttribute("data-network-node"));
-    });
-  });
+  mathNetworkBindPanZoom();
 
   if (selectedNodeId) {
     mathNetworkRenderDetail(selectedNodeId);
