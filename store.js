@@ -1,7 +1,20 @@
 const STORAGE_KEY = "fz2i-progress-v1";
 
+
+
+
 function defaultProgress() {
-  return { name: "", milestones: {}, phaseExam: {}, leerstof: {}, inzicht: 0, inzichtKeys: {}, misses: {}, admin: false };
+  return {
+    name: "",
+    milestones: {},
+    phaseExam: {},
+    leerstof: {},
+    inzicht: 0,
+    inzichtKeys: {},
+    mathNetworkUnlocked: {},
+    misses: {},
+    admin: false
+  };
 }
 
 function readProgress() {
@@ -44,7 +57,7 @@ function progressReducer(state, action) {
       const n = Number(action.payload) || 0;
       return { ...state, inzicht: Math.max(0, (state.inzicht || 0) + n) };
     }
-    case "COLLECT_INZICHT": {
+        case "COLLECT_INZICHT": {
       const id = action.payload;
       if (!id || (state.inzichtKeys && state.inzichtKeys[id])) return state;
       return {
@@ -53,6 +66,26 @@ function progressReducer(state, action) {
         inzichtKeys: { ...(state.inzichtKeys || {}), [id]: Date.now() }
       };
     }
+
+    case "UNLOCK_MATH_NETWORK_NODE": {
+      const id = action.payload;
+
+      if (
+        !id ||
+        (state.mathNetworkUnlocked && state.mathNetworkUnlocked[id])
+      ) {
+        return state;
+      }
+
+      return {
+        ...state,
+        mathNetworkUnlocked: {
+          ...(state.mathNetworkUnlocked || {}),
+          [id]: Date.now()
+        }
+      };
+    }
+   
     case "MISS_CONCEPT": {
       const key = action.payload;
       const misses = { ...(state.misses || {}) };

@@ -128,7 +128,8 @@ function topbar(extra) {
         '</div>' +
       '<div class="nav-actions">' +
        extra +
-      '<button class="btn ghost" data-go="/">Kaart</button>' +
+      '<button class="btn ghost" data-go="/">De 7 Fasen</button>' +
+      '<button class="btn ghost" data-go="/wiskundeboom">Wiskundeboom</button>' +
       '<button class="btn ghost" data-go="/admin">' + (isAdmin() ? "Admin aan" : "Admin") + '</button>' +
       '<button class="btn ghost" id="reset-btn">Reset</button>' +
       '</div>' +
@@ -185,6 +186,11 @@ function render() {
   else if (parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") app.innerHTML = renderLesson(parts[1], parts[3]);
   else if (isExamRoute) app.innerHTML = renderExam("mile", parts[1], parts[3]);
   else if (parts[0] === "fase") app.innerHTML = renderPhase(parts[1]);
+  else if (parts[0] === "wiskundeboom") {
+  if (typeof mathNetworkRender === "function") {
+    mathNetworkRender();
+    }
+  }
   else app.innerHTML = renderHome();
 
   if (typeof bindChallengeUi === "function") bindChallengeUi();
