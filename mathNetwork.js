@@ -978,7 +978,7 @@ function mathNetworkRenderDetail(nodeId) {
   `;
 }
 
-function mathNetworkRender() {
+function mathNetworkRender(selectedNodeId) {
   const app = document.getElementById("app");
   if (!app) return;
 
@@ -1056,15 +1056,9 @@ function mathNetworkRender() {
     });
   });
 
-  document.querySelectorAll("[data-math-network-unlock]").forEach(el => {
-    el.addEventListener("click", () => {
-      const id = el.getAttribute("data-math-network-unlock");
-      if (mathNetworkUnlock(id)) {
-        mathNetworkRender();
-        mathNetworkRenderDetail(id);
-      }
-    });
-  });
+  if (selectedNodeId) {
+    mathNetworkRenderDetail(selectedNodeId);
+  }
 }
 
 window.mathNetworkRender = mathNetworkRender;
