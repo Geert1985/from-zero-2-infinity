@@ -61,7 +61,7 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "plaatswaarde",
-    title: "Plaatswaardesysteem",
+    title: "Plaatswaarde",
     type: "idea",
     era: "Oude en middeleeuwse wiskunde",
     year: null,
@@ -946,24 +946,42 @@ function mathNetworkInjectStyles() {
       stroke: #5a513f;
     }
     .math-network-node.available .node-core {
-      fill: #2c2312;
-      stroke: var(--gold);
-      filter: drop-shadow(0 0 7px rgba(230,199,122,.32));
+      fill: #1a140c;
+      stroke: #ffe29a;
+      stroke-width: 2.6;
+      filter: drop-shadow(0 0 11px rgba(255,214,120,.85));
     }
     .math-network-node.unlocked .node-core {
-      fill: #4a3918;
-      stroke: #f0d48a;
-      filter: drop-shadow(0 0 10px rgba(230,199,122,.45));
+      fill: #3a2e16;
+      stroke: #b8964a;
+      filter: none;
     }
     .math-network-node.admin .node-core {
       fill: #263c2e;
       stroke: var(--good);
     }
+    .math-network-node.available .node-ring {
+      stroke: rgba(255,226,150,.7);
+      stroke-width: 2;
+      animation: math-network-pulse 1.7s ease-in-out infinite;
+    }
+    .math-network-node.unlocked .node-ring {
+      stroke: rgba(184,150,74,.35);
+      stroke-width: 1.1;
+    }
     .math-network-node.selected .node-ring {
       stroke: #f6de9a;
+      animation: none;
     }
     .math-network-node.selected .node-core {
       filter: drop-shadow(0 0 12px rgba(230,199,122,.62));
+    }
+    @keyframes math-network-pulse {
+      0%, 100% { stroke-opacity: .35; }
+      50% { stroke-opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .math-network-node.available .node-ring { animation: none; stroke-opacity: 1; }
     }
     .math-network-node .node-photo {
       pointer-events: none;
@@ -973,7 +991,10 @@ function mathNetworkInjectStyles() {
       opacity: .82;
     }
     .math-network-node.available .node-photo {
-      filter: saturate(.85);
+      filter: none;
+    }
+    .math-network-node.unlocked .node-photo {
+      filter: saturate(.92);
     }
     .math-network-node .node-core {
       fill: #161310;
@@ -983,9 +1004,13 @@ function mathNetworkInjectStyles() {
       stroke: rgba(230,199,122,.22);
       stroke-width: 1;
     }
-    .math-network-node.unlocked .node-pill,
+    .math-network-node.unlocked .node-pill {
+      fill: rgba(42, 32, 14, .92);
+      stroke: rgba(184,150,74,.55);
+    }
     .math-network-node.available .node-pill {
-      stroke: rgba(230,199,122,.4);
+      fill: rgba(36, 28, 10, .94);
+      stroke: #f0d48a;
     }
     .math-network-node .node-label,
     .math-network-node .node-cost {
@@ -1024,8 +1049,8 @@ function mathNetworkInjectStyles() {
       vertical-align: middle;
       border: 1px solid rgba(230,199,122,.45);
     }
-    .math-network-legend .swatch.open { background: #4a3918; }
-    .math-network-legend .swatch.ready { background: #2c2312; box-shadow: 0 0 0 1px #e6c77a; }
+    .math-network-legend .swatch.open { background: #3a2e16; box-shadow: none; }
+    .math-network-legend .swatch.ready { background: #1a140c; box-shadow: 0 0 0 2px #ffe29a, 0 0 8px rgba(255,214,120,.7); }
     .math-network-legend .swatch.shut { background: #161310; }
     .math-network-notice {
       margin-top: 10px;
@@ -1521,9 +1546,7 @@ function mathNetworkRender(selectedNodeId) {
             <span><i class="swatch shut"></i>Vergrendeld</span>
           </div>
 
-          <div class="math-network-notice">
-            Inzichtpunten zijn een drempel, geen munt. Ontgrendelen houdt je score gelijk.
-          </div>
+          
         </div>
       </div>
     </div>

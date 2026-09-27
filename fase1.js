@@ -1618,22 +1618,25 @@ const MILESTONES_1 = [
         </ul>
         
         <h3>Verzameling en element</h3>
-        <p>Een <strong>verzameling</strong> is een groep objecten die we als één geheel bekijken.</p>
+        <p>Voordat we de verzameling van de natuurlijke getallen gaan uitbreiden, moeten we eerst de notatie voor verzamelingen en elementen verder toelichten.</p>
+        <p>Een <strong>verzameling</strong> is een groep objecten die we als één geheel bekijken. Voorbeeld de verzameling van 0, 1, 2, 3 en 4 noteren we als:</p>
         <p class="formula"> { 0, 1, 2, 3, 4 } </p>
-        <p>De getallen in de verzameling noemen we <strong>elementen</strong>. Het symbool <strong>∈</strong> betekent “is een element van” en <strong>∉</strong> betekent “is geen element van”.</p>
-        <p>In de verzameling {0, 1, 2, 3, 4} zijn 0, 1, 2, 3 en 4 dus elementen.</p>
+        <p>De getallen in de verzameling noemen we <strong>elementen</strong>. Het opsommen van de elementen van de verzameling noteren we tussen accolades.</p> 
+        
         <div class="callout insight">
-        <strong>Belangrijk inzicht</strong>
+
+        <p><strong>Belangrijk inzicht</strong></p>
         <p>Een verzameling is een manier om een groep getallen of andere objecten
         als één geheel te bekijken.</p>
       </div>
+
     <p>In de wiskunde gebruiken we een speciaal symbool om aan te geven dat iets
     een element van een verzameling is:</p>
 
     <p class="formula">3 ∈ {0, 1, 2, 3, 4}</p>
     <p>We kunnen dus lezen:</p>
 
-    <p><strong>3 is een element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
+    <p><strong>3 is een element van de verzameling {0, 1, 2, 3, 4}.</strong> Het symbool ∈ is de griekse letter epsilon.</p>
 
     <p>Voor een getal dat niet in de verzameling zit, gebruiken we
     <strong>∉</strong>.</p>
@@ -1876,13 +1879,10 @@ negatieve getallen.</p>
       Om met breuken te werken, verdelen we het geheel in
       <strong>gelijke delen</strong>.
     </p>
+    <p class="fig">
+  <img src="assets/breuk-gelijke-delen.svg" alt="Een geheel, twee gelijke delen en drie gelijke delen">
+</p>
 
-    <div class="callout">
-      <strong>Belangrijk</strong>
-      <p>
-        De delen van een breuk zijn even groot.
-      </p>
-    </div>
 
         <h3>Een geheel verdelen</h3>
         <p>
@@ -1926,7 +1926,7 @@ negatieve getallen.</p>
       <strong>Inzicht</strong>
       <p>
         Een breuk beschrijft hoeveel gelijke delen van een geheel
-        we nemen.
+        we nemen. 
       </p>
     </div>
 
@@ -2776,26 +2776,24 @@ negatieve getallen.</p>
 
                 <p>zijn getallen die tussen 0 en 1 liggen.</p>
 
-                <p>We hebben geleerd hoe we zulke getallen als een <strong>breuk</strong> kunnen schrijven. Maar er bestaat ook een andere manier om deze getallen te schrijven.</p>
+                <p>We hebben geleerd hoe we zulke getallen als een <strong>breuk</strong> kunnen schrijven of als een deling.</p> 
+                
+                 <p class="formula">
+                    \frac{1}{2}= 1/2 = 1 ÷ 2 = 1:2
+                </p>
+
+                <p>Maar er bestaat ook een andere manier om deze getallen te schrijven.</p>
 
                 <p>Zo kunnen we bijvoorbeeld schrijven:</p>
 
                 <p class="formula">
-                    \frac{1}{2}=0,5
+                    \frac{1}{2} = 0,5
                 </p>
 
-                <p>en</p>
+                
+                <p>Het getal <strong>0,5 </strong> is dus geen nieuw getal. Het is een andere schrijfwijze voor hetzelfde getal als 1/2</p>
 
-                <p class="formula">
-                   \frac{1}{4}=0,25
-                </p>
-
-                <p>Het getal <strong>0,5</strong> is dus geen nieuw getal. Het is een andere schrijfwijze voor hetzelfde getal als</p>
-
-                <p class="formula">
-                    \frac{1}{2}
-                </p>
-
+                
                 <p>Ook:</p>
 
                 <p class="formula">

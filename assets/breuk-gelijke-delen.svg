@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Een geheel en gelijke delen</title>
+  <desc id="desc">Drie cirkels: één geheel, twee gelijke delen en drie gelijke delen.</desc>
+  <rect width="960" height="420" fill="#161410"/>
+
+  <g transform="translate(160,190)">
+    <circle r="108" fill="#f3e6c4" stroke="#e6c77a" stroke-width="3"/>
+    <text y="148" text-anchor="middle" fill="#e6c77a" font-family="Georgia, 'Times New Roman', serif" font-size="20">1 geheel</text>
+  </g>
+
+  <g transform="translate(480,190)">
+    <circle r="108" fill="#f3e6c4" stroke="#e6c77a" stroke-width="3"/>
+    <line x1="0" y1="-108" x2="0" y2="108" stroke="#e6c77a" stroke-width="3"/>
+    <text y="148" text-anchor="middle" fill="#e6c77a" font-family="Georgia, 'Times New Roman', serif" font-size="20">2 gelijke delen</text>
+  </g>
+
+  <g transform="translate(800,190)">
+    <circle r="108" fill="#f3e6c4" stroke="#e6c77a" stroke-width="3"/>
+    <line x1="0" y1="0" x2="0" y2="-108" stroke="#e6c77a" stroke-width="3"/>
+    <line x1="0" y1="0" x2="93.53" y2="54" stroke="#e6c77a" stroke-width="3"/>
+    <line x1="0" y1="0" x2="-93.53" y2="54" stroke="#e6c77a" stroke-width="3"/>
+    <text y="148" text-anchor="middle" fill="#e6c77a" font-family="Georgia, 'Times New Roman', serif" font-size="20">3 gelijke delen</text>
+  </g>
+</svg>
