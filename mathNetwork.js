@@ -680,6 +680,7 @@ function mathNetworkConnectedEdges() {
 const MATH_NETWORK_VIEW = { width: 1480, height: 2200 };
 const MATH_NETWORK_GRID = { originX: 130, originY: 96, colW: 160, rowH: 132 };
 const MATH_NETWORK_CAMERA = { x: 0, y: 0, scale: 1 };
+let MATH_NETWORK_HINT_HIDDEN = false;
 const MATH_NETWORK_ZOOM = { min: 0.5, max: 1.85, step: 0.15 };
 let MATH_NETWORK_OPEN_ID = null;
 
@@ -902,10 +903,10 @@ function mathNetworkInjectStyles() {
     }
     .math-network-region {
       fill: #cbb98a;
-      fill-opacity: .28;
+      fill-opacity: .14;
       font-family: Cinzel, "Times New Roman", serif;
-      font-size: 11px;
-      letter-spacing: .18em;
+      font-size: 10px;
+      letter-spacing: .22em;
       text-anchor: middle;
       pointer-events: none;
     }
@@ -1031,6 +1032,22 @@ function mathNetworkInjectStyles() {
       color: #cbb98a;
       font-size: 13px;
     }
+    .math-network-hint {
+      position: absolute;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+      z-index: 3;
+      pointer-events: none;
+      color: #cbb98a;
+      font-size: 13px;
+      background: rgba(10,8,6,.78);
+      border: 1px solid rgba(230,199,122,.28);
+      border-radius: 999px;
+      padding: 6px 14px;
+      white-space: nowrap;
+    }
+    .math-network-hint[hidden] { display: none; }
     .math-network-float {
       position: absolute;
       z-index: 5;
@@ -1109,12 +1126,16 @@ function mathNetworkInjectStyles() {
       color: #e8dcc0;
       font-size: 14px;
     }
-    .math-network-kvs li { margin: 3px 0; }
+    .math-network-kvs li { margin: 0 0 10px; }
     .math-network-kvs strong {
-      display: inline-block;
-      min-width: 7.5rem;
+      display: block;
+      min-width: 0;
+      margin-bottom: 3px;
       color: #cbb98a;
+      font-size: 11px;
       font-weight: 650;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
     .math-network-prereqs {
       color: #cbb98a;
@@ -1258,12 +1279,12 @@ function mathNetworkRenderDetail(nodeId) {
 
   let action = "";
   if (unlocked || admin) {
-    action = '<span class="status done">Ontgrendeld</span>';
+    action = "";
   } else if (can) {
     action = `<button class="btn primary" data-math-network-unlock="${mathNetworkEsc(node.id)}">
       Ontgrendel
     </button>
-    <span class="math-network-threshold">Drempel: ${mathNetworkInzichtIco()}${cost} — je score daalt niet.</span>`;
+    <span class="math-network-threshold">Drempel: ${mathNetworkInzichtIco()}${cost}</span>`;
   } else {
     const missing = prereqs.filter((p) => !mathNetworkUnlocked(p.id));
     const missingText = missing.length
@@ -1272,7 +1293,7 @@ function mathNetworkRenderDetail(nodeId) {
           ? "Nog " + need + " " + "inzichtpunt" + (need === 1 ? "" : "en") + " nodig."
           : "Nog niet beschikbaar.");
     action = `<span class="status locked">${mathNetworkEsc(missingText)}</span>
-    <span class="math-network-threshold">Drempel: ${mathNetworkInzichtIco()}${cost} — je score daalt niet.</span>`;
+    <span class="math-network-threshold">Drempel: ${mathNetworkInzichtIco()}${cost}.</span>`;
   }
 
   const open = unlocked || admin;
@@ -1292,13 +1313,9 @@ function mathNetworkRenderDetail(nodeId) {
                <li><strong>Idee</strong> ${mathNetworkEsc(node.description || "")}</li>
                <li><strong>Waarom het telt</strong> ${mathNetworkEsc(node.unlockText || "")}</li>
              </ul>`
-          : `<p>Dit knooppunt is nog niet ontgrendeld.</p>
-             <p class="small">De historische beschrijving verschijnt na het ontgrendelen.</p>`
+          : `<p>Dit knooppunt is nog niet ontgrendeld.</p> `
         }
-        ${prereqs.length
-          ? `<div class="math-network-prereqs"><strong>Voorwaarden:</strong> ${prereqs.map((p) => mathNetworkEsc(p.title)).join(" · ")}</div>`
-          : ""
-        }
+
         ${node.note && open ? `<p class="small">${mathNetworkEsc(node.note)}</p>` : ""}
         ${action}
       </div>
@@ -1313,6 +1330,12 @@ function mathNetworkRenderDetail(nodeId) {
     });
   }
   mathNetworkPlaceFloat();
+}
+
+function mathNetworkHideHint() {
+  MATH_NETWORK_HINT_HIDDEN = true;
+  const hint = document.getElementById("math-network-hint");
+  if (hint) hint.hidden = true;
 }
 
 function mathNetworkApplyCamera() {
@@ -1344,6 +1367,7 @@ function mathNetworkZoomBy(direction) {
   MATH_NETWORK_CAMERA.scale = next;
   MATH_NETWORK_CAMERA.x = cx - worldX * next;
   MATH_NETWORK_CAMERA.y = cy - worldY * next;
+  mathNetworkHideHint();
   mathNetworkApplyCamera();
 }
 
@@ -1391,6 +1415,7 @@ function mathNetworkBindPanZoom() {
     lastY = e.clientY;
     MATH_NETWORK_CAMERA.x += dx;
     MATH_NETWORK_CAMERA.y += dy;
+    if (moved) mathNetworkHideHint();
     mathNetworkApplyCamera();
     e.preventDefault();
   });
@@ -1487,17 +1512,13 @@ function mathNetworkRender(selectedNodeId) {
               <g class="math-network-nodes">${nodeSvg}</g>
             </svg>
             <div id="math-network-float" class="math-network-float" hidden></div>
+            <div id="math-network-hint" class="math-network-hint"${MATH_NETWORK_HINT_HIDDEN ? " hidden" : ""}>Sleep om de boom te verkennen</div>
           </div>
 
           <div class="math-network-legend">
             <span><i class="swatch open"></i>Ontgrendeld</span>
             <span><i class="swatch ready"></i>Beschikbaar</span>
             <span><i class="swatch shut"></i>Vergrendeld</span>
-            <span>👤 Persoon</span>
-            <span>◆ Idee</span>
-            <span>📜 Werk</span>
-            <span>❓ Probleem</span>
-            <span>✦ Doorbraak</span>
           </div>
 
           <div class="math-network-notice">
