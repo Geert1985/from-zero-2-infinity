@@ -964,16 +964,18 @@ function mathNetworkInjectStyles() {
     .math-network-node.selected .node-core {
       filter: drop-shadow(0 0 12px rgba(230,199,122,.62));
     }
-    .math-network-node .node-symbol {
+    .math-network-node .node-photo {
       pointer-events: none;
-      fill: #f4ead3;
-      font-family: "Source Sans 3", system-ui, sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      text-anchor: middle;
     }
-    .math-network-node.locked .node-symbol {
-      fill: #9a8d74;
+    .math-network-node.locked .node-photo {
+      filter: grayscale(1) brightness(.42);
+      opacity: .82;
+    }
+    .math-network-node.available .node-photo {
+      filter: saturate(.85);
+    }
+    .math-network-node .node-core {
+      fill: #161310;
     }
     .math-network-node .node-pill {
       fill: rgba(8,6,4,.82);
@@ -1074,19 +1076,21 @@ function mathNetworkInjectStyles() {
       width: 88px;
       height: 88px;
       border-radius: 14px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 30px;
       color: #f4ead3;
-      background:
-        radial-gradient(circle at 30% 25%, rgba(230,199,122,.22), transparent 55%),
-        #1a1610;
+      background: #1a1610;
       border: 1px solid rgba(230,199,122,.35);
     }
-    .math-network-tile.type-person { background: radial-gradient(circle at 30% 25%, rgba(230,199,122,.2), transparent 55%), #241c12; }
-    .math-network-tile.type-idea { background: radial-gradient(circle at 30% 25%, rgba(230,199,122,.2), transparent 55%), #1b1711; }
-    .math-network-tile.type-breakthrough { background: radial-gradient(circle at 30% 25%, rgba(230,199,122,.28), transparent 55%), #2a1f10; }
+    .math-network-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .math-network-detail-body { min-width: 0; flex: 1; }
     .math-network-detail h3 {
       margin: 0 0 8px;
@@ -1141,11 +1145,16 @@ const MATH_NETWORK_REGION_LABELS = [
   { text: "GRONDSLAGEN", col: 3.5, row: 11.58 }
 ];
 
+function mathNetworkImageSrc(id) {
+  const key = String(id || "");
+  const file = key === "nul" ? "nulpunt" : key;
+  return "assets/netwerk/" + file + ".webp";
+}
+
 function mathNetworkNodeSvg(node, pos, selectedId) {
   const [x, y] = pos;
   const state = mathNetworkNodeState(node);
   const selected = selectedId === node.id ? " selected" : "";
-  const symbol = MATH_NETWORK_TYPE_SYMBOLS[node.type] || "◆";
   const lines = mathNetworkWrapTitle(mathNetworkMapTitle(node));
   const admin = mathNetworkIsAdmin();
   const pillW = Math.max(mathNetworkLabelWidth(lines), 78);
@@ -1169,7 +1178,11 @@ function mathNetworkNodeSvg(node, pos, selectedId) {
       <circle class="node-hit" r="52"></circle>
       <circle class="node-ring" r="34"></circle>
       <circle class="node-core" r="24"></circle>
-      <text class="node-symbol" y="5">${mathNetworkEsc(symbol)}</text>
+      <image class="node-photo"
+             href="${mathNetworkEsc(mathNetworkImageSrc(node.id))}"
+             x="-24" y="-24" width="48" height="48"
+             clip-path="url(#math-network-node-clip)"
+             preserveAspectRatio="xMidYMid slice"></image>
       <rect class="node-pill" x="${-pillW / 2}" y="${pillY}" width="${pillW}" height="${pillH}" rx="12"></rect>
       ${labelTs}
       ${costMark}
@@ -1242,7 +1255,6 @@ function mathNetworkRenderDetail(nodeId) {
   const cost = Number(node.cost || 0);
   const need = Math.max(0, cost - mathNetworkInsightScore());
   const typeLabel = MATH_NETWORK_TYPE_LABELS[node.type] || node.type;
-  const symbol = MATH_NETWORK_TYPE_SYMBOLS[node.type] || "◆";
 
   let action = "";
   if (unlocked || admin) {
@@ -1269,7 +1281,9 @@ function mathNetworkRenderDetail(nodeId) {
   host.innerHTML = `
     <button type="button" class="math-network-float-close" data-network-close="1" aria-label="Sluiten">×</button>
     <div class="math-network-detail-card">
-      <div class="math-network-tile type-${mathNetworkEsc(node.type || "idea")}" aria-hidden="true">${mathNetworkEsc(symbol)}</div>
+      <div class="math-network-tile type-${mathNetworkEsc(node.type || "idea")}">
+        <img src="${mathNetworkEsc(mathNetworkImageSrc(node.id))}" alt="">
+      </div>
       <div class="math-network-detail-body">
         <div class="math-network-meta">${mathNetworkEsc(typeLabel)}${node.year ? " · " + mathNetworkEsc(node.year) : ""}${node.era ? " · " + mathNetworkEsc(node.era) : ""}</div>
         <h3>${mathNetworkEsc(node.title)}</h3>
@@ -1463,6 +1477,11 @@ function mathNetworkRender(selectedNodeId) {
             </div>
             <svg class="math-network-svg" viewBox="0 0 ${MATH_NETWORK_VIEW.width} ${MATH_NETWORK_VIEW.height}"
                  role="img" aria-label="Historisch netwerk van wiskundige kennis">
+              <defs>
+                <clipPath id="math-network-node-clip" clipPathUnits="objectBoundingBox">
+                  <circle cx="0.5" cy="0.5" r="0.5"></circle>
+                </clipPath>
+              </defs>
               <g class="math-network-regions">${regionSvg}</g>
               <g class="math-network-edges">${edgeSvg}</g>
               <g class="math-network-nodes">${nodeSvg}</g>
