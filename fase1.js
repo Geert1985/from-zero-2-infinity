@@ -3,7 +3,7 @@ const MILESTONES_1 = [
   {
     id: "1.1",
     title: "Cijfers en Getallen",
-    goal: "Onderscheid cijfer en getal, gebruik het tientallig positiestelsel en orden natuurlijke getallen..",
+    goal: "Onderscheid cijfer en getal, gebruik het tientallig positiestelsel en orden natuurlijke getallen.",
     theory: /* html */`
       <h2>Cijfers en Getallen</h2>
         <p><strong>Doel:</strong> 
@@ -323,12 +323,21 @@ const MILESTONES_1 = [
         <p><strong>Doel:</strong></p>
 
         <ul>
-          <li>leren wat optellen, aftrekken, vermenigvuldigen en delen betekenen;</li>
-          <li>de vier bewerkingen leren uitvoeren;</li>
+          <li>leren wat +, -, × en ÷ doen;</li>
           <li>leren rekenen met grotere getallen;</li>
-          <li>de rekenwetten en de volgorde van rekenen;</li>
+          <li>leren wat de volgorde van rekenen is;</li>
+          <li>leren wanneer we getallen van plaats mogen verwisselen zonder dat de uitkomst veranderd (de rekenwetten);</li>
           <li>ontdekken welke rol 0 speelt bij het rekenen.</li>
         </ul>
+
+        <div class="callout">
+          <p><strong>In deze les dus eerst:</strong></p>
+          <p>wat +, -, × en ÷ doen,  Daarna: wetten en volgorde — dat zegt wanneer je een som anders mag schrijven zonder het antwoord te veranderen.</p>
+        </div>
+
+
+
+        
        
         <h3>Optellen</h3>
 
@@ -1864,7 +1873,8 @@ negatieve getallen.</p>
 
         <ul>
           <li>ontdekken waarom gehele getallen niet genoeg zijn voor elke deling;</li>
-          <li>leren breuken voorstellen, vergelijken en bewerken.;</li>
+          <li>inzien dat een breuk een getal is dat een plaats heeft op de getallenas;</li>
+          <li>leren rekenen met breuken;</li>
         </ul>
 
         <h3>Een geheel</h3>
@@ -3955,11 +3965,46 @@ negatieve getallen.</p>
       <p class="formula">a^1 = a</p>
 
       <h3>Speciale macht: exponent 0</h3>
-      <p>Voor elk getal dat niet nul is, geldt:</p>
-      <p class="formula">a^0 = 1</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">5^0 = 1</p>
-      <p>Dit lijkt misschien vreemd, maar deze regel zorgt ervoor dat de rekenregels voor machten netjes blijven aansluiten.</p>
+
+<p>Tot nu toe hebben we een macht geschreven als herhaalde vermenigvuldiging:</p>
+
+<p class="formula">7^3 = 7 · 7 · 7</p>
+
+<p>Dat beeld werkt voor positieve exponenten: 1, 2, 3, …</p>
+
+<p>Voor een exponent van 0 geldt echter:</p>
+
+<p class="formula">a^0 = 1\\  (voor\\ a \\neq 0)</p>
+
+<p>Bijvoorbeeld:</p>
+
+<p class="formula">7^0 = 1</p>
+
+<div class="callout">
+  <p><strong>Belangrijk inzicht</strong></p>
+  <p>
+    Een macht betekent niet altijd letterlijk “zoveel keer het grondtal
+    vermenigvuldigen”. Het beeld van herhaalde vermenigvuldiging geldt
+    voor exponenten <strong>1, 2, 3, …</strong>.
+  </p>
+  <p>
+    Bij exponent 0 is <span class="formula-inline">a^0 = 1</span> een
+    afspraak die ervoor zorgt dat de rekenregels voor machten blijven
+    kloppen.
+  </p>
+</div>
+
+<p>Je kunt dit zien door de productregel voor machten te gebruiken:</p>
+
+<p class="formula">a^n \\cdot a^0 = a^{n+0} = a^n</p>
+
+<p>
+  Om dit te laten kloppen, moet
+  <span class="formula-inline">a^0 = 1</span> zijn. Daarom geldt voor elk
+  getal dat niet nul is:
+</p>
+
+<p class="formula">a^0 = 1</p>
 
       <h3>Machten van 10</h3>
       <p>Machten van 10 geven een handig patroon:</p>
