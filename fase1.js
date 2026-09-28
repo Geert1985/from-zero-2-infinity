@@ -5,311 +5,193 @@ const MILESTONES_1 = [
     title: "Cijfers en Getallen",
     goal: "Onderscheid cijfer en getal, gebruik het tientallig positiestelsel en orden natuurlijke getallen.",
     theory: /* html */`
-      <h2>Cijfers en Getallen</h2>
-        <p><strong>Doel:</strong> 
-          <ul>
-            <li>begrijpen wat het verschil is tussen een cijfer en een getal</li>
-            <li>hoe we hoeveelheden met getallen schrijven</li>
-            <li>hoe het tientallig positiestelsel werkt</li>
-            <li>hoe natuurlijke getallen op een getallenlijn geordend en vergeleken worden</li>
-          </ul>
-        </p>
+<h2>Cijfers en Getallen</h2>
+  <p><strong>Wat gaan we ontdekken?</strong> </p>
+  <ul>
+    <li>Wat is het verschil tussen een cijfer en een getal?</li>
+    <li>Hoe kunnen we met slechts tien cijfers alle natuurlijke getallen schrijven?</li>
+    <li>Waarom heeft een cijfer een andere waarde afhankelijk van zijn plaats in een getal?</li>
+    <li>Hoe bepalen we welk getal groter of kleiner is?</li>
+  </ul>
+  
+  <h3>Het verschil tussen een getal en een cijfer</h3>
+    <p>Stel dat er drie appels op tafel liggen. We kunnen ook drie stenen of drie stoelen hebben.</p>
+    <p>De voorwerpen zijn verschillend, maar de <strong>hoeveelheid is dezelfde: drie</strong></p>
+    <p>Het <strong>getal 3</strong> geeft die hoeveelheid aan</p>
+    <p><strong>Een cijfer is een teken waarmee we een getal schrijven</strong>, zoals een letter een teken is waarmee we een woord maken.</p>
+    
+    <div>
+      <p>bijvoorbeeld:</p>
+      <ul>
+        <li>3 appels => het <strong>getal 3</strong> dat bestaat uit het <strong>cijfer 3</strong> </li>
+        <li>27 appels => het <strong>getal 27</strong> dat bestaat uit <strong>cijfer 2 en 7</strong></li>
+        <li>405 appels => het <strong>getal 405</strong> dat bestaat uit de <strong>cijfers 4, 0 en 5</strong></li>
+      </ul>
+    </div>
 
-      <h3>Het verschil tussen een getal en een cijfer</h3>
-        <p>Stel dat er drie appels op tafel liggen. We kunnen ook drie stenen of drie stoelen hebben.</p>
-        <p>De voorwerpen zijn verschillend, maar de <strong>hoeveelheid is dezelfde: drie</strong></p>
-        <p>Het <strong>getal 3</strong> geeft die hoeveelheid aan</p>
-        <p><strong>Een cijfer is een teken waarmee we een getal schrijven</strong>, zoals een letter een teken is waarmee we een woord maken.</p>
+    <div class="callout">
+      <p><strong>Cijfer ≠ getal.</strong></p>  
+      <p>Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</p>
+    </div>
+
+  <h3>Cijfers en de tien symbolen</h3>
+    <p>In het decimale stelsel gebruiken we precies tien cijfers:</p>
+    <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
         
-        <div>
-          <p>bijvoorbeeld:</p>
-          <ul>
-            <li>3 appels => het <strong>getal 3</strong> dat bestaat uit het <strong>cijfer 3</strong> </li>
-            <li>27 appels => het <strong>getal 27</strong> dat bestaat uit <strong>cijfer 2 en 7</strong></li>
-            <li>405 appels => het <strong>getal 405</strong> dat bestaat uit de <strong>cijfers 4, 0 en 5</strong></li>
-          </ul>
-        </div>
+    <div class="callout">
+      <p><strong>Elk cijfer heeft een naam en een symbool.</strong></p>
+      <p class="formula">0 = nul</p>
+      <p class="formula">1 = één</p>
+      <p class="formula">2 = twee</p>
+      <p class="formula">3 = drie</p>
+      <p class="formula">4 = vier</p>
+      <p class="formula">5 = vijf</p>
+      <p class="formula">6 = zes</p>
+      <p class="formula">7 = zeven</p>
+      <p class="formula">8 = acht</p>
+      <p class="formula">9 = negen</p>
+    </div>
 
-        <div class="callout">
-          <p><strong>Cijfer ≠ getal.</strong></p>  
-          <p>Cijfers zijn de symbolen die we gebruiken om een getal te schrijven.</p>
-        </div>
+    <p>Met deze tien cijfers kunnen we oneindig veel verschillende getallen schrijven. Het verschil tussen bijvoorbeeld 2, 20 en 200 komt niet door nieuwe cijfers, maar door de <strong>positie of plaats</strong> van het cijfer in het getal.</p>
 
-      <h3>Cijfers en de tien symbolen</h3>
-        <p>In het decimale stelsel gebruiken we precies tien cijfers:</p>
-        <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+  <h3>Getallen groter dan 9</h3>
+    <p>We hebben nu de <strong>10 cijfers</strong> geleerd:</p>
+    <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+    <p>Maar met deze 10 cijfers kunnen we nog veel meer getallen maken.</p>
+    <p>Na 9 komt bijvoorbeeld:</p>
+    <p class="formula">10, 11, 12, 13, 14, ... , 99, 100, 101, 102, ...</p>
+    <p>Hoe kunnen we met maar 10 cijfers toch oneindig veel getallen schrijven?</p>
+    <h4>De plaats van een cijfer is belangrijk</h4>
+      <p>We schrijven getallen met cijfers. De <strong>plaats</strong> van een cijfer bepaalt hoeveel het cijfer waard is.</p>
+      <p>Kijk bijvoorbeeld naar het getal <strong>4 705</strong> (vierduizend zevenhonderd en vijf). We gaan van rechts naar links kijken welke cijfers we tegenkomen en wat de waarde ervan is</p>
+      <table>
+        <tr>
+          <th>Cijfer</th>  
+          <th>Plaats</th>
+          <th>Waarde</th>
+          <th>Naam</th>
+        </tr>
+        <tr>
+          <td>5</td>  
+          <td>1e van rechts</td>
+          <td>1</td>
+          <td>eenheden</td>  
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>2e van rechts</td>
+          <td>10</td>
+          <td>tientallen</td>    
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>3e van rechts</td>
+          <td>100</td>
+          <td>honderdtallen</td>    
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>4e van rechts</td>
+          <td>1 000</td>
+          <td>duizendtallen</td>    
+        </tr>
+      </table>
+
+      <p>We kunnen het getal <strong>4 705</strong> dus opdelen:</p>
+      <p class="formula">4 000 + 700 + 0 + 5 = 4 705</p>
+      <p>Het cijfer <strong>4</strong> staat op de plaats van de duizendtallen. Daarom betekent het hier <strong>4 000</strong>.</p>
+      <p>Het cijfer <strong>7</strong> staat op de plaats van de honderdtallen. Daarom betekent het hier <strong>700</strong>.</p>
+      <p>Het cijfer <strong>5</strong> staat op de plaats van de eenheden. Daarom betekent het hier <strong>5</strong>.</p>
         
-        <div class="callout">
-          <p><strong>Elk cijfer heeft een naam en een symbool.</strong></p>
-
-          <p class="formula">0 = nul</p>
-          <p class="formula">1 = één</p>
-          <p class="formula">2 = twee</p>
-          <p class="formula">3 = drie</p>
-          <p class="formula">4 = vier</p>
-          <p class="formula">5 = vijf</p>
-          <p class="formula">6 = zes</p>
-          <p class="formula">7 = zeven</p>
-          <p class="formula">8 = acht</p>
-          <p class="formula">9 = negen</p>
-        </div>
-
-        <p>Met deze tien cijfers kunnen we oneindig veel verschillende getallen schrijven. Het verschil tussen bijvoorbeeld 2, 20 en 200 komt niet door nieuwe cijfers, maar door de <strong>positie</strong> van het cijfer.</p>
-
-      <h3>Getallen groter dan 9</h3>
-        <p>We hebben nu de <strong>10 cijfers</strong> geleerd:</p>
-        <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
-        <p>Maar met deze 10 cijfers kunnen we nog veel meer getallen maken.</p>
-        <p>Na 9 komt bijvoorbeeld:</p>
-        <p class="formula">10, 11, 12, 13, 14, ... , 99, 100, 101, 102, ...</p>
-        <p>Hoe kunnen we met maar 10 cijfers toch oneindig veel getallen schrijven?</p>
-        <h4>De plaats van een cijfer is belangrijk</h4>
-        <p>We schrijven getallen met cijfers. De <strong>plaats</strong> van een cijfer bepaalt hoeveel het cijfer waard is.</p>
-        <p>Kijk bijvoorbeeld naar het getal <strong>4 705</strong> (vierduizend zevenhonderd en vijf). We gaan van rechts naar links kijken welke cijfers we tegenkomen en wat de waarde ervan is</p>
-        <table>
-          <tr>
-            <th>Cijfer</th>  
-            <th>Plaats</th>
-            <th>Waarde</th>
-            <th>Naam</th>
-          </tr>
-          <tr>
-            <td>5</td>  
-            <td>1e van rechts</td>
-            <td>1</td>
-            <td>eenheden</td>  
-          </tr>
-          <tr>
-            <td>0</td>
-            <td>2e van rechts</td>
-            <td>10</td>
-            <td>tientallen</td>    
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>3e van rechts</td>
-            <td>100</td>
-            <td>honderdtallen</td>    
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>4e van rechts</td>
-            <td>1 000</td>
-            <td>duizendtallen</td>    
-          </tr>
-        </table>
-
-        <p>We kunnen het getal <strong>4 705</strong> dus opdelen:</p>
-
-        <p class="formula">4 000 + 700 + 0 + 5 = 4 705</p>
-        <p>Het cijfer <strong>4</strong> staat op de plaats van de duizendtallen. Daarom betekent het hier <strong>4 000</strong>.</p>
-        <p>Het cijfer <strong>7</strong> staat op de plaats van de honderdtallen. Daarom betekent het hier <strong>700</strong>.</p>
-        <p>Het cijfer <strong>5</strong> staat op de plaats van de eenheden. Daarom betekent het hier <strong>5</strong>.</p>
-        
-        <div class="callout">
-          <p><strong>Bepalen van de waarde van een cijfer in een getal.</strong></p> 
-          <p>We maken hierbij onderscheid tussen twee dingen:</p>
-          <ul>
-            <li>De <strong>cijferwaarde</strong> is het cijfer zelf.</li>
-            <li>De <strong>plaatswaarde</strong> is wat het cijfer betekent door zijn plaats in het getal.</li>
-          </ul>
-        </div>
-
-        <p>Bijvoorbeeld in <strong>4 705</strong>:</p>
+      <div class="callout">
+        <p><strong>Bepalen van de waarde van een cijfer in een getal.</strong></p> 
+        <p>We maken hierbij onderscheid tussen twee dingen:</p>
         <ul>
-          <li>het cijfer is <strong>7</strong>;</li>
-          <li>de plaatswaarde van 7 is <strong>700</strong>.</li>
+          <li>De <strong>cijferwaarde</strong> is het cijfer zelf.</li>
+          <li>De <strong>plaatswaarde</strong> is wat het cijfer betekent door zijn plaats in het getal.</li>
         </ul>
-        <h4>Een eenvoudig patroon</h4>
+      </div>
+
+      <p>Bijvoorbeeld in <strong>4 705</strong>:</p>
+      <ul>
+        <li>het cijfer is <strong>7</strong>;</li>
+        <li>de plaatswaarde van 7 is <strong>700</strong>.</li>
+      </ul>
+        
+    <h4>Een eenvoudig patroon</h4>
       <p>Als je helemaal rechts begint bij een getal, zal bij elke stap naar links de waarde van het cijfer <strong>10 keer groter</strong> worden:</p>
       <p class="formula">1 → 10 → 100 → 1 000 → 10 000 → ...</p>
       <p>Daarom noemen we ons getallensysteem het <strong>tientallig stelsel</strong>.</p>
       <p>Met slechts 10 cijfers kunnen we zo alle getallen schrijven: van kleine getallen tot getallen met miljoenen, miljarden en nog veel meer cijfers.</p>
 
-      <h3>De natuurlijke getallen</h3>
-      <p>Als we dingen tellen, gebruiken we de <strong>natuurlijke getallen</strong>.</p>
-
-      <p>Bijvoorbeeld:</p>
-
-      <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...</p>
-
-      <p>Deze getallen noemen we de <strong>natuurlijke getallen</strong>. We gebruiken het symbool <strong>ℕ</strong> voor de verzameling van alle natuurlijke getallen.</p>
-
-      <p>In deze cursus hoort <strong>0</strong> ook bij de natuurlijke getallen:</p>
-
-      <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
-
-      <h4>De opvolger</h4>
-
+  <h3>De natuurlijke getallen</h3>
+    <p>Als we dingen tellen, gebruiken we de <strong>natuurlijke getallen</strong>.</p>
+    <p>Bijvoorbeeld:</p>
+    <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...</p>
+    <p>De verzameling van alle natuurlijke getallen duiden we aan met het symbool <strong>ℕ</strong></p>
+    <p>De getallen in een verzameling noemen we <strong>elementen</strong>. Het opsommen van de elementen van de verzameling noteren we tussen accolades {...}.</p>
+    <p>In deze cursus hoort <strong>0 ook bij de natuurlijke getallen:</strong></p>
+    <p>De verzameling van de natuurlijke getallen kunnen we dus als volgt noteren:</p>
+    <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ..., 3521, 3522,...,999 999 999,...}</p>
+    <h4>De opvolger</h4>
       <p>Na elk natuurlijk getal komt een volgend natuurlijk getal.</p>
-
-      <p>Je krijgt het volgende getal door <strong>1 op te tellen</strong>.</p>
-
+      <p>Je krijgt het volgende getal door <strong>1 op te tellen</strong></p>
       <p>Bijvoorbeeld:</p>
-
-      <p class="formula">5 → 6</p>
-
       <p class="formula">12 → 13</p>
-
-      <p class="formula">99 → 100</p>
-
       <p>Het getal dat na een ander getal komt, noemen we de <strong>opvolger</strong>.</p>
-
-      <p>De opvolger van 8 is dus 9, want:</p>
-
-      <p class="formula">8 + 1 = 9</p>
-
-      <h4>De voorganger</h4>
-
+    <h4>De voorganger</h4>
       <p>We kunnen ook naar het vorige getal gaan.</p>
-
       <p>Je krijgt het vorige getal door <strong>1 af te trekken</strong>.</p>
-
       <p>Bijvoorbeeld:</p>
-
-      <p class="formula">6 → 5</p>
-
-      <p class="formula">13 → 12</p>
-
       <p class="formula">100 → 99</p>
-
       <p>Het getal dat vóór een ander getal komt, noemen we de <strong>voorganger</strong>.</p>
-
-      <p>De voorganger van 8 is dus 7, want:</p>
-
-      <p class="formula">8 − 1 = 7</p>
-
       <p><strong>0 heeft geen voorganger in ℕ</strong>, want 0 is het kleinste natuurlijke getal.</p>
-
-      <h4>Er is geen grootste natuurlijk getal</h4>
-
-      <p>De natuurlijke getallen blijven altijd doorgaan.</p>
-
-      <p>Neem bijvoorbeeld 1 000 000. Ook daarna komt nog een natuurlijk getal:</p>
-
-      <p class="formula">1 000 000 + 1 = 1 000 001</p>
-
-      <p>En ook daarna kunnen we weer 1 optellen.</p>
-
-      <p>Er bestaat dus <strong>geen grootste natuurlijk getal</strong>.</p>
-
+    <h4>Er is geen grootste natuurlijk getal</h4>
+      <p>De natuurlijke getallen blijven altijd doorgaan want je kunt er altijd 1 bij optellen.</p>
+      
       <div class="callout">
         <p><strong>Onthoud:</strong></p>
-        <p>De natuurlijke getallen beginnen bij 0 en gaan oneindig verder:</p>
-
-        <p class="formula">0, 1, 2, 3, 4, 5, ...</p>
-
-        <p>De <strong>opvolger</strong> vind je door 1 op te tellen.</p>
-        <p>De <strong>voorganger</strong> vind je door 1 af te trekken.</p>
+        <p>0 heeft in ℕ geen voorganger;</p>
+        <p>elk natuurlijk getal n heeft een opvolger n + 1, daarom is er geen grootste natuurlijk getal;</p>
       </div>
 
-      <h4>Zijn de natuurlijke getallen altijd voldoende?</h4>
-
+    <h4>Zijn de natuurlijke getallen altijd voldoende?</h4>
       <p>Met natuurlijke getallen kunnen we veel berekeningen maken.</p>
-
       <p>Maar soms komen we een probleem tegen. Kijk bijvoorbeeld naar:</p>
-
-      <p class="formula">3 − 5</p>
-
+      <p class="formula">3 − 5 = ?</p>
       <p>Het antwoord is kleiner dan 0 en is dus geen natuurlijk getal.</p>
+      <p>Later zullen we daarom kennismaken met <strong>negatieve getallen</strong>, daarvoor moeten we ℕ uitbreiden.</p>
+  <h3>Getallen vergelijken</h3>
+    <p>We kunnen getallen op een <strong>getallenlijn</strong> zetten.</p>
+    
+    <div data-widget="nats"></div>
 
-      <p>Later zullen we daarom kennismaken met <strong>negatieve getallen</strong> en met een grotere verzameling getallen.</p>
-      
-      <h3>Getallen vergelijken</h3>
-
-<p>We kunnen getallen op een <strong>getallenlijn</strong> zetten.</p>
-
-<div data-widget="nats"></div>
-
-<p>Op een getallenlijn geldt:</p>
-
-<ul>
-  <li>naar <strong>rechts</strong> → de getallen worden groter;</li>
-  <li>naar <strong>links</strong> → de getallen worden kleiner.</li>
-</ul>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">3 &lt; 7</p>
-
-<p>We lezen dit als: <strong>3 is kleiner dan 7</strong>.</p>
-
-<p>Het getal 3 staat namelijk links van 7 op de getallenlijn.</p>
-
-<h4>De tekens &lt;, = en &gt;</h4>
-
-<p>Om getallen met elkaar te vergelijken, gebruiken we drie tekens:</p>
-
-<ul>
-  <li><strong>&lt;</strong> betekent: kleiner dan</li>
-  <li><strong>=</strong> betekent: gelijk aan</li>
-  <li><strong>&gt;</strong> betekent: groter dan</li>
-</ul>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">4 &lt; 9</p>
-<p class="formula">6 = 6</p>
-<p class="formula">12 &gt; 5</p>
-
-<p>Let goed op de vorm van het teken. De <strong>puntige kant</strong> wijst altijd naar het kleinste getal.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">3 &lt; 8</p>
-
-<p>De puntige kant van <strong>&lt;</strong> wijst naar 3, omdat 3 het kleinste getal is.</p>
-
-<h4>Grotere getallen vergelijken</h4>
-
-<p>Bij grotere getallen kunnen we niet altijd gemakkelijk naar een getallenlijn kijken. We kunnen de cijfers van de getallen met elkaar vergelijken.</p>
-
-<p>Begin altijd bij het <strong>meest linkse cijfer</strong>.</p>
-
-<p>Bijvoorbeeld: 9 728 en 9 758</p>
-
-
-<p>We vergelijken eerst de duizendtallen:</p>
-
-<p class="formula">9 = 9</p>
-
-<p>Die zijn gelijk. Daarom kijken we naar de honderdtallen:</p>
-
-<p class="formula">7 = 7</p>
-
-<p>Ook die zijn gelijk. We kijken dus naar de tientallen:</p>
-
-<p class="formula">2 &lt; 5</p>
-
-<p>Daarom is:</p>
-
-<p class="formula">9 728 &lt; 9 758</p>
-
-<p>We vergelijken dus de cijfers <strong>van links naar rechts</strong>, totdat we een verschil vinden.</p>
-
-<h4>Als de getallen niet evenveel cijfers hebben</h4>
-
-<p>Heeft een getal <strong>meer cijfers</strong> dan een ander positief natuurlijk getal, dan is het ook groter.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">840 &lt; 2 840</p>
-
-<p>840 heeft drie cijfers en 2 840 heeft vier cijfers. Daarom is 2 840 groter.</p>
-
-<p>Dit werkt ook bij nog grotere getallen:</p>
-
-<p class="formula">9 999 &lt; 10 000</p>
-
-<div class="callout">
-  <p><strong>Onthoud:</strong></p>
-  <p>Om twee getallen te vergelijken:</p>
-  <ol>
-    <li>Kijk eerst naar het aantal cijfers.</li>
-    <li>Als dat gelijk is, vergelijk je de cijfers van <strong>links naar rechts</strong>.</li>
-    <li>Het eerste cijfer dat verschilt, bepaalt welk getal groter is.</li>
-  </ol>
-</div>
+    <p>Op een getallenlijn geldt:</p>
+    <ul>
+      <li>naar <strong>rechts</strong> → de getallen worden groter;</li>
+      <li>naar <strong>links</strong> → de getallen worden kleiner.</li>
+    </ul>
+    <p>Bijvoorbeeld:</p>
+    <p class="formula">3 &lt; 7</p>
+    <p>We lezen dit als: <strong>3 is kleiner dan 7</strong>.</p>
+    <p>Het getal 3 staat namelijk links van 7 op de getallenlijn.</p>
+    <h4>De tekens &lt;, = en &gt;</h4>
+      <div class="callout">  
+        <p>Om getallen met elkaar te vergelijken, gebruiken we drie tekens:</p>
+        <ul>
+          <li><strong>&lt;</strong> betekent: kleiner dan</li>
+          <li><strong>=</strong> betekent: gelijk aan</li>
+          <li><strong>&gt;</strong> betekent: groter dan</li>
+        </ul>
+      </div>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">4 &lt; 9</p>
+      <p class="formula">6 = 6</p>
+      <p class="formula">12 &gt; 5</p>
+      <p>Let goed op de vorm van het teken. De <strong>puntige kant</strong> wijst altijd naar het kleinste getal.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">3580 &lt; 3700</p>
+      <p>De puntige kant van <strong>&lt;</strong> wijst naar 3580, omdat 3580 het kleinste getal is.</p>
     `
   },
 
@@ -318,813 +200,168 @@ const MILESTONES_1 = [
     title: "De vier hoofdbewerkingen",
     goal: "Voer de vier hoofdbewerkingen in ℕ uit en gebruik volgorde, rest en de rekenwetten.",
     theory: /* html */`
-      <h2>De vier hoofdbewerkingen</h2>
-
-        <p><strong>Doel:</strong></p>
-
-        <ul>
-          <li>leren wat +, -, × en ÷ doen;</li>
-          <li>leren rekenen met grotere getallen;</li>
-          <li>leren wat de volgorde van rekenen is;</li>
-          <li>leren wanneer we getallen van plaats mogen verwisselen zonder dat de uitkomst veranderd (de rekenwetten);</li>
-          <li>ontdekken welke rol 0 speelt bij het rekenen.</li>
-        </ul>
-
-        <div class="callout">
-          <p><strong>In deze les dus eerst:</strong></p>
-          <p>wat +, -, × en ÷ doen,  Daarna: wetten en volgorde — dat zegt wanneer je een som anders mag schrijven zonder het antwoord te veranderen.</p>
-        </div>
-
-
-
-        
-       
-        <h3>Optellen</h3>
-
-        <p>Met <strong>optellen</strong> voegen we hoeveelheden samen.</p>
-
-        <p>Bijvoorbeeld: je hebt 7 appels en krijgt er 5 bij.</p>
-
-        <p>Dan heb je:</p>
-
-        <p class="formula">7 + 5 = 12</p>
-
-        <p>Je hebt nu 12 appels.</p>
-
-        <p>De getallen die we optellen noemen we de <strong>termen</strong>. Het antwoord noemen we de <strong>som</strong>.</p>
-
-        <p>In:</p>
-
-        <p class="formula">7 + 5 = 12</p>
-
-        <ul>
-          <li>7 en 5 zijn de <strong>termen</strong>;</li>
-          <li>12 is de <strong>som</strong>.</li>
-        </ul>
-
-        <h4>Optellen op de getallenlijn</h4>
-
-        <p>We kunnen optellen ook voorstellen op een getallenlijn.</p>
-
-        <p>Bijvoorbeeld bij <strong>7 + 5</strong>:</p>
-
-        <p>We beginnen bij 7 en gaan 5 plaatsen naar rechts.</p>
-
-        <div data-widget="nats"></div>
-
-        <p>We komen uit bij 12.</p>
-
-        <p>Dus:</p>
-
-        <p class="formula">7 + 5 = 12</p>
-
-        <h4>Optellen met 0</h4>
-
-        <p>Als je 0 bij een getal optelt, verandert het getal niet.</p>
-
-        <p>Bijvoorbeeld:</p>
-
-        <p class="formula">8 + 0 = 8</p>
-
-        <p class="formula">25 + 0 = 25</p>
-
-        <p class="formula">1 437 + 0 = 1 437</p>
-
+<h2>De vier hoofdbewerkingen</h2>
+  <p><strong>Wat gaan we ontdekken?</strong></p>
+  <ul>
+    <li>wat kunnen we doen met deze symbolen: +, -, × en ÷ ?</li>
+    <li>wat als een deling niet uitkomt?</li>
+    <li>verandert de volgorde van bewerkingen het antwoord?</li>
+    <li>wanneer mogen we de getallen in een bewerking omwisselen?</li>
+    <li>wat is er zo bijzonder aan het getal 0?</li>
+  </ul>
+  <h3>Optellen</h3>
+    <p>Met <strong>optellen</strong> voegen we hoeveelheden samen.</p>
+    <p>Bijvoorbeeld: je hebt 7 appels en krijgt er 5 bij.</p>
+    <p>Dan heb je:</p>
+    <p class="formula">7 + 5 = 12</p>
+    <p>Je hebt nu 12 appels.</p>
+    <p>De getallen die we optellen noemen we de <strong>termen</strong>. Het antwoord noemen we de <strong>som</strong>.</p>
+    <p>In:</p>
+    <p class="formula">7 + 5 = 12</p>
+    <ul>
+      <li>7 en 5 zijn de <strong>termen</strong>;</li>
+      <li>12 is de <strong>som</strong>.</li>
+    </ul>
+    <p>Merk op dat we bij het optellen de termen van plaats kunnen verwisselen zonder dat de som veranderd.</p>
+    <p class="formula">7 + 5 = 5 + 7 = 12</p>
+    <p>Op deze eigenschap komen we later op terug.</p>
+    <h4>Optellen met 0</h4>
+      <p>Als je 0 bij een getal optelt, verandert het getal niet.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">1 437 + 0 = 1 437</p>
         <p>We noemen 0 daarom het <strong>neutrale element van de optelling</strong>.</p>
 
+  <h3>Aftrekken</h3>
+    <p>Met <strong>aftrekken</strong> halen we een hoeveelheid weg van een andere hoeveelheid.</p>
+    <p>Aftrekken is dus de omgekeerde beweging van optellen.</p>
+    <p>Bijvoorbeeld: je hebt 12 appels en geeft er 5 weg.</p>
+    <p>Dan blijven er over:</p>
+    <p class="formula">12 − 5 = 7</p>
+    <p>We noemen 7 het <strong>verschil</strong>.</p>
+    <p>Je kunt een aftrekking dus controleren met een optelling.</p>
+    <p>Bijvoorbeeld:</p>
+    <p class="formula">17 − 9 = 8</p>
+    <p>Controle:</p>
+    <p class="formula">8 + 9 = 17</p>
+    <div class="callout">
+      <p><strong>Onthoud:</strong></p>
+      <p>Bij een aftrekking kun je je antwoord controleren door het verschil en het getal dat je hebt afgetrokken weer op te tellen.</p>
+    </div>
+    <p>Merk op dat we bij het aftrekken de termen niet van plaats kunnen verwisselen zonder dat het verschil veranderd.</p>
+    <p class="formula">12 - 5 ≠ 5 - 12</p>
+    <p>Het symbool  ≠  betekent "is niet gelijk aan"</p>
+    
+  <h3>Vermenigvuldigen</h3>
+    <p>Met <strong>vermenigvuldigen</strong> kunnen we meerdere gelijke hoeveelheden snel samenrekenen.</p>
+    <p>Bijvoorbeeld: je hebt 4 groepjes van 3 appels.</p>
+    <p>Dat is hetzelfde als:</p>
+    <p class="formula">3 + 3 + 3 + 3 = 12</p>
+    <p>In plaats van vier keer 3 op te tellen, kunnen we schrijven:</p>
+    <p class="formula">4 × 3 = 12</p>
+    <p>We lezen dit als: <strong>4 keer 3 is 12</strong>.</p>
+    <ul>
+      <li>4 en 3 zijn de <strong>factoren</strong>;</li>
+      <li>12 is het <strong>product</strong>.</li>
+    </ul>
+    <p>Merk op dat we bij het vermenigvuldigen de factoren van plaats kunnen verwisselen zonder dat het product veranderd.</p>
+    <p class="formula">4 × 3 = 3 × 4 = 12</p>
+    <h4>Vermenigvuldigen met 0</h4>
+      <p>Als we een getal met 0 vermenigvuldigen, krijgen we altijd 0.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">125 × 0 = 0</p>
+    <h4>Vermenigvuldigen met 1</h4>
+      <p>Als we een getal met 1 vermenigvuldigen, verandert het getal niet.</p>
+      <p>Bijvoorbeeld:</p>
+      <p class="formula">43 × 1 = 43</p>
+
+    <div class="callout">
+      <p><strong>Onthoud:</strong></p>
+      <p>Vermenigvuldigen betekent dat we gelijke hoeveelheden combineren of een hoeveelheid meerdere keren nemen.</p>
+      <p>Bijzonder belangrijk:</p>
+      <p class="formula">getal × 0 = 0</p>
+    </div>
+
+  <h3>Slim rekenen met vermenigvuldigen</h3>
+    <p>Je hoeft niet elke vermenigvuldiging uit het hoofd te kennen. Vaak kun je een moeilijke vermenigvuldiging veranderen in een paar eenvoudige vermenigvuldigingen.</p>
+    <p>Bijvoorbeeld:</p>
+    <p class="formula">
+      6 × 7 = ?
+    </p>
+    <p>Als je weet dat <strong>6 × 5 = 30</strong>, kun je verder rekenen:</p>
+    <p class="formula">
+      6 × 7 = 6 × (5+2) = (6 × 5) + (6 × 2) = 30 + 12 = 42
+    </p>
+    <p>We gebruiken hier voor de eerste keer de haakjes en de distributieve eigenschap, later komen we hier op terug.</p>
+  
+    <h3>Delen</h3>
+      <p>Delen is het verdelen van een aantal in <strong>gelijke groepen</strong>. Het is de omgekeerde bewerking van vermenigvuldigen.</p>
+      <p>Stel dat we 12 appels eerlijk willen verdelen over 3 personen. Iedere persoon krijgt dan evenveel appels:</p>
+      <p class="formula">12 ÷ 3 = 4</p>
+      <p>Iedere persoon krijgt dus 4 appels.</p>
+
+      <ul>
+        <li>12 is het <strong>deeltal</strong>;</li>
+        <li>3 is het <strong>deler</strong>;</li>
+        <li>4 is het <strong>quotiënt</strong>.</li>
+      </ul>
+      <p>Merk op dat we bij het delen het deeltal en de deler niet van plaats kunnen verwisselen zonder dat het quotiënt veranderd. </p>
+      <p class="formula">12 ÷ 3 ≠ 3 ÷ 12</p>
+
+      <h4>Delen en vermenigvuldigen horen bij elkaar</h4>
+      <p>Delen en vermenigvuldigen zijn omgekeerde bewerkingen.</p>
+      <p>Als:</p>
+      <p class="formula">3 × 4 = 12</p>
+      <p>dan weten we ook:</p>
+      <p class="formula">12 ÷ 3 = 4</p>
+      <p>en:</p>
+      <p class="formula">12 ÷ 4 = 3</p>
+      <p>Je kunt een deling daarom controleren met een vermenigvuldiging.</p>
+
+    <h3>Delen met rest</h3>
+
+    <p>Niet elke hoeveelheid kan precies in gelijke groepen worden verdeeld.</p>
+
+    <p>Stel dat we <strong>14 voorwerpen</strong> willen verdelen in groepjes van <strong>4</strong>.</p>
+    <p class="formula">14 ÷ 4</p>
+
+    <p>We kunnen drie volledige groepjes maken, namelijk :</p>
+    <p class="formula">3 × 4 = 12</p>
+
+    <p>Vier groepjes van vier zou niet gaan, want dan moeten we 16 voorwerpen hebben:</p>
+    <p class="formula">4 × 4 = 16</p>
+
+    <p>Dus we kiezen voor 3 groepjes van 4.</p> 
+    <p>Maar dan blijven er nog 2 voorwerpen over. Dit is de rest.</p>
 
-        <h3>Schriftelijk optellen</h3>
+    <p>Het getal <strong>3</strong> noemen we het <strong>quotiënt</strong>. Het vertelt hoeveel volledige groepjes we kunnen maken.</p>
 
-        <p>Bij kleine getallen kunnen we gemakkelijk uit het hoofd optellen. Bij grotere getallen is het handig om de getallen <strong>onder elkaar</strong> te schrijven.</p>
+    <p>Het getal <strong>2</strong> noemen we de <strong>rest</strong>. Dat zijn de voorwerpen die niet meer in een volledig groepje passen.</p>
 
-        <p>We zorgen ervoor dat dezelfde posities onder elkaar staan.</p>
+    <h4>De deling controleren</h4>
 
-        <p>In de tabel gaan we voor elk getal opschijven wat de waarde is van de eenheden, tientallen, hondertalle en duidendtallen</p>
-        <P>We bekijken het voorbeeld:</P>
-        <p class="formula">738 + 496</p>
-        
-        <table>
-          <tr>
-            <th></th>
-            <th>Duizendtallen</th>
-            <th>Honderdtallen</th>
-            <th>Tientallen</th>
-            <th>Eenheden</th>
-          </tr>
-          <tr>
-            <th>738</th>
-            <td>0</td>
-            <td>7</td>
-            <td>3</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <th>496</th>
-            <td>0</td>
-            <td>4</td>
-            <td>9</td>
-            <td>6</td>
-          </tr>
-        </table>
+    <p>Een deling met rest kunnen we altijd controleren met een vermenigvuldiging.</p>
 
-        <p>We tellen de kolommen op. We beginnen <strong>rechts bij de eenheden</strong>.</p>
+    <p>Bij <strong>14 ÷ 4 = 3 rest 2</strong> geldt:</p>
 
-        <h4>Stap 1: de eenheden</h4>
+    <p class="formula">3 × 4 + 2 = 14</p>
 
-        <p>We rekenen:</p>
+    <p>De algemene vorm is:</p>
 
-        <p class="formula">8 + 6 = 14</p>
+    <p class="formula">a = q × d + r</p>
 
-        <p>We schrijven de <strong>4 eenheden</strong> op. De 1 staat voor <strong>1 tiental</strong>. Die nemen we mee naar de volgende kolom.</p>
+    <p>Hierbij is <strong>a</strong> het getal dat we delen, <strong>q</strong> het quotiënt, <strong>d</strong> de deler en <strong>r</strong> de rest.</p>
 
-        <table>
-          <tr>
-            <th></th>
-            <th>Duizendtallen</th>
-            <th>Honderdtallen</th>
-            <th>Tientallen</th>
-            <th>Eenheden</th>
-          </tr>
-          <tr>
-            <th>738</th>
-            <td>0</td>
-            <td>7</td>
-            <td>3</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <th>496</th>
-            <td>0</td>
-            <td>4</td>
-            <td>9</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <th>Resultaat</th>
-            <td></td>
-            <td></td>
-            <td>1</td>
-            <td>4</td>
-          </tr>
-        </table>
+    <p>De rest is altijd kleiner dan de deler. Anders zouden we nog een extra volledig groepje kunnen maken.</p>
 
-        <h4>Stap 2: de tientallen</h4>
+    <p class="formula">0 ≤ r &lt; d</p>
 
-        <p>We rekenen de tientallen op, inclusief het tiental dat we meenemen:</p>
+    <div class="callout">
+      <p><strong>Onthoud:</strong></p>
+      <p>Bij een deling met rest maken we eerst zoveel mogelijk volledige groepjes.</p>
+      <p>Wat overblijft, is de rest.</p>
+    </div>
 
-        <p class="formula">3 + 9 + 1 = 13</p>
-
-        <p>We schrijven de <strong>3 tientallen</strong> op en nemen <strong>1 honderdtal</strong> mee.</p>
-
-        <table>
-          <tr>
-            <th></th>
-            <th>Duizendtallen</th>
-            <th>Honderdtallen</th>
-            <th>Tientallen</th>
-            <th>Eenheden</th>
-          </tr>
-          <tr>
-            <th>738</th>
-            <td>0</td>
-            <td>7</td>
-            <td>3</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <th>496</th>
-            <td>0</td>
-            <td>4</td>
-            <td>9</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <th>Resultaat</th>
-            <td></td>
-            <td>1</td>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-        </table>
-
-        <h4>Stap 3: de honderdtallen</h4>
-
-        <p>We rekenen:</p>
-
-        <p class="formula">7 + 4 + 1 = 12</p>
-
-        <p>We schrijven de <strong>2 honderdtallen</strong> op en nemen <strong>1 duizendtal</strong> mee.</p>
-
-        <h4>Stap 4: de duizendtallen</h4>
-
-        <p>Er zijn geen duizendtallen in 738 en 496. We hebben alleen het duizendtal dat we meenemen:</p>
-
-        <p class="formula">1</p>
-
-        <p>Het resultaat is dus:</p>
-
-        <table>
-          <tr>
-            <th></th>
-            <th>Duizendtallen</th>
-            <th>Honderdtallen</th>
-            <th>Tientallen</th>
-            <th>Eenheden</th>
-          </tr>
-          <tr>
-            <th>738</th>
-            <td>0</td>
-            <td>7</td>
-            <td>3</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <th>496</th>
-            <td>0</td>
-            <td>4</td>
-            <td>9</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <th>Som</th>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-        </table>
-
-        <p>Dus:</p>
-
-        <p class="formula">738 + 496 = 1 234</p>
-
-        <div class="callout">
-          <p><strong>Onthoud:</strong></p>
-          <ul>
-            <li>Schrijf de getallen netjes onder elkaar.</li>
-            <li>Eenheden komen onder eenheden, tientallen onder tientallen, enzovoort.</li>
-            <li>Begin bij de <strong>eenheden</strong>, dus rechts.</li>
-            <li>Is een kolom 10 of groter? Schrijf de eenheden op en neem het tiental mee naar de volgende kolom.</li>
-          </ul>
-        </div>
-
-      <h3>Aftrekken</h3>
-
-<p>Met <strong>aftrekken</strong> halen we een hoeveelheid weg van een andere hoeveelheid.</p>
-
-<p>Bijvoorbeeld: je hebt 12 appels en geeft er 5 weg.</p>
-
-<p>Dan blijven er over:</p>
-
-<p class="formula">12 − 5 = 7</p>
-
-<p>We noemen 7 het <strong>verschil</strong>.</p>
-
-<h4>Aftrekken en optellen horen bij elkaar</h4>
-
-<p>Optellen en aftrekken zijn elkaars <strong>omgekeerde bewerkingen</strong>.</p>
-
-<p>Als:</p>
-
-<p class="formula">12 − 5 = 7</p>
-
-<p>dan moet je met optellen weer bij 12 uitkomen:</p>
-
-<p class="formula">7 + 5 = 12</p>
-
-<p>Je kunt een aftrekking dus controleren met een optelling.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">17 − 9 = 8</p>
-
-<p>Controle:</p>
-
-<p class="formula">8 + 9 = 17</p>
-
-<div class="callout">
-  <p><strong>Onthoud:</strong></p>
-  <p>Bij een aftrekking kun je je antwoord controleren door het verschil en het getal dat je hebt afgetrokken weer op te tellen.</p>
-</div>
-
-
-<h3>Schriftelijk aftrekken</h3>
-
-<p>Bij grote getallen is het handig om de getallen <strong>onder elkaar</strong> te schrijven.</p>
-
-<p>Net als bij optellen zorgen we ervoor dat dezelfde posities onder elkaar staan.</p>
-
-<p>We bekijken het voorbeeld:</p>
-
-<p class="formula">1 234 − 738</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th>Duizendtallen</th>
-    <th>Honderdtallen</th>
-    <th>Tientallen</th>
-    <th>Eenheden</th>
-  </tr>
-  <tr>
-    <th>1 234</th>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <th>- 738</th>
-    <td>0</td>
-    <td>7</td>
-    <td>3</td>
-    <td>8</td>
-  </tr>
-</table>
-
-<p>We beginnen, net als bij optellen, <strong>rechts bij de eenheden</strong>.</p>
-
-<h4>Stap 1: de eenheden</h4>
-
-<p>We moeten 8 eenheden aftrekken van 4 eenheden:</p>
-
-<p class="formula">4 − 8</p>
-
-<p>Dat kan niet met alleen de 4 eenheden. We hebben daarom extra eenheden nodig.</p>
-
-<p>We kunnen <strong>1 tiental omwisselen voor 10 eenheden</strong>.</p>
-
-<p>Er staan 3 tientallen bij 1 234</p>
-
-<p>Als we een tien gaan omzetten en bij de eenheden gaan zetten zullen er nog 2 tientallen overblijven:</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th>Duizendtallen</th>
-    <th>Honderdtallen</th>
-    <th>Tientallen</th>
-    <th>Eenheden</th>
-  </tr>
-  <tr>
-    <th>1 234</th>
-    <td>1</td>
-    <td>2</td>
-    <td>2</td>
-    <td>14</td>
-  </tr>
-  <tr>
-    <th>− 738</th>
-    <td>0</td>
-    <td>7</td>
-    <td>3</td>
-    <td>8</td>
-  </tr>
-</table>
-
-<p>Nu kunnen we de eenheden aftrekken:</p>
-
-<p class="formula">14 − 8 = 6</p>
-
-<h4>Stap 2: de tientallen</h4>
-
-<p>We hebben 2 tientallen en moeten er 3 aftrekken:</p>
-
-<p class="formula">2 − 3</p>
-
-<p>Dat kan niet met alleen de 2 tientallen. We hebben daarom extra tientallen nodig.</p>
-
-<p>We kunnen <strong>1 honderdtal omwisselen voor 10 tientallen</strong>.</p>
-
-<p>Er staan 2 honderdtallen bij 1 234</p>
-
-<p>Als we een honderd gaan omzetten en bij de tientallen gaan zetten, zal er nog 1 honderdtal overblijven:</p>
-<table>
-  <tr>
-    <th></th>
-    <th>Duizendtallen</th>
-    <th>Honderdtallen</th>
-    <th>Tientallen</th>
-    <th>Eenheden</th>
-  </tr>
-  <tr>
-    <th>1 234</th>
-    <td>1</td>
-    <td>1</td>
-    <td>12</td>
-    <td>14</td>
-  </tr>
-  <tr>
-    <th>− 738</th>
-    <td>0</td>
-    <td>7</td>
-    <td>3</td>
-    <td>8</td>
-  </tr>
-</table>
-
-<p>Nu kunnen we de tientallen aftrekken:</p>
-<p class="formula">12 − 3 = 9</p>
-
-<h4>Stap 3: de honderdtallen</h4>
-
-<p>We hebben nog 1 honderdtal en moeten er 7 aftrekken:</p>
-
-<p class="formula">1 − 7</p>
-
-<p>Dat kan niet met alleen 1 honderdtal. We hebben daarom extra honderdtallen nodig.</p>
-
-<p>We kunnen <strong>1 duidendtal omwisselen voor 10 honderdtallen</strong>.</p>
-
-<p>Er staat 1 duidendtal bij 1 234</p>
-
-<p>Als we een duizend gaan omzetten en bij de honderdtallen gaan zetten, zal er nog 0 duidendtal overblijven:</p>
-<table>
-  <tr>
-    <th></th>
-    <th>Duizendtallen</th>
-    <th>Honderdtallen</th>
-    <th>Tientallen</th>
-    <th>Eenheden</th>
-  </tr>
-  <tr>
-    <th>1 234</th>
-    <td>0</td>
-    <td>11</td>
-    <td>12</td>
-    <td>14</td>
-  </tr>
-  <tr>
-    <th>− 738</th>
-    <td>0</td>
-    <td>7</td>
-    <td>3</td>
-    <td>8</td>
-  </tr>
-</table>
-
-<p>Nu kunnen we de honderdtallen aftrekken:</p>
-<p class="formula">11 − 7 = 4</p>
-
-
-<h4>Stap 4: de duizendtallen</h4>
-
-<p>We hebben het enige duizendtal gebruikt om 10 honderdtallen te maken.</p>
-
-<p>Er blijven dus geen duizendtallen over.</p>
-
-<p>Het antwoord is:</p>
-
-<table>
-  <tr>
-    <th></th>
-    <th>Duizendtallen</th>
-    <th>Honderdtallen</th>
-    <th>Tientallen</th>
-    <th>Eenheden</th>
-  </tr>
-  <tr>
-    <th>1 234</th>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <th>− 738</th>
-    <td></td>
-    <td>7</td>
-    <td>3</td>
-    <td>8</td>
-  </tr>
-  <tr>
-    <th>Verschil</th>
-    <td></td>
-    <td>4</td>
-    <td>9</td>
-    <td>6</td>
-  </tr>
-</table>
-
-<p>Dus:</p>
-
-<p class="formula">1 234 − 738 = 496</p>
-
-<div class="callout">
-  <p><strong>Onthoud:</strong></p>
-  <ul>
-    <li>Schrijf de getallen netjes onder elkaar.</li>
-    <li>Begin rechts bij de eenheden.</li>
-    <li>Kun je een cijfer niet aftrekken? Wissel dan één eenheid van de volgende positie om voor 10 eenheden.</li>
-    <li>Staat daar een 0? Ga verder naar links tot je een positie vindt waar je iets kunt omwisselen.</li>
-    <li>Controleer je antwoord eventueel met een optelling.</li>
-  </ul>
-
-</div>
-      <h3>Vermenigvuldigen</h3>
-
-<p>Met <strong>vermenigvuldigen</strong> kunnen we meerdere gelijke hoeveelheden snel samenrekenen.</p>
-
-<p>Bijvoorbeeld: je hebt 4 groepjes van 3 appels.</p>
-
-<p>Dat is hetzelfde als:</p>
-
-<p class="formula">3 + 3 + 3 + 3 = 12</p>
-
-<p>In plaats van vier keer 3 op te tellen, kunnen we schrijven:</p>
-
-<p class="formula">4 × 3 = 12</p>
-
-<p>We lezen dit als: <strong>4 keer 3 is 12</strong>.</p>
-
-<h4>Vermenigvuldigen als groepjes</h4>
-
-<p>Bij <strong>4 × 3</strong> hebben we:</p>
-
-<ul>
-  <li><strong>4</strong> gelijke groepjes;</li>
-  <li>in elk groepje zitten <strong>3</strong> dingen.</li>
-</ul>
-<div data-widget="groups"></div>
-
-<p>Dus:</p>
-
-<p class="formula">4 × 3 = 12</p>
-
-<p>Vermenigvuldigen kunnen we ook gebruiken om een hoeveelheid groter te maken.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">5 × 10 = 50</p>
-
-<p>5 wordt hier tien keer zo groot.</p>
-
-<h4>Vermenigvuldigen met 0</h4>
-
-<p>Als we een getal met 0 vermenigvuldigen, krijgen we altijd 0.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">7 × 0 = 0</p>
-
-<p class="formula">125 × 0 = 0</p>
-
-<p>Dit komt overeen met het idee van groepjes: 0 groepjes van iets bevat helemaal niets.</p>
-
-<h4>Vermenigvuldigen met 1</h4>
-
-<p>Als we een getal met 1 vermenigvuldigen, verandert het getal niet.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">8 × 1 = 8</p>
-
-<p class="formula">43 × 1 = 43</p>
-
-<p>Er is maar één groepje, dus de hoeveelheid blijft hetzelfde.</p>
-
-<h4>Vermenigvuldigen met 10</h4>
-
-<p>Als we een getal met 10 vermenigvuldigen, wordt elke plaatswaarde 10 keer groter.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">7 × 10 = 70</p>
-
-<p class="formula">23 × 10 = 230</p>
-
-<p>Je ziet dat de cijfers één plaats naar links opschuiven.</p>
-
-<div class="callout">
-  <p><strong>Onthoud:</strong></p>
-  <p>Vermenigvuldigen betekent dat we gelijke hoeveelheden combineren of een hoeveelheid meerdere keren nemen.</p>
-  <p>Bijzonder belangrijk:</p>
-  <p class="formula">getal × 0 = 0</p>
-</div>
-
-
-<h3>Eenvoudige tafels</h3>
-
-<p>Nu we begrijpen wat vermenigvuldigen betekent, kunnen we de eenvoudigste vermenigvuldigingen oefenen.</p>
-
-<p>De tafels van 1 tot en met 10 zijn belangrijk om vlot te kunnen rekenen. Het doel is dat eenvoudige vermenigvuldigingen na verloop van tijd bijna automatisch komen.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">2 × 4 = 8</p>
-<p class="formula">3 × 5 = 15</p>
-<p class="formula">7 × 2 = 14</p>
-
-<p>Je kunt een tafel ook zien als een reeks gelijke sprongen:</p>
-
-<p class="formula">
-  4 × 3 = 3 + 3 + 3 + 3 = 12
-</p>
-
-<p>Maar als je de tafels goed kent, hoef je niet telkens opnieuw op te tellen. Je weet dan meteen dat:</p>
-
-<p class="formula">
-  4 × 3 = 12
-</p>
-
-<div class="callout">
-  <p><strong>Onthoud:</strong></p>
-  <p>De tafels vormen de basis voor moeilijkere vermenigvuldigingen.</p>
-</div>
-
-
-<h3>Slim rekenen met vermenigvuldigen</h3>
-
-<p>Je hoeft niet elke vermenigvuldiging uit het hoofd te kennen. Vaak kun je een moeilijke vermenigvuldiging veranderen in een paar eenvoudige vermenigvuldigingen.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">
-  6 × 7
-</p>
-
-<p>Als je weet dat <strong>6 × 5 = 30</strong>, kun je verder rekenen:</p>
-
-<div data-widget="smartmult"></div>
-
-<p class="formula">
-  6 × 7 = 6 × 5 + 6 × 2
-</p>
-
-<p>Dus:</p>
-
-<p class="formula">
-  30 + 12 = 42
-</p>
-
-<p>Daarom is:</p>
-
-<p class="formula">
-  6 × 7 = 42
-</p>
-
-<h4>Een getal opsplitsen</h4>
-
-<p>Hetzelfde idee werkt met grotere getallen. Stel dat je <strong>7 × 13</strong> wilt berekenen.</p>
-
-<p>13 kunnen we opsplitsen in 10 en 3:</p>
-
-<p class="formula">
-  13 = 10 + 3
-</p>
-
-<p>Dan rekenen we:</p>
-
-<p class="formula">
-  7 × 13 = 7 × 10 + 7 × 3
-</p>
-
-<p>Dat geeft:</p>
-
-<p class="formula">
-  70 + 21 = 91
-</p>
-
-<p>Dus:</p>
-
-<p class="formula">
-  7 × 13 = 91
-</p>
-
-<h4>Een handige vermenigvuldiging zoeken</h4>
-
-<p>Je kunt soms ook een vermenigvuldiging kiezen die je al goed kent.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">
-  8 × 9
-</p>
-
-<p>Je weet misschien dat <strong>8 × 10 = 80</strong>. Eén groepje van 8 te veel kunnen we er weer aftrekken:</p>
-
-<p class="formula">
-  8 × 9 = 8 × 10 − 8
-</p>
-
-<p class="formula">
-  80 − 8 = 72
-</p>
-
-<p>Dus:</p>
-
-<p class="formula">
-  8 × 9 = 72
-</p>
-
-<div class="callout">
-  <p><strong>Belangrijk inzicht:</strong></p>
-  <p>Een moeilijke vermenigvuldiging kun je vaak veranderen in eenvoudige vermenigvuldigingen die je al kent.</p>
-  <p>Je kunt bijvoorbeeld een getal opsplitsen:</p>
-  <p class="formula">7 × 13 = 7 × 10 + 7 × 3</p>
-  <p>Of vertrekken van een bekende vermenigvuldiging:</p>
-  <p class="formula">8 × 9 = 8 × 10 − 8</p>
-  <p><strong>Goed rekenen betekent dus niet alleen veel uit het hoofd kennen, maar ook slimme strategieën gebruiken.</strong></p>
-</div>
-
-<h3>Delen</h3>
-
-<p>Delen is het verdelen van een aantal in <strong>gelijke groepen</strong>. Het is de omgekeerde bewerking van vermenigvuldigen.</p>
-
-<p>Stel dat we 12 appels eerlijk willen verdelen over 3 personen. Iedere persoon krijgt dan evenveel appels:</p>
-
-<p class="formula">12 ÷ 3 = 4</p>
-
-<p>Iedere persoon krijgt dus 4 appels.</p>
-
-<p>We kunnen dezelfde situatie ook bekijken vanuit het aantal groepjes. Hoeveel groepjes van 3 kunnen we maken met 12 voorwerpen?</p>
-
-<p class="formula">12 ÷ 3 = 4</p>
-
-<p>Ook hier is het antwoord 4. Daarom kunnen we delen op twee manieren begrijpen:</p>
-
-<ul>
-  <li><strong>Verdelen:</strong> 12 voorwerpen verdelen over 3 gelijke groepen geeft 4 per groep.</li>
-  <li><strong>Groepjes maken:</strong> hoeveel groepjes van 3 passen er in 12? Dat zijn er 4.</li>
-</ul>
-
-<div data-widget="divisionGroups"></div>
-
-<h4>Delen en vermenigvuldigen horen bij elkaar</h4>
-
-<p>Delen en vermenigvuldigen zijn omgekeerde bewerkingen.</p>
-
-<p>Als:</p>
-
-<p class="formula">3 × 4 = 12</p>
-
-<p>dan weten we ook:</p>
-
-<p class="formula">12 ÷ 3 = 4</p>
-
-<p>en:</p>
-
-<p class="formula">12 ÷ 4 = 3</p>
-
-<p>Je kunt een deling daarom controleren met een vermenigvuldiging.</p>
-
-<div class="callout">
-  <p><strong>Onthoud:</strong></p>
-  <p>Delen betekent een hoeveelheid eerlijk verdelen of bepalen hoeveel gelijke groepjes erin passen.</p>
-  <p>Vermenigvuldigen en delen zijn omgekeerde bewerkingen:</p>
-  <p class="formula">3 × 4 = 12</p>
-  <p class="formula">12 ÷ 3 = 4</p>
-  <p class="formula">12 ÷ 4 = 3</p>
-</div>
-
-<h3>Delen met rest</h3>
-
-<p>Niet elke hoeveelheid kan precies in gelijke groepen worden verdeeld.</p>
-
-<p>Stel dat we <strong>14 voorwerpen</strong> willen verdelen in groepjes van <strong>4</strong>.</p>
-<p class="formula">14 ÷ 4</p>
-
-<p>We kunnen drie volledige groepjes maken, namelijk :</p>
-<p class="formula">3 × 4 = 12</p>
-
-<p>Vier groepjes van vier zou niet gaan, want dan moeten we 16 voorwerpen hebben:</p>
-<p class="formula">4 × 4 = 16</p>
-
-<p>Dus we kiezen voor 3 groepjes van 4.</p> 
-<p>Maar dan blijven er nog 2 voorwerpen over. Dit is de rest.</p>
-
-<div data-widget="divisionRemainder"></div>
-
-<p>Het getal <strong>3</strong> noemen we het <strong>quotiënt</strong>. Het vertelt hoeveel volledige groepjes we kunnen maken.</p>
-
-<p>Het getal <strong>2</strong> noemen we de <strong>rest</strong>. Dat zijn de voorwerpen die niet meer in een volledig groepje passen.</p>
-
-<h4>De deling controleren</h4>
-
-<p>Een deling met rest kunnen we altijd controleren met een vermenigvuldiging.</p>
-
-<p>Bij <strong>14 ÷ 4 = 3 rest 2</strong> geldt:</p>
-
-<p class="formula">3 × 4 + 2 = 14</p>
-
-<p>De algemene vorm is:</p>
-
-<p class="formula">a = q × d + r</p>
-
-<p>Hierbij is <strong>a</strong> het getal dat we delen, <strong>q</strong> het quotiënt, <strong>d</strong> de deler en <strong>r</strong> de rest.</p>
-
-<p>De rest is altijd kleiner dan de deler. Anders zouden we nog een extra volledig groepje kunnen maken.</p>
-
-<p class="formula">0 ≤ r &lt; d</p>
-
-<div class="callout">
-  <p><strong>Onthoud:</strong></p>
-  <p>Bij een deling met rest maken we eerst zoveel mogelijk volledige groepjes.</p>
-  <p>Wat overblijft, is de rest.</p>
-</div>
-
-
-<h3>Slim delen</h3>
+    <h3>Slim delen</h3>
 
 <p>Een deling met grotere getallen lijkt soms moeilijk. Maar net zoals bij vermenigvuldigen kunnen we een getal vaak <strong>opsplitsen in eenvoudigere delen</strong>.</p>
 <p>In deze eerste kennismaking met slim delen gebruiken we alleen voorbeelden waarbij de getallen <strong>zonder rest</strong> deelbaar zijn. Als er een rest ontstaat, gebruiken we de methode van <em>delen met rest</em> die we eerder hebben geleerd.</p>
@@ -1132,71 +369,12 @@ const MILESTONES_1 = [
 
 <p class="formula">84 ÷ 4</p>
 
-<p>We kunnen 84 opsplitsen in 80 en 4:</p>
+<p>We kunnen 84 opsplitsen in 80 + 4:</p>
 
-<p class="formula">84 = 80 + 4</p>
-
-<p>Nu kunnen we beide delen afzonderlijk delen door 4:</p>
-
-<p class="formula">80 ÷ 4 = 20</p>
-
-<p class="formula">4 ÷ 4 = 1</p>
-
-<p>Dus:</p>
-
-<p class="formula">84 ÷ 4 = 20 + 1 = 21</p>
-
-<h4>Een handige splitsing zoeken</h4>
-
-<p>Je kunt een getal op verschillende manieren opsplitsen. Kies bij voorkeur een splitsing waardoor de afzonderlijke delingen gemakkelijk worden.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">96 ÷ 3</p>
-
-<p>We kunnen 96 opsplitsen in 90 en 6:</p>
-
-<p class="formula">96 = 90 + 6</p>
-
-<p>Daarna:</p>
-
-<p class="formula">90 ÷ 3 = 30</p>
-
-<p class="formula">6 ÷ 3 = 2</p>
-
-<p>Dus:</p>
-
-<p class="formula">96 ÷ 3 = 30 + 2 = 32</p>
-
-<p>Een andere handige strategie is vertrekken van een getal dat je gemakkelijk kunt delen.</p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">120 ÷ 6</p>
-
-<p>Omdat 12 ÷ 6 = 2, weten we meteen dat:</p>
-
-<p class="formula">120 ÷ 6 = 20</p>
-
-<div class="callout">
-  <p><strong>Belangrijk inzicht:</strong></p>
-  <p>Bij een moeilijke deling kun je vaak een getal opsplitsen in delen die je gemakkelijk kunt delen.</p>
-  <p class="formula">84 ÷ 4 = 80 ÷ 4 + 4 ÷ 4</p>
-  <p class="formula">= 20 + 1 = 21</p>
-  <p>Goed rekenen betekent dus niet alleen een vaste methode volgen. Je kunt ook zoeken naar een slimme manier om een berekening eenvoudiger te maken.</p>
-</div>
-
-
+<p class="formula">84 ÷ 4  = (80 + 4) ÷ 4 = (80÷4) + (4÷4) = 20 + 1 = 21 </p>
+<p>We maken hier terug gebruik van de haakjes en distributieve eigenschap. Hier komen we later op terug.</p>
 
 <h3>Delen door nul</h3>
-
-<p>Bij delen vragen we ons af: <strong>hoeveel groepjes van de deler passen in het getal?</strong></p>
-
-<p>Bijvoorbeeld:</p>
-
-<p class="formula">6 ÷ 2 = 3</p>
-
-<p>Er passen precies 3 groepjes van 2 in 6.</p>
 
 <p>Maar wat gebeurt er bij:</p>
 
@@ -1251,7 +429,7 @@ const MILESTONES_1 = [
 
 <h3>Commutatieve eigenschap</h3>
 
-<p>Bij vermenigvuldigen maakt de volgorde van de getallen niet uit.</p>
+<p>Zoals we eerder hebben gezien bij optellen en vermenigvuldigen maakt de volgorde van de getallen niet uit.</p>
 
 <p>Neem bijvoorbeeld:</p>
 
@@ -1261,7 +439,6 @@ const MILESTONES_1 = [
 
 <p class="formula">4 × 3 = 12</p>
 
-<div data-widget="commutative"></div>
 
 <p>We hebben dus:</p>
 
@@ -1279,21 +456,9 @@ const MILESTONES_1 = [
 
 <p>Bijvoorbeeld:</p>
 
-<p class="formula">8 − 3 = 5</p>
+<p class="formula">8 − 3 ≠ 3 - 8</p>
 
-<p class="formula">3 − 8 = −5</p>
-
-<p>Dus:</p>
-
-<p class="formula">8 − 3 ≠ 3 − 8</p>
-
-<p>Ook bij delen geldt:</p>
-
-<p class="formula">12 ÷ 3 = 4</p>
-
-<p class="formula">3 ÷ 12 = 0,25</p>
-
-<p>Daarom zijn aftrekken en delen <strong>niet commutatief</strong>.</p>
+<p class="formula">24 ÷ 12 ≠ 12 ÷ 24</p>
 
 <div class="callout">
   <p><strong>Onthoud:</strong></p>
@@ -1304,7 +469,6 @@ const MILESTONES_1 = [
 </div>
 
 <h3>Haakjes</h3>
-
 
 <p>Haakjes geven aan dat de berekening die ertussen staat, als één geheel moet worden bekeken.</p>
 
@@ -1374,9 +538,7 @@ const MILESTONES_1 = [
 
 <p>Het antwoord blijft hetzelfde.</p>
 
-<div data-widget="associative"></div>
-
-<p>We kunnen dus schrijven:</p>
+<p>Algemeen kunnen we kunnen dus schrijven:</p>
 
 <p class="formula">(a + b) + c = a + (b + c)</p>
 
@@ -1416,13 +578,9 @@ const MILESTONES_1 = [
 
 <p>Bijvoorbeeld:</p>
 
-<p class="formula">7 × 13 = (7 × 10) + (7 × 3)</p>
+<p class="formula">7 × 13 = 7 × (10 + 3) = (7 × 10) + (7 × 3)</p>
 
-<p>We hebben 13 dus opgesplitst in 10 en 3:</p>
-
-<p class="formula">13 = 10 + 3</p>
-
-<p>Dit is geen toevallige rekenhandigheid. Het is een belangrijk wiskundig principe. We geven dit principe de naam <strong>distributieve eigenschap</strong>.</p>
+<p>Dit is een belangrijk wiskundig principe. We geven dit principe de naam <strong>distributieve eigenschap</strong>.</p>
 
 <h4>Vermenigvuldigen over een optelling</h4>
 
@@ -1430,15 +588,11 @@ const MILESTONES_1 = [
 
 <p>In het algemeen geldt:</p>
 
-<p class="formula">a × (b + c) = a × b + a × c</p>
+<p class="formula">a × (b + c) = (a × b) + (a × c)</p>
 
 <p>Bij ons voorbeeld geeft dat:</p>
 
-<p class="formula">7 × (10 + 3) = 7 × 10 + 7 × 3</p>
-
-<p>En dus:</p>
-
-<p class="formula">7 × 13 = 70 + 21 = 91</p>
+<p class="formula">7 × 13 = (7 × 10) + (7 × 3) = 70 + 21 = 91</p>
 
 <div class="callout">
   <p><strong>Onthoud:</strong></p>
@@ -1618,12 +772,13 @@ const MILESTONES_1 = [
     goal: "Breid ℕ uit tot ℤ: tegenovergestelde, absolute waarde en rekenen met tekens.",
     theory: /* html */`
         <h2>Negatieve en gehele getallen</h2>
-        <p><strong>Doel:</strong></p>
+        <p><strong>Wat gaan we ontdekken?</strong></p>
 
         <ul>
-          <li>kennismaken met verzamelingen;</li>
-          <li>ontdekken waarom natuurlijke getallen niet altijd voldoende zijn;</li>
-          <li>leren rekenen met negatieve en positieve gehele getallen.</li>
+          <li>waarom ℕ niet genoeg is en hoe we die verzameling uitbreiden tot ℤ?</li>
+          <li>hoe je negatieve getallen op de getallenas zet en met elkaar vergelijkt?</li>
+          <li>wat is een absolute waarde?</li>
+          <li>wat er met de tekens gebeurt bij optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
         
         <h3>Verzameling en element</h3>
@@ -1665,19 +820,11 @@ const MILESTONES_1 = [
 
     <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
 
-    <p>De puntjes betekenen dat de reeks verdergaat.</p>
-
-    <p>Zo kunnen we bijvoorbeeld schrijven:</p>
-
-    <p class="formula">5 ∈ ℕ</p>
-
-    <p>Maar:</p>
+    <p>We hebben al gezien dat 0 het kleinste natuurlijke getal is en dat er geen grootste natuurlijke getal bestaat.</p>
+    <p>Een negatief getal behoort dus niet tot de verzameling van de natuurlijke getallen.</p>
+    <p>Bijvoorbeeld:</p>
 
     <p class="formula">−3 ∉ ℕ</p>
-
-    <p>Een negatief getal behoort dus niet tot de verzameling van de natuurlijke getallen.</p>
-
-
 
         <h3>De getallenlijn wordt uitgebreid</h3>
         <p>Tot nu toe konden we met natuurlijke getallen heel wat problemen oplossen.
@@ -1689,12 +836,6 @@ const MILESTONES_1 = [
       <p class="formula">3 − 5 = ?</p>
 
       <p>Er bestaat geen natuurlijk getal dat het antwoord is.</p>
-
-      <p>We kunnen vanaf 3 drie stappen teruggaan:</p>
-
-      <p class="formula">3 − 3 = 0</p>
-
-      <p>Maar daarna moeten we nog twee stappen verder terug.</p>
 
       <p>Daarom hebben we nieuwe getallen nodig die links van nul op de getallenlijn
       staan.</p>
@@ -1760,26 +901,18 @@ const MILESTONES_1 = [
       <p class="formula">ℕ ⊂ ℤ</p>
     </div>
 
-
-
         <h3>Tegenovergestelde getallen</h3>
 
 <p>Op de getallenlijn heeft elk positief getal een getal op precies dezelfde
 afstand van nul aan de andere kant.</p>
 
-<p>Het tegenovergestelde van 5 is −5.</p>
-
-<p>Het tegenovergestelde van −3 is 3.</p>
+<p>Het tegenovergestelde van 10 is −10.</p>
 
 <p>Het getal 0 is zijn eigen tegenovergestelde.</p>
 
 <p>We kunnen dit voorstellen als:</p>
 
-<p class="formula">5 ↔ −5</p>
-
-<p>en</p>
-
-<p class="formula">3 ↔ −3</p>
+<p class="formula">10 ↔ −10</p>
 
 <div class="callout insight">
   <strong>Inzicht</strong>

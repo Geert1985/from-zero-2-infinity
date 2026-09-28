@@ -6,8 +6,7 @@ const MILESTONES_3 = [
     id: "3.1",
     title: "Verandering & gemiddelde snelheid",
     goal: "Hoe meten we verandering?",
-    theory: /*html*/
-    `
+    theory: /*html*/ `
     <h2>Verandering & gemiddelde snelheid</h2>
 
     <p>
@@ -16,7 +15,7 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>Hoe kunnen we precies beschrijven hoe iets verandert?</strong>
+      <p><strong>Hoe kunnen we precies beschrijven hoe iets verandert?</strong></p>
     </div>
 
     <p>
@@ -99,9 +98,9 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>
+      <p><strong>
         Gemiddelde snelheid = verandering in positie gedeeld door verandering in tijd.
-      </strong>
+      </strong></p>
     </div>
 
     <p>
@@ -164,7 +163,7 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Stel dat de temperatuur stijgt van 10 °C naar 25 °C
+      Stel dat de temperatuur stijgt van 10 ° C naar 25 ° C
       gedurende 3 uur.
     </p>
 
@@ -194,10 +193,10 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>
+      <p><strong>
         De gemiddelde veranderingssnelheid vertelt hoeveel een grootheid
         gemiddeld verandert per eenheid van de onafhankelijke variabele.
-      </strong>
+      </strong></p>
     </div>
 
 
@@ -291,11 +290,11 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>
+      <p><strong>
         Onthoud vooral de structuur:
         <br><br>
         verandering gedeeld door verandering.
-      </strong>
+      </strong></p>
     </div>
 
 
@@ -334,10 +333,10 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>
+      <p><strong>
         Hoeveel verandert de ene grootheid wanneer de andere grootheid
         met een bepaalde hoeveelheid verandert?
-      </strong>
+      </strong></p>
     </div>
 
 
@@ -393,9 +392,9 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>
+      <p><strong>
         verandering → verhouding van veranderingen → helling
-      </strong>
+      </strong></p>
     </div>
 
 
@@ -469,12 +468,12 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>
+      <p><strong>
         De gemiddelde veranderingssnelheid kijkt naar een interval.
         <br><br>
         De volgende stap is ontdekken hoe we de verandering op één punt
         kunnen bepalen.
-      </strong>
+      </strong></p>
     </div>
 
 
@@ -522,10 +521,10 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>
+      <p><strong>
         Van gemiddelde verandering naar ogenblikkelijke verandering:
         we maken het interval steeds kleiner.
-      </strong>
+      </strong></p>
     </div>
 
 
@@ -546,69 +545,17 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <strong>
+      <p><strong>
         Welke waarde nadert de gemiddelde veranderingssnelheid
         wanneer het interval naar nul gaat?
-      </strong>
+      </strong></p>
     </div>
 
     <p>
       Dat is precies de vraag die we in de volgende milestone zullen onderzoeken.
     </p>
 
-    <p>
-      Daar ontstaat de overgang:
-    </p>
-
-    <p class="formula">
-      \\text{gemiddelde veranderingssnelheid}
-      \\rightarrow
-      \\text{limiet}
-      \\rightarrow
-      \\text{ogenblikkelijke veranderingssnelheid}
-    </p>
-
-    <p>
-      En die ogenblikkelijke veranderingssnelheid noemen we
-      <strong>de afgeleide</strong>.
-    </p>
-
-
-    <h3>Samenvatting</h3>
-
-    <p>
-      In deze milestone hebben we geleerd dat verandering meetbaar is.
-    </p>
-
-    <ul>
-      <li>
-        <strong>Verandering:</strong>
-        \\(\\Delta y=y_2-y_1\\)
-      </li>
-      <li>
-        <strong>Verandering in de onafhankelijke variabele:</strong>
-        \\(\\Delta x=x_2-x_1\\)
-      </li>
-      <li>
-        <strong>Gemiddelde veranderingssnelheid:</strong>
-        verandering gedeeld door verandering
-      </li>
-      <li>
-        <strong>Geometrisch:</strong>
-        de gemiddelde veranderingssnelheid is de helling van de secant.
-      </li>
-      <li>
-        <strong>Belangrijke volgende vraag:</strong>
-        wat gebeurt er wanneer het interval steeds kleiner wordt?
-      </li>
-    </ul>
-
-    <div class="callout">
-      <strong>De rode draad:</strong>
-      <br><br>
-      verandering → gemiddelde veranderingssnelheid → helling
-      → steeds kleiner interval → limiet → afgeleide
-    </div>
+  
   `
   },
 
