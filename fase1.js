@@ -132,7 +132,7 @@ const MILESTONES_1 = [
 
     <p>In deze cursus hoort <strong>0 ook bij de natuurlijke getallen:</strong></p>
     <p>De verzameling van de natuurlijke getallen kunnen we dus als volgt noteren:</p>
-    <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ..., 3521, 3522,...,999 999 999,...}</p>
+    <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
     <h4>Opvolger en voorganger</h4>
       <p>Na elk natuurlijk getal <span class="formula-inline">n</span> komt de <strong>opvolger</strong> <span class="formula-inline">n + 1</span>.</p>
       <p>Bijvoorbeeld: <span class="formula-inline">12 → 13</span>.</p>
@@ -188,7 +188,7 @@ const MILESTONES_1 = [
 <h2>De vier hoofdbewerkingen</h2>
   <p><strong>Wat gaan we ontdekken?</strong></p>
   <ul>
-    <li>Wat kunnen we doen met deze symbolen: +, -, × en ÷ ?</li>
+    <li>Wat kunnen we doen met deze symbolen: +, -, × en ÷?</li>
     <li>Verandert de volgorde van bewerkingen het antwoord?</li>
     <li>Wanneer mogen we de getallen in een bewerking omwisselen?</li>
     <li>Wat als een deling niet uitkomt?</li>
@@ -772,25 +772,14 @@ const MILESTONES_1 = [
           <li>Wat gebeurt er met de tekens bij optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
         
-        <p>Zoals we in 1.1 zagen, gebruiken we accolades om de elementen van een verzameling op te sommen en het symbool <strong>∈</strong> om aan te geven dat een getal tot een verzameling behoort. In deze les gebruiken we die notatie opnieuw.</p>
-
-    <p>In de wiskunde gebruiken we een speciaal symbool om aan te geven dat iets
-    een element van een verzameling is:</p>
-
-    <p class="formula">3 ∈ {0, 1, 2, 3, 4}</p>
-    <p>We kunnen dus lezen:</p>
-
-    <p><strong>3 is een element van de verzameling {0, 1, 2, 3, 4}.</strong> Het symbool ∈ is de griekse letter epsilon.</p>
-
-    <p>Voor een getal dat niet in de verzameling zit, gebruiken we
-    <strong>∉</strong>.</p>
-
-    <p class="formula">7 ∉ {0, 1, 2, 3, 4}</p>
-
-    <p>Dit betekent:</p>
-
-    <p><strong>7 is geen element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
-
+        <p>In 1.1 noteerden we verzamelingen met accolades, bijvoorbeeld
+        <span class="formula-inline">ℕ = {0, 1, 2, 3, …}</span>.
+        Het teken <strong>∈</strong> betekent “is element van”,
+        <strong>∉</strong> betekent “is geen element van”.</p>
+        <p class="formula">3 ∈ ℕ</p>
+        <p class="formula">−3 ∉ ℕ</p>
+        <p>Negatieve getallen horen dus niet bij de natuurlijke getallen.
+        Daarom moeten we de verzameling uitbreiden.</p>
 
         <h3>De natuurlijke getallen</h3>
         <p>De verzameling van de natuurlijke getallen krijgt een naam:
