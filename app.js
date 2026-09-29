@@ -140,14 +140,14 @@ function topbar(extra) {
 function renderAdmin() {
   if (isAdmin()) {
     return (
-      '<div class="screen" style="background-image:url(\'assets/home.webp\')">' + topbar() +
+      '<div class="screen" style="background-image:url(\'' + bgFor() + "')\">" + topbar() +
       '<div class="layout"><div class="panel"><h1>Admin</h1>' +
       "<p>Alle fases, lessen en toetsen zijn open.</p>" +
       '<button class="btn" id="admin-logout">Uitloggen</button></div></div></div>'
     );
   }
   return (
-    '<div class="screen" style="background-image:url(\'assets/home.webp\')">' + topbar() +
+    '<div class="screen" style="background-image:url(\'' + bgFor() + "')\">" + topbar() +
     '<div class="layout"><div class="panel"><h1>Admin</h1>' +
     "<p>Log in om het hele leerpad te bekijken zonder toetsen te halen.</p>" +
     '<form id="admin-form">' +
