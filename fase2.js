@@ -2070,6 +2070,10 @@ const MILESTONES_2 = [
 
     <h3>Intervallen</h3>
 
+    <div class="theory-image">
+      <img src="assets/getallenlijn-tussen-min1-en-3.svg" alt="Een interval met een gesloten grens bij −1 en een open grens bij 3: [−1, 3).">
+    </div>
+
     <p>Een hele verzameling getallen kunnen we compact beschrijven met een <strong>interval</strong>.</p>
 
     <p>Bijvoorbeeld:</p>
@@ -4813,7 +4817,7 @@ const MILESTONES_2 = [
     <h3>Parallelle rechten</h3>
 
     <div class="theory-image">
-      <img src="assets/evenwijdige-rechten.svg" alt="Twee evenwijdige rechten met gelijke helling en constante afstand.">
+      <img src="assets/evenwijdig-dwarsliggende.svg" alt="Twee evenwijdige rechten met gelijke helling en constante afstand.">
     </div>
 
     <p>
@@ -5042,7 +5046,7 @@ const MILESTONES_2 = [
     <h3>De verbinding met Pythagoras</h3>
 
     <div class="theory-image">
-      <img src="assets/pythagoras-3-4-5.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
+      <img src="assets/pythagoras-345.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
     </div>
 
     <p>
@@ -5488,7 +5492,7 @@ const MILESTONES_2 = [
     <h3>De stelling van Pythagoras</h3>
 
     <div class="theory-image">
-      <img src="assets/pythagoras-3-4-5.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
+      <img src="assets/pythagoras-345.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
     </div>
 
     <p>
@@ -7867,6 +7871,8 @@ const MILESTONES_2 = [
 
     <h3>De vorm f(x) = ax + b</h3>
 
+    <div class="callout"><strong>Notatie:</strong> De <span class="formula-inline">a</span> hier is de <span class="formula-inline">m</span> uit les 2.8: beide letters geven de helling van de rechte aan.</div>
+
     <div class="callout"><strong>Notatie:</strong> in 2.8 gebruikten we <span class="formula-inline">m</span> voor de helling van een rechte. In functies gebruiken we hier <span class="formula-inline">a</span> voor dezelfde rol. Dus <span class="formula-inline">a = m</span> wanneer we hetzelfde verband beschrijven.</div>
 
     <p>De algemene vorm van een lineaire functie is:</p>
@@ -9898,7 +9904,7 @@ const MILESTONES_2 = [
     <h3>De eenheidscirkel</h3>
 
     <div class="theory-image">
-      <img src="assets/eenheidscirkel.svg" alt="De eenheidscirkel met een hoek en het punt met coördinaten cosinus en sinus.">
+      <img src="assets/eenheidscirkel-sin-cos.svg" alt="De eenheidscirkel met een hoek en het punt met coördinaten cosinus en sinus.">
     </div>
 
     <div data-widget="unitcircle"></div>
