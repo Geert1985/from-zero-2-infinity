@@ -6,7 +6,7 @@ const MILESTONES_1 = [
     goal: "Onderscheid cijfer en getal, gebruik het tientallig positiestelsel en orden natuurlijke getallen.",
     theory: /* html */`
 <h2>Cijfers en Getallen</h2>
-  <p><strong>Wat gaan we ontdekken?</strong> </p>
+  <p><strong>Wat gaan we ontdekken?</strong></p>
   <ul>
     <li>Wat is het verschil tussen een cijfer en een getal?</li>
     <li>Hoe kunnen we met slechts tien cijfers alle natuurlijke getallen schrijven?</li>
@@ -781,10 +781,10 @@ const MILESTONES_1 = [
         <p><strong>Wat gaan we ontdekken?</strong></p>
 
         <ul>
-          <li>waarom ℕ niet genoeg is en hoe we die verzameling uitbreiden tot ℤ?</li>
-          <li>hoe je negatieve getallen op de getallenas zet en met elkaar vergelijkt?</li>
+          <li>waarom is ℕ niet genoeg en waarom we de verzameling uitbreiden tot ℤ?</li>
+          <li>hoe zet je negatieve getallen op de getallenas en vergelijk ze met elkaar?</li>
           <li>wat is een absolute waarde?</li>
-          <li>wat er met de tekens gebeurt bij optellen, aftrekken, vermenigvuldigen en delen?</li>
+          <li>wat gebeurt er met de tekens bij optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
         
         <h3>Verzameling en element</h3>
@@ -1008,12 +1008,11 @@ negatieve getallen.</p>
     goal: "Zie een breuk als getal op de lijn en reken met gelijkwaardige, vereenvoudigde en gemengde breuken.",
     theory: /* html */`
         <h2>Breuken en rationale getallen</h2>
-        <p><strong>Doel:</strong></p>
-
-        <ul>
-          <li>ontdekken waarom gehele getallen niet genoeg zijn voor elke deling;</li>
-          <li>inzien dat een breuk een getal is dat een plaats heeft op de getallenas;</li>
-          <li>leren rekenen met breuken;</li>
+         <p><strong>Wat gaan we ontdekken?</strong></p>
+         <ul>
+          <li>hoe verdelen we een geheel in gelijke delen?</li>
+          <li>hoe zet je breuken op een getallenas en vergelijk je ze met elkaar?</li>
+          <li>hoe moeten we breuken optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
 
         <h3>Een geheel</h3>
@@ -1165,9 +1164,7 @@ negatieve getallen.</p>
       betekenis.
     </p>
 
-    <p class="formula">
-      \\frac{3}{5}
-    </p>
+    <p class="formula">\\frac{3}{5}</p>
 
     <p>
       Het getal <strong>boven</strong> de breukstreep noemen we de
@@ -1179,14 +1176,13 @@ negatieve getallen.</p>
       </p>
 
     <div class="callout">
-      <strong>Onthoud</strong>
+      <p><strong>Onthoud</strong></p>
       <p>
         De <strong>noemer</strong> vertelt in hoeveel gelijke delen
         het geheel is verdeeld.
       </p>
-      
-
-
+    </div>
+    
         <h3>Breuken op de getallenlijn</h3>
  <p>
       Net zoals we gehele getallen op een getallenlijn kunnen plaatsen,
