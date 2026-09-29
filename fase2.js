@@ -9,6 +9,65 @@ const MILESTONES_2 = [
 
     <p><strong>Doel:</strong></p>
     <ul>
+      <li>sinus, cosinus en tangens begrijpen als verhoudingen in een rechthoekige driehoek</li>
+      <li>de juiste goniometrische verhouding kiezen</li>
+      <li>onbekende zijden en hoeken berekenen</li>
+      <li>het verband met gelijkvormigheid en Pythagoras begrijpen</li>
+      <li>sinus en cosinus herkennen op de eenheidscirkel</li>
+      <li>de verbinding leggen tussen hoeken, coördinaten, hellingen en periodieke beweging</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Kernidee:</strong> Trigonometrie verbindt hoeken met verhoudingen van lengtes. Via gelijkvormigheid en de eenheidscirkel groeit dit uit tot een taal voor richtingen, coördinaten en periodieke verschijnselen.
+    </div>
+
+    <p><strong>Doel:</strong></p>
+    <ul>
+      <li>exponentiële groei en afname herkennen</li>
+      <li>groeifactoren koppelen aan percentages</li>
+      <li>exponentiële functies herkennen en interpreteren</li>
+      <li>lineaire en exponentiële groei onderscheiden</li>
+      <li>logaritmen begrijpen als omgekeerde bewerking van machtsverheffen</li>
+      <li>eenvoudige exponentiële vergelijkingen met logaritmen oplossen</li>
+      <li>logaritmen vooral gebruiken als hulpmiddel om exponenten terug te vinden</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Kernidee:</strong> Exponentiële functies beschrijven vermenigvuldigende groei of afname. Een logaritme draait machtsverheffen om en helpt een onbekende exponent terug te vinden.
+    </div>
+
+    <p><strong>Doel:</strong></p>
+    <ul>
+      <li>lineaire functies herkennen en beschrijven met f(x) = ax + b</li>
+      <li>de betekenis van a en b begrijpen</li>
+      <li>lineaire functies tekenen en aflezen</li>
+      <li>een lineaire formule bepalen uit gegevens</li>
+      <li>begrijpen wanneer een verband niet lineair is</li>
+      <li>kwadratische functies en parabolen herkennen</li>
+      <li>de betekenis van a, b en c in een kwadratische functie begrijpen</li>
+      <li>het verband leggen tussen kwadratische functies en kwadratische vergelijkingen</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Kernidee:</strong> Een lineaire functie beschrijft een constante verandering; een kwadratische functie beschrijft een verband waarvan de verandering zelf verandert. Grafieken maken dat verschil zichtbaar.
+    </div>
+
+    <p><strong>Doel:</strong></p>
+    <ul>
+      <li>begrijpen wat een functie is als verband tussen invoer en uitvoer</li>
+      <li>functies kunnen beschrijven met een tabel, grafiek en formule</li>
+      <li>functienotatie f(x) correct lezen en gebruiken</li>
+      <li>domein en bereik herkennen</li>
+      <li>onderscheiden wanneer een relatie wel of geen functie is</li>
+      <li>functies gebruiken om concrete situaties te modelleren</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Kernidee:</strong> Een functie koppelt elke toegelaten invoer aan precies één uitvoer. Tabellen, grafieken en formules zijn verschillende manieren om hetzelfde verband te beschrijven.
+    </div>
+
+    <p><strong>Doel:</strong></p>
+    <ul>
       <li>begrijpen waarom we letters gebruiken om getallen voor te stellen</li>
       <li>het verschil begrijpen tussen een onbekende en een veranderlijke</li>
       <li>een algebraïsche uitdrukking lezen en de termen, coëfficiënten en constanten herkennen</li>
@@ -917,7 +976,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>Bij eenvoudige lineaire vergelijkingen kunnen we een vaste strategie gebruiken:</p>
 
@@ -933,7 +992,7 @@ const MILESTONES_2 = [
     <p>De precieze volgorde kan soms verschillen, maar het onderliggende principe blijft hetzelfde: <strong>maak de onbekende stap voor stap vrij zonder de gelijkheid te verbreken.</strong></p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>Een vergelijking oplossen is meer dan een trucje met "naar de andere kant brengen".</p>
 
@@ -2289,7 +2348,7 @@ const MILESTONES_2 = [
     <p>Een vergelijking leidt vaak tot een afzonderlijke waarde; een ongelijkheid vaak tot een interval of een combinatie van intervallen.</p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>Bij een eenvoudige ongelijkheid kunnen we deze werkwijze gebruiken:</p>
 
@@ -2307,7 +2366,7 @@ const MILESTONES_2 = [
     <p>Controleer tenslotte of de gevonden oplossingen passen bij de context.</p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>Een ongelijkheid is geen ingewikkelde versie van een vergelijking. Het is een andere manier om een voorwaarde te beschrijven.</p>
 
@@ -3056,7 +3115,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Veelgemaakte fouten</h3>
+    <h4>Veelgemaakte fouten</h4>
 
     <p><strong>Fout 1: exponenten vermenigvuldigen bij een product</strong></p>
 
@@ -3093,7 +3152,7 @@ const MILESTONES_2 = [
     <p class="formula">√(x²) = |x|</p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>
       Wanneer je een algebraïsche uitdrukking met machten, wortels
@@ -3116,7 +3175,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>
       We begonnen met een eenvoudige vraag:
@@ -4066,7 +4125,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Veelgemaakte fouten</h3>
+    <h4>Veelgemaakte fouten</h4>
 
     <p><strong>Fout 1: slechts één wortel nemen</strong></p>
 
@@ -4120,7 +4179,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>
       Bij een kwadratische vergelijking kun je deze werkwijze gebruiken:
@@ -4172,7 +4231,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>
       Een kwadratische vergelijking is meer dan een moeilijkere versie
@@ -4681,7 +4740,7 @@ const MILESTONES_2 = [
     <p class="formula">x = a</p>
 
 
-    <h3>De vergelijking van een rechte</h3>
+    <h4>De vergelijking van een rechte</h4>
 
     <p>
       Een rechte met helling m kan worden geschreven als:
@@ -4721,7 +4780,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een rechte bepalen uit een punt en een helling</h3>
+    <h4>Een rechte bepalen uit een punt en een helling</h4>
 
     <p>
       Stel dat we de helling kennen:
@@ -4767,7 +4826,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>De punt-hellingvorm</h3>
+    <h4>De punt-hellingvorm</h4>
 
     <p>
       We kunnen dezelfde redenering rechtstreeks schrijven als:
@@ -4810,7 +4869,11 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Parallelle rechten</h3>
+    <h4>Parallelle rechten</h4>
+
+    <div class="theory-image">
+      <img src="assets/evenwijdige-rechten.svg" alt="Twee evenwijdige rechten met gelijke helling en constante afstand.">
+    </div>
 
     <p>
       Twee verschillende rechten zijn parallel wanneer ze dezelfde richting
@@ -4840,7 +4903,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Loodrechte rechten</h3>
+    <h4>Loodrechte rechten</h4>
 
     <p>
       Twee rechten staan loodrecht op elkaar wanneer hun richtingen
@@ -4878,7 +4941,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Het snijpunt van twee rechten</h3>
+    <h4>Het snijpunt van twee rechten</h4>
 
     <p>
       Wanneer twee rechten elkaar snijden, heeft hun snijpunt
@@ -4926,7 +4989,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Geen of oneindig veel snijpunten</h3>
+    <h4>Geen of oneindig veel snijpunten</h4>
 
     <p>
       Niet iedere combinatie van twee rechten heeft precies één snijpunt.
@@ -4958,7 +5021,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een rechte vanuit twee punten</h3>
+    <h4>Een rechte vanuit twee punten</h4>
 
     <p>
       Wanneer twee punten op dezelfde rechte liggen, bepalen ze samen
@@ -4998,7 +5061,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een geometrisch probleem wordt algebra</h3>
+    <h4>Een geometrisch probleem wordt algebra</h4>
 
     <p>
       Stel dat we willen weten waar een rechte een bepaalde verticale
@@ -5035,7 +5098,11 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>De verbinding met Pythagoras</h3>
+    <h4>De verbinding met Pythagoras</h4>
+
+    <div class="theory-image">
+      <img src="assets/pythagoras-3-4-5.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
+    </div>
 
     <p>
       De afstandsformule lijkt misschien een nieuwe formule,
@@ -5063,7 +5130,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Van geometrie naar algebra en terug</h3>
+    <h4>Van geometrie naar algebra en terug</h4>
 
     <p>
       We kunnen nu in beide richtingen werken.
@@ -5087,7 +5154,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>
       Bij een probleem in het coördinatenvlak kun je deze werkwijze gebruiken:
@@ -5104,7 +5171,7 @@ const MILESTONES_2 = [
     </ol>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>
       We begonnen met een eenvoudige vraag:
@@ -5596,7 +5663,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Omtrek</h3>
+    <h4>Omtrek</h4>
 
     <p>
       De <strong>omtrek</strong> van een figuur is de totale lengte
@@ -5627,7 +5694,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Oppervlakte</h3>
+    <h4>Oppervlakte</h4>
 
     <p>
       De <strong>oppervlakte</strong> vertelt hoeveel vlak een figuur inneemt.
@@ -5668,7 +5735,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Waarom oppervlakte-eenheden kwadratisch zijn</h3>
+    <h4>Waarom oppervlakte-eenheden kwadratisch zijn</h4>
 
     <p>
       Stel dat een vierkant een zijde van 3 meter heeft.
@@ -5694,7 +5761,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Inhoud van ruimtelijke figuren</h3>
+    <h4>Inhoud van ruimtelijke figuren</h4>
 
     <p>
       Bij driedimensionale objecten komt er een derde dimensie bij:
@@ -5723,7 +5790,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Eenheden vertellen wat je berekent</h3>
+    <h4>Eenheden vertellen wat je berekent</h4>
 
     <p>
       De eenheden vormen een belangrijke controle.
@@ -5760,7 +5827,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Van geometrie naar algebra</h3>
+    <h4>Van geometrie naar algebra</h4>
 
     <p>
       Meetkunde en algebra zijn geen volledig afzonderlijke werelden.
@@ -5795,7 +5862,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een figuur kan meerdere eigenschappen tegelijk hebben</h3>
+    <h4>Een figuur kan meerdere eigenschappen tegelijk hebben</h4>
 
     <p>
       Een rechthoek heeft bijvoorbeeld tegelijkertijd eigenschappen
@@ -5820,7 +5887,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een volledige toepassing</h3>
+    <h4>Een volledige toepassing</h4>
 
     <p>
       Een ladder van 5 meter lang staat tegen een verticale muur.
@@ -5870,7 +5937,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>Bewijzen versus meten</h3>
+    <h4>Bewijzen versus meten</h4>
 
     <p>
       Een belangrijk verschil tussen wiskunde en meten in de werkelijkheid
@@ -5904,7 +5971,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Van eigenschappen naar stellingen</h3>
+    <h4>Van eigenschappen naar stellingen</h4>
 
     <p>
       In de meetkunde kunnen we een keten van redeneringen opbouwen.
@@ -5938,7 +6005,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>
       Bij een meetkundig probleem kun je deze werkwijze gebruiken:
@@ -5956,7 +6023,7 @@ const MILESTONES_2 = [
     </ol>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>
       We begonnen met eenvoudige ideale vormen:
@@ -6376,6 +6443,10 @@ const MILESTONES_2 = [
 
     <h3>Gelijkvormige driehoeken</h3>
 
+    <div class="theory-image">
+      <img src="assets/gelijkvormige-driehoeken.svg" alt="Twee gelijkvormige driehoeken met overeenkomstige hoeken en evenredige zijden.">
+    </div>
+
     <p>
       Driehoeken zijn bijzonder belangrijk omdat we later in trigonometrie
       voortdurend met verhoudingen van hun zijden zullen werken.
@@ -6454,7 +6525,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>Oppervlakte verandert anders dan lengte</h3>
+    <h4>Oppervlakte verandert anders dan lengte</h4>
 
     <p>
       Tot nu toe keken we naar lengtes.
@@ -6499,7 +6570,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Waarom verschijnt k²?</h3>
+    <h4>Waarom verschijnt k²?</h4>
 
     <p>
       Dat is geen nieuwe mysterieuze regel.
@@ -6544,7 +6615,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>Een oppervlakte berekenen na een vergroting</h3>
+    <h4>Een oppervlakte berekenen na een vergroting</h4>
 
     <p>
       Stel dat een figuur een oppervlakte van 12 cm² heeft
@@ -6569,7 +6640,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Volume verandert met k³</h3>
+    <h4>Volume verandert met k³</h4>
 
     <p>
       Bij een driedimensionaal object hebben we drie lengterichtingen:
@@ -6622,7 +6693,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>Schaaltekeningen</h3>
+    <h4>Schaaltekeningen</h4>
 
     <p>
       Gelijkvormigheid wordt veel gebruikt om grote objecten
@@ -6660,7 +6731,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Schaal is een verhouding</h3>
+    <h4>Schaal is een verhouding</h4>
 
     <p>
       Een schaal zoals 1 : 50 betekent niet dat er ergens een
@@ -6703,7 +6774,7 @@ const MILESTONES_2 = [
     <p class="formula">750 m = 0,75 km</p>
 
 
-    <h3>Van werkelijkheid naar tekening</h3>
+    <h4>Van werkelijkheid naar tekening</h4>
 
     <p>
       We kunnen ook de andere richting uit rekenen.
@@ -6735,7 +6806,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>De schaalfactor kan kleiner zijn dan 1</h3>
+    <h4>De schaalfactor kan kleiner zijn dan 1</h4>
 
     <p>
       Een schaaltekening is meestal kleiner dan de werkelijkheid.
@@ -6767,7 +6838,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Een volledig schaalprobleem</h3>
+    <h4>Een volledig schaalprobleem</h4>
 
     <p>
       Stel dat een plattegrond van een tuin schaal 1 : 200 heeft.
@@ -6807,7 +6878,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Waarom is gelijkvormigheid zo krachtig?</h3>
+    <h4>Waarom is gelijkvormigheid zo krachtig?</h4>
 
     <p>
       Gelijkvormigheid laat ons eigenschappen van een figuur
@@ -6835,7 +6906,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Gelijkvormigheid en verhoudingen in driehoeken</h3>
+    <h4>Gelijkvormigheid en verhoudingen in driehoeken</h4>
 
     <p>
       Hier begint de verbinding met de volgende belangrijke stap
@@ -6887,7 +6958,7 @@ const MILESTONES_2 = [
     </div>
 
 
-    <h3>Veelgemaakte fouten</h3>
+    <h4>Veelgemaakte fouten</h4>
 
     <p>
       Bij gelijkvormigheid ontstaan vaak fouten doordat lengtes,
@@ -6923,7 +6994,7 @@ const MILESTONES_2 = [
     </ul>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>
       Bij een probleem met gelijkvormige figuren kun je steeds dezelfde
@@ -6949,7 +7020,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>
       Gelijkvormigheid gaat over figuren die dezelfde vorm hebben,
@@ -7068,6 +7139,10 @@ const MILESTONES_2 = [
 
 
     <h3>Een functie als machine</h3>
+
+    <div class="theory-image">
+      <img src="assets/functie-machine.svg" alt="Een functie als machine die elke toegelaten invoer naar precies één uitvoer stuurt.">
+    </div>
 
     <p>Je kunt een functie voorstellen als een machine die volgens een vaste regel werkt.</p>
 
@@ -7296,7 +7371,7 @@ const MILESTONES_2 = [
     <p>Hier zien we een belangrijke verbinding met milestone 2.3: <strong>functies en vergelijkingen kunnen samen worden gebruikt om een onbekende te vinden.</strong></p>
 
 
-    <h3>Het verschil tussen een variabele en een functie</h3>
+    <h4>Het verschil tussen een variabele en een functie</h4>
 
     <p>De begrippen <strong>variabele</strong> en <strong>functie</strong> zijn niet hetzelfde.</p>
 
@@ -7313,7 +7388,7 @@ const MILESTONES_2 = [
     <p>De functie is dus niet hetzelfde als de letter x.</p>
 
 
-    <h3>Domein: welke invoer is toegestaan?</h3>
+    <h4>Domein: welke invoer is toegestaan?</h4>
 
     <p>Niet elke formule kan voor elke invoerwaarde worden gebruikt.</p>
 
@@ -7336,7 +7411,7 @@ const MILESTONES_2 = [
     <p>In dit voorbeeld hoort 0 dus niet bij het domein.</p>
 
 
-    <h3>Bereik: welke uitvoer is mogelijk?</h3>
+    <h4>Bereik: welke uitvoer is mogelijk?</h4>
 
     <p>Naast het domein kunnen we ook kijken naar de uitvoerwaarden die een functie kan produceren.</p>
 
@@ -7359,7 +7434,7 @@ const MILESTONES_2 = [
     <p>Het domein gaat dus over mogelijke <strong>invoer</strong>; het bereik over mogelijke <strong>uitvoer</strong>.</p>
 
 
-    <h3>Niet elke relatie is een functie</h3>
+    <h4>Niet elke relatie is een functie</h4>
 
     <p>We kunnen twee grootheden op allerlei manieren met elkaar verbinden. Maar niet elke relatie is een functie.</p>
 
@@ -7376,7 +7451,7 @@ const MILESTONES_2 = [
     <p>Omgekeerd mogen verschillende invoerwaarden wel dezelfde uitvoer hebben.</p>
 
 
-    <h3>Hoe herken je een functie in een tabel?</h3>
+    <h4>Hoe herken je een functie in een tabel?</h4>
 
     <p>Bij een tabel kun je eenvoudig controleren of een relatie een functie is.</p>
 
@@ -7414,7 +7489,11 @@ const MILESTONES_2 = [
     <p>Dit kan dus geen functie zijn.</p>
 
 
-    <h3>Hoe herken je een functie in een grafiek?</h3>
+    <h4>Hoe herken je een functie in een grafiek?</h4>
+
+    <div class="theory-image">
+      <img src="assets/verticale-lijntest.svg" alt="Een grafiek waarbij een verticale lijn maximaal één snijpunt heeft.">
+    </div>
 
     <p>Ook een grafiek kunnen we controleren.</p>
 
@@ -7429,7 +7508,7 @@ const MILESTONES_2 = [
     <p>Snijdt iedere verticale lijn de grafiek hoogstens één keer, dan kan de grafiek wel een functie van x voorstellen.</p>
 
 
-    <h3>Een functie kan stijgen en dalen</h3>
+    <h4>Een functie kan stijgen en dalen</h4>
 
     <p>Een functie hoeft niet altijd groter te worden wanneer de invoer groter wordt.</p>
 
@@ -7450,7 +7529,7 @@ const MILESTONES_2 = [
     <p>Dit soort eigenschappen kunnen we later uit de grafiek en de formule aflezen.</p>
 
 
-    <h3>Een constante functie</h3>
+    <h4>Een constante functie</h4>
 
     <p>Soms verandert de uitvoer helemaal niet wanneer de invoer verandert.</p>
 
@@ -7473,7 +7552,7 @@ const MILESTONES_2 = [
     <p>De invoer mag veranderen, terwijl de uitvoer gelijk blijft.</p>
 
 
-    <h3>Een verband hoeft niet lineair te zijn</h3>
+    <h4>Een verband hoeft niet lineair te zijn</h4>
 
     <p>Een functie hoeft geen rechte lijn als grafiek te hebben.</p>
 
@@ -7502,7 +7581,7 @@ const MILESTONES_2 = [
     <p>In de volgende milestone zullen we lineaire en kwadratische functies systematisch onderzoeken.</p>
 
 
-    <h3>Een functie kan verschillende soorten verbanden beschrijven</h3>
+    <h4>Een functie kan verschillende soorten verbanden beschrijven</h4>
 
     <p>Het begrip functie zegt op zichzelf nog niet <em>welke</em> rekenregel wordt gebruikt.</p>
 
@@ -7525,7 +7604,7 @@ const MILESTONES_2 = [
     <p><strong>elke toegelaten invoer heeft precies één uitvoer.</strong></p>
 
 
-    <h3>Functies uit de werkelijkheid</h3>
+    <h4>Functies uit de werkelijkheid</h4>
 
     <p>Functies zijn niet alleen abstracte formules.</p>
 
@@ -7548,7 +7627,7 @@ const MILESTONES_2 = [
     <p>Als iedere toegelaten invoer precies één uitvoer heeft, kunnen we het verband als een functie beschrijven.</p>
 
 
-    <h3>Een volledig voorbeeld: afstand en tijd</h3>
+    <h4>Een volledig voorbeeld: afstand en tijd</h4>
 
     <p>Stel dat een fietser met een constante snelheid van 20 km/u rijdt.</p>
 
@@ -7586,7 +7665,7 @@ const MILESTONES_2 = [
     <p>De fietser heeft dan 50 km afgelegd.</p>
 
 
-    <h3>Van tabel naar grafiek en formule</h3>
+    <h4>Van tabel naar grafiek en formule</h4>
 
     <p>We kunnen hetzelfde verband vanuit verschillende voorstellingen bekijken.</p>
 
@@ -7630,7 +7709,7 @@ const MILESTONES_2 = [
     <p>Dit is een belangrijk idee: <strong>we kunnen tussen verschillende representaties van hetzelfde verband bewegen.</strong></p>
 
 
-    <h3>Functies vergelijken</h3>
+    <h4>Functies vergelijken</h4>
 
     <p>Wanneer we functies vergelijken, kunnen we verschillende vragen stellen.</p>
 
@@ -7647,7 +7726,7 @@ const MILESTONES_2 = [
     <p>Een functie is dus niet alleen iets waarmee je een getal uitrekent. Het is een manier om een <strong>afhankelijkheid</strong> te onderzoeken.</p>
 
 
-    <h3>Veelgemaakte fouten</h3>
+    <h4>Veelgemaakte fouten</h4>
 
     <p><strong>Fout 1: denken dat een functie altijd een formule is.</strong></p>
 
@@ -7670,7 +7749,7 @@ const MILESTONES_2 = [
     <p>Het domein gaat over mogelijke invoerwaarden. Het bereik gaat over mogelijke uitvoerwaarden.</p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>Wanneer je een functie tegenkomt, kun je deze vragen in volgorde stellen:</p>
 
@@ -7687,7 +7766,7 @@ const MILESTONES_2 = [
     <p>Zo leer je niet alleen een formule gebruiken, maar ook begrijpen welk verband die formule beschrijft.</p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>Een <strong>functie</strong> beschrijft een afhankelijkheid tussen grootheden.</p>
 
@@ -7751,6 +7830,7 @@ const MILESTONES_2 = [
     <p>Een lineaire functie heeft de vorm:</p>
 
     <p class="formula">f(x) = ax + b</p>
+    <div data-widget="lineGraph"></div>
 
     <p>Hierbij zijn <span class="formula-inline">a</span> en <span class="formula-inline">b</span> vaste getallen.</p>
 
@@ -7808,6 +7888,9 @@ const MILESTONES_2 = [
 
 
     <h3>De vorm f(x) = ax + b</h3>
+    <div class="callout">
+      <strong>Notatie:</strong> in 2.8 gebruikten we <span class="formula-inline">m</span> voor de helling van een rechte. In functies gebruiken we hier <span class="formula-inline">a</span> voor dezelfde rol. Dus <span class="formula-inline">a = m</span> wanneer we hetzelfde verband beschrijven.
+    </div>
 
     <p>De algemene vorm van een lineaire functie is:</p>
 
@@ -8069,7 +8152,7 @@ const MILESTONES_2 = [
     <p>Dit is precies het soort vergelijking dat we in milestone 2.3 hebben leren oplossen.</p>
 
 
-    <h3>Het snijpunt berekenen</h3>
+    <h4>Het snijpunt berekenen</h4>
 
     <p>We lossen de vergelijking op:</p>
 
@@ -8094,7 +8177,7 @@ const MILESTONES_2 = [
     <p>Een geometrisch probleem is hier dus opnieuw omgezet in een algebraïsch probleem.</p>
 
 
-    <h3>Een lineair model uit de werkelijkheid</h3>
+    <h4>Een lineair model uit de werkelijkheid</h4>
 
     <p>Stel dat een taxirit €5 startkost en daarna €2 per kilometer kost.</p>
 
@@ -8111,7 +8194,7 @@ const MILESTONES_2 = [
     <p>De formule is dus niet zomaar een algebraïsche uitdrukking. Ze vertelt precies hoe de werkelijkheid gemodelleerd wordt.</p>
 
 
-    <h3>Niet elk verband is lineair</h3>
+    <h4>Niet elk verband is lineair</h4>
 
     <p>Een lineaire functie heeft een constante verandering.</p>
 
@@ -8159,13 +8242,14 @@ const MILESTONES_2 = [
     <p>Hier komen we bij een tweede belangrijke soort functie.</p>
 
 
-    <h3>De stap naar kwadratische functies</h3>
+    <h4>De stap naar kwadratische functies</h4>
 
     <p>Een kwadratische functie bevat een term met x².</p>
 
     <p>De algemene vorm is:</p>
 
     <p class="formula">f(x) = ax² + bx + c</p>
+    <div data-widget="parabolaGraph"></div>
 
     <p>waarbij <span class="formula-inline">a ≠ 0</span>.</p>
 
@@ -8174,7 +8258,11 @@ const MILESTONES_2 = [
     <p>De grafiek van een kwadratische functie is een <strong>parabool</strong>.</p>
 
 
-    <h3>Wat is een kwadratische functie?</h3>
+    <h4>Wat is een kwadratische functie?</h4>
+
+    <div class="theory-image">
+      <img src="assets/parabolen.svg" alt="Parabolen met verschillende waarden van de parameter a, die hun opening en kromming veranderen.">
+    </div>
 
     <p>Een eenvoudige kwadratische functie is:</p>
 
@@ -8191,7 +8279,7 @@ const MILESTONES_2 = [
     <p>De vorm van de grafiek is geen rechte, maar een kromme die naar boven opent.</p>
 
 
-    <h3>De vorm f(x) = ax² + bx + c</h3>
+    <h4>De vorm f(x) = ax² + bx + c</h4>
 
     <p>De algemene kwadratische functie is:</p>
 
@@ -8206,7 +8294,7 @@ const MILESTONES_2 = [
     <p>De waarde <span class="formula-inline">c</span> bepaalt waar de parabool de y-as snijdt.</p>
 
 
-    <h3>Waarom ontstaat een parabool?</h3>
+    <h4>Waarom ontstaat een parabool?</h4>
 
     <p>Bij een lineaire functie verandert de uitvoer telkens met hetzelfde bedrag wanneer x met 1 toeneemt.</p>
 
@@ -8229,7 +8317,7 @@ const MILESTONES_2 = [
     <p>Dat geeft de grafiek haar gebogen vorm.</p>
 
 
-    <h3>De rol van a</h3>
+    <h4>De rol van a</h4>
 
     <p>In:</p>
 
@@ -8254,7 +8342,7 @@ const MILESTONES_2 = [
     <p>Een grotere absolute waarde betekent dat de parabool sterker van richting verandert.</p>
 
 
-    <h3>De rol van c</h3>
+    <h4>De rol van c</h4>
 
     <p>Neem:</p>
 
@@ -8271,7 +8359,7 @@ const MILESTONES_2 = [
     <p>Net zoals bij lineaire functies is de constante term dus rechtstreeks verbonden met het snijpunt met de y-as.</p>
 
 
-    <h3>De top van een parabool</h3>
+    <h4>De top van een parabool</h4>
 
     <p>Een parabool die naar boven opent heeft een laagste punt.</p>
 
@@ -8308,7 +8396,7 @@ const MILESTONES_2 = [
     <p>Deze vorm van een kwadratische functie maakt de top bijzonder gemakkelijk zichtbaar.</p>
 
 
-    <h3>Symmetrie van een parabool</h3>
+    <h4>Symmetrie van een parabool</h4>
 
     <p>Een parabool heeft een verticale <strong>symmetrie-as</strong>.</p>
 
@@ -8333,7 +8421,7 @@ const MILESTONES_2 = [
     <p>De symmetrie-as loopt dus door de top.</p>
 
 
-    <h3>Nulpunten van een kwadratische functie</h3>
+    <h4>Nulpunten van een kwadratische functie</h4>
 
     <p>Een nulpunt is een invoerwaarde waarvoor de uitvoer nul is.</p>
 
@@ -8366,7 +8454,7 @@ const MILESTONES_2 = [
     <p>De parabool snijdt de x-as dus in twee punten.</p>
 
 
-    <h3>Verband met kwadratische vergelijkingen</h3>
+    <h4>Verband met kwadratische vergelijkingen</h4>
 
     <p>In milestone 2.7 leerden we kwadratische vergelijkingen oplossen.</p>
 
@@ -8385,7 +8473,7 @@ const MILESTONES_2 = [
     <p>Algebra en grafieken vertellen hier hetzelfde verhaal vanuit twee verschillende invalshoeken.</p>
 
 
-    <h3>Een kwadratische functie onderzoeken</h3>
+    <h4>Een kwadratische functie onderzoeken</h4>
 
     <p>Bij een kwadratische functie kunnen we verschillende eigenschappen onderzoeken:</p>
 
@@ -8402,7 +8490,7 @@ const MILESTONES_2 = [
     <p>De formule geeft ons de algebraïsche structuur. De grafiek maakt het gedrag zichtbaar.</p>
 
 
-    <h3>Lineair versus kwadratisch</h3>
+    <h4>Lineair versus kwadratisch</h4>
 
     <p>De twee functietypen hebben een fundamenteel verschil.</p>
 
@@ -8421,7 +8509,7 @@ const MILESTONES_2 = [
     <p>De aanwezigheid van x² zorgt dus voor een fundamenteel ander soort verband.</p>
 
 
-    <h3>Functies uit de werkelijkheid</h3>
+    <h4>Functies uit de werkelijkheid</h4>
 
     <p>Lineaire functies ontstaan bijvoorbeeld wanneer een grootheid met een constante snelheid verandert.</p>
 
@@ -8446,7 +8534,7 @@ const MILESTONES_2 = [
     <p>Het functietype vertelt ons dus iets over het soort verandering dat in het model aanwezig is.</p>
 
 
-    <h3>Een volledig voorbeeld: een bewegend voorwerp</h3>
+    <h4>Een volledig voorbeeld: een bewegend voorwerp</h4>
 
     <p>Stel dat de hoogte van een voorwerp tijdens een worp wordt beschreven door:</p>
 
@@ -8481,7 +8569,7 @@ const MILESTONES_2 = [
     <p>Dit is een patroon dat we in latere wiskunde en natuurkunde voortdurend zullen tegenkomen.</p>
 
 
-    <h3>Veelgemaakte fouten</h3>
+    <h4>Veelgemaakte fouten</h4>
 
     <p><strong>Fout 1: denken dat b de helling is.</strong></p>
 
@@ -8504,7 +8592,7 @@ const MILESTONES_2 = [
     <p>Bij x verandert de uitvoer met een constant bedrag. Bij x² verandert dat bedrag zelf.</p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>Wanneer je een functie krijgt, kun je eerst bepalen met welk type verband je te maken hebt.</p>
 
@@ -8525,7 +8613,7 @@ const MILESTONES_2 = [
     <p>De formule beschrijft de structuur, de grafiek laat het gedrag zien en de betekenis vertelt wat de grootheden in de werkelijkheid voorstellen.</p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>Een <strong>lineaire functie</strong> heeft de vorm:</p>
 
@@ -8819,6 +8907,10 @@ const MILESTONES_2 = [
 
     <h3>Exponentiële groei tegenover lineaire groei</h3>
 
+    <div class="theory-image">
+      <img src="assets/groei-vs-rechte.svg" alt="Een lineaire en een exponentiële groeicurve met hetzelfde beginpunt.">
+    </div>
+
     <p>Vergelijk:</p>
 
     <p class="formula">f(x) = 100 + 20x</p>
@@ -8942,7 +9034,7 @@ const MILESTONES_2 = [
     <p>De logaritme is dus geen losstaande nieuwe bewerking. Ze is de omgekeerde vraag bij machtsverheffen.</p>
 
 
-    <h3>De logaritme van 1</h3>
+    <h4>De logaritme van 1</h4>
 
     <p>Elke toegestane basis heeft exponent 0 wanneer we de waarde 1 krijgen:</p>
 
@@ -8961,7 +9053,7 @@ const MILESTONES_2 = [
     <p class="formula">log₁₀(1) = 0</p>
 
 
-    <h3>De logaritme van een macht</h3>
+    <h4>De logaritme van een macht</h4>
 
     <p>Omdat logaritmen machten terug ongedaan maken, geldt:</p>
 
@@ -8976,7 +9068,7 @@ const MILESTONES_2 = [
     <p>De logaritme kijkt vervolgens terug en vraagt welke exponent bij 2 nodig was om 128 te krijgen.</p>
 
 
-    <h3>De basis 10</h3>
+    <h4>De basis 10</h4>
 
     <p>De logaritme met basis 10 komt veel voor.</p>
 
@@ -8999,7 +9091,7 @@ const MILESTONES_2 = [
     <p>Deze logaritme wordt onder andere gebruikt bij grootheden die over zeer grote bereiken variëren.</p>
 
 
-    <h3>De natuurlijke logaritme</h3>
+    <h4>De natuurlijke logaritme</h4>
 
     <p>Naast logaritmen met basis 10 is er een bijzonder belangrijke basis:</p>
 
@@ -9026,7 +9118,7 @@ const MILESTONES_2 = [
     <p>De diepere eigenschappen van e en de natuurlijke logaritme komen later in de wiskunde opnieuw terug.</p>
 
 
-    <h3>De logaritmische functie</h3>
+    <h4>De logaritmische functie</h4>
 
     <p>Net zoals exponentiële functies een grafiek hebben, hebben logaritmen dat ook.</p>
 
@@ -9051,7 +9143,11 @@ const MILESTONES_2 = [
     <p>De ene functie gaat van exponent naar waarde; de andere gaat van waarde terug naar exponent.</p>
 
 
-    <h3>Inverse functies</h3>
+    <h4>Inverse functies</h4>
+
+    <div class="theory-image">
+      <img src="assets/exp-log-invers.svg" alt="Een exponentiële en logaritmische grafiek als elkaars inverse.">
+    </div>
 
     <p>Het begrip <strong>inverse</strong> betekent dat een bewerking wordt teruggedraaid.</p>
 
@@ -9074,7 +9170,7 @@ const MILESTONES_2 = [
     <p>De logaritme is dus de inverse functie van de exponentiële functie, wanneer dezelfde basis wordt gebruikt.</p>
 
 
-    <h3>Een exponentiële vergelijking oplossen met een logaritme</h3>
+    <h4>Een exponentiële vergelijking oplossen met een logaritme</h4>
 
     <p>Stel dat:</p>
 
@@ -9097,7 +9193,7 @@ const MILESTONES_2 = [
     <p>De logaritme maakt het dus mogelijk om exponenten te vinden die niet eenvoudig uit het hoofd kunnen worden bepaald.</p>
 
 
-    <h3>De grondtalwissel</h3>
+    <h4>De grondtalwissel</h4>
 
     <p>Rekenmachines hebben meestal een toets voor logaritmen met basis 10 en voor de natuurlijke logaritme.</p>
 
@@ -9114,7 +9210,7 @@ const MILESTONES_2 = [
     <p>Zo kunnen we ook logaritmen met basis 2, 3, 5 of een andere toegestane basis berekenen.</p>
 
 
-    <h3>Logaritmen en vermenigvuldiging</h3>
+    <h4>Logaritmen en vermenigvuldiging</h4>
 
     <p>Logaritmen hebben een belangrijke eigenschap:</p>
 
@@ -9131,7 +9227,7 @@ const MILESTONES_2 = [
     <p>Deze eigenschap is geen toeval. Ze volgt uit de rekenregels voor machten.</p>
 
 
-    <h3>Logaritmen en machten</h3>
+    <h4>Logaritmen en machten</h4>
 
     <p>Een andere belangrijke regel is:</p>
 
@@ -9154,7 +9250,7 @@ const MILESTONES_2 = [
     <p>Ook hier zien we dat logaritmen machten omzetten in vermenigvuldigingen.</p>
 
 
-    <h3>Waarom zijn logaritmen nuttig?</h3>
+    <h4>Waarom zijn logaritmen nuttig?</h4>
 
     <p>Exponentiële groei kan extreem snel verlopen.</p>
 
@@ -9167,7 +9263,7 @@ const MILESTONES_2 = [
     <p>Dat idee wordt gebruikt in verschillende wetenschappelijke toepassingen, bijvoorbeeld bij grootheden die vele ordes van grootte kunnen bestrijken.</p>
 
 
-    <h3>Een volledig voorbeeld: bacteriegroei</h3>
+    <h4>Een volledig voorbeeld: bacteriegroei</h4>
 
     <p>Stel dat een bacteriepopulatie aanvankelijk 500 bacteriën bevat en iedere uur verdubbelt.</p>
 
@@ -9204,7 +9300,7 @@ const MILESTONES_2 = [
     <p class="formula">werkelijkheid → exponentiële functie → vergelijking → logaritme</p>
 
 
-    <h3>Het domein van een logaritme</h3>
+    <h4>Het domein van een logaritme</h4>
 
     <p>Een logaritme is niet voor iedere invoer gedefinieerd.</p>
 
@@ -9221,7 +9317,7 @@ const MILESTONES_2 = [
     <p>Daarom heeft de logaritmische functie alleen positieve invoerwaarden.</p>
 
 
-    <h3>De basis van een logaritme</h3>
+    <h4>De basis van een logaritme</h4>
 
     <p>Ook de basis heeft voorwaarden.</p>
 
@@ -9242,7 +9338,7 @@ const MILESTONES_2 = [
     <p>Er is dan geen unieke exponent die bijvoorbeeld 2 of 10 kan opleveren.</p>
 
 
-    <h3>Exponentiële en logaritmische functies zijn elkaars spiegelbeeld</h3>
+    <h4>Exponentiële en logaritmische functies zijn elkaars spiegelbeeld</h4>
 
     <p>Omdat exponentiële en logaritmische functies inversen van elkaar zijn, hebben hun grafieken een bijzondere relatie.</p>
 
@@ -9261,7 +9357,7 @@ const MILESTONES_2 = [
     <p>Dit komt doordat de invoer en uitvoer bij een inverse functie van plaats worden verwisseld.</p>
 
 
-    <h3>Een exponentiële functie als model</h3>
+    <h4>Een exponentiële functie als model</h4>
 
     <p>Wanneer je een werkelijkheid als exponentieel model wilt beschrijven, kun je deze vragen stellen:</p>
 
@@ -9280,7 +9376,7 @@ const MILESTONES_2 = [
     <p>Daarmee hebben we een eenvoudig maar krachtig model.</p>
 
 
-    <h3>Wanneer gebruik je een logaritme?</h3>
+    <h4>Wanneer gebruik je een logaritme?</h4>
 
     <p>Een logaritme is vooral nuttig wanneer de onbekende in de exponent staat.</p>
 
@@ -9301,7 +9397,7 @@ const MILESTONES_2 = [
     <p class="formula">macht ↔ logaritme</p>
 
 
-    <h3>Veelgemaakte fouten</h3>
+    <h4>Veelgemaakte fouten</h4>
 
     <p><strong>Fout 1: exponentiële groei verwarren met lineaire groei.</strong></p>
 
@@ -9328,7 +9424,7 @@ const MILESTONES_2 = [
     <p>Elke toegestane basis kan worden gebruikt. Basis 10 en basis e zijn alleen bijzonder belangrijk.</p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>Bij een groeiprobleem kun je eerst bepalen welk soort verandering je ziet.</p>
 
@@ -9345,7 +9441,7 @@ const MILESTONES_2 = [
     </ol>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>Bij exponentiële groei wordt een hoeveelheid telkens met dezelfde factor vermenigvuldigd.</p>
 
@@ -9677,7 +9773,7 @@ const MILESTONES_2 = [
     <p>Als je de overstaande en aanliggende zijde gebruikt, heb je tangens.</p>
 
 
-    <h3>Een belangrijk verband tussen sinus en cosinus</h3>
+    <h4>Een belangrijk verband tussen sinus en cosinus</h4>
 
     <p>Sinus en cosinus zijn niet volledig onafhankelijke verhoudingen.</p>
 
@@ -9692,7 +9788,7 @@ const MILESTONES_2 = [
     <p>Dit verband volgt rechtstreeks uit de stelling van Pythagoras.</p>
 
 
-    <h3>Waarom geldt sin² + cos² = 1?</h3>
+    <h4>Waarom geldt sin² + cos² = 1?</h4>
 
     <p>Neem een rechthoekige driehoek met schuine zijde c en rechthoekszijden a en b.</p>
 
@@ -9727,7 +9823,7 @@ const MILESTONES_2 = [
     <p>Een goniometrische identiteit blijkt hier dus rechtstreeks verbonden met een meetkundige stelling.</p>
 
 
-    <h3>De bijzondere hoeken 30°, 45° en 60°</h3>
+    <h4>De bijzondere hoeken 30°, 45° en 60°</h4>
 
     <p>Sommige hoeken hebben bijzonder eenvoudige goniometrische waarden.</p>
 
@@ -9752,7 +9848,7 @@ const MILESTONES_2 = [
     <p>Deze waarden kunnen worden afgeleid uit bijzondere rechthoekige driehoeken.</p>
 
 
-    <h3>Graden en radialen</h3>
+    <h4>Graden en radialen</h4>
 
     <p>Tot nu toe hebben we hoeken uitgedrukt in graden.</p>
 
@@ -9773,7 +9869,7 @@ const MILESTONES_2 = [
     <p>Radialen zijn belangrijk omdat ze een directe relatie leggen tussen een hoek en de lengte van een boog.</p>
 
 
-    <h3>De hoek als verhouding op een cirkel</h3>
+    <h4>De hoek als verhouding op een cirkel</h4>
 
     <p>Tot nu toe gebruikten we trigonometrie in rechthoekige driehoeken.</p>
 
@@ -9790,7 +9886,11 @@ const MILESTONES_2 = [
     <p>Daarmee krijgen sinus en cosinus een betekenis die verder gaat dan alleen rechthoekige driehoeken.</p>
 
 
-    <h3>De eenheidscirkel</h3>
+    <h4>De eenheidscirkel</h4>
+
+    <div class="theory-image">
+      <img src="assets/eenheidscirkel.svg" alt="De eenheidscirkel met een hoek en het punt met coördinaten cosinus en sinus.">
+    </div>
 
     <p>Op de eenheidscirkel geldt voor een hoek θ:</p>
 
@@ -9815,7 +9915,7 @@ const MILESTONES_2 = [
     <p>De identiteit uit de rechthoekige driehoek blijkt dus ook rechtstreeks uit de geometrie van de eenheidscirkel.</p>
 
 
-    <h3>Sinus en cosinus voor hoeken groter dan 90°</h3>
+    <h4>Sinus en cosinus voor hoeken groter dan 90°</h4>
 
     <p>De eenheidscirkel maakt het mogelijk om sinus en cosinus ook voor grotere hoeken te definiëren.</p>
 
@@ -9834,7 +9934,7 @@ const MILESTONES_2 = [
     <p>De goniometrische functies zijn dus niet beperkt tot scherpe hoeken van rechthoekige driehoeken.</p>
 
 
-    <h3>De tangens en de eenheidscirkel</h3>
+    <h4>De tangens en de eenheidscirkel</h4>
 
     <p>De tangens kan worden geschreven als:</p>
 
@@ -9855,7 +9955,7 @@ const MILESTONES_2 = [
     <p>De drie goniometrische functies zijn dus onderling verbonden.</p>
 
 
-    <h3>Wanneer is de tangens niet gedefinieerd?</h3>
+    <h4>Wanneer is de tangens niet gedefinieerd?</h4>
 
     <p>Uit:</p>
 
@@ -9880,7 +9980,7 @@ const MILESTONES_2 = [
     <p>en alle hoeken die daarmee overeenkomen na volledige omwentelingen.</p>
 
 
-    <h3>Trigonometrie en coördinaten</h3>
+    <h4>Trigonometrie en coördinaten</h4>
 
     <p>In milestone 2.8 gebruikten we coördinaten om punten en richtingen te beschrijven.</p>
 
@@ -9895,7 +9995,7 @@ const MILESTONES_2 = [
     <p>Dit idee wordt later essentieel voor vectoren en fysica.</p>
 
 
-    <h3>Een richting ontbinden in twee componenten</h3>
+    <h4>Een richting ontbinden in twee componenten</h4>
 
     <p>Stel dat een kracht van 10 N onder een hoek van 30° ten opzichte van de horizontale richting werkt.</p>
 
@@ -9912,7 +10012,7 @@ const MILESTONES_2 = [
     <p>Dit is een eerste belangrijke verbinding tussen trigonometrie en fysica.</p>
 
 
-    <h3>Trigonometrie en helling</h3>
+    <h4>Trigonometrie en helling</h4>
 
     <p>In analytische meetkunde gebruikten we de helling van een rechte:</p>
 
@@ -9937,7 +10037,7 @@ const MILESTONES_2 = [
     <p>De helling van een rechte kan dus worden geïnterpreteerd als een hoek.</p>
 
 
-    <h3>Van hoek naar periodieke beweging</h3>
+    <h4>Van hoek naar periodieke beweging</h4>
 
     <p>De eenheidscirkel bevat nog een belangrijk idee.</p>
 
@@ -9956,7 +10056,7 @@ const MILESTONES_2 = [
     <p class="formula">360°</p>
 
 
-    <h3>De sinusfunctie</h3>
+    <h4>De sinusfunctie</h4>
 
     <p>We kunnen sinus nu niet alleen gebruiken als verhouding in een driehoek, maar als functie van een hoek.</p>
 
@@ -9975,7 +10075,7 @@ const MILESTONES_2 = [
     <p>De sinusfunctie vormt daarmee een eenvoudig wiskundig model voor periodieke verschijnselen.</p>
 
 
-    <h3>De cosinusfunctie</h3>
+    <h4>De cosinusfunctie</h4>
 
     <p>Op dezelfde manier krijgen we:</p>
 
@@ -9992,7 +10092,7 @@ const MILESTONES_2 = [
     <p>Sinus en cosinus zijn nauw met elkaar verbonden, maar starten op een verschillend punt in hun periodieke beweging.</p>
 
 
-    <h3>Amplitude en periode</h3>
+    <h4>Amplitude en periode</h4>
 
     <p>Een algemene sinusfunctie kan bijvoorbeeld de vorm hebben:</p>
 
@@ -10015,7 +10115,7 @@ const MILESTONES_2 = [
     <p>De parameters van sinusfuncties maken het mogelijk om echte periodieke verschijnselen te modelleren.</p>
 
 
-    <h3>Een toepassing: hoogte van een punt</h3>
+    <h4>Een toepassing: hoogte van een punt</h4>
 
     <p>Stel dat een punt op een cirkel met straal 2 m beweegt.</p>
 
@@ -10030,7 +10130,7 @@ const MILESTONES_2 = [
     <p>Hetzelfde soort wiskundig model kan worden gebruikt voor periodieke bewegingen zoals trillingen en golven.</p>
 
 
-    <h3>Trigonometrie in de werkelijkheid</h3>
+    <h4>Trigonometrie in de werkelijkheid</h4>
 
     <p>Trigonometrie wordt gebruikt wanneer hoeken en lengtes met elkaar verbonden zijn.</p>
 
@@ -10048,7 +10148,7 @@ const MILESTONES_2 = [
     <p>Hetzelfde onderliggende idee komt telkens terug: een hoek bepaalt een verhouding of component.</p>
 
 
-    <h3>Een volledig voorbeeld: de hoogte van een gebouw</h3>
+    <h4>Een volledig voorbeeld: de hoogte van een gebouw</h4>
 
     <p>Je staat 30 meter van een gebouw.</p>
 
@@ -10077,7 +10177,7 @@ const MILESTONES_2 = [
     <p>Met een hoek en één gemeten afstand hebben we dus een andere lengte kunnen bepalen.</p>
 
 
-    <h3>Een vaste werkwijze</h3>
+    <h4>Een vaste werkwijze</h4>
 
     <p>Bij een trigonometrisch probleem kun je de volgende werkwijze gebruiken:</p>
 
@@ -10095,7 +10195,7 @@ const MILESTONES_2 = [
     </ol>
 
 
-    <h3>Veelgemaakte fouten</h3>
+    <h4>Veelgemaakte fouten</h4>
 
     <p><strong>Fout 1: de verkeerde zijde benoemen.</strong></p>
 
@@ -10122,7 +10222,7 @@ const MILESTONES_2 = [
     <p>Bewaar tijdens de berekening voldoende decimalen en rond pas op het einde af.</p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h4>Wat hebben we eigenlijk geleerd?</h4>
 
     <p>Trigonometrie verbindt <strong>hoeken</strong> met <strong>verhoudingen van lengtes</strong>.</p>
 
