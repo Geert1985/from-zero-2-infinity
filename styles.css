@@ -238,7 +238,7 @@ body {
 .phase-card.open { border-color: rgba(230, 199, 122, 0.65); }
 .phase-card.done {
   background: rgba(22, 42, 30, 0.92);
-  border-color: #7dcea0;
+  border-color: rgba(230, 199, 122, 0.95);;
   box-shadow: 0 0 0 1px rgba(125, 206, 160, 0.25), var(--shadow);
 }
 .phase-card.locked {
@@ -263,7 +263,7 @@ body {
   background: #1a1610;
   display: block;
 }
-.phase-card.done img { box-shadow: 0 0 0 3px #7dcea0, 0 10px 22px rgba(0,0,0,0.5); }
+.phase-card.done img { box-shadow: 0 0 0 3px rgba(230, 199, 122, 0.95);, 0 10px 22px rgba(0,0,0,0.5); }
 .phase-card.locked img { filter: grayscale(0.8) brightness(0.55); box-shadow: 0 0 0 3px #6a5d48, 0 8px 18px rgba(0,0,0,0.45); }
 .lock-badge, .done-badge {
   position: absolute;
@@ -297,7 +297,7 @@ body {
   color: #e6c77a;
   margin-bottom: 4px;
 }
-.phase-card.done .num { color: #7dcea0; }
+.phase-card.done .num { color: rgba(230, 199, 122, 0.95);; }
 .phase-card.locked .num { color: #8a7a62; }
 .phase-card h2 {
   font-family: Cinzel, serif;
@@ -339,7 +339,7 @@ body {
 }
 .phase-card .status.done {
   color: #0e1a12;
-  background: #7dcea0;
+  background:rgba(230, 199, 122, 0.95);;
 }
 
 .layout {

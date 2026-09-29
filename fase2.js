@@ -459,7 +459,10 @@ const MILESTONES_2 = [
       <p>Met een minteken in een haakje verandert de methode niet:</p>
       <p class="formula">(x − 2)(x + 3) = x^{2} + 3x − 2x − 6 = x^{2} + x − 6</p>
       <p>Ook als er coëfficiënten staan:</p>
-      <p class="formula">(2x + 1)(x + 3) = 2x · x + 2x · 3 + 1 · x + 1 · 3 = 2x^{2} + 6x + x + 3 = 2x^{2} + 7x + 3</p>
+      <p class="formula">(2x + 1)(x + 3)</p>
+      <p class="formula">= 2x · x + 2x · 3 + 1 · x + 1 · 3</p>
+      <p class="formula">= 2x^{2} + 6x + x + 3</p>
+      <p class="formula">= 2x^{2} + 7x + 3</p>
       <p>Schrijf de vier tussenproducten op. Dan verdwijnt er geen kruisterm.</p>
 
       <h3>Merkwaardige producten</h3>
@@ -8655,7 +8658,8 @@ const MILESTONES_2 = [
     </ul>
 
     <div class="callout">
-      <strong>Kernidee:</strong> Exponentiële functies beschrijven vermenigvuldigende groei of afname. Een logaritme draait machtsverheffen om en helpt een onbekende exponent terug te vinden.
+    <p><strong>Kernidee:</strong></p> 
+    <p>Exponentiële functies beschrijven vermenigvuldigende groei of afname. Een logaritme draait machtsverheffen om en helpt een onbekende exponent terug te vinden.</p>
     </div>
 
     <h3>Groei is niet altijd een vaste toename</h3>
@@ -9481,7 +9485,8 @@ const MILESTONES_2 = [
 
 
     <div class="callout">
-      <strong>Inzicht:</strong> Bij lineaire groei verandert een grootheid telkens met dezelfde hoeveelheid. Bij exponentiële groei verandert ze telkens met dezelfde factor. De logaritme draait exponentiële groei weer om: ze beantwoordt de vraag welke exponent nodig is om een bepaalde waarde te bereiken.
+      <p><strong>Inzicht:</strong> </p>
+      <p>Bij lineaire groei verandert een grootheid telkens met dezelfde hoeveelheid. Bij exponentiële groei verandert ze telkens met dezelfde factor. De logaritme draait exponentiële groei weer om: ze beantwoordt de vraag welke exponent nodig is om een bepaalde waarde te bereiken.</p>
     </div>
   `
 },
