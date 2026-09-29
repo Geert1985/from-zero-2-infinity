@@ -40,7 +40,7 @@ function renderHome() {
     );
   }).join("");
   return (
-    '<div class="screen" style="background-image:url(\'assets/home.webp\')">' +
+    '<div class="screen" style="background-image:url(\'' + bgFor() + "')\">" +
     topbar() +
     '<div class="layout"><div class="panel hero"><h1>' + COURSE.title + "</h1><p>" + COURSE.tagline + "</p></div>" +
     '<div class="phase-grid">' + cards + "</div></div></div>"
