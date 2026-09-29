@@ -772,17 +772,8 @@ const MILESTONES_1 = [
           <li>Wat gebeurt er met de tekens bij optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
         
-        <p>In 1.1 noteerden we verzamelingen met accolades, bijvoorbeeld
-        <span class="formula-inline">ℕ = {0, 1, 2, 3, …}</span>.
-        Het teken <strong>∈</strong> betekent “is element van”,
-        <strong>∉</strong> betekent “is geen element van”.</p>
-        <p class="formula">3 ∈ ℕ</p>
-        <p class="formula">−3 ∉ ℕ</p>
-        <p>Negatieve getallen horen dus niet bij de natuurlijke getallen.
-        Daarom moeten we de verzameling uitbreiden.</p>
-
         <h3>De natuurlijke getallen</h3>
-        <p>De verzameling van de natuurlijke getallen krijgt een naam:
+        <p>Zoals we eerder hebben gezien krijgt de verzameling van de natuurlijke getallen een naam:
     <strong>ℕ</strong>.</p>
 
     <p>We gebruiken ℕ voor alle natuurlijke getallen:</p>
@@ -791,10 +782,11 @@ const MILESTONES_1 = [
 
     <p>We hebben al gezien dat 0 het kleinste natuurlijke getal is en dat er geen grootste natuurlijke getal bestaat.</p>
     <p>Een negatief getal behoort dus niet tot de verzameling van de natuurlijke getallen.</p>
-    <p>Bijvoorbeeld:</p>
-
+    <p class="formula">3 ∈ ℕ</p>
     <p class="formula">−3 ∉ ℕ</p>
-
+    <p>Het teken <strong>∈</strong> betekent “is element van”,
+    <strong>∉</strong> betekent “is geen element van”.</p>   
+    
         <h3>De getallenlijn wordt uitgebreid</h3>
         <p>Tot nu toe konden we met natuurlijke getallen heel wat problemen oplossen.
       Maar er ontstaat een probleem wanneer we een kleiner getal van een groter
@@ -804,11 +796,8 @@ const MILESTONES_1 = [
 
       <p class="formula">3 − 5 = ?</p>
 
-      <p>Er bestaat geen natuurlijk getal dat het antwoord is.</p>
-
-      <p>Daarom hebben we nieuwe getallen nodig die links van nul op de getallenlijn
-      staan.</p>
-
+      <p>Negatieve getallen horen niet bij de natuurlijke getallen.<strong>Daarom moeten we de verzameling uitbreiden.</strong></p>
+      
       <div data-widget="ints"></div>
 
       <div class="callout insight">
