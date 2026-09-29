@@ -129,31 +129,16 @@ const MILESTONES_1 = [
     <p>Bijvoorbeeld:</p>
     <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...</p>
     <p>De verzameling van alle natuurlijke getallen duiden we aan met het symbool <strong>ℕ</strong></p>
-    <p>De getallen in een verzameling noemen we <strong>elementen</strong>. Het opsommen van de elementen van de verzameling noteren we tussen accolades {...}.</p>
+
     <p>In deze cursus hoort <strong>0 ook bij de natuurlijke getallen:</strong></p>
     <p>De verzameling van de natuurlijke getallen kunnen we dus als volgt noteren:</p>
-    <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ..., 3521, 3522,...,999 999 999,...}</p>
-    <h4>De opvolger</h4>
-      <p>Na elk natuurlijk getal komt een volgend natuurlijk getal.</p>
-      <p>Je krijgt het volgende getal door <strong>1 op te tellen</strong></p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">12 → 13</p>
-      <p>Het getal dat na een ander getal komt, noemen we de <strong>opvolger</strong>.</p>
-    <h4>De voorganger</h4>
-      <p>We kunnen ook naar het vorige getal gaan.</p>
-      <p>Je krijgt het vorige getal door <strong>1 af te trekken</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">100 → 99</p>
-      <p>Het getal dat vóór een ander getal komt, noemen we de <strong>voorganger</strong>.</p>
-      <p><strong>0 heeft geen voorganger in ℕ</strong>, want 0 is het kleinste natuurlijke getal.</p>
-    <h4>Er is geen grootste natuurlijk getal</h4>
-      <p>De natuurlijke getallen blijven altijd doorgaan want je kunt er altijd 1 bij optellen.</p>
-      
-      <div class="callout">
-        <p><strong>Onthoud:</strong></p>
-        <p>0 heeft in ℕ geen voorganger;</p>
-        <p>elk natuurlijk getal n heeft een opvolger n + 1, daarom is er geen grootste natuurlijk getal;</p>
-      </div>
+    <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ...}</p>
+    <h4>Opvolger en voorganger</h4>
+      <p>Na elk natuurlijk getal <span class="formula-inline">n</span> komt de <strong>opvolger</strong> <span class="formula-inline">n + 1</span>.</p>
+      <p>Bijvoorbeeld: <span class="formula-inline">12 → 13</span>.</p>
+      <p>De <strong>voorganger</strong> van een natuurlijk getal groter dan 0 is <span class="formula-inline">n − 1</span>; bijvoorbeeld <span class="formula-inline">100 → 99</span>.</p>
+      <p><strong>0 heeft geen voorganger in ℕ</strong>, omdat 0 het kleinste natuurlijke getal is.</p>
+      <p>Er is geen grootste natuurlijk getal, want bij elk natuurlijk getal <span class="formula-inline">n</span> kunnen we <span class="formula-inline">n + 1</span> nemen.</p>
 
     <h4>Zijn de natuurlijke getallen altijd voldoende?</h4>
       <p>Met natuurlijke getallen kunnen we veel berekeningen maken.</p>
@@ -198,16 +183,16 @@ const MILESTONES_1 = [
   {
     id: "1.2",
     title: "De vier hoofdbewerkingen",
-    goal: "Voer de vier hoofdbewerkingen in ℕ uit en gebruik volgorde, rest en de rekenwetten.",
+    goal: "Begrijp hoe de vier hoofdbewerkingen werken en hoe volgorde, rest en rekenwetten daarbij een rol spelen.",
     theory: /* html */`
 <h2>De vier hoofdbewerkingen</h2>
   <p><strong>Wat gaan we ontdekken?</strong></p>
   <ul>
-    <li>wat kunnen we doen met deze symbolen: +, -, × en ÷ ?</li>
-    <li>verandert de volgorde van bewerkingen het antwoord?</li>
-    <li>wanneer mogen we de getallen in een bewerking omwisselen?</li>
-    <li>wat als een deling niet uitkomt?</li>
-    <li>wat is er zo bijzonder aan het getal 0?</li>
+    <li>Wat kunnen we doen met deze symbolen: +, -, × en ÷?</li>
+    <li>Verandert de volgorde van bewerkingen het antwoord?</li>
+    <li>Wanneer mogen we de getallen in een bewerking omwisselen?</li>
+    <li>Wat als een deling niet uitkomt?</li>
+    <li>Wat is er zo bijzonder aan het getal 0?</li>
   </ul>
   <h3>Optellen</h3>
     <p>Met <strong>optellen</strong> voegen we hoeveelheden samen.</p>
@@ -359,7 +344,7 @@ const MILESTONES_1 = [
     <p class="formula">0 ≤ r &lt; d</p>
 
     <p>Later zullen we zien dat er een andere manier bestaat om de rest van de deling weer te geven. Hier alvast een voorbeeld:</p>
-    <p class="formula">32 ÷ 3 = 10\\ rest\\ 2 = 10 + \\frac{2}{3}\\ = \\ 10\\frac{2}{3}</p>
+    <p class="formula">32 ÷ 3 = 10\\ rest\\ 2 = 10 + \\frac{2}{3}</p>
 
     <div class="callout">
       <p><strong>Onthoud:</strong></p>
@@ -774,49 +759,27 @@ const MILESTONES_1 = [
 
   {
     id: "1.3",
-    title: "Het getallensysteem uitbreiden",
+    title: "Negatieve en gehele getallen",
     goal: "Breid ℕ uit tot ℤ: tegenovergestelde, absolute waarde en rekenen met tekens.",
     theory: /* html */`
         <h2>Negatieve en gehele getallen</h2>
         <p><strong>Wat gaan we ontdekken?</strong></p>
 
         <ul>
-          <li>waarom is ℕ niet genoeg en waarom we de verzameling uitbreiden tot ℤ?</li>
-          <li>hoe zet je negatieve getallen op de getallenas en vergelijk ze met elkaar?</li>
-          <li>wat is een absolute waarde?</li>
-          <li>wat gebeurt er met de tekens bij optellen, aftrekken, vermenigvuldigen en delen?</li>
+          <li>Waarom is ℕ niet genoeg en waarom breiden we de verzameling uit tot ℤ?</li>
+          <li>Hoe plaats je negatieve getallen op de getallenlijn en hoe vergelijk je ze met elkaar?</li>
+          <li>Wat is een absolute waarde?</li>
+          <li>Wat gebeurt er met de tekens bij optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
         
-        <h3>Verzameling en element</h3>
-        <p>Voordat we de verzameling van de natuurlijke getallen gaan uitbreiden, moeten we eerst de notatie voor verzamelingen en elementen verder toelichten.</p>
-        <p>Een <strong>verzameling</strong> is een groep objecten die we als één geheel bekijken. Voorbeeld de verzameling van 0, 1, 2, 3 en 4 noteren we als:</p>
-        <p class="formula"> { 0, 1, 2, 3, 4 } </p>
-        <p>De getallen in de verzameling noemen we <strong>elementen</strong>. Het opsommen van de elementen van de verzameling noteren we tussen accolades.</p> 
-        
-        <div class="callout insight">
-
-        <p><strong>Belangrijk inzicht</strong></p>
-        <p>Een verzameling is een manier om een groep getallen of andere objecten
-        als één geheel te bekijken.</p>
-      </div>
-
-    <p>In de wiskunde gebruiken we een speciaal symbool om aan te geven dat iets
-    een element van een verzameling is:</p>
-
-    <p class="formula">3 ∈ {0, 1, 2, 3, 4}</p>
-    <p>We kunnen dus lezen:</p>
-
-    <p><strong>3 is een element van de verzameling {0, 1, 2, 3, 4}.</strong> Het symbool ∈ is de griekse letter epsilon.</p>
-
-    <p>Voor een getal dat niet in de verzameling zit, gebruiken we
-    <strong>∉</strong>.</p>
-
-    <p class="formula">7 ∉ {0, 1, 2, 3, 4}</p>
-
-    <p>Dit betekent:</p>
-
-    <p><strong>7 is geen element van de verzameling {0, 1, 2, 3, 4}.</strong></p>
-
+        <p>In 1.1 noteerden we verzamelingen met accolades, bijvoorbeeld
+        <span class="formula-inline">ℕ = {0, 1, 2, 3, …}</span>.
+        Het teken <strong>∈</strong> betekent “is element van”,
+        <strong>∉</strong> betekent “is geen element van”.</p>
+        <p class="formula">3 ∈ ℕ</p>
+        <p class="formula">−3 ∉ ℕ</p>
+        <p>Negatieve getallen horen dus niet bij de natuurlijke getallen.
+        Daarom moeten we de verzameling uitbreiden.</p>
 
         <h3>De natuurlijke getallen</h3>
         <p>De verzameling van de natuurlijke getallen krijgt een naam:
@@ -1010,10 +973,11 @@ negatieve getallen.</p>
         <h2>Breuken en rationale getallen</h2>
          <p><strong>Wat gaan we ontdekken?</strong></p>
          <ul>
-          <li>hoe verdelen we een geheel in gelijke delen?</li>
-          <li>hoe zet je breuken op een getallenas en vergelijk je ze met elkaar?</li>
-          <li>hoe moeten we breuken optellen, aftrekken, vermenigvuldigen en delen?</li>
+          <li>Hoe verdelen we een geheel in gelijke delen?</li>
+          <li>Hoe plaatsen we breuken op een getallenlijn en hoe vergelijken we ze?</li>
+          <li>Hoe kunnen we breuken optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
+        <p>Een breuk is eerst en vooral een <strong>getal</strong>, niet zomaar een som die je meteen moet uitrekenen.</p>
 
         <h3>Een geheel</h3>
         <p>
@@ -1063,7 +1027,7 @@ negatieve getallen.</p>
       het geheel.
     </p>
 
-    <p class="formula">\frac{3}{4}</p>
+    <p class="formula">\\frac{3}{4}</p>
 
     <p>
       De betekenis daarvan is eenvoudig:
@@ -1100,13 +1064,13 @@ negatieve getallen.</p>
       delen wordt verdeeld.
     </p>
 
-    <p class="formula">\frac{1}{2} &gt; \frac{1}{3}</p>
+    <p class="formula">\\frac{1}{2} &gt; \\frac{1}{3}</p>
 
     <p>
       En een derde is groter dan een vierde:
     </p>
 
-    <p class="formula">\frac{1}{3} &gt; \frac{1}{4}</p>
+    <p class="formula">\\frac{1}{3} &gt; \\frac{1}{4}</p>
 
     <p>
       Hoe meer gelijke stukken we van hetzelfde geheel maken,
@@ -1190,7 +1154,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      0 \qquad \frac{1}{2} \qquad 1
+      0 \\qquad \\frac{1}{2} \\qquad 1
     </p>
 
     <p>
@@ -1207,8 +1171,8 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      0 \qquad \frac{1}{4} \qquad \frac{2}{4}
-      \qquad \frac{3}{4} \qquad 1
+      0 \\qquad \\frac{1}{4} \\qquad \\frac{2}{4}
+      \\qquad \\frac{3}{4} \\qquad 1
     </p>
 
     <p>
@@ -1227,7 +1191,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{5}{4}
+      \\frac{5}{4}
     </p>
 
     <p>
@@ -1236,7 +1200,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{5}{4} = 1 + \frac{1}{4}
+      \\frac{5}{4} = 1 + \\frac{1}{4}
     </p>
 
     <p>
@@ -1260,7 +1224,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2}
+      \\frac{1}{2}
     </p>
 
     <p>
@@ -1270,7 +1234,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} = \frac{2}{4}
+      \\frac{1}{2} = \\frac{2}{4}
     </p>
 
     <p>
@@ -1279,7 +1243,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} = \frac{2}{4} = \frac{3}{6}
+      \\frac{1}{2} = \\frac{2}{4} = \\frac{3}{6}
     </p>
 
     <div data-widget="equivalentFractions"></div>
@@ -1292,11 +1256,11 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2}
+      \\frac{1}{2}
       =
-      \frac{1 \times 2}{2 \times 2}
+      \\frac{1 \\times 2}{2 \\times 2}
       =
-      \frac{2}{4}
+      \\frac{2}{4}
     </p>
 
     <p>
@@ -1304,11 +1268,11 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{4}
+      \\frac{2}{4}
       =
-      \frac{2 \times 2}{4 \times 2}
+      \\frac{2 \\times 2}{4 \\times 2}
       =
-      \frac{4}{8}
+      \\frac{4}{8}
     </p>
 
     <p>
@@ -1332,10 +1296,10 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{a}{b}
+      \\frac{a}{b}
       =
-      \frac{a \times c}{b \times c}
-      \qquad(c \neq 0)
+      \\frac{a \\times c}{b \\times c}
+      \\qquad(c \\neq 0)
     </p>
 
     <p>
@@ -1352,7 +1316,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{6}{8}
+      \\frac{6}{8}
     </p>
 
     <p>
@@ -1361,11 +1325,11 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{6}{8}
+      \\frac{6}{8}
       =
-      \frac{6 :  2}{8 : 2}
+      \\frac{6 :  2}{8 : 2}
       =
-      \frac{3}{4}
+      \\frac{3}{4}
     </p>
 
     <p>
@@ -1405,18 +1369,18 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{18}{24}
+      \\frac{18}{24}
     </p>
 
     <p>
       De GGD van 18 en 24 is 6.
     </p>
       <p class="formula">
-      \frac{18}{24}
+      \\frac{18}{24}
       =
-      \frac{18 : 6}{24 : 6}
+      \\frac{18 : 6}{24 : 6}
       =
-      \frac{3}{4}
+      \\frac{3}{4}
     </p>
 
     <p>
@@ -1449,7 +1413,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} > \frac{1}{3}
+      \\frac{1}{2} > \\frac{1}{3}
     </p>
 
     <p>
@@ -1466,7 +1430,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{7} < \frac{5}{7}
+      \\frac{2}{7} < \\frac{5}{7}
     </p>
 
     <p>
@@ -1482,7 +1446,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{4} < \frac{1}{3} < \frac{1}{2}
+      \\frac{1}{4} < \\frac{1}{3} < \\frac{1}{2}
     </p>
 
     <p>
@@ -1500,9 +1464,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3}\\
+      \\frac{2}{3}\\
       en\\
-      \frac{3}{5}
+      \\frac{3}{5}
     </p>
 
     <p>
@@ -1510,7 +1474,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3} = \frac{10}{15}\\ en\\ \frac{3}{5} = \frac{9}{15}
+      \\frac{2}{3} = \\frac{10}{15}\\ en\\ \\frac{3}{5} = \\frac{9}{15}
     </p>
 
     <p>
@@ -1518,7 +1482,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3} > \frac{3}{5}
+      \\frac{2}{3} > \\frac{3}{5}
     </p>
 
     <div class="callout">
@@ -1539,9 +1503,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{7} + \frac{3}{7}
+      \\frac{2}{7} + \\frac{3}{7}
       =
-      \frac{5}{7}
+      \\frac{5}{7}
     </p>
 
     <p>
@@ -1554,9 +1518,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{6}{7} - \frac{2}{7}
+      \\frac{6}{7} - \\frac{2}{7}
       =
-      \frac{4}{7}
+      \\frac{4}{7}
     </p>
 
     <div class="callout">
@@ -1574,7 +1538,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} + \frac{1}{3}
+      \\frac{1}{2} + \\frac{1}{3}
     </p>
 
     <p>
@@ -1587,9 +1551,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} = \frac{3}{6}
-      \qquad
-      \frac{1}{3} = \frac{2}{6}
+      \\frac{1}{2} = \\frac{3}{6}
+      \\qquad
+      \\frac{1}{3} = \\frac{2}{6}
     </p>
 
     <p>
@@ -1597,9 +1561,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{3}{6} + \frac{2}{6}
+      \\frac{3}{6} + \\frac{2}{6}
       =
-      \frac{5}{6}
+      \\frac{5}{6}
     </p>
 
     <h4>Waarom mag je de noemers niet optellen?</h4>
@@ -1609,9 +1573,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} + \frac{1}{3}
-      \neq
-      \frac{2}{5}
+      \\frac{1}{2} + \\frac{1}{3}
+      \\neq
+      \\frac{2}{5}
     </p>
 
     <p>
@@ -1641,7 +1605,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} \times \frac{3}{4}
+      \\frac{1}{2} \\times \\frac{3}{4}
     </p>
 
     <p>
@@ -1649,9 +1613,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} \times \frac{3}{4}
+      \\frac{1}{2} \\times \\frac{3}{4}
       =
-      \frac{3}{8}
+      \\frac{3}{8}
     </p>
 
     <h4>De rekenregel</h4>
@@ -1662,9 +1626,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{a}{b} \times \frac{c}{d}
+      \\frac{a}{b} \\times \\frac{c}{d}
       =
-      \frac{a \times c}{b \times d}
+      \\frac{a \\times c}{b \\times d}
     </p>
 
     <p>
@@ -1672,11 +1636,11 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3} \times \frac{5}{7}
+      \\frac{2}{3} \\times \\frac{5}{7}
       =
-      \frac{2 \times 5}{3 \times 7}
+      \\frac{2 \\times 5}{3 \\times 7}
       =
-      \frac{10}{21}
+      \\frac{10}{21}
     </p>
 
     <h4>Eerst vereenvoudigen</h4>
@@ -1687,7 +1651,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3} \times \frac{9}{10}
+      \\frac{2}{3} \\times \\frac{9}{10}
     </p>
 
     <p>
@@ -1695,9 +1659,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{1} \times \frac{3}{5}
+      \\frac{1}{1} \\times \\frac{3}{5}
       =
-      \frac{3}{5}
+      \\frac{3}{5}
     </p>
 
     <div class="callout">
@@ -1736,7 +1700,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{3}{4} : \frac{1}{2}
+      \\frac{3}{4} : \\frac{1}{2}
     </p>
 
     <p>
@@ -1750,9 +1714,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{3}{4} : \frac{1}{2}
+      \\frac{3}{4} : \\frac{1}{2}
       =
-      \frac{3}{2}
+      \\frac{3}{2}
     </p>
 
     <h4>Het omgekeerde</h4>
@@ -1769,7 +1733,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{1}{2} \times \frac{2}{1} = 1
+      \\frac{1}{2} \\times \\frac{2}{1} = 1
     </p>
 
     <p>
@@ -1778,9 +1742,9 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{a}{b} : \frac{c}{d}
+      \\frac{a}{b} : \\frac{c}{d}
       =
-      \frac{a}{b} \times \frac{d}{c}
+      \\frac{a}{b} \\times \\frac{d}{c}
     </p>
 
     <p>
@@ -1788,13 +1752,13 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{2}{3} : \frac{4}{5}
+      \\frac{2}{3} : \\frac{4}{5}
       =
-      \frac{2}{3} \times \frac{5}{4}
+      \\frac{2}{3} \\times \\frac{5}{4}
       =
-      \frac{10}{12}
+      \\frac{10}{12}
       =
-      \frac{5}{6}
+      \\frac{5}{6}
     </p>
 
     <div class="callout">
@@ -1814,7 +1778,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{7}{4}
+      \\frac{7}{4}
     </p>
 
     <p>
@@ -1822,7 +1786,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{7}{4} = \frac{4}{4} + \frac{3}{4} = 1 + \frac{3}{4}
+      \\frac{7}{4} = \\frac{4}{4} + \\frac{3}{4} = 1 + \\frac{3}{4}
     </p>
 
     <p>
@@ -1831,7 +1795,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      1\frac{3}{4}
+      1\\frac{3}{4}
     </p>
 
     <p>
@@ -1845,7 +1809,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-    \frac{7}{4} = 1\\ rest\\ 3
+    \\frac{7}{4} = 1\\ rest\\ 3
     </p>
 
     <p>
@@ -1854,7 +1818,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      \frac{7}{4} = 1\frac{3}{4}
+      \\frac{7}{4} = 1\\frac{3}{4}
     </p>
 
     <h4>Van een gemengd getal naar een breuk</h4>
@@ -1864,7 +1828,7 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      2\frac{1}{3}
+      2\\frac{1}{3}
     </p>
 
     <p>
@@ -1872,11 +1836,11 @@ negatieve getallen.</p>
     </p>
 
     <p class="formula">
-      2\frac{1}{3}
+      2\\frac{1}{3}
       =
-      \frac{6}{3} + \frac{1}{3}
+      \\frac{6}{3} + \\frac{1}{3}
       =
-      \frac{7}{3}
+      \\frac{7}{3}
     </p>
 
     <div class="callout">
@@ -1902,21 +1866,27 @@ negatieve getallen.</p>
     theory: /* html */`
       <h2>Decimalen en percentages</h2>
 
-      <p><strong>Doel:</strong> leren werken met decimalen en percentages en begrijpen hoe ze samenhangen met breuken.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Hoe kunnen we hetzelfde getal schrijven als breuk, decimaal en percentage?</li>
+        <li>Hoe zetten we een breuk om in een decimaal en percentage?</li>
+        <li>Hoe berekenen we een percentage van een hoeveelheid?</li>
+        <li>Hoe herkennen we procentuele stijging, daling en procentpunten?</li>
+      </ul>
       <h3>Getallen tussen 0 en 1</h3>
       <p>In de vorige les hebben we gezien dat een getal niet noodzakelijk groter dan 1 hoeft te zijn.</p>
 
                 <p>We kunnen bijvoorbeeld de breuk</p>
 
                 <p class="formula">
-                    \frac{1}{2}
+                    \\frac{1}{2}
                 </p>
 
                 <p>gebruiken om een hoeveelheid aan te geven die kleiner is dan 1, maar groter dan 0.</p>
 
                 <p>Ook</p>
       <p class="formula">
-                \frac{1}{4}\\ en\\ \frac{3}{4}\\ en\\ \frac{7}{10}
+                \\frac{1}{4}\\ en\\ \\frac{3}{4}\\ en\\ \\frac{7}{10}
               </p>
 
                 <p>zijn getallen die tussen 0 en 1 liggen.</p>
@@ -1924,7 +1894,7 @@ negatieve getallen.</p>
                 <p>We hebben geleerd hoe we zulke getallen als een <strong>breuk</strong> kunnen schrijven of als een deling.</p> 
                 
                  <p class="formula">
-                    \frac{1}{2}= 1/2 = 1 ÷ 2 = 1:2
+                    \\frac{1}{2}= 1/2 = 1 ÷ 2 = 1:2
                 </p>
 
                 <p>Maar er bestaat ook een andere manier om deze getallen te schrijven.</p>
@@ -1932,7 +1902,7 @@ negatieve getallen.</p>
                 <p>Zo kunnen we bijvoorbeeld schrijven:</p>
 
                 <p class="formula">
-                    \frac{1}{2} = 0,5
+                    \\frac{1}{2} = 0,5
                 </p>
 
                 
@@ -1942,7 +1912,7 @@ negatieve getallen.</p>
                 <p>Ook:</p>
 
                 <p class="formula">
-                  \frac{3}{4}=0,75
+                  \\frac{3}{4}=0,75
                    
                 </p>
                    <p>De komma in <strong>0,5</strong> en <strong>0,75</strong> geeft aan dat we naast het gehele deel ook een deel van één geheel aangeven.</p>
@@ -1954,7 +1924,7 @@ negatieve getallen.</p>
                     <p>Een decimaal getal kan hetzelfde getal voorstellen als een breuk. Zo zijn</p>
 
                     <p class="formula">
-                        \frac{1}{2} = 0,5 = 50\\%
+                        \\frac{1}{2} = 0,5 = 50\\%
               
                     </p>
 
@@ -1980,7 +1950,7 @@ negatieve getallen.</p>
       </ul>
       
       <p>We kunnen het getal dus schrijven als:</p>
-      <p class="formula">37,428 = 30 + 7 + \frac{4}{10} + \frac{2}{100} + \frac{8}{1000}</p>
+      <p class="formula">37,428 = 30 + 7 + \\frac{4}{10} + \\frac{2}{100} + \\frac{8}{1000}</p>
       <p>De cijfers rechts van de komma geven steeds kleinere delen van één geheel aan.</p>
       
       <table>
@@ -1998,25 +1968,25 @@ negatieve getallen.</p>
 
       <h3>Decimalen en breuken</h3>
       <p>Een eindig decimaal getal kunnen we altijd als een breuk schrijven.</p>
-      <p class="formula">0,7 = \frac{7}{10}</p>
-      <p class="formula">0,42 = \frac{42}{100} = \frac{21}{50}</p>
-      <p class="formula">0,375 = \frac{375}{1000} = \frac{3}{8}</p>
+      <p class="formula">0,7 = \\frac{7}{10}</p>
+      <p class="formula">0,42 = \\frac{42}{100} = \\frac{21}{50}</p>
+      <p class="formula">0,375 = \\frac{375}{1000} = \\frac{3}{8}</p>
       <p>Ook een getal groter dan 1 kunnen we zo schrijven:</p>
-      <p class="formula">2,35 = \frac{235}{100} = \frac{47}{20}</p>
+      <p class="formula">2,35 = \\frac{235}{100} = \\frac{47}{20}</p>
       <p>Het is belangrijk om de breuk daarna, wanneer mogelijk, te vereenvoudigen.</p>
       <h4>Van een breuk naar een decimaal</h4>
       <p>Als de breuk een noemer heeft die gemakkelijk in tienden, honderdsten of duizendsten kan worden omgezet, kunnen we dat rechtstreeks doen.</p>
-      <p class="formula">\frac{3}{4} = \frac{75}{100} = 0,75</p>
-      <p class="formula">\frac{7}{20} = \frac{35}{100} = 0,35</p>
+      <p class="formula">\\frac{3}{4} = \\frac{75}{100} = 0,75</p>
+      <p class="formula">\\frac{7}{20} = \\frac{35}{100} = 0,35</p>
 
       <h3>Eindige en repeterende decimalen</h3>
       
       <p>Sommige breuken geven een decimaal getal dat eindigt:</p>
-      <p class="formula">\frac{1}{2} = 0,5</p>
-      <p class="formula">\frac{1}{4} = 0,25</p>
+      <p class="formula">\\frac{1}{2} = 0,5</p>
+      <p class="formula">\\frac{1}{4} = 0,25</p>
       <p>Andere breuken blijven cijfers produceren:</p>
-      <p class="formula">\frac{1}{3} = 0,333333...</p>
-      <p class="formula">\frac{2}{7} = 0,285714285714...</p>
+      <p class="formula">\\frac{1}{3} = 0,333333...</p>
+      <p class="formula">\\frac{2}{7} = 0,285714285714...</p>
       <p>Bij zulke getallen herhaalt zich een patroon. We noemen dit een <strong>repeterend decimaal getal</strong>.</p>
       
       <div class="callout">
@@ -2046,9 +2016,9 @@ negatieve getallen.</p>
       <p>Ook bij decimalen blijft vermenigvuldigen dezelfde bewerking.</p>
       <p class="formula">1,2 × 0,3 = 0,36</p>
       <p>We kunnen dit begrijpen vanuit breuken:</p>
-      <p class="formula">1,2 = \frac{12}{10}</p>
-      <p class="formula">0,3 = \frac{3}{10}</p>
-      <p class="formula">\frac{12}{10} × \frac{3}{10} = \frac{36}{100} = 0,36</p>
+      <p class="formula">1,2 = \\frac{12}{10}</p>
+      <p class="formula">0,3 = \\frac{3}{10}</p>
+      <p class="formula">\\frac{12}{10} × \\frac{3}{10} = \\frac{36}{100} = 0,36</p>
       <p>Een iets moeilijker voorbeeld:</p>
       <p class="formula">2,35 × 1,4 = 3,29</p>
 
@@ -2065,13 +2035,13 @@ negatieve getallen.</p>
       <h3>Procent betekent "per honderd"</h3>
       
       <p>Het woord <strong>procent</strong> betekent letterlijk <strong>per honderd</strong>.</p>
-      <p class="formula">1\\% = \frac{1}{100} = 0,01</p>
-      <p class="formula">25\\% = \frac{25}{100} = 0,25</p>
-      <p class="formula">50\\% = \frac{50}{100} = 0,5</p>
-      <p class="formula">100\\% = \frac{100}{100} = 1</p>
+      <p class="formula">1\\% = \\frac{1}{100} = 0,01</p>
+      <p class="formula">25\\% = \\frac{25}{100} = 0,25</p>
+      <p class="formula">50\\% = \\frac{50}{100} = 0,5</p>
+      <p class="formula">100\\% = \\frac{100}{100} = 1</p>
       <p>Een percentage hoeft niet tussen 0% en 100% te liggen.</p>
       
-      <p class="formula">125\\% = \frac{125}{100} = 1,25</p>
+      <p class="formula">125\\% = \\frac{125}{100} = 1,25</p>
       
       <div class="callout">
         <p><strong>Onthoud</strong></p>
@@ -2082,13 +2052,13 @@ negatieve getallen.</p>
       
         <p>Een breuk, een decimaal en een percentage kunnen drie verschillende schrijfwijzen voor dezelfde waarde zijn.</p>
         
-        <p class="formula">\frac{1}{2} = 0,5 = 50\\%</p>
+        <p class="formula">\\frac{1}{2} = 0,5 = 50\\%</p>
         
-        <p class="formula">\frac{1}{4} = 0,25 = 25\\%</p>
+        <p class="formula">\\frac{1}{4} = 0,25 = 25\\%</p>
         
-        <p class="formula">\frac{3}{8} = 0,375 = 37,5\\%</p>
+        <p class="formula">\\frac{3}{8} = 0,375 = 37,5\\%</p>
         
-        <p class="formula">\frac{5}{4} = 1,25 = 125\\%</p>
+        <p class="formula">\\frac{5}{4} = 1,25 = 125\\%</p>
       
       <p>Je kunt dus tussen de drie schrijfwijzen heen en weer gaan.</p>
 
@@ -2096,7 +2066,7 @@ negatieve getallen.</p>
       
       <p>Stel dat we willen weten hoeveel 25% van 80 is.</p>
       <p>Omdat:</p>
-      <p class="formula">25\\% = \frac{1}{4}</p>
+      <p class="formula">25\\% = \\frac{1}{4}</p>
       <p>is 25% van 80:</p>
       <p class="formula">80 ÷ 4 = 20</p>
       <p>We kunnen ook eerst 1% bepalen:</p>
@@ -2121,12 +2091,12 @@ negatieve getallen.</p>
       <h3>Een percentage bepalen</h3>
       <p>Stel dat 18 van de 24 leerlingen geslaagd zijn. Welk percentage is dat?</p>
       <p>We schrijven eerst de verhouding als breuk:</p>
-      <p class="formula">\frac{18}{24} = \frac{3}{4}</p>
+      <p class="formula">\\frac{18}{24} = \\frac{3}{4}</p>
       <p>Daarna:</p>
-      <p class="formula">\frac{3}{4} = 0,75 = 75\\%</p>
+      <p class="formula">\\frac{3}{4} = 0,75 = 75\\%</p>
       <p>Dus 18 van de 24 leerlingen is <strong>75%</strong>.</p>
       <p>De algemene rekenwijze is:</p>
-      <p class="formula">percentage = \frac{deel}{geheel} × 100%</p>
+      <p class="formula">percentage = \\frac{deel}{geheel} × 100%</p>
       <p>Het belangrijkste is dat je eerst bepaalt wat het <strong>geheel</strong> is. Dat geheel stelt 100% voor.</p>
 
       <h3>Procentuele stijging</h3>
@@ -2136,7 +2106,7 @@ negatieve getallen.</p>
       <p>De absolute stijging is:</p>
       <p class="formula">€100 − €80 = €20</p>
       <p>We vergelijken die €20 met de beginprijs van €80:</p>
-      <p class="formula">20/80 = \frac{1}{4} = 25\\%</p>
+      <p class="formula">20/80 = \\frac{1}{4} = 25\\%</p>
       <p>De prijs is dus met <strong>25%</strong> gestegen.</p>
       
       <div class="callout">
@@ -2151,7 +2121,7 @@ negatieve getallen.</p>
       <p>De daling is:</p>
       <p class="formula">€200 − €150 = €50</p>
       <p>Die €50 vergelijken we met de beginwaarde van €200:</p>
-      <p class="formula">\frac{50}{200} = \frac{1}{4} = 25\\%</p>
+      <p class="formula">\\frac{50}{200} = \\frac{1}{4} = 25\\%</p>
       <p>De prijs is dus met <strong>25%</strong> gedaald.</p>
 
       <h3>Een stijging of daling als factor</h3>
@@ -2178,7 +2148,7 @@ negatieve getallen.</p>
       <p>Een verandering van 60% naar 70% is een stijging van:</p>
       <p class="formula">70\\% − 60\\% = 10\\ procentpunt</p>
       <p>Relatief gezien is de stijging:</p>
-      <p class="formula">\frac{10}{60} ≈ 0,1667 ≈ 16,67\\%</p>
+      <p class="formula">\\frac{10}{60} ≈ 0,1667 ≈ 16,67\\%</p>
       <p>Dus:</p>
       <ul>
         <li>60% → 70% = <strong>10 procentpunten</strong>;</li>
@@ -2189,10 +2159,10 @@ negatieve getallen.</p>
 
       <h3>Samenvatting</h3>
       <ul>
-        <li><span class="formula-inline">0,5 = \frac{1}{2} = 50%</span></li>
-        <li><span class="formula-inline">0,25 = \frac{1}{4} = 25%</span></li>
-        <li><span class="formula-inline">0,375 = \frac{3}{8} = 37,5%</span></li>
-        <li><span class="formula-inline">1\\% = 0,01 = \frac{1}{100}</span></li>
+        <li><span class="formula-inline">0,5 = \\frac{1}{2} = 50%</span></li>
+        <li><span class="formula-inline">0,25 = \\frac{1}{4} = 25%</span></li>
+        <li><span class="formula-inline">0,375 = \\frac{3}{8} = 37,5%</span></li>
+        <li><span class="formula-inline">1\\% = 0,01 = \\frac{1}{100}</span></li>
         <li>Bij een procentuele stijging of daling is de beginwaarde de referentie.</li>
         <li>Een tweede procentuele verandering werkt op de nieuwe waarde.</li>
         <li>Procentpunten zijn niet hetzelfde als een procentuele verandering.</li>
@@ -2207,7 +2177,13 @@ negatieve getallen.</p>
     theory: /* html */`
       <h2>Verhoudingen en evenredigheid</h2>
 
-      <p><strong>Doel:</strong> leren wat een verhouding betekent, verhoudingen vergelijken en vereenvoudigen, werken met verhoudingstabellen en herkennen wanneer twee grootheden evenredig zijn.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat is een verhouding en hoe kunnen we die schrijven en vereenvoudigen?</li>
+        <li>Hoe kunnen we verhoudingen vergelijken?</li>
+        <li>Hoe herkennen we een recht evenredig verband?</li>
+        <li>Hoe gebruiken we verhoudingen bij tabellen, schaal en recepten?</li>
+      </ul>
 
       <div class="callout">
         <strong>Vertrekpunt</strong>
@@ -2222,7 +2198,7 @@ negatieve getallen.</p>
       <p>We lezen dit als <strong>2 staat tot 3</strong>.</p>
       <p>De verhouding vertelt ons niet alleen hoeveel rode en groene appels er zijn, maar vooral hoe hun aantallen zich tot elkaar verhouden.</p>
       <p>We kunnen dezelfde verhouding ook als een breuk schrijven:</p>
-      <p class="formula">\frac{2}{3}</p>
+      <p class="formula">\\frac{2}{3}</p>
       <p>Daarbij moeten we wel goed zeggen <strong>welke hoeveelheid we met welke hoeveelheid vergelijken</strong>. De volgorde is belangrijk.</p>
       <p>Rood tegenover groen is:</p>
       <p class="formula">2 : 3</p>
@@ -2289,11 +2265,11 @@ negatieve getallen.</p>
       <p>en:</p>
       <p class="formula">3 : 5</p>
       <p>We kunnen beide verhoudingen bekijken als breuken:</p>
-      <p class="formula">\frac{2}{3}</p>
-      <p class="formula">\frac{3}{5}</p>
+      <p class="formula">\\frac{2}{3}</p>
+      <p class="formula">\\frac{3}{5}</p>
       <p>Een gemeenschappelijke noemer is 15:</p>
-      <p class="formula">\frac{2}{3} = \frac{10}{15}</p>
-      <p class="formula">\frac{3}{5} = \frac{9}{15}</p>
+      <p class="formula">\\frac{2}{3} = \\frac{10}{15}</p>
+      <p class="formula">\\frac{3}{5} = \\frac{9}{15}</p>
       <p>Daarom:</p>
       <p class="formula">2 : 3 &gt; 3 : 5</p>
       <p>Het is dus belangrijk om niet alleen naar de losse getallen te kijken. We vergelijken de <strong>verhouding als geheel</strong>.</p>
@@ -2302,11 +2278,11 @@ negatieve getallen.</p>
       <p>Een verhouding kunnen we gebruiken om een deel van een geheel te bepalen.</p>
       <p>Bij een verhouding van 2 rode op 3 blauwe voorwerpen zijn er in totaal 5 verhoudingseenheden.</p>
       <p>Het aandeel rood is dus:</p>
-      <p class="formula">\frac{2}{5}</p>
+      <p class="formula">\\frac{2}{5}</p>
       <p>Als percentage is dat:</p>
-      <p class="formula">\frac{2}{5} = 0,4 = 40\\%</p>
+      <p class="formula">\\frac{2}{5} = 0,4 = 40\\%</p>
       <p>Het aandeel blauw is:</p>
-      <p class="formula">\frac{3}{5} = 0,6 = 60\\%</p>
+      <p class="formula">\\frac{3}{5} = 0,6 = 60\\%</p>
       <p>Samen krijgen we:</p>
       <p class="formula">40\\% + 60\\% = 100\\%</p>
       <p>Een verhouding vertelt dus ook hoe een geheel over verschillende groepen verdeeld is.</p>
@@ -2361,9 +2337,9 @@ negatieve getallen.</p>
       <h3>De constante verhouding</h3>
       <p>Bij direct evenredige grootheden blijft de verhouding tussen de twee grootheden constant.</p>
       <p>Bij een prijs van €2 per broodje krijgen we bijvoorbeeld:</p>
-      <p class="formula">\frac{€6}{3} = €2</p>
-      <p class="formula">\frac{€10}{5} = €2</p>
-      <p class="formula">\frac{€14}{7} = €2</p>
+      <p class="formula">\\frac{€6}{3} = €2</p>
+      <p class="formula">\\frac{€10}{5} = €2</p>
+      <p class="formula">\\frac{€14}{7} = €2</p>
       <p>De prijs per broodje blijft dus steeds €2.</p>
       <p>Dit noemen we de <strong>evenredigheidsconstante</strong>: de vaste hoeveelheid die bij één eenheid van de andere grootheid hoort.</p>
       <p>In dit voorbeeld is dat:</p>
@@ -2449,7 +2425,7 @@ negatieve getallen.</p>
       <p>Een verhouding van 2 op 3 kan als verhouding worden geschreven:</p>
       <p class="formula">2 : 3</p>
       <p>en als breuk:</p>
-      <p class="formula">\frac{2}{3}</p>
+      <p class="formula">\\frac{2}{3}</p>
       <p>Maar de betekenis van de breuk hangt af van wat we vergelijken.</p>
       <p>Als 2 rode appels tegenover 3 groene appels staan, betekent 2/3: <strong>het aantal rode appels gedeeld door het aantal groene appels</strong>.</p>
       <p>Als 2 van de 3 leerlingen een fiets hebben, betekent 2/3: <strong>het deel van de leerlingen dat een fiets heeft</strong>.</p>
@@ -2490,7 +2466,13 @@ negatieve getallen.</p>
     goal: "Vind delers en veelvouden en herken deelbaarheid met de regels voor 2, 3, 4, 5, 6, 9, 10 en 12.",
     theory: /* html */`
       <h2>Delers en deelbaarheid</h2>
-      <p><strong>Doel:</strong> begrijpen wat delers en veelvouden zijn, herkennen wanneer een getal deelbaar is, deelbaarheidsregels gebruiken en deze kennis toepassen bij factorisatie en problemen.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat zijn delers en veelvouden?</li>
+        <li>Wanneer is een getal deelbaar door een ander getal?</li>
+        <li>Hoe kunnen we deelbaarheid snel herkennen met deelbaarheidsregels?</li>
+        <li>Hoe gebruiken we delers bij factorisatie en het vereenvoudigen van breuken?</li>
+      </ul>
 
       <div class="callout">
         <strong>Vertrekpunt</strong>
@@ -2657,7 +2639,7 @@ negatieve getallen.</p>
       <p class="formula">24 ÷ 12 = 2</p>
       <p class="formula">36 ÷ 12 = 3</p>
       <p>Dus:</p>
-      <p class="formula">\frac{24}{36} = \frac{2}{3}</p>
+      <p class="formula">\\frac{24}{36} = \\frac{2}{3}</p>
       <p>Hetzelfde idee gebruikten we in 1.6 bij het vereenvoudigen van verhoudingen. In 1.9 zullen we leren hoe we zulke gemeenschappelijke delers systematisch kunnen vinden met de <strong>GGD</strong>.</p>
 
       <h3>Samenvatting en strategie</h3>
@@ -2682,7 +2664,13 @@ negatieve getallen.</p>
     goal: "Herken priemgetallen en ontbind een getal eenduidig in priemfactoren.",
     theory: /* html */`
       <h2>Priemgetallen en factorisatie</h2>
-      <p><strong>Doel:</strong> priemgetallen herkennen, samengestelde getallen ontbinden en priemfactorisatie gebruiken.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat maakt een getal tot een priemgetal?</li>
+        <li>Hoe herkennen we samengestelde getallen?</li>
+        <li>Hoe ontbinden we een getal in priemfactoren?</li>
+        <li>Waarom is een priemfactorisatie uniek, afgezien van de volgorde?</li>
+      </ul>
 
       <h3>Van delers naar priemgetallen</h3>
       <p>In 1.7 leerden we dat een getal delers heeft. Sommige getallen hebben precies twee positieve delers: <strong>1 en zichzelf</strong>. Deze getallen noemen we <strong>priemgetallen</strong>.</p>
@@ -2770,7 +2758,7 @@ negatieve getallen.</p>
       <h3>Priemfactorisatie en breuken</h3>
       <p>Priemfactorisatie kan helpen om te zien welke factoren in de teller en noemer van een breuk kunnen worden weggewerkt.</p>
       <p>Bijvoorbeeld:</p>
-      <p class="formula">\frac{18}{30} = \frac{2 × 3 × 3}{2 × 3 × 5} = \frac{3}{5}</p>
+      <p class="formula">\\frac{18}{30} = \\frac{2 × 3 × 3}{2 × 3 × 5} = \\frac{3}{5}</p>
       <p>De gemeenschappelijke factoren 2 en 3 kunnen we wegdelen. In 1.9 maken we dit proces systematischer met de grootste gemene deler.</p>
 
       <h3>Is een getal priem?</h3>
@@ -2819,7 +2807,13 @@ negatieve getallen.</p>
     goal: "Bereken GGD en KGV, ook met het algoritme van Euclides, en gebruik ze bij breuken.",
     theory: /* html */`
       <h2>GGD, KGV en het algoritme van Euclides</h2>
-      <p><strong>Doel:</strong> de GGD en het KGV van getallen bepalen en verschillende methoden gebruiken om ze te berekenen.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat zijn de grootste gemene deler en het kleinste gemene veelvoud?</li>
+        <li>Hoe kunnen we GGD en KGV bepalen?</li>
+        <li>Hoe werkt het algoritme van Euclides?</li>
+        <li>Hoe gebruiken we GGD en KGV bij breuken en andere berekeningen?</li>
+      </ul>
 
       <h3>Van gemeenschappelijke delers naar de GGD</h3>
       <p>In 1.7 leerden we wat delers zijn en in 1.8 zagen we hoe priemfactorisatie de bouwstenen van getallen zichtbaar maakt. Als twee getallen dezelfde delers hebben, noemen we die <strong>gemeenschappelijke delers</strong>.</p>
@@ -2842,7 +2836,7 @@ negatieve getallen.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">GGD(84, 126) = 42</p>
       <p>Daarom:</p>
-      <p class="formula">\frac{84}{126} = \frac{84 ÷ 42}{126 ÷ 42} = \frac{2}{3}</p>
+      <p class="formula">\\frac{84}{126} = \\frac{84 ÷ 42}{126 ÷ 42} = \\frac{2}{3}</p>
       <p>Omdat 2 en 3 geen gemeenschappelijke deler groter dan 1 hebben, is de breuk verder niet te vereenvoudigen.</p>
 
       <h3>GGD vinden door alle delers te zoeken</h3>
@@ -3055,7 +3049,13 @@ negatieve getallen.</p>
     goal: "Lees en bereken machten met gehele niet-negatieve exponent, inclusief de rekenregels voor hetzelfde grondtal.",
     theory: /* html */` 
       <h2>Machten</h2>
-      <p><strong>Doel:</strong> machten begrijpen, lezen, berekenen en gebruiken in eenvoudige berekeningen.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Hoe kunnen we herhaalde vermenigvuldiging kort schrijven als een macht?</li>
+        <li>Wat zijn het grondtal en de exponent?</li>
+        <li>Hoe berekenen we machten en gebruiken we de rekenregels?</li>
+        <li>Wat gebeurt er bij speciale exponenten zoals 0 en 1?</li>
+      </ul>
 
       <h3>Van herhaald vermenigvuldigen naar een macht</h3>
       <p>Soms vermenigvuldigen we hetzelfde getal meerdere keren met zichzelf.</p>
@@ -3115,7 +3115,7 @@ negatieve getallen.</p>
 
 <p class="formula">7^0 = 1</p>
 
-<div class="callout">
+<div class="callout insight">
   <p><strong>Belangrijk inzicht</strong></p>
   <p>
     Een macht betekent niet altijd letterlijk “zoveel keer het grondtal
@@ -3245,7 +3245,13 @@ negatieve getallen.</p>
     goal: "Gebruik de (niet-negatieve) vierkantswortel als omgekeerde van kwadrateren en vereenvoudig eenvoudige wortels.",
     theory: /* html */`
       <h2>Wortels</h2>
-      <p><strong>Doel:</strong> vierkantswortels begrijpen, berekenen, schatten en gebruiken.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat is een vierkantswortel en hoe hangt die samen met kwadrateren?</li>
+        <li>Hoe berekenen en schatten we vierkantswortels?</li>
+        <li>Hoe kunnen we wortels vergelijken en controleren?</li>
+        <li>Hoe kunnen we eenvoudige wortels vereenvoudigen?</li>
+      </ul>
 
       <h3>Van kwadrateren naar terugrekenen</h3>
       <p>In 1.10 leerden we machten. In het bijzonder leerden we kwadrateren: een getal vermenigvuldigen met zichzelf.</p>
@@ -3407,10 +3413,16 @@ negatieve getallen.</p>
     goal: "Onderscheid rationaal en irrationaal en plaats ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ op de getallenlijn.",
     theory: /* html */`
       <h2>Irrationale en reële getallen</h2>
-      <p><strong>Doel:</strong> begrijpen waarom sommige getallen niet als breuk kunnen worden geschreven, en ontdekken hoe rationale en irrationale getallen samen de reële getallen vormen.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat is het verschil tussen een rationaal en een irrationaal getal?</li>
+        <li>Waarom is <span class="formula-inline">√2</span> een voorbeeld van een irrationaal getal?</li>
+        <li>Wat vertellen eindige en repeterende decimalen ons over rationaliteit?</li>
+        <li>Hoe vormen rationale en irrationale getallen samen de reële getallen?</li>
+      </ul>
 
       <h3>Niet elk getal kan als breuk worden geschreven</h3>
-      <p>In 1.5 maakten we kennis met de <strong>rationale getallen</strong>. Dat zijn getallen die we als een breuk van twee gehele getallen kunnen schrijven.</p>
+      <p>In 1.4 maakten we kennis met de <strong>rationale getallen</strong>. Dat zijn getallen die we als een breuk van twee gehele getallen kunnen schrijven.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">\\frac{1}{2},\\ \\frac{3}{4},\\ 5,\\ 0,75</p>
       <p>Maar bestaat er ook een getal dat <strong>niet</strong> als zo'n breuk kan worden geschreven?</p>
@@ -3430,11 +3442,11 @@ negatieve getallen.</p>
 
       <h3>Rationale getallen</h3>
       <p>Een getal is <strong>rationaal</strong> als het kan worden geschreven als een breuk:</p>
-      <p class="formula">\frac{a}{b}</p>
+      <p class="formula">\\frac{a}{b}</p>
       <p>waarbij a en b gehele getallen zijn en b niet 0 is.</p>
       <p>We gebruiken het symbool <strong>ℚ</strong> voor de verzameling van de rationale getallen.</p>
       <p>Ook gehele getallen zijn rationaal, want bijvoorbeeld:</p>
-      <p class="formula">4 = \frac{4}{1}</p>
+      <p class="formula">4 = \\frac{4}{1}</p>
 
       <h3>Irrationale getallen</h3>
       <p>Een getal is <strong>irrationaal</strong> als het <strong>niet</strong> als een breuk van twee gehele getallen kan worden geschreven.</p>
@@ -3456,18 +3468,18 @@ negatieve getallen.</p>
       <h3>Oneindige decimalen</h3>
       <p>Een decimale schrijfwijze kan eindig of oneindig zijn.</p>
       <p>Bijvoorbeeld:</p>
-      <p class="formula">0,5 = \frac{1}{2}</p>
+      <p class="formula">0,5 = \\frac{1}{2}</p>
       <p>Deze decimale schrijfwijze eindigt. Een rationaal getal kan echter ook oneindig veel decimalen hebben:</p>
-      <p class="formula">\frac{1}{3} = 0,333333...</p>
+      <p class="formula">\\frac{1}{3} = 0,333333...</p>
       <p>De 3 blijft zich herhalen.</p>
       <p>Bij een irrationaal getal blijven de decimalen ook doorgaan, maar zonder een zich herhalend patroon. Daarom is <strong>oneindig veel decimalen op zichzelf niet voldoende</strong> om te bepalen of een getal irrationaal is.</p>
 
       <h3>Eindige en repeterende decimalen zijn rationaal</h3>
       <p>Elke eindige decimale schrijfwijze kan als breuk worden geschreven.</p>
       <p>Bijvoorbeeld:</p>
-      <p class="formula">0,75 = \frac{75}{100} = \frac{3}{4}</p>
+      <p class="formula">0,75 = \\frac{75}{100} = \\frac{3}{4}</p>
       <p>Ook een repeterende decimale schrijfwijze stelt een rationaal getal voor:</p>
-      <p class="formula">0,666... = \frac{2}{3}</p>
+      <p class="formula">0,666... = \\frac{2}{3}</p>
       <p>Een handige vuistregel is daarom:</p>
       <ul>
         <li>eindige decimalen → rationaal;</li>
@@ -3520,7 +3532,13 @@ negatieve getallen.</p>
     goal: "Rond doelgericht af, schat een uitkomst en schrijf grote en kleine getallen in wetenschappelijke notatie.",
     theory: /* html */`
       <h2>Afronden en wetenschappelijke notatie</h2>
-      <p><strong>Doel:</strong> getallen afronden met een duidelijke nauwkeurigheid, schattingen gebruiken en zeer grote of kleine getallen compact schrijven.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Waarom en hoe ronden we getallen af?</li>
+        <li>Hoe kiezen we een passende nauwkeurigheid en maken we een schatting?</li>
+        <li>Hoe schrijven we zeer grote en kleine getallen in wetenschappelijke notatie?</li>
+        <li>Hoe helpen machten van 10 ons daarbij?</li>
+      </ul>
 
       <div class="callout">
         <strong>Vertrekpunt</strong>
