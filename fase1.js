@@ -188,11 +188,11 @@ const MILESTONES_1 = [
 <h2>De vier hoofdbewerkingen</h2>
   <p><strong>Wat gaan we ontdekken?</strong></p>
   <ul>
-    <li>wat kunnen we doen met deze symbolen: +, -, × en ÷ ?</li>
-    <li>verandert de volgorde van bewerkingen het antwoord?</li>
-    <li>wanneer mogen we de getallen in een bewerking omwisselen?</li>
-    <li>wat als een deling niet uitkomt?</li>
-    <li>wat is er zo bijzonder aan het getal 0?</li>
+    <li>Wat kunnen we doen met deze symbolen: +, -, × en ÷ ?</li>
+    <li>Verandert de volgorde van bewerkingen het antwoord?</li>
+    <li>Wanneer mogen we de getallen in een bewerking omwisselen?</li>
+    <li>Wat als een deling niet uitkomt?</li>
+    <li>Wat is er zo bijzonder aan het getal 0?</li>
   </ul>
   <h3>Optellen</h3>
     <p>Met <strong>optellen</strong> voegen we hoeveelheden samen.</p>
@@ -767,23 +767,12 @@ const MILESTONES_1 = [
 
         <ul>
           <li>Waarom is ℕ niet genoeg en waarom breiden we de verzameling uit tot ℤ?</li>
-          <li>Hoe plaats je negatieve getallen op de getallenas en hoe vergelijk je ze met elkaar?</li>
-          <li>wat is een absolute waarde?</li>
-          <li>wat gebeurt er met de tekens bij optellen, aftrekken, vermenigvuldigen en delen?</li>
+          <li>Hoe plaats je negatieve getallen op de getallenlijn en hoe vergelijk je ze met elkaar?</li>
+          <li>Wat is een absolute waarde?</li>
+          <li>Wat gebeurt er met de tekens bij optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
         
-        <h3>Verzameling en element</h3>
-        <p>Voordat we de verzameling van de natuurlijke getallen gaan uitbreiden, bekijken we eerst hoe we verzamelingen en elementen noteren.</p>
-        <p>Een <strong>verzameling</strong> is een groep objecten die we als één geheel bekijken. Voorbeeld de verzameling van 0, 1, 2, 3 en 4 noteren we als:</p>
-        <p class="formula"> { 0, 1, 2, 3, 4 } </p>
-        <p>De getallen in de verzameling noemen we <strong>elementen</strong>. Het opsommen van de elementen van de verzameling noteren we tussen accolades.</p> 
-        
-        <div class="callout insight">
-
-        <p><strong>Belangrijk inzicht</strong></p>
-        <p>Een verzameling is een manier om een groep getallen of andere objecten
-        als één geheel te bekijken.</p>
-      </div>
+        <p>Zoals we in 1.1 zagen, gebruiken we accolades om de elementen van een verzameling op te sommen en het symbool <strong>∈</strong> om aan te geven dat een getal tot een verzameling behoort. In deze les gebruiken we die notatie opnieuw.</p>
 
     <p>In de wiskunde gebruiken we een speciaal symbool om aan te geven dat iets
     een element van een verzameling is:</p>
@@ -996,7 +985,7 @@ negatieve getallen.</p>
          <p><strong>Wat gaan we ontdekken?</strong></p>
          <ul>
           <li>Hoe verdelen we een geheel in gelijke delen?</li>
-          <li>Hoe plaatsen we breuken op een getallenas en hoe vergelijken we ze?</li>
+          <li>Hoe plaatsen we breuken op een getallenlijn en hoe vergelijken we ze?</li>
           <li>Hoe kunnen we breuken optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
         <p>Een breuk is eerst en vooral een <strong>getal</strong>, niet zomaar een som die je meteen moet uitrekenen.</p>
@@ -3137,7 +3126,7 @@ negatieve getallen.</p>
 
 <p class="formula">7^0 = 1</p>
 
-<div class="callout">
+<div class="callout insight">
   <p><strong>Belangrijk inzicht</strong></p>
   <p>
     Een macht betekent niet altijd letterlijk “zoveel keer het grondtal
