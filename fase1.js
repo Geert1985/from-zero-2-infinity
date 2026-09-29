@@ -204,19 +204,17 @@ const MILESTONES_1 = [
   <p><strong>Wat gaan we ontdekken?</strong></p>
   <ul>
     <li>wat kunnen we doen met deze symbolen: +, -, × en ÷ ?</li>
-    <li>wat als een deling niet uitkomt?</li>
     <li>verandert de volgorde van bewerkingen het antwoord?</li>
     <li>wanneer mogen we de getallen in een bewerking omwisselen?</li>
+    <li>wat als een deling niet uitkomt?</li>
     <li>wat is er zo bijzonder aan het getal 0?</li>
   </ul>
   <h3>Optellen</h3>
     <p>Met <strong>optellen</strong> voegen we hoeveelheden samen.</p>
-    <p>Bijvoorbeeld: je hebt 7 appels en krijgt er 5 bij.</p>
-    <p>Dan heb je:</p>
-    <p class="formula">7 + 5 = 12</p>
-    <p>Je hebt nu 12 appels.</p>
+    <p>Bijvoorbeeld: je hebt 7 appels en krijgt er 5 bij, dan hebben we in totaal 12 appels.</p>
     <p>De getallen die we optellen noemen we de <strong>termen</strong>. Het antwoord noemen we de <strong>som</strong>.</p>
-    <p>In:</p>
+    <p>Het symbool dat we gebruiken bij het optellen is het plusteken (+).</p>
+    <p>Dus:</p>
     <p class="formula">7 + 5 = 12</p>
     <ul>
       <li>7 en 5 zijn de <strong>termen</strong>;</li>
@@ -224,7 +222,7 @@ const MILESTONES_1 = [
     </ul>
     <p>Merk op dat we bij het optellen de termen van plaats kunnen verwisselen zonder dat de som veranderd.</p>
     <p class="formula">7 + 5 = 5 + 7 = 12</p>
-    <p>Op deze eigenschap komen we later op terug.</p>
+    <p>Deze eigenschap komt later terug aan bod.</p>
     <h4>Optellen met 0</h4>
       <p>Als je 0 bij een getal optelt, verandert het getal niet.</p>
       <p>Bijvoorbeeld:</p>
@@ -238,6 +236,7 @@ const MILESTONES_1 = [
     <p>Dan blijven er over:</p>
     <p class="formula">12 − 5 = 7</p>
     <p>We noemen 7 het <strong>verschil</strong>.</p>
+    <p>Het symbool dat we gebruiken bij het aftrekken is het minteken (-).</p>
     <p>Je kunt een aftrekking dus controleren met een optelling.</p>
     <p>Bijvoorbeeld:</p>
     <p class="formula">17 − 9 = 8</p>
@@ -249,7 +248,7 @@ const MILESTONES_1 = [
     </div>
     <p>Merk op dat we bij het aftrekken de termen niet van plaats kunnen verwisselen zonder dat het verschil veranderd.</p>
     <p class="formula">12 - 5 ≠ 5 - 12</p>
-    <p>Het symbool  ≠  betekent "is niet gelijk aan"</p>
+    <p>Het symbool  ≠  betekent "is niet gelijk aan".</p>
     
   <h3>Vermenigvuldigen</h3>
     <p>Met <strong>vermenigvuldigen</strong> kunnen we meerdere gelijke hoeveelheden snel samenrekenen.</p>
@@ -263,6 +262,8 @@ const MILESTONES_1 = [
       <li>4 en 3 zijn de <strong>factoren</strong>;</li>
       <li>12 is het <strong>product</strong>.</li>
     </ul>
+    <p>Het symbool dat we nu gebruiken bij het vermenigvuldigen is het maalteken (x).</p>
+    <p>Er bestaan meerdere symbolen hiervoor, zoals het sterretje (*) op het klavier van je toetsenbord of een punt (⋅). Dit zal later aan bod komen.</p>
     <p>Merk op dat we bij het vermenigvuldigen de factoren van plaats kunnen verwisselen zonder dat het product veranderd.</p>
     <p class="formula">4 × 3 = 3 × 4 = 12</p>
     <h4>Vermenigvuldigen met 0</h4>
@@ -304,6 +305,8 @@ const MILESTONES_1 = [
         <li>3 is het <strong>deler</strong>;</li>
         <li>4 is het <strong>quotiënt</strong>.</li>
       </ul>
+      <p>Het symbool dat we nu gebruiken bij het delen is het deelteken (÷).</p>
+      <p>Er bestaan meerdere symbolen hiervoor, zoals de schuine streep (/) op het klavier van je toetsenbord of een dubbelpunt (:) of een horizontale streep met erboven en eronder de waarden. Dit zal later aan bod komen.</p>
       <p>Merk op dat we bij het delen het deeltal en de deler niet van plaats kunnen verwisselen zonder dat het quotiënt veranderd. </p>
       <p class="formula">12 ÷ 3 ≠ 3 ÷ 12</p>
 
@@ -354,6 +357,9 @@ const MILESTONES_1 = [
     <p>De rest is altijd kleiner dan de deler. Anders zouden we nog een extra volledig groepje kunnen maken.</p>
 
     <p class="formula">0 ≤ r &lt; d</p>
+
+    <p>Later zullen we zien dat er een andere manier bestaat om de rest van de deling weer te geven. Hier alvast een voorbeeld:</p>
+    <p class="formula">32 ÷ 3 = 10\ rest\ 2 = 10 + \\frac{2}{3}\ of\ 10\\frac{2}{3}</p>
 
     <div class="callout">
       <p><strong>Onthoud:</strong></p>
@@ -1033,20 +1039,20 @@ negatieve getallen.</p>
       <strong>één helft</strong>.
     </p>
 
-    <p class="formula">\frac{1}{2}</p>
+    <p class="formula">\\frac{1}{2}</p>
 
     <p>
       Verdelen we hetzelfde geheel in 3 gelijke delen, dan is elk deel
       <strong>één derde</strong>.
     </p>
 
-    <p class="formula">\frac{1}{3}</p>
+    <p class="formula">\\frac{1}{3}</p>
 
     <p>
       En bij 4 gelijke delen is elk deel <strong>één vierde</strong>.
     </p>
 
-    <p class="formula">\frac{1}{4}</p>
+    <p class="formula">\\frac{1}{4}</p>
 
     <div data-widget="fractionWhole"></div>
 
