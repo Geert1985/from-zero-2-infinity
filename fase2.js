@@ -4812,6 +4812,10 @@ const MILESTONES_2 = [
 
     <h3>Parallelle rechten</h3>
 
+    <div class="theory-image">
+      <img src="assets/evenwijdige-rechten.svg" alt="Twee evenwijdige rechten met gelijke helling en constante afstand.">
+    </div>
+
     <p>
       Twee verschillende rechten zijn parallel wanneer ze dezelfde richting
       hebben en elkaar niet snijden.
@@ -5036,6 +5040,10 @@ const MILESTONES_2 = [
 
 
     <h3>De verbinding met Pythagoras</h3>
+
+    <div class="theory-image">
+      <img src="assets/pythagoras-3-4-5.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
+    </div>
 
     <p>
       De afstandsformule lijkt misschien een nieuwe formule,
@@ -5478,6 +5486,10 @@ const MILESTONES_2 = [
 
 
     <h3>De stelling van Pythagoras</h3>
+
+    <div class="theory-image">
+      <img src="assets/pythagoras-3-4-5.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
+    </div>
 
     <p>
       Voor een rechthoekige driehoek met rechthoekszijden a en b
@@ -6375,6 +6387,10 @@ const MILESTONES_2 = [
 
 
     <h3>Gelijkvormige driehoeken</h3>
+
+    <div class="theory-image">
+      <img src="assets/gelijkvormige-driehoeken.svg" alt="Twee gelijkvormige driehoeken met overeenkomstige hoeken en evenredige zijden.">
+    </div>
 
     <p>
       Driehoeken zijn bijzonder belangrijk omdat we later in trigonometrie
