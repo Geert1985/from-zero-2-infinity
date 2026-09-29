@@ -819,9 +819,23 @@ function mathNetworkInjectStyles() {
   const style = document.createElement("style");
   style.id = "math-network-styles";
   style.textContent = `
+    .math-network-screen {
+      background-image: none;
+      background-color: #080705;
+    }
+    .math-network-screen::before {
+      display: none;
+    }
+    .math-network-layout {
+      width: calc(100% - 24px);
+      max-width: none;
+      margin: 0 auto 16px;
+    }
+             
     .math-network-panel {
       position: relative;
       overflow: hidden;
+      padding: 14px 16px 12px;
     }
     .math-network-head {
       display: flex;
@@ -855,7 +869,7 @@ function mathNetworkInjectStyles() {
       background:
         radial-gradient(circle at 50% 18%, rgba(230,199,122,.08), transparent 42%),
         linear-gradient(180deg, rgba(18,14,10,.2), rgba(5,4,3,.55));
-      height: min(72vh, 760px);
+      height: calc(100vh - 210px);
       cursor: grab;
       user-select: none;
       -webkit-user-select: none;
