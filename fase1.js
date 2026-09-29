@@ -129,31 +129,16 @@ const MILESTONES_1 = [
     <p>Bijvoorbeeld:</p>
     <p class="formula">0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...</p>
     <p>De verzameling van alle natuurlijke getallen duiden we aan met het symbool <strong>ℕ</strong></p>
-    <p>De getallen in een verzameling noemen we <strong>elementen</strong>. Het opsommen van de elementen van de verzameling noteren we tussen accolades {...}.</p>
+
     <p>In deze cursus hoort <strong>0 ook bij de natuurlijke getallen:</strong></p>
     <p>De verzameling van de natuurlijke getallen kunnen we dus als volgt noteren:</p>
     <p class="formula">ℕ = {0, 1, 2, 3, 4, 5, ..., 3521, 3522,...,999 999 999,...}</p>
-    <h4>De opvolger</h4>
-      <p>Na elk natuurlijk getal komt een volgend natuurlijk getal.</p>
-      <p>Je krijgt het volgende getal door <strong>1 op te tellen</strong></p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">12 → 13</p>
-      <p>Het getal dat na een ander getal komt, noemen we de <strong>opvolger</strong>.</p>
-    <h4>De voorganger</h4>
-      <p>We kunnen ook naar het vorige getal gaan.</p>
-      <p>Je krijgt het vorige getal door <strong>1 af te trekken</strong>.</p>
-      <p>Bijvoorbeeld:</p>
-      <p class="formula">100 → 99</p>
-      <p>Het getal dat vóór een ander getal komt, noemen we de <strong>voorganger</strong>.</p>
-      <p><strong>0 heeft geen voorganger in ℕ</strong>, want 0 is het kleinste natuurlijke getal.</p>
-    <h4>Er is geen grootste natuurlijk getal</h4>
-      <p>De natuurlijke getallen blijven altijd doorgaan want je kunt er altijd 1 bij optellen.</p>
-      
-      <div class="callout">
-        <p><strong>Onthoud:</strong></p>
-        <p>0 heeft in ℕ geen voorganger;</p>
-        <p>elk natuurlijk getal n heeft een opvolger n + 1, daarom is er geen grootste natuurlijk getal;</p>
-      </div>
+    <h4>Opvolger en voorganger</h4>
+      <p>Na elk natuurlijk getal <span class="formula-inline">n</span> komt de <strong>opvolger</strong> <span class="formula-inline">n + 1</span>.</p>
+      <p>Bijvoorbeeld: <span class="formula-inline">12 → 13</span>.</p>
+      <p>De <strong>voorganger</strong> van een natuurlijk getal groter dan 0 is <span class="formula-inline">n − 1</span>; bijvoorbeeld <span class="formula-inline">100 → 99</span>.</p>
+      <p><strong>0 heeft geen voorganger in ℕ</strong>, omdat 0 het kleinste natuurlijke getal is.</p>
+      <p>Er is geen grootste natuurlijk getal, want bij elk natuurlijk getal <span class="formula-inline">n</span> kunnen we <span class="formula-inline">n + 1</span> nemen.</p>
 
     <h4>Zijn de natuurlijke getallen altijd voldoende?</h4>
       <p>Met natuurlijke getallen kunnen we veel berekeningen maken.</p>
@@ -198,7 +183,7 @@ const MILESTONES_1 = [
   {
     id: "1.2",
     title: "De vier hoofdbewerkingen",
-    goal: "Voer de vier hoofdbewerkingen in ℕ uit en gebruik volgorde, rest en de rekenwetten.",
+    goal: "Begrijp hoe de vier hoofdbewerkingen werken en hoe volgorde, rest en rekenwetten daarbij een rol spelen.",
     theory: /* html */`
 <h2>De vier hoofdbewerkingen</h2>
   <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -359,7 +344,7 @@ const MILESTONES_1 = [
     <p class="formula">0 ≤ r &lt; d</p>
 
     <p>Later zullen we zien dat er een andere manier bestaat om de rest van de deling weer te geven. Hier alvast een voorbeeld:</p>
-    <p class="formula">32 ÷ 3 = 10\\ rest\\ 2 = 10 + \\frac{2}{3}\\ = \\ 10\\frac{2}{3}</p>
+    <p class="formula">32 ÷ 3 = 10\\ rest\\ 2 = 10 + \\frac{2}{3}</p>
 
     <div class="callout">
       <p><strong>Onthoud:</strong></p>
@@ -774,21 +759,21 @@ const MILESTONES_1 = [
 
   {
     id: "1.3",
-    title: "Het getallensysteem uitbreiden",
+    title: "Negatieve en gehele getallen",
     goal: "Breid ℕ uit tot ℤ: tegenovergestelde, absolute waarde en rekenen met tekens.",
     theory: /* html */`
         <h2>Negatieve en gehele getallen</h2>
         <p><strong>Wat gaan we ontdekken?</strong></p>
 
         <ul>
-          <li>waarom is ℕ niet genoeg en waarom we de verzameling uitbreiden tot ℤ?</li>
-          <li>hoe zet je negatieve getallen op de getallenas en vergelijk ze met elkaar?</li>
+          <li>Waarom is ℕ niet genoeg en waarom breiden we de verzameling uit tot ℤ?</li>
+          <li>Hoe plaats je negatieve getallen op de getallenas en hoe vergelijk je ze met elkaar?</li>
           <li>wat is een absolute waarde?</li>
           <li>wat gebeurt er met de tekens bij optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
         
         <h3>Verzameling en element</h3>
-        <p>Voordat we de verzameling van de natuurlijke getallen gaan uitbreiden, moeten we eerst de notatie voor verzamelingen en elementen verder toelichten.</p>
+        <p>Voordat we de verzameling van de natuurlijke getallen gaan uitbreiden, bekijken we eerst hoe we verzamelingen en elementen noteren.</p>
         <p>Een <strong>verzameling</strong> is een groep objecten die we als één geheel bekijken. Voorbeeld de verzameling van 0, 1, 2, 3 en 4 noteren we als:</p>
         <p class="formula"> { 0, 1, 2, 3, 4 } </p>
         <p>De getallen in de verzameling noemen we <strong>elementen</strong>. Het opsommen van de elementen van de verzameling noteren we tussen accolades.</p> 
@@ -1010,10 +995,11 @@ negatieve getallen.</p>
         <h2>Breuken en rationale getallen</h2>
          <p><strong>Wat gaan we ontdekken?</strong></p>
          <ul>
-          <li>hoe verdelen we een geheel in gelijke delen?</li>
-          <li>hoe zet je breuken op een getallenas en vergelijk je ze met elkaar?</li>
-          <li>hoe moeten we breuken optellen, aftrekken, vermenigvuldigen en delen?</li>
+          <li>Hoe verdelen we een geheel in gelijke delen?</li>
+          <li>Hoe plaatsen we breuken op een getallenas en hoe vergelijken we ze?</li>
+          <li>Hoe kunnen we breuken optellen, aftrekken, vermenigvuldigen en delen?</li>
         </ul>
+        <p>Een breuk is eerst en vooral een <strong>getal</strong>, niet zomaar een som die je meteen moet uitrekenen.</p>
 
         <h3>Een geheel</h3>
         <p>
@@ -1902,7 +1888,13 @@ negatieve getallen.</p>
     theory: /* html */`
       <h2>Decimalen en percentages</h2>
 
-      <p><strong>Doel:</strong> leren werken met decimalen en percentages en begrijpen hoe ze samenhangen met breuken.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Hoe kunnen we hetzelfde getal schrijven als breuk, decimaal en percentage?</li>
+        <li>Hoe zetten we een breuk om in een decimaal en percentage?</li>
+        <li>Hoe berekenen we een percentage van een hoeveelheid?</li>
+        <li>Hoe herkennen we procentuele stijging, daling en procentpunten?</li>
+      </ul>
       <h3>Getallen tussen 0 en 1</h3>
       <p>In de vorige les hebben we gezien dat een getal niet noodzakelijk groter dan 1 hoeft te zijn.</p>
 
@@ -2207,7 +2199,13 @@ negatieve getallen.</p>
     theory: /* html */`
       <h2>Verhoudingen en evenredigheid</h2>
 
-      <p><strong>Doel:</strong> leren wat een verhouding betekent, verhoudingen vergelijken en vereenvoudigen, werken met verhoudingstabellen en herkennen wanneer twee grootheden evenredig zijn.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat is een verhouding en hoe kunnen we die schrijven en vereenvoudigen?</li>
+        <li>Hoe kunnen we verhoudingen vergelijken?</li>
+        <li>Hoe herkennen we een recht evenredig verband?</li>
+        <li>Hoe gebruiken we verhoudingen bij tabellen, schaal en recepten?</li>
+      </ul>
 
       <div class="callout">
         <strong>Vertrekpunt</strong>
@@ -2490,7 +2488,13 @@ negatieve getallen.</p>
     goal: "Vind delers en veelvouden en herken deelbaarheid met de regels voor 2, 3, 4, 5, 6, 9, 10 en 12.",
     theory: /* html */`
       <h2>Delers en deelbaarheid</h2>
-      <p><strong>Doel:</strong> begrijpen wat delers en veelvouden zijn, herkennen wanneer een getal deelbaar is, deelbaarheidsregels gebruiken en deze kennis toepassen bij factorisatie en problemen.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat zijn delers en veelvouden?</li>
+        <li>Wanneer is een getal deelbaar door een ander getal?</li>
+        <li>Hoe kunnen we deelbaarheid snel herkennen met deelbaarheidsregels?</li>
+        <li>Hoe gebruiken we delers bij factorisatie en het vereenvoudigen van breuken?</li>
+      </ul>
 
       <div class="callout">
         <strong>Vertrekpunt</strong>
@@ -2682,7 +2686,13 @@ negatieve getallen.</p>
     goal: "Herken priemgetallen en ontbind een getal eenduidig in priemfactoren.",
     theory: /* html */`
       <h2>Priemgetallen en factorisatie</h2>
-      <p><strong>Doel:</strong> priemgetallen herkennen, samengestelde getallen ontbinden en priemfactorisatie gebruiken.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat maakt een getal tot een priemgetal?</li>
+        <li>Hoe herkennen we samengestelde getallen?</li>
+        <li>Hoe ontbinden we een getal in priemfactoren?</li>
+        <li>Waarom is een priemfactorisatie uniek, afgezien van de volgorde?</li>
+      </ul>
 
       <h3>Van delers naar priemgetallen</h3>
       <p>In 1.7 leerden we dat een getal delers heeft. Sommige getallen hebben precies twee positieve delers: <strong>1 en zichzelf</strong>. Deze getallen noemen we <strong>priemgetallen</strong>.</p>
@@ -2819,7 +2829,13 @@ negatieve getallen.</p>
     goal: "Bereken GGD en KGV, ook met het algoritme van Euclides, en gebruik ze bij breuken.",
     theory: /* html */`
       <h2>GGD, KGV en het algoritme van Euclides</h2>
-      <p><strong>Doel:</strong> de GGD en het KGV van getallen bepalen en verschillende methoden gebruiken om ze te berekenen.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat zijn de grootste gemene deler en het kleinste gemene veelvoud?</li>
+        <li>Hoe kunnen we GGD en KGV bepalen?</li>
+        <li>Hoe werkt het algoritme van Euclides?</li>
+        <li>Hoe gebruiken we GGD en KGV bij breuken en andere berekeningen?</li>
+      </ul>
 
       <h3>Van gemeenschappelijke delers naar de GGD</h3>
       <p>In 1.7 leerden we wat delers zijn en in 1.8 zagen we hoe priemfactorisatie de bouwstenen van getallen zichtbaar maakt. Als twee getallen dezelfde delers hebben, noemen we die <strong>gemeenschappelijke delers</strong>.</p>
@@ -3055,7 +3071,13 @@ negatieve getallen.</p>
     goal: "Lees en bereken machten met gehele niet-negatieve exponent, inclusief de rekenregels voor hetzelfde grondtal.",
     theory: /* html */` 
       <h2>Machten</h2>
-      <p><strong>Doel:</strong> machten begrijpen, lezen, berekenen en gebruiken in eenvoudige berekeningen.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Hoe kunnen we herhaalde vermenigvuldiging kort schrijven als een macht?</li>
+        <li>Wat zijn het grondtal en de exponent?</li>
+        <li>Hoe berekenen we machten en gebruiken we de rekenregels?</li>
+        <li>Wat gebeurt er bij speciale exponenten zoals 0 en 1?</li>
+      </ul>
 
       <h3>Van herhaald vermenigvuldigen naar een macht</h3>
       <p>Soms vermenigvuldigen we hetzelfde getal meerdere keren met zichzelf.</p>
@@ -3245,7 +3267,13 @@ negatieve getallen.</p>
     goal: "Gebruik de (niet-negatieve) vierkantswortel als omgekeerde van kwadrateren en vereenvoudig eenvoudige wortels.",
     theory: /* html */`
       <h2>Wortels</h2>
-      <p><strong>Doel:</strong> vierkantswortels begrijpen, berekenen, schatten en gebruiken.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat is een vierkantswortel en hoe hangt die samen met kwadrateren?</li>
+        <li>Hoe berekenen en schatten we vierkantswortels?</li>
+        <li>Hoe kunnen we wortels vergelijken en controleren?</li>
+        <li>Hoe kunnen we eenvoudige wortels vereenvoudigen?</li>
+      </ul>
 
       <h3>Van kwadrateren naar terugrekenen</h3>
       <p>In 1.10 leerden we machten. In het bijzonder leerden we kwadrateren: een getal vermenigvuldigen met zichzelf.</p>
@@ -3407,10 +3435,16 @@ negatieve getallen.</p>
     goal: "Onderscheid rationaal en irrationaal en plaats ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ op de getallenlijn.",
     theory: /* html */`
       <h2>Irrationale en reële getallen</h2>
-      <p><strong>Doel:</strong> begrijpen waarom sommige getallen niet als breuk kunnen worden geschreven, en ontdekken hoe rationale en irrationale getallen samen de reële getallen vormen.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat is het verschil tussen een rationaal en een irrationaal getal?</li>
+        <li>Waarom is <span class="formula-inline">√2</span> een voorbeeld van een irrationaal getal?</li>
+        <li>Wat vertellen eindige en repeterende decimalen ons over rationaliteit?</li>
+        <li>Hoe vormen rationale en irrationale getallen samen de reële getallen?</li>
+      </ul>
 
       <h3>Niet elk getal kan als breuk worden geschreven</h3>
-      <p>In 1.5 maakten we kennis met de <strong>rationale getallen</strong>. Dat zijn getallen die we als een breuk van twee gehele getallen kunnen schrijven.</p>
+      <p>In 1.4 maakten we kennis met de <strong>rationale getallen</strong>. Dat zijn getallen die we als een breuk van twee gehele getallen kunnen schrijven.</p>
       <p>Bijvoorbeeld:</p>
       <p class="formula">\\frac{1}{2},\\ \\frac{3}{4},\\ 5,\\ 0,75</p>
       <p>Maar bestaat er ook een getal dat <strong>niet</strong> als zo'n breuk kan worden geschreven?</p>
@@ -3520,7 +3554,13 @@ negatieve getallen.</p>
     goal: "Rond doelgericht af, schat een uitkomst en schrijf grote en kleine getallen in wetenschappelijke notatie.",
     theory: /* html */`
       <h2>Afronden en wetenschappelijke notatie</h2>
-      <p><strong>Doel:</strong> getallen afronden met een duidelijke nauwkeurigheid, schattingen gebruiken en zeer grote of kleine getallen compact schrijven.</p>
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Waarom en hoe ronden we getallen af?</li>
+        <li>Hoe kiezen we een passende nauwkeurigheid en maken we een schatting?</li>
+        <li>Hoe schrijven we zeer grote en kleine getallen in wetenschappelijke notatie?</li>
+        <li>Hoe helpen machten van 10 ons daarbij?</li>
+      </ul>
 
       <div class="callout">
         <strong>Vertrekpunt</strong>
