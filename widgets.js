@@ -2907,7 +2907,7 @@ function mountUnitcircle(root) {
     const x = cx + r * Math.cos(a), y = cy - r * Math.sin(a);
     ctx.strokeStyle = "#e6c77a"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x, y); ctx.stroke();
     ctx.fillStyle = "#e6c77a"; ctx.beginPath(); ctx.arc(x, y, 5, 0, Math.PI * 2); ctx.fill();
-    note.textContent = `cos(${deg}°) ≈ ${Math.cos(a).toFixed(3)} · sin(${deg}°) ≈ ${Math.sin(a).toFixed(3)}`;
+    note.textContent = `cos(${deg}°) ≈ ${Math.cos(a).toFixed(3)} en sin(${deg}°) ≈ ${Math.sin(a).toFixed(3)}`;
   };
   degEl.addEventListener("input", draw);
   draw();
