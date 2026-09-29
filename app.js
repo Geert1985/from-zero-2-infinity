@@ -87,8 +87,8 @@ function go(path) {
 
 function bgFor(phaseId) {
   const n = Number(phaseId);
-  if (n >= 1 && n <= 7) return "assets/fase" + n + ".png";
-  return "assets/home.png";
+  if (n >= 1 && n <= 7) return "assets/fase" + n + ".webp";
+  return "assets/home.webp";
 }
 
 function getMilestone(id) {
@@ -140,14 +140,14 @@ function topbar(extra) {
 function renderAdmin() {
   if (isAdmin()) {
     return (
-      '<div class="screen" style="background-image:url(\'assets/home.png\')">' + topbar() +
+      '<div class="screen" style="background-image:url(\'assets/home.webp\')">' + topbar() +
       '<div class="layout"><div class="panel"><h1>Admin</h1>' +
       "<p>Alle fases, lessen en toetsen zijn open.</p>" +
       '<button class="btn" id="admin-logout">Uitloggen</button></div></div></div>'
     );
   }
   return (
-    '<div class="screen" style="background-image:url(\'assets/home.png\')">' + topbar() +
+    '<div class="screen" style="background-image:url(\'assets/home.webp\')">' + topbar() +
     '<div class="layout"><div class="panel"><h1>Admin</h1>' +
     "<p>Log in om het hele leerpad te bekijken zonder toetsen te halen.</p>" +
     '<form id="admin-form">' +
