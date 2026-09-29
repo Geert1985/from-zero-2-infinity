@@ -359,7 +359,7 @@ const MILESTONES_1 = [
     <p class="formula">0 ≤ r &lt; d</p>
 
     <p>Later zullen we zien dat er een andere manier bestaat om de rest van de deling weer te geven. Hier alvast een voorbeeld:</p>
-    <p class="formula">32 ÷ 3 = 10\ rest\ 2 = 10 + \\frac{2}{3}\ of\ 10\\frac{2}{3}</p>
+    <p class="formula">32 ÷ 3 = 10\\ rest\\ 2 = 10 + \\frac{2}{3}\\ = \\ 10\\frac{2}{3}</p>
 
     <div class="callout">
       <p><strong>Onthoud:</strong></p>
