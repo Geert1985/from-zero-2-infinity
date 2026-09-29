@@ -1500,10 +1500,10 @@ function mathNetworkRender(selectedNodeId) {
   const nodeSvg = MATH_NETWORK_NODES.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
 
   app.innerHTML = `
-    <div class="screen" style="background-image:url('assets/home.png')">
+    <div class="screen math-network-screen">
       ${typeof topbar === "function" ? topbar() : ""}
-      <div class="layout">
-        <div class="panel math-network-panel">
+       <div class="layout math-network-layout">
+          <div class="panel math-network-panel">
           <div class="math-network-head">
             <div>
               <h1>Historisch Wiskunde Netwerk</h1>
