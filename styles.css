@@ -30,6 +30,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  padding-top: 124px;
   }
 
 .screen::before {
@@ -358,7 +359,7 @@ button.lesstof-score {
 
 .hero {
   text-align: center;
-  padding: 8px 24px 4px;
+  padding: 20px 24px 8px;
 }
 .hero-plate {
   display: inline-block;
