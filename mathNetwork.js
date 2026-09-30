@@ -17,6 +17,8 @@ const MATH_NETWORK_NODES = [
   // ─────────────────────────────────────────────────────────────
   {
     id: "tellen",
+    period: "oudheid",
+    image: "tellen.webp",
     title: "Tellen",
     type: "idea",
     era: "Vóór de formele wiskunde",
@@ -28,6 +30,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "getal",
+    period: "oudheid",
+    image: "getal.webp",
     title: "Het getal",
     type: "idea",
     era: "Vroege wiskunde",
@@ -39,6 +43,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "natuurlijke-getallen",
+    period: "oudheid",
+    image: "natuurlijke-getallen.webp",
     title: "Natuurlijke getallen",
     type: "idea",
     era: "Vroege wiskunde",
@@ -50,6 +56,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "nul",
+    period: "middeleeuwen",
+    image: "nulpunt.webp",
     title: "Nul",
     type: "idea",
     era: "India",
@@ -61,6 +69,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "plaatswaarde",
+    period: "middeleeuwen",
+    image: "plaatswaarde.webp",
     title: "Plaatswaarde",
     type: "idea",
     era: "Oude en middeleeuwse wiskunde",
@@ -72,6 +82,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "breuken",
+    period: "oudheid",
+    image: "breuken.webp",
     title: "Breuken",
     type: "idea",
     era: "Vroege wiskunde",
@@ -83,6 +95,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "negatieve-getallen",
+    period: "middeleeuwen",
+    image: "negatieve-getallen.webp",
     title: "Negatieve getallen",
     type: "idea",
     era: "India / middeleeuwse wiskunde",
@@ -98,6 +112,8 @@ const MATH_NETWORK_NODES = [
   // ─────────────────────────────────────────────────────────────
   {
     id: "pythagoras",
+    period: "oudheid",
+    image: "pythagoras.webp",
     title: "Pythagoras",
     type: "person",
     era: "Oud-Griekenland",
@@ -109,6 +125,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "bewijs",
+    period: "oudheid",
+    image: "bewijs.webp",
     title: "Deductief bewijs",
     type: "idea",
     era: "Oud-Griekenland",
@@ -120,6 +138,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "euclides",
+    period: "oudheid",
+    image: "euclides.webp",
     title: "Euclides",
     type: "person",
     era: "Hellenistische periode",
@@ -131,6 +151,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "priemgetallen",
+    period: "oudheid",
+    image: "priemgetallen.webp",
     title: "Priemgetallen",
     type: "idea",
     era: "Oud-Griekenland",
@@ -142,6 +164,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "archimedes",
+    period: "oudheid",
+    image: "archimedes.webp",
     title: "Archimedes",
     type: "person",
     era: "Hellenistische periode",
@@ -153,6 +177,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "kegelsneden",
+    period: "oudheid",
+    image: "kegelsneden.webp",
     title: "Kegelsneden",
     type: "idea",
     era: "Hellenistische periode",
@@ -165,6 +191,8 @@ const MATH_NETWORK_NODES = [
 
   {
     id: "rekenkunde",
+    period: "oudheid",
+    image: "rekenkunde.webp",
     title: "Rekenkunde",
     type: "idea",
     era: "Vroege wiskunde",
@@ -176,6 +204,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "combinatieleer",
+    period: "oudheid",
+    image: "combinatieleer.webp",
     title: "Combinatieleer",
     type: "idea",
     era: "Oudheid",
@@ -187,6 +217,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "thales",
+    period: "oudheid",
+    image: "thales.webp",
     title: "Thales van Milete",
     type: "person",
     era: "Oud-Griekenland",
@@ -198,6 +230,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "stelling-pythagoras",
+    period: "oudheid",
+    image: "stelling-pythagoras.webp",
     title: "Stelling van Pythagoras",
     type: "idea",
     era: "Oud-Griekenland",
@@ -209,6 +243,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "irrationale-getallen",
+    period: "oudheid",
+    image: "irrationale-getallen.webp",
     title: "Irrationale getallen",
     type: "idea",
     era: "Oud-Griekenland",
@@ -220,6 +256,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "polyeders",
+    period: "oudheid",
+    image: "polyeders.webp",
     title: "Polyeders",
     type: "idea",
     era: "Oud-Griekenland",
@@ -231,6 +269,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "perfecte-getallen",
+    period: "oudheid",
+    image: "perfecte-getallen.webp",
     title: "Perfecte getallen",
     type: "idea",
     era: "Oud-Griekenland",
@@ -242,6 +282,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "eratosthenes",
+    period: "oudheid",
+    image: "eratosthenes.webp",
     title: "Eratosthenes van Cyrene",
     type: "person",
     era: "Hellenistische periode",
@@ -253,6 +295,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "pi",
+    period: "oudheid",
+    image: "pi.webp",
     title: "Pi",
     type: "idea",
     era: "Hellenistische periode",
@@ -264,6 +308,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "hypatia",
+    period: "oudheid",
+    image: "hypatia.webp",
     title: "Hypatia",
     type: "person",
     era: "Late oudheid",
@@ -279,6 +325,8 @@ const MATH_NETWORK_NODES = [
   // ─────────────────────────────────────────────────────────────
   {
     id: "brahmagupta",
+    period: "middeleeuwen",
+    image: "brahmagupta.webp",
     title: "Brahmagupta",
     type: "person",
     era: "India",
@@ -290,6 +338,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "al-khwarizmi",
+    period: "middeleeuwen",
+    image: "al-khwarizmi.webp",
     title: "Al-Khwarizmi",
     type: "person",
     era: "Islamitische gouden eeuw",
@@ -301,6 +351,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "algoritme",
+    period: "middeleeuwen",
+    image: "algoritme.webp",
     title: "Algoritme",
     type: "idea",
     era: "Middeleeuwse wiskunde",
@@ -312,6 +364,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "algebra",
+    period: "middeleeuwen",
+    image: "algebra.webp",
     title: "Algebra",
     type: "idea",
     era: "Middeleeuwse wiskunde",
@@ -327,6 +381,8 @@ const MATH_NETWORK_NODES = [
   // ─────────────────────────────────────────────────────────────
   {
     id: "fibonacci",
+    period: "middeleeuwen",
+    image: "fibonacci.webp",
     title: "Fibonacci",
     type: "person",
     era: "Middeleeuws Europa",
@@ -338,6 +394,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "ptolemaeus",
+    period: "middeleeuwen",
+    image: "ptolemaeus.webp",
     title: "Ptolemaeus",
     type: "person",
     era: "Romeinse tijd",
@@ -349,6 +407,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "diophantus",
+    period: "middeleeuwen",
+    image: "diophantus.webp",
     title: "Diophantus",
     type: "person",
     era: "Romeinse tijd",
@@ -360,6 +420,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "diofantische-vergelijkingen",
+    period: "middeleeuwen",
+    image: "diofantische-vergelijkingen.webp",
     title: "Diofantische vergelijkingen",
     type: "idea",
     era: "Romeinse tijd tot middeleeuwen",
@@ -371,6 +433,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "tessellaties",
+    period: "middeleeuwen",
+    image: "tessellaties.webp",
     title: "Tessellaties",
     type: "idea",
     era: "Middeleeuwen",
@@ -382,6 +446,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "boethius",
+    period: "middeleeuwen",
+    image: "boethius.webp",
     title: "Boëthius",
     type: "person",
     era: "Late oudheid / vroege middeleeuwen",
@@ -393,6 +459,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "aryabhata",
+    period: "middeleeuwen",
+    image: "aryabhata.webp",
     title: "Aryabhata",
     type: "person",
     era: "India",
@@ -404,6 +472,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "goniometrie",
+    period: "middeleeuwen",
+    image: "goniometrie.webp",
     title: "Goniometrie",
     type: "idea",
     era: "Middeleeuwen",
@@ -415,6 +485,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "matrices",
+    period: "middeleeuwen",
+    image: "matrices.webp",
     title: "Matrices",
     type: "idea",
     era: "Middeleeuwen",
@@ -426,6 +498,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "omar-khayyam",
+    period: "middeleeuwen",
+    image: "omar-khayyam.webp",
     title: "Omar Khayyam",
     type: "person",
     era: "Islamitische gouden eeuw",
@@ -437,6 +511,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "descartes",
+    period: "vroegmodern",
+    image: "descartes.webp",
     title: "René Descartes",
     type: "person",
     era: "17e eeuw",
@@ -448,6 +524,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "fermat",
+    period: "vroegmodern",
+    image: "fermat.webp",
     title: "Pierre de Fermat",
     type: "person",
     era: "17e eeuw",
@@ -459,6 +537,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "pascal",
+    period: "vroegmodern",
+    image: "pascal.webp",
     title: "Blaise Pascal",
     type: "person",
     era: "17e eeuw",
@@ -470,6 +550,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "kansrekening",
+    period: "vroegmodern",
+    image: "kansrekening.webp",
     title: "Kansrekening",
     type: "idea",
     era: "17e eeuw",
@@ -481,6 +563,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "newton",
+    period: "vroegmodern",
+    image: "newton.webp",
     title: "Isaac Newton",
     type: "person",
     era: "17e eeuw",
@@ -492,6 +576,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "leibniz",
+    period: "vroegmodern",
+    image: "leibniz.webp",
     title: "Gottfried Wilhelm Leibniz",
     type: "person",
     era: "17e eeuw",
@@ -503,6 +589,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "calculus",
+    period: "vroegmodern",
+    image: "calculus.webp",
     title: "Calculus",
     type: "idea",
     era: "17e eeuw",
@@ -518,6 +606,8 @@ const MATH_NETWORK_NODES = [
   // ─────────────────────────────────────────────────────────────
   {
     id: "de-moivre",
+    period: "vroegmodern",
+    image: "de-moivre.webp",
     title: "Abraham de Moivre",
     type: "person",
     era: "18e eeuw",
@@ -529,6 +619,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "euler",
+    period: "vroegmodern",
+    image: "euler.webp",
     title: "Leonhard Euler",
     type: "person",
     era: "18e eeuw",
@@ -540,6 +632,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "differentiaalvergelijkingen",
+    period: "vroegmodern",
+    image: "differentiaalvergelijkingen.webp",
     title: "Differentiaalvergelijkingen",
     type: "idea",
     era: "18e eeuw",
@@ -551,6 +645,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "lagrange",
+    period: "vroegmodern",
+    image: "lagrange.webp",
     title: "Joseph-Louis Lagrange",
     type: "person",
     era: "18e eeuw",
@@ -562,6 +658,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "laplace",
+    period: "vroegmodern",
+    image: "laplace.webp",
     title: "Pierre-Simon Laplace",
     type: "person",
     era: "18e–19e eeuw",
@@ -573,6 +671,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "cardano",
+    period: "vroegmodern",
+    image: "cardano.webp",
     title: "Gerolamo Cardano",
     type: "person",
     era: "16e eeuw",
@@ -584,6 +684,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "imaginaire-getallen",
+    period: "vroegmodern",
+    image: "imaginaire-getallen.webp",
     title: "Imaginaire getallen",
     type: "idea",
     era: "16e–18e eeuw",
@@ -595,6 +697,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "napier",
+    period: "vroegmodern",
+    image: "napier.webp",
     title: "John Napier",
     type: "person",
     era: "17e eeuw",
@@ -606,6 +710,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "logaritmes",
+    period: "vroegmodern",
+    image: "logaritmes.webp",
     title: "Logaritmes",
     type: "idea",
     era: "17e eeuw",
@@ -617,6 +723,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "getal-e",
+    period: "vroegmodern",
+    image: "getal-e.webp",
     title: "Het getal e",
     type: "idea",
     era: "17e–18e eeuw",
@@ -628,6 +736,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "cartesisch",
+    period: "vroegmodern",
+    image: "cartesisch.webp",
     title: "Cartesisch coördinatenstelsel",
     type: "idea",
     era: "17e eeuw",
@@ -639,6 +749,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "driehoek-van-pascal",
+    period: "vroegmodern",
+    image: "driehoek-van-pascal.webp",
     title: "Driehoek van Pascal",
     type: "idea",
     era: "17e eeuw",
@@ -650,6 +762,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "oneindige-reeksen",
+    period: "vroegmodern",
+    image: "oneindige-reeksen.webp",
     title: "Oneindige reeksen",
     type: "idea",
     era: "17e–18e eeuw",
@@ -661,6 +775,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "grafentheorie",
+    period: "vroegmodern",
+    image: "grafentheorie.webp",
     title: "Grafentheorie",
     type: "idea",
     era: "18e eeuw",
@@ -672,6 +788,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "bernoulli",
+    period: "vroegmodern",
+    image: "bernoulli.webp",
     title: "De familie Bernoulli",
     type: "person",
     era: "17e–18e eeuw",
@@ -687,6 +805,8 @@ const MATH_NETWORK_NODES = [
   // ─────────────────────────────────────────────────────────────
   {
     id: "gauss",
+    period: "eeuw19",
+    image: "gauss.webp",
     title: "Carl Friedrich Gauss",
     type: "person",
     era: "19e eeuw",
@@ -698,6 +818,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "fourier",
+    period: "eeuw19",
+    image: "fourier.webp",
     title: "Joseph Fourier",
     type: "person",
     era: "19e eeuw",
@@ -709,6 +831,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "cauchy",
+    period: "eeuw19",
+    image: "cauchy.webp",
     title: "Augustin-Louis Cauchy",
     type: "person",
     era: "19e eeuw",
@@ -720,6 +844,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "galois",
+    period: "eeuw19",
+    image: "galois.webp",
     title: "Évariste Galois",
     type: "person",
     era: "19e eeuw",
@@ -731,6 +857,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "niet-euclidische-geometrie",
+    period: "eeuw19",
+    image: "niet-euclidische-geometrie.webp",
     title: "Niet-Euclidische geometrie",
     type: "idea",
     era: "19e eeuw",
@@ -742,6 +870,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "riemann",
+    period: "eeuw19",
+    image: "riemann.webp",
     title: "Bernhard Riemann",
     type: "person",
     era: "19e eeuw",
@@ -753,6 +883,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "cantor",
+    period: "eeuw19",
+    image: "cantor.webp",
     title: "Georg Cantor",
     type: "person",
     era: "19e eeuw",
@@ -764,6 +896,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "topologie",
+    period: "eeuw19",
+    image: "topologie.webp",
     title: "Topologie",
     type: "idea",
     era: "19e–20e eeuw",
@@ -774,11 +908,144 @@ const MATH_NETWORK_NODES = [
     unlockText: "Vorm wordt losgekoppeld van exacte afmetingen en hoeken."
   },
 
+  {
+    id: "sophie-germain",
+    period: "eeuw19",
+    image: "sophie-germain.webp",
+    title: "Sophie Germain",
+    type: "person",
+    era: "19e eeuw",
+    year: "1776–1831",
+    cost: 5,
+    prerequisites: ["fermat"],
+    description: "Getaltheorie en elasticiteit werden in haar tijd als mannenwerk behandeld; de stellingen wachtten niet.",
+    unlockText: "Fermats vergelijking krijgt nieuwe gevallen. Een brief onder andere naam blijkt een wiskundige stem."
+  },
+  {
+    id: "groepentheorie",
+    period: "eeuw19",
+    image: "groepentheorie.webp",
+    title: "Groepentheorie",
+    type: "idea",
+    era: "19e eeuw",
+    year: null,
+    cost: 8,
+    prerequisites: ["galois"],
+    description: "Symmetrie van een vergelijking is lastig te vangen tot je de toegestane verwisselingen zelf tot object maakt.",
+    unlockText: "Een groep is de algebra van wat je mag verwisselen. Structuur wint van de enkele formule."
+  },
+  {
+    id: "babbage",
+    period: "eeuw19",
+    image: "babbage.webp",
+    title: "Charles Babbage",
+    type: "person",
+    era: "19e eeuw",
+    year: "1791–1871",
+    cost: 5,
+    prerequisites: ["algoritme"],
+    description: "Tafels met de hand rekenen zaait fouten. Een machine zou de stappen zelf moeten zetten.",
+    unlockText: "Berekenen wordt ontwerp van raderen. Het algoritme zoekt een lichaam van messing."
+  },
+  {
+    id: "lovelace",
+    period: "eeuw19",
+    image: "lovelace.webp",
+    title: "Ada Lovelace",
+    type: "person",
+    era: "19e eeuw",
+    year: "1815–1852",
+    cost: 5,
+    prerequisites: ["babbage"],
+    description: "Een rekenmachine die alleen tabellen stampt, mist wat een algemene procedure kan zijn.",
+    unlockText: "De machine kan meer dan cijfers: een plan van stappen wordt een programma avant la lettre."
+  },
+  {
+    id: "hamilton",
+    period: "eeuw19",
+    image: "hamilton.webp",
+    title: "William Rowan Hamilton",
+    type: "person",
+    era: "19e eeuw",
+    year: "1805–1865",
+    cost: 8,
+    prerequisites: ["algebra", "cartesisch"],
+    description: "Draaiingen in de ruimte lieten zich niet netjes met twee of drie gewone getallen vangen.",
+    unlockText: "Een nieuwe vermenigvuldiging in vier delen. Richting in de ruimte krijgt algebra."
+  },
+  {
+    id: "quaternionen",
+    period: "eeuw19",
+    image: "quaternionen.webp",
+    title: "Quaternionen",
+    type: "idea",
+    era: "19e eeuw",
+    year: null,
+    cost: 8,
+    prerequisites: ["hamilton"],
+    description: "Vier getallen met een vermenigvuldiging die niet altijd commutatief is.",
+    unlockText: "i, j en k zijn geen versiering. Draaien is een product, geen plaatje."
+  },
+  {
+    id: "abel",
+    period: "eeuw19",
+    image: "abel.webp",
+    title: "Niels Henrik Abel",
+    type: "person",
+    era: "19e eeuw",
+    year: "1802–1829",
+    cost: 8,
+    prerequisites: ["algebra"],
+    description: "De vijfdegraadsvergelijking weigerde de wortelformules die tot de vierde graad werkten.",
+    unlockText: "Onmogelijkheid wordt een stelling. Niet elke vergelijking heeft een algemeen radicalenrecept."
+  },
+  {
+    id: "booleaanse-logica",
+    period: "eeuw19",
+    image: "booleaanse-logica.webp",
+    title: "Booleaanse logica",
+    type: "idea",
+    era: "19e eeuw",
+    year: null,
+    cost: 5,
+    prerequisites: ["bewijs", "algebra"],
+    description: "Waar en onwaar leken geen rekenstof tot iemand ze als 1 en 0 in wetten zette.",
+    unlockText: "Redeneren wordt algebra. En en of zijn bewerkingen."
+  },
+  {
+    id: "riemann-hypothese",
+    period: "eeuw19",
+    image: "riemann-hypothese.webp",
+    title: "De Riemann-hypothese",
+    type: "idea",
+    era: "19e eeuw",
+    year: "1859",
+    cost: 13,
+    prerequisites: ["riemann", "priemgetallen"],
+    description: "De verdeling van priemen hangt aan de nullen van een functie die Riemann tekende — en die nullen zijn niet bewezen waar we ze willen.",
+    unlockText: "Een vermoeden dat de priemen ordent. De kaart is er, de sluiting niet."
+  },
+  {
+    id: "verzamelingenleer",
+    period: "eeuw19",
+    image: "verzamelingenleer.webp",
+    title: "Verzamelingenleer",
+    type: "idea",
+    era: "19e eeuw",
+    year: null,
+    cost: 13,
+    prerequisites: ["cantor"],
+    description: "Oneindige collecties bleken niet allemaal even groot. Dat vraagt om een leer, niet om een metafoor.",
+    unlockText: "De verzameling wordt het basismateriaal. Oneindig heeft graden."
+  },
+
   // ─────────────────────────────────────────────────────────────
   // 20e eeuw / computationele wiskunde
   // ─────────────────────────────────────────────────────────────
   {
     id: "hilbert",
+    period: "eeuw20",
+    image: "hilbert.webp",
     title: "David Hilbert",
     type: "person",
     era: "20e eeuw",
@@ -790,6 +1057,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "noether",
+    period: "eeuw20",
+    image: "noether.webp",
     title: "Emmy Noether",
     type: "person",
     era: "20e eeuw",
@@ -801,6 +1070,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "godel",
+    period: "eeuw20",
+    image: "godel.webp",
     title: "Kurt Gödel",
     type: "person",
     era: "20e eeuw",
@@ -812,6 +1083,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "turing",
+    period: "eeuw20",
+    image: "turing.webp",
     title: "Alan Turing",
     type: "person",
     era: "20e eeuw",
@@ -823,6 +1096,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "formele-bewijzen",
+    period: "eeuw20",
+    image: "formele-bewijzen.webp",
     title: "Formele bewijzen",
     type: "idea",
     era: "20e–21e eeuw",
@@ -834,6 +1109,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "ai-wiskunde",
+    period: "eeuw20",
+    image: "ai-wiskunde.webp",
     title: "AI-assisted mathematics",
     type: "breakthrough",
     era: "21e eeuw",
@@ -845,6 +1122,8 @@ const MATH_NETWORK_NODES = [
   },
   {
     id: "navier-stokes-ai-2026",
+    period: "eeuw20",
+    image: "navier-stokes-ai-2026.webp",
     title: "AI-oplossing Navier–Stokes",
     type: "breakthrough",
     era: "21e eeuw",
@@ -854,7 +1133,138 @@ const MATH_NETWORK_NODES = [
     description: "Een hedendaagse AI-gerelateerde doorbraak rond het Navier–Stokes existence-and-smoothness problem.",
     unlockText: "Een actuele casus waarin moderne analyse, PDE-theorie, formele verificatie en AI-assisted mathematics samenkomen.",
     note: "Historische status zorgvuldig formuleren: de node beschrijft een in 2026 door OpenAI gepubliceerde AI-oplossing, niet een onafhankelijk door het spel vastgesteld eindpunt."
-  }
+  },
+
+  {
+    id: "ramanujan",
+    period: "eeuw20",
+    image: "ramanujan.webp",
+    title: "Srinivasa Ramanujan",
+    type: "person",
+    era: "20e eeuw",
+    year: "1887–1920",
+    cost: 8,
+    prerequisites: ["priemgetallen", "oneindige-reeksen"],
+    description: "Formules arriveerden sneller dan bewijzen. De vraag was welke van die vondsten standhouden.",
+    unlockText: "Oneindige sommen en partities krijgen nieuwe identiteiten. Intuïtie eist daarna een bewijs."
+  },
+  {
+    id: "von-neumann",
+    period: "eeuw20",
+    image: "von-neumann.webp",
+    title: "John von Neumann",
+    type: "person",
+    era: "20e eeuw",
+    year: "1903–1957",
+    cost: 13,
+    prerequisites: ["hilbert", "kansrekening"],
+    description: "Spel, machine en kwantum vroegen om één soort wiskundige architectuur.",
+    unlockText: "Strategie, computers en operatoren komen in één hoofd bijeen. De eeuw krijgt een ontwerper."
+  },
+  {
+    id: "speltheorie",
+    period: "eeuw20",
+    image: "speltheorie.webp",
+    title: "Speltheorie",
+    type: "idea",
+    era: "20e eeuw",
+    year: null,
+    cost: 8,
+    prerequisites: ["von-neumann"],
+    description: "Winst hangt af van wat de ander doet. Dat is geen moraal, maar een evenwicht.",
+    unlockText: "Een spel wordt een wiskundig object. Strategie is een evenwicht, geen gok."
+  },
+  {
+    id: "nash",
+    period: "eeuw20",
+    image: "nash.webp",
+    title: "John Nash",
+    type: "person",
+    era: "20e eeuw",
+    year: "1928–2015",
+    cost: 8,
+    prerequisites: ["speltheorie"],
+    description: "Niet elk spel heeft een duidelijke winnaar. Toch kan niemand eenzijdig beter af zijn.",
+    unlockText: "Het Nash-evenwicht maakt conflict berekenbaar zonder dat iemand de ander hoeft te verslaan."
+  },
+  {
+    id: "informatietheorie",
+    period: "eeuw20",
+    image: "informatietheorie.webp",
+    title: "Informatietheorie",
+    type: "idea",
+    era: "20e eeuw",
+    year: null,
+    cost: 8,
+    prerequisites: ["turing", "kansrekening"],
+    description: "Een boodschap is geen betekenis alleen: ze heeft een hoeveelheid die je kunt meten en beschermen.",
+    unlockText: "Informatie krijgt een eenheid. Ruis en code worden wiskunde."
+  },
+  {
+    id: "p-versus-np",
+    period: "eeuw20",
+    image: "p-versus-np.webp",
+    title: "P versus NP",
+    type: "idea",
+    era: "20e eeuw",
+    year: "1971",
+    cost: 13,
+    prerequisites: ["turing"],
+    description: "Sommige antwoorden zijn snel te checken en toch hard te vinden. Of die kloof wiskundig vastligt, is open.",
+    unlockText: "Gemakkelijk controleren is niet hetzelfde als gemakkelijk vinden. De grens is een van de grote open vragen."
+  },
+  {
+    id: "fractals",
+    period: "eeuw20",
+    image: "fractals.webp",
+    title: "Fractals",
+    type: "idea",
+    era: "20e eeuw",
+    year: null,
+    cost: 8,
+    prerequisites: ["calculus"],
+    description: "Een kustlijn wordt langer naarmate je fijner meet. Dimensie is dan geen geheel getal meer.",
+    unlockText: "Herhaling op elke schaal wordt een meetkundig object. Ruwheid krijgt een maat."
+  },
+  {
+    id: "mandelbrot",
+    period: "eeuw20",
+    image: "mandelbrot.webp",
+    title: "Benoît Mandelbrot",
+    type: "person",
+    era: "20e eeuw",
+    year: "1924–2010",
+    cost: 8,
+    prerequisites: ["fractals"],
+    description: "Die gebroken vormen hadden een naam en een plaatje nodig voordat ze een vak werden.",
+    unlockText: "De Mandelbrotverzameling maakt oneindige rand zichtbaar. Fractals krijgen een gezicht."
+  },
+  {
+    id: "wiles",
+    period: "eeuw20",
+    image: "wiles.webp",
+    title: "Andrew Wiles",
+    type: "person",
+    era: "20e eeuw",
+    year: "1953–",
+    cost: 13,
+    prerequisites: ["fermat", "groepentheorie"],
+    description: "Fermats kanttekening bleef drie eeuwen een rand. De sluiting vroeg om moderne algebraïsche meetkunde.",
+    unlockText: "Fermats laatste stelling is bewezen. Een oude claim wordt een stelling van deze eeuw."
+  },
+  {
+    id: "perelman",
+    period: "eeuw20",
+    image: "perelman.webp",
+    title: "Grigori Perelman",
+    type: "person",
+    era: "21e eeuw",
+    year: "1966–",
+    cost: 13,
+    prerequisites: ["topologie"],
+    description: "Poincarés vraag over de driedimensionale sfeer bleef open tot de Ricci-stroom haar dwong.",
+    unlockText: "Het Poincarévermoeden is opgelost. Vorm in drie dimensies krijgt een sluitstuk."
+  },
 ];
 
 const MATH_NETWORK_EDGES = [
@@ -864,6 +1274,8 @@ const MATH_NETWORK_EDGES = [
   ["getal", "thales"],
   ["breuken", "thales"],
   ["thales", "pythagoras"],
+  ["getal", "pythagoras"],
+  ["breuken", "pythagoras"],
   ["pythagoras", "stelling-pythagoras"],
   ["stelling-pythagoras", "irrationale-getallen"],
   ["irrationale-getallen", "bewijs"],
@@ -907,6 +1319,7 @@ const MATH_NETWORK_EDGES = [
   ["breuken", "al-khwarizmi"],
   ["al-khwarizmi", "algoritme"],
   ["al-khwarizmi", "algebra"],
+  ["negatieve-getallen", "algebra"],
   ["plaatswaarde", "fibonacci"],
   ["al-khwarizmi", "fibonacci"],
   ["algebra", "descartes"],
@@ -957,6 +1370,21 @@ const MATH_NETWORK_EDGES = [
   ["bewijs", "cantor"],
   ["priemgetallen", "cantor"],
   ["riemann", "topologie"],
+  ["fermat", "sophie-germain"],
+  ["galois", "groepentheorie"],
+  ["algoritme", "babbage"],
+  ["babbage", "lovelace"],
+  ["algebra", "hamilton"],
+  ["cartesisch", "hamilton"],
+  ["hamilton", "quaternionen"],
+  ["algebra", "abel"],
+  ["bewijs", "booleaanse-logica"],
+  ["algebra", "booleaanse-logica"],
+  ["riemann", "riemann-hypothese"],
+  ["priemgetallen", "riemann-hypothese"],
+  ["cantor", "verzamelingenleer"],
+  ["groepentheorie", "noether"],
+  ["verzamelingenleer", "hilbert"],
   ["cantor", "hilbert"],
   ["riemann", "hilbert"],
   ["galois", "noether"],
@@ -970,7 +1398,22 @@ const MATH_NETWORK_EDGES = [
   ["turing", "ai-wiskunde"],
   ["fourier", "ai-wiskunde"],
   ["ai-wiskunde", "navier-stokes-ai-2026"],
-  ["differentiaalvergelijkingen", "navier-stokes-ai-2026"]
+  ["differentiaalvergelijkingen", "navier-stokes-ai-2026"],
+  ["priemgetallen", "ramanujan"],
+  ["oneindige-reeksen", "ramanujan"],
+  ["hilbert", "von-neumann"],
+  ["kansrekening", "von-neumann"],
+  ["von-neumann", "speltheorie"],
+  ["speltheorie", "nash"],
+  ["turing", "informatietheorie"],
+  ["kansrekening", "informatietheorie"],
+  ["turing", "p-versus-np"],
+  ["calculus", "fractals"],
+  ["fractals", "mandelbrot"],
+  ["fermat", "wiles"],
+  ["groepentheorie", "wiles"],
+  ["topologie", "perelman"],
+  ["informatietheorie", "ai-wiskunde"]
 ];
 
 const MATH_NETWORK_TYPE_LABELS = {
@@ -1048,11 +1491,11 @@ function mathNetworkConnectedEdges() {
   return MATH_NETWORK_EDGES.filter(([a, b]) => {
     const na = mathNetworkNodeById(a);
     const nb = mathNetworkNodeById(b);
-    return mathNetworkIsVisible(na) && mathNetworkIsVisible(nb);
+    return mathNetworkIsVisible(na) || mathNetworkIsVisible(nb);
   });
 }
 
-const MATH_NETWORK_VIEW = { width: 1480, height: 2920 };
+const MATH_NETWORK_VIEW = { width: 1480, height: 3280 };
 const MATH_NETWORK_GRID = { originX: 130, originY: 80, colW: 118, rowH: 100 };
 const MATH_NETWORK_CAMERA = { x: 4, y: 0, scale: 1.3 };
 
@@ -1060,94 +1503,17 @@ const MATH_NETWORK_PERIODS = [
   { id: "oudheid", title: "Oudheid", tint: "#c4a06a", row0: -0.55, row1: 6.7 },
   { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", row0: 6.7, row1: 11.35 },
   { id: "vroegmodern", title: "Vroegmodern", tint: "#c4845a", row0: 11.15, row1: 18.15 },
-  { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", row0: 18.15, row1: 22.55 },
-  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.55, row1: 27.4 }
+  { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", row0: 18.15, row1: 22.85 },
+  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.85, row1: 29.4 }
 ];
-
-const MATH_NETWORK_NODE_PERIOD = {
-  "tellen": "oudheid",
-  "getal": "oudheid",
-  "natuurlijke-getallen": "oudheid",
-  "breuken": "oudheid",
-  "pythagoras": "oudheid",
-  "bewijs": "oudheid",
-  "euclides": "oudheid",
-  "priemgetallen": "oudheid",
-  "archimedes": "oudheid",
-  "kegelsneden": "oudheid",
-  "rekenkunde": "oudheid",
-  "combinatieleer": "oudheid",
-  "thales": "oudheid",
-  "stelling-pythagoras": "oudheid",
-  "irrationale-getallen": "oudheid",
-  "polyeders": "oudheid",
-  "perfecte-getallen": "oudheid",
-  "eratosthenes": "oudheid",
-  "pi": "oudheid",
-  "hypatia": "oudheid",
-
-  "nul": "middeleeuwen",
-  "plaatswaarde": "middeleeuwen",
-  "negatieve-getallen": "middeleeuwen",
-  "brahmagupta": "middeleeuwen",
-  "al-khwarizmi": "middeleeuwen",
-  "algoritme": "middeleeuwen",
-  "algebra": "middeleeuwen",
-  "fibonacci": "middeleeuwen",
-  "ptolemaeus": "middeleeuwen",
-  "diophantus": "middeleeuwen",
-  "diofantische-vergelijkingen": "middeleeuwen",
-  "tessellaties": "middeleeuwen",
-  "boethius": "middeleeuwen",
-  "aryabhata": "middeleeuwen",
-  "goniometrie": "middeleeuwen",
-  "matrices": "middeleeuwen",
-  "omar-khayyam": "middeleeuwen",
-  "descartes": "vroegmodern",
-  "fermat": "vroegmodern",
-  "pascal": "vroegmodern",
-  "kansrekening": "vroegmodern",
-  "newton": "vroegmodern",
-  "leibniz": "vroegmodern",
-  "calculus": "vroegmodern",
-  "de-moivre": "vroegmodern",
-  "euler": "vroegmodern",
-  "differentiaalvergelijkingen": "vroegmodern",
-  "lagrange": "vroegmodern",
-  "laplace": "vroegmodern",
-  "cardano": "vroegmodern",
-  "imaginaire-getallen": "vroegmodern",
-  "napier": "vroegmodern",
-  "logaritmes": "vroegmodern",
-  "getal-e": "vroegmodern",
-  "cartesisch": "vroegmodern",
-  "driehoek-van-pascal": "vroegmodern",
-  "oneindige-reeksen": "vroegmodern",
-  "grafentheorie": "vroegmodern",
-  "bernoulli": "vroegmodern",
-  "gauss": "eeuw19",
-  "fourier": "eeuw19",
-  "cauchy": "eeuw19",
-  "galois": "eeuw19",
-  "niet-euclidische-geometrie": "eeuw19",
-  "riemann": "eeuw19",
-  "cantor": "eeuw19",
-  "topologie": "eeuw19",
-  "hilbert": "eeuw20",
-  "noether": "eeuw20",
-  "godel": "eeuw20",
-  "turing": "eeuw20",
-  "formele-bewijzen": "eeuw20",
-  "ai-wiskunde": "eeuw20",
-  "navier-stokes-ai-2026": "eeuw20"
-};
 
 function mathNetworkPeriodById(id) {
   return MATH_NETWORK_PERIODS.find((p) => p.id === id) || null;
 }
 
 function mathNetworkNodePeriod(id) {
-  return MATH_NETWORK_NODE_PERIOD[id] || "oudheid";
+  const node = mathNetworkNodeById(id);
+  return node?.period || "oudheid";
 }
 
 function mathNetworkPeriodBounds(period) {
@@ -1163,6 +1529,13 @@ function mathNetworkPeriodUnlocked(periodId) {
     return mathNetworkNodePeriod(node.id) === periodId && mathNetworkIsVisible(node);
   });
 }
+
+function mathNetworkPeriodProgress(periodId) {
+  const nodes = MATH_NETWORK_NODES.filter((node) => mathNetworkNodePeriod(node.id) === periodId);
+  const total = nodes.length;
+  const done = nodes.filter((node) => mathNetworkUnlocked(node.id)).length;
+  return { done: done, total: total };
+}
 let MATH_NETWORK_HINT_HIDDEN = false;
 const MATH_NETWORK_ZOOM = { min: 0.5, max: 1.85, step: 0.15 };
 let MATH_NETWORK_OPEN_ID = null;
@@ -1174,96 +1547,116 @@ function mathNetworkGrid(col, row) {
   ];
 }
 
-function mathNetworkLayout() {
-  /*
-   * Top-down vertakking: vroege ideeën boven, latere takken onder.
-   * Coördinaten zijn pixels in MATH_NETWORK_VIEW.
-   * col = horizontale tak, row = diepte / periode.
-   */
-  const g = mathNetworkGrid;
-  const positions = {
-    "tellen": g(4, 0),
-    "getal": g(4, 1),
-    "natuurlijke-getallen": g(2, 2),
-    "breuken": g(6, 2),
-    "pythagoras": g(6, 3),
-    "bewijs": g(6, 4),
-    "euclides": g(5, 5),
-    "priemgetallen": g(3.6, 5),
-    "archimedes": g(6.5, 5),
-    "kegelsneden": g(8, 5),
-    "rekenkunde": g(2.4, 1),
-    "combinatieleer": g(0.7, 2.3),
-    "thales": g(8, 2.15),
-    "stelling-pythagoras": g(7.7, 3),
-    "irrationale-getallen": g(8, 4),
-    "eratosthenes": g(2.1, 4.2),
-    "perfecte-getallen": g(2.2, 5.7),
-    "polyeders": g(8.7, 5.5),
-    "hypatia": g(4.1, 5.85),
-    "pi": g(7.35, 5.85),
+const MATH_NETWORK_POSITIONS = {
+  "tellen": [4, 0],
+  "getal": [4, 1],
+  "natuurlijke-getallen": [2, 2],
+  "breuken": [6, 2],
+  "pythagoras": [6, 3],
+  "bewijs": [6, 4],
+  "euclides": [5, 5],
+  "priemgetallen": [3.6, 5],
+  "archimedes": [6.5, 5],
+  "kegelsneden": [8, 5],
+  "rekenkunde": [2.4, 1],
+  "combinatieleer": [0.7, 2.3],
+  "thales": [8, 2.15],
+  "stelling-pythagoras": [7.7, 3],
+  "irrationale-getallen": [8, 4],
+  "eratosthenes": [2.1, 4.2],
+  "perfecte-getallen": [2.2, 5.7],
+  "polyeders": [8.7, 5.5],
+  "hypatia": [4.1, 5.85],
+  "pi": [7.35, 5.85],
+  "nul": [2, 7],
+  "plaatswaarde": [4, 7],
+  "negatieve-getallen": [2, 8],
+  "brahmagupta": [0.8, 8.6],
+  "al-khwarizmi": [4, 8.6],
+  "algoritme": [3, 9.6],
+  "algebra": [5, 9.6],
+  "fibonacci": [6.4, 9.6],
+  "aryabhata": [0.4, 7.15],
+  "ptolemaeus": [6.6, 7.1],
+  "diophantus": [8.2, 7.2],
+  "boethius": [5.2, 7.35],
+  "tessellaties": [7.6, 8.25],
+  "diofantische-vergelijkingen": [8.4, 8.4],
+  "goniometrie": [6.3, 8.55],
+  "matrices": [4.2, 10.35],
+  "omar-khayyam": [7.3, 10.35],
+  "pascal": [3, 12.2],
+  "descartes": [4.6, 12.2],
+  "fermat": [6.2, 12.2],
+  "kansrekening": [3, 13.3],
+  "newton": [5.2, 13.3],
+  "leibniz": [7, 13.3],
+  "calculus": [6, 14.4],
+  "de-moivre": [2.2, 15.4],
+  "euler": [5, 15.4],
+  "lagrange": [3.2, 16.5],
+  "differentiaalvergelijkingen": [6.4, 16.5],
+  "laplace": [4.4, 17.4],
+  "cardano": [1.1, 12.2],
+  "napier": [8.1, 12.25],
+  "imaginaire-getallen": [1.1, 13.35],
+  "logaritmes": [8.1, 13.35],
+  "cartesisch": [5.5, 11.55],
+  "driehoek-van-pascal": [1.6, 14.35],
+  "getal-e": [8.0, 14.5],
+  "oneindige-reeksen": [7.5, 15.55],
+  "grafentheorie": [4.7, 16.35],
+  "bernoulli": [2.0, 16.55],
+  "galois": [1.6, 19.2],
+  "gauss": [4.8, 19.2],
+  "fourier": [6.4, 19.2],
+  "cauchy": [8, 19.2],
+  "niet-euclidische-geometrie": [7.6, 20.3],
+  "riemann": [5.8, 20.3],
+  "cantor": [2, 21.4],
+  "topologie": [5, 21.4],
+  "sophie-germain": [0.35, 19.2],
+  "babbage": [3.15, 19.15],
+  "groepentheorie": [1.55, 20.3],
+  "lovelace": [3.15, 20.25],
+  "hamilton": [8.85, 20.3],
+  "abel": [0.4, 21.3],
+  "booleaanse-logica": [3.35, 21.5],
+  "quaternionen": [8.85, 21.4],
+  "riemann-hypothese": [6.55, 21.45],
+  "verzamelingenleer": [0.9, 22.35],
+  "hilbert": [3, 23.4],
+  "noether": [2, 24.4],
+  "godel": [5, 24.4],
+  "turing": [4, 25.4],
+  "formele-bewijzen": [6.2, 25.4],
+  "ai-wiskunde": [5, 26.4],
+  "navier-stokes-ai-2026": [5.0, 28.55],
+  "ramanujan": [6.6, 23.5],
+  "fractals": [8.3, 24.45],
+  "von-neumann": [1.15, 25.35],
+  "mandelbrot": [8.3, 25.5],
+  "speltheorie": [0.2, 26.4],
+  "informatietheorie": [2.6, 26.45],
+  "nash": [0.2, 27.4],
+  "p-versus-np": [3.9, 27.4],
+  "wiles": [8.0, 27.35],
+};
 
-    "nul": g(2, 7),
-    "plaatswaarde": g(4, 7),
-    "negatieve-getallen": g(2, 8),
-    "brahmagupta": g(0.8, 8.6),
-    "al-khwarizmi": g(4, 8.6),
-    "algoritme": g(3, 9.6),
-    "algebra": g(5, 9.6),
-    "fibonacci": g(6.4, 9.6),
-    "aryabhata": g(0.4, 7.15),
-    "ptolemaeus": g(6.6, 7.1),
-    "diophantus": g(8.2, 7.2),
-    "boethius": g(5.2, 7.35),
-    "tessellaties": g(7.6, 8.25),
-    "diofantische-vergelijkingen": g(8.4, 8.4),
-    "goniometrie": g(6.3, 8.55),
-    "matrices": g(4.2, 10.35),
-    "omar-khayyam": g(7.3, 10.35),
-    "pascal": g(3, 12.2),
-    "descartes": g(4.6, 12.2),
-    "fermat": g(6.2, 12.2),
-    "kansrekening": g(3, 13.3),
-    "newton": g(5.2, 13.3),
-    "leibniz": g(7, 13.3),
-    "calculus": g(6, 14.4),
-    "de-moivre": g(2.2, 15.4),
-    "euler": g(5, 15.4),
-    "lagrange": g(3.2, 16.5),
-    "differentiaalvergelijkingen": g(6.4, 16.5),
-    "laplace": g(4.4, 17.4),
-    "cardano": g(1.1, 12.2),
-    "napier": g(8.1, 12.25),
-    "imaginaire-getallen": g(1.1, 13.35),
-    "logaritmes": g(8.1, 13.35),
-    "cartesisch": g(5.5, 11.55),
-    "driehoek-van-pascal": g(1.6, 14.35),
-    "getal-e": g(8.0, 14.5),
-    "oneindige-reeksen": g(7.5, 15.55),
-    "grafentheorie": g(4.7, 16.35),
-    "bernoulli": g(2.0, 16.55),
-    "galois": g(1.6, 19.2),
-    "gauss": g(4.8, 19.2),
-    "fourier": g(6.4, 19.2),
-    "cauchy": g(8, 19.2),
-    "niet-euclidische-geometrie": g(7.6, 20.3),
-    "riemann": g(5.8, 20.3),
-    "cantor": g(2, 21.4),
-    "topologie": g(5, 21.4),
-    "hilbert": g(3, 23.4),
-    "noether": g(2, 24.4),
-    "godel": g(5, 24.4),
-    "turing": g(4, 25.4),
-    "formele-bewijzen": g(6.2, 25.4),
-    "ai-wiskunde": g(5, 26.4),
-    "navier-stokes-ai-2026": g(7.2, 26.4)
-  };
+function mathNetworkLayout() {
+  const g = mathNetworkGrid;
+  const positions = {};
+
+  Object.entries(MATH_NETWORK_POSITIONS).forEach(([id, [col, row]]) => {
+    positions[id] = g(col, row);
+  });
 
   MATH_NETWORK_NODES.forEach((node, index) => {
     if (!positions[node.id]) {
       positions[node.id] = g(index % 8, 16 + Math.floor(index / 8));
     }
   });
+
   return positions;
 }
 
@@ -1290,6 +1683,16 @@ const MATH_NETWORK_SHORT_TITLES = {
   "oneindige-reeksen": "Oneindige\nreeksen",
   "grafentheorie": "Grafentheorie",
   "getal-e": "Het getal e",
+  "sophie-germain": "Sophie Germain",
+  "groepentheorie": "Groepentheorie",
+  "booleaanse-logica": "Booleaanse\nlogica",
+  "riemann-hypothese": "Riemann-\nhypothese",
+  "verzamelingenleer": "Verzamelingenleer",
+  "von-neumann": "Von Neumann",
+  "informatietheorie": "Informatie-\ntheorie",
+  "p-versus-np": "P versus NP",
+  "speltheorie": "Speltheorie",
+  "quaternionen": "Quaternionen",
   "stelling-pythagoras": "Stelling van\nPythagoras",
   "irrationale-getallen": "Irrationale\ngetallen",
   "perfecte-getallen": "Perfecte\ngetallen",
@@ -1403,6 +1806,7 @@ function mathNetworkInjectStyles() {
         radial-gradient(circle at 50% 18%, rgba(230,199,122,.08), transparent 42%),
         linear-gradient(180deg, rgba(18,14,10,.2), rgba(5,4,3,.55));
       height: calc(100vh - 7rem);
+      height: calc(100dvh - 7rem);
       cursor: grab;
       user-select: none;
       -webkit-user-select: none;
@@ -1509,18 +1913,26 @@ function mathNetworkInjectStyles() {
       color: #8a7d63;
     }
     .math-network-edge {
-      stroke: rgba(230,199,122,.18);
-      stroke-width: 1.35;
+      stroke: rgba(230,199,122,.10);
+      stroke-width: 1;
       fill: none;
       vector-effect: non-scaling-stroke;
     }
     .math-network-edge.edge-unlocked {
-      stroke: rgba(230,199,122,.58);
-      stroke-width: 2;
+      stroke: rgba(230,199,122,.16);
+      stroke-width: 1.1;
+    }
+    .math-network-edges.has-focus .math-network-edge:not(.edge-focus) {
+      stroke: rgba(230,199,122,.06);
+    }
+    .math-network-edge.edge-future {
+      stroke: rgba(230,199,122,.075);
+      stroke-dasharray: 3 6;
     }
     .math-network-edge.edge-focus {
-      stroke: rgba(246,220,150,.92);
-      stroke-width: 2.4;
+      stroke: rgba(255,226,150,.95);
+      stroke-width: 2.6;
+      stroke-dasharray: none;
     }
     .math-network-node {
       cursor: pointer;
@@ -1544,10 +1956,9 @@ function mathNetworkInjectStyles() {
       stroke: #5a513f;
     }
     .math-network-node.available .node-core {
-      fill: #1a140c;
-      stroke: #ffe29a;
-      stroke-width: 2.6;
-      filter: drop-shadow(0 0 11px rgba(255,214,120,.85));
+      fill: #161310;
+      stroke: #5a513f;
+      filter: none;
     }
     .math-network-node.unlocked .node-core {
       fill: #3a2e16;
@@ -1559,8 +1970,8 @@ function mathNetworkInjectStyles() {
       stroke: var(--good);
     }
     .math-network-node.available .node-ring {
-      stroke: rgba(255,226,150,.7);
-      stroke-width: 2;
+      stroke: rgba(160,160,160,.45);
+      stroke-width: 1.4;
       animation: math-network-pulse 1.7s ease-in-out infinite;
     }
     .math-network-node.unlocked .node-ring {
@@ -1589,7 +2000,8 @@ function mathNetworkInjectStyles() {
       opacity: .82;
     }
     .math-network-node.available .node-photo {
-      filter: none;
+      filter: grayscale(1) brightness(.42);
+      opacity: .82;
     }
     .math-network-node.unlocked .node-photo {
       filter: saturate(.92);
@@ -1674,15 +2086,20 @@ function mathNetworkInjectStyles() {
     .math-network-float {
       position: absolute;
       z-index: 5;
+      box-sizing: border-box;
       width: min(340px, calc(100% - 24px));
       max-height: calc(100% - 24px);
-      overflow: auto;
+      overflow: hidden;
+      scrollbar-width: none;
       border: 1px solid rgba(230,199,122,.38);
       border-radius: 16px;
       padding: 14px 14px 12px;
       background: rgba(10,8,6,.94);
       box-shadow: 0 16px 40px rgba(0,0,0,.45);
       pointer-events: auto;
+    }
+    .math-network-float::-webkit-scrollbar {
+      display: none;
     }
     .math-network-float[hidden] { display: none; }
     .math-network-float-close {
@@ -1731,9 +2148,12 @@ function mathNetworkInjectStyles() {
       object-fit: cover;
       display: block;
     }
-    .math-network-detail-body { min-width: 0; flex: 1; }
-    .math-network-detail h3 {
+    .math-network-detail-body { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+    .math-network-detail h3,
+    .math-network-float h3 {
       margin: 0 0 8px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
     .math-network-meta {
       color: #cbb98a;
@@ -1793,9 +2213,10 @@ function mathNetworkPeriodSvg() {
 }
 
 function mathNetworkImageSrc(id) {
-  const key = String(id || "");
-  const file = key === "nul" ? "nulpunt" : key;
-  return "assets/netwerk/" + file + ".webp";
+  const node = mathNetworkNodeById(id);
+  return node?.image
+    ? "assets/netwerk/" + node.image
+    : "assets/netwerk/placeholder.webp";
 }
 
 function mathNetworkNodeSvg(node, pos, selectedId) {
@@ -1833,6 +2254,8 @@ function mathNetworkMarkSelected(nodeId) {
     const b = el.getAttribute("data-to");
     el.classList.toggle("edge-focus", Boolean(nodeId) && (a === nodeId || b === nodeId));
   });
+  const edges = document.querySelector(".math-network-edges");
+  if (edges) edges.classList.toggle("has-focus", Boolean(nodeId));
 }
 
 function mathNetworkInzichtIco() {
@@ -2030,10 +2453,13 @@ function mathNetworkSyncPeriodButtons() {
   document.querySelectorAll("[data-network-period]").forEach((btn) => {
     const id = btn.getAttribute("data-network-period");
     const open = mathNetworkPeriodUnlocked(id);
+    const prog = mathNetworkPeriodProgress(id);
     btn.classList.toggle("is-locked", !open);
     btn.classList.toggle("is-ready", open);
     btn.classList.toggle("is-current", id === current);
     btn.disabled = !open;
+    const count = btn.querySelector(".math-network-era-count");
+    if (count) count.textContent = prog.done + "/" + prog.total;
   });
 }
 
@@ -2041,8 +2467,10 @@ function mathNetworkPeriodButtons() {
   return MATH_NETWORK_PERIODS.map((period) => {
     const open = mathNetworkPeriodUnlocked(period.id);
     const cls = open ? "is-ready" : "is-locked";
+    const prog = mathNetworkPeriodProgress(period.id);
     return `<button type="button" class="${cls}" data-network-period="${mathNetworkEsc(period.id)}" ${open ? "" : "disabled"}>
       ${mathNetworkEsc(period.title)}
+      <span class="math-network-era-count">${prog.done}/${prog.total}</span>
     </button>`;
   }).join("");
 }
@@ -2256,9 +2684,12 @@ function mathNetworkRender(selectedNodeId) {
     const pa = positions[a];
     const pb = positions[b];
     if (!pa || !pb) return "";
+    const visibleA = mathNetworkIsVisible(mathNetworkNodeById(a));
+    const visibleB = mathNetworkIsVisible(mathNetworkNodeById(b));
     const unlocked = mathNetworkUnlocked(a) && mathNetworkUnlocked(b);
+    const future = !(visibleA && visibleB);
     const focus = selectedNodeId && (selectedNodeId === a || selectedNodeId === b);
-    return `<line class="math-network-edge${unlocked ? " edge-unlocked" : ""}${focus ? " edge-focus" : ""}"
+    return `<line class="math-network-edge${unlocked ? " edge-unlocked" : ""}${future ? " edge-future" : ""}${focus ? " edge-focus" : ""}"
       data-from="${mathNetworkEsc(a)}" data-to="${mathNetworkEsc(b)}"
       x1="${pa[0]}" y1="${pa[1]}"
       x2="${pb[0]}" y2="${pb[1]}"></line>`;
