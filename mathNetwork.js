@@ -7,6 +7,7 @@
  * - Inzichtpunten worden NOOIT afgetrokken.
  * - Nieuwe nodes toevoegen = één object toevoegen aan MATH_NETWORK_NODES
  *   en eventueel verbindingen toevoegen aan MATH_NETWORK_EDGES.
+ * - Drempel (kosten) staat in MATH_NETWORK_COST: periode + type + extra voorwaarden.
  *
  * Geen externe library nodig: SVG + gewone JavaScript.
  */
@@ -23,7 +24,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Vóór de formele wiskunde",
     year: null,
-    cost: 1,
     prerequisites: [],
     description: "Het onderscheiden en bijhouden van hoeveelheden: een van de vroegste stappen richting getallen.",
     unlockText: "Je ontdekt het beginpunt van het wiskundig denken: hoeveelheden kunnen worden onderscheiden en bijgehouden."
@@ -36,7 +36,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Vroege wiskunde",
     year: null,
-    cost: 1,
     prerequisites: ["tellen"],
     description: "Een abstract begrip waarmee een hoeveelheid kan worden weergegeven.",
     unlockText: "Uit tellen ontstaat een abstract idee dat losstaat van de concrete voorwerpen die worden geteld."
@@ -49,7 +48,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Vroege wiskunde",
     year: null,
-    cost: 1,
     prerequisites: ["getal"],
     description: "De getallen waarmee we hoeveelheden en tellingen beschrijven: 1, 2, 3, ...",
     unlockText: "De eerste systematische getallenwereld wordt zichtbaar."
@@ -62,7 +60,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "India",
     year: "7e eeuw",
-    cost: 2,
     prerequisites: ["natuurlijke-getallen"],
     description: "Nul krijgt een zelfstandige rol als getal én als plaatswaardecijfer.",
     unlockText: "Nul maakt het getalsysteem veel krachtiger: een lege plaats kan worden weergegeven en nul kan als getal worden behandeld."
@@ -75,7 +72,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Oude en middeleeuwse wiskunde",
     year: null,
-    cost: 2,
     prerequisites: ["natuurlijke-getallen"],
     description: "De waarde van een cijfer hangt af van zijn positie in het getal.",
     unlockText: "Met plaatswaarde wordt rekenen met grote getallen veel efficiënter."
@@ -88,7 +84,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Vroege wiskunde",
     year: null,
-    cost: 2,
     prerequisites: ["getal"],
     description: "Getallen die delen van een geheel of verhoudingen kunnen voorstellen.",
     unlockText: "Getallen hoeven niet langer alleen gehele hoeveelheden voor te stellen."
@@ -101,7 +96,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "India / middeleeuwse wiskunde",
     year: null,
-    cost: 2,
     prerequisites: ["nul"],
     description: "Getallen kleiner dan nul, die bijvoorbeeld schulden en tegengestelde richtingen kunnen voorstellen.",
     unlockText: "De getallenwereld wordt uitgebreid zodat aftrekkingen zoals 3 − 5 betekenis krijgen."
@@ -118,7 +112,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Oud-Griekenland",
     year: "ca. 570–495 v.Chr.",
-    cost: 3,
     prerequisites: ["getal", "breuken"],
     description: "Pythagorese traditie rond getallen, verhoudingen en meetkundige stellingen.",
     unlockText: "Getallen en meetkundige vormen blijken diep met elkaar verbonden."
@@ -131,7 +124,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Oud-Griekenland",
     year: "ca. 5e eeuw v.Chr.",
-    cost: 3,
     prerequisites: ["pythagoras"],
     description: "Een conclusie wordt stap voor stap afgeleid uit definities, aannames en eerdere resultaten.",
     unlockText: "Wiskunde wordt niet alleen rekenen, maar ook aantonen waarom iets noodzakelijk waar is."
@@ -144,7 +136,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Hellenistische periode",
     year: "ca. 300 v.Chr.",
-    cost: 5,
     prerequisites: ["bewijs"],
     description: "Euclides systematiseerde een groot deel van de Griekse meetkunde in de Elementen.",
     unlockText: "Definities, axioma's en stellingen vormen samen een samenhangend deductief bouwwerk."
@@ -157,7 +148,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Oud-Griekenland",
     year: null,
-    cost: 2,
     prerequisites: ["euclides"],
     description: "Getallen groter dan 1 die alleen door 1 en zichzelf deelbaar zijn.",
     unlockText: "De structuur van de gehele getallen wordt een zelfstandig onderzoeksgebied."
@@ -170,7 +160,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Hellenistische periode",
     year: "ca. 287–212 v.Chr.",
-    cost: 5,
     prerequisites: ["euclides"],
     description: "Ontwikkelde krachtige meetkundige methoden voor onder andere oppervlakken en volumes.",
     unlockText: "Door steeds fijnere benaderingen te gebruiken ontstaat een voorloper van het latere integraalidee."
@@ -183,7 +172,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Hellenistische periode",
     year: "3e–2e eeuw v.Chr.",
-    cost: 5,
     prerequisites: ["euclides"],
     description: "Ellipsen, parabolen en hyperbolen als fundamentele meetkundige krommen.",
     unlockText: "Nieuwe soorten krommen worden onderdeel van de wiskundige taal."
@@ -197,7 +185,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Vroege wiskunde",
     year: null,
-    cost: 1,
     prerequisites: ["tellen"],
     description: "Tellen zegt hoeveel er is, maar niet hoe hoeveelheden samengaan. Optellen, aftrekken en verdelen vragen om vaste rekengebaren.",
     unlockText: "Hoeveelheden kunnen worden bewerkt, niet alleen aangewezen. Rekenen wordt een methode."
@@ -210,7 +197,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Oudheid",
     year: null,
-    cost: 2,
     prerequisites: ["natuurlijke-getallen"],
     description: "Zodra je voorwerpen in rijen of groepen zet, groeit het aantal schikkingen sneller dan het oog volgt.",
     unlockText: "Tellen van mogelijkheden wordt zelf een vraag. Combinaties zijn geen toeval meer."
@@ -223,7 +209,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Oud-Griekenland",
     year: "ca. 624–546 v.Chr.",
-    cost: 2,
     prerequisites: ["getal", "breuken"],
     description: "Meetkunde was een verzameling handgrepen tot iemand naar de reden achter een hoek of evenwijdige lijn vroeg.",
     unlockText: "Een figuur kan een algemene regel dragen. Meten krijgt een eerste deductieve trek."
@@ -236,7 +221,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Oud-Griekenland",
     year: null,
-    cost: 2,
     prerequisites: ["pythagoras"],
     description: "In een rechte hoek lijken de zijden een vast verband te hebben, maar dat verband vraagt om een uitspraak die altijd geldt.",
     unlockText: "De som van de kwadraten van de rechthoekszijden is het kwadraat van de schuine zijde. Getal en driehoek delen één wet."
@@ -249,7 +233,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Oud-Griekenland",
     year: null,
-    cost: 3,
     prerequisites: ["stelling-pythagoras"],
     description: "Sommige lengtes in een figuur zijn geen breuk van twee gehele getallen, hoe fijn je ook verdeelt.",
     unlockText: "Niet elke grootte is een verhouding van tellen. Het getalbegrip moet wijder dan de breuk."
@@ -262,7 +245,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Oud-Griekenland",
     year: null,
-    cost: 3,
     prerequisites: ["euclides"],
     description: "Ruimtefiguren met platte vlakken lijken eindeloos, tot je vraagt welke regelmatige lichamen echt kunnen sluiten.",
     unlockText: "Er zijn maar vijf regelmatige veelvlakken. Vorm in de ruimte krijgt een eindige catalogus."
@@ -275,7 +257,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Oud-Griekenland",
     year: null,
-    cost: 2,
     prerequisites: ["priemgetallen"],
     description: "Een getal kan gelijk zijn aan de som van zijn echte delers. Die zeldzame balans vraagt om een eigen naam.",
     unlockText: "Volmaaktheid wordt een rekenfeit: 6 en 28 zijn geen mystiek, maar een structuur van delers."
@@ -288,7 +269,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Hellenistische periode",
     year: "ca. 276–194 v.Chr.",
-    cost: 3,
     prerequisites: ["priemgetallen"],
     description: "Priemen vinden door elk getal te beproeven is traag. Er is een zeef nodig die veelvouden in één beweging wegneemt.",
     unlockText: "De zeef van Eratosthenes maakt priemen tot een procedure. De aarde zelf wordt meetbaar met schaduw en afstand."
@@ -301,7 +281,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Hellenistische periode",
     year: null,
-    cost: 3,
     prerequisites: ["archimedes"],
     description: "Omtrek en middellijn van een cirkel houden verband, maar dat getal is geen nette breuk.",
     unlockText: "De verhouding krijgt een eigen constante. Benadering van de cirkel wordt een eindeloos nauwkeuriger werk."
@@ -314,7 +293,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Late oudheid",
     year: "ca. 350–415",
-    cost: 3,
     prerequisites: ["euclides", "kegelsneden"],
     description: "Hellenistische meetkunde dreigde een dode bibliotheek te worden zonder wie haar uitlegde en bewerkte.",
     unlockText: "Commentaar en onderwijs houden Euclides en de kegelsneden levend. Wiskunde overleeft als overdracht, niet alleen als vondst."
@@ -331,7 +309,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "India",
     year: "598–ca. 668",
-    cost: 3,
     prerequisites: ["nul", "negatieve-getallen"],
     description: "Speelde een belangrijke rol in de ontwikkeling van rekenregels voor nul en negatieve getallen.",
     unlockText: "Nul en negatieve getallen krijgen explicietere rekenregels."
@@ -344,7 +321,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Islamitische gouden eeuw",
     year: "ca. 780–850",
-    cost: 5,
     prerequisites: ["plaatswaarde", "breuken"],
     description: "Zijn werk droeg bij aan de ontwikkeling van algebra en systematische rekenprocedures.",
     unlockText: "Een nieuwe manier van denken ontstaat: problemen kunnen volgens algemene procedures worden opgelost."
@@ -357,7 +333,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Middeleeuwse wiskunde",
     year: null,
-    cost: 3,
     prerequisites: ["al-khwarizmi"],
     description: "Een eindige, systematische procedure om een probleem op te lossen.",
     unlockText: "Een wiskundig probleem kan worden gezien als een reeks expliciete stappen."
@@ -370,7 +345,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Middeleeuwse wiskunde",
     year: null,
-    cost: 5,
     prerequisites: ["al-khwarizmi", "negatieve-getallen"],
     description: "Het systematisch werken met onbekenden, vergelijkingen en algebraïsche bewerkingen.",
     unlockText: "Getallen worden niet langer alleen berekend: onbekende grootheden kunnen symbolisch worden behandeld."
@@ -387,7 +361,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Middeleeuws Europa",
     year: "ca. 1170–ca. 1250",
-    cost: 5,
     prerequisites: ["plaatswaarde", "al-khwarizmi"],
     description: "Verspreidde via Liber Abaci rekenmethoden met het Indisch-Arabische cijfersysteem in Europa.",
     unlockText: "Efficiëntere rekenmethoden krijgen een brede Europese verspreiding."
@@ -400,7 +373,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Romeinse tijd",
     year: "ca. 100–170",
-    cost: 3,
     prerequisites: ["euclides", "kegelsneden"],
     description: "Hemelbeweging vroeg om hoeken en koorden, niet alleen om losse meetkundige stellingen.",
     unlockText: "Meetkunde gaat de hemel in: tabellen van koorden maken hoeken rekenbaar."
@@ -413,7 +385,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Romeinse tijd",
     year: "ca. 3e eeuw",
-    cost: 3,
     prerequisites: ["natuurlijke-getallen", "breuken"],
     description: "Vergelijkingen werden als meetkundige stukken of als één getalvoorbeelden behandeld. Er ontbrak een taal voor onbepaalde gehele oplossingen.",
     unlockText: "Onbekenden in gehele getallen krijgen een eigen schrift. De puzzel wordt een vergelijking."
@@ -426,7 +397,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Romeinse tijd tot middeleeuwen",
     year: null,
-    cost: 3,
     prerequisites: ["diophantus"],
     description: "Sommige vergelijkingen vragen om gehele oplossingen, niet om elke reële wortel.",
     unlockText: "De vraag is niet alleen of er een oplossing is, maar of die in hele getallen bestaat."
@@ -439,7 +409,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Middeleeuwen",
     year: null,
-    cost: 3,
     prerequisites: ["euclides", "polyeders"],
     description: "Een vlak vullen zonder gaten of overlap lijkt versiering, tot je vraagt welke vormen dat strikt toelaten.",
     unlockText: "Betegeling wordt meetkunde: welke hoeken sluiten, en welke herhaling is mogelijk."
@@ -452,7 +421,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Late oudheid / vroege middeleeuwen",
     year: "ca. 480–524",
-    cost: 2,
     prerequisites: ["natuurlijke-getallen", "euclides"],
     description: "Latijns Europa dreigde de Griekse rekenkunde alleen als citaat over te houden.",
     unlockText: "Een smalle brug blijft open: getaltheorie en verhoudingen blijven onderwezen, al is het handboek dun."
@@ -465,7 +433,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "India",
     year: "476–550",
-    cost: 3,
     prerequisites: ["natuurlijke-getallen", "pi"],
     description: "Astronomie had sinuswaarden en een plaats voor grote getallen nodig, niet alleen meetkundige tekeningen.",
     unlockText: "Sinus en rekenkunde van de cirkel worden tabellen. De hemel wordt met Indiaas rekenen gevolgd."
@@ -478,7 +445,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Middeleeuwen",
     year: null,
-    cost: 3,
     prerequisites: ["ptolemaeus", "aryabhata"],
     description: "Hoeken in driehoeken en aan de hemel zijn lastig te vangen met alleen lengtes.",
     unlockText: "Sinus, koorde en later tangens maken van een hoek een rekenbaar getal."
@@ -491,7 +457,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "Middeleeuwen",
     year: null,
-    cost: 3,
     prerequisites: ["al-khwarizmi", "combinatieleer"],
     description: "Stelsels getallen in rijen en kolommen doken op in Chinese en latere rekenpraktijk, zonder de latere algebraïsche naam.",
     unlockText: "Een tabel van getallen kan een bewerking zijn, niet alleen een lijst."
@@ -504,7 +469,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "Islamitische gouden eeuw",
     year: "1048–1131",
-    cost: 5,
     prerequisites: ["algebra", "euclides"],
     description: "Derdegraadsvergelijkingen lieten zich niet allemaal met de oude meetkundige truc van het vlak vangen.",
     unlockText: "Kegelsneden lossen kubische vragen. Algebra en meetkunde lenen opnieuw elkaars hand."
@@ -517,7 +481,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "17e eeuw",
     year: "1596–1650",
-    cost: 5,
     prerequisites: ["algebra", "euclides"],
     description: "Verbond algebra met meetkunde via het coördinatenstelsel en de analytische meetkunde.",
     unlockText: "Een meetkundig probleem kan voortaan worden vertaald naar algebra."
@@ -530,7 +493,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "17e eeuw",
     year: "1607–1665",
-    cost: 5,
     prerequisites: ["priemgetallen", "algebra"],
     description: "Belangrijke bijdragen aan getaltheorie, analytische meetkunde en kansrekening.",
     unlockText: "Getaltheorie groeit uit tot een eigen onderzoeksgebied en algebra krijgt nieuwe toepassingen."
@@ -543,7 +505,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "17e eeuw",
     year: "1623–1662",
-    cost: 5,
     prerequisites: ["algebra", "fibonacci"],
     description: "Belangrijke bijdragen aan combinatoriek, kansrekening en rekenmachines.",
     unlockText: "Combinaties van eindige mogelijkheden worden systematisch bestudeerd."
@@ -556,7 +517,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "17e eeuw",
     year: "17e eeuw",
-    cost: 5,
     prerequisites: ["pascal", "fermat"],
     description: "Wiskundige theorie van toevallige gebeurtenissen en kansen.",
     unlockText: "Onzekerheid wordt een object dat wiskundig kan worden berekend."
@@ -569,7 +529,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "17e eeuw",
     year: "1643–1727",
-    cost: 8,
     prerequisites: ["descartes", "algebra", "kegelsneden"],
     description: "Ontwikkelde calculus in samenhang met zijn werk in mechanica en zwaartekracht.",
     unlockText: "Verandering wordt een wiskundig object waarmee beweging en fysische wetten kunnen worden beschreven."
@@ -582,7 +541,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "17e eeuw",
     year: "1646–1716",
-    cost: 8,
     prerequisites: ["descartes", "algebra"],
     description: "Ontwikkelde onafhankelijk calculus en introduceerde de notatie die de moderne calculus sterk heeft beïnvloed.",
     unlockText: "Differentiaal- en integraalrekening krijgen een krachtige symbolische taal."
@@ -595,7 +553,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "17e eeuw",
     year: "17e eeuw",
-    cost: 8,
     prerequisites: ["newton", "leibniz"],
     description: "De wiskunde van verandering, limieten, afgeleiden en integralen.",
     unlockText: "De grote brug van eindige veranderingen naar oneindig kleine veranderingen wordt geopend."
@@ -612,7 +569,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "18e eeuw",
     year: "1667–1754",
-    cost: 5,
     prerequisites: ["kansrekening"],
     description: "Belangrijke bijdragen aan kansrekening en de relatie tussen complexe getallen en goniometrie.",
     unlockText: "Kansrekening en complexe getallen krijgen nieuwe verbindingen."
@@ -625,7 +581,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "18e eeuw",
     year: "1707–1783",
-    cost: 8,
     prerequisites: ["calculus", "de-moivre"],
     description: "Een centrale figuur in analyse, getaltheorie, complexe getallen, grafentheorie en mechanica.",
     unlockText: "Een groot aantal takken van de wiskunde begint zich rond één uitzonderlijk productieve onderzoeker te verbinden."
@@ -638,7 +593,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "18e eeuw",
     year: "18e eeuw",
-    cost: 5,
     prerequisites: ["calculus", "euler"],
     description: "Vergelijkingen waarin een onbekende functie en haar afgeleiden voorkomen.",
     unlockText: "Dynamische processen kunnen rechtstreeks als wiskundige vergelijkingen worden beschreven."
@@ -651,7 +605,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "18e eeuw",
     year: "1736–1813",
-    cost: 8,
     prerequisites: ["calculus", "differentiaalvergelijkingen"],
     description: "Belangrijke bijdragen aan variatierekening, analytische mechanica en analyse.",
     unlockText: "Mechanica kan steeds abstracter en systematischer worden geformuleerd."
@@ -664,7 +617,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "18e–19e eeuw",
     year: "1749–1827",
-    cost: 8,
     prerequisites: ["kansrekening", "differentiaalvergelijkingen"],
     description: "Verbindt waarschijnlijkheid, analyse en hemelmechanica.",
     unlockText: "Toeval en deterministische modellen kunnen in één wiskundig kader naast elkaar bestaan."
@@ -677,7 +629,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "16e eeuw",
     year: "1501–1576",
-    cost: 5,
     prerequisites: ["algebra"],
     description: "Derde- en vierdegraadsvergelijkingen vroegen om een algemene ingreep, niet om nog een meetkundige truc per geval.",
     unlockText: "Wortels van hogere vergelijkingen worden een methode. Ook wortels die ‘niet bestaan’ blijven in de rekening staan."
@@ -690,7 +641,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "16e–18e eeuw",
     year: null,
-    cost: 5,
     prerequisites: ["cardano"],
     description: "Sommige wortels lijken onmogelijk, tot je ze als tussenstap toelaat en merkt dat het eindantwoord reëel kan zijn.",
     unlockText: "Een vierkantswortel van een negatief getal krijgt een plaats. De getallenwereld is niet meer alleen de lijn."
@@ -703,7 +653,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "17e eeuw",
     year: "1550–1617",
-    cost: 5,
     prerequisites: ["algebra"],
     description: "Vermenigvuldigen van grote astronomische tabellen is te traag voor de hand.",
     unlockText: "Vermenigvuldigen wordt optellen van bijpassende getallen. De rekenlast van de hemel verschuift."
@@ -716,7 +665,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "17e eeuw",
     year: null,
-    cost: 5,
     prerequisites: ["napier"],
     description: "Een bewerking die producten in sommen verandert, vraagt om een eigen naam en een eigen tafel.",
     unlockText: "Schaal en groei krijgen een omgekeerde: de logaritme."
@@ -729,7 +677,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "17e–18e eeuw",
     year: null,
-    cost: 5,
     prerequisites: ["logaritmes"],
     description: "Eén grondtal maakt de logaritme en de groei van rente of populatie bijzonder soepel.",
     unlockText: "Er is een natuurlijk grondtal. Groei en analyse delen hetzelfde getal."
@@ -742,7 +689,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "17e eeuw",
     year: null,
-    cost: 5,
     prerequisites: ["descartes"],
     description: "Een punt in het vlak had geen vast adres tot lengte en breedte zelf getallen werden.",
     unlockText: "Elk punt is een paar getallen. Meetkunde kan op papier als algebra."
@@ -755,7 +701,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "17e eeuw",
     year: null,
-    cost: 3,
     prerequisites: ["pascal"],
     description: "Binomiale coëfficiënten en combinaties liggen in een driehoek van sommen verborgen.",
     unlockText: "Elk getal is de som van de twee erboven. Combinaties krijgen een raster."
@@ -768,7 +713,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "17e–18e eeuw",
     year: null,
-    cost: 5,
     prerequisites: ["calculus"],
     description: "Een som mag blijven lopen. De vraag is wanneer die som een getal wordt.",
     unlockText: "Oneindig veel termen kunnen één waarde naderen. Analyse krijgt een tweede adem naast de afgeleide."
@@ -781,7 +725,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "18e eeuw",
     year: null,
-    cost: 5,
     prerequisites: ["euler"],
     description: "Bruggen en routes vragen niet om afstand, maar om verbondenheid.",
     unlockText: "Punten en lijnen zonder metriek worden wiskunde. Een wandeling is een object."
@@ -794,7 +737,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "17e–18e eeuw",
     year: "17e–18e eeuw",
-    cost: 5,
     prerequisites: ["kansrekening", "calculus"],
     description: "Kans, reeksen en variatie werden in één familiewerkplaats tegelijk verder geduwd.",
     unlockText: "Toeval en verandering horen bij dezelfde eeuw. De kansrekening krijgt analyse."
@@ -811,7 +753,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1777–1855",
-    cost: 8,
     prerequisites: ["fermat", "calculus"],
     description: "Grote bijdragen aan getaltheorie, analyse, geometrie, statistiek en fysische wiskunde.",
     unlockText: "Getaltheorie, geometrie en toegepaste wiskunde blijken steeds nauwer verbonden."
@@ -824,7 +765,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1768–1830",
-    cost: 8,
     prerequisites: ["calculus", "differentiaalvergelijkingen"],
     description: "Ontwikkelde Fourier-reeksen en een nieuwe manier om functies als som van golven te beschrijven.",
     unlockText: "Complexe signalen kunnen worden ontleed in eenvoudige harmonische componenten."
@@ -837,7 +777,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1789–1857",
-    cost: 8,
     prerequisites: ["calculus"],
     description: "Speelde een grote rol in het rigoureuzer maken van de analyse en complexe analyse.",
     unlockText: "Calculus krijgt steeds scherpere definities en bewijsstandaarden."
@@ -850,7 +789,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1811–1832",
-    cost: 8,
     prerequisites: ["algebra"],
     description: "Legde fundamenten voor de groepentheoretische benadering van algebraïsche vergelijkingen.",
     unlockText: "Symmetrie blijkt een sleutel te zijn tot het begrijpen van algebraïsche structuren."
@@ -863,7 +801,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "19e eeuw",
     year: "19e eeuw",
-    cost: 8,
     prerequisites: ["euclides"],
     description: "Geometrieën waarin het parallellenpostulaat van Euclides niet op dezelfde manier geldt.",
     unlockText: "Er blijkt meer dan één consistente meetkundige wereld mogelijk."
@@ -876,7 +813,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1826–1866",
-    cost: 13,
     prerequisites: ["calculus", "niet-euclidische-geometrie"],
     description: "Vernieuwde analyse en geometrie en introduceerde ideeën die uitmondden in Riemann-geometrie.",
     unlockText: "Meetkunde wordt een theorie van abstracte ruimten en kromming."
@@ -889,7 +825,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1845–1918",
-    cost: 13,
     prerequisites: ["bewijs", "priemgetallen"],
     description: "Ontwikkelde de verzamelingenleer en een theorie van verschillende groottes van oneindigheid.",
     unlockText: "Oneindigheid wordt zelf een object dat wiskundig kan worden onderzocht."
@@ -902,7 +837,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "19e–20e eeuw",
     year: null,
-    cost: 13,
     prerequisites: ["riemann"],
     description: "Studie van eigenschappen van ruimten die behouden blijven onder continue vervorming.",
     unlockText: "Vorm wordt losgekoppeld van exacte afmetingen en hoeken."
@@ -916,7 +850,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1776–1831",
-    cost: 5,
     prerequisites: ["fermat"],
     description: "Getaltheorie en elasticiteit werden in haar tijd als mannenwerk behandeld; de stellingen wachtten niet.",
     unlockText: "Fermats vergelijking krijgt nieuwe gevallen. Een brief onder andere naam blijkt een wiskundige stem."
@@ -929,7 +862,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "19e eeuw",
     year: null,
-    cost: 8,
     prerequisites: ["galois"],
     description: "Symmetrie van een vergelijking is lastig te vangen tot je de toegestane verwisselingen zelf tot object maakt.",
     unlockText: "Een groep is de algebra van wat je mag verwisselen. Structuur wint van de enkele formule."
@@ -942,7 +874,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1791–1871",
-    cost: 5,
     prerequisites: ["algoritme"],
     description: "Tafels met de hand rekenen zaait fouten. Een machine zou de stappen zelf moeten zetten.",
     unlockText: "Berekenen wordt ontwerp van raderen. Het algoritme zoekt een lichaam van messing."
@@ -955,7 +886,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1815–1852",
-    cost: 5,
     prerequisites: ["babbage"],
     description: "Een rekenmachine die alleen tabellen stampt, mist wat een algemene procedure kan zijn.",
     unlockText: "De machine kan meer dan cijfers: een plan van stappen wordt een programma avant la lettre."
@@ -968,7 +898,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1805–1865",
-    cost: 8,
     prerequisites: ["algebra", "cartesisch"],
     description: "Draaiingen in de ruimte lieten zich niet netjes met twee of drie gewone getallen vangen.",
     unlockText: "Een nieuwe vermenigvuldiging in vier delen. Richting in de ruimte krijgt algebra."
@@ -981,7 +910,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "19e eeuw",
     year: null,
-    cost: 8,
     prerequisites: ["hamilton"],
     description: "Vier getallen met een vermenigvuldiging die niet altijd commutatief is.",
     unlockText: "i, j en k zijn geen versiering. Draaien is een product, geen plaatje."
@@ -994,7 +922,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "19e eeuw",
     year: "1802–1829",
-    cost: 8,
     prerequisites: ["algebra"],
     description: "De vijfdegraadsvergelijking weigerde de wortelformules die tot de vierde graad werkten.",
     unlockText: "Onmogelijkheid wordt een stelling. Niet elke vergelijking heeft een algemeen radicalenrecept."
@@ -1007,7 +934,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "19e eeuw",
     year: null,
-    cost: 5,
     prerequisites: ["bewijs", "algebra"],
     description: "Waar en onwaar leken geen rekenstof tot iemand ze als 1 en 0 in wetten zette.",
     unlockText: "Redeneren wordt algebra. En en of zijn bewerkingen."
@@ -1020,7 +946,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "19e eeuw",
     year: "1859",
-    cost: 13,
     prerequisites: ["riemann", "priemgetallen"],
     description: "De verdeling van priemen hangt aan de nullen van een functie die Riemann tekende — en die nullen zijn niet bewezen waar we ze willen.",
     unlockText: "Een vermoeden dat de priemen ordent. De kaart is er, de sluiting niet."
@@ -1033,7 +958,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "19e eeuw",
     year: null,
-    cost: 13,
     prerequisites: ["cantor"],
     description: "Oneindige collecties bleken niet allemaal even groot. Dat vraagt om een leer, niet om een metafoor.",
     unlockText: "De verzameling wordt het basismateriaal. Oneindig heeft graden."
@@ -1050,7 +974,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1862–1943",
-    cost: 13,
     prerequisites: ["cantor", "riemann"],
     description: "Bepalende figuur in de grondslagen, algebra, analyse en formele formulering van wiskundige problemen.",
     unlockText: "De vraag wat wiskunde precies kan bewijzen wordt zelf een onderzoeksgebied."
@@ -1063,7 +986,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1882–1935",
-    cost: 13,
     prerequisites: ["galois", "hilbert"],
     description: "Bracht abstracte algebra en symmetrie naar een nieuw niveau; haar werk verbindt symmetrie met behoudswetten.",
     unlockText: "Symmetrie wordt een structureel principe dat zowel in pure als toegepaste wiskunde verschijnt."
@@ -1076,7 +998,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1906–1978",
-    cost: 13,
     prerequisites: ["hilbert"],
     description: "Zijn onvolledigheidsstellingen veranderden het begrip van formele axiomasystemen.",
     unlockText: "Er worden fundamentele grenzen zichtbaar aan wat binnen een formeel systeem bewijsbaar kan zijn."
@@ -1089,7 +1010,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1912–1954",
-    cost: 13,
     prerequisites: ["algoritme", "godel"],
     description: "Formuleerde een fundamenteel model voor berekenbaarheid en droeg bij aan de theoretische basis van computers.",
     unlockText: "Het algoritme wordt een formeel object: wat betekent het dat iets berekenbaar is?"
@@ -1102,7 +1022,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "20e–21e eeuw",
     year: null,
-    cost: 13,
     prerequisites: ["godel", "turing"],
     description: "Wiskundige redeneringen worden vastgelegd in formele systemen die door mensen én machines gecontroleerd kunnen worden.",
     unlockText: "Een bewijs kan niet alleen gelezen maar ook mechanisch gecontroleerd worden."
@@ -1115,7 +1034,6 @@ const MATH_NETWORK_NODES = [
     type: "breakthrough",
     era: "21e eeuw",
     year: "2020s",
-    cost: 21,
     prerequisites: ["formele-bewijzen", "turing", "fourier"],
     description: "AI-systemen worden ingezet voor wiskundig redeneren, bewijs zoeken, formalisering en onderzoek.",
     unlockText: "De computer wordt niet alleen een rekenmachine, maar een partner bij het ontdekken en controleren van wiskundige structuren."
@@ -1128,7 +1046,6 @@ const MATH_NETWORK_NODES = [
     type: "breakthrough",
     era: "21e eeuw",
     year: "2026",
-    cost: 21,
     prerequisites: ["ai-wiskunde", "differentiaalvergelijkingen"],
     description: "Een hedendaagse AI-gerelateerde doorbraak rond het Navier–Stokes existence-and-smoothness problem.",
     unlockText: "Een actuele casus waarin moderne analyse, PDE-theorie, formele verificatie en AI-assisted mathematics samenkomen.",
@@ -1143,7 +1060,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1887–1920",
-    cost: 8,
     prerequisites: ["priemgetallen", "oneindige-reeksen"],
     description: "Formules arriveerden sneller dan bewijzen. De vraag was welke van die vondsten standhouden.",
     unlockText: "Oneindige sommen en partities krijgen nieuwe identiteiten. Intuïtie eist daarna een bewijs."
@@ -1156,7 +1072,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1903–1957",
-    cost: 13,
     prerequisites: ["hilbert", "kansrekening"],
     description: "Spel, machine en kwantum vroegen om één soort wiskundige architectuur.",
     unlockText: "Strategie, computers en operatoren komen in één hoofd bijeen. De eeuw krijgt een ontwerper."
@@ -1169,7 +1084,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "20e eeuw",
     year: null,
-    cost: 8,
     prerequisites: ["von-neumann"],
     description: "Winst hangt af van wat de ander doet. Dat is geen moraal, maar een evenwicht.",
     unlockText: "Een spel wordt een wiskundig object. Strategie is een evenwicht, geen gok."
@@ -1182,7 +1096,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1928–2015",
-    cost: 8,
     prerequisites: ["speltheorie"],
     description: "Niet elk spel heeft een duidelijke winnaar. Toch kan niemand eenzijdig beter af zijn.",
     unlockText: "Het Nash-evenwicht maakt conflict berekenbaar zonder dat iemand de ander hoeft te verslaan."
@@ -1195,7 +1108,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "20e eeuw",
     year: null,
-    cost: 8,
     prerequisites: ["turing", "kansrekening"],
     description: "Een boodschap is geen betekenis alleen: ze heeft een hoeveelheid die je kunt meten en beschermen.",
     unlockText: "Informatie krijgt een eenheid. Ruis en code worden wiskunde."
@@ -1208,7 +1120,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "20e eeuw",
     year: "1971",
-    cost: 13,
     prerequisites: ["turing"],
     description: "Sommige antwoorden zijn snel te checken en toch hard te vinden. Of die kloof wiskundig vastligt, is open.",
     unlockText: "Gemakkelijk controleren is niet hetzelfde als gemakkelijk vinden. De grens is een van de grote open vragen."
@@ -1221,7 +1132,6 @@ const MATH_NETWORK_NODES = [
     type: "idea",
     era: "20e eeuw",
     year: null,
-    cost: 8,
     prerequisites: ["calculus"],
     description: "Een kustlijn wordt langer naarmate je fijner meet. Dimensie is dan geen geheel getal meer.",
     unlockText: "Herhaling op elke schaal wordt een meetkundig object. Ruwheid krijgt een maat."
@@ -1234,7 +1144,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1924–2010",
-    cost: 8,
     prerequisites: ["fractals"],
     description: "Die gebroken vormen hadden een naam en een plaatje nodig voordat ze een vak werden.",
     unlockText: "De Mandelbrotverzameling maakt oneindige rand zichtbaar. Fractals krijgen een gezicht."
@@ -1247,7 +1156,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "20e eeuw",
     year: "1953–",
-    cost: 13,
     prerequisites: ["fermat", "groepentheorie"],
     description: "Fermats kanttekening bleef drie eeuwen een rand. De sluiting vroeg om moderne algebraïsche meetkunde.",
     unlockText: "Fermats laatste stelling is bewezen. Een oude claim wordt een stelling van deze eeuw."
@@ -1260,7 +1168,6 @@ const MATH_NETWORK_NODES = [
     type: "person",
     era: "21e eeuw",
     year: "1966–",
-    cost: 13,
     prerequisites: ["topologie"],
     description: "Poincarés vraag over de driedimensionale sfeer bleef open tot de Ricci-stroom haar dwong.",
     unlockText: "Het Poincarévermoeden is opgelost. Vorm in drie dimensies krijgt een sluitstuk."
@@ -1463,7 +1370,7 @@ function mathNetworkIsVisible(node) {
 
 function mathNetworkCanUnlock(node) {
   if (mathNetworkUnlocked(node.id)) return false;
-  return mathNetworkInsightScore() >= Number(node.cost || 0)
+  return mathNetworkInsightScore() >= mathNetworkNodeCost(node)
     && mathNetworkPrerequisitesMet(node);
 }
 
@@ -1507,6 +1414,30 @@ const MATH_NETWORK_PERIODS = [
   { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.85, row1: 29.4 }
 ];
 
+/* Drempel = periode + type + extraPrereq × (aantal voorwaarden − 1).
+   Pas alleen deze tabel aan. override wint van de som. */
+const MATH_NETWORK_COST = {
+  period: {
+    oudheid: 5,
+    middeleeuwen: 10,
+    vroegmodern: 15,
+    eeuw19: 20,
+    eeuw20: 25
+  },
+  type: {
+    idea: 0,
+    person: 5,
+    work: 8,
+    problem: 10,
+    breakthrough: 12
+  },
+  extraPrereq: 3,
+  override: {
+    "navier-stokes-ai-2026": 50,
+    "ai-wiskunde": 50
+  }
+};
+
 function mathNetworkPeriodById(id) {
   return MATH_NETWORK_PERIODS.find((p) => p.id === id) || null;
 }
@@ -1515,6 +1446,21 @@ function mathNetworkNodePeriod(id) {
   const node = mathNetworkNodeById(id);
   return node?.period || "oudheid";
 }
+
+function mathNetworkNodeCost(node) {
+  if (!node) return 0;
+  const table = MATH_NETWORK_COST;
+  if (table.override && table.override[node.id] != null) {
+    return Number(table.override[node.id]);
+  }
+  const period = node.period || mathNetworkNodePeriod(node.id);
+  const base = Number((table.period && table.period[period]) || 0);
+  const extraType = Number((table.type && table.type[node.type]) || 0);
+  const prereqs = (node.prerequisites || []).length;
+  const extraReq = Math.max(0, prereqs - 1) * Number(table.extraPrereq || 0);
+  return Math.max(0, base + extraType + extraReq);
+}
+
 
 function mathNetworkPeriodBounds(period) {
   const y0 = MATH_NETWORK_GRID.originY + period.row0 * MATH_NETWORK_GRID.rowH;
@@ -2309,7 +2255,7 @@ function mathNetworkRenderDetail(nodeId) {
   const admin = mathNetworkIsAdmin();
   const can = mathNetworkCanUnlock(node);
   const prereqs = (node.prerequisites || []).map(mathNetworkNodeById).filter(Boolean);
-  const cost = Number(node.cost || 0);
+  const cost = mathNetworkNodeCost(node);
   const need = Math.max(0, cost - mathNetworkInsightScore());
   const typeLabel = MATH_NETWORK_TYPE_LABELS[node.type] || node.type;
 
