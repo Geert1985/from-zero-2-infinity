@@ -514,6 +514,13 @@ body {
   .stone { width: min(100%, 300px); flex-basis: min(100%, 300px); }
   .stone-actions { margin-left: 12px; margin-right: 12px; }
   .layout, .phase-grid { width: min(100% - 20px, 1100px); }
+  .screen {
+    background-image: none !important;
+    background-attachment: scroll;
+  }
+  .screen::before {
+    display: none;
+  }
 }
 
 @media (max-width: 520px) {
