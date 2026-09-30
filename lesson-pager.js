@@ -27,6 +27,11 @@ function enhanceCallouts(root, mid, page) {
       : '<button type="button" class="btn collect-inzicht" data-ikey="' + key + '"><img class="book-ico" src="assets/inzicht.png" alt=""> Verzamel Inzicht</button>';
     box.appendChild(wrap);
   });
+  const dock = root.querySelector(".lesson-dock-inzicht");
+  if (dock) {
+    const live = root.querySelector(".callout .collect-inzicht");
+    dock.innerHTML = live ? live.outerHTML : "";
+  }
 }
 
 function renderLesson(phaseId, id, page) {
@@ -51,8 +56,12 @@ function renderLesson(phaseId, id, page) {
     '<div class="screen" style="background-image:url(\'' + bgFor(phaseId) + "')\">" +
     topbar('<button class="btn" data-go="/fase/' + phaseId + '">Fase ' + phaseId + "</button>") +
     '<div class="layout"><div class="panel lesson">' + body +
-    '<div class="lesson-pager" style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:20px">' +
-    prev + '<span>' + (i + 1) + " / " + pages.length + "</span>" + nxt + "</div>" +
+    '<div class="lesson-dock">' +
+    '<div class="lesson-pager">' +
+    prev + '<span>' + (i + 1) + " / " + pages.length + "</span>" + nxt +
+    "</div>" +
+    '<div class="lesson-dock-inzicht"></div>' +
+    "</div>" +
     '<div class="lesson-actions">' +
     '<button class="btn" data-go="/fase/' + phaseId + '">Terug naar fase ' + phaseId + "</button>" +
     '<button class="btn" data-go="/fase/' + phaseId + "/m/" + m.id + '/toets"><img class="book-ico lg" src="assets/' + (milestonePassed(m.id) ? "medaille.png" : "toets.png") + '" alt=""> Toets</button>' +
