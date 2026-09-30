@@ -742,6 +742,7 @@ button.lesstof-score {
     border-top: 1px solid var(--line);
   }
   .lesson-pager { margin: 0; }
+  .lesson-pager .pager-btn { display: none; }
   .lesson-dock-inzicht { display: block; }
   .callout .collect-inzicht { display: none; }
   .stone { width: min(100%, 300px); flex-basis: min(100%, 300px); }
