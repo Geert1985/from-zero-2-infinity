@@ -857,6 +857,10 @@ function mathNetworkInjectStyles() {
       margin-bottom: 14px;
     }
     .math-network-score {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 4;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -880,7 +884,7 @@ function mathNetworkInjectStyles() {
       background:
         radial-gradient(circle at 50% 18%, rgba(230,199,122,.08), transparent 42%),
         linear-gradient(180deg, rgba(18,14,10,.2), rgba(5,4,3,.55));
-      height: calc(100vh - 210px);
+      height: calc(100vh - 7rem);
       cursor: grab;
       user-select: none;
       -webkit-user-select: none;
@@ -1576,58 +1580,37 @@ function mathNetworkRender(selectedNodeId) {
   const visibleNodes = MATH_NETWORK_NODES.filter(mathNetworkIsVisible);
   const nodeSvg = visibleNodes.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
 
-  app.innerHTML = `
-    <div class="screen math-network-screen">
-      ${typeof topbar === "function" ? topbar() : ""}
-       <div class="layout math-network-layout">
-          <div class="panel math-network-panel">
-          <div class="math-network-head">
-            <div>
-              <h1>Historisch Wiskunde Netwerk</h1>
-              <p>
-                Ontdek hoe ideeën, personen en doorbraken in de geschiedenis
-                van de wiskunde met elkaar verbonden zijn.
-              </p>
-            </div>
-            <div class="math-network-score">
-              <img src="assets/inzicht.png" alt="">
-              <strong>${mathNetworkInsightScore()}</strong>
-              <span>Inzichtpunten</span>
-            </div>
-          </div>
-
-          <div class="math-network-canvas">
-            <div class="math-network-zoom">
-              <button type="button" data-network-zoom="in" title="Zoom in">+</button>
-              <button type="button" data-network-zoom="out" title="Zoom uit">−</button>
-              <button type="button" data-network-zoom="reset" title="Reset weergave">↺</button>
-            </div>
-            <svg class="math-network-svg" viewBox="0 0 ${MATH_NETWORK_VIEW.width} ${MATH_NETWORK_VIEW.height}"
-                 role="img" aria-label="Historisch netwerk van wiskundige kennis">
-              <defs>
-                <clipPath id="math-network-node-clip" clipPathUnits="objectBoundingBox">
-                  <circle cx="0.5" cy="0.5" r="0.5"></circle>
-                </clipPath>
-              </defs>
-              <g class="math-network-regions">${regionSvg}</g>
-              <g class="math-network-edges">${edgeSvg}</g>
-              <g class="math-network-nodes">${nodeSvg}</g>
-            </svg>
-            <div id="math-network-float" class="math-network-float" hidden></div>
-            <div id="math-network-hint" class="math-network-hint"${MATH_NETWORK_HINT_HIDDEN ? " hidden" : ""}>Sleep om de boom te verkennen</div>
-          </div>
-
-          <div class="math-network-legend">
-            <span><i class="swatch open"></i>Ontgrendeld</span>
-            <span><i class="swatch ready"></i>Beschikbaar</span>
-            <span><i class="swatch shut"></i>Vergrendeld</span>
-          </div>
-
-          
+ app.innerHTML = `
+  <div class="screen" style="background-image:url('assets/home.png')">
+    ${typeof topbar === "function" ? topbar() : ""}
+    <div class="layout">
+      <div class="math-network-canvas">
+        <div class="math-network-zoom">
+          <button type="button" data-network-zoom="in" title="Zoom in">+</button>
+          <button type="button" data-network-zoom="out" title="Zoom uit">−</button>
+          <button type="button" data-network-zoom="reset" title="Reset weergave">↺</button>
         </div>
+        <div class="math-network-score">
+          <img src="assets/inzicht.png" alt="">
+          <strong>${mathNetworkInsightScore()}</strong>
+        </div>
+        <svg class="math-network-svg" viewBox="0 0 ${MATH_NETWORK_VIEW.width} ${MATH_NETWORK_VIEW.height}"
+             role="img" aria-label="Historisch Wiskunde Netwerk">
+          <defs>
+            <clipPath id="math-network-node-clip" clipPathUnits="objectBoundingBox">
+              <circle cx="0.5" cy="0.5" r="0.5"></circle>
+            </clipPath>
+          </defs>
+          <g class="math-network-regions">${regionSvg}</g>
+          <g class="math-network-edges">${edgeSvg}</g>
+          <g class="math-network-nodes">${nodeSvg}</g>
+        </svg>
+        <div id="math-network-float" class="math-network-float" hidden></div>
+        <div id="math-network-hint" class="math-network-hint"${MATH_NETWORK_HINT_HIDDEN ? " hidden" : ""}>Sleep om de boom te verkennen</div>
       </div>
     </div>
-  `;
+  </div>
+`;
 
   mathNetworkBindPanZoom();
 
