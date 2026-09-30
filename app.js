@@ -119,9 +119,9 @@ function fasenLink() {
 }
 
 function adminMenuLink() {
-  if (!isAdmin()) return "";
   const active = currentView() === "admin" ? " is-active" : "";
-  return '<button type="button" class="btn ghost nav-link' + active + '" data-go="/admin">Admin aan</button>';
+  const label = isAdmin() ? "Admin aan" : "Admin";
+  return '<button type="button" class="btn ghost nav-link' + active + '" data-go="/admin">' + label + "</button>";
 }
 
 function topbar(extra) {
@@ -131,7 +131,6 @@ function topbar(extra) {
   const i = inzichtScore();
   return (
     '<div class="topbar">' +
-      '<button type="button" class="brand" data-go="/" title="Naar de 7 fasen">From Zero 2 Infinity</button>' +
         '<div class="score-row">' +
           '<button type="button" class="lesstof-score" id="score-lesstof" aria-expanded="false" aria-controls="score-legend" title="Wat betekenen deze cijfers?">' +
             '<div class="score-item">' +
@@ -153,6 +152,7 @@ function topbar(extra) {
             '<p><img src="assets/inzicht.png" alt=""> Inzichtpunten</p>' +
           '</div>' +
         '</div>' +
+      '<button type="button" class="brand" data-go="/" title="Naar de 7 fasen"><span>From Zero</span><span>2 Infinity</span></button>' +
       '<div class="nav-actions">' +
        extra +
       '<div class="nav-primary">' +
@@ -169,8 +169,8 @@ function topbar(extra) {
             navLink("/wiskundeboom", "Wiskundeboom", "wiskundeboom") +
           "</div>" +
           '<div class="nav-menu-tools">' +
-            adminMenuLink() +
             '<button type="button" class="btn ghost nav-link" id="reset-btn">Reset</button>' +
+            adminMenuLink() +
           "</div>" +
         "</div>" +
       "</div>" +
