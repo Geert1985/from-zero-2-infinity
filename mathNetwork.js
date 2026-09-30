@@ -1416,7 +1416,7 @@ function mathNetworkZoomAt(clientX, clientY, nextScale) {
   mathNetworkApplyCamera();
 }
 
-function mathNetworkZoomBy(direction) {
+function mathNetworkZoomBy(direction, clientX, clientY) {
   const canvas = document.querySelector(".math-network-canvas");
   const old = MATH_NETWORK_CAMERA.scale;
   if (direction === "reset") {
@@ -1427,8 +1427,8 @@ function mathNetworkZoomBy(direction) {
   const next = Math.min(MATH_NETWORK_ZOOM.max, Math.max(MATH_NETWORK_ZOOM.min, old + delta));
   if (next === old) return;
   const rect = canvas ? canvas.getBoundingClientRect() : { width: 800, height: 600 };
-  const cx = rect.width / 2;
-  const cy = rect.height / 2;
+  const cx = clientX != null ? clientX - rect.left : rect.width / 2;
+  const cy = clientY != null ? clientY - rect.top : rect.height / 2;
   const worldX = (cx - MATH_NETWORK_CAMERA.x) / old;
   const worldY = (cy - MATH_NETWORK_CAMERA.y) / old;
   MATH_NETWORK_CAMERA.scale = next;
@@ -1460,6 +1460,13 @@ function mathNetworkBindPanZoom() {
   canvas.addEventListener("selectstart", function (e) {
     e.preventDefault();
   });
+  
+  canvas.addEventListener("wheel", function (e) {
+    if (e.target.closest("#math-network-float")) return;
+    e.preventDefault();
+    mathNetworkZoomBy(e.deltaY < 0 ? "in" : "out", e.clientX, e.clientY);
+  }, { passive: false });
+  
 
   canvas.addEventListener("pointerdown", function (e) {
     if (e.target.closest("[data-network-zoom]")) return;
