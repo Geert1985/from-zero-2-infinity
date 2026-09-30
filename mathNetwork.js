@@ -2206,8 +2206,15 @@ function mathNetworkBindPanZoom() {
     }
     dragging = false;
     canvas.classList.remove("is-panning");
-    if (!moved && nodeId) mathNetworkRenderDetail(nodeId);
-    else if (!moved && !nodeId) mathNetworkRenderDetail(null);
+    if (!moved && nodeId) {
+  if (MATH_NETWORK_OPEN_ID === nodeId) {
+    mathNetworkRenderDetail(null);
+  } else {
+    mathNetworkRenderDetail(nodeId);
+  }
+} else if (!moved && !nodeId) {
+  mathNetworkRenderDetail(null);
+}
     nodeId = null;
   }
 
@@ -2263,7 +2270,7 @@ function mathNetworkRender(selectedNodeId) {
  app.innerHTML = `
   <div class="screen" style="background-image:url('assets/home.png')">
     ${typeof topbar === "function" ? topbar() : ""}
-    <div class="layout">
+    <div class="math-network-layout">
       <div class="math-network-canvas">
         <div class="math-network-zoom">
           <button type="button" data-network-zoom="in" title="Zoom in">+</button>
