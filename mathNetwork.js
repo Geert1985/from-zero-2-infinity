@@ -689,7 +689,7 @@ function mathNetworkConnectedEdges() {
 }
 
 const MATH_NETWORK_VIEW = { width: 1480, height: 2200 };
-const MATH_NETWORK_GRID = { originX: 130, originY: 96, colW: 160, rowH: 132 };
+const MATH_NETWORK_GRID = { originX: 130, originY: 80, colW: 118, rowH: 100 };
 const MATH_NETWORK_CAMERA = { x: 4, y: 0, scale: 1.3 };
 let MATH_NETWORK_HINT_HIDDEN = false;
 const MATH_NETWORK_ZOOM = { min: 0.5, max: 1.85, step: 0.15 };
