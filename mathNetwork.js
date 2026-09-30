@@ -163,6 +163,117 @@ const MATH_NETWORK_NODES = [
     unlockText: "Nieuwe soorten krommen worden onderdeel van de wiskundige taal."
   },
 
+  {
+    id: "rekenkunde",
+    title: "Rekenkunde",
+    type: "idea",
+    era: "Vroege wiskunde",
+    year: null,
+    cost: 1,
+    prerequisites: ["tellen"],
+    description: "Tellen zegt hoeveel er is, maar niet hoe hoeveelheden samengaan. Optellen, aftrekken en verdelen vragen om vaste rekengebaren.",
+    unlockText: "Hoeveelheden kunnen worden bewerkt, niet alleen aangewezen. Rekenen wordt een methode."
+  },
+  {
+    id: "combinatieleer",
+    title: "Combinatieleer",
+    type: "idea",
+    era: "Oudheid",
+    year: null,
+    cost: 2,
+    prerequisites: ["natuurlijke-getallen"],
+    description: "Zodra je voorwerpen in rijen of groepen zet, groeit het aantal schikkingen sneller dan het oog volgt.",
+    unlockText: "Tellen van mogelijkheden wordt zelf een vraag. Combinaties zijn geen toeval meer."
+  },
+  {
+    id: "thales",
+    title: "Thales van Milete",
+    type: "person",
+    era: "Oud-Griekenland",
+    year: "ca. 624–546 v.Chr.",
+    cost: 2,
+    prerequisites: ["getal", "breuken"],
+    description: "Meetkunde was een verzameling handgrepen tot iemand naar de reden achter een hoek of evenwijdige lijn vroeg.",
+    unlockText: "Een figuur kan een algemene regel dragen. Meten krijgt een eerste deductieve trek."
+  },
+  {
+    id: "stelling-pythagoras",
+    title: "Stelling van Pythagoras",
+    type: "idea",
+    era: "Oud-Griekenland",
+    year: null,
+    cost: 2,
+    prerequisites: ["pythagoras"],
+    description: "In een rechte hoek lijken de zijden een vast verband te hebben, maar dat verband vraagt om een uitspraak die altijd geldt.",
+    unlockText: "De som van de kwadraten van de rechthoekszijden is het kwadraat van de schuine zijde. Getal en driehoek delen één wet."
+  },
+  {
+    id: "irrationale-getallen",
+    title: "Irrationale getallen",
+    type: "idea",
+    era: "Oud-Griekenland",
+    year: null,
+    cost: 3,
+    prerequisites: ["stelling-pythagoras"],
+    description: "Sommige lengtes in een figuur zijn geen breuk van twee gehele getallen, hoe fijn je ook verdeelt.",
+    unlockText: "Niet elke grootte is een verhouding van tellen. Het getalbegrip moet wijder dan de breuk."
+  },
+  {
+    id: "polyeders",
+    title: "Polyeders",
+    type: "idea",
+    era: "Oud-Griekenland",
+    year: null,
+    cost: 3,
+    prerequisites: ["euclides"],
+    description: "Ruimtefiguren met platte vlakken lijken eindeloos, tot je vraagt welke regelmatige lichamen echt kunnen sluiten.",
+    unlockText: "Er zijn maar vijf regelmatige veelvlakken. Vorm in de ruimte krijgt een eindige catalogus."
+  },
+  {
+    id: "perfecte-getallen",
+    title: "Perfecte getallen",
+    type: "idea",
+    era: "Oud-Griekenland",
+    year: null,
+    cost: 2,
+    prerequisites: ["priemgetallen"],
+    description: "Een getal kan gelijk zijn aan de som van zijn echte delers. Die zeldzame balans vraagt om een eigen naam.",
+    unlockText: "Volmaaktheid wordt een rekenfeit: 6 en 28 zijn geen mystiek, maar een structuur van delers."
+  },
+  {
+    id: "eratosthenes",
+    title: "Eratosthenes van Cyrene",
+    type: "person",
+    era: "Hellenistische periode",
+    year: "ca. 276–194 v.Chr.",
+    cost: 3,
+    prerequisites: ["priemgetallen"],
+    description: "Priemen vinden door elk getal te beproeven is traag. Er is een zeef nodig die veelvouden in één beweging wegneemt.",
+    unlockText: "De zeef van Eratosthenes maakt priemen tot een procedure. De aarde zelf wordt meetbaar met schaduw en afstand."
+  },
+  {
+    id: "pi",
+    title: "Pi",
+    type: "idea",
+    era: "Hellenistische periode",
+    year: null,
+    cost: 3,
+    prerequisites: ["archimedes"],
+    description: "Omtrek en middellijn van een cirkel houden verband, maar dat getal is geen nette breuk.",
+    unlockText: "De verhouding krijgt een eigen constante. Benadering van de cirkel wordt een eindeloos nauwkeuriger werk."
+  },
+  {
+    id: "hypatia",
+    title: "Hypatia",
+    type: "person",
+    era: "Late oudheid",
+    year: "ca. 350–415",
+    cost: 3,
+    prerequisites: ["euclides", "kegelsneden"],
+    description: "Hellenistische meetkunde dreigde een dode bibliotheek te worden zonder wie haar uitlegde en bewerkte.",
+    unlockText: "Commentaar en onderwijs houden Euclides en de kegelsneden levend. Wiskunde overleeft als overdracht, niet alleen als vondst."
+  },
+
   // ─────────────────────────────────────────────────────────────
   // India / islamitische wereld
   // ─────────────────────────────────────────────────────────────
@@ -224,6 +335,105 @@ const MATH_NETWORK_NODES = [
     prerequisites: ["plaatswaarde", "al-khwarizmi"],
     description: "Verspreidde via Liber Abaci rekenmethoden met het Indisch-Arabische cijfersysteem in Europa.",
     unlockText: "Efficiëntere rekenmethoden krijgen een brede Europese verspreiding."
+  },
+  {
+    id: "ptolemaeus",
+    title: "Ptolemaeus",
+    type: "person",
+    era: "Romeinse tijd",
+    year: "ca. 100–170",
+    cost: 3,
+    prerequisites: ["euclides", "kegelsneden"],
+    description: "Hemelbeweging vroeg om hoeken en koorden, niet alleen om losse meetkundige stellingen.",
+    unlockText: "Meetkunde gaat de hemel in: tabellen van koorden maken hoeken rekenbaar."
+  },
+  {
+    id: "diophantus",
+    title: "Diophantus",
+    type: "person",
+    era: "Romeinse tijd",
+    year: "ca. 3e eeuw",
+    cost: 3,
+    prerequisites: ["natuurlijke-getallen", "breuken"],
+    description: "Vergelijkingen werden als meetkundige stukken of als één getalvoorbeelden behandeld. Er ontbrak een taal voor onbepaalde gehele oplossingen.",
+    unlockText: "Onbekenden in gehele getallen krijgen een eigen schrift. De puzzel wordt een vergelijking."
+  },
+  {
+    id: "diofantische-vergelijkingen",
+    title: "Diofantische vergelijkingen",
+    type: "idea",
+    era: "Romeinse tijd tot middeleeuwen",
+    year: null,
+    cost: 3,
+    prerequisites: ["diophantus"],
+    description: "Sommige vergelijkingen vragen om gehele oplossingen, niet om elke reële wortel.",
+    unlockText: "De vraag is niet alleen of er een oplossing is, maar of die in hele getallen bestaat."
+  },
+  {
+    id: "tessellaties",
+    title: "Tessellaties",
+    type: "idea",
+    era: "Middeleeuwen",
+    year: null,
+    cost: 3,
+    prerequisites: ["euclides", "polyeders"],
+    description: "Een vlak vullen zonder gaten of overlap lijkt versiering, tot je vraagt welke vormen dat strikt toelaten.",
+    unlockText: "Betegeling wordt meetkunde: welke hoeken sluiten, en welke herhaling is mogelijk."
+  },
+  {
+    id: "boethius",
+    title: "Boëthius",
+    type: "person",
+    era: "Late oudheid / vroege middeleeuwen",
+    year: "ca. 480–524",
+    cost: 2,
+    prerequisites: ["natuurlijke-getallen", "euclides"],
+    description: "Latijns Europa dreigde de Griekse rekenkunde alleen als citaat over te houden.",
+    unlockText: "Een smalle brug blijft open: getaltheorie en verhoudingen blijven onderwezen, al is het handboek dun."
+  },
+  {
+    id: "aryabhata",
+    title: "Aryabhata",
+    type: "person",
+    era: "India",
+    year: "476–550",
+    cost: 3,
+    prerequisites: ["natuurlijke-getallen", "pi"],
+    description: "Astronomie had sinuswaarden en een plaats voor grote getallen nodig, niet alleen meetkundige tekeningen.",
+    unlockText: "Sinus en rekenkunde van de cirkel worden tabellen. De hemel wordt met Indiaas rekenen gevolgd."
+  },
+  {
+    id: "goniometrie",
+    title: "Goniometrie",
+    type: "idea",
+    era: "Middeleeuwen",
+    year: null,
+    cost: 3,
+    prerequisites: ["ptolemaeus", "aryabhata"],
+    description: "Hoeken in driehoeken en aan de hemel zijn lastig te vangen met alleen lengtes.",
+    unlockText: "Sinus, koorde en later tangens maken van een hoek een rekenbaar getal."
+  },
+  {
+    id: "matrices",
+    title: "Matrices",
+    type: "idea",
+    era: "Middeleeuwen",
+    year: null,
+    cost: 3,
+    prerequisites: ["al-khwarizmi", "combinatieleer"],
+    description: "Stelsels getallen in rijen en kolommen doken op in Chinese en latere rekenpraktijk, zonder de latere algebraïsche naam.",
+    unlockText: "Een tabel van getallen kan een bewerking zijn, niet alleen een lijst."
+  },
+  {
+    id: "omar-khayyam",
+    title: "Omar Khayyam",
+    type: "person",
+    era: "Islamitische gouden eeuw",
+    year: "1048–1131",
+    cost: 5,
+    prerequisites: ["algebra", "euclides"],
+    description: "Derdegraadsvergelijkingen lieten zich niet allemaal met de oude meetkundige truc van het vlak vangen.",
+    unlockText: "Kegelsneden lossen kubische vragen. Algebra en meetkunde lenen opnieuw elkaars hand."
   },
   {
     id: "descartes",
@@ -538,6 +748,21 @@ const MATH_NETWORK_NODES = [
 ];
 
 const MATH_NETWORK_EDGES = [
+    ["tellen", "rekenkunde"],
+  ["rekenkunde", "getal"],
+  ["natuurlijke-getallen", "combinatieleer"],
+  ["getal", "thales"],
+  ["breuken", "thales"],
+  ["thales", "pythagoras"],
+  ["pythagoras", "stelling-pythagoras"],
+  ["stelling-pythagoras", "irrationale-getallen"],
+  ["irrationale-getallen", "bewijs"],
+  ["euclides", "polyeders"],
+  ["euclides", "hypatia"],
+  ["kegelsneden", "hypatia"],
+  ["priemgetallen", "perfecte-getallen"],
+  ["priemgetallen", "eratosthenes"],
+  ["archimedes", "pi"],
   ["tellen", "getal"],
   ["getal", "natuurlijke-getallen"],
   ["natuurlijke-getallen", "nul"],
@@ -551,6 +776,23 @@ const MATH_NETWORK_EDGES = [
   ["euclides", "priemgetallen"],
   ["euclides", "archimedes"],
   ["euclides", "kegelsneden"],
+  ["euclides", "ptolemaeus"],
+  ["kegelsneden", "ptolemaeus"],
+  ["natuurlijke-getallen", "diophantus"],
+  ["breuken", "diophantus"],
+  ["diophantus", "diofantische-vergelijkingen"],
+  ["euclides", "tessellaties"],
+  ["polyeders", "tessellaties"],
+  ["natuurlijke-getallen", "boethius"],
+  ["euclides", "boethius"],
+  ["natuurlijke-getallen", "aryabhata"],
+  ["pi", "aryabhata"],
+  ["ptolemaeus", "goniometrie"],
+  ["aryabhata", "goniometrie"],
+  ["al-khwarizmi", "matrices"],
+  ["combinatieleer", "matrices"],
+  ["algebra", "omar-khayyam"],
+  ["euclides", "omar-khayyam"],
   ["plaatswaarde", "al-khwarizmi"],
   ["breuken", "al-khwarizmi"],
   ["al-khwarizmi", "algoritme"],
@@ -647,6 +889,13 @@ function mathNetworkPrerequisitesMet(node) {
   return (node.prerequisites || []).every(mathNetworkUnlocked);
 }
 
+function mathNetworkIsVisible(node) {
+  if (!node) return false;
+  if (mathNetworkIsAdmin()) return true;
+  if (mathNetworkUnlocked(node.id)) return true;
+  return mathNetworkPrerequisitesMet(node);
+}
+
 function mathNetworkCanUnlock(node) {
   if (mathNetworkUnlocked(node.id)) return false;
   return mathNetworkInsightScore() >= Number(node.cost || 0)
@@ -674,12 +923,114 @@ function mathNetworkNodeById(id) {
 }
 
 function mathNetworkConnectedEdges() {
-  return MATH_NETWORK_EDGES.filter(([a, b]) => mathNetworkNodeById(a) && mathNetworkNodeById(b));
+  return MATH_NETWORK_EDGES.filter(([a, b]) => {
+    const na = mathNetworkNodeById(a);
+    const nb = mathNetworkNodeById(b);
+    return mathNetworkIsVisible(na) && mathNetworkIsVisible(nb);
+  });
 }
 
-const MATH_NETWORK_VIEW = { width: 1480, height: 2200 };
-const MATH_NETWORK_GRID = { originX: 130, originY: 96, colW: 160, rowH: 132 };
+const MATH_NETWORK_VIEW = { width: 1480, height: 2920 };
+const MATH_NETWORK_GRID = { originX: 130, originY: 80, colW: 118, rowH: 100 };
 const MATH_NETWORK_CAMERA = { x: 4, y: 0, scale: 1.3 };
+
+const MATH_NETWORK_PERIODS = [
+  { id: "oudheid", title: "Oudheid", tint: "#c4a06a", row0: -0.55, row1: 6.7 },
+  { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", row0: 6.7, row1: 11.35 },
+  { id: "vroegmodern", title: "Vroegmodern", tint: "#c4845a", row0: 11.15, row1: 18.15 },
+  { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", row0: 18.15, row1: 22.55 },
+  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.55, row1: 27.4 }
+];
+
+const MATH_NETWORK_NODE_PERIOD = {
+  "tellen": "oudheid",
+  "getal": "oudheid",
+  "natuurlijke-getallen": "oudheid",
+  "breuken": "oudheid",
+  "pythagoras": "oudheid",
+  "bewijs": "oudheid",
+  "euclides": "oudheid",
+  "priemgetallen": "oudheid",
+  "archimedes": "oudheid",
+  "kegelsneden": "oudheid",
+  "rekenkunde": "oudheid",
+  "combinatieleer": "oudheid",
+  "thales": "oudheid",
+  "stelling-pythagoras": "oudheid",
+  "irrationale-getallen": "oudheid",
+  "polyeders": "oudheid",
+  "perfecte-getallen": "oudheid",
+  "eratosthenes": "oudheid",
+  "pi": "oudheid",
+  "hypatia": "oudheid",
+
+  "nul": "middeleeuwen",
+  "plaatswaarde": "middeleeuwen",
+  "negatieve-getallen": "middeleeuwen",
+  "brahmagupta": "middeleeuwen",
+  "al-khwarizmi": "middeleeuwen",
+  "algoritme": "middeleeuwen",
+  "algebra": "middeleeuwen",
+  "fibonacci": "middeleeuwen",
+  "ptolemaeus": "middeleeuwen",
+  "diophantus": "middeleeuwen",
+  "diofantische-vergelijkingen": "middeleeuwen",
+  "tessellaties": "middeleeuwen",
+  "boethius": "middeleeuwen",
+  "aryabhata": "middeleeuwen",
+  "goniometrie": "middeleeuwen",
+  "matrices": "middeleeuwen",
+  "omar-khayyam": "middeleeuwen",
+  "descartes": "vroegmodern",
+  "fermat": "vroegmodern",
+  "pascal": "vroegmodern",
+  "kansrekening": "vroegmodern",
+  "newton": "vroegmodern",
+  "leibniz": "vroegmodern",
+  "calculus": "vroegmodern",
+  "de-moivre": "vroegmodern",
+  "euler": "vroegmodern",
+  "differentiaalvergelijkingen": "vroegmodern",
+  "lagrange": "vroegmodern",
+  "laplace": "vroegmodern",
+  "gauss": "eeuw19",
+  "fourier": "eeuw19",
+  "cauchy": "eeuw19",
+  "galois": "eeuw19",
+  "niet-euclidische-geometrie": "eeuw19",
+  "riemann": "eeuw19",
+  "cantor": "eeuw19",
+  "topologie": "eeuw19",
+  "hilbert": "eeuw20",
+  "noether": "eeuw20",
+  "godel": "eeuw20",
+  "turing": "eeuw20",
+  "formele-bewijzen": "eeuw20",
+  "ai-wiskunde": "eeuw20",
+  "navier-stokes-ai-2026": "eeuw20"
+};
+
+function mathNetworkPeriodById(id) {
+  return MATH_NETWORK_PERIODS.find((p) => p.id === id) || null;
+}
+
+function mathNetworkNodePeriod(id) {
+  return MATH_NETWORK_NODE_PERIOD[id] || "oudheid";
+}
+
+function mathNetworkPeriodBounds(period) {
+  const y0 = MATH_NETWORK_GRID.originY + period.row0 * MATH_NETWORK_GRID.rowH;
+  const y1 = MATH_NETWORK_GRID.originY + period.row1 * MATH_NETWORK_GRID.rowH;
+  return { y0: y0, y1: y1, mid: (y0 + y1) / 2 };
+}
+
+function mathNetworkPeriodUnlocked(periodId) {
+  if (mathNetworkIsAdmin()) return true;
+  if (periodId === "oudheid") return true;
+  return MATH_NETWORK_NODES.some((node) => {
+    return mathNetworkNodePeriod(node.id) === periodId && mathNetworkIsVisible(node);
+  });
+}
 let MATH_NETWORK_HINT_HIDDEN = false;
 const MATH_NETWORK_ZOOM = { min: 0.5, max: 1.85, step: 0.15 };
 let MATH_NETWORK_OPEN_ID = null;
@@ -703,47 +1054,67 @@ function mathNetworkLayout() {
     "getal": g(4, 1),
     "natuurlijke-getallen": g(2, 2),
     "breuken": g(6, 2),
-    "nul": g(1, 3),
-    "plaatswaarde": g(3, 3),
     "pythagoras": g(6, 3),
-    "negatieve-getallen": g(1, 4),
-    "al-khwarizmi": g(3, 4),
     "bewijs": g(6, 4),
-    "brahmagupta": g(0, 5),
-    "algoritme": g(2, 5),
-    "algebra": g(4, 5),
-    "fibonacci": g(5, 5),
-    "euclides": g(7, 5),
-    "pascal": g(3, 6),
-    "descartes": g(4, 6),
-    "fermat": g(5, 6),
-    "priemgetallen": g(6, 6),
-    "archimedes": g(7, 6),
-    "kegelsneden": g(8, 6),
-    "kansrekening": g(3, 7),
-    "newton": g(5, 7),
-    "leibniz": g(7, 7),
-    "de-moivre": g(2, 8),
-    "calculus": g(6, 8),
-    "lagrange": g(3, 9),
-    "euler": g(5, 9),
-    "differentiaalvergelijkingen": g(7, 9),
-    "niet-euclidische-geometrie": g(8, 9),
-    "galois": g(1, 10),
-    "laplace": g(3, 10),
-    "gauss": g(5, 10),
-    "fourier": g(6, 10),
-    "cauchy": g(8, 10),
-    "cantor": g(1, 11),
-    "riemann": g(6, 11),
-    "hilbert": g(2, 12),
-    "topologie": g(5, 12),
-    "noether": g(3, 13),
-    "godel": g(5, 13),
-    "turing": g(4, 14),
-    "formele-bewijzen": g(6, 14),
-    "ai-wiskunde": g(5, 15),
-    "navier-stokes-ai-2026": g(7, 15)
+    "euclides": g(5, 5),
+    "priemgetallen": g(3.6, 5),
+    "archimedes": g(6.5, 5),
+    "kegelsneden": g(8, 5),
+    "rekenkunde": g(2.4, 1),
+    "combinatieleer": g(0.7, 2.3),
+    "thales": g(8, 2.15),
+    "stelling-pythagoras": g(7.7, 3),
+    "irrationale-getallen": g(8, 4),
+    "eratosthenes": g(2.1, 4.2),
+    "perfecte-getallen": g(2.2, 5.7),
+    "polyeders": g(8.7, 5.5),
+    "hypatia": g(4.1, 5.85),
+    "pi": g(7.35, 5.85),
+
+    "nul": g(2, 7),
+    "plaatswaarde": g(4, 7),
+    "negatieve-getallen": g(2, 8),
+    "brahmagupta": g(0.8, 8.6),
+    "al-khwarizmi": g(4, 8.6),
+    "algoritme": g(3, 9.6),
+    "algebra": g(5, 9.6),
+    "fibonacci": g(6.4, 9.6),
+    "aryabhata": g(0.4, 7.15),
+    "ptolemaeus": g(6.6, 7.1),
+    "diophantus": g(8.2, 7.2),
+    "boethius": g(5.2, 7.35),
+    "tessellaties": g(7.6, 8.25),
+    "diofantische-vergelijkingen": g(8.4, 8.4),
+    "goniometrie": g(6.3, 8.55),
+    "matrices": g(4.2, 10.35),
+    "omar-khayyam": g(7.3, 10.35),
+    "pascal": g(3, 12.2),
+    "descartes": g(4.6, 12.2),
+    "fermat": g(6.2, 12.2),
+    "kansrekening": g(3, 13.3),
+    "newton": g(5.2, 13.3),
+    "leibniz": g(7, 13.3),
+    "calculus": g(6, 14.4),
+    "de-moivre": g(2.2, 15.4),
+    "euler": g(5, 15.4),
+    "lagrange": g(3.2, 16.5),
+    "differentiaalvergelijkingen": g(6.4, 16.5),
+    "laplace": g(4.4, 17.4),
+    "galois": g(1.6, 19.2),
+    "gauss": g(4.8, 19.2),
+    "fourier": g(6.4, 19.2),
+    "cauchy": g(8, 19.2),
+    "niet-euclidische-geometrie": g(7.6, 20.3),
+    "riemann": g(5.8, 20.3),
+    "cantor": g(2, 21.4),
+    "topologie": g(5, 21.4),
+    "hilbert": g(3, 23.4),
+    "noether": g(2, 24.4),
+    "godel": g(5, 24.4),
+    "turing": g(4, 25.4),
+    "formele-bewijzen": g(6.2, 25.4),
+    "ai-wiskunde": g(5, 26.4),
+    "navier-stokes-ai-2026": g(7.2, 26.4)
   };
 
   MATH_NETWORK_NODES.forEach((node, index) => {
@@ -766,7 +1137,17 @@ const MATH_NETWORK_SHORT_TITLES = {
   "de-moivre": "De Moivre",
   "leibniz": "G.W. Leibniz",
   "descartes": "Descartes",
-  "al-khwarizmi": "Al-Khwarizmi"
+  "al-khwarizmi": "Al-Khwarizmi",
+  "diofantische-vergelijkingen": "Diofantische\nvergelijkingen",
+  "omar-khayyam": "Omar Khayyam",
+  "ptolemaeus": "Ptolemaeus",
+  "goniometrie": "Goniometrie",
+  "stelling-pythagoras": "Stelling van\nPythagoras",
+  "irrationale-getallen": "Irrationale\ngetallen",
+  "perfecte-getallen": "Perfecte\ngetallen",
+  "combinatieleer": "Combinatieleer",
+  "eratosthenes": "Eratosthenes",
+
 };
 
 function mathNetworkEsc(text) {
@@ -846,6 +1227,10 @@ function mathNetworkInjectStyles() {
       margin-bottom: 14px;
     }
     .math-network-score {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 4;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -869,7 +1254,7 @@ function mathNetworkInjectStyles() {
       background:
         radial-gradient(circle at 50% 18%, rgba(230,199,122,.08), transparent 42%),
         linear-gradient(180deg, rgba(18,14,10,.2), rgba(5,4,3,.55));
-      height: calc(100vh - 210px);
+      height: calc(100vh - 7rem);
       cursor: grab;
       user-select: none;
       -webkit-user-select: none;
@@ -915,14 +1300,65 @@ function mathNetworkInjectStyles() {
       border-color: var(--gold);
       color: #fff6d8;
     }
-    .math-network-region {
+    .math-network-band {
+      pointer-events: none;
+    }
+    .math-network-band-label {
       fill: #cbb98a;
-      fill-opacity: .14;
+      fill-opacity: .16;
       font-family: Cinzel, "Times New Roman", serif;
       font-size: 10px;
-      letter-spacing: .22em;
-      text-anchor: middle;
+      letter-spacing: .2em;
+      text-anchor: start;
       pointer-events: none;
+    }
+    .math-network-node .node-era {
+      fill: none;
+      stroke-width: 2;
+      pointer-events: none;
+      vector-effect: non-scaling-stroke;
+    }
+    .math-network-eras {
+      position: absolute;
+      top: 12px;
+      left: 58px;
+      right: 12px;
+      z-index: 4;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+      pointer-events: none;
+    }
+    .math-network-eras button {
+      pointer-events: auto;
+      border: 1px solid rgba(230,199,122,.28);
+      background: rgba(12,9,6,.82);
+      color: #cbb98a;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      letter-spacing: .04em;
+      cursor: pointer;
+    }
+    .math-network-eras button.is-ready {
+      color: #e8dcc0;
+      border-color: rgba(230,199,122,.4);
+    }
+    .math-network-eras button.is-current {
+      color: #fff6d8;
+      border-color: rgba(230,199,122,.85);
+      box-shadow: 0 0 0 1px rgba(230,199,122,.55);
+    }
+    .math-network-eras button.is-locked {
+      opacity: .28;
+      color: #8a7d63;
+      border-color: rgba(230,199,122,.12);
+      cursor: default;
+    }
+    .math-network-eras button.is-locked:hover {
+      border-color: rgba(230,199,122,.12);
+      color: #8a7d63;
     }
     .math-network-edge {
       stroke: rgba(230,199,122,.18);
@@ -1196,14 +1632,17 @@ function mathNetworkInjectStyles() {
   document.head.appendChild(style);
 }
 
-const MATH_NETWORK_REGION_LABELS = [
-  { text: "OORSPRONG", col: 4, row: -0.42 },
-  { text: "GETALLEN", col: 2, row: 1.58 },
-  { text: "GRIEKEN", col: 6.4, row: 2.58 },
-  { text: "ALGEBRA", col: 3.2, row: 3.58 },
-  { text: "CALCULUS", col: 6, row: 7.58 },
-  { text: "GRONDSLAGEN", col: 3.5, row: 11.58 }
-];
+function mathNetworkPeriodSvg() {
+  const pad = 420;
+  return MATH_NETWORK_PERIODS.map((period) => {
+    const b = mathNetworkPeriodBounds(period);
+    const labelY = b.y0 + 36;
+    return `<g class="math-network-band" data-period="${mathNetworkEsc(period.id)}">
+      <rect x="${-pad}" y="${b.y0}" width="${MATH_NETWORK_VIEW.width + pad * 2}" height="${b.y1 - b.y0}" fill="url(#band-${mathNetworkEsc(period.id)})"></rect>
+      <text class="math-network-band-label" x="18" y="${labelY}">${mathNetworkEsc(period.title.toUpperCase())}</text>
+    </g>`;
+  }).join("");
+}
 
 function mathNetworkImageSrc(id) {
   const key = String(id || "");
@@ -1215,27 +1654,17 @@ function mathNetworkNodeSvg(node, pos, selectedId) {
   const [x, y] = pos;
   const state = mathNetworkNodeState(node);
   const selected = selectedId === node.id ? " selected" : "";
-  const lines = mathNetworkWrapTitle(mathNetworkMapTitle(node));
-  const admin = mathNetworkIsAdmin();
-  const pillW = Math.max(mathNetworkLabelWidth(lines), 78);
-  const pillH = 18 + lines.length * 13 + 14;
-  const pillY = 32;
-  const costY = pillY + 14 + lines.length * 13 + 2;
-  const showCost = !mathNetworkUnlocked(node.id) && !admin;
-  const costMark = showCost
-    ? `<text class="node-cost" x="-8" y="${costY}" text-anchor="end">${Number(node.cost || 0)}</text>
-       <image href="assets/inzicht.png" x="-6" y="${costY - 10}" width="13" height="13"></image>`
-    : `<text class="node-cost" y="${costY}">✓</text>`;
 
-  const labelTs = lines.map((line, i) => {
-    const ly = pillY + 14 + i * 13;
-    return `<text class="node-label" y="${ly}">${mathNetworkEsc(line)}</text>`;
-  }).join("");
+  const period = mathNetworkPeriodById(mathNetworkNodePeriod(node.id));
+  const eraRing = period
+    ? `<circle class="node-era" r="29" stroke="${period.tint}"></circle>`
+    : "";
 
   return `
     <g class="math-network-node ${state}${selected}" data-network-node="${mathNetworkEsc(node.id)}"
        transform="translate(${x},${y})">
-      <circle class="node-hit" r="52"></circle>
+      <circle class="node-hit" r="40"></circle>
+      ${eraRing}
       <circle class="node-ring" r="34"></circle>
       <circle class="node-core" r="24"></circle>
       <image class="node-photo"
@@ -1243,9 +1672,6 @@ function mathNetworkNodeSvg(node, pos, selectedId) {
              x="-24" y="-24" width="48" height="48"
              clip-path="url(#math-network-node-clip)"
              preserveAspectRatio="xMidYMid slice"></image>
-      <rect class="node-pill" x="${-pillW / 2}" y="${pillY}" width="${pillW}" height="${pillH}" rx="12"></rect>
-      ${labelTs}
-      ${costMark}
     </g>
   `;
 }
@@ -1377,30 +1803,150 @@ function mathNetworkHideHint() {
   if (hint) hint.hidden = true;
 }
 
+function mathNetworkClampCamera() {
+  const canvas = document.querySelector(".math-network-canvas");
+  if (!canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  const viewW = rect.width;
+  const viewH = rect.height;
+  if (viewW < 8 || viewH < 8) return;
+
+  const scale = MATH_NETWORK_CAMERA.scale;
+  const worldW = MATH_NETWORK_VIEW.width;
+  const worldH = MATH_NETWORK_VIEW.height;
+  const pad = 48;
+  const screenW = worldW * scale;
+  const screenH = worldH * scale;
+
+  if (screenW + pad * 2 <= viewW) {
+    MATH_NETWORK_CAMERA.x = (viewW - screenW) / 2;
+  } else {
+    const minX = viewW - screenW - pad;
+    const maxX = pad;
+    MATH_NETWORK_CAMERA.x = Math.min(maxX, Math.max(minX, MATH_NETWORK_CAMERA.x));
+  }
+
+  if (screenH + pad * 2 <= viewH) {
+    MATH_NETWORK_CAMERA.y = (viewH - screenH) / 2;
+  } else {
+    const minY = viewH - screenH - pad;
+    const maxY = pad;
+    MATH_NETWORK_CAMERA.y = Math.min(maxY, Math.max(minY, MATH_NETWORK_CAMERA.y));
+  }
+}
+
 function mathNetworkApplyCamera() {
   const svg = document.querySelector(".math-network-svg");
   if (!svg) return;
+  mathNetworkClampCamera();
   const c = MATH_NETWORK_CAMERA;
   svg.style.transform = "translate(" + c.x + "px," + c.y + "px) scale(" + c.scale + ")";
   mathNetworkPlaceFloat();
+  mathNetworkSyncPeriodButtons();
 }
 
-function mathNetworkZoomBy(direction) {
+function mathNetworkCurrentPeriodId() {
+  const canvas = document.querySelector(".math-network-canvas");
+  if (!canvas) return "oudheid";
+  const rect = canvas.getBoundingClientRect();
+  const worldY = (rect.height * 0.42 - MATH_NETWORK_CAMERA.y) / MATH_NETWORK_CAMERA.scale;
+  let best = MATH_NETWORK_PERIODS[0].id;
+  let bestDist = Infinity;
+  MATH_NETWORK_PERIODS.forEach((period) => {
+    const b = mathNetworkPeriodBounds(period);
+    const dist = Math.abs(worldY - b.mid);
+    if (dist < bestDist) {
+      bestDist = dist;
+      best = period.id;
+    }
+  });
+  return best;
+}
+
+function mathNetworkFocusPeriod(id) {
+  if (!mathNetworkPeriodUnlocked(id)) return;
+  const period = mathNetworkPeriodById(id);
+  const canvas = document.querySelector(".math-network-canvas");
+  if (!period || !canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  const b = mathNetworkPeriodBounds(period);
+  const scale = MATH_NETWORK_CAMERA.scale || 1;
+  MATH_NETWORK_CAMERA.x = rect.width / 2 - (MATH_NETWORK_VIEW.width / 2) * scale;
+  MATH_NETWORK_CAMERA.y = rect.height * 0.38 - b.mid * scale;
+  mathNetworkHideHint();
+  mathNetworkApplyCamera();
+}
+
+function mathNetworkSyncPeriodButtons() {
+  const current = mathNetworkCurrentPeriodId();
+  document.querySelectorAll("[data-network-period]").forEach((btn) => {
+    const id = btn.getAttribute("data-network-period");
+    const open = mathNetworkPeriodUnlocked(id);
+    btn.classList.toggle("is-locked", !open);
+    btn.classList.toggle("is-ready", open);
+    btn.classList.toggle("is-current", id === current);
+    btn.disabled = !open;
+  });
+}
+
+function mathNetworkPeriodButtons() {
+  return MATH_NETWORK_PERIODS.map((period) => {
+    const open = mathNetworkPeriodUnlocked(period.id);
+    const cls = open ? "is-ready" : "is-locked";
+    return `<button type="button" class="${cls}" data-network-period="${mathNetworkEsc(period.id)}" ${open ? "" : "disabled"}>
+      ${mathNetworkEsc(period.title)}
+    </button>`;
+  }).join("");
+}
+
+function mathNetworkIsNarrow() {
+  return window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
+}
+
+function mathNetworkFocusNode(id) {
+  const canvas = document.querySelector(".math-network-canvas");
+  const pos = mathNetworkLayout()[id || "tellen"];
+  if (!canvas || !pos) return;
+  const rect = canvas.getBoundingClientRect();
+  if (rect.width < 8 || rect.height < 8) return;
+  const narrow = mathNetworkIsNarrow();
+  const scale = narrow ? 1.05 : 1.42;
+  MATH_NETWORK_CAMERA.scale = Math.min(MATH_NETWORK_ZOOM.max, Math.max(MATH_NETWORK_ZOOM.min, scale));
+  MATH_NETWORK_CAMERA.x = rect.width / 2 - pos[0] * MATH_NETWORK_CAMERA.scale;
+  MATH_NETWORK_CAMERA.y = rect.height * 0.34 - pos[1] * MATH_NETWORK_CAMERA.scale;
+  mathNetworkApplyCamera();
+}
+
+function mathNetworkZoomAt(clientX, clientY, nextScale) {
+  const canvas = document.querySelector(".math-network-canvas");
+  const old = MATH_NETWORK_CAMERA.scale;
+  const next = Math.min(MATH_NETWORK_ZOOM.max, Math.max(MATH_NETWORK_ZOOM.min, nextScale));
+  if (next === old) return;
+  const rect = canvas ? canvas.getBoundingClientRect() : { left: 0, top: 0, width: 800, height: 600 };
+  const cx = clientX - rect.left;
+  const cy = clientY - rect.top;
+  const worldX = (cx - MATH_NETWORK_CAMERA.x) / old;
+  const worldY = (cy - MATH_NETWORK_CAMERA.y) / old;
+  MATH_NETWORK_CAMERA.scale = next;
+  MATH_NETWORK_CAMERA.x = cx - worldX * next;
+  MATH_NETWORK_CAMERA.y = cy - worldY * next;
+  mathNetworkHideHint();
+  mathNetworkApplyCamera();
+}
+
+function mathNetworkZoomBy(direction, clientX, clientY) {
   const canvas = document.querySelector(".math-network-canvas");
   const old = MATH_NETWORK_CAMERA.scale;
   if (direction === "reset") {
-    MATH_NETWORK_CAMERA.x = 4;
-    MATH_NETWORK_CAMERA.y = 0;
-    MATH_NETWORK_CAMERA.scale = 1.3;
-    mathNetworkApplyCamera();
+    mathNetworkFocusNode("tellen");
     return;
   }
   const delta = direction === "in" ? MATH_NETWORK_ZOOM.step : -MATH_NETWORK_ZOOM.step;
   const next = Math.min(MATH_NETWORK_ZOOM.max, Math.max(MATH_NETWORK_ZOOM.min, old + delta));
   if (next === old) return;
   const rect = canvas ? canvas.getBoundingClientRect() : { width: 800, height: 600 };
-  const cx = rect.width / 2;
-  const cy = rect.height / 2;
+  const cx = clientX != null ? clientX - rect.left : rect.width / 2;
+  const cy = clientY != null ? clientY - rect.top : rect.height / 2;
   const worldX = (cx - MATH_NETWORK_CAMERA.x) / old;
   const worldY = (cy - MATH_NETWORK_CAMERA.y) / old;
   MATH_NETWORK_CAMERA.scale = next;
@@ -1421,6 +1967,9 @@ function mathNetworkBindPanZoom() {
   let lastX = 0;
   let lastY = 0;
   let nodeId = null;
+  const pointers = new Map();
+  let pinchStartDist = 0;
+  let pinchStartScale = 1;
 
   canvas.addEventListener("dragstart", function (e) {
     e.preventDefault();
@@ -1429,11 +1978,31 @@ function mathNetworkBindPanZoom() {
   canvas.addEventListener("selectstart", function (e) {
     e.preventDefault();
   });
+  
+  canvas.addEventListener("wheel", function (e) {
+    if (e.target.closest("#math-network-float")) return;
+    e.preventDefault();
+    mathNetworkZoomBy(e.deltaY < 0 ? "in" : "out", e.clientX, e.clientY);
+  }, { passive: false });
+  
 
   canvas.addEventListener("pointerdown", function (e) {
     if (e.target.closest("[data-network-zoom]")) return;
+    if (e.target.closest("[data-network-period]")) return;
     if (e.target.closest("#math-network-float")) return;
     if (e.button != null && e.button !== 0) return;
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size >= 2) {
+      dragging = false;
+      const pts = Array.from(pointers.values());
+      const dx = pts[0].x - pts[1].x;
+      const dy = pts[0].y - pts[1].y;
+      pinchStartDist = Math.hypot(dx, dy) || 1;
+      pinchStartScale = MATH_NETWORK_CAMERA.scale;
+      canvas.classList.remove("is-panning");
+      e.preventDefault();
+      return;
+    }
     dragging = true;
     moved = false;
     lastX = e.clientX;
@@ -1441,11 +2010,24 @@ function mathNetworkBindPanZoom() {
     const node = e.target.closest("[data-network-node]");
     nodeId = node ? node.getAttribute("data-network-node") : null;
     canvas.classList.add("is-panning");
-    if (canvas.setPointerCapture) canvas.setPointerCapture(e.pointerId);
     e.preventDefault();
   });
 
   canvas.addEventListener("pointermove", function (e) {
+    if (pointers.has(e.pointerId)) {
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    }
+    if (pointers.size >= 2) {
+      const pts = Array.from(pointers.values());
+      const dx = pts[0].x - pts[1].x;
+      const dy = pts[0].y - pts[1].y;
+      const dist = Math.hypot(dx, dy) || 1;
+      const midX = (pts[0].x + pts[1].x) / 2;
+      const midY = (pts[0].y + pts[1].y) / 2;
+      mathNetworkZoomAt(midX, midY, pinchStartScale * (dist / pinchStartDist));
+      e.preventDefault();
+      return;
+    }
     if (!dragging) return;
     const dx = e.clientX - lastX;
     const dy = e.clientY - lastY;
@@ -1460,12 +2042,22 @@ function mathNetworkBindPanZoom() {
   });
 
   function endPan(e) {
-    if (!dragging) return;
+    if (e && e.pointerId != null) pointers.delete(e.pointerId);
+    if (pointers.size >= 2) return;
+    if (pointers.size === 1) {
+      const rem = Array.from(pointers.values())[0];
+      lastX = rem.x;
+      lastY = rem.y;
+      dragging = true;
+      return;
+    }
+    if (!dragging) {
+      nodeId = null;
+      canvas.classList.remove("is-panning");
+      return;
+    }
     dragging = false;
     canvas.classList.remove("is-panning");
-    if (canvas.releasePointerCapture && e && e.pointerId != null) {
-      try { canvas.releasePointerCapture(e.pointerId); } catch (err) {}
-    }
     if (!moved && nodeId) mathNetworkRenderDetail(nodeId);
     else if (!moved && !nodeId) mathNetworkRenderDetail(null);
     nodeId = null;
@@ -1484,6 +2076,15 @@ function mathNetworkBindPanZoom() {
       mathNetworkZoomBy(btn.getAttribute("data-network-zoom"));
     });
   });
+
+  canvas.querySelectorAll("[data-network-period]").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      mathNetworkFocusPeriod(btn.getAttribute("data-network-period"));
+    });
+  });
+  mathNetworkSyncPeriodButtons();
 }
 
 function mathNetworkRender(selectedNodeId) {
@@ -1494,10 +2095,7 @@ function mathNetworkRender(selectedNodeId) {
 
   const positions = mathNetworkLayout();
 
-  const regionSvg = MATH_NETWORK_REGION_LABELS.map((r) => {
-    const [x, y] = mathNetworkGrid(r.col, r.row);
-    return `<text class="math-network-region" x="${x}" y="${y}">${mathNetworkEsc(r.text)}</text>`;
-  }).join("");
+  const regionSvg = mathNetworkPeriodSvg();
 
   const edgeSvg = mathNetworkConnectedEdges().map(([a, b]) => {
     const pa = positions[a];
@@ -1511,65 +2109,52 @@ function mathNetworkRender(selectedNodeId) {
       x2="${pb[0]}" y2="${pb[1]}"></line>`;
   }).join("");
 
-  const nodeSvg = MATH_NETWORK_NODES.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
+  const visibleNodes = MATH_NETWORK_NODES.filter(mathNetworkIsVisible);
+  const nodeSvg = visibleNodes.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
 
-  app.innerHTML = `
-    <div class="screen math-network-screen">
-      ${typeof topbar === "function" ? topbar() : ""}
-       <div class="layout math-network-layout">
-          <div class="panel math-network-panel">
-          <div class="math-network-head">
-            <div>
-              <h1>Historisch Wiskunde Netwerk</h1>
-              <p>
-                Ontdek hoe ideeën, personen en doorbraken in de geschiedenis
-                van de wiskunde met elkaar verbonden zijn.
-              </p>
-            </div>
-            <div class="math-network-score">
-              <img src="assets/inzicht.png" alt="">
-              <strong>${mathNetworkInsightScore()}</strong>
-              <span>Inzichtpunten</span>
-            </div>
-          </div>
-
-          <div class="math-network-canvas">
-            <div class="math-network-zoom">
-              <button type="button" data-network-zoom="in" title="Zoom in">+</button>
-              <button type="button" data-network-zoom="out" title="Zoom uit">−</button>
-              <button type="button" data-network-zoom="reset" title="Reset weergave">↺</button>
-            </div>
-            <svg class="math-network-svg" viewBox="0 0 ${MATH_NETWORK_VIEW.width} ${MATH_NETWORK_VIEW.height}"
-                 role="img" aria-label="Historisch netwerk van wiskundige kennis">
-              <defs>
-                <clipPath id="math-network-node-clip" clipPathUnits="objectBoundingBox">
-                  <circle cx="0.5" cy="0.5" r="0.5"></circle>
-                </clipPath>
-              </defs>
-              <g class="math-network-regions">${regionSvg}</g>
-              <g class="math-network-edges">${edgeSvg}</g>
-              <g class="math-network-nodes">${nodeSvg}</g>
-            </svg>
-            <div id="math-network-float" class="math-network-float" hidden></div>
-            <div id="math-network-hint" class="math-network-hint"${MATH_NETWORK_HINT_HIDDEN ? " hidden" : ""}>Sleep om de boom te verkennen</div>
-          </div>
-
-          <div class="math-network-legend">
-            <span><i class="swatch open"></i>Ontgrendeld</span>
-            <span><i class="swatch ready"></i>Beschikbaar</span>
-            <span><i class="swatch shut"></i>Vergrendeld</span>
-          </div>
-
-          
+ app.innerHTML = `
+  <div class="screen" style="background-image:url('assets/home.png')">
+    ${typeof topbar === "function" ? topbar() : ""}
+    <div class="layout">
+      <div class="math-network-canvas">
+        <div class="math-network-zoom">
+          <button type="button" data-network-zoom="in" title="Zoom in">+</button>
+          <button type="button" data-network-zoom="out" title="Zoom uit">−</button>
+          <button type="button" data-network-zoom="reset" title="Reset weergave">↺</button>
         </div>
+        <div class="math-network-eras">${mathNetworkPeriodButtons()}</div>
+        <svg class="math-network-svg" viewBox="0 0 ${MATH_NETWORK_VIEW.width} ${MATH_NETWORK_VIEW.height}"
+             role="img" aria-label="Historisch Wiskunde Netwerk">
+          <defs>
+            <clipPath id="math-network-node-clip" clipPathUnits="objectBoundingBox">
+              <circle cx="0.5" cy="0.5" r="0.5"></circle>
+            </clipPath>
+            ${MATH_NETWORK_PERIODS.map((period) => `<linearGradient id="band-${mathNetworkEsc(period.id)}" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="${period.tint}" stop-opacity="0"/>
+              <stop offset="18%" stop-color="${period.tint}" stop-opacity=".07"/>
+              <stop offset="82%" stop-color="${period.tint}" stop-opacity=".07"/>
+              <stop offset="100%" stop-color="${period.tint}" stop-opacity="0"/>
+            </linearGradient>`).join("")}
+          </defs>
+          <g class="math-network-regions">${regionSvg}</g>
+          <g class="math-network-edges">${edgeSvg}</g>
+          <g class="math-network-nodes">${nodeSvg}</g>
+        </svg>
+        <div id="math-network-float" class="math-network-float" hidden></div>
+        <div id="math-network-hint" class="math-network-hint"${MATH_NETWORK_HINT_HIDDEN ? " hidden" : ""}>Sleep om de boom te verkennen</div>
       </div>
     </div>
-  `;
+  </div>
+`;
 
   mathNetworkBindPanZoom();
 
   if (selectedNodeId) {
     mathNetworkRenderDetail(selectedNodeId);
+  } else {
+    requestAnimationFrame(function () {
+      mathNetworkFocusNode("tellen");
+    });
   }
 }
 
