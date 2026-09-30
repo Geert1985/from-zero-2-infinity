@@ -6,348 +6,180 @@ const MILESTONES_2 = [
   goal: "Hoe kan een getal een onbekende worden?",
   theory: /* html */`
     <h2>Variabelen & algebraïsche uitdrukkingen</h2>
-
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>begrijpen waarom we letters gebruiken om getallen voor te stellen</li>
-      <li>het verschil begrijpen tussen een onbekende en een veranderlijke</li>
-      <li>een algebraïsche uitdrukking lezen en de termen, coëfficiënten en constanten herkennen</li>
-      <li>begrijpen dat een algebraïsche uitdrukking een algemene structuur beschrijft die verschillende waarden kan aannemen</li>
-      <li>waarden correct invullen in een uitdrukking</li>
-      <li>gelijksoortige termen herkennen en samennemen</li>
+      <li>Waarom gebruiken we letters om getallen voor te stellen?</li>
+      <li>Wat is het verschil tussen een onbekende en een veranderlijke?</li>
+      <li>Hoe lezen we een algebraïsche uitdrukking en herkennen we termen, coëfficiënten en constanten?</li>
+      <li>Hoe kan één algebraïsche uitdrukking verschillende waarden aannemen?</li>
+      <li>Hoe vullen we een waarde in een algebraïsche uitdrukking in?</li>
+      <li>Hoe herkennen en combineren we gelijksoortige termen?</li>
     </ul>
 
     <h3>Van een bekend getal naar een letter</h3>
-
     <p>In Fase 1 rekenden we met concrete getallen. Een tas kost 12 euro. Twee tassen kosten:</p>
-
     <p class="formula">2 · 12 = 24</p>
-
     <div class="callout">
-      <strong>Vanaf nu schrijven we het maalteken als een punt (·).</strong>
+      <p><strong>Vanaf nu schrijven we het maalteken als een punt (·).</strong></p>
       <p>Dat doen we omdat we in de algebra ook letters gebruiken.</p>
-      <p>Het gewone maalteken × kan dan gemakkelijk verward worden met de letter x, die we als variabele kunnen gebruiken.</p>
+      <p>Het gewone maalteken × kan dan gemakkelijk verward worden met de letter x.</p>
     </div>
-
     <p>Maar wat als de prijs nog niet bekend is, of als die kan veranderen? Dan willen we niet één specifiek geval beschrijven, maar het algemene verband.</p>
-
     <p>Noem de prijs van één tas <strong>p</strong>. Twee tassen kosten dan:</p>
-
     <p class="formula">2 · p</p>
-
     <p>Als later blijkt dat p = 12, krijgen we:</p>
-
     <p class="formula">2 · 12 = 24</p>
-
     <p>Als p = 15, krijgen we:</p>
-
     <p class="formula">2 · 15 = 30</p>
-
     <p>De uitdrukking <span class="formula-inline">2p</span> beschrijft dus alle mogelijke prijzen tegelijk.</p>
-
     <div class="callout">
-      <strong>Een variabele is een letter die een getal voorstelt.</strong>
+      <p><strong>Een variabele is een letter die een getal voorstelt.</strong></p>
       <p>De waarde van die variabele kan nog onbekend zijn, of verschillende toegelaten waarden aannemen.</p>
     </div>
 
-
     <h3>Onbekende of veranderlijke?</h3>
-
     <p>Hetzelfde symbool kan in verschillende situaties een andere rol spelen.</p>
-
     <p>In:</p>
-
     <p class="formula">x + 3 = 7</p>
-
     <p>zoeken we naar de waarde van x die de vergelijking waar maakt. Hier spreken we over een <strong>onbekende</strong>.</p>
-
     <p>In:</p>
-
     <p class="formula">y = 2x + 1</p>
-
     <p>kan x verschillende waarden aannemen. Voor elke toegelaten waarde van x krijgen we een waarde van y. Hier is x een <strong>veranderlijke</strong>.</p>
-
-    <p>De begrippen overlappen dus, maar leggen een ander accent: bij een onbekende willen we een waarde bepalen; bij een veranderlijke onderzoeken we hoe een uitdrukking of grootheid verandert wanneer de waarde verandert.</p>
-
+    <p>De begrippen overlappen, maar leggen een ander accent: bij een onbekende bepalen we een waarde; bij een veranderlijke kijken we hoe iets verandert wanneer de waarde verandert.</p>
     <div class="callout">
-      <strong>De context bepaalt welke rol een letter speelt.</strong>
-      <p>Een letter is niet uit zichzelf een "onbekende" of een "veranderlijke". Die betekenis volgt uit wat we met de letter willen doen.</p>
+      <p><strong>De context bepaalt welke rol een letter speelt.</strong></p>
+      <p>Een letter is niet uit zichzelf een “onbekende” of een “veranderlijke”. Die betekenis volgt uit wat we met de letter willen doen.</p>
     </div>
-
 
     <h3>Letters zijn getallen</h3>
-
-    <p>Wanneer we met algebra werken, behandelen we letters op dezelfde manier als getallen. Een getal vóór een letter betekent vermenigvuldiging:</p>
-
+    <p>We behandelen letters op dezelfde manier als getallen. Een getal vóór een letter betekent vermenigvuldiging:</p>
     <p class="formula">3x = 3 · x</p>
-
     <p>De vermenigvuldiging wordt meestal niet uitgeschreven. Ook:</p>
-
     <p class="formula">ab = a · b</p>
-
     <p>en:</p>
-
     <p class="formula">4xy = 4 · x · y</p>
-
-    <p>Een factor 1 wordt meestal niet geschreven:</p>
-
+    <p>Een factor 1 schrijven we meestal niet:</p>
     <p class="formula">x = 1x</p>
-
-    <p>Ook een factor −1 wordt meestal verkort geschreven:</p>
-
+    <p>Ook een factor −1 wordt verkort:</p>
     <p class="formula">−x = −1x</p>
-
     <div class="callout">
-      <strong>Let op:</strong>
-      <span class="formula-inline">3x</span> betekent <strong>3 keer x</strong>, niet 3 + x.
-      Het ontbreken van het vermenigvuldigingsteken is een belangrijke afspraak in de algebra.
+      <p><strong>Let op:</strong></p>
+      <p><span class="formula-inline">3x</span> betekent <strong>3 keer x</strong>, niet 3 + x.</p>
+      <p>Het ontbreken van het vermenigvuldigingsteken is een afspraak in de algebra.</p>
     </div>
 
-
     <h3>Onderdelen van een algebraïsche uitdrukking</h3>
-
     <p>Een <strong>algebraïsche uitdrukking</strong> is een combinatie van getallen, letters en bewerkingen. Bijvoorbeeld:</p>
-
     <p class="formula">3x + 5</p>
-
-    <p>We onderscheiden verschillende onderdelen.</p>
-
     <ul>
       <li><strong>variabele:</strong> de letter waarvan de waarde kan veranderen, hier x;</li>
       <li><strong>coëfficiënt:</strong> het getal dat een variabele vermenigvuldigt, hier 3;</li>
       <li><strong>constante:</strong> een getal zonder variabele, hier 5;</li>
       <li><strong>term:</strong> een onderdeel dat door + of − van andere termen is gescheiden.</li>
     </ul>
-
-    <p>De uitdrukking <span class="formula-inline">3x + 5</span> bestaat dus uit twee termen: <span class="formula-inline">3x</span> en <span class="formula-inline">5</span>.</p>
-
+    <p>De uitdrukking <span class="formula-inline">3x + 5</span> bestaat uit twee termen: <span class="formula-inline">3x</span> en <span class="formula-inline">5</span>.</p>
     <p>Bij:</p>
-
     <p class="formula">−4x + 7 − 2x</p>
-
     <p>zijn de termen <span class="formula-inline">−4x</span>, <span class="formula-inline">7</span> en <span class="formula-inline">−2x</span>.</p>
-
     <p>Het minteken hoort bij de term die erop volgt.</p>
 
-
     <h3>Uitdrukking of vergelijking?</h3>
-
-    <p>Het onderscheid tussen een uitdrukking en een vergelijking is belangrijk.</p>
-
+    <p>Het onderscheid is belangrijk.</p>
     <p>Een uitdrukking zoals:</p>
-
     <p class="formula">3x + 5</p>
-
-    <p>heeft geen gelijkheidsteken. We kunnen de uitdrukking berekenen of vereenvoudigen.</p>
-
+    <p>heeft geen gelijkheidsteken. We kunnen ze berekenen of vereenvoudigen.</p>
     <p>Een vergelijking zoals:</p>
-
     <p class="formula">3x + 5 = 17</p>
-
-    <p>bevat wel een gelijkheidsteken. We zoeken dan naar waarden van x waarvoor de linker- en rechterkant dezelfde waarde hebben.</p>
-
+    <p>bevat wel een gelijkheidsteken. We zoeken waarden van x waarvoor linker- en rechterkant gelijk zijn.</p>
     <div class="callout">
       <p><strong>Onthoud:</strong></p>
       <p>Een uitdrukking geeft een hoeveelheid of berekening weer.</p>
       <p>Een vergelijking stelt dat twee uitdrukkingen gelijk zijn.</p>
     </div>
 
-
     <h3>Een uitdrukking is een algemene structuur</h3>
-
-    <p>Een belangrijk idee van algebra is dat een uitdrukking niet één specifieke berekening hoeft te zijn.</p>
-
-    <p>Neem:</p>
-
+    <p>Een uitdrukking hoeft niet één specifieke berekening te zijn.</p>
     <p class="formula">3x + 5</p>
-
-    <p>De structuur blijft hetzelfde, maar de uiteindelijke waarde verandert wanneer x verandert.</p>
-
+    <p>De structuur blijft hetzelfde, de waarde verandert wanneer x verandert.</p>
     <p>Voor x = 2:</p>
-
     <p class="formula">3 · 2 + 5 = 11</p>
-
     <p>Voor x = 10:</p>
-
     <p class="formula">3 · 10 + 5 = 35</p>
-
-    <p>De uitdrukking <span class="formula-inline">3x + 5</span> heeft dus geen vaste numerieke waarde zolang we de waarde van x niet kennen of kiezen.</p>
-
     <div class="callout">
-      <strong>De structuur blijft vast, de waarden kunnen veranderen.</strong>
-      <p>Dat is precies waarom algebra krachtig is: één formule kan een hele verzameling situaties beschrijven.</p>
+      <p><strong>De structuur blijft vast, de waarden kunnen veranderen.</strong></p>
+      <p>Daarom kan één formule een hele verzameling situaties beschrijven.</p>
     </div>
-
 
     <h3>Een waarde invullen</h3>
-
-    <p>Een algebraïsche uitdrukking krijgt een concrete waarde zodra we een waarde voor de variabele kiezen.</p>
-
-    <p>Neem:</p>
-
-    <p class="formula">3x + 5</p>
-
-    <p>en stel x = 4. Dan vervangen we x door 4:</p>
-
+    <p>Een uitdrukking krijgt een concrete waarde zodra we een waarde voor de variabele kiezen.</p>
+    <p>Neem <span class="formula-inline">3x + 5</span> en stel x = 4:</p>
     <p class="formula">3 · 4 + 5 = 12 + 5 = 17</p>
-
-    <p>De waarde van <span class="formula-inline">3x + 5</span> is dus 17 voor x = 4.</p>
-
-    <p>Bij een negatieve waarde gebruiken we haakjes om duidelijk te maken dat de volledige waarde wordt ingevuld:</p>
-
+    <p>Bij een negatieve waarde gebruiken we haakjes, zodat de hele waarde wordt ingevuld:</p>
     <p class="formula">x = −2</p>
-
     <p class="formula">3x + 5 = 3(−2) + 5 = −6 + 5 = −1</p>
-
     <div data-widget="algebraMachine"></div>
-
     <p>Ook bij machten zijn haakjes belangrijk:</p>
-
-    <p class="formula">x = −3 → x² = (−3)² = 9</p>
-
-    <p>Dit is iets anders dan <span class="formula-inline">−3²</span>, waarvoor de gebruikelijke rekenvolgorde eerst de macht berekent.</p>
-
+    <p class="formula">x = −3 → x^{2} = (−3)^{2} = 9</p>
+    <p>Dat is iets anders dan <span class="formula-inline">−3^{2}</span>: daar berekent de rekenvolgorde eerst de macht.</p>
 
     <h3>Dezelfde letter kan verschillende waarden aannemen</h3>
-
-    <p>Een variabele staat niet vast op één getal.</p>
-
-    <p>Als:</p>
-
+    <p>Een variabele staat niet vast op één getal. Als:</p>
     <p class="formula">A = 2x + 1</p>
-
     <p>dan kunnen we bijvoorbeeld berekenen:</p>
-
     <p class="formula">x = 0 → A = 1</p>
-
     <p class="formula">x = 1 → A = 3</p>
-
     <p class="formula">x = 5 → A = 11</p>
-
-    <p>De formule beschrijft daarmee een hele verzameling mogelijke situaties.</p>
-
-    <p>Welke waarden werkelijk zijn toegestaan, hangt af van de context. Een lengte kan bijvoorbeeld niet negatief zijn.</p>
-
+    <p>Welke waarden toegelaten zijn, hangt af van de context. Een lengte kan bijvoorbeeld niet negatief zijn.</p>
     <div class="callout">
       <p><strong>Een formule krijgt betekenis door haar context.</strong></p>
-      <p>Niet elke wiskundig mogelijke waarde van een variabele hoeft in de werkelijkheid toegelaten te zijn.</p>
+      <p>Niet elke wiskundig mogelijke waarde hoeft in de werkelijkheid toegelaten te zijn.</p>
     </div>
 
-
     <h3>Gelijksoortige termen</h3>
-
-    <p>We kunnen sommige termen samenvoegen omdat ze dezelfde algebraïsche structuur hebben.</p>
-
-    <p>Zo zijn <span class="formula-inline">3x</span> en <span class="formula-inline">5x</span> gelijksoortige termen:</p>
-
+    <p>We voegen termen samen als ze dezelfde algebraïsche structuur hebben.</p>
     <p class="formula">3x + 5x = 8x</p>
-
-    <p>Ook:</p>
-
     <p class="formula">7a − 2a = 5a</p>
-
-    <p>en:</p>
-
-    <p class="formula">4x² + 3x² = 7x²</p>
-
-    <p>Termen zijn gelijksoortig wanneer dezelfde variabelen met dezelfde exponenten voorkomen.</p>
-
-    <p>Daarom zijn <span class="formula-inline">3x</span> en <span class="formula-inline">3x²</span> <strong>niet</strong> gelijksoortig. Ook <span class="formula-inline">3x</span> en 5 zijn niet gelijksoortig.</p>
-
-    <p>Bijvoorbeeld:</p>
-
+    <p class="formula">4x^{2} + 3x^{2} = 7x^{2}</p>
+    <p>Termen zijn gelijksoortig wanneer dezelfde variabelen met dezelfde exponenten voorkomen. Daarom zijn <span class="formula-inline">3x</span> en <span class="formula-inline">3x^{2}</span> <strong>niet</strong> gelijksoortig. Ook <span class="formula-inline">3x</span> en 5 zijn dat niet.</p>
     <p class="formula">3x + 5 + 2x − 1 = 5x + 4</p>
-
-    <p>We hebben alleen gelijksoortige termen samengenomen:</p>
-
+    <p>Want:</p>
     <p class="formula">3x + 2x = 5x</p>
-
-    <p>en:</p>
-
     <p class="formula">5 − 1 = 4</p>
 
-    <p>Dit betekent niet dat we zomaar alle termen met elkaar mogen combineren.</p>
-
-
     <h3>Van één situatie naar veel situaties</h3>
-
-    <p>Algebra wordt vooral krachtig wanneer we een algemene regel kunnen formuleren.</p>
-
-    <p>Stel dat een taxi een vaste startkost van 4 euro heeft en daarna 2 euro per kilometer aanrekent.</p>
-
-    <p>Als <strong>k</strong> het aantal gereden kilometers voorstelt, kunnen we de totale prijs schrijven als:</p>
-
+    <p>Stel dat een taxi 4 euro startkost heeft en daarna 2 euro per kilometer. Als <strong>k</strong> het aantal kilometers is:</p>
     <p class="formula">P = 4 + 2k</p>
-
     <p>Voor 3 kilometer:</p>
-
     <p class="formula">P = 4 + 2 · 3 = 10</p>
-
     <p>Voor 8 kilometer:</p>
-
     <p class="formula">P = 4 + 2 · 8 = 20</p>
-
-    <p>Dezelfde algebraïsche structuur werkt dus voor verschillende situaties.</p>
-
     <div class="callout">
-      <strong>Algebra beschrijft niet alleen één antwoord, maar een regel.</strong>
+      <p><strong>Algebra beschrijft niet alleen één antwoord, maar een regel.</strong></p>
       <p>Door een andere waarde in te vullen, gebruiken we dezelfde regel voor een andere situatie.</p>
     </div>
 
-
     <h3>Een variabele kan een grootheid voorstellen</h3>
-
-    <p>Een variabele kan ook een fysische of meetkundige grootheid voorstellen.</p>
-
-    <p>Als <span class="formula-inline">l</span> de lengte en <span class="formula-inline">b</span> de breedte van een rechthoek voorstellen, dan is de oppervlakte:</p>
-
+    <p>Als <span class="formula-inline">l</span> de lengte en <span class="formula-inline">b</span> de breedte van een rechthoek zijn, dan is de oppervlakte:</p>
     <p class="formula">A = l · b</p>
-
-    <p>Als bijvoorbeeld:</p>
-
-    <p class="formula">l = 8</p>
-
-    <p class="formula">b = 5</p>
-
-    <p>dan krijgen we:</p>
-
+    <p>Voor l = 8 en b = 5:</p>
     <p class="formula">A = 8 · 5 = 40</p>
-
-    <p>De letters maken het mogelijk om eerst een algemene formule op te stellen en pas daarna concrete waarden in te vullen.</p>
-
+    <p>Eerst de algemene formule, daarna de getallen.</p>
 
     <h3>Wat we nu met algebra kunnen doen</h3>
-
-    <p>Met de ideeën uit deze les kunnen we:</p>
-
     <ul>
       <li>een concrete situatie algemeen beschrijven;</li>
       <li>letters gebruiken voor onbekende of veranderlijke waarden;</li>
       <li>algebraïsche uitdrukkingen lezen;</li>
       <li>waarden invullen;</li>
       <li>gelijksoortige termen herkennen en samenvoegen;</li>
-      <li>een algemene regel gebruiken voor veel verschillende situaties.</li>
+      <li>één regel gebruiken voor veel situaties.</li>
     </ul>
-
-    <p>We zijn daarmee een stap verder gegaan dan rekenen met afzonderlijke getallen: we kunnen nu <strong>structuren en verbanden</strong> beschrijven.</p>
-
+    <p>We beschrijven nu <strong>structuren en verbanden</strong>, niet alleen afzonderlijke getallen.</p>
 
     <h3>Vooruitblik: van uitdrukking naar functie</h3>
-
-    <p>Een uitdrukking zoals:</p>
-
-    <p class="formula">2x + 1</p>
-
-    <p>kan voor verschillende waarden van x een verschillende uitkomst geven.</p>
-
-    <p>We kunnen dat verband later formeler schrijven als:</p>
-
+    <p>Een uitdrukking zoals <span class="formula-inline">2x + 1</span> kan voor verschillende waarden van x een verschillende uitkomst geven. Later in deze fase, in les 2.11, schrijven we dat als:</p>
     <p class="formula">f(x) = 2x + 1</p>
-
-    <p>Dan zeggen we dat de functie <span class="formula-inline">f</span> aan elke toegelaten invoer x een uitvoer toekent.</p>
-
-    <p>Dat idee wordt belangrijk wanneer we in een volgende fase functies, tabellen en grafieken gaan bestuderen.</p>
-
+    <p>Dan kent de functie <span class="formula-inline">f</span> aan elke toegelaten invoer een uitvoer toe.</p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
@@ -358,1465 +190,1059 @@ const MILESTONES_2 = [
   `
 },
   {
-    id: "2.2",
-    title: "Algebraïsche bewerkingen",
-    goal: "Hoe rekenen we met letters?",
-    theory: /* html */`
-      <h2>Algebraïsche bewerkingen</h2>
-      <p><strong>Doel:</strong></p>
-      <ul>
-        <li>gelijksoortige termen herkennen en samennemen</li>
-        <li>termen vermenigvuldigen: coëfficiënten vermenigvuldigen, exponenten optellen</li>
-        <li>haakjes wegwerken met distributiviteit, ook bij een minteken</li>
-        <li>twee tweetermen vermenigvuldigen</li>
-        <li>merkwaardige producten herkennen</li>
-        <li>een gemeenschappelijke factor of een verschil van kwadraten ontbinden</li>
-      </ul>
-      <p>In les 2.1 leerden we letters lezen. Nu rekenen we ermee. De rekenwetten uit Fase 1 blijven gelden; we herkennen ze terug in termen en haakjes.</p>
+  id: "2.2",
+  title: "Algebraïsche bewerkingen",
+  goal: "Hoe rekenen we met letters?",
+  theory: /* html */`
+    <h2>Algebraïsche bewerkingen</h2>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Wanneer mogen we termen samennemen?</li>
+      <li>Hoe vermenigvuldigen we monomen?</li>
+      <li>Hoe werken we haakjes weg, ook bij een minteken?</li>
+      <li>Hoe vermenigvuldigen we twee tweetermen?</li>
+      <li>Welke merkwaardige producten herkennen we?</li>
+      <li>Hoe ontbinden we een gemeenschappelijke factor of een verschil van kwadraten?</li>
+    </ul>
+    <p>In les 2.1 leerden we letters lezen. Nu rekenen we ermee. De rekenwetten uit Fase 1 blijven gelden.</p>
 
-      <h3>Optellen en aftrekken: alleen gelijksoortige termen</h3>
-      <p>Drie appels en twee appels geven vijf appels. Drie stoelen en twee appels kun je niet tot één soort optellen.</p>
-      <p>In algebra is <span class="formula-inline">x</span> zo’n soort. Daarom:</p>
-      <p class="formula">3x + 2x = 5x</p>
-      <p>We tellen de <strong>coëfficiënten</strong> op. De letter blijft staan:</p>
-      <p class="formula">3x + 2x = (3 + 2)x = 5x</p>
-      <p>Aftrekken werkt hetzelfde:</p>
-      <p class="formula">7x − 3x = 4x</p>
-      <p>Constanten zijn onderling ook gelijksoortig:</p>
-      <p class="formula">8 + 5 − 3 = 10</p>
-      <p>Een gemengde uitdrukking vereenvoudig je door eerst te groeperen:</p>
-      <p class="formula">3x + 7 + 2x − 4 = (3x + 2x) + (7 − 4) = 5x + 3</p>
-      <div class="callout">
-        <p><strong>Gelijksoortige termen gedragen zich als dezelfde eenheid.</strong></p>
-        <p>Je mag 3x en 2x samenvoegen, maar 3x en 2y niet. Ook 3x en 3 zijn niet gelijksoortig.</p>
-      </div>
+    <h3>Optellen en aftrekken: alleen gelijksoortige termen</h3>
+    <p>Drie appels en twee appels geven vijf appels. Drie stoelen en twee appels kun je niet tot één soort optellen.</p>
+    <p>In algebra is <span class="formula-inline">x</span> zo’n soort. Daarom:</p>
+    <p class="formula">3x + 2x = 5x</p>
+    <p>We tellen de <strong>coëfficiënten</strong> op. De letter blijft staan:</p>
+    <p class="formula">3x + 2x = (3 + 2)x = 5x</p>
+    <p>Aftrekken werkt hetzelfde:</p>
+    <p class="formula">7x − 3x = 4x</p>
+    <p>Constanten zijn onderling ook gelijksoortig:</p>
+    <p class="formula">8 + 5 − 3 = 10</p>
+    <p>Een gemengde uitdrukking vereenvoudig je door eerst te groeperen:</p>
+    <p class="formula">3x + 7 + 2x − 4 = (3x + 2x) + (7 − 4) = 5x + 3</p>
+    <div class="callout">
+      <p><strong>Gelijksoortige termen gedragen zich als dezelfde eenheid.</strong></p>
+      <p>Je mag 3x en 2x samenvoegen, maar 3x en 2y niet. Ook 3x en 3 zijn niet gelijksoortig.</p>
+    </div>
 
-      <h3>Wanneer zijn termen gelijksoortig?</h3>
-      <p>Termen zijn gelijksoortig als ze <strong>dezelfde letters met dezelfde exponenten</strong> hebben. De coëfficiënt mag verschillen, het teken ook.</p>
-      <p>Gelijksoortig:</p>
-      <p class="formula">3x, −5x, 12x</p>
-      <p>Ook gelijksoortig:</p>
-      <p class="formula">2xy, −7xy, 4xy</p>
-      <p>Niet gelijksoortig:</p>
-      <p class="formula">3x, 3x^{2}, 3y</p>
-      <p><span class="formula-inline">2xy</span> en <span class="formula-inline">2x^{2}y</span> zijn dat evenmin: de macht van x verschilt.</p>
-      <p>Daarom:</p>
-      <p class="formula">4x^{2} + 3x − 2x^{2} + 5x = 2x^{2} + 8x</p>
-      <p>We combineren <span class="formula-inline">4x^{2}</span> met <span class="formula-inline">−2x^{2}</span>, en <span class="formula-inline">3x</span> met <span class="formula-inline">5x</span>. Vier termen tot één term maken mag niet.</p>
+    <h3>Wanneer zijn termen gelijksoortig?</h3>
+    <p>Termen zijn gelijksoortig als ze <strong>dezelfde letters met dezelfde exponenten</strong> hebben. De coëfficiënt mag verschillen, het teken ook.</p>
+    <p>Gelijksoortig:</p>
+    <p class="formula">3x, −5x, 12x</p>
+    <p>Ook gelijksoortig:</p>
+    <p class="formula">2xy, −7xy, 4xy</p>
+    <p>Niet gelijksoortig:</p>
+    <p class="formula">3x, 3x^{2}, 3y</p>
+    <p><span class="formula-inline">2xy</span> en <span class="formula-inline">2x^{2}y</span> evenmin: de macht van x verschilt.</p>
+    <p class="formula">4x^{2} + 3x − 2x^{2} + 5x = 2x^{2} + 8x</p>
+    <p>We combineren <span class="formula-inline">4x^{2}</span> met <span class="formula-inline">−2x^{2}</span>, en <span class="formula-inline">3x</span> met <span class="formula-inline">5x</span>.</p>
 
-      <h3>Termen vermenigvuldigen</h3>
-      <p>Een enkele term, zoals <span class="formula-inline">3x</span> of <span class="formula-inline">−2x^{2}</span>, heet een <strong>monoom</strong>. Bij het vermenigvuldigen van monomen gebeuren twee dingen tegelijk:</p>
-      <ul>
-        <li>de coëfficiënten worden vermenigvuldigd;</li>
-        <li>gelijke letters krijgen hun exponenten opgeteld.</li>
-      </ul>
-      <p class="formula">2x · 3x = (2 · 3) · (x · x) = 6x^{2}</p>
-      <p>Verschillende letters blijven naast elkaar staan:</p>
-      <p class="formula">3a · 4b = 12ab</p>
-      <p>Met hogere machten:</p>
-      <p class="formula">2x^{2} · 3x^{3} = 6x^{5}</p>
-      <p>Want <span class="formula-inline">x^{2} · x^{3} = x^{2+3} = x^{5}</span>.</p>
-      <div class="callout">
-        <p><strong>Klassieke fout:</strong> <span class="formula-inline">2x · 3x</span> is niet <span class="formula-inline">6x</span>.</p>
-        <p>De letters worden ook vermenigvuldigd. Twee factoren x geven x².</p>
-      </div>
+    <h3>Termen vermenigvuldigen</h3>
+    <p>Een enkele term, zoals <span class="formula-inline">3x</span> of <span class="formula-inline">−2x^{2}</span>, heet een <strong>monoom</strong>. Bij het vermenigvuldigen van monomen:</p>
+    <ul>
+      <li>de coëfficiënten worden vermenigvuldigd;</li>
+      <li>gelijke letters krijgen hun exponenten opgeteld.</li>
+    </ul>
+    <p class="formula">2x · 3x = (2 · 3) · (x · x) = 6x^{2}</p>
+    <p class="formula">3a · 4b = 12ab</p>
+    <p class="formula">2x^{2} · 3x^{3} = 6x^{5}</p>
+    <p>Want <span class="formula-inline">x^{2} · x^{3} = x^{2+3} = x^{5}</span>.</p>
+    <div class="callout">
+      <p><strong>Klassieke fout:</strong> <span class="formula-inline">2x · 3x</span> is niet <span class="formula-inline">6x</span>.</p>
+      <p>De letters worden ook vermenigvuldigd. Twee factoren x geven <span class="formula-inline">x^{2}</span>.</p>
+    </div>
 
-      <h3>Distributiviteit: een factor voor een haakje</h3>
-      <p>Uit Fase 1:</p>
-      <p class="formula">3(4 + 5) = 3 · 4 + 3 · 5</p>
-      <p>De factor buiten het haakje gaat naar <strong>elke term</strong> erin. Met letters is de wet hetzelfde:</p>
-      <p class="formula">a(b + c) = ab + ac</p>
-      <p>Voorbeelden:</p>
-      <p class="formula">3(x + 4) = 3x + 12</p>
-      <p class="formula">5(2x − 3) = 10x − 15</p>
-      <p>Ook een letter mag buiten het haakje staan:</p>
-      <p class="formula">2x(x + 3) = 2x · x + 2x · 3 = 2x^{2} + 6x</p>
-      <div class="callout">
-        <p><strong>Veelgemaakte fout:</strong> <span class="formula-inline">3(x + 4)</span> is niet <span class="formula-inline">3x + 4</span>.</p>
-        <p>De 3 moet ook de 4 raken.</p>
-      </div>
+    <h3>Distributiviteit: een factor voor een haakje</h3>
+    <p>Uit Fase 1:</p>
+    <p class="formula">3(4 + 5) = 3 · 4 + 3 · 5</p>
+    <p>De factor buiten het haakje gaat naar <strong>elke term</strong> erin:</p>
+    <p class="formula">a(b + c) = ab + ac</p>
+    <p class="formula">3(x + 4) = 3x + 12</p>
+    <p class="formula">5(2x − 3) = 10x − 15</p>
+    <p class="formula">2x(x + 3) = 2x · x + 2x · 3 = 2x^{2} + 6x</p>
+    <div class="callout">
+      <p><strong>Veelgemaakte fout:</strong> <span class="formula-inline">3(x + 4)</span> is niet <span class="formula-inline">3x + 4</span>.</p>
+      <p>De 3 moet ook de 4 raken.</p>
+    </div>
 
-      <h3>Een minteken vóór een haakje</h3>
-      <p>Een min vóór een haakje is vermenigvuldigen met −1:</p>
-      <p class="formula">−(x + 4) = −1 · (x + 4) = −x − 4</p>
-      <p>Elke term in het haakje wisselt van teken, niet alleen de eerste:</p>
-      <p class="formula">−(x − 5) = −x + 5</p>
-      <p>In een langere uitdrukking:</p>
-      <p class="formula">7 − (2x − 3) = 7 − 2x + 3 = 10 − 2x</p>
-      <p>De −3 in het haakje wordt +3, omdat min keer min plus is.</p>
-      <div class="callout">
-        <p><strong>Onthoud:</strong> een min voor een haakje keert elk teken om.</p>
-        <p>Het is niet genoeg om alleen de eerste term aan te passen.</p>
-      </div>
+    <h3>Een minteken vóór een haakje</h3>
+    <p>Een min vóór een haakje is vermenigvuldigen met −1:</p>
+    <p class="formula">−(x + 4) = −1 · (x + 4) = −x − 4</p>
+    <p>Elke term wisselt van teken, niet alleen de eerste:</p>
+    <p class="formula">−(x − 5) = −x + 5</p>
+    <p class="formula">7 − (2x − 3) = 7 − 2x + 3 = 10 − 2x</p>
+    <div class="callout">
+      <p><strong>Onthoud:</strong> een min voor een haakje keert elk teken om.</p>
+    </div>
 
-      <h3>Twee haakjes vermenigvuldigen</h3>
-      <p>Bij twee haakjes vermenigvuldigt <strong>elke term van het eerste</strong> met <strong>elke term van het tweede</strong>. Dat is twee keer distributiviteit.</p>
-      <p class="formula">(x + 2)(x + 3)</p>
-      <p>Eerst de x naar het tweede haakje, daarna de 2:</p>
-      <p class="formula">x(x + 3) + 2(x + 3) = x^{2} + 3x + 2x + 6</p>
-      <p>Gelijksoortige termen:</p>
-      <p class="formula">= x^{2} + 5x + 6</p>
-      <p>Met een minteken in een haakje verandert de methode niet:</p>
-      <p class="formula">(x − 2)(x + 3) = x^{2} + 3x − 2x − 6 = x^{2} + x − 6</p>
-      <p>Ook als er coëfficiënten staan:</p>
-      <p class="formula">(2x + 1)(x + 3)</p>
-      <p class="formula">= 2x · x + 2x · 3 + 1 · x + 1 · 3</p>
-      <p class="formula">= 2x^{2} + 6x + x + 3</p>
-      <p class="formula">= 2x^{2} + 7x + 3</p>
-      <p>Schrijf de vier tussenproducten op. Dan verdwijnt er geen kruisterm.</p>
+    <h3>Twee haakjes vermenigvuldigen</h3>
+    <p>Elke term van het eerste haakje vermenigvuldigt met elke term van het tweede.</p>
+    <p class="formula">(x + 2)(x + 3)</p>
+    <p class="formula">= x(x + 3) + 2(x + 3)</p>
+    <p class="formula">= x^{2} + 3x + 2x + 6</p>
+    <p class="formula">= x^{2} + 5x + 6</p>
+    <p class="formula">(x − 2)(x + 3) = x^{2} + 3x − 2x − 6 = x^{2} + x − 6</p>
+    <p>Ook met coëfficiënten:</p>
+    <p class="formula">(2x + 1)(x + 3)</p>
+    <p class="formula">= 2x · x + 2x · 3 + 1 · x + 1 · 3</p>
+    <p class="formula">= 2x^{2} + 6x + x + 3</p>
+    <p class="formula">= 2x^{2} + 7x + 3</p>
+    <p>Schrijf de vier tussenproducten op. Dan verdwijnt er geen kruisterm.</p>
 
-      <h3>Merkwaardige producten</h3>
-      <p>Sommige producten komen zo vaak terug dat we de uitwerking herkennen. Ze volgen uit dezelfde distributiviteit.</p>
-      <p>Kwadraat van een som:</p>
-      <p class="formula">(a + b)^{2} = (a + b)(a + b) = a^{2} + 2ab + b^{2}</p>
-      <p>Kwadraat van een verschil:</p>
-      <p class="formula">(a − b)^{2} = a^{2} − 2ab + b^{2}</p>
-      <p>Verschil van twee kwadraten:</p>
-      <p class="formula">(a + b)(a − b) = a^{2} − b^{2}</p>
-      
-      <h4>Visuele voorstelling van het kwadraad van een som</h4>
-      <p>Een vierkant met zijde a + b valt in vier stukken.</p> 
-      <p>Die stukken zijn de vier producten die je ook krijgt als je (a + b)(a + b) uitschrijft.</p>
-      <div class="theory-image">
-        <img
-          src="assets/kwadraat-som.svg"
-          alt="Een vierkant met zijde a + b, verdeeld in a², twee rechthoeken ab en een vierkant b². Samen: a² + 2ab + b²."
-        >
-      </div>
-      
-      <p>Concreet:</p>
-      <p class="formula">(x + 3)^{2} = x^{2} + 6x + 9</p>
-      <p class="formula">(x − 4)^{2} = x^{2} − 8x + 16</p>
-      <p class="formula">(x + 5)(x − 5) = x^{2} − 25</p>
-      <div class="callout">
-        <p><strong>Klassieke fout:</strong> <span class="formula-inline">(x + 3)^{2}</span> is niet <span class="formula-inline">x^{2} + 9</span>.</p>
-        <p>De middelste term 6x ontstaat doordat beide kruisproducten meetellen: 3x + 3x.</p>
-      </div>
+    <h3>Merkwaardige producten</h3>
+    <p>Ze volgen uit dezelfde distributiviteit.</p>
+    <p class="formula">(a + b)^{2} = (a + b)(a + b) = a^{2} + 2ab + b^{2}</p>
+    <p class="formula">(a − b)^{2} = a^{2} − 2ab + b^{2}</p>
+    <p class="formula">(a + b)(a − b) = a^{2} − b^{2}</p>
+    <h4>Visuele voorstelling van het kwadraat van een som</h4>
+    <p>Een vierkant met zijde a + b valt in vier stukken: dezelfde vier producten als bij <span class="formula-inline">(a + b)(a + b)</span>.</p>
+    <div class="theory-image">
+      <img
+        src="assets/kwadraat-som.svg"
+        alt="Een vierkant met zijde a + b, verdeeld in a², twee rechthoeken ab en een vierkant b². Samen: a² + 2ab + b²."
+      >
+    </div>
+    <p class="formula">(x + 3)^{2} = x^{2} + 6x + 9</p>
+    <p class="formula">(x − 4)^{2} = x^{2} − 8x + 16</p>
+    <p class="formula">(x + 5)(x − 5) = x^{2} − 25</p>
+    <div class="callout">
+      <p><strong>Klassieke fout:</strong> <span class="formula-inline">(x + 3)^{2}</span> is niet <span class="formula-inline">x^{2} + 9</span>.</p>
+      <p>De middelste term 6x komt van de twee kruisproducten: 3x + 3x.</p>
+    </div>
 
-      <h3>Ontbinden: distributiviteit achteruit</h3>
-      <p>Uitwerken gaat van product naar som. <strong>Ontbinden</strong> (factoriseren) gaat de andere kant op: we maken van een som weer een product.</p>
-      <p>Eerst een gemeenschappelijke factor:</p>
-      <p class="formula">6x + 9 = 3 · 2x + 3 · 3 = 3(2x + 3)</p>
-      <p class="formula">x^{2} + 5x = x · x + x · 5 = x(x + 5)</p>
-      <p>Zoek wat alle termen delen, en haal dat buiten het haakje.</p>
-      <p>Een vast patroon is het verschil van twee kwadraten:</p>
-      <p class="formula">a^{2} − b^{2} = (a + b)(a − b)</p>
-      <p>Dus:</p>
-      <p class="formula">x^{2} − 9 = x^{2} − 3^{2} = (x + 3)(x − 3)</p>
-      <p class="formula">x^{2} − 16 = (x + 4)(x − 4)</p>
-      <p>Kwadratische sommen zoals <span class="formula-inline">x^{2} + 5x + 6</span> ontbinden we later, bij de kwadratische vergelijking. Nu is het genoeg de gemeenschappelijke factor en dit verschil te herkennen.</p>
+    <h3>Ontbinden: distributiviteit achteruit</h3>
+    <p>Uitwerken gaat van product naar som. <strong>Ontbinden</strong> gaat de andere kant op.</p>
+    <p class="formula">6x + 9 = 3(2x + 3)</p>
+    <p class="formula">x^{2} + 5x = x(x + 5)</p>
+    <p class="formula">a^{2} − b^{2} = (a + b)(a − b)</p>
+    <p class="formula">x^{2} − 9 = (x + 3)(x − 3)</p>
+    <p class="formula">x^{2} − 16 = (x + 4)(x − 4)</p>
+    <p>Sommen zoals <span class="formula-inline">x^{2} + 5x + 6</span> ontbinden we in les 2.7. Nu volstaan de gemeenschappelijke factor en het verschil van kwadraten.</p>
 
-      <h3>Twee richtingen van dezelfde structuur</h3>
-      <p>Uitwerken en ontbinden zijn elkaars omgekeerde:</p>
-      <p class="formula">3(x + 4) = 3x + 12</p>
-      <p class="formula">3x + 12 = 3(x + 4)</p>
-      <p>En bij een merkwaardig product:</p>
-      <p class="formula">(x + 2)^{2} = x^{2} + 4x + 4</p>
-      <p class="formula">x^{2} + 4x + 4 = (x + 2)^{2}</p>
-      <div class="callout">
-        <p><strong>De bewerkingen zijn twee richtingen van dezelfde structuur.</strong></p>
-        <p>Uitwerken maakt een som zichtbaar. Ontbinden maakt een verborgen product zichtbaar.</p>
-      </div>
+    <h3>Twee richtingen van dezelfde structuur</h3>
+    <p class="formula">3(x + 4) = 3x + 12</p>
+    <p class="formula">3x + 12 = 3(x + 4)</p>
+    <p class="formula">(x + 2)^{2} = x^{2} + 4x + 4</p>
+    <p class="formula">x^{2} + 4x + 4 = (x + 2)^{2}</p>
+    <div class="callout">
+      <p><strong>Uitwerken en ontbinden zijn elkaars omgekeerde.</strong></p>
+      <p>Uitwerken maakt een som zichtbaar. Ontbinden maakt een product zichtbaar.</p>
+    </div>
 
-      <h3>Werkwijze en rekenvolgorde</h3>
-      <p>Letters veranderen de rekenvolgorde niet: eerst haakjes, dan machten, dan vermenigvuldigen en delen, dan optellen en aftrekken.</p>
-      <p class="formula">2x + 3 · 4 = 2x + 12</p>
-      <p>En <span class="formula-inline">2(x + 3)^{2}</span> betekent eerst het kwadraat van het haakje, daarna vermenigvuldigen met 2.</p>
-      <p>Bij een langere uitdrukking helpt een vaste volgorde:</p>
-      <ol>
-        <li>haakjes wegwerken, inclusief mintekens;</li>
-        <li>producten en machten uitwerken;</li>
-        <li>gelijksoortige termen verzamelen;</li>
-        <li>controleren door een getal voor x in te vullen.</li>
-      </ol>
-      <p>Voorbeeld:</p>
-      <p class="formula">2(x + 3) − (x − 4)</p>
-      <p class="formula">= 2x + 6 − x + 4</p>
-      <p class="formula">= x + 10</p>
-      <p>Controle met x = 1: links 2(4) − (1 − 4) = 8 − (−3) = 11, rechts 1 + 10 = 11.</p>
-      <div class="callout">
-        <p><strong>Kernidee:</strong></p>
-        <p>De rekenwetten uit Fase 1 blijven geldig als getallen door letters worden vervangen.</p>
-        <p>Gelijksoortige termen mogen samen, distributiviteit werkt vooruit en achteruit, en een product kun je uitwerken of ontbinden.</p>
-      </div>
-    `
-  },  
+    <h3>Werkwijze en rekenvolgorde</h3>
+    <p>Letters veranderen de rekenvolgorde niet: eerst haakjes, dan machten, dan vermenigvuldigen en delen, dan optellen en aftrekken.</p>
+    <p class="formula">2x + 3 · 4 = 2x + 12</p>
+    <p><span class="formula-inline">2(x + 3)^{2}</span> betekent eerst het kwadraat, daarna keer 2.</p>
+    <ol>
+      <li>haakjes wegwerken, inclusief mintekens;</li>
+      <li>producten en machten uitwerken;</li>
+      <li>gelijksoortige termen verzamelen;</li>
+      <li>controleren door een getal voor x in te vullen.</li>
+    </ol>
+    <p class="formula">2(x + 3) − (x − 4)</p>
+    <p class="formula">= 2x + 6 − x + 4</p>
+    <p class="formula">= x + 10</p>
+    <p>Controle met x = 1: links 2(4) − (1 − 4) = 8 − (−3) = 11, rechts 1 + 10 = 11.</p>
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>De rekenwetten uit Fase 1 blijven geldig als getallen door letters worden vervangen.</p>
+      <p>Gelijksoortige termen mogen samen, distributiviteit werkt vooruit en achteruit, en een product kun je uitwerken of ontbinden.</p>
+    </div>
+  `
+},  
   {
   id: "2.3",
   title: "Vergelijkingen",
   goal: "Hoe vinden we een onbekende?",
   theory: /* html */`
     <h2>Vergelijkingen</h2>
-
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>begrijpen wat een vergelijking betekent</li>
-      <li>een vergelijking zien als een balans tussen twee uitdrukkingen</li>
-      <li>begrijpen waarom dezelfde bewerking aan beide kanten nodig is</li>
-      <li>eenvoudige lineaire vergelijkingen oplossen</li>
-      <li>controleren of een gevonden oplossing werkelijk klopt</li>
+      <li>Wat betekent een vergelijking?</li>
+      <li>Waarom zien we een vergelijking als een balans?</li>
+      <li>Waarom moet dezelfde bewerking aan beide kanten?</li>
+      <li>Hoe lossen we een eenvoudige lineaire vergelijking op?</li>
+      <li>Hoe controleren we of de gevonden waarde klopt?</li>
+      <li>Wanneer heeft een vergelijking geen of oneindig veel oplossingen?</li>
     </ul>
+    <p>In les 2.1 onderscheidden we een uitdrukking van een vergelijking. Nu gebruiken we dat om een onbekende te <strong>vinden</strong>.</p>
 
     <h3>Wat is een vergelijking?</h3>
-
-    <p>In 2.1 maakten we onderscheid tussen een algebraïsche uitdrukking en een vergelijking.</p>
-
     <p>Een uitdrukking zoals:</p>
-
     <p class="formula">3x + 5</p>
-
-    <p>beschrijft een hoeveelheid of berekening.</p>
-
-    <p>Een vergelijking bevat een gelijkheidsteken:</p>
-
+    <p>beschrijft een hoeveelheid. Een vergelijking bevat een gelijkheidsteken:</p>
     <p class="formula">3x + 5 = 17</p>
-
-    <p>Het gelijkheidsteken betekent dat de linker- en rechterkant <strong>dezelfde waarde</strong> hebben.</p>
-
+    <p>Linker- en rechterkant hebben <strong>dezelfde waarde</strong>.</p>
     <div class="callout">
-      <strong>Een vergelijking is een bewering van gelijkheid.</strong>
-      <p>We zoeken naar de waarde(n) van de onbekende waarvoor die gelijkheid waar is.</p>
+      <p><strong>Een vergelijking is een bewering van gelijkheid.</strong></p>
+      <p>We zoeken de waarde(n) van de onbekende waarvoor die bewering waar is.</p>
     </div>
-
 
     <h3>De vergelijking als een balans</h3>
-
-    <p>Een handige manier om een vergelijking te begrijpen is als een balans.</p>
-
-    <p>Stel dat aan de linkerkant van een balans een onbekende hoeveelheid ligt en daarnaast 3 kg. Aan de rechterkant ligt 7 kg.</p>
-
-    <p>De balans is in evenwicht wanneer:</p>
-
+    <p>Aan de linkerkant van een weegschaal ligt een onbekende hoeveelheid plus 3 kg, rechts 7 kg. Evenwicht betekent:</p>
     <p class="formula">x + 3 = 7</p>
-
-    <p>De vergelijking zegt dus niet zomaar dat we iets met x moeten uitrekenen. Ze zegt dat beide kanten dezelfde totale waarde hebben.</p>
-
     <div class="callout">
-      <strong>Het gelijkheidsteken betekent: links = rechts.</strong>
-      <p>Als we een bewerking uitvoeren, moeten we het evenwicht bewaren.</p>
+      <p><strong>Het gelijkheidsteken betekent: links = rechts.</strong></p>
+      <p>Elke bewerking moet het evenwicht bewaren.</p>
     </div>
 
-
     <h3>De onbekende vrijmaken</h3>
-
-    <p>Neem:</p>
-
     <p class="formula">x + 3 = 7</p>
-
-    <p>We willen weten welke waarde x heeft.</p>
-
-    <p>Om de +3 aan de linkerkant ongedaan te maken, trekken we 3 af.</p>
-
-    <p>Maar we mogen niet alleen links 3 aftrekken. We moeten dezelfde bewerking aan beide kanten uitvoeren:</p>
-
+    <p>Om +3 ongedaan te maken trekken we 3 af — aan <strong>beide</strong> kanten:</p>
     <p class="formula">x + 3 − 3 = 7 − 3</p>
-
-    <p>Daaruit volgt:</p>
-
     <p class="formula">x = 4</p>
-
     <div class="callout">
-      <strong>De kernregel:</strong>
-      <p>Voer dezelfde bewerking uit aan beide kanten van een vergelijking.</p>
+      <p><strong>Kernregel:</strong> dezelfde bewerking aan beide kanten.</p>
       <p>Zo blijft de gelijkheid behouden.</p>
     </div>
 
-
-    <h3>Waarom mogen we aan beide kanten hetzelfde doen?</h3>
-
-    <p>Dit volgt rechtstreeks uit de eigenschappen van gelijkheid.</p>
-
-    <p>Als:</p>
-
-    <p class="formula">a = b</p>
-
-    <p>dan blijft de gelijkheid behouden wanneer we aan beide kanten hetzelfde getal optellen:</p>
-
+    <h3>Waarom mag dat?</h3>
+    <p>Als a = b, dan ook:</p>
     <p class="formula">a + c = b + c</p>
-
-    <p>Hetzelfde geldt voor aftrekken:</p>
-
     <p class="formula">a − c = b − c</p>
-
-    <p>en voor vermenigvuldigen:</p>
-
     <p class="formula">a · c = b · c</p>
-
-    <p>en delen, zolang we niet door nul delen:</p>
-
     <p class="formula">a / c = b / c</p>
+    <p>zolang c ≠ 0. Dat zijn eigenschappen van gelijkheid, geen trucs voor x.</p>
 
-    <p>voor c ≠ 0.</p>
-
-    <p>Deze regels geven de formele rechtvaardiging voor wat we bij het oplossen van vergelijkingen doen.</p>
-
-
-    <h3>Een vergelijking oplossen door aftrekken</h3>
-
-    <p>Bekijk:</p>
-
+    <h3>Oplossen door aftrekken</h3>
     <p class="formula">x + 8 = 13</p>
-
-    <p>We willen x alleen aan één kant krijgen.</p>
-
-    <p>Er staat +8 naast x. We trekken daarom 8 af aan beide kanten:</p>
-
     <p class="formula">x + 8 − 8 = 13 − 8</p>
-
-    <p>Dus:</p>
-
     <p class="formula">x = 5</p>
 
-    <p>We hebben de vergelijking stap voor stap vereenvoudigd zonder de gelijkheid te verbreken.</p>
-
-
-    <h3>Een vergelijking oplossen door optellen</h3>
-
-    <p>Niet elke vergelijking bevat een positieve term.</p>
-
-    <p>Neem:</p>
-
+    <h3>Oplossen door optellen</h3>
     <p class="formula">x − 4 = 9</p>
-
-    <p>Om −4 ongedaan te maken, tellen we 4 op bij beide kanten:</p>
-
     <p class="formula">x − 4 + 4 = 9 + 4</p>
-
-    <p>Dus:</p>
-
     <p class="formula">x = 13</p>
-
     <div class="callout">
-      <strong>Ongedaan maken betekent de inverse bewerking gebruiken.</strong>
-      <p>Optellen maakt aftrekken ongedaan en aftrekken maakt optellen ongedaan.</p>
+      <p><strong>Ongedaan maken = de inverse bewerking.</strong></p>
+      <p>Optellen maakt aftrekken ongedaan, en omgekeerd.</p>
     </div>
-
 
     <h3>Vermenigvuldiging ongedaan maken</h3>
-
-    <p>Stel:</p>
-
     <p class="formula">3x = 18</p>
-
-    <p>Hier betekent 3x hetzelfde als 3 · x.</p>
-
-    <p>Om de factor 3 ongedaan te maken, delen we beide kanten door 3:</p>
-
+    <p>Deel beide kanten door 3:</p>
     <p class="formula">3x / 3 = 18 / 3</p>
-
-    <p>Dus:</p>
-
     <p class="formula">x = 6</p>
 
-    <p>Ook hier voeren we dezelfde bewerking aan beide kanten uit.</p>
-
-
     <h3>Delen ongedaan maken</h3>
-
-    <p>Neem:</p>
-
     <p class="formula">x / 4 = 7</p>
-
-    <p>Deel door 4 is de omgekeerde bewerking van vermenigvuldigen met 4.</p>
-
-    <p>Daarom vermenigvuldigen we beide kanten met 4:</p>
-
-    <p class="formula">4 · x / 4 = 7 · 4</p>
-
-    <p>Dus:</p>
-
+    <p>Vermenigvuldig beide kanten met 4:</p>
+    <p class="formula">4 · (x / 4) = 7 · 4</p>
     <p class="formula">x = 28</p>
 
-
     <h3>Twee bewerkingen in één vergelijking</h3>
-
-    <p>In veel vergelijkingen komen verschillende bewerkingen voor.</p>
-
-    <p>Bijvoorbeeld:</p>
-
     <p class="formula">3x + 5 = 20</p>
-
-    <p>We maken eerst de optelling ongedaan. Trek 5 af aan beide kanten:</p>
-
+    <p>Eerst de +5 weg, daarna de factor 3:</p>
     <p class="formula">3x = 15</p>
-
-    <p>Daarna maken we de vermenigvuldiging met 3 ongedaan:</p>
-
     <p class="formula">x = 5</p>
-
-    <p>De bewerkingen worden dus stap voor stap teruggedraaid.</p>
-
     <div class="callout">
-      <strong>Werk systematisch.</strong>
-      <p>Maak eerst de bewerking ongedaan die het verst van de onbekende verwijderd is.</p>
+      <p><strong>Werk systematisch.</strong></p>
+      <p>Maak eerst de bewerking ongedaan die het verst van de onbekende staat.</p>
     </div>
 
-
-    <h3>Vergelijkingen met de onbekende aan beide kanten</h3>
-
-    <p>Soms komt de onbekende aan beide kanten voor.</p>
-
-    <p>Bijvoorbeeld:</p>
-
+    <h3>De onbekende aan beide kanten</h3>
     <p class="formula">3x + 2 = x + 10</p>
-
-    <p>We willen de termen met x bij elkaar brengen.</p>
-
     <p>Trek x af aan beide kanten:</p>
-
-    <p class="formula">3x − x + 2 = x − x + 10</p>
-
-    <p>Dus:</p>
-
     <p class="formula">2x + 2 = 10</p>
-
-    <p>Daarna trekken we 2 af:</p>
-
     <p class="formula">2x = 8</p>
-
-    <p>En delen we door 2:</p>
-
     <p class="formula">x = 4</p>
-
-    <p>Ook hier blijft het principe hetzelfde: elke bewerking wordt aan beide kanten uitgevoerd.</p>
-
 
     <h3>Haakjes in een vergelijking</h3>
-
-    <p>Ook haakjes kunnen voorkomen:</p>
-
     <p class="formula">2(x + 3) = 14</p>
-
-    <p>Met de distributieve eigenschap krijgen we:</p>
-
     <p class="formula">2x + 6 = 14</p>
-
-    <p>Daarna lossen we de vergelijking verder op:</p>
-
     <p class="formula">2x = 8</p>
-
     <p class="formula">x = 4</p>
+    <p>De bewerkingen uit les 2.2 maken de vergelijking eerst eenvoudiger.</p>
 
-    <p>De algebraïsche bewerkingen uit 2.2 zijn dus hulpmiddelen om vergelijkingen stap voor stap te vereenvoudigen.</p>
-
-
-    <h3>Controleer je oplossing</h3>
-
-    <p>Een oplossing is pas overtuigend wanneer we controleren of ze werkelijk aan de oorspronkelijke vergelijking voldoet.</p>
-
-    <p>Neem:</p>
-
-    <p class="formula">3x + 5 = 20</p>
-
-    <p>We vonden:</p>
-
-    <p class="formula">x = 5</p>
-
-    <p>Vul x = 5 terug in de <strong>oorspronkelijke</strong> vergelijking:</p>
-
+    <h3>Controleer in de oorspronkelijke vergelijking</h3>
+    <p>Bij <span class="formula-inline">3x + 5 = 20</span> vonden we x = 5. Invullen:</p>
     <p class="formula">3 · 5 + 5 = 20</p>
-
-    <p class="formula">15 + 5 = 20</p>
-
     <p class="formula">20 = 20</p>
-
-    <p>De oplossing klopt.</p>
-
     <div class="callout">
-      <strong>Controle:</strong>
-      <p>Vervang de onbekende door je gevonden waarde in de oorspronkelijke vergelijking.</p>
-      <p>Als links en rechts dezelfde waarde geven, voldoet de waarde aan de vergelijking.</p>
+      <p><strong>Controle:</strong> vul de gevonden waarde in het <strong>origineel</strong> in.</p>
+      <p>Als links en rechts gelijk zijn, klopt de oplossing.</p>
     </div>
-
 
     <h3>Niet elke vergelijking heeft één oplossing</h3>
-
-    <p>Het is belangrijk om niet automatisch te denken dat elke vergelijking precies één oplossing heeft.</p>
-
-    <p>Bekijk:</p>
-
     <p class="formula">x + 3 = x + 3</p>
-
-    <p>Deze vergelijking is waar voor <strong>elke</strong> waarde van x waarvoor de uitdrukkingen gedefinieerd zijn.</p>
-
-    <p>We krijgen dus oneindig veel oplossingen.</p>
-
-    <p>Bekijk daarentegen:</p>
-
+    <p>waar voor elke x: oneindig veel oplossingen.</p>
     <p class="formula">x + 3 = x + 5</p>
-
-    <p>Trek x af aan beide kanten:</p>
-
-    <p class="formula">3 = 5</p>
-
-    <p>Dat is onmogelijk. Deze vergelijking heeft dus <strong>geen oplossing</strong>.</p>
-
+    <p>levert 3 = 5: <strong>geen</strong> oplossing.</p>
     <div class="callout">
-      <strong>Een vergelijking kan verschillende oplossingsverzamelingen hebben:</strong>
-      <p>één oplossing, geen oplossing of oneindig veel oplossingen.</p>
+      <p><strong>Mogelijk:</strong> één oplossing, geen oplossing, of oneindig veel.</p>
     </div>
-
 
     <h3>Gelijkwaardige vergelijkingen</h3>
-
-    <p>Wanneer we een vergelijking stap voor stap bewerken, willen we een nieuwe vergelijking krijgen die precies dezelfde oplossingen heeft.</p>
-
-    <p>Bijvoorbeeld:</p>
-
     <p class="formula">3x + 5 = 20</p>
-
-    <p>en na 5 aftrekken:</p>
-
     <p class="formula">3x = 15</p>
-
-    <p>en daarna delen door 3:</p>
-
     <p class="formula">x = 5</p>
-
-    <p>Deze vergelijkingen zien er verschillend uit, maar hebben dezelfde oplossing.</p>
-
+    <p>Zien er anders uit, dezelfde oplossing.</p>
     <div class="callout">
-      <strong>We vervangen een vergelijking door een gelijkwaardige vergelijking.</strong>
-      <p>Het doel van de bewerkingen is de vergelijking steeds eenvoudiger te maken, terwijl de oplossingen behouden blijven.</p>
+      <p><strong>We vervangen een vergelijking door een gelijkwaardige.</strong></p>
+      <p>Eenvoudiger maken, dezelfde oplossingen houden.</p>
     </div>
-
 
     <h3>Van verhaal naar vergelijking</h3>
-
-    <p>Vergelijkingen ontstaan vaak uit een probleem uit de werkelijkheid.</p>
-
-    <p>Stel dat een getal met 7 wordt vermeerderd en het resultaat 19 is.</p>
-
-    <p>Noem het onbekende getal x.</p>
-
-    <p>Dan kunnen we het probleem vertalen naar:</p>
-
+    <p>Een getal plus 7 is 19. Noem het getal x:</p>
     <p class="formula">x + 7 = 19</p>
-
-    <p>Los de vergelijking op:</p>
-
     <p class="formula">x = 12</p>
+    <p>Eerst vertalen, dan oplossen.</p>
 
-    <p>Het onbekende getal is dus 12.</p>
-
-    <p>De belangrijke stap is hier niet alleen het rekenen, maar het <strong>vertalen van de situatie naar een vergelijking</strong>.</p>
-
-
-    <h3>Een vergelijking is een probleem met een voorwaarde</h3>
-
-    <p>Een algebraïsche uitdrukking kan voor veel verschillende waarden worden berekend.</p>
-
-    <p>Een vergelijking legt daarentegen een voorwaarde op:</p>
-
+    <h3>Een vergelijking is een voorwaarde</h3>
+    <p>Een uitdrukking kun je voor veel waarden berekenen. Een vergelijking filtert:</p>
     <p class="formula">3x + 5 = 20</p>
-
-    <p>Niet elke waarde van x voldoet aan die voorwaarde.</p>
-
-    <p>We zoeken precies de waarde(n) waarvoor de twee kanten gelijk worden.</p>
-
-    <div class="callout">
-      <strong>Een vergelijking is een filter.</strong>
-      <p>Van alle mogelijke waarden van x houden we alleen de waarden over die de gelijkheid waar maken.</p>
-    </div>
-
+    <p>alleen de x waarvoor links gelijk is aan rechts.</p>
 
     <h3>Een vaste werkwijze</h3>
-
-    <p>Bij eenvoudige lineaire vergelijkingen kunnen we een vaste strategie gebruiken:</p>
-
     <ol>
-      <li>vereenvoudig beide kanten indien nodig;</li>
-      <li>werk haakjes weg als dat nodig is;</li>
+      <li>vereenvoudig beide kanten;</li>
+      <li>werk haakjes weg;</li>
       <li>breng termen met de onbekende samen;</li>
-      <li>breng de constante termen naar de andere kant;</li>
+      <li>breng constanten naar de andere kant;</li>
       <li>maak de factor van de onbekende ongedaan;</li>
-      <li>controleer de gevonden oplossing in de oorspronkelijke vergelijking.</li>
+      <li>controleer in de oorspronkelijke vergelijking.</li>
     </ol>
-
-    <p>De precieze volgorde kan soms verschillen, maar het onderliggende principe blijft hetzelfde: <strong>maak de onbekende stap voor stap vrij zonder de gelijkheid te verbreken.</strong></p>
-
-
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
-
-    <p>Een vergelijking oplossen is meer dan een trucje met "naar de andere kant brengen".</p>
-
-    <p>De basisgedachte is:</p>
-
-    <p class="formula">links = rechts</p>
-
-    <p>Elke bewerking moet deze gelijkheid behouden.</p>
-
-    <p>Daarom kunnen we bijvoorbeeld:</p>
-
-    <ul>
-      <li>aan beide kanten hetzelfde getal optellen;</li>
-      <li>aan beide kanten hetzelfde getal aftrekken;</li>
-      <li>beide kanten met hetzelfde getal vermenigvuldigen;</li>
-      <li>beide kanten door hetzelfde niet-nul getal delen.</li>
-    </ul>
-
-    <p>Door deze bewerkingen systematisch toe te passen, brengen we de vergelijking terug tot een vorm waarin de onbekende rechtstreeks zichtbaar is.</p>
-
+    <p>Het principe: de onbekende vrijmaken zonder de gelijkheid te verbreken.</p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>Een vergelijking stelt dat twee uitdrukkingen gelijk zijn.</p>
-      <p>We zoeken de waarde(n) van de onbekende waarvoor die gelijkheid waar is.</p>
-      <p>Door dezelfde geldige bewerking aan beide kanten uit te voeren, kunnen we de vergelijking vereenvoudigen zonder haar oplossingen te veranderen.</p>
+      <p>We zoeken de waarde(n) waarvoor dat waar is.</p>
+      <p>Dezelfde geldige bewerking aan beide kanten vereenvoudigt de vergelijking zonder de oplossingen te veranderen.</p>
     </div>
   `
 },
-    {
-    id: "2.4",
-    title: "Formules & algebraïsch modelleren",
-    goal: "Hoe beschrijven we een probleem met een formule?",
-    theory: /* html */`
-      <h2>Formules & algebraïsch modelleren</h2>
-
-      <p><strong>Doel:</strong></p>
-      <ul>
-        <li>een concrete situatie vertalen naar wiskundige symbolen</li>
-        <li>variabelen en constanten uit een probleem herkennen</li>
-        <li>een formule opstellen vanuit een beschrijving</li>
-        <li>een formule gebruiken door waarden in te vullen</li>
-        <li>een formule omvormen zodat een andere grootheid berekend kan worden</li>
-        <li>eenheden gebruiken om een formule te controleren</li>
-        <li>onderscheiden tussen een wiskundig model en de werkelijkheid die het model beschrijft</li>
-        <li>controleren of een verkregen antwoord betekenisvol is in de context</li>
-      </ul>
+   {
+  id: "2.4",
+  title: "Formules & algebraïsch modelleren",
+  goal: "Hoe beschrijven we een probleem met een formule?",
+  theory: /* html */`
+    <h2>Formules & algebraïsch modelleren</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Hoe vertalen we een situatie uit de werkelijkheid naar letters en een formule?</li>
+      <li>Hoe herkennen we welke grootheden veranderen en welke vast blijven?</li>
+      <li>Hoe stellen we een formule op vanuit een beschrijving in woorden?</li>
+      <li>Hoe gebruiken we een formule door waarden in te vullen?</li>
+      <li>Hoe kunnen we een formule omvormen om een andere grootheid te berekenen?</li>
+      <li>Hoe helpen eenheden ons om een formule te controleren?</li>
+      <li>Waarom is een formule een model van de werkelijkheid en geen volledige kopie ervan?</li>
+      <li>Hoe controleren we of een antwoord betekenis heeft binnen de oorspronkelijke situatie?</li>
+    </ul>
+
+    <p>
+      In de vorige lessen gebruikten we algebra om met letters te rekenen
+      en onbekenden te vinden. Nu draaien we het proces om:
+      we vertrekken vanuit een <strong>situatie uit de werkelijkheid</strong>
+      en proberen die met algebra te beschrijven.
+    </p>
 
-      <p>
-        In de vorige lessen gebruikten we algebra vooral om met symbolen te rekenen
-        en onbekenden te vinden. Nu draaien we het proces om:
-        we vertrekken vanuit een <strong>situatie uit de werkelijkheid</strong>
-        en proberen die met algebra te beschrijven.
-      </p>
-
-      <p>
-        Dat noemen we <strong>algebraïsch modelleren</strong>.
-        Een formule wordt zo een hulpmiddel om een hele reeks situaties
-        met dezelfde structuur te beschrijven.
-      </p>
-
-
-      <h3>Van een verhaal naar wiskunde</h3>
-
-      <p>
-        Stel dat een taxi een vast startbedrag van 4 euro vraagt en daarna
-        2 euro per kilometer.
-      </p>
-
-      <p>
-        Voor één kilometer betaal je:
-      </p>
-
-      <p class="formula">4 + 2 = 6</p>
-
-      <p>
-        Voor vijf kilometer:
-      </p>
-
-      <p class="formula">4 + 2 · 5 = 14</p>
-
-      <p>
-        Voor twintig kilometer:
-      </p>
-
-      <p class="formula">4 + 2 · 20 = 44</p>
-
-      <p>
-        We kunnen telkens opnieuw rekenen, maar er zit een duidelijk patroon in.
-        De afstand verandert, terwijl het startbedrag en de prijs per kilometer
-        hetzelfde blijven.
-      </p>
-
-      <p>
-        Noem de afstand <strong>x</strong> kilometer en de totale prijs
-        <strong>P</strong> euro. Dan kunnen we alle situaties tegelijk beschrijven:
-      </p>
-
-      <p class="formula">P = 4 + 2x</p>
-
-      <p>
-        Dit is een <strong>formule</strong>.
-        Eén formule vervangt nu een hele reeks afzonderlijke berekeningen.
-      </p>
-
-      <div class="callout">
-        <p><strong>Algebra maakt een patroon algemeen.</strong></p>
-        <p>
-          In plaats van voor elke situatie opnieuw te rekenen,
-          beschrijven we de structuur één keer met letters en getallen.
-        </p>
-      </div>
-
-
-      <h3>Wat betekenen de letters?</h3>
-
-      <p>
-        Een formule heeft pas betekenis als we weten wat de symbolen voorstellen.
-      </p>
-
-      <p class="formula">P = 4 + 2x</p>
-
-      <ul>
-        <li><strong>P</strong> = de totale prijs in euro;</li>
-        <li><strong>x</strong> = de afgelegde afstand in kilometer;</li>
-        <li><strong>4</strong> = het vaste startbedrag in euro;</li>
-        <li><strong>2</strong> = de prijs per kilometer in euro per kilometer.</li>
-      </ul>
-
-      <p>
-        De letters zijn dus geen willekeurige versiering.
-        Ze vertegenwoordigen concrete grootheden uit de situatie.
-      </p>
-
-      <p>
-        De getallen in een formule kunnen verschillende rollen hebben.
-        Sommige zijn vaste waarden, andere geven aan hoeveel er per eenheid
-        bijkomt of afgaat.
-      </p>
-
-      <div class="callout">
-        <p><strong>Lees een formule altijd in woorden.</strong></p>
-        <p>
-          <span class="formula-inline">P = 4 + 2x</span> betekent:
-          "de prijs is 4 euro plus 2 euro voor elke kilometer."
-        </p>
-      </div>
-
-
-      <h3>Variabele, constante en parameter</h3>
-
-      <p>
-        In een model is het nuttig om onderscheid te maken tussen waarden
-        die kunnen veranderen en waarden die binnen het model vastliggen.
-      </p>
-
-      <p>
-        In:
-      </p>
-
-      <p class="formula">P = 4 + 2x</p>
-
-      <p>
-        kan x verschillende waarden aannemen.
-        De waarden 4 en 2 blijven in dit model constant.
-      </p>
-
-      <p>
-        We noemen x daarom een <strong>variabele</strong>.
-        De getallen 4 en 2 zijn <strong>constanten</strong> binnen dit model.
-      </p>
-
-      <p>
-        Soms gebruiken we ook letters voor zulke vaste waarden.
-        Bijvoorbeeld:
-      </p>
-
-      <p class="formula">P = b + px</p>
+    <p>
+      Dat noemen we <strong>algebraïsch modelleren</strong>.
+      Een formule maakt het mogelijk om een hele reeks situaties
+      met dezelfde structuur te beschrijven.
+    </p>
 
-      <p>
-        Hier kunnen <span class="formula-inline">b</span> en
-        <span class="formula-inline">p</span> vaste waarden voorstellen,
-        terwijl x de variabele is.
-      </p>
 
-      <p>
-        Zo kunnen we dezelfde structuur gebruiken voor verschillende situaties.
-        Bij een andere taxi kunnen bijvoorbeeld een ander startbedrag en
-        een andere kilometerprijs horen.
-      </p>
+    <h3>Van een verhaal naar wiskunde</h3>
 
+    <p>
+      Stel dat een taxi een vast startbedrag van 4 euro vraagt en daarna
+      2 euro per kilometer.
+    </p>
 
-      <h3>Een formule opstellen uit woorden</h3>
+    <p>
+      Voor één kilometer betaal je:
+    </p>
 
-      <p>
-        De moeilijkste stap bij modelleren is vaak niet het rekenen,
-        maar het <strong>vertalen van woorden naar algebra</strong>.
-      </p>
+    <p class="formula">4 + 2 = 6</p>
 
-      <p>
-        Een sportclub vraagt 25 euro lidgeld en daarnaast 8 euro per maand.
-        Noem het aantal maanden x en de totale kost K.
-      </p>
+    <p>
+      Voor vijf kilometer:
+    </p>
 
-      <p>
-        Het vaste deel is:
-      </p>
+    <p class="formula">4 + 2 · 5 = 14</p>
 
-      <p class="formula">25</p>
+    <p>
+      Voor twintig kilometer:
+    </p>
 
-      <p>
-        Het variabele deel is 8 euro per maand gedurende x maanden:
-      </p>
+    <p class="formula">4 + 2 · 20 = 44</p>
+
+    <p>
+      We kunnen telkens opnieuw rekenen, maar er zit een duidelijk patroon in.
+      De afstand verandert, terwijl het startbedrag en de prijs per kilometer
+      hetzelfde blijven.
+    </p>
 
-      <p class="formula">8x</p>
+    <p>
+      Noem de afstand <strong>x</strong> kilometer en de totale prijs
+      <strong>P</strong> euro. Dan kunnen we alle situaties tegelijk beschrijven:
+    </p>
 
-      <p>
-        De totale kost is dus:
-      </p>
+    <p class="formula">P = 4 + 2x</p>
 
-      <p class="formula">K = 25 + 8x</p>
+    <p>
+      Dit is een <strong>formule</strong>.
+      Eén formule vervangt nu een hele reeks afzonderlijke berekeningen.
+    </p>
 
+    <div class="callout">
+      <p><strong>Algebra maakt een patroon algemeen.</strong></p>
       <p>
-        Controleer altijd of de formule overeenkomt met het verhaal.
-        Bij nul maanden moet je bijvoorbeeld alleen het vaste lidgeld betalen:
+        In plaats van voor elke situatie opnieuw te rekenen,
+        beschrijven we de structuur één keer met letters en getallen.
       </p>
+    </div>
 
-      <p class="formula">K = 25 + 8 · 0 = 25</p>
 
-      <p>
-        Dat klopt met de situatie.
-      </p>
+    <h3>Wat betekenen de letters?</h3>
 
-      <div class="callout">
-        <p><strong>Vertaal eerst de structuur, reken daarna.</strong></p>
-        <p>
-          Zoek in een verhaal eerst naar:
-          <strong>vast deel + veranderlijk deel</strong>,
-          wanneer die structuur aanwezig is.
-        </p>
-      </div>
+    <p>
+      Een formule heeft pas betekenis als we weten wat de symbolen voorstellen.
+    </p>
 
+    <p class="formula">P = 4 + 2x</p>
 
-      <h3>Invullen in een formule</h3>
-
-      <p>
-        Zodra een formule is opgesteld, kunnen we concrete waarden invullen.
-      </p>
+    <ul>
+      <li><strong>P</strong> = de totale prijs in euro;</li>
+      <li><strong>x</strong> = de afgelegde afstand in kilometer;</li>
+      <li><strong>4</strong> = het vaste startbedrag in euro;</li>
+      <li><strong>2</strong> = de prijs per kilometer in euro per kilometer.</li>
+    </ul>
 
-      <p>
-        Neem:
-      </p>
+    <p>
+      De letters zijn dus geen willekeurige versiering.
+      Ze vertegenwoordigen concrete grootheden uit de situatie.
+    </p>
 
-      <p class="formula">K = 25 + 8x</p>
+    <p>
+      De getallen in een formule kunnen verschillende rollen hebben.
+      Sommige zijn vaste waarden, andere geven aan hoeveel er per eenheid
+      bijkomt of afgaat.
+    </p>
 
+    <div class="callout">
+      <p><strong>Lees een formule altijd in woorden.</strong></p>
       <p>
-        Stel dat iemand 6 maanden lid is.
-        Dan is:
+        <span class="formula-inline">P = 4 + 2x</span> betekent:
+        "de prijs is 4 euro plus 2 euro voor elke kilometer."
       </p>
-
-      <p class="formula">x = 6</p>
+    </div>
 
-      <p>
-        Vervang x door 6:
-      </p>
 
-      <p class="formula">K = 25 + 8 · 6</p>
+    <h3>Variabele en constante</h3>
 
-      <p class="formula">K = 25 + 48</p>
+    <p>
+      In een model is het nuttig om onderscheid te maken tussen waarden
+      die kunnen veranderen en waarden die binnen het model vastliggen.
+    </p>
 
-      <p class="formula">K = 73</p>
+    <p class="formula">P = 4 + 2x</p>
 
-      <p>
-        De totale kost is dus 73 euro.
-      </p>
+    <p>
+      De afstand <strong>x</strong> kan verschillende waarden aannemen.
+      De waarden 4 en 2 blijven binnen dit model hetzelfde.
+    </p>
 
-      <p>
-        Dit is precies dezelfde techniek die we in les 2.1 leerden:
-        een waarde voor een variabele invullen in een algebraïsche uitdrukking.
-        Het verschil is dat de formule nu een concrete situatie beschrijft.
-      </p>
+    <p>
+      We noemen <strong>x</strong> daarom een <strong>variabele</strong>.
+      De getallen 4 en 2 zijn <strong>constanten</strong> binnen dit model.
+    </p>
 
+    <p>
+      Soms gebruiken we ook letters voor zulke vaste waarden.
+      Bijvoorbeeld:
+    </p>
 
-      <h3>Eenheden horen bij de formule</h3>
+    <p class="formula">P = b + px</p>
 
-      <p>
-        Getallen in een formule hebben vaak een eenheid.
-        Die eenheden kunnen ons helpen om te controleren of een formule logisch is.
-      </p>
+    <p>
+      Hier kunnen <span class="formula-inline">b</span> en
+      <span class="formula-inline">p</span> vaste waarden voorstellen,
+      terwijl <span class="formula-inline">x</span> de variabele is.
+    </p>
 
-      <p>
-        In:
-      </p>
+    <p>
+      Zo kunnen we dezelfde structuur gebruiken voor verschillende situaties.
+      Bij een andere taxi kunnen bijvoorbeeld een ander startbedrag en
+      een andere kilometerprijs horen.
+    </p>
 
-      <p class="formula">P = 4 + 2x</p>
 
-      <p>
-        is P uitgedrukt in euro en x in kilometer.
-        De 4 heeft dus eenheid euro.
-        De 2 heeft eenheid euro per kilometer.
-      </p>
+    <h3>Een formule opstellen uit woorden</h3>
 
-      <p>
-        Als we 2 euro per kilometer vermenigvuldigen met x kilometer,
-        verdwijnen de kilometers:
-      </p>
+    <p>
+      De moeilijkste stap bij modelleren is vaak niet het rekenen,
+      maar het <strong>vertalen van woorden naar algebra</strong>.
+    </p>
 
-      <p class="formula">2 euro/km · x km = 2x euro</p>
+    <p>
+      Een sportclub vraagt 25 euro lidgeld en daarnaast 8 euro per maand.
+      Noem het aantal maanden <strong>x</strong> en de totale kost
+      <strong>K</strong>.
+    </p>
 
-      <p>
-        Zowel het vaste deel als het variabele deel zijn dus bedragen in euro.
-        Ze kunnen daarom worden opgeteld.
-      </p>
+    <p>
+      Het vaste deel is:
+    </p>
 
-      <div class="callout">
-        <p><strong>Eenheden zijn een alarmbel.</strong></p>
-        <p>
-          Als twee grootheden bij een optelling niet dezelfde eenheid hebben,
-          klopt er waarschijnlijk iets niet aan de formule.
-        </p>
-      </div>
+    <p class="formula">25</p>
 
+    <p>
+      Het veranderlijke deel is 8 euro per maand gedurende
+      <span class="formula-inline">x</span> maanden:
+    </p>
 
-      <h3>Een formule gebruiken om een onbekende te vinden</h3>
+    <p class="formula">8x</p>
 
-      <p>
-        Een formule kan ook gebruikt worden om een andere grootheid te bepalen.
-      </p>
+    <p>
+      De totale kost is dus:
+    </p>
 
-      <p>
-        Neem de bekende relatie:
-      </p>
+    <p class="formula">K = 25 + 8x</p>
 
-      <p class="formula">s = v · t</p>
+    <p>
+      Controleer altijd of de formule overeenkomt met het verhaal.
+      Bij nul maanden moet je bijvoorbeeld alleen het vaste lidgeld betalen:
+    </p>
 
-      <p>
-        Hierin staat:
-      </p>
+    <p class="formula">K = 25 + 8 · 0 = 25</p>
 
-      <ul>
-        <li><strong>s</strong> = afstand;</li>
-        <li><strong>v</strong> = snelheid;</li>
-        <li><strong>t</strong> = tijd.</li>
-      </ul>
+    <p>
+      Dat klopt met de situatie.
+    </p>
 
+    <div class="callout">
+      <p><strong>Vertaal eerst de structuur, reken daarna.</strong></p>
       <p>
-        Als een trein 80 km/u rijdt gedurende 2,5 uur:
+        Zoek in een verhaal eerst naar een vast deel en een veranderlijk deel,
+        wanneer die structuur aanwezig is.
       </p>
-
-      <p class="formula">s = 80 · 2,5 = 200</p>
+    </div>
 
-      <p>
-        De afstand is dus 200 km.
-      </p>
 
-      <p>
-        Maar soms kennen we de afstand en de snelheid en willen we de tijd weten.
-        Dan moeten we de formule omvormen.
-      </p>
+    <h3>Invullen in een formule</h3>
 
+    <p>
+      Zodra een formule is opgesteld, kunnen we concrete waarden invullen.
+    </p>
 
-      <h3>Een formule omvormen</h3>
+    <p>
+      Neem:
+    </p>
 
-      <p>
-        In les 2.3 leerden we een onbekende vrijmaken in een vergelijking.
-        Precies dezelfde gedachte gebruiken we hier.
-      </p>
+    <p class="formula">K = 25 + 8x</p>
 
-      <p>
-        We beginnen met:
-      </p>
+    <p>
+      Stel dat iemand 6 maanden lid is.
+      Dan is:
+    </p>
 
-      <p class="formula">s = v · t</p>
+    <p class="formula">x = 6</p>
 
-      <p>
-        We willen t alleen krijgen.
-        Omdat t met v wordt vermenigvuldigd, delen we beide leden door v:
-      </p>
+    <p>
+      Vervang <span class="formula-inline">x</span> door 6:
+    </p>
 
-      <p class="formula">s / v = v · t / v</p>
+    <p class="formula">K = 25 + 8 · 6</p>
 
-      <p class="formula">t = s / v</p>
+    <p class="formula">K = 25 + 48</p>
 
-      <p>
-        De oorspronkelijke formule en de omgevormde formule beschrijven
-        dezelfde relatie:
-      </p>
+    <p class="formula">K = 73</p>
 
-      <p class="formula">s = v · t</p>
+    <p>
+      De totale kost is dus 73 euro.
+    </p>
 
-      <p class="formula">t = s / v</p>
+    <p>
+      Dit is dezelfde techniek die we in les 2.1 leerden:
+      een waarde voor een variabele invullen in een algebraïsche uitdrukking.
+      Het verschil is dat de formule nu een concrete situatie beschrijft.
+    </p>
 
-      <p>
-        Als s = 200 km en v = 80 km/u:
-      </p>
 
-      <p class="formula">t = 200 / 80 = 2,5</p>
+    <h3>Eenheden horen bij de formule</h3>
 
-      <p>
-        De tijd is dus 2,5 uur.
-      </p>
+    <p>
+      Getallen in een formule hebben vaak een eenheid.
+      Die eenheden kunnen ons helpen om te controleren of een formule logisch is.
+    </p>
 
-      <div class="callout">
-        <p><strong>Een formule omvormen is algebra.</strong></p>
-        <p>
-          Je gebruikt dezelfde balansregels als bij vergelijkingen:
-          wat je met het ene lid doet, doe je ook met het andere.
-        </p>
-      </div>
+    <p>
+      In:
+    </p>
 
+    <p class="formula">P = 4 + 2x</p>
 
-      <h3>Verschillende vormen van dezelfde formule</h3>
+    <p>
+      is <span class="formula-inline">P</span> uitgedrukt in euro en
+      <span class="formula-inline">x</span> in kilometer.
+      De 4 heeft dus eenheid euro.
+      De 2 heeft eenheid euro per kilometer.
+    </p>
 
-      <p>
-        Eén relatie kan vaak op verschillende manieren worden geschreven,
-        afhankelijk van wat je wilt berekenen.
-      </p>
+    <p>
+      Als we 2 euro per kilometer vermenigvuldigen met
+      <span class="formula-inline">x</span> kilometer,
+      krijgen we een bedrag in euro:
+    </p>
 
-      <p>
-        Uit:
-      </p>
+    <p class="formula">2 euro/km · x km = 2x euro</p>
 
-      <p class="formula">s = v · t</p>
+    <p>
+      Zowel het vaste deel als het veranderlijke deel zijn dus bedragen in euro.
+      Ze kunnen daarom worden opgeteld.
+    </p>
 
+    <div class="callout">
+      <p><strong>Eenheden zijn een alarmbel.</strong></p>
       <p>
-        volgen:
+        Als twee grootheden bij een optelling niet dezelfde eenheid hebben,
+        klopt er waarschijnlijk iets niet aan de formule.
       </p>
-
-      <p class="formula">v = s / t</p>
+    </div>
 
-      <p class="formula">t = s / v</p>
-
-      <p>
-        Deze drie formules zijn geen drie verschillende natuurwetten.
-        Ze zijn drie algebraïsche vormen van dezelfde relatie.
-      </p>
 
-      <p>
-        Welke vorm het handigst is, hangt af van welke grootheid onbekend is.
-      </p>
+    <h3>Een formule omvormen</h3>
 
-      <p>
-        Ken je snelheid en tijd, dan gebruik je:
-      </p>
+    <p>
+      Een formule kan ook worden omgevormd wanneer we een andere grootheid
+      willen berekenen.
+    </p>
 
-      <p class="formula">s = v · t</p>
+    <p>
+      Neem de bekende relatie tussen afstand, snelheid en tijd:
+    </p>
 
-      <p>
-        Ken je afstand en tijd, dan gebruik je:
-      </p>
+    <p class="formula">s = v · t</p>
 
-      <p class="formula">v = s / t</p>
+    <ul>
+      <li><strong>s</strong> = afstand;</li>
+      <li><strong>v</strong> = snelheid;</li>
+      <li><strong>t</strong> = tijd.</li>
+    </ul>
 
-      <p>
-        Ken je afstand en snelheid, dan gebruik je:
-      </p>
+    <p>
+      Stel dat we de tijd <strong>t</strong> willen berekenen.
+      Omdat <span class="formula-inline">t</span> met
+      <span class="formula-inline">v</span> wordt vermenigvuldigd,
+      delen we beide leden door <span class="formula-inline">v</span>:
+    </p>
 
-      <p class="formula">t = s / v</p>
+    <p class="formula">s / v = v · t / v</p>
 
+    <p class="formula">t = s / v</p>
 
-      <h3>Controle met eenheden</h3>
+    <p>
+      De oorspronkelijke formule en de omgevormde formule beschrijven
+      dus dezelfde relatie.
+    </p>
 
-      <p>
-        De eenheden kunnen ook controleren of de omgevormde formule klopt.
-      </p>
+    <p>
+      Bijvoorbeeld: een trein legt 200 km af met een snelheid van 80 km/u.
+    </p>
 
-      <p>
-        Voor:
-      </p>
+    <p class="formula">t = 200 / 80 = 2,5</p>
 
-      <p class="formula">s = v · t</p>
+    <p>
+      De reistijd is 2,5 uur.
+    </p>
 
+    <div class="callout">
+      <p><strong>Omvormen is algebra.</strong></p>
       <p>
-        geldt bijvoorbeeld:
+        Je gebruikt dezelfde balansregels als bij vergelijkingen:
+        wat je met het ene lid doet, doe je ook met het andere.
       </p>
+    </div>
 
-      <p class="formula">km = (km/u) · u</p>
 
-      <p>
-        De eenheid uur valt weg en er blijft kilometer over.
-      </p>
+    <h3>Controle met eenheden</h3>
 
-      <p>
-        Voor:
-      </p>
+    <p>
+      De eenheden kunnen ook controleren of de omgevormde formule klopt.
+    </p>
 
-      <p class="formula">v = s / t</p>
+    <p>
+      Voor:
+    </p>
 
-      <p>
-        krijgen we:
-      </p>
+    <p class="formula">s = v · t</p>
 
-      <p class="formula">km / u = km/u</p>
+    <p>
+      geldt bijvoorbeeld:
+    </p>
 
-      <p>
-        Ook dat klopt.
-      </p>
+    <p class="formula">km = (km/u) · u</p>
 
-      <p>
-        Als je bij een berekening bijvoorbeeld een snelheid in kilometer per uur
-        verwacht maar eindigt met kilometer, weet je dat er ergens een probleem
-        zit.
-      </p>
+    <p>
+      De eenheid uur valt weg en er blijft kilometer over.
+    </p>
 
+    <p>
+      Voor:
+    </p>
 
-      <h3>Een formule kan verschillende grootheden verbinden</h3>
+    <p class="formula">t = s / v</p>
 
-      <p>
-        Formules beschrijven vaak een verband tussen meerdere grootheden.
-      </p>
+    <p>
+      krijgen we:
+    </p>
 
-      <p>
-        De oppervlakte van een rechthoek is:
-      </p>
+    <p class="formula">u = km / (km/u)</p>
 
-      <p class="formula">A = l · b</p>
+    <p>
+      Ook dat klopt: de eenheid van de uitkomst is uur.
+    </p>
 
-      <p>
-        waarbij:
-      </p>
 
-      <ul>
-        <li>A de oppervlakte is;</li>
-        <li>l de lengte is;</li>
-        <li>b de breedte is.</li>
-      </ul>
+    <h3>Niet elke waarde is zinvol</h3>
 
-      <p>
-        Voor een rechthoek van 8 cm bij 5 cm:
-      </p>
+    <p>
+      Een formule kan algebraïsch waarden toelaten die in de werkelijkheid
+      geen betekenis hebben.
+    </p>
 
-      <p class="formula">A = 8 · 5 = 40</p>
+    <p>
+      Neem opnieuw:
+    </p>
 
-      <p>
-        De oppervlakte is 40 cm².
-      </p>
+    <p class="formula">K = 25 + 8x</p>
 
-      <p>
-        Als de oppervlakte en de lengte bekend zijn, kunnen we de formule
-        omvormen om de breedte te vinden:
-      </p>
+    <p>
+      Wiskundig kunnen we bijvoorbeeld <span class="formula-inline">x = −3</span>
+      invullen:
+    </p>
 
-      <p class="formula">b = A / l</p>
+    <p class="formula">K = 25 + 8 · (−3) = 1</p>
 
-      <p>
-        Bijvoorbeeld bij A = 40 cm² en l = 8 cm:
-      </p>
+    <p>
+      De berekening is algebraïsch correct.
+      Maar een lidmaatschap van −3 maanden heeft in deze context geen betekenis.
+    </p>
 
-      <p class="formula">b = 40 / 8 = 5 cm</p>
+    <p>
+      De context legt dus beperkingen op aan de variabelen.
+      In dit voorbeeld is een waarde als <span class="formula-inline">x = 6</span>
+      zinvol, maar een negatieve duur niet.
+    </p>
 
+    <div class="callout">
+      <p><strong>Een formule en haar context horen bij elkaar.</strong></p>
       <p>
-        Ook hier gebruiken we dus dezelfde algebra om een andere grootheid
-        vrij te maken.
+        Algebra kan meer waarden toelaten dan de werkelijkheid.
+        Controleer daarom altijd of de gekozen waarden in de situatie
+        betekenisvol zijn.
       </p>
+    </div>
 
 
-      <h3>Niet elke formule is zomaar geldig voor elke waarde</h3>
-
-      <p>
-        Een formule kan algebraïsch waarden toelaten die in de werkelijkheid
-        geen betekenis hebben.
-      </p>
+    <h3>Een model is een vereenvoudiging</h3>
 
-      <p>
-        Neem opnieuw:
-      </p>
+    <p>
+      Een formule is meestal geen volledige kopie van de werkelijkheid.
+      Ze is een <strong>model</strong>: een vereenvoudigde beschrijving
+      waarin we alleen de eigenschappen opnemen die voor het probleem
+      belangrijk zijn.
+    </p>
 
-      <p class="formula">K = 25 + 8x</p>
+    <p>
+      Bij het taximodel:
+    </p>
 
-      <p>
-        Wiskundig kunnen we bijvoorbeeld x = −3 invullen:
-      </p>
+    <p class="formula">P = 4 + 2x</p>
 
-      <p class="formula">K = 25 + 8 · (−3) = 1</p>
+    <p>
+      doen we alsof de prijs exact 2 euro per kilometer stijgt.
+      We houden bijvoorbeeld geen rekening met verkeersdrukte,
+      wachttijd, extra toeslagen of verschillende tarieven.
+    </p>
 
-      <p>
-        De berekening is algebraïsch correct.
-        Maar een lidmaatschap van −3 maanden heeft in deze context geen
-        betekenis.
-      </p>
+    <p>
+      Dat betekent niet automatisch dat de formule "fout" is.
+      De vraag is of het model geschikt is voor de situatie waarvoor
+      we het gebruiken.
+    </p>
 
+    <div class="callout">
+      <p><strong>Een model is een vereenvoudiging.</strong></p>
       <p>
-        De context legt dus beperkingen op aan de variabelen.
-        In dit voorbeeld is een waarde als x = 6 zinvol, maar een negatieve
-        duur niet.
+        Een model hoeft niet alles uit de werkelijkheid te bevatten.
+        Het moet vooral de relevante structuur voor het probleem beschrijven.
       </p>
-
-      <div class="callout">
-        <p><strong>Een formule en haar context horen bij elkaar.</strong></p>
-        <p>
-          Algebra kan meer waarden toelaten dan de werkelijkheid.
-          Controleer daarom altijd of de gekozen waarden fysisch,
-          praktisch of logisch mogelijk zijn.
-        </p>
-      </div>
+    </div>
 
 
-      <h3>Een model is een vereenvoudiging</h3>
+    <h3>Een model controleren</h3>
 
-      <p>
-        Een formule is meestal geen volledige kopie van de werkelijkheid.
-        Ze is een <strong>model</strong>: een vereenvoudigde beschrijving
-        waarin we alleen de eigenschappen opnemen die voor het probleem
-        belangrijk zijn.
-      </p>
+    <p>
+      Nadat je een formule hebt opgesteld, kun je verschillende controles
+      uitvoeren.
+    </p>
 
-      <p>
-        Bij het taximodel:
-      </p>
+    <ol>
+      <li>
+        <strong>Controleer de betekenis van de letters.</strong>
+        Weet je wat elke variabele voorstelt?
+      </li>
+      <li>
+        <strong>Controleer de eenheden.</strong>
+        Kun je de grootheden volgens de formule correct combineren?
+      </li>
+      <li>
+        <strong>Test een eenvoudige waarde.</strong>
+        Wat gebeurt er bijvoorbeeld wanneer een variabele 0 is?
+      </li>
+      <li>
+        <strong>Controleer een concreet geval.</strong>
+        Komt de formule overeen met een situatie waarvan je het antwoord
+        al kent?
+      </li>
+      <li>
+        <strong>Controleer de uitkomst.</strong>
+        Heeft het antwoord in de werkelijkheid betekenis?
+      </li>
+    </ol>
 
-      <p class="formula">P = 4 + 2x</p>
+    <p>
+      Deze controles zijn belangrijk omdat een algebraïsch correcte
+      berekening nog altijd kan vertrekken van een verkeerd model.
+    </p>
 
-      <p>
-        doen we alsof de prijs exact 2 euro per kilometer stijgt.
-        We houden bijvoorbeeld geen rekening met verkeersdrukte,
-        wachttijd, extra toeslagen of verschillende tarieven.
-      </p>
 
-      <p>
-        Dat betekent niet automatisch dat de formule "fout" is.
-        De vraag is of het model geschikt is voor de situatie waarvoor
-        we het gebruiken.
-      </p>
+    <h3>Een volledig voorbeeld</h3>
 
-      <div class="callout">
-        <p><strong>Een goed model is niet noodzakelijk volledig.</strong></p>
-        <p>
-          Het moet vooral de relevante structuur van het probleem
-          voldoende goed beschrijven voor het doel waarvoor we het gebruiken.
-        </p>
-      </div>
+    <p>
+      Een zwembad bevat aanvankelijk 10 000 liter water.
+      Een pomp voegt 250 liter per minuut toe.
+      We willen de hoeveelheid water na <span class="formula-inline">x</span>
+      minuten beschrijven.
+    </p>
 
+    <p>
+      Het beginvolume is:
+    </p>
 
-      <h3>Een model controleren</h3>
+    <p class="formula">10 000</p>
 
-      <p>
-        Nadat je een formule hebt opgesteld, kun je verschillende controles
-        uitvoeren.
-      </p>
+    <p>
+      Per minuut komt er 250 liter bij.
+      Na <span class="formula-inline">x</span> minuten is dat:
+    </p>
 
-      <ol>
-        <li>
-          <strong>Controleer de betekenis van de letters.</strong>
-          Weet je wat elke variabele voorstelt?
-        </li>
-        <li>
-          <strong>Controleer de eenheden.</strong>
-          Kun je de grootheden volgens de formule correct combineren?
-        </li>
-        <li>
-          <strong>Test een eenvoudige waarde.</strong>
-          Wat gebeurt er bijvoorbeeld wanneer een variabele 0 is?
-        </li>
-        <li>
-          <strong>Controleer een concreet geval.</strong>
-          Komt de formule overeen met een situatie waarvan je het antwoord
-          al kent?
-        </li>
-        <li>
-          <strong>Controleer de uitkomst.</strong>
-          Heeft het antwoord in de werkelijkheid betekenis?
-        </li>
-      </ol>
+    <p class="formula">250x</p>
 
-      <p>
-        Deze controles zijn belangrijk omdat een algebraïsch correcte
-        berekening nog altijd kan vertrekken van een verkeerd model.
-      </p>
+    <p>
+      De hoeveelheid water <strong>W</strong> is dus:
+    </p>
 
+    <p class="formula">W = 10 000 + 250x</p>
 
-      <h3>Een volledig voorbeeld</h3>
+    <p>
+      Na 12 minuten:
+    </p>
 
-      <p>
-        Een zwembad heeft een vaste inhoud van 10 000 liter water.
-        Een pomp vult het zwembad met 250 liter per minuut.
-        We willen de hoeveelheid water na x minuten beschrijven.
-      </p>
+    <p class="formula">W = 10 000 + 250 · 12</p>
 
-      <p>
-        Het vaste beginvolume is:
-      </p>
+    <p class="formula">W = 13 000</p>
 
-      <p class="formula">10 000</p>
+    <p>
+      Algebraïsch geeft het model dus 13 000 liter.
+    </p>
 
-      <p>
-        Per minuut komt er 250 liter bij.
-        Na x minuten is dat:
-      </p>
+    <p>
+      Maar nu moeten we opnieuw naar de werkelijkheid kijken.
+      Als het zwembad een maximale inhoud van 10 000 liter heeft,
+      kan het model niet blijven gelden zodra het zwembad vol is.
+    </p>
 
-      <p class="formula">250x</p>
+    <p>
+      De formule beschrijft dus het vulproces binnen een bepaald bereik.
+      Zodra de situatie verandert, kan ook een ander model nodig zijn.
+    </p>
 
+    <div class="callout">
+      <p><strong>Dit is modelleren:</strong></p>
       <p>
-        De hoeveelheid water W is dus:
+        werkelijkheid → grootheden herkennen → variabelen kiezen →
+        formule opstellen → berekenen → terugvertalen naar de werkelijkheid
+        → controleren of het model nog geldig is.
       </p>
-
-      <p class="formula">W = 10 000 + 250x</p>
+    </div>
 
-      <p>
-        Na 12 minuten:
-      </p>
 
-      <p class="formula">W = 10 000 + 250 · 12</p>
+    <h3>Van werkelijkheid naar formule en terug</h3>
 
-      <p class="formula">W = 10 000 + 3 000</p>
+    <p>
+      Algebraïsch modelleren heeft dus twee richtingen.
+    </p>
 
-      <p class="formula">W = 13 000</p>
+    <p>
+      Eerst vertalen we een concrete situatie naar wiskunde:
+    </p>
 
-      <p>
-        Algebraïsch geeft het model dus 13 000 liter.
-      </p>
+    <p class="formula">werkelijkheid → variabelen → formule</p>
 
-      <p>
-        Maar nu moeten we opnieuw naar de werkelijkheid kijken:
-        een zwembad met een inhoud van 10 000 liter kan geen onbeperkte
-        hoeveelheid water bevatten.
-      </p>
+    <p>
+      Daarna gebruiken we de formule om te rekenen:
+    </p>
 
-      <p>
-        De formule beschrijft dus het vulproces, maar alleen zolang het
-        model van toepassing is. Zodra het zwembad vol is, verandert
-        de situatie en moet het model worden aangepast.
-      </p>
+    <p class="formula">formule → berekening → antwoord</p>
 
-      <div class="callout">
-        <p><strong>Dit is modelleren:</strong></p>
-        <p>
-          werkelijkheid → grootheden herkennen → variabelen kiezen →
-          formule opstellen → berekenen → terugvertalen naar de werkelijkheid
-          → controleren of het model nog geldig is.
-        </p>
-      </div>
+    <p>
+      Maar daar stopt het niet.
+      Het antwoord moet opnieuw naar de oorspronkelijke situatie worden
+      vertaald:
+    </p>
 
+    <p class="formula">antwoord → betekenis in de werkelijkheid</p>
 
-      <h3>Van werkelijkheid naar formule en terug</h3>
+    <p>
+      Daarom is modelleren meer dan "een formule vinden".
+      Je moet voortdurend heen en weer kunnen bewegen tussen
+      <strong>werkelijkheid en wiskunde</strong>.
+    </p>
 
-      <p>
-        Algebraïsch modelleren heeft dus twee richtingen.
-      </p>
 
-      <p>
-        Eerst vertalen we een concrete situatie naar wiskunde:
-      </p>
+    <h3>Verband met vergelijkingen</h3>
 
-      <p class="formula">werkelijkheid → variabelen → formule</p>
+    <p>
+      In les 2.3 gebruikten we een vergelijking om een onbekende te vinden.
+      Bij modelleren kunnen we eerst zelf zo'n vergelijking opstellen
+      vanuit een situatie.
+    </p>
 
-      <p>
-        Daarna gebruiken we de formule om te rekenen:
-      </p>
+    <p>
+      Stel bijvoorbeeld dat een abonnement 25 euro kost plus 8 euro per maand:
+    </p>
 
-      <p class="formula">formule → berekening → antwoord</p>
+    <p class="formula">K = 25 + 8x</p>
 
-      <p>
-        Maar daar stopt het niet.
-        Het antwoord moet opnieuw naar de oorspronkelijke situatie worden
-        vertaald:
-      </p>
+    <p>
+      Als we willen weten na hoeveel maanden de totale kost 89 euro bedraagt,
+      krijgen we:
+    </p>
 
-      <p class="formula">antwoord → betekenis in de werkelijkheid</p>
+    <p class="formula">89 = 25 + 8x</p>
 
-      <p>
-        Daarom is modelleren meer dan "een formule vinden".
-        Je moet voortdurend heen en weer kunnen bewegen tussen
-        <strong>werkelijkheid en wiskunde</strong>.
-      </p>
+    <p>
+      Dit is nu een vergelijking uit les 2.3.
+    </p>
 
+    <p>
+      Trek 25 af:
+    </p>
 
-      <h3>Verband met vergelijkingen</h3>
+    <p class="formula">64 = 8x</p>
 
-      <p>
-        In les 2.3 gebruikten we een vergelijking om een onbekende te vinden.
-        Bij modelleren kunnen we eerst zelf zo'n vergelijking opstellen
-        vanuit een situatie.
-      </p>
+    <p>
+      Deel door 8:
+    </p>
 
-      <p>
-        Stel bijvoorbeeld dat een abonnement 25 euro kost plus 8 euro per maand:
-      </p>
+    <p class="formula">x = 8</p>
 
-      <p class="formula">K = 25 + 8x</p>
+    <p>
+      Het model levert hier de vergelijking.
+      De technieken uit les 2.3 helpen ons vervolgens om die vergelijking
+      op te lossen.
+    </p>
 
-      <p>
-        Als we willen weten na hoeveel maanden de totale kost 89 euro bedraagt,
-        krijgen we:
-      </p>
 
-      <p class="formula">89 = 25 + 8x</p>
+    <h3>Een formule laat de structuur zien</h3>
 
-      <p>
-        Dit is nu een vergelijking uit les 2.3.
-      </p>
+    <p>
+      Een goede formule vertelt meer dan alleen hoe je een getal moet
+      berekenen. Ze maakt de structuur van een probleem zichtbaar.
+    </p>
 
-      <p>
-        Trek 25 af:
-      </p>
+    <p>
+      In:
+    </p>
 
-      <p class="formula">64 = 8x</p>
+    <p class="formula">K = 25 + 8x</p>
 
-      <p>
-        Deel door 8:
-      </p>
+    <p>
+      zie je onmiddellijk:
+    </p>
 
-      <p class="formula">x = 8</p>
+    <ul>
+      <li>er is een vast startbedrag van 25 euro;</li>
+      <li>er komt 8 euro bij voor elke extra maand;</li>
+      <li>de totale kost hangt af van het aantal maanden <span class="formula-inline">x</span>.</li>
+    </ul>
 
-      <p>
-        Modelleren en vergelijkingen oplossen zijn dus geen losstaande
-        technieken. Het model levert de vergelijking die we vervolgens
-        met algebra kunnen oplossen.
-      </p>
+    <p>
+      In:
+    </p>
 
+    <p class="formula">A = l · b</p>
 
-      <h3>Een formule is een compacte beschrijving van een structuur</h3>
+    <p>
+      zie je dat de oppervlakte ontstaat uit het product van twee lengtes.
+    </p>
 
-      <p>
-        Een goede formule vertelt meer dan alleen hoe je een getal moet
-        berekenen. Ze maakt de structuur van een probleem zichtbaar.
-      </p>
+    <p>
+      In:
+    </p>
 
-      <p>
-        In:
-      </p>
+    <p class="formula">s = v · t</p>
 
-      <p class="formula">K = 25 + 8x</p>
+    <p>
+      zie je dat afstand ontstaat uit snelheid vermenigvuldigd met tijd.
+    </p>
 
-      <p>
-        zie je onmiddellijk:
-      </p>
+    <p>
+      Een formule is daarmee een compacte taal voor de structuur
+      van een probleem.
+    </p>
 
-      <ul>
-        <li>er is een vast startbedrag van 25;</li>
-        <li>er komt 8 bij voor elke extra maand;</li>
-        <li>de totale kost hangt af van x.</li>
-      </ul>
 
-      <p>
-        In:
-      </p>
+    <h3>Een vaste werkwijze</h3>
 
-      <p class="formula">A = l · b</p>
+    <ol>
+      <li>
+        Welke grootheden spelen een rol?
+        Welke letters en eenheden horen erbij?
+      </li>
+      <li>
+        Wat blijft vast en wat verandert?
+      </li>
+      <li>
+        Schrijf de formule en lees ze in woorden.
+      </li>
+      <li>
+        Vul waarden in of vorm de formule om wanneer dat nodig is.
+      </li>
+      <li>
+        Controleer de eenheden en de berekening.
+      </li>
+      <li>
+        Heeft het antwoord betekenis in de oorspronkelijke situatie?
+        Geldt het model nog?
+      </li>
+    </ol>
 
-      <p>
-        zie je dat de oppervlakte ontstaat uit het product van twee lengtes.
-      </p>
 
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
       <p>
-        In:
+        Algebraïsch modelleren betekent een situatie uit de werkelijkheid
+        vertalen naar wiskundige symbolen en formules.
       </p>
-
-      <p class="formula">s = v · t</p>
-
       <p>
-        zie je dat afstand ontstaat uit snelheid vermenigvuldigd met tijd.
+        We kiezen variabelen, beschrijven de relaties tussen de grootheden,
+        rekenen met de formule en vertalen het antwoord daarna terug naar
+        de werkelijkheid.
       </p>
-
       <p>
-        De formule is daarmee een compacte taal voor de structuur
-        van een probleem.
+        Een formule is een compact model van een structuur.
+        Daarom moeten we niet alleen kunnen rekenen met een formule,
+        maar ook begrijpen <strong>wat ze betekent, wanneer ze geldig is
+        en welke beperkingen het model heeft</strong>.
       </p>
-
-
-      <div class="callout">
-        <p><strong>Kernidee:</strong></p>
-        <p>
-          Algebraïsch modelleren betekent een situatie uit de werkelijkheid
-          vertalen naar wiskundige symbolen en formules.
-        </p>
-        <p>
-          We kiezen variabelen, beschrijven de relaties tussen de grootheden,
-          rekenen met de formule en vertalen het antwoord daarna terug naar
-          de werkelijkheid.
-        </p>
-        <p>
-          Een formule is nooit alleen een rekentruc:
-          ze is een compact model van een structuur.
-          Daarom moet je niet alleen kunnen rekenen met een formule,
-          maar ook begrijpen <strong>wat ze betekent, wanneer ze geldig is
-          en welke beperkingen het model heeft</strong>.
-        </p>
-      </div>
-    `
-  },
+    </div>
+  `
+},
     {
   id: "2.5",
   title: "Ongelijkheden & intervallen",
@@ -7048,7 +6474,7 @@ const MILESTONES_2 = [
   id: "2.11",
   title: "Functies als relaties",
   goal: "Hoe beschrijven we afhankelijkheid?",
-  theory: `
+  theory: /* html */`
 
     <p><strong>Doel:</strong></p>
     <ul>
@@ -8644,7 +8070,7 @@ const MILESTONES_2 = [
   id: "2.13",
   title: "Exponentiële & logaritmische functies",
   goal: "Hoe beschrijven we groei en inverse groei?",
-  theory: `
+  theory: /* html */`
 
     <p><strong>Doel:</strong></p>
     <ul>
