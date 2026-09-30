@@ -1250,46 +1250,63 @@ const MILESTONES_2 = [
   theory: /* html */`
     <h2>Ongelijkheden & intervallen</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>begrijpen wat een ongelijkheid betekent</li>
-      <li>een oplossingsverzameling voorstellen op een getallenlijn</li>
-      <li>eenvoudige ongelijkheden oplossen</li>
-      <li>begrijpen waarom het ongelijkheidsteken omkeert bij vermenigvuldigen of delen door een negatief getal</li>
-      <li>open en gesloten grenzen herkennen</li>
-      <li>oplossingen beschrijven met intervallen</li>
-      <li>absolute waarde begrijpen als afstand tot nul</li>
-      <li>rekening houden met beperkingen uit de context</li>
+      <li>Wat is een ongelijkheid en hoe verschilt ze van een vergelijking?</li>
+      <li>Hoe stellen we een oplossingsverzameling voor op een getallenlijn?</li>
+      <li>Hoe lossen we een eenvoudige ongelijkheid op?</li>
+      <li>Waarom keert het ongelijkheidsteken om bij vermenigvuldigen of delen door een negatief getal?</li>
+      <li>Hoe beschrijven we een oplossingsverzameling met intervalnotatie?</li>
+      <li>Hoe gebruiken we absolute waarde om afstanden op de getallenlijn te beschrijven?</li>
+      <li>Hoe houden we rekening met de betekenis van een variabele in een concrete situatie?</li>
     </ul>
 
 
     <h3>Niet één oplossing, maar een bereik</h3>
 
-    <p>Bij een vergelijking zoals:</p>
+    <p>
+      Bij een vergelijking zoals:
+    </p>
 
     <p class="formula">x + 3 = 7</p>
 
-    <p>zoeken we naar de waarde van x waarvoor de gelijkheid waar is. Daar is één oplossing:</p>
+    <p>
+      zoeken we naar de waarde van <span class="formula-inline">x</span>
+      waarvoor de gelijkheid waar is.
+    </p>
 
     <p class="formula">x = 4</p>
 
-    <p>Maar soms willen we geen exacte waarde vinden. We willen bijvoorbeeld weten welke waarden <strong>kleiner dan 4</strong> zijn.</p>
+    <p>
+      Er is hier één oplossing.
+    </p>
 
-    <p>Dan schrijven we:</p>
+    <p>
+      Maar soms willen we geen exacte waarde vinden.
+      We willen bijvoorbeeld alle getallen kennen die kleiner zijn dan 4.
+    </p>
 
     <p class="formula">x &lt; 4</p>
 
-    <p>Dit is een <strong>ongelijkheid</strong>.</p>
+    <p>
+      Dit is een <strong>ongelijkheid</strong>.
+      Ze beschrijft niet één getal, maar een hele verzameling getallen.
+    </p>
 
     <div class="callout">
-      <strong>Een ongelijkheid beschrijft meestal een verzameling oplossingen.</strong>
-      <p>In plaats van één waarde kunnen er veel, zelfs oneindig veel, oplossingen zijn.</p>
+      <p><strong>Een ongelijkheid beschrijft meestal een verzameling oplossingen.</strong></p>
+      <p>
+        In plaats van één waarde kunnen er veel, zelfs oneindig veel,
+        oplossingen zijn.
+      </p>
     </div>
 
 
     <h3>De belangrijkste ongelijkheidstekens</h3>
 
-    <p>We gebruiken verschillende tekens om waarden met elkaar te vergelijken.</p>
+    <p>
+      We gebruiken verschillende tekens om waarden met elkaar te vergelijken.
+    </p>
 
     <ul>
       <li><strong>&lt;</strong> betekent: kleiner dan</li>
@@ -1298,433 +1315,634 @@ const MILESTONES_2 = [
       <li><strong>≥</strong> betekent: groter dan of gelijk aan</li>
     </ul>
 
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">x &lt; 5</p>
 
-    <p>betekent dat x kleiner is dan 5.</p>
-
-    <p>En:</p>
+    <p>
+      betekent dat <span class="formula-inline">x</span> kleiner is dan 5.
+    </p>
 
     <p class="formula">x ≥ 5</p>
 
-    <p>betekent dat x groter dan of gelijk aan 5 is.</p>
+    <p>
+      betekent dat <span class="formula-inline">x</span> groter dan of gelijk
+      aan 5 is.
+    </p>
+
+    <p>
+      Het verschil tussen bijvoorbeeld
+      <span class="formula-inline">&lt;</span> en
+      <span class="formula-inline">≤</span> lijkt klein,
+      maar bepaalt of de grens zelf tot de oplossingen behoort.
+    </p>
 
 
     <h3>Een ongelijkheid op de getallenlijn</h3>
 
-    <p>Een ongelijkheid kunnen we zichtbaar maken op de getallenlijn.</p>
+    <p>
+      Een ongelijkheid kunnen we zichtbaar maken op de getallenlijn.
+    </p>
 
-
-    <p>Voor:</p>
+    <p>
+      Voor:
+    </p>
 
     <p class="formula">x &lt; 4</p>
 
-    <p>nemen we alle getallen links van 4.</p>
-    
+    <p>
+      nemen we alle getallen links van 4.
+      Het getal 4 zelf hoort er niet bij.
+    </p>
 
-    <p>Het getal 4 zelf hoort er niet bij, want 4 is niet kleiner dan 4.</p>
-
-    <p>Voor:</p>
+    <p>
+      Voor:
+    </p>
 
     <p class="formula">x ≤ 4</p>
 
-    <p>hoort 4 er wel bij.</p>
-    
+    <p>
+      hoort 4 er wel bij.
+    </p>
+
     <div class="callout">
-      <strong>De grens is belangrijk.</strong>
-      <p>Bij &lt; en &gt; hoort de grens niet bij de oplossing.</p>
-      <p>Bij ≤ en ≥ hoort de grens wel bij de oplossing.</p>
+      <p><strong>De grens is belangrijk.</strong></p>
+      <p>
+        Bij <span class="formula-inline">&lt;</span> en
+        <span class="formula-inline">&gt;</span> hoort de grens niet bij de oplossing.
+      </p>
+      <p>
+        Bij <span class="formula-inline">≤</span> en
+        <span class="formula-inline">≥</span> hoort de grens wel bij de oplossing.
+      </p>
     </div>
 
 
     <h3>Open en gesloten grenzen</h3>
-<div class="theory-image">
-        <img
-          src="assets/getallenlijn-kleiner-dan-4.svg"
-          alt="Getallenlijn voor x kleiner dan 4. Open bol op 4, pijl naar links."
-        >
-      </div>
-      <div class="theory-image">
-        <img
-          src="assets/getallenlijn-kleiner-gelijk-4.svg"
-          alt="Getallenlijn voor x kleiner dan of gelijk aan 4. Dichte bol op 4, pijl naar links."
-        >
-      </div>    
-    <div class="theory-image">
-        <img
-          src="assets/getallenlijn-groter-dan-4.svg"
-          alt="Getallenlijn: open bol op 4 en een pijl naar rechts. x groter dan 4, de 4 telt niet mee."
-        >
-      </div>
+
+    <p>
+      Op een getallenlijn gebruiken we een <strong>open bol</strong>
+      wanneer de grens niet tot de oplossingen behoort.
+      Een <strong>gesloten bol</strong> betekent dat de grens wel inbegrepen is.
+    </p>
 
     <div class="theory-image">
-        <img
-          src="assets/getallenlijn-groter-gelijk-4.svg"
-          alt="Getallenlijn voor x groter dan of gelijk aan 4. Dichte bol op 4, pijl naar rechts."
-        >
-      </div>
+      <img
+        src="assets/getallenlijn-kleiner-dan-4.svg"
+        alt="Getallenlijn voor x kleiner dan 4. Open bol op 4, pijl naar links."
+      >
+    </div>
 
-    <p>De richting van de oplossing wordt bepaald door het ongelijkheidsteken.</p>
+    <div class="theory-image">
+      <img
+        src="assets/getallenlijn-kleiner-gelijk-4.svg"
+        alt="Getallenlijn voor x kleiner dan of gelijk aan 4. Dichte bol op 4, pijl naar links."
+      >
+    </div>
+
+    <div class="theory-image">
+      <img
+        src="assets/getallenlijn-groter-dan-4.svg"
+        alt="Getallenlijn voor x groter dan 4. Open bol op 4, pijl naar rechts."
+      >
+    </div>
+
+    <div class="theory-image">
+      <img
+        src="assets/getallenlijn-groter-gelijk-4.svg"
+        alt="Getallenlijn voor x groter dan of gelijk aan 4. Dichte bol op 4, pijl naar rechts."
+      >
+    </div>
+
+    <p>
+      De richting van de oplossing wordt bepaald door het ongelijkheidsteken.
+      De bol vertelt of de grens zelf meetelt.
+    </p>
 
 
     <h3>Ongelijkheden oplossen zoals vergelijkingen</h3>
 
-    <p>Veel regels uit 2.3 blijven geldig.</p>
+    <p>
+      Veel regels uit les 2.3 blijven geldig.
+      We mogen dezelfde bewerking aan beide kanten uitvoeren.
+    </p>
 
-    <p>Neem:</p>
+    <p>
+      Neem:
+    </p>
 
     <p class="formula">x + 3 &lt; 7</p>
 
-    <p>We trekken 3 af aan beide kanten:</p>
+    <p>
+      Trek 3 af aan beide kanten:
+    </p>
 
     <p class="formula">x + 3 − 3 &lt; 7 − 3</p>
 
-    <p>Dus:</p>
+    <p>
+      Dus:
+    </p>
 
     <p class="formula">x &lt; 4</p>
 
-    <p>Net als bij vergelijkingen voeren we dezelfde bewerking aan beide kanten uit.</p>
-
     <div class="callout">
-      <strong>Optellen en aftrekken veranderen de richting van een ongelijkheid niet.</strong>
+      <p><strong>Optellen en aftrekken veranderen de richting niet.</strong></p>
+      <p>
+        Bij deze bewerkingen blijft het ongelijkheidsteken dus hetzelfde.
+      </p>
     </div>
 
 
     <h3>Vermenigvuldigen en delen door een positief getal</h3>
 
-    <p>Ook vermenigvuldigen en delen kunnen we gebruiken.</p>
+    <p>
+      Ook vermenigvuldigen en delen kunnen we gebruiken.
+      Zolang we vermenigvuldigen of delen door een
+      <strong>positief</strong> getal, verandert de richting van het
+      ongelijkheidsteken niet.
+    </p>
 
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">2x &lt; 10</p>
 
-    <p>We delen beide kanten door 2:</p>
-
-    <p class="formula">2x / 2 &lt; 10 / 2</p>
-
-    <p>Dus:</p>
+    <p>
+      Deel beide kanten door 2:
+    </p>
 
     <p class="formula">x &lt; 5</p>
 
-    <p>De richting van het ongelijkheidsteken blijft hetzelfde.</p>
-
-    <p>Hetzelfde geldt voor delen door of vermenigvuldigen met elk <strong>positief</strong> getal.</p>
+    <p>
+      Het teken blijft dus hetzelfde.
+    </p>
 
 
     <h3>Waarom keert het teken om bij een negatief getal?</h3>
 
-    <p>Hier wijkt een ongelijkheid af van een vergelijking.</p>
+    <p>
+      Bij vermenigvuldigen of delen door een <strong>negatief getal</strong>
+      gebeurt er iets anders.
+    </p>
 
-    <p>Neem:</p>
+    <p>
+      Kijk eerst naar:
+    </p>
 
     <p class="formula">2 &lt; 5</p>
 
-    <p>Vermenigvuldig beide kanten met −1:</p>
+    <p>
+      Vermenigvuldig beide kanten met −1:
+    </p>
 
     <p class="formula">−2 &gt; −5</p>
 
-    <p>De richting van het teken moet dus omkeren.</p>
-
-    <p>Dat komt doordat vermenigvuldigen met een negatief getal de getallenlijn als het ware omkeert: positieve getallen worden negatief en de volgorde van de getallen verandert.</p>
+    <p>
+      Het teken moet omkeren.
+      Op de getallenlijn worden de positieve en negatieve richting
+      als het ware verwisseld.
+    </p>
 
     <div class="callout">
-      <strong>Belangrijke regel:</strong>
-      <p>Vermenigvuldig of deel je een ongelijkheid door een <strong>negatief</strong> getal, dan moet je het ongelijkheidsteken omkeren.</p>
+      <p><strong>Belangrijke regel:</strong></p>
+      <p>
+        Vermenigvuldig of deel je een ongelijkheid door een
+        <strong>negatief getal</strong>, dan moet je het
+        ongelijkheidsteken omkeren.
+      </p>
     </div>
 
 
-    <h3>Een voorbeeld met een negatief getal</h3>
+    <h3>Een ongelijkheid met een negatieve factor</h3>
 
-    <p>Neem:</p>
+    <p>
+      Neem:
+    </p>
 
     <p class="formula">−3x &lt; 12</p>
 
-    <p>We willen x alleen krijgen. Daarom delen we door −3.</p>
+    <p>
+      We willen <span class="formula-inline">x</span> alleen krijgen.
+      Daarom delen we door −3.
+    </p>
 
-    <p>Omdat −3 negatief is, keert het teken om:</p>
+    <p>
+      Omdat −3 negatief is, keert het teken om:
+    </p>
 
     <p class="formula">x &gt; −4</p>
 
-    <p>Dit is een veelgemaakte fout: wie vergeet het teken om te keren, krijgt de verkeerde oplossingsverzameling.</p>
+    <p>
+      De oplossingsverzameling bestaat dus uit alle getallen groter dan −4.
+    </p>
 
-
-    <h3>Een tweede manier om de tekenomkering te begrijpen</h3>
-
-    <p>We kunnen hetzelfde idee bekijken met concrete getallen.</p>
-
-    <p>We weten:</p>
-
-    <p class="formula">3 &lt; 7</p>
-
-    <p>Als we beide kanten vermenigvuldigen met −2:</p>
-
-    <p class="formula">3 · (−2) = −6</p>
-
-    <p class="formula">7 · (−2) = −14</p>
-
-    <p>We krijgen:</p>
-
-    <p class="formula">−6 &gt; −14</p>
-
-    <p>De oorspronkelijke volgorde is omgekeerd.</p>
-
-    <p>Dit is geen aparte truc voor ongelijkheden, maar een gevolg van de eigenschappen van negatieve getallen.</p>
+    <p>
+      Dit is een veelgemaakte fout:
+      wie vergeet het teken om te keren, krijgt de verkeerde
+      oplossingsverzameling.
+    </p>
 
 
     <h3>Twee grenzen tegelijk</h3>
 
-    <p>Soms leggen we tegelijk een onder- en een bovengrens op.</p>
-
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Soms leggen we tegelijk een onder- en een bovengrens op.
+    </p>
 
     <p class="formula">2 &lt; x &lt; 7</p>
 
-    <p>Dit betekent dat x groter is dan 2 én kleiner dan 7.</p>
+    <p>
+      Dit betekent:
+      <span class="formula-inline">x</span> is groter dan 2
+      <strong>en</strong> kleiner dan 7.
+    </p>
 
-    <p>De oplossingen zijn bijvoorbeeld:</p>
+    <p>
+      De getallen 3, 4, 5 en 6 voldoen bijvoorbeeld aan deze voorwaarde.
+      Maar ook alle andere reële getallen tussen 2 en 7.
+    </p>
 
-    <p class="formula">3, 4, 5, 6</p>
+    <p>
+      De grenswaarden 2 en 7 horen er niet bij.
+    </p>
 
-    <p>maar ook alle andere reële getallen tussen 2 en 7.</p>
-
-    <p>De grenswaarden 2 en 7 zijn zelf geen oplossingen.</p>
-
-    <p>We kunnen ook een gesloten grens hebben:</p>
+    <p>
+      Als de grenzen wel inbegrepen zijn, schrijven we:
+    </p>
 
     <p class="formula">2 ≤ x ≤ 7</p>
-
-    <p>Dan behoren 2 en 7 wel tot de oplossingen.</p>
 
 
     <h3>Intervallen</h3>
 
+    <p>
+      Een hele verzameling getallen kunnen we compact beschrijven met een
+      <strong>interval</strong>.
+    </p>
+
     <div class="theory-image">
-      <img src="assets/getallenlijn-tussen-min1-en-3.svg" alt="Een interval met een gesloten grens bij −1 en een open grens bij 3: [−1, 3).">
+      <img
+        src="assets/getallenlijn-tussen-min1-en-3.svg"
+        alt="Een interval met een gesloten grens bij −1 en een open grens bij 3: [−1, 3)."
+      >
     </div>
 
-    <p>Een hele verzameling getallen kunnen we compact beschrijven met een <strong>interval</strong>.</p>
-
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">2 &lt; x &lt; 7</p>
 
-    <p>schrijven we als:</p>
+    <p>
+      schrijven we als:
+    </p>
 
     <p class="formula">(2, 7)</p>
 
-    <p>De ronde haakjes betekenen dat de grenswaarden niet inbegrepen zijn.</p>
+    <p>
+      De ronde haakjes betekenen dat 2 en 7 niet inbegrepen zijn.
+    </p>
 
-    <p>Voor:</p>
+    <p>
+      Voor:
+    </p>
 
     <p class="formula">2 ≤ x ≤ 7</p>
 
-    <p>schrijven we:</p>
+    <p>
+      schrijven we:
+    </p>
 
     <p class="formula">[2, 7]</p>
 
-    <p>De vierkante haakjes betekenen dat de grenswaarden wel inbegrepen zijn.</p>
+    <p>
+      De vierkante haakjes betekenen dat de grenswaarden wel inbegrepen zijn.
+    </p>
 
     <div class="callout">
-      <strong>Intervalnotatie is een compacte taal voor oplossingsverzamelingen.</strong>
-      <p>Ronde haakjes: grens niet inbegrepen.</p>
-      <p>Vierkante haakjes: grens wel inbegrepen.</p>
+      <p><strong>Intervalnotatie is een compacte taal voor oplossingsverzamelingen.</strong></p>
+      <p>
+        Ronde haakjes: grens niet inbegrepen.
+      </p>
+      <p>
+        Vierkante haakjes: grens wel inbegrepen.
+      </p>
     </div>
 
 
-    <h3>Een interval kan ook maar één grens hebben</h3>
+    <h3>Een interval met één grens</h3>
 
-    <p>Bij:</p>
+    <p>
+      Niet elke oplossingsverzameling heeft een onder- én een bovengrens.
+    </p>
+
+    <p>
+      Bij:
+    </p>
 
     <p class="formula">x &lt; 4</p>
 
-    <p>zijn er oneindig veel oplossingen naar links.</p>
-
-    <p>In intervalnotatie schrijven we:</p>
+    <p>
+      zijn er oneindig veel oplossingen naar links.
+      In intervalnotatie schrijven we:
+    </p>
 
     <p class="formula">(−∞, 4)</p>
 
-    <p>Bij:</p>
+    <p>
+      Bij:
+    </p>
 
     <p class="formula">x ≥ 4</p>
 
-    <p>schrijven we:</p>
+    <p>
+      schrijven we:
+    </p>
 
     <p class="formula">[4, ∞)</p>
 
-    <p>Het symbool ∞ is geen gewoon getal. Het geeft aan dat de verzameling onbeperkt doorgaat.</p>
+    <p>
+      Het symbool <span class="formula-inline">∞</span> is geen gewoon getal.
+      Het geeft aan dat de verzameling onbeperkt doorgaat.
+    </p>
 
-    <p>Daarom gebruiken we bij ∞ altijd een ronde haak.</p>
+    <p>
+      Daarom gebruiken we bij <span class="formula-inline">∞</span>
+      altijd een ronde haak.
+    </p>
+
 
     <h3>Absolute waarde als afstand</h3>
 
-    <p>Op de getallenlijn kunnen we ook de <strong>afstand van een getal tot nul</strong> bekijken.</p>
+    <p>
+      Op de getallenlijn kunnen we ook de
+      <strong>afstand van een getal tot nul</strong> bekijken.
+    </p>
 
-    <p>De afstand van 5 tot 0 is 5:</p>
+    <p>
+      De afstand van 5 tot 0 is 5:
+    </p>
 
     <p class="formula">|5| = 5</p>
 
-    <p>De afstand van −5 tot 0 is ook 5:</p>
+    <p>
+      De afstand van −5 tot 0 is ook 5:
+    </p>
 
     <p class="formula">|−5| = 5</p>
 
-    <p>De absolute waarde van een getal is dus nooit negatief.</p>
+    <p>
+      De absolute waarde van een getal is dus de afstand van dat getal
+      tot nul.
+      Een afstand is nooit negatief.
+    </p>
 
     <div class="callout">
-      <strong>Absolute waarde = afstand tot nul.</strong>
-      <p>Het teken van het getal speelt daarbij geen rol voor de afstand.</p>
+      <p><strong>Absolute waarde = afstand tot nul.</strong></p>
+      <p>
+        Het teken van het getal bepaalt niet hoe groot de afstand is.
+      </p>
     </div>
 
 
-    <h3>Absolute waarde en afstand tussen twee getallen</h3>
+    <h3>Afstand tussen twee getallen</h3>
 
-    <p>Absolute waarde is niet alleen nuttig voor de afstand tot nul.</p>
+    <p>
+      Absolute waarde kunnen we ook gebruiken om de afstand tussen
+      twee getallen te berekenen.
+    </p>
 
-    <p>De afstand tussen twee getallen a en b is:</p>
+    <p>
+      De afstand tussen <span class="formula-inline">a</span> en
+      <span class="formula-inline">b</span> is:
+    </p>
 
     <p class="formula">|a − b|</p>
 
-    <p>Bijvoorbeeld, de afstand tussen 3 en 8 is:</p>
+    <p>
+      Bijvoorbeeld, de afstand tussen 3 en 8 is:
+    </p>
 
     <p class="formula">|8 − 3| = |5| = 5</p>
 
-    <p>Maar de afstand tussen −2 en 4 is:</p>
+    <p>
+      De afstand tussen −2 en 4 is:
+    </p>
 
     <p class="formula">|4 − (−2)| = |6| = 6</p>
 
-    <p>Omdat afstand nooit negatief kan zijn, geeft de absolute waarde precies de juiste afstand.</p>
+    <p>
+      De absolute waarde zorgt ervoor dat de afstand niet negatief wordt,
+      ongeacht in welke volgorde we de twee getallen nemen.
+    </p>
 
 
     <h3>Absolute waarde als voorwaarde</h3>
 
-    <p>We kunnen absolute waarde ook gebruiken om een afstandsvoorwaarde te beschrijven.</p>
+    <p>
+      We kunnen absolute waarde ook gebruiken om een afstandsvoorwaarde
+      te beschrijven.
+    </p>
 
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">|x| &lt; 3</p>
 
-    <p>Dit betekent:</p>
+    <p>
+      betekent:
+      de afstand van <span class="formula-inline">x</span> tot 0
+      is kleiner dan 3.
+    </p>
 
-    <p><strong>de afstand van x tot 0 is kleiner dan 3.</strong></p>
-
-    <p>Op de getallenlijn betekent dat dat x tussen −3 en 3 ligt:</p>
+    <p>
+      Op de getallenlijn betekent dit dat
+      <span class="formula-inline">x</span> tussen −3 en 3 ligt:
+    </p>
 
     <p class="formula">−3 &lt; x &lt; 3</p>
 
-    <p>Evenzo betekent:</p>
+    <p>
+      Evenzo betekent:
+    </p>
 
     <p class="formula">|x| ≤ 3</p>
 
-    <p>dat:</p>
+    <p>
+      dat:
+    </p>
 
     <p class="formula">−3 ≤ x ≤ 3</p>
 
     <div class="callout">
-      <strong>Absolute waarde vertaalt een afstandsvoorwaarde naar een interval.</strong>
+      <p><strong>Absolute waarde vertaalt een afstandsvoorwaarde naar een interval.</strong></p>
     </div>
 
 
     <h3>Ongelijkheden uit de werkelijkheid</h3>
 
-    <p>Ongelijkheden zijn bijzonder geschikt wanneer een grenswaarde belangrijk is.</p>
+    <p>
+      Ongelijkheden zijn bijzonder geschikt wanneer een grenswaarde
+      belangrijk is.
+    </p>
 
-    <p>Stel dat een lift maximaal 600 kg mag dragen.</p>
-
-    <p>Als x de totale massa voorstelt, schrijven we:</p>
+    <p>
+      Stel dat een lift maximaal 600 kg mag dragen.
+      Als <span class="formula-inline">x</span> de totale massa voorstelt,
+      schrijven we:
+    </p>
 
     <p class="formula">x ≤ 600</p>
 
-    <p>Een persoon van precies 600 kg zou volgens deze wiskundige voorwaarde nog toegelaten zijn, omdat de grens inbegrepen is.</p>
+    <p>
+      De grens van 600 kg is inbegrepen.
+    </p>
 
-    <p>Als de instructie daarentegen zegt "minder dan 600 kg", schrijven we:</p>
+    <p>
+      Als de instructie daarentegen zegt:
+      <strong>minder dan 600 kg</strong>, schrijven we:
+    </p>
 
     <p class="formula">x &lt; 600</p>
 
-    <p>Het verschil tussen <strong>&lt;</strong> en <strong>≤</strong> kan dus een echte betekenis hebben.</p>
+    <p>
+      Het verschil tussen
+      <span class="formula-inline">&lt;</span> en
+      <span class="formula-inline">≤</span>
+      heeft hier dus een concrete betekenis.
+    </p>
 
 
-    <h3>Niet elke wiskundige oplossing is fysisch mogelijk</h3>
+    <h3>Niet elke wiskundige oplossing past bij de context</h3>
 
-    <p>Net zoals bij algebraïsche formules moet je rekening houden met de betekenis van een variabele.</p>
+    <p>
+      Net als bij formules moet je bij ongelijkheden rekening houden
+      met wat een variabele werkelijk voorstelt.
+    </p>
 
-    <p>Als x een lengte in meter voorstelt, is:</p>
+    <p>
+      Als <span class="formula-inline">x</span> een lengte in meter voorstelt,
+      is een negatieve waarde meestal niet fysisch mogelijk.
+    </p>
 
     <p class="formula">x &lt; 0</p>
 
-    <p>meestal geen fysisch mogelijke oplossing.</p>
-
-    <p>De algebra kan zo'n getal wel beschrijven, maar de context kan het uitsluiten.</p>
+    <p>
+      De algebra kan zulke getallen wel beschrijven,
+      maar de context kan ze uitsluiten.
+    </p>
 
     <div class="callout">
-      <strong>Wiskundige mogelijkheden en contextuele mogelijkheden zijn niet altijd hetzelfde.</strong>
-      <p>Controleer daarom altijd wat de variabele werkelijk voorstelt.</p>
+      <p><strong>Wiskundige mogelijkheden en mogelijkheden in de werkelijkheid zijn niet altijd hetzelfde.</strong></p>
+      <p>
+        Controleer daarom altijd wat de variabele werkelijk voorstelt.
+      </p>
     </div>
 
 
     <h3>Een volledige ongelijkheid oplossen</h3>
 
-    <p>Bekijk:</p>
+    <p>
+      Bekijk:
+    </p>
 
     <p class="formula">2x − 3 ≥ 7</p>
 
-    <p>Tel eerst 3 op bij beide kanten:</p>
+    <p>
+      Tel eerst 3 op bij beide kanten:
+    </p>
 
     <p class="formula">2x ≥ 10</p>
 
-    <p>Deel daarna door 2:</p>
+    <p>
+      Deel daarna door 2:
+    </p>
 
     <p class="formula">x ≥ 5</p>
 
-    <p>De oplossingsverzameling is dus:</p>
+    <p>
+      In intervalnotatie is dat:
+    </p>
 
     <p class="formula">[5, ∞)</p>
 
-    <p>De grens 5 hoort erbij omdat het teken ≥ is.</p>
+    <p>
+      De grens 5 hoort erbij omdat het oorspronkelijke teken
+      <span class="formula-inline">≥</span> was.
+    </p>
 
 
-    <h3>Een volledige ongelijkheid met een negatieve factor</h3>
+    <h3>Een ongelijkheid met een negatieve factor</h3>
 
-    <p>Neem:</p>
+    <p>
+      Neem:
+    </p>
 
     <p class="formula">−2x + 4 &gt; 10</p>
 
-    <p>Trek eerst 4 af aan beide kanten:</p>
+    <p>
+      Trek eerst 4 af aan beide kanten:
+    </p>
 
     <p class="formula">−2x &gt; 6</p>
 
-    <p>Deel nu door −2.</p>
-
-    <p>Omdat we delen door een negatief getal, keert het teken om:</p>
+    <p>
+      Deel nu door −2.
+      Omdat we door een negatief getal delen,
+      keert het teken om:
+    </p>
 
     <p class="formula">x &lt; −3</p>
 
-    <p>De oplossingsverzameling is:</p>
+    <p>
+      In intervalnotatie:
+    </p>
 
     <p class="formula">(−∞, −3)</p>
 
 
     <h3>Vergelijking versus ongelijkheid</h3>
 
-    <p>Het verschil kunnen we nu scherp formuleren.</p>
+    <p>
+      Het verschil tussen beide kunnen we nu scherp formuleren.
+    </p>
 
-    <p>Bij een vergelijking:</p>
+    <p>
+      Bij een vergelijking:
+    </p>
 
     <p class="formula">2x + 3 = 9</p>
 
-    <p>zoeken we waarden waarvoor beide kanten <strong>gelijk</strong> zijn.</p>
+    <p>
+      zoeken we waarden waarvoor beide kanten <strong>gelijk</strong> zijn.
+    </p>
 
-    <p>Bij een ongelijkheid:</p>
+    <p>
+      Bij een ongelijkheid:
+    </p>
 
     <p class="formula">2x + 3 &lt; 9</p>
 
-    <p>zoeken we waarden waarvoor de linkerkant <strong>kleiner</strong> is dan de rechterkant.</p>
+    <p>
+      zoeken we waarden waarvoor de linkerkant
+      <strong>kleiner</strong> is dan de rechterkant.
+    </p>
 
-    <p>Een vergelijking leidt vaak tot een afzonderlijke waarde; een ongelijkheid vaak tot een interval of een combinatie van intervallen.</p>
+    <p>
+      Een vergelijking leidt vaak tot één of enkele waarden.
+      Een ongelijkheid beschrijft meestal een bereik van waarden.
+    </p>
 
 
     <h3>Een vaste werkwijze</h3>
 
-    <p>Bij een eenvoudige ongelijkheid kunnen we deze werkwijze gebruiken:</p>
+    <p>
+      Bij een eenvoudige ongelijkheid kunnen we deze werkwijze gebruiken:
+    </p>
 
     <ol>
       <li>vereenvoudig beide kanten indien nodig;</li>
@@ -1732,892 +1950,320 @@ const MILESTONES_2 = [
       <li>breng termen met de onbekende samen;</li>
       <li>breng constante termen naar de andere kant;</li>
       <li>maak de factor van de onbekende ongedaan;</li>
-      <li><strong>controleer of je door een negatief getal vermenigvuldigt of deelt;</strong></li>
-      <li>keer in dat geval het ongelijkheidsteken om;</li>
-      <li>schrijf de oplossingsverzameling eventueel als interval.</li>
+      <li>
+        controleer of je door een negatief getal vermenigvuldigt of deelt;
+      </li>
+      <li>
+        keer in dat geval het ongelijkheidsteken om;
+      </li>
+      <li>
+        schrijf de oplossingsverzameling eventueel als interval.
+      </li>
     </ol>
 
-    <p>Controleer tenslotte of de gevonden oplossingen passen bij de context.</p>
+    <p>
+      Controleer tenslotte of de gevonden oplossingen passen bij de context.
+    </p>
 
 
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
+    <h3>Van ongelijkheid naar oplossingsverzameling</h3>
 
-    <p>Een ongelijkheid is geen ingewikkelde versie van een vergelijking. Het is een andere manier om een voorwaarde te beschrijven.</p>
+    <p>
+      We begonnen met het idee dat een vergelijking één oplossing kan hebben.
+      Een ongelijkheid werkt anders.
+    </p>
 
-    <p>In plaats van:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">x = 4</p>
 
-    <p>kunnen we bijvoorbeeld beschrijven:</p>
+    <p>
+      beschrijft één waarde.
+    </p>
+
+    <p>
+      Terwijl:
+    </p>
 
     <p class="formula">x &gt; 4</p>
 
-    <p>of:</p>
+    <p>
+      alle getallen groter dan 4 beschrijft.
+    </p>
+
+    <p>
+      En:
+    </p>
 
     <p class="formula">2 ≤ x &lt; 7</p>
 
-    <p>Daarmee beschrijven we hele verzamelingen van getallen.</p>
+    <p>
+      beschrijft alle getallen vanaf 2 tot maar niet met 7.
+    </p>
 
-    <p>De getallenlijn maakt die verzamelingen zichtbaar, intervalnotatie maakt ze compact, en absolute waarde geeft ons een natuurlijke taal voor afstanden.</p>
+    <p>
+      De <strong>getallenlijn</strong> maakt zo'n oplossingsverzameling
+      zichtbaar. <strong>Intervalnotatie</strong> maakt haar compact.
+      <strong>Absolute waarde</strong> geeft ons bovendien een natuurlijke
+      manier om voorwaarden over afstanden te beschrijven.
+    </p>
 
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
-      <p>Een ongelijkheid beschrijft een verzameling waarden die aan een voorwaarde voldoen.</p>
-      <p>Net als bij vergelijkingen mogen we dezelfde geldige bewerking aan beide kanten uitvoeren.</p>
-      <p>Bij vermenigvuldigen of delen door een negatief getal keert het ongelijkheidsteken om.</p>
-      <p>Met getallenlijnen, intervallen en absolute waarde kunnen we oplossingsverzamelingen zichtbaar en compact beschrijven.</p>
+      <p>
+        Een ongelijkheid beschrijft een verzameling waarden die aan
+        een bepaalde voorwaarde voldoen.
+      </p>
+      <p>
+        Net als bij vergelijkingen mogen we dezelfde geldige bewerking
+        aan beide kanten uitvoeren.
+      </p>
+      <p>
+        Bij vermenigvuldigen of delen door een negatief getal keert
+        het ongelijkheidsteken om.
+      </p>
+      <p>
+        Met getallenlijnen en intervallen kunnen we oplossingsverzamelingen
+        zichtbaar en compact beschrijven. Absolute waarde geeft ons
+        een natuurlijke taal voor afstanden.
+      </p>
     </div>
   `
 },
-    {
+{
   id: "2.6",
   title: "Machten, wortels & algebraïsche breuken",
-  goal: "Hoe kunnen we algemene rekenregels gebruiken met machten, wortels en breuken?",
+  goal: "Hoe gebruiken we machten, wortels en breuken met algebraïsche uitdrukkingen?",
   theory: /* html */`
     <h2>Machten, wortels & algebraïsche breuken</h2>
-
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>begrijpen wat een macht voorstelt</li>
-      <li>de belangrijkste rekenregels voor machten begrijpen en toepassen</li>
-      <li>negatieve en gebroken exponenten begrijpen</li>
-      <li>wortels zien als de omgekeerde bewerking van machten</li>
-      <li>rekenen met algebraïsche breuken</li>
-      <li>begrijpen wanneer een algebraïsche breuk wel of niet gedefinieerd is</li>
-      <li>veelgemaakte fouten bij machten, wortels en breuken herkennen</li>
+      <li>Hoe gebruiken we de rekenregels voor machten wanneer het grondtal een letter is?</li>
+      <li>Wat betekenen negatieve en gebroken exponenten?</li>
+      <li>Hoe hangen wortels en machten met elkaar samen?</li>
+      <li>Hoe werken we met algebraïsche breuken?</li>
+      <li>Wanneer is een algebraïsche breuk wel of niet gedefinieerd?</li>
+      <li>Waarom mogen we soms factoren wegdelen, maar geen termen uit een som?</li>
     </ul>
-
     <p>
       In Fase 1 leerden we rekenen met machten en wortels.
-      Nu brengen we die ideeën naar de algebra.
-      Daardoor kunnen letters voorkomen in machten, wortels en breuken.
+      Die kennis nemen we mee naar de algebra: het grondtal kan nu een
+      <strong>variabele</strong> of een uitdrukking zijn.
+      We leren dus niet opnieuw wat een macht is; we kijken hoe de bekende
+      regels werken met <strong>letters</strong>.
     </p>
 
-
-    <h3>Een macht is herhaalde vermenigvuldiging</h3>
-
-    <p>
-      Een macht is een compacte manier om dezelfde factor meerdere keren
-      met zichzelf te vermenigvuldigen.
-    </p>
-
-    <p class="formula">2³ = 2 · 2 · 2 = 8</p>
-
-    <p>
-      Het getal 2 noemen we het <strong>grondtal</strong>.
-      Het getal 3 is de <strong>exponent</strong>.
-    </p>
-
-    <p>
-      De exponent vertelt hoe vaak het grondtal als factor voorkomt.
-    </p>
-
-    <p class="formula">a³ = a · a · a</p>
-
-    <p>
-      Dit geldt ook wanneer het grondtal een variabele is:
-    </p>
-
-    <p class="formula">x⁴ = x · x · x · x</p>
-
+    <h3>Machten met letters</h3>
+    <p>De betekenis van een macht verandert niet:</p>
+    <p class="formula">x^{4} = x · x · x · x</p>
+    <p>Daardoor blijven de rekenregels dezelfde. Drie factoren x plus twee factoren x geven vijf factoren:</p>
+    <p class="formula">x^{3} · x^{2} = x^{5}</p>
+    <p>In het algemeen, bij hetzelfde grondtal:</p>
+    <p class="formula">a^{m} · a^{n} = a^{m+n}</p>
+    <p class="formula">x^{4} · x^{3} = x^{7}</p>
+    <p class="formula">2x^{2} · 3x^{4} = 6x^{6}</p>
     <div class="callout">
-      <p><strong>Kernidee:</strong></p>
-      <p>
-        De exponent telt het aantal factoren van hetzelfde grondtal.
-      </p>
+      <p><strong>Herinnering uit Fase 1:</strong></p>
+      <p>Zelfde grondtal, product: <strong>exponenten optellen</strong>.</p>
     </div>
 
-
-    <h3>Vermenigvuldigen van machten met hetzelfde grondtal</h3>
-
-    <p>
-      Kijk naar:
-    </p>
-
-    <p class="formula">x³ · x²</p>
-
-    <p>
-      Schrijf de machten eerst uit:
-    </p>
-
-    <p class="formula">x · x · x · x · x = x⁵</p>
-
-    <p>
-      We hebben dus drie factoren en daarna nog twee factoren.
-      Samen zijn dat vijf factoren.
-    </p>
-
-    <p class="formula">x³ · x² = x⁵</p>
-
-    <p>
-      Daarom geldt in het algemeen:
-    </p>
-
-    <p class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ</p>
-
-    <p>
-      <strong>De exponenten worden opgeteld</strong> wanneer we machten
-      met hetzelfde grondtal vermenigvuldigen.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">x⁴ · x³ = x⁷</p>
-
-    <p class="formula">2x² · 3x⁴ = 6x⁶</p>
-
-
-    <h3>Delen van machten met hetzelfde grondtal</h3>
-
-    <p>
-      Bij delen verdwijnen factoren die zowel boven als onder voorkomen.
-    </p>
-
-    <p class="formula">x⁵ / x² = (x · x · x · x · x) / (x · x)</p>
-
-    <p>
-      Twee factoren x vallen weg:
-    </p>
-
-    <p class="formula">x⁵ / x² = x³</p>
-
-    <p>
-      Daarom:
-    </p>
-
-    <p class="formula">aᵐ / aⁿ = aᵐ⁻ⁿ</p>
-
-    <p>
-      Hierbij moet het grondtal niet nul zijn.
-    </p>
-
-    <p class="formula">x⁷ / x³ = x⁴</p>
-
-    <p class="formula">x⁴ / x⁶ = x⁻²</p>
-
-    <p>
-      Dat laatste resultaat brengt ons bij negatieve exponenten.
-    </p>
-
-
-    <h3>De macht nul</h3>
-
-    <p>
-      Wanneer we dezelfde macht door zichzelf delen, krijgen we 1:
-    </p>
-
-    <p class="formula">x³ / x³ = 1</p>
-
-    <p>
-      Maar volgens de regel voor het delen van machten is:
-    </p>
-
-    <p class="formula">x³ / x³ = x³⁻³ = x⁰</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">x⁰ = 1</p>
-
-    <p>
-      Dit geldt voor elk niet-nul grondtal.
-    </p>
-
-    <p class="formula">5⁰ = 1</p>
-
-    <p class="formula">x⁰ = 1, voor x ≠ 0</p>
-
-    <div class="callout">
-      <p><strong>Let op:</strong></p>
-      <p>
-        De regel x⁰ = 1 geldt niet zomaar voor x = 0.
-        De uitdrukking 0⁰ wordt op dit niveau niet als een gewone macht
-        gedefinieerd.
-      </p>
-    </div>
-
+    <h3>Machten delen</h3>
+    <p>Gemeenschappelijke factoren vallen weg:</p>
+    <p class="formula">\\frac{x^{5}}{x^{2}} = x^{3}</p>
+    <p class="formula">\\frac{a^{m}}{a^{n}} = a^{m-n}</p>
+    <p>Het grondtal mag niet 0 zijn als het in de noemer komt.</p>
+    <p class="formula">\\frac{x^{7}}{x^{3}} = x^{4}</p>
+    <p class="formula">\\frac{x^{4}}{x^{6}} = x^{-2}</p>
+    <p>Een negatieve exponent ontstaat vanzelf als de exponent in de noemer groter is.</p>
 
     <h3>Negatieve exponenten</h3>
-
-    <p>
-      We zagen:
-    </p>
-
-    <p class="formula">x⁴ / x⁶ = x⁻²</p>
-
-    <p>
-      Maar wat betekent x⁻²?
-    </p>
-
-    <p>
-      Gebruik opnieuw de regel voor delen van machten:
-    </p>
-
-    <p class="formula">x⁴ / x⁶ = x⁴⁻⁶ = x⁻²</p>
-
-    <p>
-      Schrijven we de breuk rechtstreeks, dan kunnen we twee factoren
-      boven en zes onder vergelijken:
-    </p>
-
-    <p class="formula">x⁴ / x⁶ = 1 / x²</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">x⁻² = 1 / x²</p>
-
-    <p>
-      In het algemeen:
-    </p>
-
-    <p class="formula">a⁻ⁿ = 1 / aⁿ</p>
-
-    <p>
-      Een negatieve exponent betekent dus niet dat de uitkomst negatief is.
-      Hij betekent dat de macht naar de noemer verhuist.
-    </p>
-
-    <p class="formula">2⁻³ = 1 / 2³ = 1 / 8</p>
-
+    <p class="formula">\\frac{x^{4}}{x^{6}} = x^{4-6} = x^{-2}</p>
+    <p>Rechtstreeks als breuk:</p>
+    <p class="formula">\\frac{x^{4}}{x^{6}} = \\frac{1}{x^{2}}</p>
+    <p>Dus:</p>
+    <p class="formula">x^{-2} = \\frac{1}{x^{2}}</p>
+    <p class="formula">a^{-n} = \\frac{1}{a^{n}}</p>
+    <p>Een negatieve exponent betekent niet dat de uitkomst negatief is. De macht staat in de noemer.</p>
+    <p class="formula">2^{-3} = \\frac{1}{2^{3}} = \\frac{1}{8}</p>
+    <div class="callout">
+      <p><strong>Belangrijk:</strong></p>
+      <p>Een negatieve exponent is iets anders dan een negatieve waarde.</p>
+      <p><span class="formula-inline">2^{-3}</span> is positief.</p>
+    </div>
 
     <h3>Een macht van een macht</h3>
-
-    <p>
-      Beschouw:
-    </p>
-
-    <p class="formula">(x²)³</p>
-
-    <p>
-      De buitenste exponent betekent dat x² drie keer als factor voorkomt:
-    </p>
-
-    <p class="formula">(x²)³ = x² · x² · x²</p>
-
-    <p>
-      Nu tellen we de exponenten op:
-    </p>
-
-    <p class="formula">x² · x² · x² = x⁶</p>
-
-    <p>
-      Daarom:
-    </p>
-
-    <p class="formula">(aᵐ)ⁿ = aᵐⁿ</p>
-
-    <p>
-      Bij een macht van een macht worden de exponenten dus
-      <strong>vermenigvuldigd</strong>.
-    </p>
-
-    <p class="formula">(x³)⁴ = x¹²</p>
-
+    <p class="formula">(x^{2})^{3} = x^{2} · x^{2} · x^{2} = x^{6}</p>
+    <p class="formula">(a^{m})^{n} = a^{mn}</p>
+    <p>Hier worden de exponenten <strong>vermenigvuldigd</strong>.</p>
     <div class="callout">
-      <p><strong>Niet verwarren:</strong></p>
-      <p class="formula-inline">x² · x³ = x⁵</p>
-      <p>
-        Hier worden exponenten opgeteld omdat we machten vermenigvuldigen.
-      </p>
-      <p class="formula-inline">(x²)³ = x⁶</p>
-      <p>
-        Hier worden exponenten vermenigvuldigd omdat we een macht van een macht nemen.
-      </p>
+      <p><strong>Let op het verschil:</strong></p>
+      <p><span class="formula-inline">x^{2} · x^{3} = x^{5}</span> — product: exponenten optellen.</p>
+      <p><span class="formula-inline">(x^{2})^{3} = x^{6}</span> — macht van een macht: exponenten vermenigvuldigen.</p>
     </div>
 
+    <h3>De macht nul</h3>
+    <p class="formula">a^{0} = 1</p>
+    <p>voor elk grondtal dat niet 0 is. Vanuit delen:</p>
+    <p class="formula">\\frac{a^{3}}{a^{3}} = a^{3-3} = a^{0}</p>
+    <p>Een getal gedeeld door zichzelf is 1, dus <span class="formula-inline">a^{0} = 1</span> als <span class="formula-inline">a \\neq 0</span>.</p>
 
-    <h3>Wortels maken een macht ongedaan</h3>
-
-    <p>
-      We weten:
-    </p>
-
-    <p class="formula">3² = 9</p>
-
-    <p>
-      De omgekeerde vraag is:
-      welk getal moet je kwadrateren om 9 te krijgen?
-    </p>
-
-    <p class="formula">√9 = 3</p>
-
-    <p>
-      De vierkantswortel is dus de bewerking die het kwadrateren ongedaan maakt.
-    </p>
-
-    <p class="formula">√(x²) = |x|</p>
-
-    <p>
-      De absolute waarde is hier belangrijk.
-      Zowel 3 als −3 heeft immers kwadraat 9:
-    </p>
-
-    <p class="formula">3² = 9</p>
-
-    <p class="formula">(−3)² = 9</p>
-
-    <p>
-      De wortel √9 betekent echter de <strong>niet-negatieve</strong> vierkantswortel:
-    </p>
-
-    <p class="formula">√9 = 3</p>
-
-    <p>
-      Daarom is:
-    </p>
-
-    <p class="formula">√(x²) = |x|</p>
-
-
-    <h3>Wortels en machten horen bij elkaar</h3>
-
-    <p>
-      Een vierkantswortel kan ook als een macht met exponent 1/2 worden geschreven:
-    </p>
-
+    <h3>Wortels als machten</h3>
     <p class="formula">\\sqrt{a} = a^{1/2}</p>
-
-    <p>
-      Een derdemachtswortel komt overeen met exponent 1/3:
-    </p>
-
-   <p class="formula">\\sqrt[3]{a} = a^{1/3}</p>
-
-    <p>
-      Dit is geen nieuwe soort bewerking.
-      We gebruiken een andere notatie voor hetzelfde idee.
-    </p>
-
-    <p>
-      In het algemeen:
-    </p>
-
+    <p class="formula">\\sqrt[3]{a} = a^{1/3}</p>
     <p class="formula">\\sqrt[n]{a} = a^{1/n}</p>
-
-    <p>
-      Op deze manier kunnen we wortels en machten met elkaar verbinden.
-    </p>
-
+    <div class="callout">
+      <p><strong>Een wortel kan als macht worden geschreven.</strong></p>
+      <p>Daardoor gelden voor wortels dezelfde algebraïsche regels als voor machten.</p>
+    </div>
 
     <h3>Gebroken exponenten</h3>
-
-    <p>
-      Omdat een wortel een macht met een gebroken exponent is,
-      kunnen we bijvoorbeeld schrijven:
-    </p>
-
     <p class="formula">x^{1/2} = \\sqrt{x}</p>
-   
-    <p class="formula">x^{3/2} = (\\sqrt{x})^3</p>
+    <p class="formula">x^{1/3} = \\sqrt[3]{x}</p>
+    <p>Een exponent met teller groter dan 1 combineert wortel en macht:</p>
+    <p class="formula">x^{3/2} = (\\sqrt{x})^{3}</p>
+    <p class="formula">8^{2/3} = (\\sqrt[3]{8})^{2} = 2^{2} = 4</p>
+    <p>Eerst de derdemachtswortel, daarna het kwadraat.</p>
 
-    <p>
-      Een gebroken exponent kan dus worden opgesplitst in een
-      wortel en een gewone macht.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">8^{2/3} = (\\sqrt[3]{8})^2 = 2^2 = 4</p>
-
-    <p>
-      De exponent 2/3 vertelt ons dus dat we eerst een derdemachtswortel
-      kunnen nemen en daarna het kwadraat.
-    </p>
-
+    <h3>Wortels met algebraïsche uitdrukkingen</h3>
+    <p class="formula">\\sqrt{x}</p>
+    <p class="formula">\\sqrt{x + 3}</p>
+    <p class="formula">\\sqrt{x^{2}}</p>
+    <p>De vierkantswortel is per definitie niet-negatief. Zowel 3 als −3 hebben kwadraat 9, maar:</p>
+    <p class="formula">\\sqrt{9} = 3</p>
+    <p>Daarom:</p>
+    <p class="formula">\\sqrt{x^{2}} = |x|</p>
+    <div class="callout">
+      <p><strong>Belangrijk:</strong></p>
+      <p><span class="formula-inline">\\sqrt{x^{2}}</span> is niet altijd gelijk aan <span class="formula-inline">x</span>.</p>
+      <p>Correct is <span class="formula-inline">\\sqrt{x^{2}} = |x|</span>.</p>
+    </div>
 
     <h3>Wanneer is een wortel gedefinieerd?</h3>
-
-    <p>
-      Bij reële getallen bestaat een vierkantswortel alleen wanneer
-      het getal onder de wortel niet negatief is.
-    </p>
-
-    <p class="formula">√x</p>
-
-    <p>
-      is dus alleen reëel gedefinieerd voor:
-    </p>
-
-    <p class="formula">x ≥ 0</p>
-
-    <p>
-      Zo is:
-    </p>
-
-    <p class="formula">√9 = 3</p>
-
-    <p>
-      maar √(−9) heeft geen reële waarde.
-    </p>
-
-    <p>
-      We zullen later leren hoe zulke uitdrukkingen binnen de complexe
-      getallen toch betekenis kunnen krijgen.
-    </p>
-
+    <p>In de reële getallen bestaat <span class="formula-inline">\\sqrt{x}</span> alleen als</p>
+    <p class="formula">x \\geq 0</p>
+    <p><span class="formula-inline">\\sqrt{9} = 3</span>, maar <span class="formula-inline">\\sqrt{-9}</span> heeft geen reële waarde. Dat is een <strong>domeinvoorwaarde</strong>.</p>
 
     <h3>Algebraïsche breuken</h3>
-
-    <p>
-      In algebra kunnen zowel de teller als de noemer letters bevatten.
-      Zo'n breuk noemen we een <strong>algebraïsche breuk</strong>.
-    </p>
-
-    <p class="formula">3x / 5</p>
-
-    <p class="formula">(x + 2) / (x − 1)</p>
-
-    <p class="formula">(2x²) / (3x)</p>
-
-    <p>
-      Dezelfde basisregels als bij gewone breuken blijven gelden.
-    </p>
-
+    <p>Letters in teller of noemer: een <strong>algebraïsche breuk</strong>.</p>
+    <p class="formula">\\frac{3x}{5}</p>
+    <p class="formula">\\frac{x + 2}{x - 1}</p>
+    <p class="formula">\\frac{2x^{2}}{3x}</p>
+    <p>De rekenregels voor breuken blijven gelden. Extra: de <strong>noemer mag nooit 0</strong> zijn.</p>
 
     <h3>De noemer mag niet nul zijn</h3>
-
-    <p>
-      Delen door nul is niet gedefinieerd.
-      Daarom moet bij iedere algebraïsche breuk worden nagegaan
-      voor welke waarden de noemer niet nul is.
-    </p>
-
-    <p class="formula">1 / x</p>
-
-    <p>
-      Hier geldt:
-    </p>
-
-    <p class="formula">x ≠ 0</p>
-
-    <p>
-      Bij:
-    </p>
-
-    <p class="formula">1 / (x − 3)</p>
-
-    <p>
-      mag de noemer niet nul zijn:
-    </p>
-
-    <p class="formula">x − 3 ≠ 0</p>
-
-    <p>
-      dus:
-    </p>
-
-    <p class="formula">x ≠ 3</p>
-
+    <p class="formula">\\frac{1}{x} \\quad \\Rightarrow \\quad x \\neq 0</p>
+    <p class="formula">\\frac{1}{x - 3} \\quad \\Rightarrow \\quad x \\neq 3</p>
     <div class="callout">
-      <p><strong>Belangrijke gewoonte:</strong></p>
-      <p>
-        Kijk bij een algebraïsche breuk altijd eerst naar de noemer.
-        De waarden waarvoor de noemer nul wordt, zijn uitgesloten.
-      </p>
+      <p><strong>Gewoonte:</strong></p>
+      <p>Kijk bij een algebraïsche breuk eerst naar de noemer. Waarden die de noemer 0 maken, vallen af.</p>
     </div>
 
+    <h3>Gemeenschappelijke factoren wegdelen</h3>
+    <p>Alleen gemeenschappelijke <strong>factoren</strong> mogen weg.</p>
+    <p class="formula">\\frac{6x}{3x} = 2 \\quad (x \\neq 0)</p>
+    <p>Soms eerst ontbinden:</p>
+    <p class="formula">\\frac{x^{2} + 3x}{x} = \\frac{x(x + 3)}{x} = x + 3 \\quad (x \\neq 0)</p>
+    <p>De voorwaarde <span class="formula-inline">x \\neq 0</span> blijft gelden.</p>
 
-    <h3>Breuken vereenvoudigen door factoren weg te delen</h3>
-
-    <p>
-      Neem:
-    </p>
-
-    <p class="formula">(6x) / (3x)</p>
-
-    <p>
-      Zowel teller als noemer bevatten de factor 3x.
-      Voor x ≠ 0 kunnen we die factor wegdelen:
-    </p>
-
-    <p class="formula">(6x) / (3x) = 2</p>
-
-    <p>
-      We mogen dus gemeenschappelijke <strong>factoren</strong> wegdelen.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">(x² + 3x) / x</p>
-
-    <p>
-      Eerst ontbinden we de teller:
-    </p>
-
-    <p class="formula">x² + 3x = x(x + 3)</p>
-
-    <p>
-      Daardoor krijgen we:
-    </p>
-
-    <p class="formula">x(x + 3) / x = x + 3</p>
-
-    <p>
-      Maar de oorspronkelijke breuk was alleen gedefinieerd voor:
-    </p>
-
-    <p class="formula">x ≠ 0</p>
-
-    <p>
-      Die voorwaarde blijft dus gelden.
-    </p>
-
-
-    <h3>Je mag geen termen wegstrepen</h3>
-
-    <p>
-      Een veelgemaakte fout is het wegstrepen van onderdelen die
-      geen factoren zijn.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">(x + 3) / x</p>
-
-    <p>
-      Hier mag de x <strong>niet</strong> worden weggestreept.
-      De teller is namelijk een som, geen product waarin x een factor is.
-    </p>
-
-    <p>
-      Vergelijk:
-    </p>
-
-    <p class="formula">x(x + 3) / x = x + 3</p>
-
-    <p>
-      Hier kan x wel worden weggehaald omdat x een volledige factor is.
-    </p>
-
+    <h3>Factoren zijn geen termen</h3>
+    <p class="formula">\\frac{x + 3}{x}</p>
+    <p>Hier mag je de x niet wegstrepen: de teller is een <strong>som</strong>.</p>
+    <p class="formula">\\frac{x(x + 3)}{x} = x + 3 \\quad (x \\neq 0)</p>
+    <p>Hier is x wél een volledige factor.</p>
     <div class="callout">
       <p><strong>Onthoud:</strong></p>
-      <p>
-        Je mag factoren wegdelen, maar geen termen uit een som of verschil.
-      </p>
+      <p>Je mag factoren wegdelen, geen termen uit een som of verschil.</p>
     </div>
 
+    <h3>Algebraïsche breuken vermenigvuldigen</h3>
+    <p>Teller keer teller, noemer keer noemer:</p>
+    <p class="formula">\\frac{2x}{3} · \\frac{6}{x} = \\frac{12x}{3x} = 4 \\quad (x \\neq 0)</p>
 
-    <h3>Breuken vermenigvuldigen</h3>
+    <h3>Algebraïsche breuken delen</h3>
+    <p>Delen door een breuk is vermenigvuldigen met het omgekeerde:</p>
+    <p class="formula">\\frac{x}{3} : \\frac{2}{5} = \\frac{x}{3} · \\frac{5}{2} = \\frac{5x}{6}</p>
 
-    <p>
-      Bij het vermenigvuldigen van breuken vermenigvuldigen we
-      teller met teller en noemer met noemer.
-    </p>
+    <h3>Algebraïsche breuken optellen en aftrekken</h3>
+    <p>Eerst een gemeenschappelijke noemer.</p>
+    <p class="formula">\\frac{x}{3} + \\frac{2x}{3} = \\frac{3x}{3} = x</p>
+    <p class="formula">\\frac{x}{2} + \\frac{x}{3} = \\frac{3x}{6} + \\frac{2x}{6} = \\frac{5x}{6}</p>
+    <p>Tellers en noemers afzonderlijk optellen mag niet.</p>
 
-    <p class="formula">(2x / 3) · (6 / x) = 12x / 3x</p>
-
-    <p>
-      Voor x ≠ 0 kunnen we vereenvoudigen:
-    </p>
-
-    <p class="formula">12x / 3x = 4</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">(2x / 3) · (6 / x) = 4</p>
-
-    <p>
-      Ook hier moet de oorspronkelijke domeinvoorwaarde behouden blijven:
-      x ≠ 0.
-    </p>
-
-
-    <h3>Breuken delen</h3>
-
-    <p>
-      Delen door een breuk betekent vermenigvuldigen met het omgekeerde.
-    </p>
-
-    <p class="formula">(x / 3) ÷ (2 / 5) = (x / 3) · (5 / 2)</p>
-
-    <p class="formula">= 5x / 6</p>
-
-    <p>
-      Hetzelfde principe dat we met gewone getallen leerden,
-      blijft dus gelden voor algebraïsche breuken.
-    </p>
-
-
-    <h3>Breuken optellen en aftrekken</h3>
-
-    <p>
-      Bij optellen en aftrekken moeten de breuken eerst een
-      gemeenschappelijke noemer hebben.
-    </p>
-
-    <p class="formula">x / 3 + 2x / 3 = 3x / 3 = x</p>
-
-    <p>
-      Wanneer de noemers verschillend zijn, moeten we eerst een
-      gemeenschappelijke noemer zoeken.
-    </p>
-
-    <p class="formula">x / 2 + x / 3</p>
-
-    <p>
-      Een gemeenschappelijke noemer is 6:
-    </p>
-
-    <p class="formula">x / 2 + x / 3 = 3x / 6 + 2x / 6</p>
-
-    <p class="formula">= 5x / 6</p>
-
-    <p>
-      We kunnen dus niet zomaar tellers en noemers afzonderlijk optellen.
-    </p>
-
-
-    <h3>Verschillende bewerkingen komen samen</h3>
-
-    <p>
-      In een algebraïsche uitdrukking kunnen machten, wortels en breuken
-      tegelijk voorkomen.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">2x² / 3 + 4x² / 3</p>
-
-    <p>
-      De noemers zijn gelijk, dus we kunnen de tellers samen nemen:
-    </p>
-
-    <p class="formula">(2x² + 4x²) / 3</p>
-
-    <p class="formula">= 6x² / 3</p>
-
-    <p class="formula">= 2x²</p>
-
-    <p>
-      We gebruiken hier verschillende ideeën uit de vorige lessen:
-      gelijksoortige termen herkennen, breuken bewerken en machten lezen.
-    </p>
-
+    <h3>Technieken combineren</h3>
+    <p class="formula">\\frac{2x^{2}}{3} + \\frac{4x^{2}}{3} = \\frac{2x^{2} + 4x^{2}}{3} = \\frac{6x^{2}}{3} = 2x^{2}</p>
 
     <h3>Een volledig voorbeeld</h3>
-
-    <p>
-      Vereenvoudig:
-    </p>
-
-    <p class="formula">(3x² + 6x) / 3x</p>
-
-    <p>
-      Eerst ontbinden we de teller:
-    </p>
-
-    <p class="formula">3x² + 6x = 3x(x + 2)</p>
-
-    <p>
-      Daardoor wordt:
-    </p>
-
-    <p class="formula">3x(x + 2) / 3x</p>
-
-    <p>
-      Voor x ≠ 0 kunnen we de gemeenschappelijke factor 3x wegdelen:
-    </p>
-
-    <p class="formula">= x + 2</p>
-
-    <p>
-      De vereenvoudigde vorm is dus:
-    </p>
-
-    <p class="formula">x + 2</p>
-
-    <p>
-      met de oorspronkelijke voorwaarde:
-    </p>
-
-    <p class="formula">x ≠ 0</p>
-
+    <p>Vereenvoudig:</p>
+    <p class="formula">\\frac{3x^{2} + 6x}{3x}</p>
+    <p class="formula">3x^{2} + 6x = 3x(x + 2)</p>
+    <p class="formula">\\frac{3x(x + 2)}{3x} = x + 2 \\quad (x \\neq 0)</p>
     <div class="callout">
-      <p><strong>Waarom is die voorwaarde belangrijk?</strong></p>
-      <p>
-        Als x = 0, is de oorspronkelijke uitdrukking
-        <span class="formula-inline">(3x² + 6x) / 3x</span>
-        niet gedefinieerd.
-        De vereenvoudigde uitdrukking x + 2 heeft voor x = 0 wel een waarde,
-        maar dat verandert de oorspronkelijke domeinvoorwaarde niet.
-      </p>
+      <p><strong>Waarom blijft x ≠ 0?</strong></p>
+      <p><span class="formula-inline">x + 2</span> bestaat wél voor x = 0. De oorspronkelijke breuk niet. Vereenvoudigen schrapt die beperking niet.</p>
     </div>
 
-
-    <h3>De belangrijkste rekenregels samen</h3>
-
-    <p>
-      De belangrijkste regels uit deze les kunnen we nu samenbrengen.
-    </p>
-
-    <p class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ</p>
-
-    <p class="formula">aᵐ / aⁿ = aᵐ⁻ⁿ</p>
-
-    <p class="formula">(aᵐ)ⁿ = aᵐⁿ</p>
-
-    <p class="formula">a⁰ = 1, voor a ≠ 0</p>
-
-    <p class="formula">a⁻ⁿ = 1 / aⁿ</p>
-
-    <p class="formula">√a = a¹ᐟ²</p>
-
-    <p class="formula">∛a = a¹ᐟ³</p>
-
-    <p class="formula">√(x²) = |x|</p>
-
-    <p>
-      Deze regels zijn geen verzameling losse trucjes.
-      Ze volgen uit de betekenis van machten, vermenigvuldiging,
-      deling en de omgekeerde bewerking van een macht.
-    </p>
-
+    <h3>De belangrijkste rekenregels</h3>
+    <p class="formula">a^{m} · a^{n} = a^{m+n}</p>
+    <p class="formula">\\frac{a^{m}}{a^{n}} = a^{m-n}</p>
+    <p class="formula">(a^{m})^{n} = a^{mn}</p>
+    <p class="formula">a^{0} = 1 \\quad (a \\neq 0)</p>
+    <p class="formula">a^{-n} = \\frac{1}{a^{n}}</p>
+    <p class="formula">\\sqrt{a} = a^{1/2}</p>
+    <p class="formula">\\sqrt[3]{a} = a^{1/3}</p>
+    <p class="formula">\\sqrt{x^{2}} = |x|</p>
 
     <h3>Veelgemaakte fouten</h3>
-
-    <p><strong>Fout 1: exponenten vermenigvuldigen bij een product</strong></p>
-
-    <p class="formula">x² · x³ ≠ x⁶</p>
-
-    <p>
-      Correct:
-    </p>
-
-    <p class="formula">x² · x³ = x⁵</p>
-
-    <p><strong>Fout 2: termen wegstrepen</strong></p>
-
-    <p class="formula">(x + 2) / x ≠ 2</p>
-
-    <p>
-      Je mag alleen volledige factoren wegdelen.
-    </p>
-
-    <p><strong>Fout 3: een negatieve exponent verwarren met een negatief getal</strong></p>
-
-    <p class="formula">2⁻³ = 1 / 8</p>
-
-    <p>
-      De exponent is negatief, maar de uitkomst is positief.
-    </p>
-
-    <p><strong>Fout 4: √(x²) = x schrijven zonder voorwaarde</strong></p>
-
-    <p>
-      Correct is:
-    </p>
-
-    <p class="formula">√(x²) = |x|</p>
-
+    <p><strong>Fout 1:</strong> exponenten vermenigvuldigen bij een product.</p>
+    <p class="formula">x^{2} · x^{3} \\neq x^{6}</p>
+    <p class="formula">x^{2} · x^{3} = x^{5}</p>
+    <p><strong>Fout 2:</strong> termen wegstrepen.</p>
+    <p class="formula">\\frac{x + 3}{x} \\neq 3</p>
+    <p><strong>Fout 3:</strong> negatieve exponent verwarren met een negatief getal.</p>
+    <p class="formula">2^{-3} = \\frac{1}{8}</p>
+    <p><strong>Fout 4:</strong> de absolute waarde vergeten.</p>
+    <p class="formula">\\sqrt{x^{2}} = |x|</p>
+    <p><strong>Fout 5:</strong> de domeinvoorwaarde vergeten.</p>
+    <p class="formula">\\frac{x^{2} + 3x}{x} = x + 3 \\quad (x \\neq 0)</p>
 
     <h3>Een vaste werkwijze</h3>
-
-    <p>
-      Wanneer je een algebraïsche uitdrukking met machten, wortels
-      of breuken moet vereenvoudigen, kun je deze volgorde gebruiken:
-    </p>
-
     <ol>
-      <li>bekijk de structuur van de uitdrukking</li>
-      <li>pas de rekenregels voor machten toe waar dat kan</li>
-      <li>ontbind producten wanneer dat vereenvoudigen mogelijk maakt</li>
-      <li>vereenvoudig breuken door gemeenschappelijke factoren weg te delen</li>
-      <li>houd de voorwaarden voor de noemers bij</li>
-      <li>controleer of je geen termen hebt weggestreept</li>
-      <li>controleer eventueel met een concrete waarde</li>
+      <li>bekijk de structuur;</li>
+      <li>pas machtsregels toe;</li>
+      <li>schrijf wortels eventueel als machten;</li>
+      <li>ontbind als dat factoren zichtbaar maakt;</li>
+      <li>deel alleen gemeenschappelijke factoren weg;</li>
+      <li>houd noemer- en wortelvoorwaarden bij;</li>
+      <li>controleer eventueel met een getal.</li>
     </ol>
-
-    <p>
-      Het doel is dus niet om zo snel mogelijk symbolen weg te werken,
-      maar om steeds te weten <strong>waarom</strong> een bewerking geldig is.
-    </p>
-
-
-    <h3>Wat hebben we eigenlijk geleerd?</h3>
-
-    <p>
-      We begonnen met een eenvoudige vraag:
-      wat betekent een macht?
-    </p>
-
-    <p>
-      Van daaruit konden we begrijpen waarom:
-    </p>
-
-    <p class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ</p>
-
-    <p>
-      en:
-    </p>
-
-    <p class="formula">aᵐ / aⁿ = aᵐ⁻ⁿ</p>
-
-    <p>
-      Negatieve exponenten ontstonden vervolgens vanzelf uit het
-      verschil tussen exponenten:
-    </p>
-
-    <p class="formula">a⁻ⁿ = 1 / aⁿ</p>
-
-    <p>
-      Wortels zijn de omgekeerde bewerking van machten:
-    </p>
-
-    <p class="formula">√a = a¹ᐟ²</p>
-
-    <p>
-      En algebraïsche breuken zijn uiteindelijk gewoon breuken waarin
-      de getallen vervangen zijn door algebraïsche uitdrukkingen.
-    </p>
-
-    <p>
-      Daardoor kunnen we nu veel complexere structuren beschrijven
-      zonder telkens concrete getallen te moeten gebruiken.
-    </p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
-      <p>
-        Machten, wortels en algebraïsche breuken zijn geen afzonderlijke
-        trucjes. Ze zijn verschillende manieren om vermenigvuldiging,
-        deling en omgekeerde bewerkingen compact met symbolen te beschrijven.
-      </p>
+      <p>Machten, wortels en algebraïsche breuken beschrijven vermenigvuldiging, deling en omgekeerde bewerkingen met letters.</p>
+      <p>De regels uit Fase 1 blijven gelden. Extra letten op <strong>factoren, domeinvoorwaarden en de structuur</strong> van de uitdrukking.</p>
     </div>
   `
 },
-   {
+   
+{
   id: "2.7",
   title: "Kwadratische vergelijkingen",
   goal: "Wat gebeurt er wanneer x² verschijnt?",
   theory: /* html */`
     <h2>Kwadratische vergelijkingen</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>begrijpen wat een kwadratische vergelijking is</li>
-      <li>kwadratische vergelijkingen herkennen en in de standaardvorm brengen</li>
-      <li>eenvoudige kwadratische vergelijkingen oplossen met wortels</li>
-      <li>begrijpen waarom factoriseren een vergelijking kan oplossen</li>
-      <li>de nulproductregel gebruiken</li>
-      <li>de abc-formule begrijpen en toepassen</li>
-      <li>de discriminant gebruiken om het aantal reële oplossingen te bepalen</li>
-      <li>oplossingen controleren en typische fouten herkennen</li>
+      <li>Wat maakt een vergelijking kwadratisch?</li>
+      <li>Waarom kan een kwadratische vergelijking twee oplossingen hebben?</li>
+      <li>Hoe kunnen we eenvoudige kwadratische vergelijkingen oplossen?</li>
+      <li>Hoe helpt factoriseren bij het oplossen van vergelijkingen?</li>
+      <li>Hoe werkt de abc-formule?</li>
+      <li>Wat vertelt de discriminant ons?</li>
+      <li>Wat hebben de oplossingen te maken met een parabool?</li>
+      <li>Welke methode kunnen we het best gebruiken?</li>
     </ul>
 
     <p>
@@ -2631,11 +2277,11 @@ const MILESTONES_2 = [
       Nu verschijnt ook het kwadraat van de onbekende:
     </p>
 
-    <p class="formula">x² = 9</p>
+    <p class="formula">x^{2} = 9</p>
 
     <p>
       Daardoor verandert de structuur van het probleem.
-      Eén kwadratische vergelijking kan bijvoorbeeld twee verschillende
+      Een kwadratische vergelijking kan bijvoorbeeld twee verschillende
       oplossingen hebben.
     </p>
 
@@ -2643,156 +2289,142 @@ const MILESTONES_2 = [
     <h3>Wat maakt een vergelijking kwadratisch?</h3>
 
     <p>
-      Een kwadratische vergelijking is een vergelijking waarin de hoogste
-      macht van de onbekende 2 is.
+      Een <strong>kwadratische vergelijking</strong> is een vergelijking
+      waarin de hoogste macht van de onbekende 2 is.
     </p>
 
     <p>
       De algemene vorm is:
     </p>
 
-    <p class="formula">ax² + bx + c = 0</p>
+    <p class="formula">ax^{2} + bx + c = 0</p>
 
     <p>
-      waarbij:
+      Hierbij geldt:
     </p>
 
     <ul>
-      <li><strong>a</strong> niet nul mag zijn;</li>
-      <li><strong>b</strong> een willekeurig getal kan zijn;</li>
-      <li><strong>c</strong> een willekeurig getal kan zijn.</li>
+      <li><strong>a</strong> is niet nul;</li>
+      <li><strong>b</strong> kan elk reëel getal zijn;</li>
+      <li><strong>c</strong> kan elk reëel getal zijn.</li>
     </ul>
 
     <p>
       Bijvoorbeeld:
     </p>
 
-    <p class="formula">2x² + 5x − 3 = 0</p>
+    <p class="formula">2x^{2} + 5x - 3 = 0</p>
 
     <p>
       is kwadratisch omdat de hoogste macht van x gelijk is aan 2.
     </p>
 
     <div class="callout">
-      <p><strong>Waarom moet a ≠ 0 zijn?</strong></p>
+      <p><strong>Kernidee:</strong></p>
       <p>
-        Als a = 0, verdwijnt de term ax² en krijgen we geen
-        kwadratische vergelijking meer.
+        Een vergelijking is kwadratisch wanneer de hoogste macht van
+        de onbekende gelijk is aan 2.
+      </p>
+      <p>
+        In de algemene vorm
+        <span class="formula-inline">ax^{2} + bx + c = 0</span>
+        moet <strong>a ≠ 0</strong> zijn. Anders verdwijnt de kwadraatterm.
       </p>
     </div>
 
 
-    <h3>Eerst alles naar één kant</h3>
+    <h3>Alles naar één kant</h3>
 
     <p>
-      De standaardvorm van een kwadratische vergelijking heeft aan één
-      kant nul staan:
+      Om een kwadratische vergelijking systematisch op te lossen,
+      brengen we haar eerst naar de standaardvorm:
     </p>
 
-    <p class="formula">ax² + bx + c = 0</p>
+    <p class="formula">ax^{2} + bx + c = 0</p>
 
     <p>
       Stel dat we hebben:
     </p>
 
-    <p class="formula">x² + 5x = 6</p>
+    <p class="formula">x^{2} + 5x = 6</p>
 
     <p>
-      Dan brengen we alles naar dezelfde kant:
+      We brengen 6 naar de linkerkant:
     </p>
 
-    <p class="formula">x² + 5x − 6 = 0</p>
+    <p class="formula">x^{2} + 5x - 6 = 0</p>
 
     <p>
-      Nu kunnen we de vergelijking als een kwadratische vergelijking
-      behandelen.
+      Nu staat de vergelijking in de vorm die we verder kunnen onderzoeken.
     </p>
 
     <div class="callout">
-      <p><strong>Goede gewoonte:</strong></p>
+      <p><strong>Werkwijze:</strong></p>
       <p>
         Breng bij een kwadratische vergelijking eerst alles naar één kant
         en zorg dat de andere kant nul is.
       </p>
+      <p>
+        Daarna kunnen we herkennen welke methode het meest geschikt is.
+      </p>
     </div>
 
 
-    <h3>De eenvoudigste soort: x² = a</h3>
+    <h3>Van x² = a naar twee oplossingen</h3>
 
     <p>
-      We beginnen met een vergelijking waarin alleen x² voorkomt:
+      We beginnen met de eenvoudigste kwadratische vergelijking:
     </p>
 
-    <p class="formula">x² = 9</p>
+    <p class="formula">x^{2} = 9</p>
 
     <p>
-      We zoeken dus alle getallen waarvan het kwadraat 9 is.
+      We zoeken alle getallen waarvan het kwadraat 9 is.
     </p>
 
-    <p class="formula">3² = 9</p>
+    <p class="formula">3^{2} = 9</p>
 
-    <p class="formula">(−3)² = 9</p>
+    <p class="formula">(-3)^{2} = 9</p>
 
     <p>
-      Er zijn daarom twee oplossingen:
+      Er zijn dus twee oplossingen:
     </p>
 
     <p class="formula">x = 3</p>
 
-    <p class="formula">x = −3</p>
+    <p class="formula">x = -3</p>
 
     <p>
-      We schrijven dit compact als:
+      We kunnen dit compact schrijven als:
     </p>
 
-    <p class="formula">x = ±√9</p>
+    <p class="formula">x = \pm\sqrt{9}</p>
 
-    <p class="formula">x = ±3</p>
+    <p class="formula">x = \pm 3</p>
+
+    <p>
+      Algemeen geldt voor een positieve waarde van a:
+    </p>
+
+    <p class="formula">x^{2} = a \rightarrow x = \pm\sqrt{a}</p>
 
     <div class="callout">
-      <p><strong>Belangrijk:</strong></p>
+      <p><strong>Let op:</strong></p>
       <p>
-        Uit x² = a volgt niet alleen x = √a.
-        Er kan ook een negatieve oplossing zijn:
+        Uit <span class="formula-inline">x^{2} = a</span> volgt niet alleen
+        <span class="formula-inline">x = \sqrt{a}</span>.
       </p>
-      <p class="formula">x² = a → x = ±√a</p>
+      <p>
+        Ook de negatieve waarde kan een oplossing zijn, omdat een negatief
+        getal na kwadrateren positief wordt.
+      </p>
     </div>
 
 
-    <h3>Waarom zijn er soms twee oplossingen?</h3>
+    <h3>Factoriseren en de nulproductregel</h3>
 
     <p>
-      Het kwadrateren maakt een positief en een negatief getal gelijk:
-    </p>
-
-    <p class="formula">4² = 16</p>
-
-    <p class="formula">(−4)² = 16</p>
-
-    <p>
-      Daarom is de vergelijking:
-    </p>
-
-    <p class="formula">x² = 16</p>
-
-    <p>
-      opgelost door:
-    </p>
-
-    <p class="formula">x = 4</p>
-
-    <p class="formula">x = −4</p>
-
-    <p>
-      Dit is een eerste belangrijk verschil met veel lineaire vergelijkingen:
-      een kwadratische vergelijking kan meerdere oplossingen hebben.
-    </p>
-
-
-    <h3>Factoriseren</h3>
-
-    <p>
-      Sommige kwadratische vergelijkingen kunnen we schrijven als
+      Sommige kwadratische uitdrukkingen kunnen we herschrijven als
       een product van factoren.
     </p>
 
@@ -2800,10 +2432,10 @@ const MILESTONES_2 = [
       Bijvoorbeeld:
     </p>
 
-    <p class="formula">x² + 5x + 6</p>
+    <p class="formula">x^{2} + 5x + 6</p>
 
     <p>
-      kunnen we schrijven als:
+      kan worden geschreven als:
     </p>
 
     <p class="formula">(x + 2)(x + 3)</p>
@@ -2812,50 +2444,43 @@ const MILESTONES_2 = [
       Want:
     </p>
 
-    <p class="formula">(x + 2)(x + 3) = x² + 3x + 2x + 6</p>
+    <p class="formula">(x + 2)(x + 3) = x^{2} + 3x + 2x + 6</p>
 
-    <p class="formula">= x² + 5x + 6</p>
+    <p class="formula">= x^{2} + 5x + 6</p>
 
     <p>
-      Factoriseren betekent dus dat we een uitdrukking herschrijven
-      als een product van factoren.
+      Dit noemen we <strong>factoriseren</strong>:
+      een uitdrukking herschrijven als een product van factoren.
     </p>
 
-
-    <h3>De nulproductregel</h3>
-
     <p>
-      De reden waarom factoriseren zo nuttig is, volgt uit een eenvoudige
-      eigenschap:
+      Factoriseren wordt bijzonder nuttig wanneer de vergelijking gelijk
+      is aan nul.
     </p>
 
     <p class="formula">ab = 0</p>
 
     <p>
-      kan alleen waar zijn als minstens één van de factoren nul is:
+      Dan moet minstens één van de factoren nul zijn:
     </p>
 
-    <p class="formula">a = 0\\ of\\ b = 0</p>
+    <p class="formula">a = 0 \quad\text{of}\quad b = 0</p>
 
     <p>
       Dit noemen we de <strong>nulproductregel</strong>.
     </p>
 
     <p>
-      Stel:
+      Bijvoorbeeld:
     </p>
 
     <p class="formula">(x + 2)(x + 3) = 0</p>
 
     <p>
-      Dan moet:
+      geeft:
     </p>
 
     <p class="formula">x + 2 = 0</p>
-
-    <p>
-      of:
-    </p>
 
     <p class="formula">x + 3 = 0</p>
 
@@ -2863,35 +2488,39 @@ const MILESTONES_2 = [
       Dus:
     </p>
 
-    <p class="formula">x = −2</p>
+    <p class="formula">x = -2</p>
 
-    <p class="formula">x = −3</p>
+    <p class="formula">x = -3</p>
 
     <div class="callout">
-      <p><strong>De kracht van factoriseren:</strong></p>
+      <p><strong>Kernidee:</strong></p>
       <p>
-        Eén moeilijke vergelijking wordt opgesplitst in twee eenvoudige
-        vergelijkingen.
+        Factoriseren maakt van één kwadratische vergelijking een product
+        van eenvoudigere factoren.
+      </p>
+      <p>
+        De nulproductregel maakt het daarna mogelijk om die factoren
+        afzonderlijk gelijk aan nul te stellen.
       </p>
     </div>
 
 
-    <h3>Een kwadratische vergelijking oplossen door factoriseren</h3>
+    <h3>Een kwadratische vergelijking factoriseren</h3>
 
     <p>
       Neem:
     </p>
 
-    <p class="formula">x² + 5x + 6 = 0</p>
+    <p class="formula">x^{2} + 5x + 6 = 0</p>
 
     <p>
-      Factoriseer:
+      Eerst factoriseren we:
     </p>
 
     <p class="formula">(x + 2)(x + 3) = 0</p>
 
     <p>
-      Gebruik de nulproductregel:
+      Daarna gebruiken we de nulproductregel:
     </p>
 
     <p class="formula">x + 2 = 0</p>
@@ -2902,390 +2531,248 @@ const MILESTONES_2 = [
       Dus:
     </p>
 
-    <p class="formula">x = −2</p>
+    <p class="formula">x = -2</p>
 
-    <p class="formula">x = −3</p>
+    <p class="formula">x = -3</p>
 
     <p>
-      Controle:
+      We kunnen beide oplossingen controleren in de oorspronkelijke
+      vergelijking:
     </p>
 
-    <p class="formula">(−2)² + 5(−2) + 6 = 4 − 10 + 6 = 0</p>
+    <p class="formula">(-2)^{2} + 5(-2) + 6 = 0</p>
 
-    <p class="formula">(−3)² + 5(−3) + 6 = 9 − 15 + 6 = 0</p>
-
-    <p>
-      Beide waarden voldoen aan de oorspronkelijke vergelijking.
-    </p>
-
-
-    <h3>Waarom je niet zomaar door x mag delen</h3>
+    <p class="formula">(-3)^{2} + 5(-3) + 6 = 0</p>
 
     <p>
-      Stel:
-    </p>
-
-    <p class="formula">x² − 3x = 0</p>
-
-    <p>
-      We kunnen factoriseren:
-    </p>
-
-    <p class="formula">x(x − 3) = 0</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">x = 0</p>
-
-    <p>
-      of:
-    </p>
-
-    <p class="formula">x − 3 = 0</p>
-
-    <p class="formula">x = 3</p>
-
-    <p>
-      We krijgen dus twee oplossingen.
+      Beide waarden maken de oorspronkelijke vergelijking waar.
     </p>
 
     <p>
-      Als we meteen door x zouden delen, krijgen we:
-    </p>
-
-    <p class="formula">x − 3 = 0</p>
-
-    <p>
-      en zouden we de oplossing x = 0 verliezen.
-    </p>
-
-    <div class="callout">
-      <p><strong>Waarom?</strong></p>
-      <p>
-        Delen door x is alleen toegestaan wanneer x zeker niet nul is.
-        Maar juist x = 0 kan een oplossing zijn.
-      </p>
-    </div>
-
-
-    <h3>Een bijzonder geval: verschil van kwadraten</h3>
-
-    <p>
-      Een belangrijke factorisatie is:
-    </p>
-
-    <p class="formula">a² − b² = (a − b)(a + b)</p>
-
-    <p>
+      Factoriseren lukt echter niet altijd eenvoudig.
       Bijvoorbeeld:
     </p>
 
-    <p class="formula">x² − 25</p>
+    <p class="formula">2x^{2} + 3x - 7 = 0</p>
 
     <p>
-      is:
-    </p>
-
-    <p class="formula">x² − 5²</p>
-
-    <p>
-      en dus:
-    </p>
-
-    <p class="formula">(x − 5)(x + 5)</p>
-
-    <p>
-      De vergelijking:
-    </p>
-
-    <p class="formula">x² − 25 = 0</p>
-
-    <p>
-      wordt:
-    </p>
-
-    <p class="formula">(x − 5)(x + 5) = 0</p>
-
-    <p>
-      en geeft:
-    </p>
-
-    <p class="formula">x = 5</p>
-
-    <p class="formula">x = −5</p>
-
-
-    <h3>Niet elke kwadratische vergelijking factoriseert eenvoudig</h3>
-
-    <p>
-      Factoriseren is handig wanneer het gemakkelijk lukt.
-      Maar niet iedere kwadratische vergelijking heeft factoren
-      die we onmiddellijk herkennen.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">2x² + 3x − 7 = 0</p>
-
-    <p>
-      Hier is factoriseren niet vanzelfsprekend.
-    </p>
-
-    <p>
-      We hebben daarom een algemene methode nodig die werkt voor
-      elke kwadratische vergelijking.
-    </p>
-
-    <p>
-      Die methode is de <strong>abc-formule</strong>.
+      Hier is niet meteen een eenvoudige factorisatie zichtbaar.
+      Daarom hebben we een algemene methode nodig.
     </p>
 
 
     <h3>De abc-formule</h3>
 
     <p>
-      Voor een vergelijking in de vorm:
+      Voor iedere kwadratische vergelijking in de vorm:
     </p>
 
-    <p class="formula">ax² + bx + c = 0</p>
+    <p class="formula">ax^{2} + bx + c = 0</p>
 
     <p>
-      kunnen we de oplossingen berekenen met:
+      kunnen we de oplossingen berekenen met de <strong>abc-formule</strong>:
     </p>
 
-    <p class="formula">x = (−b ± √D) / (2a)</p>
+    <p class="formula">x = \frac{-b \pm \sqrt{D}}{2a}</p>
 
     <p>
-      waarbij:
+      Hierbij is:
     </p>
 
-    <p class="formula">D = b² − 4ac</p>
+    <p class="formula">D = b^{2} - 4ac</p>
 
     <p>
       D noemen we de <strong>discriminant</strong>.
     </p>
 
     <p>
-      De formule lijkt op het eerste gezicht misschien een nieuwe regel
-      die we gewoon moeten onthouden. Maar de discriminant vertelt ons
-      iets belangrijks over de structuur van de oplossingen.
-    </p>
-
-
-    <h3>Waar komt de discriminant vandaan?</h3>
-
-    <p>
-      In de abc-formule staat:
-    </p>
-
-    <p class="formula">√D</p>
-
-    <p>
-      De waarde van D bepaalt dus of de vierkantswortel bestaat
-      binnen de reële getallen.
-    </p>
-
-    <p>
-      Omdat:
-    </p>
-
-    <p class="formula">D = b² − 4ac</p>
-
-    <p>
-      kunnen we aan de hand van D bepalen hoeveel reële oplossingen
-      de kwadratische vergelijking heeft.
+      De abc-formule is dus geen methode die alleen voor enkele
+      bijzondere voorbeelden werkt. Ze geeft een algemene manier om
+      de oplossingen van een kwadratische vergelijking te vinden.
     </p>
 
     <div class="callout">
-      <p><strong>De discriminant is dus geen extra truc.</strong></p>
+      <p><strong>Kernidee:</strong></p>
       <p>
-        Hij is precies het deel van de abc-formule dat onder de wortel staat.
-        Daarom bepaalt hij rechtstreeks welke oplossingen mogelijk zijn.
+        De abc-formule werkt voor iedere kwadratische vergelijking
+        waarvan de standaardvorm bekend is.
+      </p>
+      <p>
+        De discriminant staat onder de vierkantswortel en bepaalt daardoor
+        welke reële oplossingen mogelijk zijn.
       </p>
     </div>
 
 
-    <h3>D &gt; 0: twee verschillende oplossingen</h3>
+    <h3>De discriminant</h3>
 
     <p>
-      Stel:
+      In de abc-formule verschijnt:
     </p>
 
-    <p class="formula">D &gt; 0</p>
+    <p class="formula">\sqrt{D}</p>
 
     <p>
-      Dan is √D een positief getal.
-      In de abc-formule krijgen we daardoor twee verschillende waarden:
-    </p>
-
-    <p class="formula">x = (−b + √D) / (2a)</p>
-
-    <p class="formula">x = (−b − √D) / (2a)</p>
-
-    <p>
-      Er zijn dus <strong>twee verschillende reële oplossingen</strong>.
+      Daarom is het teken van D belangrijk.
     </p>
 
     <p>
-      Bijvoorbeeld:
+      Als:
     </p>
 
-    <p class="formula">x² − 5x + 6 = 0</p>
+    <p class="formula">D > 0</p>
 
     <p>
-      Hier:
+      dan is er een positieve waarde onder de wortel en krijgen we
+      twee verschillende reële oplossingen:
+    </p>
+
+    <p class="formula">x = \frac{-b + \sqrt{D}}{2a}</p>
+
+    <p class="formula">x = \frac{-b - \sqrt{D}}{2a}</p>
+
+    <p>
+      Als:
+    </p>
+
+    <p class="formula">D = 0</p>
+
+    <p>
+      dan is:
+    </p>
+
+    <p class="formula">\sqrt{D} = 0</p>
+
+    <p>
+      De plus- en minvariant leveren dezelfde waarde.
+      Er is dus één reële oplossing.
+    </p>
+
+    <p>
+      Als:
+    </p>
+
+    <p class="formula">D < 0</p>
+
+    <p>
+      staat er een negatief getal onder de vierkantswortel.
+      Binnen de reële getallen bestaat zo'n wortel niet.
+      Er zijn dan geen reële oplossingen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De discriminant vertelt hoeveel reële oplossingen een kwadratische
+        vergelijking heeft.
+      </p>
+      <p class="formula">D > 0 \rightarrow 2</p>
+      <p class="formula">D = 0 \rightarrow 1</p>
+      <p class="formula">D < 0 \rightarrow 0</p>
+    </div>
+
+
+    <h3>De drie gevallen van de discriminant</h3>
+
+    <p>
+      We kunnen de drie gevallen concreet bekijken.
+    </p>
+
+    <p>
+      Voor:
+    </p>
+
+    <p class="formula">x^{2} - 5x + 6 = 0</p>
+
+    <p>
+      zijn:
     </p>
 
     <p class="formula">a = 1</p>
 
-    <p class="formula">b = −5</p>
+    <p class="formula">b = -5</p>
 
     <p class="formula">c = 6</p>
 
-    <p class="formula">D = (−5)² − 4 · 1 · 6 = 25 − 24 = 1</p>
+    <p>
+      De discriminant is:
+    </p>
+
+    <p class="formula">D = (-5)^{2} - 4 \cdot 1 \cdot 6 = 1</p>
 
     <p>
-      Omdat D &gt; 0 zijn er twee oplossingen:
+      Omdat D > 0 zijn er twee reële oplossingen:
     </p>
 
     <p class="formula">x = 2</p>
 
     <p class="formula">x = 3</p>
 
-
-    <h3>D = 0: één oplossing</h3>
-
     <p>
-      Stel:
+      Voor:
     </p>
 
-    <p class="formula">D = 0</p>
+    <p class="formula">x^{2} - 4x + 4 = 0</p>
 
     <p>
-      Dan is:
+      geldt:
     </p>
 
-    <p class="formula">√D = 0</p>
+    <p class="formula">D = (-4)^{2} - 4 \cdot 1 \cdot 4 = 0</p>
 
     <p>
-      De plus- en minvariant in de abc-formule leveren dan dezelfde waarde.
-      Er is dus maar <strong>één reële oplossing</strong>.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">x² − 4x + 4 = 0</p>
-
-    <p>
-      Hier:
-    </p>
-
-    <p class="formula">D = (−4)² − 4 · 1 · 4 = 16 − 16 = 0</p>
-
-    <p>
-      De oplossing is:
+      Er is één reële oplossing:
     </p>
 
     <p class="formula">x = 2</p>
 
     <p>
-      Dit klopt ook met factoriseren:
+      Dit zien we ook door factoriseren:
     </p>
 
-    <p class="formula">(x − 2)² = 0</p>
-
-
-    <h3>D &lt; 0: geen reële oplossingen</h3>
+    <p class="formula">(x - 2)^{2} = 0</p>
 
     <p>
-      Stel:
+      Voor:
     </p>
 
-    <p class="formula">D &lt; 0</p>
+    <p class="formula">x^{2} + 1 = 0</p>
 
     <p>
-      Dan staat er een negatief getal onder de vierkantswortel.
-      Binnen de reële getallen bestaat zo'n wortel niet.
+      krijgen we:
     </p>
 
-    <p>
-      De kwadratische vergelijking heeft dan <strong>geen reële oplossing</strong>.
-    </p>
+    <p class="formula">D = 0^{2} - 4 \cdot 1 \cdot 1 = -4</p>
 
     <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">x² + 1 = 0</p>
-
-    <p>
-      Hier:
-    </p>
-
-    <p class="formula">D = 0² − 4 · 1 · 1 = −4</p>
-
-    <p>
-      Omdat D &lt; 0 zijn er geen reële waarden van x die de vergelijking
-      waar maken.
+      Omdat D < 0 zijn er geen reële oplossingen.
     </p>
 
     <p>
-      Later, in de studie van de complexe getallen, zullen we zien hoe
-      zulke vergelijkingen toch oplossingen kunnen krijgen.
-      Voorlopig blijven we binnen de reële getallen.
+      Later zullen complexe getallen toelaten om ook zulke vergelijkingen
+      verder te bestuderen. Voorlopig blijven we binnen de reële getallen.
     </p>
 
 
-    <h3>De drie gevallen van de discriminant</h3>
+    <h3>Van vergelijking naar parabool</h3>
 
     <p>
-      We kunnen alles samenvatten:
-    </p>
-
-    <p class="formula">D &gt; 0 → twee\\ verschillende\\ reële\\ oplossingen</p>
-
-    <p class="formula">D = 0 → één\\ reële\\ oplossing</p>
-
-    <p class="formula">D &lt; 0 → geen\\ reële\\ oplossingen</p>
-
-    <p>
-      Dit is één van de belangrijkste ideeën van deze les.
-    </p>
-
-    <div class="callout">
-      <p><strong>De keten is:</strong></p>
-      <p>
-        kwadratische vergelijking
-        → abc-formule
-        → discriminant onder de wortel
-        → aantal reële oplossingen.
-      </p>
-    </div>
-
-
-    <h3>De grafische betekenis van de discriminant</h3>
-
-    <p>
-      Een kwadratische vergelijking hangt nauw samen met een parabool.
+      De discriminant heeft niet alleen een algebraïsche betekenis.
+      Hij vertelt ons ook iets over de grafiek van de bijbehorende
+      kwadratische functie.
     </p>
 
     <p>
       Beschouw:
     </p>
 
-    <p class="formula">y = ax² + bx + c</p>
+    <p class="formula">y = ax^{2} + bx + c</p>
 
     <p>
       Een oplossing van:
     </p>
 
-    <p class="formula">ax² + bx + c = 0</p>
+    <p class="formula">ax^{2} + bx + c = 0</p>
 
     <p>
       is precies een waarde van x waarvoor:
@@ -3294,45 +2781,45 @@ const MILESTONES_2 = [
     <p class="formula">y = 0</p>
 
     <p>
-      De oplossingen zijn dus de plaatsen waar de parabool de x-as raakt
-      of kruist.
+      De oplossingen zijn dus de <strong>nulpunten</strong> van de
+      bijbehorende parabool.
     </p>
 
     <p>
-      Daarom betekent:
+      Daarom geldt:
     </p>
 
-    <p class="formula">D &gt; 0</p>
+    <p class="formula">D > 0 \rightarrow \text{twee snijpunten}</p>
 
-    <p>
-      dat de parabool de x-as op twee plaatsen snijdt.
-    </p>
+    <p class="formula">D = 0 \rightarrow \text{één raakpunt}</p>
 
-    <p class="formula">D = 0</p>
-
-    <p>
-      betekent dat de parabool de x-as op één plaats raakt.
-    </p>
-
-    <p class="formula">D &lt; 0</p>
-
-    <p>
-      betekent dat de parabool de x-as niet snijdt.
-    </p>
+    <p class="formula">D < 0 \rightarrow \text{geen snijpunten}</p>
 
     <p>
       De algebraïsche discriminant en de geometrische vorm van de parabool
       vertellen dus hetzelfde verhaal.
     </p>
 
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De oplossingen van een kwadratische vergelijking zijn de nulpunten
+        van de bijbehorende parabool.
+      </p>
+      <p>
+        De discriminant vertelt tegelijk hoeveel reële oplossingen de
+        vergelijking heeft en hoe de parabool de x-as snijdt.
+      </p>
+    </div>
 
-    <h3>De abc-formule stap voor stap gebruiken</h3>
+
+    <h3>De abc-formule stap voor stap</h3>
 
     <p>
       Neem:
     </p>
 
-    <p class="formula">2x² − 3x − 2 = 0</p>
+    <p class="formula">2x^{2} - 3x - 2 = 0</p>
 
     <p>
       <strong>Stap 1: herken a, b en c.</strong>
@@ -3340,29 +2827,29 @@ const MILESTONES_2 = [
 
     <p class="formula">a = 2</p>
 
-    <p class="formula">b = −3</p>
+    <p class="formula">b = -3</p>
 
-    <p class="formula">c = −2</p>
+    <p class="formula">c = -2</p>
 
     <p>
       <strong>Stap 2: bereken de discriminant.</strong>
     </p>
 
-    <p class="formula">D = (−3)² − 4 · 2 · (−2)</p>
+    <p class="formula">D = (-3)^{2} - 4 \cdot 2 \cdot (-2)</p>
 
     <p class="formula">D = 9 + 16 = 25</p>
 
     <p>
-      Omdat D &gt; 0 zijn er twee reële oplossingen.
+      Omdat D > 0 weten we al dat er twee reële oplossingen zijn.
     </p>
 
     <p>
       <strong>Stap 3: gebruik de abc-formule.</strong>
     </p>
 
-    <p class="formula">x = (3 ± √25) / 4</p>
+    <p class="formula">x = \frac{3 \pm \sqrt{25}}{4}</p>
 
-    <p class="formula">x = (3 ± 5) / 4</p>
+    <p class="formula">x = \frac{3 \pm 5}{4}</p>
 
     <p>
       Dus:
@@ -3370,78 +2857,91 @@ const MILESTONES_2 = [
 
     <p class="formula">x = 2</p>
 
-    <p>
-      of:
-    </p>
-
-    <p class="formula">x = −1/2</p>
+    <p class="formula">x = -\frac{1}{2}</p>
 
     <p>
-      Beide waarden controleren we eventueel in de oorspronkelijke vergelijking.
+      We kunnen beide oplossingen vervolgens controleren in de
+      oorspronkelijke vergelijking.
     </p>
 
+    <div class="callout">
+      <p><strong>Werkwijze:</strong></p>
+      <p>
+        Breng de vergelijking eerst naar de standaardvorm.
+        Bepaal daarna a, b en c, bereken D en gebruik vervolgens
+        de abc-formule.
+      </p>
+      <p>
+        Controleer ten slotte de gevonden oplossingen in de oorspronkelijke
+        vergelijking.
+      </p>
+    </div>
 
-    <h3>Een andere methode: kwadraat afsplitsen</h3>
+
+    <h3>Kwadraat afsplitsen: een andere kijk</h3>
 
     <p>
       Er bestaat nog een algemene manier om een kwadratische vergelijking
-      te begrijpen: het <strong>kwadraat afsplitsen</strong>,
-      ook wel kwadraat afmaken genoemd.
+      te begrijpen: <strong>kwadraat afsplitsen</strong>, ook wel
+      kwadraat afmaken genoemd.
     </p>
 
     <p>
-      Bijvoorbeeld:
+      Neem:
     </p>
 
-    <p class="formula">x² + 6x + 5 = 0</p>
+    <p class="formula">x^{2} + 6x + 5 = 0</p>
 
     <p>
-      We kunnen schrijven:
+      We kunnen de vergelijking herschrijven als:
     </p>
 
-    <p class="formula">x² + 6x + 9 = 4</p>
+    <p class="formula">x^{2} + 6x + 9 = 4</p>
 
     <p>
-      zodat:
+      Dus:
     </p>
 
-    <p class="formula">(x + 3)² = 4</p>
+    <p class="formula">(x + 3)^{2} = 4</p>
 
     <p>
       Daarna:
     </p>
 
-    <p class="formula">x + 3 = ±2</p>
+    <p class="formula">x + 3 = \pm 2</p>
 
     <p>
       en dus:
     </p>
 
-    <p class="formula">x = −1</p>
+    <p class="formula">x = -1</p>
 
-    <p class="formula">x = −5</p>
+    <p class="formula">x = -5</p>
 
     <p>
-      Deze methode laat goed zien waarom kwadratische vergelijkingen
+      Kwadraat afsplitsen laat goed zien waarom kwadratische vergelijkingen
       uiteindelijk met wortels kunnen worden opgelost.
     </p>
 
     <p>
       Voor systematisch rekenen is de abc-formule vaak handiger.
-      Voor begrip van de structuur is kwadraat afsplitsen echter zeer waardevol.
+      Kwadraat afsplitsen is vooral waardevol om de structuur van een
+      kwadratische vergelijking te begrijpen.
     </p>
 
 
     <h3>Welke methode gebruik je?</h3>
 
     <p>
-      Er zijn verschillende manieren om een kwadratische vergelijking op te lossen.
+      Er bestaan verschillende manieren om een kwadratische vergelijking
+      op te lossen.
     </p>
 
     <ul>
       <li>
         <strong>Wortel nemen:</strong>
-        wanneer de vergelijking rechtstreeks de vorm x² = a heeft.
+        wanneer de vergelijking rechtstreeks de vorm
+        <span class="formula-inline">x^{2} = a</span> heeft.
       </li>
       <li>
         <strong>Factoriseren:</strong>
@@ -3464,7 +2964,7 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Controleer altijd je oplossingen</h3>
+    <h3>Controle en veelgemaakte fouten</h3>
 
     <p>
       Een gevonden waarde is pas een oplossing wanneer ze de
@@ -3472,10 +2972,10 @@ const MILESTONES_2 = [
     </p>
 
     <p>
-      Neem bijvoorbeeld:
+      Bijvoorbeeld:
     </p>
 
-    <p class="formula">x² − 5x + 6 = 0</p>
+    <p class="formula">x^{2} - 5x + 6 = 0</p>
 
     <p>
       We vonden:
@@ -3487,77 +2987,83 @@ const MILESTONES_2 = [
       Controle:
     </p>
 
-    <p class="formula">2² − 5 · 2 + 6 = 4 − 10 + 6 = 0</p>
+    <p class="formula">2^{2} - 5 \cdot 2 + 6 = 0</p>
 
     <p>
-      Dus x = 2 is inderdaad een oplossing.
+      Er zijn enkele fouten die vaak voorkomen.
     </p>
 
     <p>
-      Deze controle is vooral nuttig wanneer er veel negatieve getallen
-      of meerdere bewerkingen in de berekening voorkomen.
+      <strong>Fout 1: slechts één wortel nemen.</strong>
     </p>
 
-
-    <h3>Veelgemaakte fouten</h3>
-
-    <p><strong>Fout 1: slechts één wortel nemen</strong></p>
-
-    <p class="formula">x² = 25 → x = 5</p>
+    <p class="formula">x^{2} = 25 \rightarrow x = 5</p>
 
     <p>
-      Dit mist de oplossing x = −5.
+      Hierbij ontbreekt de oplossing:
     </p>
+
+    <p class="formula">x = -5</p>
 
     <p>
-      Correct:
+      <strong>Fout 2: door x delen.</strong>
     </p>
-
-    <p class="formula">x = ±5</p>
-
-    <p><strong>Fout 2: door x delen</strong></p>
 
     <p>
       Bij:
     </p>
 
-    <p class="formula">x(x − 3) = 0</p>
+    <p class="formula">x(x - 3) = 0</p>
 
     <p>
-      mag je niet zomaar door x delen, omdat x = 0 een mogelijke oplossing is.
+      mag je niet zomaar door x delen, omdat x = 0 een mogelijke
+      oplossing is.
     </p>
 
-    <p><strong>Fout 3: het teken van b verkeerd overnemen</strong></p>
+    <p>
+      <strong>Fout 3: het teken van b verkeerd overnemen.</strong>
+    </p>
 
     <p>
       Bij:
     </p>
 
-    <p class="formula">2x² − 3x − 2 = 0</p>
+    <p class="formula">2x^{2} - 3x - 2 = 0</p>
 
     <p>
       is:
     </p>
 
-    <p class="formula">b = −3</p>
+    <p class="formula">b = -3</p>
 
     <p>
       en niet b = 3.
     </p>
 
-    <p><strong>Fout 4: de discriminant verkeerd interpreteren</strong></p>
+    <p>
+      <strong>Fout 4: de discriminant verkeerd interpreteren.</strong>
+    </p>
 
     <p>
-      D &lt; 0 betekent geen <strong>reële</strong> oplossingen,
+      D < 0 betekent geen <strong>reële</strong> oplossingen,
       niet dat de vergelijking helemaal geen betekenis heeft.
     </p>
 
+    <div class="callout">
+      <p><strong>Let op:</strong></p>
+      <p>
+        Controleer altijd de oorspronkelijke vergelijking.
+        Een algebraïsche stap kan een tekenfout of een verloren oplossing
+        verbergen.
+      </p>
+      <p>
+        Let vooral op het teken van b, de twee oplossingen bij een kwadraat
+        en het verschil tussen reële en complexe oplossingen.
+      </p>
+    </div>
+
 
     <h3>Een vaste werkwijze</h3>
-
-    <p>
-      Bij een kwadratische vergelijking kun je deze werkwijze gebruiken:
-    </p>
 
     <ol>
       <li>breng alles naar één kant;</li>
@@ -3571,49 +3077,28 @@ const MILESTONES_2 = [
       <li>controleer de oplossingen in de oorspronkelijke vergelijking.</li>
     </ol>
 
-
-    <h3>Van vergelijking naar parabool</h3>
-
-    <p>
-      We kunnen nu een belangrijke verbinding leggen tussen algebra en meetkunde.
-    </p>
-
-    <p>
-      De vergelijking:
-    </p>
-
-    <p class="formula">ax² + bx + c = 0</p>
-
-    <p>
-      vraagt naar de x-waarden waarvoor:
-    </p>
-
-    <p class="formula">y = ax² + bx + c</p>
-
-    <p>
-      gelijk is aan nul.
-    </p>
-
-    <p>
-      De oplossingen van de vergelijking zijn dus precies de
-      <strong>nulpunten</strong> van de bijbehorende parabool.
-    </p>
-
-    <p>
-      Daarmee leggen we een belangrijke brug naar de volgende lessen:
-      algebra kan een geometrische vorm beschrijven.
-    </p>
+    <div class="callout">
+      <p><strong>Werkwijze:</strong></p>
+      <p>
+        Eerst de structuur herkennen, daarna de passende oplossingsmethode
+        kiezen en ten slotte de gevonden oplossingen controleren.
+      </p>
+      <p>
+        Zo wordt een kwadratische vergelijking geen verzameling losse
+        rekenregels, maar een probleem met een vaste oplossingsstrategie.
+      </p>
+    </div>
 
 
     <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>
-      Een kwadratische vergelijking is meer dan een moeilijkere versie
-      van een lineaire vergelijking.
+      Een kwadratische vergelijking verschilt van een lineaire vergelijking
+      doordat de onbekende tot de tweede macht voorkomt.
     </p>
 
     <p>
-      Door het verschijnen van x² kunnen er:
+      Daardoor kunnen er:
     </p>
 
     <ul>
@@ -3623,59 +3108,62 @@ const MILESTONES_2 = [
     </ul>
 
     <p>
-      Factoriseren maakt sommige vergelijkingen eenvoudig.
-      De abc-formule geeft een algemene methode.
-      De discriminant vertelt vooraf hoeveel reële oplossingen er zijn.
+      We hebben verschillende manieren gezien om oplossingen te vinden:
+      wortels nemen, factoriseren, kwadraat afsplitsen en de abc-formule.
     </p>
 
     <p>
-      En wanneer we de vergelijking bekijken als de grafiek
-      <span class="formula-inline">y = ax² + bx + c</span>,
-      krijgen dezelfde drie gevallen een geometrische betekenis:
-      de parabool snijdt de x-as twee keer, raakt haar één keer,
-      of raakt haar helemaal niet.
+      De discriminant maakt vooraf zichtbaar hoeveel reële oplossingen
+      mogelijk zijn.
+    </p>
+
+    <p>
+      Ten slotte zagen we dat dezelfde informatie ook geometrisch kan
+      worden gelezen: de oplossingen zijn de nulpunten van de parabool
+      <span class="formula-inline">y = ax^{2} + bx + c</span>.
     </p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
-        De discriminant verbindt algebra en meetkunde:
+        Een kwadratische vergelijking bevat een onbekende tot de tweede macht.
+        Daardoor kunnen er twee, één of geen reële oplossingen zijn.
       </p>
-      <p class="formula">D &gt; 0 → twee snijpunten</p>
-      <p class="formula">D = 0 → één raakpunt</p>
-      <p class="formula">D &lt; 0 → geen snijpunten</p>
       <p>
-        Eén formule vertelt ons dus tegelijk hoeveel reële oplossingen
-        de vergelijking heeft en hoe de bijbehorende parabool zich
-        ten opzichte van de x-as gedraagt.
+        Factoriseren, de nulproductregel en de abc-formule geven verschillende
+        manieren om die oplossingen te vinden. De discriminant vertelt vooraf
+        hoeveel reële oplossingen er zijn.
+      </p>
+      <p>
+        De oplossingen van de vergelijking zijn de nulpunten van de
+        bijbehorende parabool.
       </p>
     </div>
   `
 },
-   {
+     {
   id: "2.8",
   title: "Coördinaten & analytische meetkunde",
   goal: "Hoe vertalen we meetkunde naar getallen?",
   theory: /* html */`
     <h2>Coördinaten & analytische meetkunde</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>punten beschrijven met coördinaten</li>
-      <li>de assen, oorsprong en kwadranten begrijpen</li>
-      <li>afstanden tussen punten berekenen</li>
-      <li>het midden van een lijnstuk bepalen</li>
-      <li>de helling van een rechte begrijpen en berekenen</li>
-      <li>een rechte beschrijven met een vergelijking</li>
-      <li>parallelle en loodrechte rechten herkennen</li>
-      <li>snijpunten van rechten bepalen</li>
-      <li>meetkundige problemen vertalen naar algebra</li>
+      <li>Hoe kunnen we de plaats van een punt met twee getallen beschrijven?</li>
+      <li>Hoe berekenen we de afstand en het midden tussen twee punten?</li>
+      <li>Hoe beschrijven we de richting van een rechte met een getal?</li>
+      <li>Hoe schrijven we de vergelijking van een rechte?</li>
+      <li>Hoe herkennen we parallelle en loodrechte rechten?</li>
+      <li>Hoe vinden we het snijpunt van twee rechten?</li>
+      <li>Hoe kunnen we een meetkundig probleem vertalen naar algebra?</li>
     </ul>
 
     <p>
       In de vorige lessen gebruikten we algebra om relaties tussen getallen
       te beschrijven. Nu maken we een belangrijke stap:
-      we gebruiken getallen om <strong>plaats en vorm</strong> te beschrijven.
+      we gebruiken getallen om <strong>plaats, afstand en richting</strong>
+      te beschrijven.
     </p>
 
     <p>
@@ -3684,47 +3172,22 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Van plaats naar getallen</h3>
+    <h3>Het cartesisch coördinatenstelsel</h3>
 
     <p>
-      Stel dat je op een kaart wilt aangeven waar een bepaalde plaats ligt.
-      Alleen zeggen dat ze "ergens rechts" of "ergens boven" ligt,
-      is niet voldoende.
-    </p>
-
-    <p>
-      We hebben een systeem nodig waarmee iedere positie een unieke
-      beschrijving krijgt.
-    </p>
-
-    <p>
-      In een vlak gebruiken we daarvoor twee getallen:
+      Om de plaats van een punt exact te beschrijven, gebruiken we twee
+      getallen. Samen vormen ze de coördinaten van het punt:
     </p>
 
     <p class="formula">(x, y)</p>
 
     <p>
-      Het eerste getal geeft aan hoe ver we horizontaal gaan.
-      Het tweede getal geeft aan hoe ver we verticaal gaan.
+      Het eerste getal geeft de horizontale positie aan.
+      Het tweede getal geeft de verticale positie aan.
     </p>
 
     <p>
-      Het punt:
-    </p>
-
-    <p class="formula">(3, 2)</p>
-
-    <p>
-      betekent dus:
-      3 eenheden naar rechts en 2 eenheden omhoog vanaf het referentiepunt.
-    </p>
-
-
-    <h3>Het cartesisch coördinatenstelsel</h3>
-
-    <p>
-      Het referentiepunt noemen we de <strong>oorsprong</strong>.
-      De oorsprong heeft coördinaten:
+      Het referentiepunt noemen we de <strong>oorsprong</strong>:
     </p>
 
     <p class="formula">(0, 0)</p>
@@ -3739,57 +3202,32 @@ const MILESTONES_2 = [
     </ul>
 
     <p>
-      Positieve x-waarden liggen rechts van de oorsprong.
-      Negatieve x-waarden liggen links.
+      Positieve x-waarden liggen rechts van de oorsprong en negatieve
+      x-waarden links. Positieve y-waarden liggen boven de oorsprong en
+      negatieve y-waarden eronder.
     </p>
 
-    <p>
-      Positieve y-waarden liggen boven de oorsprong.
-      Negatieve y-waarden liggen eronder.
-    </p>
-
-    <p>
-      Een punt zoals:
-    </p>
-
-    <p class="formula">A = (−3, 2)</p>
-
-    <p>
-      ligt dus 3 eenheden links en 2 eenheden boven de oorsprong.
-    </p>
-
-
-    <h3>De vier kwadranten</h3>
-
-    <p>
-      De twee assen verdelen het vlak in vier gebieden.
-      Die noemen we de <strong>kwadranten</strong>.
-    </p>
     <div class="theory-image">
-  <img
-    src="assets/assenstelsel-kwadranten.svg"
-    alt="Het cartesisch assenstelsel met de vier kwadranten en de tekens van x en y."
-  >
-</div>
+      <img
+        src="assets/assenstelsel-kwadranten.svg"
+        alt="Het cartesisch assenstelsel met de vier kwadranten en de tekens van x en y."
+      >
+    </div>
 
     <p>
-      De tekens van x en y bepalen in welk kwadrant een punt ligt.
+      De twee assen verdelen het vlak in vier <strong>kwadranten</strong>.
     </p>
 
-    <p class="formula">(+, +) → eerste kwadrant</p>
+    <p class="formula">(+, +) \\rightarrow eerste\\ kwadrant</p>
 
-    <p class="formula">(−, +) → tweede kwadrant</p>
+    <p class="formula">(-, +) \\rightarrow tweede\\ kwadrant</p>
 
-    <p class="formula">(−, −) → derde kwadrant</p>
+    <p class="formula">(-, -) \\rightarrow derde\\ kwadrant</p>
 
-    <p class="formula">(+, −) → vierde kwadrant</p>
-
-    <p>
-      Punten op een as behoren niet tot een kwadrant.
-    </p>
+    <p class="formula">(+, -) \\rightarrow vierde\\ kwadrant</p>
 
     <p>
-      Op de x-as geldt:
+      Punten op een as behoren niet tot een kwadrant. Op de x-as geldt:
     </p>
 
     <p class="formula">y = 0</p>
@@ -3801,45 +3239,56 @@ const MILESTONES_2 = [
     <p class="formula">x = 0</p>
 
 
-    <h3>Een punt lezen en schrijven</h3>
+    <h3>Punten lezen en schrijven</h3>
 
     <p>
-      De volgorde van de coördinaten is belangrijk.
+      De volgorde van de coördinaten is belangrijk. Een punt wordt altijd
+      geschreven als:
     </p>
 
-    <p class="formula">A = (2, 5)</p>
+    <p class="formula">(x, y)</p>
 
     <p>
-      betekent niet hetzelfde als:
+      Het punt:
     </p>
 
-    <p class="formula">A = (5, 2)</p>
+    <p class="formula">A = (3, 2)</p>
 
     <p>
-      In het eerste geval is de horizontale positie 2 en de verticale
-      positie 5.
-      In het tweede geval zijn die omgewisseld.
+      betekent 3 eenheden naar rechts en 2 eenheden omhoog vanaf de
+      oorsprong.
     </p>
+
+    <p>
+      Het punt:
+    </p>
+
+    <p class="formula">B = (-3, 2)</p>
+
+    <p>
+      ligt 3 eenheden links en 2 eenheden boven de oorsprong.
+    </p>
+
+    <p>
+      De volgorde mag niet worden omgewisseld:
+    </p>
+
+    <p class="formula">(2, 5) \\neq (5, 2)</p>
 
     <div class="callout">
-      <p><strong>Onthoud:</strong></p>
+      <p><strong>Kernidee:</strong></p>
       <p>
-        Een punt wordt altijd geschreven als
-        <strong>(x, y)</strong>:
-        eerst horizontaal, daarna verticaal.
+        Een punt in het vlak wordt volledig bepaald door twee getallen:
+        eerst de horizontale positie, daarna de verticale positie.
       </p>
     </div>
 
 
-    <h3>Afstand horizontaal en verticaal</h3>
+    <h3>Afstand tussen punten</h3>
 
     <p>
-      Als twee punten dezelfde y-coördinaat hebben, liggen ze op dezelfde
-      horizontale lijn.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
+      Eerst bekijken we een eenvoudig geval. Als twee punten dezelfde
+      y-coördinaat hebben, liggen ze op dezelfde horizontale lijn.
     </p>
 
     <p class="formula">A = (2, 3)</p>
@@ -3850,64 +3299,88 @@ const MILESTONES_2 = [
       Het verschil in x-coördinaat is:
     </p>
 
-    <p class="formula">7 − 2 = 5</p>
+    <p class="formula">7 - 2 = 5</p>
 
     <p>
-      De afstand tussen A en B is dus 5.
+      De afstand is dus 5.
     </p>
 
     <p>
       Algemeen:
     </p>
 
-    <p class="formula">afstand = |x₂ − x₁|</p>
+    <p class="formula">d = |x_{2} - x_{1}|</p>
 
     <p>
-      Op dezelfde manier geldt voor twee punten met dezelfde x-coördinaat:
+      Voor twee punten met dezelfde x-coördinaat geldt op dezelfde manier:
     </p>
 
-    <p class="formula">afstand = |y₂ − y₁|</p>
-
-
-    <h3>De afstand tussen twee willekeurige punten</h3>
+    <p class="formula">d = |y_{2} - y_{1}|</p>
 
     <p>
-      Nu nemen we twee willekeurige punten:
-    </p>
-
-    <p class="formula">A = (x₁, y₁)</p>
-
-    <p class="formula">B = (x₂, y₂)</p>
-    <p>
-      We kunnen vanuit A eerst horizontaal en daarna verticaal naar B gaan.
-      De twee verplaatsingen zijn:
-    </p>
-
-    <p class="formula">Δx = x₂ − x₁</p>
-
-    <p class="formula">Δy = y₂ − y₁</p>
-
-    <p>
-      Deze twee verplaatsingen vormen de rechthoekszijden van een rechthoekige
-      driehoek.
+      Maar wat als beide coördinaten verschillen?
+      Dan kunnen we vanuit het ene punt eerst horizontaal en daarna
+      verticaal naar het andere punt gaan.
     </p>
 
     <p>
-      Volgens de stelling van Pythagoras is de afstand d:
+      Voor:
     </p>
 
-    <p class="formula">d² = (Δx)² + (Δy)²</p>
+    <p class="formula">A = (x_{1}, y_{1})</p>
+
+    <p class="formula">B = (x_{2}, y_{2})</p>
+
+    <p>
+      zijn de twee verplaatsingen:
+    </p>
+
+    <p class="formula">\\Delta x = x_{2} - x_{1}</p>
+
+    <p class="formula">\\Delta y = y_{2} - y_{1}</p>
+
+    <p>
+      Deze twee verplaatsingen vormen de rechthoekszijden van een
+      rechthoekige driehoek.
+    </p>
+
+    <div class="theory-image">
+      <img
+        src="assets/afstand-driehoek.svg"
+        alt="Van een punt naar een ander punt: de horizontale en verticale verplaatsing vormen samen met de afstand een rechthoekige driehoek."
+      >
+    </div>
+
+    <p>
+      Nu kunnen we de stelling van Pythagoras gebruiken:
+    </p>
+
+    <p class="formula">d^{2} = (\\Delta x)^{2} + (\\Delta y)^{2}</p>
 
     <p>
       Dus:
     </p>
 
-    <p class="formula">d = \\sqrt{((x₂ − x₁)² + (y₂ − y₁)²)}</p>
+    <p class="formula">d = \\sqrt{(\\Delta x)^{2} + (\\Delta y)^{2}}</p>
 
     <p>
-      De afstandsformule is dus geen nieuwe willekeurige formule.
-      Ze volgt rechtstreeks uit de stelling van Pythagoras.
+      Als we de verschillen invullen, krijgen we de algemene
+      afstandsformule:
     </p>
+
+    <p class="formula">d = \\sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}}</p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De afstandsformule is geen nieuwe, losstaande regel.
+        Ze volgt rechtstreeks uit de stelling van Pythagoras.
+      </p>
+      <p>
+        De horizontale en verticale verschillen vormen de rechthoekszijden;
+        de afstand tussen de punten is de schuine zijde.
+      </p>
+    </div>
 
 
     <h3>Een afstand berekenen</h3>
@@ -3921,40 +3394,38 @@ const MILESTONES_2 = [
     <p class="formula">B = (5, 5)</p>
 
     <p>
-      Dan:
+      Eerst bepalen we de horizontale en verticale verschillen:
     </p>
 
-    <p class="formula">x₂ − x₁ = 5 − 1 = 4</p>
+    <p class="formula">\\Delta x = 5 - 1 = 4</p>
 
-    <p class="formula">y₂ − y₁ = 5 − 2 = 3</p>
+    <p class="formula">\\Delta y = 5 - 2 = 3</p>
 
     <p>
-      Dus:
+      De afstand is:
     </p>
 
-    <p class="formula">d = √(4² + 3²)</p>
+    <p class="formula">d = \\sqrt{4^{2} + 3^{2}}</p>
 
-    <p class="formula">d = √(16 + 9)</p>
+    <p class="formula">d = \\sqrt{16 + 9}</p>
 
-    <p class="formula">d = √25 = 5</p>
+    <p class="formula">d = \\sqrt{25} = 5</p>
 
     <p>
       De twee punten liggen dus 5 eenheden uit elkaar.
     </p>
 
-    <div class="theory-image">
-        <img
-          src="assets/afstand-driehoek.svg"
-          alt="Van A(1, 2) naar B(4, 6): 3 naar rechts, 4 omhoog, afstand 5 als schuine zijde."
-        >
-      </div>
+    <p>
+      We hebben hier opnieuw gezien hoe een meetkundig probleem rechtstreeks
+      kan worden vertaald naar een berekening.
+    </p>
 
 
     <h3>Het midden van een lijnstuk</h3>
 
     <p>
-      Soms willen we niet de afstand tussen twee punten weten,
-      maar het punt dat precies halverwege ligt.
+      Soms willen we niet de afstand tussen twee punten kennen, maar het
+      punt dat precies halverwege ligt.
     </p>
 
     <p>
@@ -3966,71 +3437,79 @@ const MILESTONES_2 = [
     <p class="formula">B = (8, 10)</p>
 
     <p>
-      De x-coördinaat van het midden is het gemiddelde van de twee
-      x-coördinaten:
+      Voor de x-coördinaat nemen we het gemiddelde:
     </p>
 
-    <p class="formula">(2 + 8) / 2 = 5</p>
+    <p class="formula">\\frac{2 + 8}{2} = 5</p>
 
     <p>
-      Voor y doen we hetzelfde:
+      Voor de y-coördinaat doen we hetzelfde:
     </p>
 
-    <p class="formula">(4 + 10) / 2 = 7</p>
+    <p class="formula">\\frac{4 + 10}{2} = 7</p>
 
     <p>
-      Het midden M is dus:
+      Het midden is dus:
     </p>
 
     <p class="formula">M = (5, 7)</p>
 
     <p>
-      Algemeen:
+      Algemeen is het midden van twee punten:
     </p>
 
-    <p class="formula">M = (\\frac{x₁ + x₂}{2},\\frac{y₁ + y₂}{2})</p>
+    <p class="formula">M = \\left(\\frac{x_{1} + x_{2}}{2}, \\frac{y_{1} + y_{2}}{2}\\right)</p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Het midden van een lijnstuk vinden we door voor elke coördinaat
+        afzonderlijk het gemiddelde te nemen.
+      </p>
+    </div>
 
 
-    <h3>Van een lijnstuk naar een richting</h3>
+    <h3>Van verplaatsing naar richting</h3>
 
     <p>
       Twee punten vertellen ons niet alleen hoe ver ze uit elkaar liggen.
-      Ze vertellen ook iets over de <strong>richting</strong> van het lijnstuk.
+      Ze vertellen ook iets over de <strong>richting</strong> van het
+      lijnstuk.
     </p>
 
     <p>
-      Stel dat we van A naar B gaan.
-      Dan veranderen x en y met:
+      Van A naar B veranderen x en y met:
     </p>
 
-    <p class="formula">Δx = x₂ − x₁</p>
+    <p class="formula">\\Delta x = x_{2} - x_{1}</p>
 
-    <p class="formula">Δy = y₂ − y₁</p>
+    <p class="formula">\\Delta y = y_{2} - y_{1}</p>
 
     <p>
-      We kunnen dus vragen:
-      hoeveel verandert y wanneer x één eenheid verandert?
+      We kunnen daarom vragen:
+      hoeveel verandert y wanneer x verandert?
     </p>
 
     <p>
-      Dat leidt tot het begrip <strong>helling</strong>.
+      De verhouding tussen die twee veranderingen noemen we de
+      <strong>helling</strong>.
     </p>
 
 
     <h3>De helling van een rechte</h3>
 
     <p>
-      De helling geeft de verhouding tussen de verticale en horizontale
-      verandering.
+      De helling geeft aan hoeveel de verticale positie verandert ten
+      opzichte van de horizontale positie.
     </p>
 
-    <p class="formula">m = Δy / Δx</p>
+    <p class="formula">m = \\frac{\\Delta y}{\\Delta x}</p>
 
     <p>
-      Voor twee punten:
+      Voor twee punten krijgen we:
     </p>
 
-    <p class="formula">m = \\frac{y₂ − y₁}{x₂ − x₁}</p>
+    <p class="formula">m = \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}</p>
 
     <p>
       Een positieve helling betekent dat de rechte stijgt wanneer we
@@ -4042,8 +3521,18 @@ const MILESTONES_2 = [
     </p>
 
     <p>
-      Een grotere absolute waarde van m betekent een steilere rechte.
+      Hoe groter de absolute waarde van de helling, hoe sterker de rechte
+      stijgt of daalt.
     </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De helling meet hoeveel <strong>y</strong> verandert wanneer
+        <strong>x</strong> met één eenheid verandert.
+      </p>
+      <p class="formula">m = \\frac{\\Delta y}{\\Delta x}</p>
+    </div>
 
 
     <h3>Een helling berekenen</h3>
@@ -4060,15 +3549,15 @@ const MILESTONES_2 = [
       Dan:
     </p>
 
-    <p class="formula">Δy = 5 − 2 = 3</p>
+    <p class="formula">\\Delta y = 5 - 2 = 3</p>
 
-    <p class="formula">Δx = 5 − 1 = 4</p>
+    <p class="formula">\\Delta x = 5 - 1 = 4</p>
 
     <p>
       De helling is:
     </p>
 
-    <p class="formula">m = 3 / 4</p>
+    <p class="formula">m = \\frac{3}{4}</p>
 
     <p>
       Dat betekent dat y gemiddeld 3/4 eenheid stijgt wanneer x
@@ -4079,32 +3568,32 @@ const MILESTONES_2 = [
     <h3>Horizontale en verticale rechten</h3>
 
     <p>
-      Bij een horizontale rechte verandert y niet.
+      Bij een horizontale rechte verandert y niet:
     </p>
 
-    <p class="formula">Δy = 0</p>
+    <p class="formula">\\Delta y = 0</p>
 
     <p>
-      Dus:
+      Daarom:
     </p>
 
     <p class="formula">m = 0</p>
 
     <p>
-      Een horizontale rechte heeft daarom vergelijking:
+      Een horizontale rechte heeft de vorm:
     </p>
 
     <p class="formula">y = b</p>
 
     <p>
-      Bij een verticale rechte verandert x niet.
+      Bij een verticale rechte verandert x niet:
     </p>
 
-    <p class="formula">Δx = 0</p>
+    <p class="formula">\\Delta x = 0</p>
 
     <p>
-      Delen door nul is niet gedefinieerd.
-      Een verticale rechte heeft daarom geen eindige helling.
+      Delen door nul is niet gedefinieerd. Een verticale rechte heeft
+      daarom geen eindige helling.
     </p>
 
     <p>
@@ -4112,6 +3601,18 @@ const MILESTONES_2 = [
     </p>
 
     <p class="formula">x = a</p>
+
+    <div class="callout">
+      <p><strong>Let op:</strong></p>
+      <p>
+        De formule
+        <span class="formula-inline">m = \\frac{\\Delta y}{\\Delta x}</span>
+        werkt alleen wanneer <span class="formula-inline">\\Delta x \\neq 0</span>.
+      </p>
+      <p>
+        Een verticale rechte heeft daarom geen gedefinieerde eindige helling.
+      </p>
+    </div>
 
 
     <h3>De vergelijking van een rechte</h3>
@@ -4132,19 +3633,20 @@ const MILESTONES_2 = [
     </ul>
 
     <p>
-      Bijvoorbeeld: een rechte gaat door de punten (3,7) en (0,1)
+      Bijvoorbeeld:
     </p>
-    <div class="theory-image">
-        <img
-          src="assets/rechte-2x-plus-1.svg"
-          alt="De lijn y = 2x + 1: helling 2, snijpunt (0, 1), punt (3, 7) erop."
-        >
-      </div>
 
     <p class="formula">y = 2x + 1</p>
 
+    <div class="theory-image">
+      <img
+        src="assets/rechte-2x-plus-1.svg"
+        alt="De rechte y = 2x + 1 met helling 2 en y-snĳpunt (0, 1)."
+      >
+    </div>
+
     <p>
-      heeft helling 2 en snijdt de y-as in het punt:
+      De helling is 2 en de rechte snijdt de y-as in:
     </p>
 
     <p class="formula">(0, 1)</p>
@@ -4153,66 +3655,71 @@ const MILESTONES_2 = [
       Wanneer x met 1 toeneemt, neemt y met 2 toe.
     </p>
 
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        In <span class="formula-inline">y = mx + b</span> bepaalt
+        <strong>m</strong> de richting van de rechte.
+      </p>
+      <p>
+        <strong>b</strong> bepaalt waar de rechte de y-as snijdt.
+      </p>
+    </div>
+
 
     <h3>Een rechte bepalen uit een punt en een helling</h3>
 
     <p>
-      Stel dat we de helling kennen:
+      Stel dat de helling bekend is:
     </p>
 
     <p class="formula">m = 3</p>
 
     <p>
-      en dat de rechte door het punt:
+      en dat de rechte door het punt gaat:
     </p>
 
     <p class="formula">A = (2, 5)</p>
 
     <p>
-      gaat.
-    </p>
-
-    <p>
-      We kunnen schrijven:
+      We beginnen met:
     </p>
 
     <p class="formula">y = 3x + b</p>
 
     <p>
-      Omdat het punt (2, 5) op de rechte ligt, moet:
+      Omdat het punt (2, 5) op de rechte ligt, moeten de coördinaten
+      aan de vergelijking voldoen:
     </p>
 
-    <p class="formula">5 = 3 · 2 + b</p>
+    <p class="formula">5 = 3 \\cdot 2 + b</p>
 
     <p class="formula">5 = 6 + b</p>
 
-    <p class="formula">b = −1</p>
+    <p class="formula">b = -1</p>
 
     <p>
       De rechte is dus:
     </p>
 
-    <p class="formula">y = 3x − 1</p>
+    <p class="formula">y = 3x - 1</p>
 
     <p>
-      Dit is een voorbeeld van hoe een meetkundige voorwaarde
-      wordt omgezet in een algebraïsche vergelijking.
+      We hebben hier een meetkundige voorwaarde — een punt ligt op een
+      rechte — vertaald naar een algebraïsche vergelijking.
     </p>
 
 
     <h3>De punt-hellingvorm</h3>
 
     <p>
-      We kunnen dezelfde redenering rechtstreeks schrijven als:
+      Dezelfde redenering kunnen we rechtstreeks schrijven als:
     </p>
 
-    <p class="formula">y − y₁ = m(x − x₁)</p>
+    <p class="formula">y - y_{1} = m(x - x_{1})</p>
 
     <p>
-      Dit heet de <strong>punt-hellingvorm</strong> van een rechte.
-    </p>
-
-    <p>
+      Dit heet de <strong>punt-hellingvorm</strong>.
       Ze is handig wanneer we één punt en de helling kennen.
     </p>
 
@@ -4228,37 +3735,33 @@ const MILESTONES_2 = [
       krijgen we:
     </p>
 
-    <p class="formula">y − 5 = 3(x − 2)</p>
+    <p class="formula">y - 5 = 3(x - 2)</p>
 
     <p>
-      Als we de haakjes uitwerken:
+      Uitwerken geeft:
     </p>
 
-    <p class="formula">y − 5 = 3x − 6</p>
+    <p class="formula">y - 5 = 3x - 6</p>
 
-    <p class="formula">y = 3x − 1</p>
+    <p class="formula">y = 3x - 1</p>
 
     <p>
-      We krijgen dus dezelfde rechte als hierboven.
+      We krijgen dus dezelfde rechte.
     </p>
 
 
-    <h3>Parallelle rechten</h3>
-
-    <div class="theory-image">
-      <img src="assets/evenwijdig-dwarsliggende.svg" alt="Twee evenwijdige rechten met gelijke helling en constante afstand.">
-    </div>
+    <h3>Parallelle en loodrechte rechten</h3>
 
     <p>
-      Twee verschillende rechten zijn parallel wanneer ze dezelfde richting
-      hebben en elkaar niet snijden.
+      Twee verschillende rechten zijn <strong>parallel</strong> wanneer
+      ze dezelfde richting hebben en elkaar niet snijden.
     </p>
 
     <p>
-      In een coördinatenstelsel betekent dit dat ze dezelfde helling hebben.
+      In een coördinatenstelsel betekent dit dat hun hellingen gelijk zijn:
     </p>
 
-    <p class="formula">m₁ = m₂</p>
+    <p class="formula">m_{1} = m_{2}</p>
 
     <p>
       Bijvoorbeeld:
@@ -4266,21 +3769,22 @@ const MILESTONES_2 = [
 
     <p class="formula">y = 2x + 1</p>
 
-    <p class="formula">y = 2x − 5</p>
+    <p class="formula">y = 2x - 5</p>
 
     <p>
-      hebben allebei helling 2 en zijn dus parallel.
+      Beide rechten hebben helling 2 en zijn dus parallel.
+      Hun y-snĳpunten verschillen, dus het zijn verschillende rechten.
     </p>
 
+    <div class="theory-image">
+      <img
+        src="assets/evenwijdig-dwarsliggende.svg"
+        alt="Twee evenwijdige rechten met dezelfde helling en een derde rechte die beide snijdt."
+      >
+    </div>
+
     <p>
-      Ze zijn niet dezelfde rechte omdat hun y-snijpunt verschillend is.
-    </p>
-
-
-    <h3>Loodrechte rechten</h3>
-
-    <p>
-      Twee rechten staan loodrecht op elkaar wanneer hun richtingen
+      Twee rechten staan <strong>loodrecht</strong> op elkaar wanneer ze
       een rechte hoek vormen.
     </p>
 
@@ -4288,38 +3792,43 @@ const MILESTONES_2 = [
       Voor twee rechten met eindige hellingen geldt:
     </p>
 
-    <p class="formula">m₁ · m₂ = −1</p>
+    <p class="formula">m_{1} \\cdot m_{2} = -1</p>
 
     <p>
       Bijvoorbeeld:
     </p>
 
-    <p class="formula">m₁ = 2</p>
+    <p class="formula">m_{1} = 2</p>
 
-    <p class="formula">m₂ = −1/2</p>
+    <p class="formula">m_{2} = -\\frac{1}{2}</p>
 
     <p>
       Want:
     </p>
 
-    <p class="formula">2 · (−1/2) = −1</p>
-
-    <p>
-      De twee rechten staan dus loodrecht op elkaar.
-    </p>
+    <p class="formula">2 \\cdot \\left(-\\frac{1}{2}\\right) = -1</p>
 
     <p>
       Een horizontale en een verticale rechte vormen het bijzondere geval:
-      hun hellingen zijn respectievelijk 0 en niet gedefinieerd,
-      maar ze staan wel loodrecht op elkaar.
+      hun hellingen zijn respectievelijk 0 en niet gedefinieerd.
     </p>
+
+    <div class="callout">
+      <p><strong>Let op:</strong></p>
+      <p>
+        De regel
+        <span class="formula-inline">m_{1} \\cdot m_{2} = -1</span>
+        geldt alleen voor twee rechten waarvan beide hellingen eindig
+        en gedefinieerd zijn.
+      </p>
+    </div>
 
 
     <h3>Het snijpunt van twee rechten</h3>
 
     <p>
-      Wanneer twee rechten elkaar snijden, heeft hun snijpunt
-      dezelfde x- én y-coördinaat voor beide vergelijkingen.
+      Wanneer twee rechten elkaar snijden, hebben ze in het snijpunt
+      dezelfde x- én y-coördinaat.
     </p>
 
     <p>
@@ -4328,17 +3837,16 @@ const MILESTONES_2 = [
 
     <p class="formula">y = 2x + 1</p>
 
-    <p class="formula">y = −x + 7</p>
+    <p class="formula">y = -x + 7</p>
 
     <p>
-      In het snijpunt hebben beide y-waarden dezelfde waarde.
-      Daarom mogen we de rechterleden aan elkaar gelijkstellen:
+      In het snijpunt moeten de rechterleden dus gelijk zijn:
     </p>
 
-    <p class="formula">2x + 1 = −x + 7</p>
+    <p class="formula">2x + 1 = -x + 7</p>
 
     <p>
-      Dit is nu een gewone lineaire vergelijking.
+      We lossen de vergelijking op:
     </p>
 
     <p class="formula">3x = 6</p>
@@ -4346,10 +3854,10 @@ const MILESTONES_2 = [
     <p class="formula">x = 2</p>
 
     <p>
-      Vul x = 2 in:
+      Daarna vullen we x = 2 in:
     </p>
 
-    <p class="formula">y = 2 · 2 + 1 = 5</p>
+    <p class="formula">y = 2 \\cdot 2 + 1 = 5</p>
 
     <p>
       Het snijpunt is:
@@ -4358,48 +3866,50 @@ const MILESTONES_2 = [
     <p class="formula">(2, 5)</p>
 
     <p>
-      Een geometrisch probleem is hier dus omgezet in een
-      algebraïsch probleem.
+      Hetzelfde idee werkt voor een rechte en een verticale lijn.
+      Neem bijvoorbeeld:
     </p>
 
+    <p class="formula">y = 3x - 2</p>
 
-    <h3>Geen of oneindig veel snijpunten</h3>
+    <p class="formula">x = 4</p>
 
     <p>
-      Niet iedere combinatie van twee rechten heeft precies één snijpunt.
+      Omdat in het snijpunt x = 4 geldt:
     </p>
 
+    <p class="formula">y = 3 \\cdot 4 - 2 = 10</p>
+
     <p>
-      Parallelle verschillende rechten hebben:
+      Het snijpunt is:
     </p>
 
-    <p class="formula">0</p>
+    <p class="formula">(4, 10)</p>
 
     <p>
-      snijpunten.
+      Parallelle verschillende rechten hebben geen snijpunt.
+      Als twee vergelijkingen dezelfde rechte beschrijven, hebben ze
+      oneindig veel gemeenschappelijke punten.
     </p>
 
-    <p>
-      Wanneer twee vergelijkingen eigenlijk dezelfde rechte beschrijven,
-      hebben ze:
-    </p>
-
-    <p class="formula">oneindig veel</p>
-
-    <p>
-      gemeenschappelijke punten.
-    </p>
-
-    <p>
-      Ook dit kunnen we algebraïsch herkennen.
-    </p>
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een snijpunt is een punt dat aan beide vergelijkingen tegelijk
+        voldoet.
+      </p>
+      <p>
+        Daarom kunnen we een geometrisch snijpunt vinden door een
+        algebraïsche vergelijking op te lossen.
+      </p>
+    </div>
 
 
-    <h3>Een rechte vanuit twee punten</h3>
+    <h3>Een rechte bepalen uit twee punten</h3>
 
     <p>
-      Wanneer twee punten op dezelfde rechte liggen, bepalen ze samen
-      de richting van die rechte.
+      Twee verschillende punten bepalen samen de richting van een rechte.
+      We kunnen dus eerst de helling berekenen.
     </p>
 
     <p>
@@ -4411,18 +3921,18 @@ const MILESTONES_2 = [
     <p class="formula">B = (4, 9)</p>
 
     <p>
-      Eerst berekenen we de helling:
+      Eerst:
     </p>
 
-    <p class="formula">m = (9 − 3) / (4 − 1)</p>
+    <p class="formula">m = \\frac{9 - 3}{4 - 1}</p>
 
-    <p class="formula">m = 6 / 3 = 2</p>
+    <p class="formula">m = \\frac{6}{3} = 2</p>
 
     <p>
-      Daarna gebruiken we bijvoorbeeld punt A:
+      Daarna gebruiken we bijvoorbeeld punt A in de punt-hellingvorm:
     </p>
 
-    <p class="formula">y − 3 = 2(x − 1)</p>
+    <p class="formula">y - 3 = 2(x - 1)</p>
 
     <p>
       Uitwerken geeft:
@@ -4432,75 +3942,6 @@ const MILESTONES_2 = [
 
     <p>
       De twee punten bepalen dus één rechte.
-    </p>
-
-
-    <h3>Een geometrisch probleem wordt algebra</h3>
-
-    <p>
-      Stel dat we willen weten waar een rechte een bepaalde verticale
-      lijn snijdt.
-    </p>
-
-    <p>
-      Neem:
-    </p>
-
-    <p class="formula">y = 3x − 2</p>
-
-    <p>
-      en:
-    </p>
-
-    <p class="formula">x = 4</p>
-
-    <p>
-      Omdat x = 4 in het snijpunt moet gelden, vullen we dit in:
-    </p>
-
-    <p class="formula">y = 3 · 4 − 2 = 10</p>
-
-    <p>
-      Het snijpunt is:
-    </p>
-
-    <p class="formula">(4, 10)</p>
-
-    <p>
-      We hebben dus een meetkundige vraag opgelost door een getal
-      in een formule in te vullen.
-    </p>
-
-
-    <h3>De verbinding met Pythagoras</h3>
-
-    <div class="theory-image">
-      <img src="assets/pythagoras-345.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
-    </div>
-
-    <p>
-      De afstandsformule lijkt misschien een nieuwe formule,
-      maar we hebben haar al eerder gezien in een andere vorm.
-    </p>
-
-    <p>
-      Bij twee punten:
-    </p>
-
-    <p class="formula">A = (x₁, y₁)</p>
-
-    <p class="formula">B = (x₂, y₂)</p>
-
-    <p>
-      vormen de horizontale en verticale verschillen een rechthoekige driehoek.
-      Pythagoras geeft:
-    </p>
-
-    <p class="formula">d² = (x₂ − x₁)² + (y₂ − y₁)²</p>
-
-    <p>
-      De analytische meetkunde bouwt dus voort op ideeën die we al kennen.
-      We plaatsen de geometrie nu in een getallensysteem.
     </p>
 
 
@@ -4514,17 +3955,39 @@ const MILESTONES_2 = [
       Vanuit een meetkundige situatie kunnen we een vergelijking maken:
     </p>
 
-    <p class="formula">geometrie → coördinaten → vergelijking</p>
+    <p class="formula">geometrie \\rightarrow coördinaten \\rightarrow vergelijking</p>
 
     <p>
       En vanuit een vergelijking kunnen we een geometrische betekenis
       afleiden:
     </p>
 
-    <p class="formula">vergelijking → coördinaten → geometrie</p>
+    <p class="formula">vergelijking \\rightarrow coördinaten \\rightarrow geometrie</p>
 
     <p>
-      Dat is precies de kracht van analytische meetkunde.
+      De analytische meetkunde vormt daardoor een brug tussen
+      <strong>zien</strong> en <strong>rekenen</strong>.
+    </p>
+
+    <div class="theory-image">
+      <img
+        src="assets/pythagoras-345.svg"
+        alt="Een rechthoekige 3-4-5-driehoek die laat zien hoe horizontale en verticale verschillen samen een afstand vormen."
+      >
+    </div>
+
+    <p>
+      Ook de afstand tussen twee punten laat deze verbinding zien:
+      de horizontale en verticale verschillen vormen een rechthoekige
+      driehoek en Pythagoras levert de afstand.
+    </p>
+
+    <p class="formula">d^{2} = (x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}</p>
+
+    <p>
+      De analytische meetkunde bouwt dus voort op ideeën die we al kennen.
+      We plaatsen de geometrie in een getallensysteem en kunnen daardoor
+      rekenen met punten, afstanden, richtingen en snijpunten.
     </p>
 
 
@@ -4544,6 +4007,21 @@ const MILESTONES_2 = [
       <li>controleer of het antwoord geometrisch logisch is.</li>
     </ol>
 
+    <div class="callout">
+      <p><strong>Werkwijze:</strong></p>
+      <p>
+        Denk bij analytische meetkunde steeds in twee stappen:
+      </p>
+      <ol>
+        <li>Wat zie ik geometrisch?</li>
+        <li>Welke getallen, formule of vergelijking beschrijven dat?</li>
+      </ol>
+      <p>
+        Daarna kun je het algebraïsche probleem oplossen en de uitkomst
+        opnieuw geometrisch interpreteren.
+      </p>
+    </div>
+
 
     <h3>Wat hebben we eigenlijk geleerd?</h3>
 
@@ -4553,14 +4031,14 @@ const MILESTONES_2 = [
     </p>
 
     <p>
-      Met twee getallen kregen we een coördinatenstelsel.
-      Daarna konden we met die getallen:
+      Met twee getallen kregen we een coördinatenstelsel. Daarna konden we
+      met die getallen:
     </p>
 
     <ul>
       <li>punten beschrijven;</li>
       <li>afstanden berekenen;</li>
-      <li>middens bepalen;</li>
+      <li>het midden van een lijnstuk bepalen;</li>
       <li>richtingen en hellingen bepalen;</li>
       <li>rechten beschrijven;</li>
       <li>parallelle en loodrechte rechten herkennen;</li>
@@ -4599,124 +4077,96 @@ const MILESTONES_2 = [
   theory: /* html */`
     <h2>Euclidische meetkunde</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>meetkundige figuren herkennen en beschrijven;</li>
-      <li>hoeken en hun eigenschappen begrijpen;</li>
-      <li>eigenschappen van driehoeken gebruiken;</li>
-      <li>de stelling van Pythagoras begrijpen en toepassen;</li>
-      <li>omtrek en oppervlakte berekenen;</li>
-      <li>inhoud van ruimtelijke figuren berekenen;</li>
-      <li>meetkundige eigenschappen vertalen naar algebra.</li>
+      <li>Welke ideale vormen gebruiken we in de meetkunde?</li>
+      <li>Hoe werken hoeken, rechte lijnen en parallelle lijnen samen?</li>
+      <li>Welke eigenschappen hebben driehoeken?</li>
+      <li>Hoe werkt de stelling van Pythagoras?</li>
+      <li>Hoe berekenen we omtrek, oppervlakte en volume?</li>
+      <li>Hoe vertalen we een meetkundig probleem naar algebra?</li>
+      <li>Waarom kunnen we in de meetkunde eigenschappen afleiden in plaats van alleen te meten?</li>
     </ul>
 
     <p>
-      In 2.8 gebruikten we coördinaten om meetkundige problemen met
-      getallen en vergelijkingen te beschrijven.
-      Nu gaan we een stap terug en kijken we naar de meetkunde zelf:
+      In les 2.8 gebruikten we coördinaten om meetkundige problemen
+      met getallen en vergelijkingen te beschrijven.
+      Nu kijken we meer rechtstreeks naar de meetkunde:
       <strong>vormen, hoeken, lengtes en oppervlakten</strong>.
     </p>
 
     <p>
-      Deze meetkunde gaat terug op de klassieke <strong>Euclidische meetkunde</strong>.
-      Het uitgangspunt is dat we vanuit enkele eenvoudige definities en
-      eigenschappen verdere resultaten kunnen afleiden.
+      Deze aanpak noemen we <strong>Euclidische meetkunde</strong>.
+      We vertrekken van eenvoudige begrippen en eigenschappen
+      en leiden daaruit nieuwe resultaten af.
     </p>
 
 
-    <h3>Ideale vormen</h3>
+    <h3>Van werkelijkheid naar ideale vormen</h3>
 
     <p>
       In de werkelijkheid bestaan geen perfecte wiskundige punten,
-      rechten of cirkels.
-      Een potloodpunt heeft bijvoorbeeld altijd een bepaalde grootte.
+      rechten of cirkels. Een potloodpunt heeft bijvoorbeeld altijd
+      een bepaalde grootte.
     </p>
 
     <p>
       In de meetkunde werken we daarom met <strong>ideale objecten</strong>.
-      Een punt heeft geen afmeting.
-      Een rechte heeft lengte maar geen dikte.
-      Een vlak heeft lengte en breedte maar geen dikte.
+      Een punt heeft geen afmeting. Een rechte heeft geen dikte en loopt
+      onbeperkt door. Een vlak heeft lengte en breedte, maar geen dikte.
     </p>
 
     <p>
-      Zulke objecten zijn modellen waarmee we de structuur van echte vormen
-      kunnen beschrijven.
+      Deze objecten zijn modellen. We laten eigenschappen van echte
+      objecten weg die voor ons probleem niet belangrijk zijn.
     </p>
 
     <div class="callout">
-      <p><strong>Meetkunde abstraheert vorm.</strong></p>
+      <p><strong>Kernidee:</strong></p>
       <p>
-        We laten details van echte objecten weg en houden alleen de
-        eigenschappen over die voor ons probleem belangrijk zijn.
+        Meetkunde abstraheert vorm. We vervangen echte objecten door
+        ideale vormen waarvan we de eigenschappen precies kunnen beschrijven.
       </p>
     </div>
 
 
-    <h3>Lijnstukken, rechten en stralen</h3>
+    <h3>Lijnstukken, rechten en hoeken</h3>
 
     <p>
       Een <strong>lijnstuk</strong> heeft twee eindpunten.
-    </p>
-
-    <p>
       Een <strong>rechte</strong> loopt onbeperkt door in beide richtingen.
-    </p>
-
-    <p>
       Een <strong>straal</strong> heeft één beginpunt en loopt onbeperkt
       door in één richting.
     </p>
 
     <p>
-      Deze begrippen lijken op elkaar, maar zijn niet hetzelfde.
-      Vooral bij lengtes is het onderscheid belangrijk:
-      een lijnstuk heeft een eindige lengte, terwijl een rechte oneindig
-      lang is.
-    </p>
-
-
-    <h3>Hoeken meten</h3>
-
-    <p>
-      Wanneer twee stralen vanuit hetzelfde punt vertrekken,
-      ontstaat een <strong>hoek</strong>.
+      Wanneer twee stralen vanuit hetzelfde punt vertrekken, ontstaat
+      een <strong>hoek</strong>.
     </p>
 
     <p>
-      De grootte van een hoek beschrijft hoeveel één been van de hoek
-      ten opzichte van het andere gedraaid is.
+      Een volledige draai is 360°. Een gestrekte hoek is 180° en
+      een rechte hoek is 90°.
     </p>
-
-    <p>
-      De bekendste eenheid is de <strong>graad</strong>.
-    </p>
-
-    <p class="formula">volle\\ draai = 360°</p>
-
-    <p class="formula">halve\\ draai\\ (gestrekt) = 180°</p>
-
-    <p class="formula">rechte\\ hoek = 90°</p>
 
     <div class="theory-image">
-        <img
-          src="assets/hoektypen.svg"
-          alt="Vier hoeken: scherp, recht, stomp en gestrekt."
-        >
-      </div>
+      <img
+        src="assets/hoektypen.svg"
+        alt="Vier hoeken: scherp, recht, stomp en gestrekt."
+      >
+    </div>
 
     <p>
-      Een hoek kleiner dan 90° noemen we scherp.
-      Een hoek groter dan 90° maar kleiner dan 180° noemen we stomp.
+      Een hoek kleiner dan 90° noemen we <strong>scherp</strong>.
+      Een hoek tussen 90° en 180° noemen we <strong>stomp</strong>.
     </p>
 
 
-    <h3>Hoeken op een rechte lijn</h3>
+    <h3>Hoeken gebruiken als regels</h3>
 
     <p>
-      Een halve draai vormt een rechte hoeklijn van 180°.
-      Wanneer verschillende hoeken samen een rechte lijn vormen,
-      is hun som dus 180°.
+      Wanneer verschillende hoeken samen een gestrekte hoek vormen,
+      is hun som 180°.
     </p>
 
     <p class="formula">α + β = 180°</p>
@@ -4728,30 +4178,15 @@ const MILESTONES_2 = [
     <p class="formula">α = 65°</p>
 
     <p>
-      dan is:
+      dan:
     </p>
 
-    <p class="formula">β = 180° − 65° = 115°</p>
-
-    <p>
-      Dit lijkt eenvoudig, maar het is een fundamenteel principe:
-      de eigenschappen van de figuur geven ons algebraïsche vergelijkingen.
-    </p>
-
-
-    <h3>Overstaande hoeken</h3>
+    <p class="formula">β = 180° - 65° = 115°</p>
 
     <p>
       Wanneer twee rechten elkaar snijden, ontstaan vier hoeken.
-    </p>
-
-    <p>
-      De hoeken die tegenover elkaar liggen noemen we
+      De tegenover elkaar liggende hoeken noemen we
       <strong>overstaande hoeken</strong>.
-    </p>
-
-    <p>
-      Overstaande hoeken zijn even groot.
     </p>
 
     <p class="formula">α = γ</p>
@@ -4759,9 +4194,17 @@ const MILESTONES_2 = [
     <p class="formula">β = δ</p>
 
     <p>
-      De reden volgt uit de eigenschap van hoeken op een rechte lijn:
-      aangrenzende hoeken hebben samen 180°.
+      Overstaande hoeken zijn dus even groot.
     </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een meetkundige eigenschap kan rechtstreeks een vergelijking
+        opleveren. De vorm van de figuur bepaalt welke vergelijkingen
+        geldig zijn.
+      </p>
+    </div>
 
 
     <h3>Parallelle en loodrechte lijnen</h3>
@@ -4779,33 +4222,20 @@ const MILESTONES_2 = [
     <p class="formula">α = 90°</p>
 
     <p>
-      Loodrechte lijnen zijn in 2.8 al teruggekomen in het
-      coördinatenstelsel:
+      In les 2.8 kwamen loodrechte lijnen al voor:
       de x-as en y-as staan loodrecht op elkaar.
     </p>
 
-
-    <h3>Hoeken bij parallelle lijnen</h3>
-
     <p>
       Wanneer een derde rechte twee parallelle rechten snijdt,
-      ontstaan verschillende paren van hoeken die dezelfde grootte hebben.
-    </p>
-
-    <p>
+      ontstaan verschillende hoeken met vaste relaties.
       Zo zijn overeenkomstige hoeken gelijk en zijn verwisselende
       binnenhoeken gelijk.
     </p>
 
     <p>
-      Hierdoor kunnen we een onbekende hoek bepalen zonder die hoek
+      Daardoor kunnen we een onbekende hoek bepalen zonder die
       rechtstreeks te meten.
-    </p>
-
-    <p>
-      Meetkunde laat ons dus eigenschappen afleiden uit de structuur
-      van een figuur in plaats van iedere lengte of hoek afzonderlijk
-      te moeten meten.
     </p>
 
 
@@ -4813,16 +4243,13 @@ const MILESTONES_2 = [
 
     <p>
       Een driehoek is een veelhoek met drie zijden en drie hoeken.
-    </p>
-
-    <p>
-      De drie binnenhoeken hebben altijd samen:
+      De som van de drie binnenhoeken is altijd 180°.
     </p>
 
     <p class="formula">α + β + γ = 180°</p>
 
     <p>
-      Als twee hoeken bekend zijn, kunnen we de derde dus altijd berekenen.
+      Als twee hoeken bekend zijn, kunnen we de derde berekenen.
     </p>
 
     <p>
@@ -4833,41 +4260,22 @@ const MILESTONES_2 = [
 
     <p class="formula">β = 60°</p>
 
-    <p>
-      Dan:
-    </p>
-
-    <p class="formula">γ = 180° − 50° − 60° = 70°</p>
-
-
-    <h3>Bijzondere driehoeken</h3>
+    <p class="formula">γ = 180° - 50° - 60° = 70°</p>
 
     <p>
       Sommige driehoeken hebben extra eigenschappen.
+      In een <strong>gelijkbenige driehoek</strong> zijn twee zijden
+      even lang en zijn de tegenoverliggende hoeken gelijk.
     </p>
 
     <p>
-      Bij een <strong>gelijkbenige driehoek</strong> zijn twee zijden even lang.
-      De tegenoverliggende hoeken zijn dan ook gelijk.
-    </p>
-
-    <p>
-      Bij een <strong>gelijkzijdige driehoek</strong> zijn alle drie de
-      zijden even lang.
-      Daardoor zijn ook alle drie de hoeken gelijk.
-    </p>
-
-    <p>
-      Omdat de hoeken samen 180° zijn:
+      In een <strong>gelijkzijdige driehoek</strong> zijn alle zijden
+      even lang. Daardoor zijn alle drie de hoeken gelijk.
     </p>
 
     <p class="formula">3α = 180°</p>
 
     <p class="formula">α = 60°</p>
-
-    <p>
-      Een gelijkzijdige driehoek heeft dus drie hoeken van 60°.
-    </p>
 
 
     <h3>Buitenhoeken van een driehoek</h3>
@@ -4878,22 +4286,23 @@ const MILESTONES_2 = [
     </p>
 
     <p>
-      De binnenhoek en de aangrenzende buitenhoek vormen samen een
-      rechte lijn.
+      De binnenhoek en de aangrenzende buitenhoek vormen samen
+      een gestrekte hoek.
     </p>
 
     <p class="formula">binnenhoek + buitenhoek = 180°</p>
 
     <p>
-      Daaruit volgt dat een buitenhoek ook gelijk is aan de som van
-      de twee tegenoverliggende binnenhoeken.
+      Hieruit volgt een belangrijke relatie:
+      een buitenhoek is gelijk aan de som van de twee
+      tegenoverliggende binnenhoeken.
     </p>
 
     <p class="formula">γ = α + β</p>
 
     <p>
-      Dit is opnieuw een voorbeeld van hoe verschillende meetkundige
-      eigenschappen met elkaar samenhangen.
+      Ook hier zien we hetzelfde patroon:
+      de structuur van de figuur levert een wiskundige relatie.
     </p>
 
 
@@ -4906,77 +4315,85 @@ const MILESTONES_2 = [
     <p>
       De zijde tegenover de rechte hoek noemen we de
       <strong>schuine zijde</strong> of hypotenusa.
-    </p>
-
-    <p>
       De andere twee zijden zijn de rechthoekszijden.
     </p>
 
     <p>
       Rechthoekige driehoeken zijn bijzonder belangrijk omdat hun zijden
-      verbonden worden door de stelling van Pythagoras.
+      met elkaar verbonden zijn door de <strong>stelling van Pythagoras</strong>.
     </p>
 
 
     <h3>De stelling van Pythagoras</h3>
 
     <div class="theory-image">
-      <img src="assets/pythagoras-345.svg" alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt.">
+      <img
+        src="assets/pythagoras-345.svg"
+        alt="Een rechthoekige 3-4-5-driehoek die de stelling van Pythagoras zichtbaar maakt."
+      >
     </div>
 
     <p>
-      Voor een rechthoekige driehoek met rechthoekszijden a en b
-      en hypotenusa c geldt:
+      Voor een rechthoekige driehoek met rechthoekszijden
+      <span class="formula-inline">a</span> en
+      <span class="formula-inline">b</span> en hypotenusa
+      <span class="formula-inline">c</span> geldt:
     </p>
 
-    <p class="formula">a² + b² = c²</p>
+    <p class="formula">a^{2} + b^{2} = c^{2}</p>
 
     <p>
-      De stelling zegt dus dat het kwadraat van de langste zijde gelijk is
-      aan de som van de kwadraten van de twee andere zijden.
-    </p>
-
-    <p>
-      Dit is meer dan een handige formule.
-      Het is een algemene eigenschap van <strong>alle</strong>
-      rechthoekige driehoeken.
-    </p>
-
-
-    <h3>Waarom Pythagoras werkt</h3>
-
-    <p>
-      De relatie van Pythagoras kan geometrisch worden gezien door op
-      elke zijde van een rechthoekige driehoek een vierkant te tekenen.
+      Het kwadraat van de langste zijde is dus gelijk aan de som
+      van de kwadraten van de twee andere zijden.
     </p>
 
     <p>
-      De oppervlakte van het vierkant op zijde a is:
+      Dit geldt voor <strong>elke</strong> rechthoekige driehoek,
+      ongeacht de grootte ervan.
     </p>
 
-    <p class="formula">a²</p>
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Pythagoras is geen truc voor één specifieke driehoek.
+        Het is een algemene meetkundige eigenschap van alle
+        rechthoekige driehoeken.
+      </p>
+    </div>
+
+
+    <h3>Pythagoras als oppervlakte-relatie</h3>
 
     <p>
-      Op de andere rechthoekszijde krijgen we:
+      De vergelijking van Pythagoras kan ook meetkundig worden geïnterpreteerd.
+      Op iedere zijde van de driehoek kunnen we een vierkant tekenen.
     </p>
 
-    <p class="formula">b²</p>
-
     <p>
-      Op de hypotenusa:
+      De oppervlakten van die vierkanten zijn:
     </p>
 
-    <p class="formula">c²</p>
+    <p class="formula">a^{2}</p>
+
+    <p class="formula">b^{2}</p>
+
+    <p class="formula">c^{2}</p>
 
     <p>
-      De stelling van Pythagoras zegt dan:
+      De stelling zegt dan:
     </p>
 
-    <p class="formula">a² + b² = c²</p>
+    <p class="formula">a^{2} + b^{2} = c^{2}</p>
 
     <p>
-      De algebraïsche vergelijking beschrijft dus een geometrische
-      eigenschap van oppervlakten.
+      Een algebraïsche vergelijking beschrijft hier dus een
+      geometrische relatie tussen drie oppervlakten.
+    </p>
+
+    <p>
+      Dit is een belangrijk idee in de wiskunde:
+      dezelfde structuur kan tegelijk geometrisch en algebraïsch
+      worden beschreven.
     </p>
 
 
@@ -4984,231 +4401,191 @@ const MILESTONES_2 = [
 
     <p>
       Stel dat de rechthoekszijden 3 en 4 zijn.
+      We zoeken de hypotenusa.
     </p>
 
     <p class="formula">a = 3</p>
 
     <p class="formula">b = 4</p>
 
-    <p>
-      Dan:
-    </p>
+    <p class="formula">3^{2} + 4^{2} = c^{2}</p>
 
-    <p class="formula">3² + 4² = c²</p>
+    <p class="formula">9 + 16 = c^{2}</p>
 
-    <p class="formula">9 + 16 = c²</p>
-
-    <p class="formula">25 = c²</p>
+    <p class="formula">25 = c^{2}</p>
 
     <p>
-      Omdat een lengte positief is:
+      Omdat een lengte niet negatief is:
     </p>
 
-    <p class="formula">c = √25 = 5</p>
+    <p class="formula">c = \\sqrt{25} = 5</p>
 
     <p>
       We vinden de bekende 3-4-5-driehoek.
     </p>
 
+    <p>
+      We kunnen de formule ook gebruiken wanneer een rechthoekszijde
+      onbekend is:
+    </p>
 
-    <h3>Een onbekende rechthoekszijde</h3>
+    <p class="formula">a^{2} + b^{2} = c^{2}</p>
+
+    <p class="formula">b^{2} = c^{2} - a^{2}</p>
+
+    <p class="formula">b = \\sqrt{c^{2} - a^{2}}</p>
+
+    <div class="callout">
+      <p><strong>Let op:</strong></p>
+      <p>
+        De wortel levert algebraïsch twee mogelijke waarden op,
+        maar een lengte is niet negatief. Daarom nemen we hier
+        de positieve wortel.
+      </p>
+    </div>
+
+
+    <h3>Omtrek en oppervlakte</h3>
 
     <p>
-      Pythagoras kunnen we ook gebruiken wanneer de hypotenusa bekend is.
+      De <strong>omtrek</strong> is de totale lengte van de buitenrand
+      van een figuur.
     </p>
 
     <p>
-      Uit:
-    </p>
-
-    <p class="formula">a² + b² = c²</p>
-
-    <p>
-      volgt:
-    </p>
-
-    <p class="formula">b² = c² − a²</p>
-
-    <p>
-      en dus:
-    </p>
-
-    <p class="formula">b = √(c² − a²)</p>
-
-    <p>
-      Ook hier gebruiken we dus algebra om een meetkundige onbekende
-      te vinden.
-    </p>
-
-
-    <h3>Omtrek</h3>
-
-    <p>
-      De <strong>omtrek</strong> van een figuur is de totale lengte
-      van de buitenrand.
-    </p>
-
-    <p>
-      Voor een rechthoek met lengte l en breedte b:
+      Voor een rechthoek met lengte <span class="formula-inline">l</span>
+      en breedte <span class="formula-inline">b</span>:
     </p>
 
     <p class="formula">O = 2l + 2b</p>
 
     <p>
-      Voor een vierkant met zijde a:
+      Voor een vierkant met zijde <span class="formula-inline">a</span>:
     </p>
 
     <p class="formula">O = 4a</p>
 
     <p>
-      Voor een cirkel met straal r:
+      Voor een cirkel met straal <span class="formula-inline">r</span>:
     </p>
 
-    <p class="formula">O = 2πr</p>
+    <p class="formula">O = 2\\pi r</p>
 
     <p>
-      De omtrek is een lengte en wordt dus uitgedrukt in bijvoorbeeld
-      centimeter, meter of kilometer.
-    </p>
-
-
-    <h3>Oppervlakte</h3>
-
-    <p>
-      De <strong>oppervlakte</strong> vertelt hoeveel vlak een figuur inneemt.
+      De <strong>oppervlakte</strong> geeft aan hoeveel vlak een figuur inneemt.
     </p>
 
     <p>
       Voor een rechthoek:
     </p>
 
-    <p class="formula">A = l · b</p>
+    <p class="formula">A = l \\cdot b</p>
 
     <p>
       Voor een vierkant:
     </p>
 
-    <p class="formula">A = a²</p>
+    <p class="formula">A = a^{2}</p>
 
     <p>
       Voor een driehoek:
     </p>
 
-    <p class="formula">A = 1/2 · b · h</p>
+    <p class="formula">A = \\frac{1}{2} \\cdot b \\cdot h</p>
 
     <p>
-      Hierbij is h de hoogte die loodrecht op de gekozen basis staat.
+      Hierbij staat <span class="formula-inline">h</span> loodrecht
+      op de gekozen basis.
     </p>
 
     <p>
       Voor een cirkel:
     </p>
 
-    <p class="formula">A = πr²</p>
+    <p class="formula">A = \\pi r^{2}</p>
 
-    <p>
-      Let goed op het verschil:
-      omtrek meet een <strong>lengte</strong>,
-      oppervlakte meet een <strong>gebied</strong>.
-    </p>
+    <div class="callout">
+      <p><strong>Let op:</strong></p>
+      <p>
+        Omtrek is een lengte. Oppervlakte is een gebied.
+        Daarom verschillen ook hun eenheden:
+        bijvoorbeeld m tegenover m².
+      </p>
+    </div>
 
 
     <h3>Waarom oppervlakte-eenheden kwadratisch zijn</h3>
 
     <p>
       Stel dat een vierkant een zijde van 3 meter heeft.
-      Dan is de oppervlakte:
     </p>
 
-    <p class="formula">A = 3² = 9 m²</p>
+    <p class="formula">A = 3^{2} = 9\\,m^{2}</p>
 
     <p>
-      Waarom staat hier m²?
+      De eenheid wordt kwadratisch omdat we een lengte met een lengte
+      vermenigvuldigen:
     </p>
 
-    <p>
-      Omdat we meter met meter vermenigvuldigen:
-    </p>
-
-    <p class="formula">m · m = m²</p>
+    <p class="formula">m \\cdot m = m^{2}</p>
 
     <p>
-      Dit is belangrijk wanneer we later met schaalfactoren werken.
-      Een verandering van een lengte werkt anders op een oppervlakte
-      dan op een enkele lengte.
+      Dit wordt belangrijk wanneer we later kijken naar
+      <strong>schaalfactoren</strong>. Als een lengte verandert,
+      verandert de oppervlakte niet op dezelfde manier.
     </p>
 
 
-    <h3>Inhoud van ruimtelijke figuren</h3>
+    <h3>Inhoud en volume</h3>
 
     <p>
-      Bij driedimensionale objecten komt er een derde dimensie bij:
-      hoogte, diepte of dikte.
+      Bij een ruimtelijke figuur komt een derde dimensie bij:
+      bijvoorbeeld hoogte, diepte of dikte.
     </p>
 
     <p>
-      De <strong>inhoud</strong> of het volume geeft aan hoeveel ruimte
-      een object inneemt.
+      De <strong>inhoud</strong> of het <strong>volume</strong>
+      geeft aan hoeveel ruimte een object inneemt.
     </p>
 
     <p>
-      Voor een balk met lengte l, breedte b en hoogte h:
+      Voor een balk met lengte <span class="formula-inline">l</span>,
+      breedte <span class="formula-inline">b</span> en hoogte
+      <span class="formula-inline">h</span>:
     </p>
 
-    <p class="formula">V = l · b · h</p>
+    <p class="formula">V = l \\cdot b \\cdot h</p>
 
     <p>
       Voor een cilinder:
     </p>
 
-    <p class="formula">V = πr²h</p>
+    <p class="formula">V = \\pi r^{2}h</p>
 
     <p>
-      De eenheid van volume is bijvoorbeeld m³ of cm³.
-    </p>
-
-
-    <h3>Eenheden vertellen wat je berekent</h3>
-
-    <p>
-      De eenheden vormen een belangrijke controle.
+      Een volume wordt uitgedrukt in kubieke eenheden, bijvoorbeeld
+      m³ of cm³.
     </p>
 
     <p>
-      Een lengte heeft bijvoorbeeld een eenheid als meter:
+      Er bestaat ook een directe relatie tussen liter en kubieke
+      decimeter:
     </p>
 
-    <p class="formula">m</p>
+    <p class="formula">1\\,L = 1\\,dm^{3}</p>
 
     <p>
-      Een oppervlakte:
-    </p>
-
-    <p class="formula">m²</p>
-
-    <p>
-      Een volume:
-    </p>
-
-    <p class="formula">m³</p>
-
-    <p>
-      Bij volume bestaat er bovendien een directe relatie met inhoud:
-    </p>
-
-    <p class="formula">1 L = 1 dm³</p>
-
-    <p>
-      Als een berekening voor een oppervlakte eindigt met meter in plaats
-      van vierkante meter, is dat een aanwijzing dat er iets verkeerd is
-      gegaan.
+      De eenheid is daardoor een nuttige controle op een berekening.
+      Een oppervlakte hoort bijvoorbeeld niet te eindigen in meter,
+      maar in vierkante meter.
     </p>
 
 
     <h3>Van geometrie naar algebra</h3>
 
     <p>
-      Meetkunde en algebra zijn geen volledig afzonderlijke werelden.
+      Meetkunde en algebra beschrijven vaak dezelfde situatie
+      vanuit een andere invalshoek.
     </p>
 
     <p>
@@ -5217,51 +4594,31 @@ const MILESTONES_2 = [
     </p>
 
     <p>
-      We weten:
+      De geometrische relatie is:
     </p>
 
-    <p class="formula">A = l · b</p>
+    <p class="formula">A = l \\cdot b</p>
 
     <p>
-      Invullen geeft:
+      We vullen de bekende waarden in:
     </p>
 
     <p class="formula">40 = 8b</p>
 
     <p>
-      Dit is een vergelijking zoals we die in 2.3 hebben geleerd.
+      We hebben nu een algebraïsche vergelijking.
     </p>
 
-    <p class="formula">b = 5 cm</p>
+    <p class="formula">b = 5\\,cm</p>
 
     <p>
-      Een meetkundig probleem is dus opnieuw veranderd in een
+      Een meetkundig probleem is dus veranderd in een
       algebraïsch probleem.
     </p>
 
-
-    <h3>Een figuur kan meerdere eigenschappen tegelijk hebben</h3>
-
     <p>
-      Een rechthoek heeft bijvoorbeeld tegelijkertijd eigenschappen
-      van lengtes, hoeken en oppervlakten.
-    </p>
-
-    <ul>
-      <li>overstaande zijden zijn even lang;</li>
-      <li>alle hoeken zijn 90°;</li>
-      <li>de omtrek is 2l + 2b;</li>
-      <li>de oppervlakte is l · b.</li>
-    </ul>
-
-    <p>
-      Wanneer we meerdere eigenschappen combineren,
-      kunnen we steeds complexere problemen oplossen.
-    </p>
-
-    <p>
-      Een meetkundige figuur is dus niet zomaar een tekening:
-      ze bevat een netwerk van relaties.
+      Hetzelfde principe kwamen we eerder al tegen bij vergelijkingen
+      en formules.
     </p>
 
 
@@ -5274,7 +4631,8 @@ const MILESTONES_2 = [
     </p>
 
     <p>
-      De muur, de grond en de ladder vormen een rechthoekige driehoek.
+      De muur, de grond en de ladder vormen samen een
+      rechthoekige driehoek.
     </p>
 
     <p>
@@ -5290,15 +4648,15 @@ const MILESTONES_2 = [
     <p class="formula">a = 3</p>
 
     <p>
-      Noem de hoogte h.
+      Noem de hoogte <span class="formula-inline">h</span>.
       Dan:
     </p>
 
-    <p class="formula">3² + h² = 5²</p>
+    <p class="formula">3^{2} + h^{2} = 5^{2}</p>
 
-    <p class="formula">9 + h² = 25</p>
+    <p class="formula">9 + h^{2} = 25</p>
 
-    <p class="formula">h² = 16</p>
+    <p class="formula">h^{2} = 16</p>
 
     <p class="formula">h = 4</p>
 
@@ -5307,90 +4665,95 @@ const MILESTONES_2 = [
     </p>
 
     <div class="callout">
-      <p><strong>Let op de denkstappen:</strong></p>
+      <p><strong>Werkwijze:</strong></p>
       <p>
-        werkelijkheid → figuur → bekende lengtes → meetkundige relatie
-        → vergelijking → oplossing → betekenis in de werkelijkheid.
+        werkelijkheid → figuur → bekende gegevens →
+        meetkundige relatie → vergelijking → oplossing →
+        betekenis in de werkelijkheid.
       </p>
     </div>
 
 
-    <h3>Bewijzen versus meten</h3>
+    <h3>Meten of afleiden?</h3>
 
     <p>
-      Een belangrijk verschil tussen wiskunde en meten in de werkelijkheid
-      is dat een meting nooit volledig exact is.
+      Een belangrijk verschil tussen wiskunde en een meting in de
+      werkelijkheid is nauwkeurigheid.
     </p>
 
     <p>
-      Als je een hoek met een geodriehoek meet, kun je bijvoorbeeld
-      ongeveer 60° vinden.
+      Wanneer je een hoek met een geodriehoek meet, krijg je bijvoorbeeld
+      ongeveer 60°.
     </p>
 
     <p>
-      In de wiskunde kunnen we echter uit eigenschappen
-      <strong>exacte</strong> conclusies afleiden.
+      In de wiskunde kunnen we soms exact aantonen dat een hoek 60°
+      moet zijn.
     </p>
 
     <p>
-      Bij een gelijkzijdige driehoek weten we bijvoorbeeld exact:
+      Bij een gelijkzijdige driehoek zijn de drie hoeken gelijk en
+      is hun som 180°.
     </p>
+
+    <p class="formula">3α = 180°</p>
 
     <p class="formula">α = 60°</p>
 
     <p>
-      We hoeven die hoek niet op te meten.
-      Ze volgt uit de structuur van de figuur.
+      We hoefden de hoek dus niet te meten.
+      De waarde volgt uit de eigenschappen van de figuur.
     </p>
 
-    <p>
-      Dit onderscheid tussen <strong>meten</strong> en
-      <strong>afleiden</strong> is fundamenteel voor de wiskunde.
-    </p>
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Meten vertelt ons wat we in een concrete situatie waarnemen.
+        Wiskundig redeneren vertelt ons wat noodzakelijk volgt
+        uit de eigenschappen van een figuur.
+      </p>
+    </div>
 
 
     <h3>Van eigenschappen naar stellingen</h3>
 
     <p>
-      In de meetkunde kunnen we een keten van redeneringen opbouwen.
+      In de meetkunde bouwen we redeneringen op elkaar voort.
+      We vertrekken van definities en basisregels en leiden daaruit
+      nieuwe eigenschappen af.
     </p>
 
     <p>
-      We vertrekken van definities en basisregels.
-      Daaruit leiden we nieuwe eigenschappen af.
-      Die eigenschappen kunnen vervolgens gebruikt worden om nog andere
-      resultaten te bewijzen.
+      Een resultaat dat wiskundig is aangetoond noemen we een
+      <strong>stelling</strong>.
     </p>
 
     <p>
-      Een resultaat dat op deze manier wiskundig is aangetoond,
-      noemen we een <strong>stelling</strong>.
-    </p>
-
-    <p>
-      De stelling van Pythagoras is daar een beroemd voorbeeld van.
+      De stelling van Pythagoras is een beroemd voorbeeld.
+      Ze vertelt niet alleen wat er in één specifieke driehoek gebeurt,
+      maar wat voor alle rechthoekige driehoeken noodzakelijk geldt.
     </p>
 
     <p>
       Het doel van meetkunde is daarom niet alleen:
-      "hoe groot is deze hoek?"
+      <strong>“Hoe groot is deze hoek of deze zijde?”</strong>
     </p>
 
     <p>
-      Het diepere doel is:
-      <strong>welke eigenschappen volgen noodzakelijk uit de structuur
-      van de figuur?</strong>
+      Een diepere vraag is:
+      <strong>“Welke eigenschappen volgen noodzakelijk uit de structuur
+      van de figuur?”</strong>
     </p>
 
 
     <h3>Een vaste werkwijze</h3>
 
     <p>
-      Bij een meetkundig probleem kun je deze werkwijze gebruiken:
+      Bij een meetkundig probleem kun je de volgende werkwijze gebruiken:
     </p>
 
     <ol>
-      <li>Maak duidelijk welke figuur of vormen aanwezig zijn.</li>
+      <li>Bepaal welke figuren en vormen aanwezig zijn.</li>
       <li>Noteer de bekende lengtes en hoeken.</li>
       <li>Zoek naar bijzondere eigenschappen.</li>
       <li>Maak indien nodig een hulplijn of rechthoekige driehoek.</li>
@@ -5400,49 +4763,56 @@ const MILESTONES_2 = [
       <li>Controleer of het antwoord geometrisch en qua eenheden klopt.</li>
     </ol>
 
+    <div class="callout">
+      <p><strong>Werkwijze:</strong></p>
+      <p>
+        Probeer niet meteen een formule te zoeken.
+        Begin met de structuur van de figuur.
+        De juiste formule volgt vaak uit de eigenschappen
+        die je in die structuur herkent.
+      </p>
+    </div>
+
 
     <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>
-      We begonnen met eenvoudige ideale vormen:
-      punten, lijnen en hoeken.
+      We begonnen met ideale vormen, lijnstukken, rechten en hoeken.
+      Daarna onderzochten we relaties tussen hoeken en lijnen,
+      eigenschappen van driehoeken en de stelling van Pythagoras.
     </p>
 
     <p>
-      Daarna ontdekten we dat meetkundige figuren vaste eigenschappen
-      hebben die we kunnen gebruiken om nieuwe informatie af te leiden.
+      Vervolgens leerden we hoe we omtrek, oppervlakte en volume
+      berekenen en hoe eenheden ons helpen om berekeningen te controleren.
     </p>
 
     <p>
-      We leerden:
+      Ten slotte zagen we dat meetkunde en algebra twee manieren zijn
+      om dezelfde structuur te beschrijven.
     </p>
 
     <ul>
-      <li>hoeken op een rechte en overstaande hoeken;</li>
-      <li>parallelle en loodrechte lijnen;</li>
-      <li>eigenschappen van driehoeken;</li>
-      <li>de stelling van Pythagoras;</li>
-      <li>omtrek en oppervlakte;</li>
-      <li>volume en volume-eenheden;</li>
-      <li>het verschil tussen meten en wiskundig afleiden;</li>
-      <li>hoe meetkunde kan worden vertaald naar algebra.</li>
+      <li>hoeken hebben vaste relaties;</li>
+      <li>parallelle en loodrechte lijnen hebben specifieke eigenschappen;</li>
+      <li>driehoeken hebben vaste hoekrelaties;</li>
+      <li>Pythagoras verbindt de zijden van een rechthoekige driehoek;</li>
+      <li>omtrek, oppervlakte en volume beschrijven verschillende grootheden;</li>
+      <li>een meetkundig probleem kan worden vertaald naar algebra;</li>
+      <li>wiskundige eigenschappen kunnen worden afgeleid en bewezen.</li>
     </ul>
 
     <p>
-      Daarmee hebben we een belangrijke basis gelegd voor de volgende stap:
-      <strong>gelijkvormigheid en schaal</strong>.
-    </p>
-
-    <p>
-      Daar zullen we onderzoeken wat er gebeurt wanneer een figuur
-      groter of kleiner wordt, terwijl zijn vorm behouden blijft.
+      De volgende stap is <strong>gelijkvormigheid en schaal</strong>.
+      Daar onderzoeken we wat er gebeurt wanneer een figuur groter
+      of kleiner wordt terwijl zijn vorm behouden blijft.
     </p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
         Meetkunde gaat niet alleen over het meten van vormen.
-        Het gaat vooral over het ontdekken van de
+        Het gaat vooral over het ontdekken van
         <strong>noodzakelijke relaties</strong> tussen hun onderdelen.
       </p>
       <p>
@@ -5460,29 +4830,34 @@ const MILESTONES_2 = [
   theory: /* html */`
     <h2>Gelijkvormigheid & schaal</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>begrijpen wanneer twee figuren dezelfde vorm hebben</li>
-      <li>overeenkomstige hoeken en zijden herkennen</li>
-      <li>de schaalfactor tussen gelijkvormige figuren bepalen</li>
-      <li>onbekende lengtes berekenen met verhoudingen</li>
-      <li>begrijpen waarom oppervlakten veranderen met het kwadraat van de schaalfactor</li>
-      <li>begrijpen waarom volumes veranderen met de derde macht van de schaalfactor</li>
-      <li>schaaltekeningen, kaarten en plattegronden interpreteren</li>
-      <li>gelijkvormigheid herkennen als voorbereiding op trigonometrie</li>
+      <li>Wanneer hebben twee figuren dezelfde vorm?</li>
+      <li>Wat zijn overeenkomstige hoeken en zijden?</li>
+      <li>Hoe bepalen we de schaalfactor?</li>
+      <li>Hoe berekenen we een onbekende lengte met een verhouding?</li>
+      <li>Waarom verandert een oppervlakte met het kwadraat van de schaalfactor?</li>
+      <li>Waarom verandert een volume met de derde macht van de schaalfactor?</li>
+      <li>Hoe werken schaaltekeningen, kaarten en plattegronden?</li>
+      <li>Waarom vormt gelijkvormigheid een brug naar trigonometrie?</li>
     </ul>
 
     <p>
-      In de vorige lessen onderzochten we eigenschappen van figuren:
+      In les 2.9 onderzochten we eigenschappen van figuren:
       hoeken, zijden, afstanden, oppervlakten en de stelling van Pythagoras.
-      Nu kijken we naar een ander belangrijk idee:
-      <strong>twee figuren kunnen dezelfde vorm hebben, maar niet dezelfde grootte.</strong>
+      Nu bekijken we wat er gebeurt wanneer een figuur groter of kleiner wordt
+      zonder dat zijn vorm verandert.
     </p>
 
     <p>
-      Een kleine foto en een vergrote versie van dezelfde foto hebben bijvoorbeeld
-      verschillende afmetingen, maar de verhoudingen binnen de figuur blijven hetzelfde.
-      Dat idee noemen we <strong>gelijkvormigheid</strong>.
+      Een foto kan bijvoorbeeld worden vergroot zonder dat de verhoudingen
+      binnen de afbeelding veranderen. Een kleine kaart kan hetzelfde gebied
+      voorstellen als een grote kaart. De vorm blijft behouden, terwijl
+      de afmetingen veranderen.
+    </p>
+
+    <p>
+      Dit idee noemen we <strong>gelijkvormigheid</strong>.
     </p>
 
 
@@ -5493,20 +4868,22 @@ const MILESTONES_2 = [
       We maken daarvan een grotere rechthoek van 6 cm bij 10 cm.
     </p>
 
-    <p class="formula">3 → 6</p>
-    <p class="formula">5 → 10</p>
+    <p class="formula">3 \\rightarrow 6</p>
+
+    <p class="formula">5 \\rightarrow 10</p>
 
     <p>
       Beide afmetingen zijn verdubbeld.
-      De nieuwe rechthoek is dus groter, maar de vorm is hetzelfde gebleven.
+      De nieuwe rechthoek is dus groter, maar heeft dezelfde vorm.
     </p>
 
     <p>
-      Vergelijk de verhouding van de overeenkomstige zijden:
+      We kunnen de overeenkomstige zijden vergelijken:
     </p>
 
-    <p class="formula">6 / 3 = 2</p>
-    <p class="formula">10 / 5 = 2</p>
+    <p class="formula">\\frac{6}{3} = 2</p>
+
+    <p class="formula">\\frac{10}{5} = 2</p>
 
     <p>
       Dezelfde factor komt bij beide lengtes terug.
@@ -5516,8 +4893,11 @@ const MILESTONES_2 = [
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
-        Bij gelijkvormige figuren is de vorm hetzelfde,
-        maar de grootte kan verschillen.
+        Bij gelijkvormige figuren blijft de <strong>vorm</strong> hetzelfde,
+        terwijl de <strong>grootte</strong> mag veranderen.
+      </p>
+      <p>
+        De verhouding tussen overeenkomstige lengtes blijft constant.
       </p>
     </div>
 
@@ -5526,8 +4906,8 @@ const MILESTONES_2 = [
 
     <p>
       Twee figuren zijn <strong>gelijkvormig</strong> wanneer ze dezelfde vorm hebben.
-      Dat betekent dat hun overeenkomstige hoeken gelijk zijn
-      en dat hun overeenkomstige zijden steeds dezelfde verhouding hebben.
+      Dat betekent dat overeenkomstige hoeken even groot zijn en dat
+      overeenkomstige zijden steeds dezelfde verhouding hebben.
     </p>
 
     <p>
@@ -5537,201 +4917,122 @@ const MILESTONES_2 = [
     <p>
       Een vierkant van 2 cm bij 2 cm en een vierkant van 5 cm bij 5 cm
       zijn bijvoorbeeld gelijkvormig.
-      Alle hoeken zijn gelijk en alle overeenkomstige zijden hebben dezelfde verhouding.
+      De grootte verschilt, maar de vorm blijft dezelfde.
     </p>
 
     <p>
-      Ook twee rechthoeken kunnen gelijkvormig zijn.
-      Maar twee rechthoeken met verschillende lengte-breedteverhoudingen
-      zijn dat niet noodzakelijk.
+      Ook rechthoeken kunnen gelijkvormig zijn.
+      Twee rechthoeken met verschillende lengte-breedteverhoudingen
+      zijn echter niet noodzakelijk gelijkvormig.
     </p>
 
     <div class="callout">
+      <p><strong>Let op:</strong></p>
       <p>
-        <strong>Gelijkvormig betekent niet gelijk groot.</strong>
+        <strong>Gelijkvormig</strong> betekent niet
+        <strong>gelijk groot</strong>.
       </p>
       <p>
-        Het gaat om dezelfde <strong>vorm en verhoudingen</strong>.
+        Het gaat om dezelfde vorm en dezelfde verhoudingen.
       </p>
     </div>
 
 
-    <h3>Overeenkomstige hoeken</h3>
+    <h3>Overeenkomstige hoeken en zijden</h3>
 
     <p>
-      Om twee figuren met elkaar te vergelijken, moeten we weten
-      welke onderdelen bij elkaar horen.
-      Die noemen we <strong>overeenkomstige onderdelen</strong>.
+      Om twee figuren te vergelijken, moeten we weten welke onderdelen
+      bij elkaar horen. Die noemen we <strong>overeenkomstige onderdelen</strong>.
     </p>
 
     <p>
-      Bij gelijkvormige figuren zijn overeenkomstige hoeken even groot.
+      Bij gelijkvormige figuren zijn overeenkomstige hoeken gelijk.
     </p>
 
     <p>
-      Stel dat een driehoek de hoeken heeft:
-    </p>
-
-    <p class="formula">40°, 60°, 80°</p>
-
-    <p>
-      Een tweede driehoek met hoeken:
+      Stel dat een driehoek hoeken heeft van:
     </p>
 
     <p class="formula">40°, 60°, 80°</p>
 
     <p>
-      heeft dezelfde vorm.
+      Een tweede driehoek met dezelfde drie hoeken heeft dezelfde vorm.
+    </p>
+
+    <p class="formula">40° \\leftrightarrow 40°</p>
+
+    <p class="formula">60° \\leftrightarrow 60°</p>
+
+    <p class="formula">80° \\leftrightarrow 80°</p>
+
+    <p>
+      De overeenkomstige zijden hoeven niet even lang te zijn.
+      Ze moeten wel volgens dezelfde verhouding veranderen.
     </p>
 
     <p>
-      De overeenkomstige hoeken zijn dus:
+      Bijvoorbeeld:
     </p>
 
-    <p class="formula">40° ↔ 40°</p>
-    <p class="formula">60° ↔ 60°</p>
-    <p class="formula">80° ↔ 80°</p>
+    <p class="formula">3\\,cm,\\ 4\\,cm,\\ 5\\,cm</p>
 
     <p>
-      De driehoeken kunnen ondertussen wel een verschillende grootte hebben.
+      tegenover:
     </p>
 
-
-    <h3>Overeenkomstige zijden</h3>
+    <p class="formula">6\\,cm,\\ 8\\,cm,\\ 10\\,cm</p>
 
     <p>
-      Bij gelijkvormige figuren zijn niet alleen de overeenkomstige hoeken gelijk.
-      Ook de overeenkomstige zijden veranderen volgens dezelfde schaalfactor.
+      Dan:
     </p>
 
-    <p>
-      Stel dat een driehoek zijden heeft:
-    </p>
-
-    <p class="formula">3 cm, 4 cm, 5 cm</p>
-
-    <p>
-      en een tweede driehoek:
-    </p>
-
-    <p class="formula">6 cm, 8 cm, 10 cm</p>
-
-    <p>
-      Dan zien we:
-    </p>
-
-    <p class="formula">6 / 3 = 2</p>
-    <p class="formula">8 / 4 = 2</p>
-    <p class="formula">10 / 5 = 2</p>
+    <p class="formula">\\frac{6}{3} = \\frac{8}{4} = \\frac{10}{5} = 2</p>
 
     <p>
       Elke overeenkomstige zijde is dus twee keer zo lang.
-    </p>
-
-    <p>
-      De tweede driehoek is een vergroting van de eerste met factor 2.
     </p>
 
 
     <h3>De schaalfactor</h3>
 
     <p>
-      De factor waarmee alle lengtes veranderen noemen we de
-      <strong>schaalfactor</strong>.
-      We noteren die vaak met de letter <strong>k</strong>.
+      De factor waarmee overeenkomstige lengtes veranderen noemen we
+      de <strong>schaalfactor</strong>. We noteren die vaak met
+      <span class="formula-inline">k</span>.
     </p>
 
     <p>
-      Als een lengte van 4 cm verandert in 10 cm, dan is:
+      In het algemeen:
     </p>
 
-    <p class="formula">k = 10 / 4 = 2,5</p>
+    <p class="formula">k = \\frac{nieuwe\\ lengte}{oorspronkelijke\\ lengte}</p>
 
     <p>
-      De nieuwe lengte is dus 2,5 keer zo groot.
+      Als een lengte van 4 cm verandert in 10 cm:
     </p>
 
-    <p>
-      In het algemeen geldt voor overeenkomstige lengtes:
-    </p>
-
-    <p class="formula">nieuwe lengte = k · oorspronkelijke lengte</p>
+    <p class="formula">k = \\frac{10}{4} = 2,5</p>
 
     <p>
-      Of, wanneer we twee gelijkvormige figuren vergelijken:
-    </p>
-
-    <p class="formula">k = nieuwe lengte / oorspronkelijke lengte</p>
-
-    <div class="callout">
-      <p><strong>De schaalfactor vertelt hoeveel de figuur op lengteschaal verandert.</strong></p>
-    </div>
-
-
-    <h3>Van klein naar groot</h3>
-
-    <p>
-      Stel dat een kleine driehoek een zijde van 7 cm heeft.
-      De overeenkomstige zijde van een grotere, gelijkvormige driehoek
-      is 21 cm.
+      De nieuwe lengte is dus 2,5 keer de oorspronkelijke lengte.
     </p>
 
     <p>
-      De schaalfactor is:
+      Voor een overeenkomstige lengte geldt:
     </p>
 
-    <p class="formula">k = 21 / 7 = 3</p>
+    <p class="formula">l' = k \\cdot l</p>
 
     <p>
-      Alle overeenkomstige lengtes worden dus met 3 vermenigvuldigd.
-    </p>
-
-    <p>
-      Heeft een andere zijde van de kleine driehoek een lengte van 5 cm,
-      dan wordt die:
-    </p>
-
-    <p class="formula">3 · 5 = 15 cm</p>
-
-    <p>
-      We hoeven dus niet elke zijde afzonderlijk te meten.
-      Zodra de schaalfactor bekend is, kunnen we alle overeenkomstige lengtes berekenen.
-    </p>
-
-
-    <h3>Van groot naar klein</h3>
-
-    <p>
-      We kunnen natuurlijk ook terugrekenen.
-    </p>
-
-    <p>
-      Stel dat een model een lengte van 18 cm heeft en het echte object
-      een overeenkomstige lengte van 6 cm.
-    </p>
-
-    <p>
-      Van model naar werkelijkheid is:
-    </p>
-
-    <p class="formula">k = 6 / 18 = 1 / 3</p>
-
-    <p>
-      De werkelijke lengte is dus één derde van de lengte van het model.
-    </p>
-
-    <p>
-      Je kunt hetzelfde probleem ook zien als een vergrotingsfactor
-      van 3 wanneer je van het echte object naar het model gaat.
+      Hierbij is <span class="formula-inline">l</span> de oorspronkelijke
+      lengte en <span class="formula-inline">l'</span> de nieuwe lengte.
     </p>
 
     <div class="callout">
+      <p><strong>Kernidee:</strong></p>
       <p>
-        <strong>Let altijd op de richting van de schaalfactor.</strong>
-      </p>
-      <p>
-        Van klein naar groot en van groot naar klein gebruiken
-        tegengestelde factoren.
+        De schaalfactor vertelt hoeveel een figuur op het niveau van
+        <strong>lengtes</strong> wordt vergroot of verkleind.
       </p>
     </div>
 
@@ -5739,861 +5040,694 @@ const MILESTONES_2 = [
     <h3>Een onbekende lengte berekenen</h3>
 
     <p>
-      Gelijkvormigheid is bijzonder nuttig wanneer één lengte onbekend is.
+      Zodra de schaalfactor bekend is, kunnen we alle overeenkomstige
+      lengtes berekenen.
     </p>
 
     <p>
       Stel dat twee gelijkvormige driehoeken overeenkomstige zijden hebben:
     </p>
 
-    <p class="formula">4 cm ↔ 10 cm</p>
+    <p class="formula">4\\,cm \\leftrightarrow 10\\,cm</p>
 
     <p>
       Een andere zijde van de kleine driehoek is 6 cm.
-      Hoe lang is de overeenkomstige zijde van de grote driehoek?
-    </p>
-
-    <p>
       Eerst bepalen we de schaalfactor:
     </p>
 
-    <p class="formula">k = 10 / 4 = 2,5</p>
+    <p class="formula">k = \\frac{10}{4} = 2,5</p>
 
     <p>
-      Daarna vermenigvuldigen we de bekende lengte:
+      Daarna berekenen we de overeenkomstige zijde:
     </p>
 
-    <p class="formula">2,5 · 6 = 15 cm</p>
+    <p class="formula">l' = 2,5 \\cdot 6 = 15\\,cm</p>
 
     <p>
       De onbekende zijde is dus 15 cm.
     </p>
 
     <p>
-      Het probleem lijkt op een gewone berekening,
-      maar de belangrijke stap is eerst herkennen dat dezelfde schaalfactor
-      voor overeenkomstige zijden geldt.
+      Het belangrijkste deel van de oplossing is niet de vermenigvuldiging,
+      maar het herkennen dat dezelfde schaalfactor voor overeenkomstige
+      zijden geldt.
     </p>
 
 
-    <h3>Verhoudingen zijn belangrijker dan verschillen</h3>
+    <h3>Verhouding, niet verschil</h3>
 
     <p>
-      Stel dat een figuur wordt vergroot van 4 cm naar 6 cm.
-      De lengte neemt toe met:
-    </p>
-
-    <p class="formula">6 − 4 = 2 cm</p>
-
-    <p>
-      Maar bij een andere zijde van 10 cm naar 12 cm is het verschil ook:
-    </p>
-
-    <p class="formula">12 − 10 = 2 cm</p>
-
-    <p>
-      Toch zijn deze veranderingen niet hetzelfde op schaal.
+      Gelijkvormigheid gaat over <strong>verhoudingen</strong>,
+      niet over gelijke verschillen.
     </p>
 
     <p>
-      De eerste zijde werd vermenigvuldigd met:
+      Stel dat een zijde verandert van 4 cm naar 6 cm:
     </p>
 
-    <p class="formula">6 / 4 = 1,5</p>
+    <p class="formula">6 - 4 = 2\\,cm</p>
 
     <p>
-      De tweede met:
+      Een andere zijde verandert van 10 cm naar 12 cm:
     </p>
 
-    <p class="formula">12 / 10 = 1,2</p>
+    <p class="formula">12 - 10 = 2\\,cm</p>
 
     <p>
-      De verschillen zijn dus gelijk, maar de verhoudingen niet.
-      De figuren vormen dan geen gelijkvormige vergroting.
+      De verschillen zijn hetzelfde, maar de verhoudingen niet:
+    </p>
+
+    <p class="formula">\\frac{6}{4} = 1,5</p>
+
+    <p class="formula">\\frac{12}{10} = 1,2</p>
+
+    <p>
+      De twee lengtes zijn dus niet met dezelfde factor veranderd.
+      Dit is geen gelijkvormige vergroting.
     </p>
 
     <div class="callout">
+      <p><strong>Let op:</strong></p>
       <p>
-        <strong>Gelijkvormigheid gaat over verhoudingen, niet over gelijke verschillen.</strong>
+        Gelijkvormigheid herken je aan een <strong>constante verhouding</strong>,
+        niet aan een gelijk verschil.
       </p>
     </div>
 
 
-    <h3>Gelijkvormige driehoeken</h3>
-
-    <div class="theory-image">
-      <img src="assets/gelijkvormige-driehoeken.svg" alt="Twee gelijkvormige driehoeken met overeenkomstige hoeken en evenredige zijden.">
-    </div>
+    <h3>Van klein naar groot en van groot naar klein</h3>
 
     <p>
-      Driehoeken zijn bijzonder belangrijk omdat we later in trigonometrie
-      voortdurend met verhoudingen van hun zijden zullen werken.
+      De schaalfactor hangt af van de richting waarin we vergelijken.
     </p>
 
     <p>
-      Wanneer twee driehoeken dezelfde drie hoeken hebben,
-      hebben ze dezelfde vorm.
-      Hun overeenkomstige zijden zijn dan evenredig.
+      Stel dat een model 18 cm lang is en het echte object
+      een overeenkomstige lengte van 6 cm heeft.
     </p>
 
     <p>
-      Stel bijvoorbeeld:
+      Van model naar werkelijkheid:
     </p>
 
-    <p class="formula">A = 40°, B = 60°, C = 80°</p>
+    <p class="formula">k = \\frac{6}{18} = \\frac{1}{3}</p>
 
     <p>
-      en:
+      Van werkelijkheid naar model is de factor omgekeerd:
     </p>
 
-    <p class="formula">D = 40°, E = 60°, F = 80°</p>
+    <p class="formula">k = \\frac{18}{6} = 3</p>
 
     <p>
-      Dan horen de hoeken bij elkaar:
-    </p>
-
-    <p class="formula">A ↔ D</p>
-    <p class="formula">B ↔ E</p>
-    <p class="formula">C ↔ F</p>
-
-    <p>
-      De overeenkomstige zijden hebben daardoor dezelfde verhouding.
-    </p>
-
-
-    <h3>Gelijkvormigheid herkennen</h3>
-
-    <p>
-      We kunnen gelijkvormigheid op verschillende manieren herkennen.
-    </p>
-
-    <p>
-      De meest directe manier is kijken naar de hoeken.
-      Als de overeenkomstige hoeken gelijk zijn,
-      hebben de figuren dezelfde vorm.
-    </p>
-
-    <p>
-      Bij driehoeken is het daarom voldoende dat de drie overeenkomstige
-      hoeken gelijk zijn.
-    </p>
-
-    <p>
-      We kunnen ook de zijden vergelijken.
-      Als alle overeenkomstige zijden dezelfde verhouding hebben,
-      wijzen ze eveneens op dezelfde vorm.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">3 / 6 = 4 / 8 = 5 / 10 = 1 / 2</p>
-
-    <p>
-      De zijden van de tweede driehoek zijn dus allemaal tweemaal zo groot.
-    </p>
-
-    <p>
-      De verhouding blijft overal dezelfde.
+      Beide beschrijvingen zijn correct, maar ze beantwoorden
+      een andere vraag.
     </p>
 
     <div class="callout">
-      <p><strong>Bij gelijkvormige figuren blijft de verhouding behouden.</strong></p>
+      <p><strong>Let op:</strong></p>
+      <p>
+        Controleer altijd welke figuur de <strong>oorspronkelijke</strong>
+        en welke de <strong>nieuwe</strong> figuur is.
+      </p>
+      <p>
+        Van klein naar groot en van groot naar klein gebruiken
+        tegengestelde schaalfactoren.
+      </p>
     </div>
 
 
-    <h3>Oppervlakte verandert anders dan lengte</h3>
+    <h3>Oppervlakte verandert met k²</h3>
 
     <p>
       Tot nu toe keken we naar lengtes.
-      Maar wat gebeurt er met de oppervlakte wanneer een figuur wordt vergroot?
+      Maar een oppervlakte bestaat uit twee lengterichtingen.
     </p>
 
     <p>
-      Stel dat elke lengte wordt verdubbeld.
-      De schaalfactor is dan:
+      Stel dat elke lengte wordt verdubbeld:
     </p>
 
     <p class="formula">k = 2</p>
 
     <p>
-      Neem een vierkant van 3 cm bij 3 cm.
-      De oorspronkelijke oppervlakte is:
+      Een vierkant van 3 cm bij 3 cm heeft oppervlakte:
     </p>
 
-    <p class="formula">A = 3 · 3 = 9 cm²</p>
+    <p class="formula">A = 3 \\cdot 3 = 9\\,cm^{2}</p>
 
     <p>
-      Na een vergroting met factor 2 wordt het vierkant
-      6 cm bij 6 cm:
+      Na vergroting met factor 2 is het vierkant 6 cm bij 6 cm:
     </p>
 
-    <p class="formula">A = 6 · 6 = 36 cm²</p>
+    <p class="formula">A' = 6 \\cdot 6 = 36\\,cm^{2}</p>
 
     <p>
-      De oppervlakte is dus vier keer zo groot geworden:
+      De oppervlakte is dus vier keer zo groot:
     </p>
 
-    <p class="formula">36 / 9 = 4</p>
+    <p class="formula">\\frac{36}{9} = 4 = 2^{2}</p>
 
     <p>
-      Dat is:
+      Algemeen geldt:
     </p>
 
-    <p class="formula">2² = 4</p>
+    <p class="formula">A' = k^{2}A</p>
 
     <p>
-      De oppervlakte verandert dus met het <strong>kwadraat van de schaalfactor</strong>.
+      Waarom? Omdat beide lengterichtingen met factor
+      <span class="formula-inline">k</span> veranderen:
     </p>
 
+    <p class="formula">A' = (k \\cdot l)(k \\cdot b)</p>
 
-    <h3>Waarom verschijnt k²?</h3>
+    <p class="formula">A' = k^{2}lb</p>
 
-    <p>
-      Dat is geen nieuwe mysterieuze regel.
-      Het volgt rechtstreeks uit de manier waarop oppervlakte wordt berekend.
-    </p>
-
-    <p>
-      Een oppervlakte bestaat bijvoorbeeld uit:
-    </p>
-
-    <p class="formula">A = lengte · breedte</p>
-
-    <p>
-      Als beide lengtes met factor k worden vermenigvuldigd,
-      krijgen we:
-    </p>
-
-    <p class="formula">A' = (k · lengte)(k · breedte)</p>
-
-    <p>
-      De twee factoren k kunnen we samenbrengen:
-    </p>
-
-    <p class="formula">A' = k² · lengte · breedte</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">A' = k²A</p>
+    <p class="formula">A' = k^{2}A</p>
 
     <div class="callout">
+      <p><strong>Kernidee:</strong></p>
       <p>
-        <strong>Lengtes → k</strong>
-      </p>
-      <p>
-        <strong>Oppervlakten → k²</strong>
-      </p>
-      <p>
-        Het verschil ontstaat omdat oppervlakte uit twee lengterichtingen bestaat.
+        Een oppervlakte heeft twee lengterichtingen.
+        Daarom verschijnt de schaalfactor twee keer:
+        <strong>oppervlakte schaalt met k²</strong>.
       </p>
     </div>
-
-
-    <h3>Een oppervlakte berekenen na een vergroting</h3>
-
-    <p>
-      Stel dat een figuur een oppervlakte van 12 cm² heeft
-      en wordt vergroot met factor 3.
-    </p>
-
-    <p>
-      De nieuwe oppervlakte is niet 36 cm² omdat we simpelweg
-      12 met 3 vermenigvuldigen.
-    </p>
-
-    <p>
-      We moeten de schaalfactor kwadrateren:
-    </p>
-
-    <p class="formula">A' = 3² · 12</p>
-
-    <p class="formula">A' = 9 · 12 = 108 cm²</p>
-
-    <p>
-      De oppervlakte is dus negen keer zo groot.
-    </p>
 
 
     <h3>Volume verandert met k³</h3>
 
     <p>
-      Bij een driedimensionaal object hebben we drie lengterichtingen:
-      lengte, breedte en hoogte.
+      Bij een ruimtelijk object hebben we drie lengterichtingen:
+      bijvoorbeeld lengte, breedte en hoogte.
     </p>
 
     <p>
-      Neem een kubus met zijde 2 cm.
-      Het volume is:
+      Neem een kubus met zijde 2 cm:
     </p>
 
-    <p class="formula">V = 2 · 2 · 2 = 8 cm³</p>
+    <p class="formula">V = 2 \\cdot 2 \\cdot 2 = 8\\,cm^{3}</p>
 
     <p>
       Vergroot de kubus met factor 3.
       Elke zijde wordt dan 6 cm:
     </p>
 
-    <p class="formula">V = 6 · 6 · 6 = 216 cm³</p>
+    <p class="formula">V' = 6 \\cdot 6 \\cdot 6 = 216\\,cm^{3}</p>
 
     <p>
       De volumeverhouding is:
     </p>
 
-    <p class="formula">216 / 8 = 27</p>
+    <p class="formula">\\frac{216}{8} = 27 = 3^{3}</p>
 
     <p>
-      En:
+      Algemeen geldt:
     </p>
 
-    <p class="formula">3³ = 27</p>
-
-    <p>
-      Daarom verandert het volume van een gelijkvormig ruimtelijk object met
-      de derde macht van de schaalfactor:
-    </p>
-
-    <p class="formula">V' = k³V</p>
+    <p class="formula">V' = k^{3}V</p>
 
     <div class="callout">
+      <p><strong>Kernidee:</strong></p>
       <p>
-        <strong>Lengte → k</strong>
-      </p>
-      <p>
-        <strong>Oppervlakte → k²</strong>
-      </p>
-      <p>
-        <strong>Volume → k³</strong>
+        Een volume heeft drie lengterichtingen.
+        Daarom verschijnt de schaalfactor drie keer:
+        <strong>volume schaalt met k³</strong>.
       </p>
     </div>
 
 
-    <h3>Schaaltekeningen</h3>
+    <h3>Schaaltekeningen en kaarten</h3>
 
     <p>
       Gelijkvormigheid wordt veel gebruikt om grote objecten
-      op papier weer te geven.
-    </p>
-
-    <p>
-      Een gebouw, wegennet of terrein kan onmogelijk op ware grootte
-      op een blad papier worden getekend.
-      Daarom gebruiken we een schaal.
+      op een kleiner formaat weer te geven.
     </p>
 
     <p>
       Bij een schaal van 1 : 100 betekent dit:
     </p>
 
-    <p class="formula">1 cm op de tekening = 100 cm in werkelijkheid</p>
+    <p class="formula">\\frac{tekening}{werkelijkheid} = \\frac{1}{100}</p>
 
     <p>
-      Dus een muur die op de tekening 4 cm lang is,
-      heeft in werkelijkheid een lengte van:
-    </p>
-
-    <p class="formula">4 · 100 = 400 cm</p>
-
-    <p>
-      Dat is:
-    </p>
-
-    <p class="formula">400 cm = 4 m</p>
-
-    <p>
-      De schaal is dus een vaste verhouding tussen de tekening
-      en de werkelijkheid.
-    </p>
-
-
-    <h3>Schaal is een verhouding</h3>
-
-    <p>
-      Een schaal zoals 1 : 50 betekent niet dat er ergens een
-      speciale eenheid "schaal" bestaat.
-      Het is een verhouding.
+      Eén centimeter op de tekening stelt dus 100 cm
+      in werkelijkheid voor.
     </p>
 
     <p>
-      De verhouding is:
+      Een muur die op de tekening 4 cm lang is:
     </p>
 
-    <p class="formula">tekening / werkelijkheid = 1 / 50</p>
+    <p class="formula">4 \\cdot 100 = 400\\,cm</p>
+
+    <p class="formula">400\\,cm = 4\\,m</p>
 
     <p>
-      Daarom moeten de twee lengtes dezelfde eenheid hebben
-      voordat we de verhouding gebruiken.
-    </p>
-
-    <p>
-      Stel dat een afstand op een kaart 3 cm is.
-      De kaart heeft schaal 1 : 25 000.
+      Dezelfde verhouding geldt voor elke overeenkomstige lengte.
     </p>
 
     <p>
-      Dan is de werkelijke afstand:
+      Bij een kaart met schaal 1 : 25 000 en een afstand
+      van 3 cm op de kaart:
     </p>
 
-    <p class="formula">3 · 25 000 = 75 000 cm</p>
+    <p class="formula">3 \\cdot 25\\,000 = 75\\,000\\,cm</p>
+
+    <p class="formula">75\\,000\\,cm = 750\\,m</p>
+
+    <p class="formula">750\\,m = 0,75\\,km</p>
 
     <p>
-      Omzetten naar meter:
+      Zorg ervoor dat de eenheden eerst met elkaar overeenkomen.
     </p>
-
-    <p class="formula">75 000 cm = 750 m</p>
-
-    <p>
-      En dus:
-    </p>
-
-    <p class="formula">750 m = 0,75 km</p>
 
 
     <h3>Van werkelijkheid naar tekening</h3>
 
     <p>
-      We kunnen ook de andere richting uit rekenen.
+      We kunnen ook vanuit een werkelijke lengte de lengte
+      op een schaaltekening bepalen.
     </p>
 
     <p>
-      Stel dat een gebouw 20 m lang is en we willen het tekenen
+      Stel dat een gebouw 20 m lang is en we het tekenen
       op schaal 1 : 100.
     </p>
 
     <p>
-      Eerst zetten we 20 m om naar centimeter:
+      Eerst zetten we de lengte om naar centimeter:
     </p>
 
-    <p class="formula">20 m = 2000 cm</p>
+    <p class="formula">20\\,m = 2000\\,cm</p>
 
     <p>
-      Daarna delen we door 100:
+      Daarna passen we de schaal toe:
     </p>
 
-    <p class="formula">2000 / 100 = 20 cm</p>
+    <p class="formula">\\frac{2000}{100} = 20\\,cm</p>
 
     <p>
       Het gebouw wordt dus 20 cm lang op de tekening.
     </p>
 
-    <p>
-      Dezelfde verhouding werkt voor elke andere overeenkomstige lengte.
-    </p>
+    <div class="callout">
+      <p><strong>Werkwijze:</strong></p>
+      <ol>
+        <li>Controleer de schaal.</li>
+        <li>Zet de lengtes in dezelfde eenheid.</li>
+        <li>Bepaal welke richting je rekent.</li>
+        <li>Gebruik de juiste schaalfactor.</li>
+        <li>Controleer of de grootte van het antwoord logisch is.</li>
+      </ol>
+    </div>
 
 
-    <h3>De schaalfactor kan kleiner zijn dan 1</h3>
-
-    <p>
-      Een schaaltekening is meestal kleiner dan de werkelijkheid.
-      De schaalfactor van werkelijkheid naar tekening is dan kleiner dan 1.
-    </p>
-
-    <p>
-      Bij schaal 1 : 100 is:
-    </p>
-
-    <p class="formula">k = 1 / 100 = 0,01</p>
+    <h3>Een volledige toepassing met oppervlakte</h3>
 
     <p>
-      Een werkelijke lengte van 8 m wordt op de tekening:
-    </p>
-
-    <p class="formula">0,01 · 8 m = 0,08 m</p>
-
-    <p>
-      Dat is:
-    </p>
-
-    <p class="formula">0,08 m = 8 cm</p>
-
-    <p>
-      Hetzelfde principe geldt voor vergrotingen.
-      Een schaalfactor groter dan 1 betekent een vergroting;
-      een schaalfactor tussen 0 en 1 betekent een verkleining.
-    </p>
-
-
-    <h3>Een volledig schaalprobleem</h3>
-
-    <p>
-      Stel dat een plattegrond van een tuin schaal 1 : 200 heeft.
-      Op de plattegrond is een rechthoekig terras 3 cm lang en 2 cm breed.
+      Een plattegrond van een tuin heeft schaal 1 : 200.
+      Op de plattegrond is een rechthoekig terras 3 cm lang
+      en 2 cm breed.
     </p>
 
     <p>
-      De werkelijke lengte is:
+      Eerst bepalen we de werkelijke lengtes.
     </p>
 
-    <p class="formula">3 · 200 = 600 cm = 6 m</p>
+    <p class="formula">3 \\cdot 200 = 600\\,cm = 6\\,m</p>
+
+    <p class="formula">2 \\cdot 200 = 400\\,cm = 4\\,m</p>
 
     <p>
-      De werkelijke breedte is:
+      De werkelijke oppervlakte is:
     </p>
 
-    <p class="formula">2 · 200 = 400 cm = 4 m</p>
+    <p class="formula">A = 6 \\cdot 4 = 24\\,m^{2}</p>
 
     <p>
-      De werkelijke oppervlakte is dus:
+      We hadden ook rechtstreeks kunnen redeneren met de
+      oppervlakteschaalfactor:
     </p>
 
-    <p class="formula">A = 6 · 4 = 24 m²</p>
+    <p class="formula">k^{2} = 200^{2}</p>
 
     <p>
-      Let op dat we niet de oppervlakte van de tekening
-      rechtstreeks met 200 vermenigvuldigen.
-      Oppervlakte schaalt met het kwadraat:
-    </p>
-
-    <p class="formula">k² = 200²</p>
-
-    <p>
-      Beide methoden moeten hetzelfde resultaat geven.
-      Het expliciet omzetten van de lengtes maakt de betekenis
-      van de berekening vaak duidelijker.
+      Het is in de praktijk vaak overzichtelijker om eerst de lengtes
+      om te rekenen en daarna de oppervlakte te berekenen.
     </p>
 
 
-    <h3>Waarom is gelijkvormigheid zo krachtig?</h3>
+    <h3>Gelijkvormigheid en trigonometrie</h3>
 
     <p>
-      Gelijkvormigheid laat ons eigenschappen van een figuur
-      overbrengen naar een andere figuur.
-    </p>
-
-    <p>
-      Als we één verhouding kennen, kunnen we andere lengtes bepalen.
-      Als we de schaalfactor kennen, kunnen we oppervlakten en volumes berekenen.
-    </p>
-
-    <p>
-      Daardoor kunnen we afmetingen bepalen die we niet rechtstreeks
-      kunnen meten.
-    </p>
-
-    <p>
-      Een landmeter kan bijvoorbeeld een ontoegankelijke afstand
-      indirect bepalen door gebruik te maken van gelijkvormige driehoeken.
-    </p>
-
-    <p>
-      Hetzelfde idee ligt achter veel toepassingen van kaarten,
-      maquettes, technische tekeningen en modellen.
-    </p>
-
-
-    <h3>Gelijkvormigheid en verhoudingen in driehoeken</h3>
-
-    <p>
-      Hier begint de verbinding met de volgende belangrijke stap
-      in onze wiskundige ontwikkeling.
-    </p>
-
-    <p>
-      Beschouw twee gelijkvormige rechthoekige driehoeken
-      met dezelfde scherpe hoek.
+      Gelijkvormigheid heeft nog een belangrijke consequentie.
+      Beschouw twee rechthoekige driehoeken met dezelfde scherpe hoek.
     </p>
 
     <p>
       De driehoeken kunnen verschillende afmetingen hebben,
-      maar de verhoudingen van overeenkomstige zijden zijn gelijk.
+      maar omdat ze dezelfde vorm hebben, blijven de verhoudingen
+      van overeenkomstige zijden gelijk.
     </p>
 
     <p>
-      Als bijvoorbeeld bij de ene driehoek:
+      Bijvoorbeeld:
     </p>
 
-    <p class="formula">overstaande zijde / schuine zijde = 3 / 5</p>
-
-    <p>
-      dan geldt bij elke gelijkvormige driehoek met dezelfde hoek
-      dezelfde verhouding.
+    <p class="formula">
+      \\frac{overstaande\\ zijde}{schuine\\ zijde}
     </p>
 
     <p>
-      Dat betekent dat zo'n verhouding niet langer alleen een verhouding
-      tussen twee toevallig gekozen lengtes is.
-      Ze hangt samen met de <strong>hoek</strong>.
+      heeft voor alle gelijkvormige driehoeken met dezelfde hoek
+      dezelfde waarde.
     </p>
 
     <p>
-      Dit idee vormt de basis voor sinus, cosinus en tangens,
-      die we later in les 2.14 zullen invoeren.
+      De verhouding hangt dus niet af van de grootte van de driehoek,
+      maar van de <strong>hoek</strong>.
+    </p>
+
+    <p>
+      Dat idee vormt de basis voor de goniometrische functies
+      <strong>sinus, cosinus en tangens</strong>, die we later in
+      les 2.14 verder ontwikkelen.
     </p>
 
     <div class="callout">
       <p><strong>Brug naar trigonometrie:</strong></p>
       <p>
-        Gelijkvormige driehoeken zorgen ervoor dat een verhouding van
-        overeenkomstige zijden hetzelfde blijft voor een bepaalde hoek.
+        Gelijkvormigheid zorgt ervoor dat een verhouding van zijden
+        constant blijft wanneer de hoek hetzelfde blijft.
       </p>
       <p>
-        Trigonometrie geeft deze vaste verhoudingen vervolgens
-        een eigen naam: sinus, cosinus en tangens.
+        Daardoor kunnen we een vaste verhouding koppelen aan een hoek.
+        Dat is het uitgangspunt van trigonometrie.
       </p>
     </div>
 
 
     <h3>Veelgemaakte fouten</h3>
 
-    <p>
-      Bij gelijkvormigheid ontstaan vaak fouten doordat lengtes,
-      oppervlakten en volumes door elkaar worden gehaald.
-    </p>
-
     <ul>
       <li>
-        <strong>Lengtes met k² vermenigvuldigen:</strong>
-        fout. Lengtes veranderen met k.
-      </li>
-      <li>
-        <strong>Oppervlakten met k vermenigvuldigen:</strong>
-        fout. Oppervlakten veranderen met k².
-      </li>
-      <li>
-        <strong>Volumes met k² vermenigvuldigen:</strong>
-        fout. Volumes veranderen met k³.
-      </li>
-      <li>
-        <strong>Verschillen gebruiken in plaats van verhoudingen:</strong>
+        <strong>Een verschil gebruiken in plaats van een verhouding:</strong>
         gelijkvormigheid draait om een constante verhouding.
       </li>
       <li>
-        <strong>Eenheden door elkaar gebruiken:</strong>
-        bijvoorbeeld meter in de ene lengte en centimeter in de andere.
-        Zet ze eerst om naar dezelfde eenheid.
+        <strong>De schaalfactor in de verkeerde richting gebruiken:</strong>
+        controleer altijd welke figuur oorspronkelijk en welke nieuw is.
       </li>
       <li>
-        <strong>De schaalfactor in de verkeerde richting gebruiken:</strong>
-        controleer altijd welke figuur de oorspronkelijke en welke de nieuwe is.
+        <strong>Lengtes met k² vermenigvuldigen:</strong>
+        lengtes veranderen met k.
+      </li>
+      <li>
+        <strong>Oppervlakten met k vermenigvuldigen:</strong>
+        oppervlakten veranderen met k².
+      </li>
+      <li>
+        <strong>Volumes met k² vermenigvuldigen:</strong>
+        volumes veranderen met k³.
+      </li>
+      <li>
+        <strong>Eenheden door elkaar gebruiken:</strong>
+        zet overeenkomstige lengtes eerst in dezelfde eenheid.
       </li>
     </ul>
+
+    <div class="callout">
+      <p><strong>Let op:</strong></p>
+      <p>
+        Denk eerst na over <strong>wat</strong> er verandert:
+        een lengte, een oppervlakte of een volume.
+        Pas daarna kies je k, k² of k³.
+      </p>
+    </div>
 
 
     <h3>Een vaste werkwijze</h3>
 
     <p>
-      Bij een probleem met gelijkvormige figuren kun je steeds dezelfde
-      redenering gebruiken.
+      Bij een probleem met gelijkvormige figuren kun je deze
+      vaste werkwijze gebruiken:
     </p>
 
     <ol>
       <li>Controleer of de figuren dezelfde vorm hebben.</li>
-      <li>Bepaal welke zijden en hoeken overeenkomstig zijn.</li>
+      <li>Bepaal welke onderdelen overeenkomstig zijn.</li>
       <li>Zorg dat de lengtes dezelfde eenheid hebben.</li>
       <li>Bepaal de schaalfactor.</li>
-      <li>Gebruik de schaalfactor voor overeenkomstige lengtes.</li>
+      <li>Gebruik k voor overeenkomstige lengtes.</li>
       <li>Gebruik k² voor oppervlakten.</li>
       <li>Gebruik k³ voor volumes.</li>
-      <li>Controleer of de richting van de schaalfactor klopt.</li>
+      <li>Controleer de richting van de schaalfactor.</li>
       <li>Controleer of het antwoord logisch is.</li>
     </ol>
 
-    <p>
-      De belangrijkste stap is vaak niet het rekenen,
-      maar het herkennen van de structuur:
-      <strong>dezelfde vorm betekent een vaste verhouding.</strong>
-    </p>
+    <div class="callout">
+      <p><strong>Werkwijze:</strong></p>
+      <p>
+        De belangrijkste stap is vaak niet het rekenen,
+        maar het herkennen van de structuur:
+        <strong>dezelfde vorm betekent een vaste verhouding</strong>.
+      </p>
+    </div>
 
 
     <h3>Wat hebben we eigenlijk geleerd?</h3>
 
     <p>
-      Gelijkvormigheid gaat over figuren die dezelfde vorm hebben,
-      maar niet noodzakelijk dezelfde grootte.
+      Gelijkvormigheid betekent dat de <strong>vorm behouden blijft</strong>
+      terwijl de grootte verandert.
     </p>
 
     <p>
       Bij gelijkvormige figuren zijn overeenkomstige hoeken gelijk
-      en hebben overeenkomstige zijden steeds dezelfde verhouding.
+      en hebben overeenkomstige zijden dezelfde verhouding.
     </p>
 
     <p>
-      Die verhouding wordt beschreven met de schaalfactor:
+      De schaalfactor is:
     </p>
 
-    <p class="formula">k = nieuwe lengte / oorspronkelijke lengte</p>
-
-    <p>
-      Lengtes veranderen met factor k:
-    </p>
-
-    <p class="formula">l' = k · l</p>
-
-    <p>
-      Oppervlakten veranderen met het kwadraat:
-    </p>
-
-    <p class="formula">A' = k² · A</p>
-
-    <p>
-      Volumes veranderen met de derde macht:
-    </p>
-
-    <p class="formula">V' = k³ · V</p>
-
-    <p>
-      Hetzelfde principe maakt schaaltekeningen,
-      kaarten en maquettes mogelijk.
+    <p class="formula">
+      k = \\frac{nieuwe\\ lengte}{oorspronkelijke\\ lengte}
     </p>
 
     <p>
-      Maar het belangrijkste idee gaat nog verder.
-      Bij gelijkvormige rechthoekige driehoeken blijven
-      bepaalde verhoudingen van zijden gelijk wanneer de hoek gelijk blijft.
-      Daardoor kunnen we verhoudingen aan hoeken koppelen.
+      Voor lengtes:
+    </p>
+
+    <p class="formula">l' = k \\cdot l</p>
+
+    <p>
+      Voor oppervlakten:
+    </p>
+
+    <p class="formula">A' = k^{2}A</p>
+
+    <p>
+      Voor volumes:
+    </p>
+
+    <p class="formula">V' = k^{3}V</p>
+
+    <p>
+      Hetzelfde principe maakt schaaltekeningen, kaarten,
+      maquettes en modellen mogelijk.
     </p>
 
     <p>
-      Dat is precies de stap die we nodig hebben om in trigonometrie
-      sinus, cosinus en tangens te begrijpen.
+      Bovendien vormt gelijkvormigheid een belangrijke brug naar
+      trigonometrie: bij een vaste hoek blijven bepaalde verhoudingen
+      tussen zijden constant.
     </p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
-        Gelijkvormigheid betekent dat de <strong>vorm behouden blijft</strong>
-        terwijl de grootte verandert.
+        Gelijkvormigheid betekent dat de <strong>vorm</strong> behouden
+        blijft terwijl de <strong>grootte</strong> verandert.
       </p>
       <p>
         De sleutel is een vaste verhouding tussen overeenkomstige lengtes.
-        Vanuit die ene schaalfactor volgen de regels voor lengtes,
+        Vanuit die schaalfactor volgen de regels voor lengtes,
         oppervlakten en volumes.
       </p>
       <p>
-        Gelijkvormigheid vormt bovendien de brug van elementaire meetkunde
-        naar trigonometrie: bij dezelfde hoek blijven verhoudingen tussen
-        overeenkomstige zijden behouden.
+        Gelijkvormigheid vormt bovendien de brug van meetkunde
+        naar trigonometrie: bij dezelfde hoek blijven bepaalde
+        verhoudingen van zijden behouden.
       </p>
     </div>
   `
-}, 
+},
   {
   id: "2.11",
   title: "Functies als relaties",
-  goal: "Hoe beschrijven we afhankelijkheid?",
+  goal: "Hoe beschrijven we een afhankelijkheid tussen grootheden?",
   theory: /* html */`
+    <h2>Functies als relaties</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>begrijpen wat een functie is als verband tussen invoer en uitvoer</li>
-      <li>functies kunnen beschrijven met een tabel, grafiek en formule</li>
-      <li>functienotatie f(x) correct lezen en gebruiken</li>
-      <li>domein en bereik herkennen</li>
-      <li>onderscheiden wanneer een relatie wel of geen functie is</li>
-      <li>functies gebruiken om concrete situaties te modelleren</li>
+      <li>Wat betekent het dat de ene grootheid afhangt van een andere?</li>
+      <li>Wanneer noemen we een verband een functie?</li>
+      <li>Hoe werken invoer en uitvoer?</li>
+      <li>Hoe kunnen we een functie voorstellen met woorden, een tabel, een grafiek of een formule?</li>
+      <li>Wat betekent de notatie <span class="formula-inline">f(x)</span>?</li>
+      <li>Wat zijn het domein en het bereik van een functie?</li>
+      <li>Hoe herkennen we een functie in een tabel of grafiek?</li>
+      <li>Hoe gebruiken we functies om situaties uit de werkelijkheid te beschrijven?</li>
     </ul>
 
-    <div class="callout">
-      <strong>Kernidee:</strong> Een functie koppelt elke toegelaten invoer aan precies één uitvoer. Tabellen, grafieken en formules zijn verschillende manieren om hetzelfde verband te beschrijven.
-    </div>
+    <p>
+      In de vorige lessen gebruikten we formules om verbanden tussen grootheden
+      te beschrijven. Nu geven we aan zo'n verband een preciezere wiskundige
+      betekenis: we onderzoeken wanneer een verband een <strong>functie</strong>
+      is.
+    </p>
 
     <h3>Van een verband naar een functie</h3>
 
-    <p>In de vorige lessen gebruikten we formules om grootheden met elkaar te verbinden. Bijvoorbeeld:</p>
+    <p>
+      Stel dat de prijs van een product afhangt van het aantal producten dat
+      je koopt. Dan verandert de prijs wanneer het aantal verandert.
+    </p>
 
-    <p class="formula">prijs = 3 × aantal</p>
-
-    <p>Als één product €3 kost, hangt de totale prijs af van het aantal producten dat je koopt.</p>
-
-    <p>Bij 1 product is de prijs €3. Bij 2 producten is de prijs €6. Bij 5 producten is de prijs €15.</p>
-
-    <p>We hebben dus een <strong>verband</strong> tussen twee grootheden:</p>
+    <p>
+      We hebben dan twee grootheden:
+    </p>
 
     <ul>
-      <li>het aantal producten is de invoer;</li>
-      <li>de totale prijs is de uitvoer.</li>
+      <li>het aantal producten;</li>
+      <li>de totale prijs.</li>
     </ul>
 
-    <p>Een functie is een wiskundige manier om zo'n afhankelijkheid te beschrijven.</p>
+    <p>
+      De ene grootheid hangt af van de andere. We noemen dit een
+      <strong>afhankelijkheid</strong> of een <strong>verband</strong>.
+    </p>
+
+    <p>
+      Een functie is een bijzondere manier om zo'n verband te beschrijven:
+      iedere toegelaten invoerwaarde krijgt precies één uitvoerwaarde.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een functie koppelt iedere toegelaten invoer aan precies één uitvoer.
+      </p>
+      <p>
+        Het gaat dus niet in de eerste plaats om een formule, maar om de
+        structuur van het verband.
+      </p>
+    </div>
 
 
     <h3>Invoer en uitvoer</h3>
 
-    <p>Denk aan een automaat. Je stopt er iets in en krijgt er iets uit.</p>
-
-    <p>Bij een wiskundige functie werkt het op dezelfde manier:</p>
+    <p>
+      Denk aan een automaat. Je stopt er iets in en krijgt er iets uit.
+      Bij een wiskundige functie kunnen we op dezelfde manier denken:
+    </p>
 
     <p class="formula">invoer → functie → uitvoer</p>
 
-    <p>De invoer is de waarde waarmee je begint. De functie bepaalt vervolgens welke uitvoer daarbij hoort.</p>
+    <p>
+      De invoer is de waarde waarmee we beginnen. De functie bepaalt vervolgens
+      welke uitvoer daarbij hoort.
+    </p>
 
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Neem bijvoorbeeld:
+    </p>
 
     <p class="formula">f(x) = 2x + 1</p>
 
-    <p>Als de invoer 3 is, berekenen we:</p>
+    <p>
+      Bij invoer 3 krijgen we:
+    </p>
 
-    <p class="formula">f(3) = 2 × 3 + 1 = 7</p>
+    <p class="formula">f(3) = 2 · 3 + 1 = 7</p>
 
-    <p>De invoer is dus 3 en de uitvoer is 7.</p>
+    <p>
+      De invoer is 3 en de uitvoer is 7.
+    </p>
+
+    <div class="callout">
+      <p><strong>Belangrijk:</strong></p>
+      <p>
+        De functie bepaalt welke uitvoer bij een bepaalde invoer hoort.
+        Dezelfde invoer mag niet twee verschillende uitvoerwaarden krijgen.
+      </p>
+    </div>
 
 
     <h3>Een functie als machine</h3>
 
     <div class="theory-image">
-      <img src="assets/functie-machine.svg" alt="Een functie als machine die elke toegelaten invoer naar precies één uitvoer stuurt.">
+      <img
+        src="assets/functie-machine.svg"
+        alt="Een functie als machine die iedere toegelaten invoer volgens een vaste regel naar precies één uitvoer stuurt."
+      >
     </div>
 
-    <p>Je kunt een functie voorstellen als een machine die volgens een vaste regel werkt.</p>
+    <p>
+      Je kunt een functie voorstellen als een denkbeeldige machine.
+      De machine voert steeds dezelfde regel uit.
+    </p>
 
-    <p>Stel dat de regel is: <strong>vermenigvuldig met 2 en tel daarna 1 op</strong>.</p>
-
-    <p>Dan gebeurt er bijvoorbeeld:</p>
+    <p>
+      Stel dat de regel is:
+      <strong>vermenigvuldig met 2 en tel daarna 1 op</strong>.
+    </p>
 
     <p class="formula">3 → × 2 → + 1 → 7</p>
 
-    <p>En:</p>
-
     <p class="formula">5 → × 2 → + 1 → 11</p>
 
-    <p>De functie verandert de invoer volgens één bepaalde regel in een uitvoer.</p>
+    <p>
+      De machine is geen echte machine. Het is een hulpmiddel om het
+      functiebegrip intuïtief te begrijpen.
+    </p>
 
-    <p>De machine is daarbij geen echte machine. Het is een manier om te denken over een wiskundige regel.</p>
-
-
-    <h3>Dezelfde invoer geeft dezelfde uitvoer</h3>
-
-    <p>Het belangrijkste kenmerk van een functie is dat een bepaalde invoer <strong>één unieke uitvoer</strong> heeft.</p>
-
-    <p>Als we bijvoorbeeld weten dat:</p>
-
-    <p class="formula">f(3) = 7</p>
-
-    <p>dan kan dezelfde functie niet tegelijkertijd geven:</p>
-
-    <p class="formula">f(3) = 9</p>
-
-    <p>Een functie moet voor dezelfde invoer steeds dezelfde uitvoer geven.</p>
-
-    <p>Dat betekent niet dat verschillende invoeren geen dezelfde uitvoer mogen hebben.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">f(x) = x²</p>
-
-    <p>geeft:</p>
-
-    <p class="formula">f(2) = 4</p>
-
-    <p>maar ook:</p>
-
-    <p class="formula">f(-2) = 4</p>
-
-    <p>Dat is geen probleem. Twee verschillende invoeren mogen dezelfde uitvoer hebben.</p>
-
-
-    <h3>Een functie beschrijven met een tabel</h3>
-
-    <p>Een functie kun je ook in een tabel voorstellen.</p>
-
-    <p>Neem opnieuw:</p>
+    <p>
+      De formule vat dezelfde regel compact samen:
+    </p>
 
     <p class="formula">f(x) = 2x + 1</p>
 
-    <p>We kunnen verschillende invoerwaarden kiezen en de bijbehorende uitvoer berekenen:</p>
+
+    <h3>Vier manieren om hetzelfde verband te beschrijven</h3>
+
+    <p>
+      Een functie kan op verschillende manieren worden weergegeven.
+    </p>
+
+    <ul>
+      <li>met woorden;</li>
+      <li>met een tabel;</li>
+      <li>met een grafiek;</li>
+      <li>met een formule.</li>
+    </ul>
+
+    <p>
+      Neem opnieuw:
+    </p>
+
+    <p class="formula">f(x) = 2x + 1</p>
+
+    <p>
+      <strong>In woorden:</strong> vermenigvuldig de invoer met 2 en tel 1 op.
+    </p>
+
+    <p>
+      <strong>In een tabel:</strong> we zetten invoerwaarden naast de
+      bijbehorende uitvoerwaarden.
+    </p>
 
     <table>
       <thead>
@@ -6622,237 +5756,260 @@ const MILESTONES_2 = [
       </tbody>
     </table>
 
-    <p>Elke rij bevat een invoer en de uitvoer die daarbij hoort.</p>
-
-    <p>Een tabel is daardoor een handige manier om een functie overzichtelijk te beschrijven.</p>
-
-
-    <h3>Een functie beschrijven met een grafiek</h3>
-
-    <p>We kunnen dezelfde tabel ook als punten in een assenstelsel voorstellen.</p>
-
-    <p>Bijvoorbeeld:</p>
+    <p>
+      <strong>In een grafiek:</strong> we stellen de koppelingen voor als
+      punten in een assenstelsel.
+    </p>
 
     <p class="formula">(0, 1), (1, 3), (2, 5), (3, 7)</p>
 
-    <p>Het eerste getal is de invoerwaarde en het tweede getal de uitvoerwaarde.</p>
-
-    <p>Een punt met coördinaten <span class="formula-inline">(2, 5)</span> betekent dus:</p>
-
-    <p class="formula">f(2) = 5</p>
-
-    <p>Een grafiek geeft zo een visuele voorstelling van het verband tussen invoer en uitvoer.</p>
-
-
-    <h3>Een functie beschrijven met een formule</h3>
-
-    <p>Een formule geeft de regel van de functie compact weer.</p>
-
-    <p>Bijvoorbeeld:</p>
+    <p>
+      <strong>Met een formule:</strong>
+    </p>
 
     <p class="formula">f(x) = 2x + 1</p>
 
-    <p>Deze formule vertelt ons precies wat er met de invoer gebeurt.</p>
+    <p>
+      Deze vier voorstellingen beschrijven hetzelfde verband.
+    </p>
 
-    <p>We nemen de invoer <span class="formula-inline">x</span>, vermenigvuldigen die met 2 en tellen er 1 bij op.</p>
-
-    <p>De formule bevat dus dezelfde informatie als de functie-machine, maar in een compacte wiskundige vorm.</p>
-
-
-    <h3>Drie manieren om hetzelfde verband te beschrijven</h3>
-
-    <p>Een functie kan op verschillende manieren worden weergegeven:</p>
-
-    <ul>
-      <li>met woorden;</li>
-      <li>met een tabel;</li>
-      <li>met een grafiek;</li>
-      <li>met een formule.</li>
-    </ul>
-
-    <p>Bijvoorbeeld de functie:</p>
-
-    <p class="formula">f(x) = 2x + 1</p>
-
-    <p>kan worden beschreven als:</p>
-
-    <p><strong>In woorden:</strong> vermenigvuldig de invoer met 2 en tel 1 op.</p>
-
-    <p><strong>In een tabel:</strong> verschillende invoerwaarden met hun uitvoerwaarden.</p>
-
-    <p><strong>In een grafiek:</strong> punten die het verband tussen x en f(x) voorstellen.</p>
-
-    <p><strong>Met een formule:</strong></p>
-
-    <p class="formula">f(x) = 2x + 1</p>
-
-    <p>Deze voorstellingen zijn geen verschillende functies. Ze beschrijven hetzelfde verband op verschillende manieren.</p>
+    <div class="callout">
+      <p><strong>Een belangrijk wiskundig idee:</strong></p>
+      <p>
+        We kunnen tussen verschillende voorstellingen van hetzelfde verband
+        bewegen: van woorden naar tabel, van tabel naar grafiek en van grafiek
+        naar formule.
+      </p>
+    </div>
 
 
     <h3>Functienotatie: f(x)</h3>
 
-    <p>We gebruiken vaak een speciale notatie voor functies.</p>
+    <p>
+      We gebruiken vaak de notatie:
+    </p>
 
-    <p>Bijvoorbeeld:</p>
+    <p class="formula">f(x)</p>
 
-    <p class="formula">f(x) = 3x + 2</p>
+    <p>
+      De letter <span class="formula-inline">f</span> is de naam van de
+      functie. De <span class="formula-inline">x</span> geeft aan welke
+      invoer we gebruiken.
+    </p>
 
-    <p>De letter <span class="formula-inline">f</span> is de naam van de functie.</p>
-
-    <p>De <span class="formula-inline">x</span> tussen haakjes geeft aan welke invoer we gebruiken.</p>
-
-    <p>De notatie:</p>
-
-    <p class="formula">f(5)</p>
-
-    <p>betekent dus: <strong>de uitvoer van functie f wanneer de invoer 5 is</strong>.</p>
-
-    <p>Als:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">f(x) = 3x + 2</p>
 
-    <p>dan is:</p>
+    <p>
+      betekent dat functie <span class="formula-inline">f</span> de invoer
+      volgens de regel <span class="formula-inline">3x + 2</span> omzet.
+    </p>
 
-    <p class="formula">f(5) = 3 × 5 + 2 = 17</p>
+    <p>
+      Voor invoer 5 krijgen we:
+    </p>
+
+    <p class="formula">f(5) = 3 · 5 + 2 = 17</p>
+
+    <div class="callout">
+      <p><strong>Let op:</strong></p>
+      <p>
+        <span class="formula-inline">f(x)</span> betekent niet automatisch
+        <span class="formula-inline">f · x</span>.
+        Het betekent: de uitvoer van functie <span class="formula-inline">f</span>
+        bij invoer <span class="formula-inline">x</span>.
+      </p>
+    </div>
 
 
-    <h3>Een waarde van een functie berekenen</h3>
+    <h3>Een functiewaarde berekenen</h3>
 
-    <p>Een functiewaarde berekenen betekent dat je een bepaalde invoer in de formule invult.</p>
+    <p>
+      Een functiewaarde berekenen betekent dat we een bepaalde invoer in de
+      functieregel invullen.
+    </p>
 
-    <p>Neem:</p>
+    <p>
+      Neem:
+    </p>
 
-    <p class="formula">f(x) = x² + 2</p>
+    <p class="formula">f(x) = x^{2} + 2</p>
 
-    <p>We willen <span class="formula-inline">f(4)</span> kennen.</p>
+    <p>
+      We willen <span class="formula-inline">f(4)</span> kennen.
+      We vervangen <span class="formula-inline">x</span> door 4:
+    </p>
 
-    <p>We vervangen x door 4:</p>
-
-    <p class="formula">f(4) = 4² + 2</p>
-
-    <p>Dus:</p>
+    <p class="formula">f(4) = 4^{2} + 2</p>
 
     <p class="formula">f(4) = 18</p>
 
-    <p>Het belangrijke idee is niet de notatie zelf, maar de betekenis:</p>
-
-    <p><strong>een bepaalde invoer wordt volgens de functieregel omgezet in een bepaalde uitvoer.</strong></p>
+    <p>
+      Het principe is eenvoudig:
+      <strong>kies een invoer, pas de functieregel toe en bereken de uitvoer.</strong>
+    </p>
 
 
     <h3>Een functie gebruiken om terug te rekenen</h3>
 
-    <p>Soms kennen we de uitvoer en willen we de bijbehorende invoer vinden.</p>
+    <p>
+      Soms kennen we de uitvoer en willen we de bijbehorende invoer vinden.
+    </p>
 
-    <p>Neem:</p>
+    <p>
+      Neem:
+    </p>
 
     <p class="formula">f(x) = 2x + 3</p>
 
-    <p>We weten dat de uitvoer 11 is.</p>
-
-    <p>Dan zoeken we de invoer waarvoor geldt:</p>
+    <p>
+      We weten dat de uitvoer 11 is. Dan zoeken we de invoer waarvoor:
+    </p>
 
     <p class="formula">2x + 3 = 11</p>
 
-    <p>Dit is een vergelijking. We lossen ze op:</p>
+    <p>
+      Dit is een vergelijking. Uit les 2.3 weten we hoe we die oplossen:
+    </p>
 
     <p class="formula">2x = 8</p>
 
     <p class="formula">x = 4</p>
 
-    <p>De invoer 4 geeft dus de uitvoer 11.</p>
+    <p>
+      De invoer 4 geeft dus uitvoer 11.
+    </p>
 
-    <p>Hier zien we een belangrijke verbinding met milestone 2.3: <strong>functies en vergelijkingen kunnen samen worden gebruikt om een onbekende te vinden.</strong></p>
-
-
-    <h4>Het verschil tussen een variabele en een functie</h4>
-
-    <p>De begrippen <strong>variabele</strong> en <strong>functie</strong> zijn niet hetzelfde.</p>
-
-    <p>Een variabele is een grootheid waarvan de waarde kan veranderen.</p>
-
-    <p>Een functie is een regel die waarden aan elkaar koppelt.</p>
-
-    <p>In:</p>
-
-    <p class="formula">f(x) = 2x + 1</p>
-
-    <p>is <span class="formula-inline">x</span> de invoerwaarde. De functie <span class="formula-inline">f</span> bepaalt welke uitvoer daarbij hoort.</p>
-
-    <p>De functie is dus niet hetzelfde als de letter x.</p>
+    <div class="callout">
+      <p><strong>Verbinding met les 2.3:</strong></p>
+      <p>
+        Een functie gebruiken gaat vooruit van invoer naar uitvoer.
+        Een vergelijking kan ons helpen de invoer terug te vinden wanneer
+        de uitvoer bekend is.
+      </p>
+    </div>
 
 
-    <h4>Domein: welke invoer is toegestaan?</h4>
+    <h3>Domein: welke invoer is toegestaan?</h3>
 
-    <p>Niet elke formule kan voor elke invoerwaarde worden gebruikt.</p>
+    <p>
+      Niet iedere formule kan voor iedere waarde van de invoer worden gebruikt.
+      De verzameling toegelaten invoerwaarden noemen we het
+      <strong>domein</strong>.
+    </p>
 
-    <p>Neem bijvoorbeeld:</p>
+    <p>
+      Neem:
+    </p>
 
     <p class="formula">f(x) = \\frac{1}{x}</p>
 
-    <p>Voor <span class="formula-inline">x = 2</span> gaat dat goed:</p>
+    <p>
+      Voor <span class="formula-inline">x = 2</span> gaat dat goed:
+    </p>
 
     <p class="formula">f(2) = \\frac{1}{2}</p>
 
-    <p>Maar voor <span class="formula-inline">x = 0</span> krijgen we:</p>
+    <p>
+      Maar voor <span class="formula-inline">x = 0</span> krijgen we:
+    </p>
 
     <p class="formula">f(0) = \\frac{1}{0}</p>
 
-    <p>Delen door nul is niet gedefinieerd.</p>
+    <p>
+      Delen door nul is niet gedefinieerd. Daarom mag 0 niet tot het domein
+      van deze functie behoren.
+    </p>
 
-    <p>De verzameling invoerwaarden waarvoor een functie geldig is, noemen we het <strong>domein</strong>.</p>
-
-    <p>In dit voorbeeld hoort 0 dus niet bij het domein.</p>
-
-
-    <h4>Bereik: welke uitvoer is mogelijk?</h4>
-
-    <p>Naast het domein kunnen we ook kijken naar de uitvoerwaarden die een functie kan produceren.</p>
-
-    <p>Neem:</p>
-
-    <p class="formula">f(x) = x²</p>
-
-    <p>Als x positief of negatief is, blijft de uitvoer steeds nul of positief:</p>
-
-    <p class="formula">0² = 0</p>
-
-    <p class="formula">2² = 4</p>
-
-    <p class="formula">(-2)² = 4</p>
-
-    <p>Een negatieve uitvoer is hier dus niet mogelijk.</p>
-
-    <p>De verzameling waarden die als uitvoer kunnen voorkomen, noemen we het <strong>bereik</strong> van de functie.</p>
-
-    <p>Het domein gaat dus over mogelijke <strong>invoer</strong>; het bereik over mogelijke <strong>uitvoer</strong>.</p>
+    <p>
+      Het domein hangt dus af van de formule én van de context waarin de
+      functie wordt gebruikt.
+    </p>
 
 
-    <h4>Niet elke relatie is een functie</h4>
+    <h3>Bereik: welke uitvoer is mogelijk?</h3>
 
-    <p>We kunnen twee grootheden op allerlei manieren met elkaar verbinden. Maar niet elke relatie is een functie.</p>
+    <p>
+      We kunnen ook kijken naar de uitvoerwaarden die een functie kan
+      produceren. Deze verzameling noemen we het <strong>bereik</strong>.
+    </p>
 
-    <p>Stel dat we aan een persoon meerdere telefoonnummers koppelen.</p>
+    <p>
+      Neem:
+    </p>
 
-    <p>Een persoon kan bijvoorbeeld zowel een privé- als een werknummer hebben.</p>
+    <p class="formula">f(x) = x^{2}</p>
 
-    <p>Dan kan één invoer meerdere uitvoerwaarden hebben.</p>
+    <p>
+      We krijgen bijvoorbeeld:
+    </p>
 
-    <p>Dat voldoet niet aan de definitie van een functie.</p>
+    <p class="formula">f(-2) = 4</p>
 
-    <p>Bij een functie moet iedere toegelaten invoerwaarde precies één uitvoerwaarde hebben.</p>
+    <p class="formula">f(0) = 0</p>
 
-    <p>Omgekeerd mogen verschillende invoerwaarden wel dezelfde uitvoer hebben.</p>
+    <p class="formula">f(2) = 4</p>
+
+    <p>
+      De uitvoer is hier nooit negatief.
+      Het bereik van deze functie over de reële getallen bestaat dus uit
+      nul en alle positieve getallen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Onthoud het onderscheid:</strong></p>
+      <p>
+        <strong>Domein</strong> = welke invoer mag erin?
+      </p>
+      <p>
+        <strong>Bereik</strong> = welke uitvoer kan eruit komen?
+      </p>
+    </div>
 
 
-    <h4>Hoe herken je een functie in een tabel?</h4>
+    <h3>Wanneer is een verband een functie?</h3>
 
-    <p>Bij een tabel kun je eenvoudig controleren of een relatie een functie is.</p>
+    <p>
+      Het beslissende criterium is:
+    </p>
 
-    <p>Kijk naar de invoerwaarden.</p>
+    <p>
+      <strong>Iedere toegelaten invoer heeft precies één uitvoer.</strong>
+    </p>
 
-    <p>Als dezelfde invoerwaarde twee verschillende uitvoerwaarden heeft, is de relatie geen functie.</p>
+    <p>
+      Verschillende invoerwaarden mogen wel dezelfde uitvoer hebben.
+    </p>
 
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Bij:
+    </p>
+
+    <p class="formula">f(x) = x^{2}</p>
+
+    <p>
+      geldt bijvoorbeeld:
+    </p>
+
+    <p class="formula">f(2) = 4</p>
+
+    <p class="formula">f(-2) = 4</p>
+
+    <p>
+      Dat is geen probleem. De twee verschillende invoerwaarden hebben
+      dezelfde uitvoer.
+    </p>
+
+    <p>
+      Wat niet mag, is dat één invoer twee verschillende uitvoerwaarden krijgt.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <table>
       <thead>
@@ -6877,2042 +6034,2328 @@ const MILESTONES_2 = [
       </tbody>
     </table>
 
-    <p>De invoer 2 heeft hier zowel uitvoer 5 als uitvoer 8.</p>
-
-    <p>Dit kan dus geen functie zijn.</p>
+    <p>
+      De invoer 2 wordt hier gekoppeld aan zowel 5 als 8.
+      Dit is daarom geen functie van <span class="formula-inline">x</span>.
+    </p>
 
 
     <h3>Hoe herken je een functie in een grafiek?</h3>
 
     <div class="theory-image">
-      <img src="assets/verticale-lijntest.svg" alt="Een grafiek waarbij een verticale lijn maximaal één snijpunt heeft.">
+      <img
+        src="assets/verticale-lijntest.svg"
+        alt="De verticale-lijntest: een verticale lijn mag een grafiek van een functie hoogstens één keer snijden."
+      >
     </div>
 
-    <p>Ook een grafiek kunnen we controleren.</p>
+    <p>
+      Ook een grafiek kunnen we controleren.
+    </p>
 
-    <p>Voor iedere invoerwaarde x mag er maximaal één uitvoerwaarde y zijn.</p>
+    <p>
+      Denk een verticale lijn door de grafiek.
+      Als die verticale lijn de grafiek op twee verschillende plaatsen snijdt,
+      hoort dezelfde invoerwaarde bij twee verschillende uitvoerwaarden.
+    </p>
 
-    <p>Je kunt dit zien door een verticale lijn door de grafiek te denken.</p>
+    <p>
+      Dan kan de grafiek geen functie van <span class="formula-inline">x</span>
+      voorstellen.
+    </p>
 
-    <p>Als zo'n verticale lijn de grafiek op twee verschillende plaatsen snijdt, hoort dezelfde x-waarde bij twee verschillende y-waarden.</p>
+    <p>
+      Snijdt iedere verticale lijn de grafiek hoogstens één keer,
+      dan kan de grafiek wel een functie van <span class="formula-inline">x</span>
+      voorstellen.
+    </p>
 
-    <p>Dan stelt de grafiek geen functie van x voor.</p>
-
-    <p>Snijdt iedere verticale lijn de grafiek hoogstens één keer, dan kan de grafiek wel een functie van x voorstellen.</p>
-
-
-    <h4>Een functie kan stijgen en dalen</h4>
-
-    <p>Een functie hoeft niet altijd groter te worden wanneer de invoer groter wordt.</p>
-
-    <p>Neem bijvoorbeeld:</p>
-
-    <p class="formula">f(x) = -x</p>
-
-    <p>Als x groter wordt, wordt f(x) kleiner:</p>
-
-    <p class="formula">f(1) = -1</p>
-
-    <p class="formula">f(2) = -2</p>
-
-    <p class="formula">f(3) = -3</p>
-
-    <p>Een functie kan dus stijgen, dalen of op verschillende plaatsen verschillend gedrag vertonen.</p>
-
-    <p>Dit soort eigenschappen kunnen we later uit de grafiek en de formule aflezen.</p>
+    <div class="callout">
+      <p><strong>Verticale-lijntest:</strong></p>
+      <p>
+        Een grafiek stelt een functie van <span class="formula-inline">x</span>
+        voor als geen enkele verticale lijn de grafiek meer dan één keer snijdt.
+      </p>
+    </div>
 
 
-    <h4>Een constante functie</h4>
+    <h3>Functies kunnen verschillende vormen hebben</h3>
 
-    <p>Soms verandert de uitvoer helemaal niet wanneer de invoer verandert.</p>
+    <p>
+      Het woord <strong>functie</strong> vertelt ons nog niet welke formule
+      wordt gebruikt.
+    </p>
 
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">f(x) = 5</p>
-
-    <p>Dan geldt:</p>
-
-    <p class="formula">f(1) = 5</p>
-
-    <p class="formula">f(10) = 5</p>
-
-    <p class="formula">f(-3) = 5</p>
-
-    <p>Welke invoer we ook kiezen, de uitvoer blijft 5.</p>
-
-    <p>Zo'n functie noemen we een <strong>constante functie</strong>.</p>
-
-    <p>De invoer mag veranderen, terwijl de uitvoer gelijk blijft.</p>
-
-
-    <h4>Een verband hoeft niet lineair te zijn</h4>
-
-    <p>Een functie hoeft geen rechte lijn als grafiek te hebben.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">f(x) = x²</p>
-
-    <p>is ook een functie.</p>
-
-    <p>De uitvoer wordt hier bepaald door het kwadraat van de invoer.</p>
-
-    <p>We krijgen bijvoorbeeld:</p>
-
-    <p class="formula">f(-2) = 4</p>
-
-    <p class="formula">f(-1) = 1</p>
-
-    <p class="formula">f(0) = 0</p>
-
-    <p class="formula">f(1) = 1</p>
-
-    <p class="formula">f(2) = 4</p>
-
-    <p>De grafiek heeft daardoor een andere vorm dan een rechte.</p>
-
-    <p>In de volgende milestone zullen we lineaire en kwadratische functies systematisch onderzoeken.</p>
-
-
-    <h4>Een functie kan verschillende soorten verbanden beschrijven</h4>
-
-    <p>Het begrip functie zegt op zichzelf nog niet <em>welke</em> rekenregel wordt gebruikt.</p>
-
-    <p>Een functie kan bijvoorbeeld een vast bedrag toevoegen:</p>
+    <p>
+      Een functie kan bijvoorbeeld een vast bedrag toevoegen:
+    </p>
 
     <p class="formula">f(x) = x + 5</p>
 
-    <p>Ze kan een hoeveelheid verdubbelen:</p>
+    <p>
+      Een hoeveelheid verdubbelen:
+    </p>
 
     <p class="formula">f(x) = 2x</p>
 
-    <p>Ze kan een kwadraat nemen:</p>
+    <p>
+      Of het kwadraat nemen:
+    </p>
 
-    <p class="formula">f(x) = x²</p>
+    <p class="formula">f(x) = x^{2}</p>
 
-    <p>Of ze kan een veel ingewikkelder verband beschrijven.</p>
+    <p>
+      De grafiek hoeft dus niet altijd een rechte te zijn.
+      Een functie kan stijgen, dalen of van gedrag veranderen.
+    </p>
 
-    <p>Het woord <strong>functie</strong> vertelt ons vooral iets over de structuur:</p>
+    <p>
+      In de volgende milestone onderzoeken we twee belangrijke vormen
+      systematisch: <strong>lineaire en kwadratische functies</strong>.
+    </p>
 
-    <p><strong>elke toegelaten invoer heeft precies één uitvoer.</strong></p>
 
+    <h3>Functies uit de werkelijkheid</h3>
 
-    <h4>Functies uit de werkelijkheid</h4>
+    <p>
+      Functies ontstaan vanzelf wanneer één grootheid afhangt van een andere.
+    </p>
 
-    <p>Functies zijn niet alleen abstracte formules.</p>
-
-    <p>Ze ontstaan vanzelf wanneer één grootheid afhangt van een andere.</p>
-
-    <p>Voorbeelden zijn:</p>
+    <p>Bijvoorbeeld:</p>
 
     <ul>
       <li>de prijs als functie van het aantal producten;</li>
       <li>de afgelegde afstand als functie van de tijd;</li>
       <li>de temperatuur als functie van het tijdstip;</li>
-      <li>het gewicht als functie van de hoeveelheid materiaal;</li>
-      <li>de oppervlakte van een vierkant als functie van zijn zijde.</li>
+      <li>de oppervlakte als functie van de zijde van een vierkant.</li>
     </ul>
 
-    <p>In elk geval vragen we ons af:</p>
-
-    <p><strong>Als ik de invoer ken, kan ik dan volgens een bepaalde regel de uitvoer bepalen?</strong></p>
-
-    <p>Als iedere toegelaten invoer precies één uitvoer heeft, kunnen we het verband als een functie beschrijven.</p>
-
-
-    <h4>Een volledig voorbeeld: afstand en tijd</h4>
-
-    <p>Stel dat een fietser met een constante snelheid van 20 km/u rijdt.</p>
-
-    <p>De afgelegde afstand hangt dan af van de tijd.</p>
-
-    <p>Na 1 uur is de afstand:</p>
-
-    <p class="formula">20 km</p>
-
-    <p>Na 2 uur:</p>
-
-    <p class="formula">40 km</p>
-
-    <p>Na 3 uur:</p>
-
-    <p class="formula">60 km</p>
-
-    <p>We kunnen dit verband schrijven als:</p>
+    <p>
+      Stel dat een fietser met constante snelheid van 20 km/u rijdt.
+      De afstand hangt dan af van de tijd:
+    </p>
 
     <p class="formula">d(t) = 20t</p>
 
-    <p>Hierbij is:</p>
+    <p>
+      Hier is <span class="formula-inline">t</span> de tijd in uren en
+      <span class="formula-inline">d(t)</span> de afstand in kilometer.
+    </p>
 
-    <ul>
-      <li><span class="formula-inline">t</span> de tijd in uren;</li>
-      <li><span class="formula-inline">d(t)</span> de afstand in kilometer.</li>
-    </ul>
+    <p>
+      Na 2,5 uur:
+    </p>
 
-    <p>De functie vertelt ons dus hoeveel kilometer de fietser na een bepaalde tijd heeft afgelegd.</p>
+    <p class="formula">d(2,5) = 20 · 2,5 = 50</p>
 
-    <p>Na 2,5 uur:</p>
+    <p>
+      De functie vertelt dus hoeveel kilometer de fietser na een bepaalde
+      tijd heeft afgelegd.
+    </p>
 
-    <p class="formula">d(2,5) = 20 × 2,5 = 50</p>
+    <p>
+      We kunnen hetzelfde verband weergeven met een tabel, een grafiek of
+      de formule <span class="formula-inline">d(t) = 20t</span>.
+    </p>
 
-    <p>De fietser heeft dan 50 km afgelegd.</p>
-
-
-    <h4>Van tabel naar grafiek en formule</h4>
-
-    <p>We kunnen hetzelfde verband vanuit verschillende voorstellingen bekijken.</p>
-
-    <p>Voor de fietser krijgen we bijvoorbeeld:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>t (uur)</th>
-          <th>d (km)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>0</td>
-          <td>0</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>20</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>40</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>60</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Deze waarden kunnen we als punten in een assenstelsel tekenen.</p>
-
-    <p>De formule is:</p>
-
-    <p class="formula">d(t) = 20t</p>
-
-    <p>De tabel, de grafiek en de formule beschrijven dus hetzelfde fysieke verband.</p>
-
-    <p>Dit is een belangrijk idee: <strong>we kunnen tussen verschillende representaties van hetzelfde verband bewegen.</strong></p>
+    <div class="callout">
+      <p><strong>Functies beschrijven afhankelijkheden.</strong></p>
+      <p>
+        Ze laten ons niet alleen berekenen, maar ook onderzoeken hoe
+        grootheden met elkaar samenhangen.
+      </p>
+    </div>
 
 
-    <h4>Functies vergelijken</h4>
+    <h3>Een vaste werkwijze</h3>
 
-    <p>Wanneer we functies vergelijken, kunnen we verschillende vragen stellen.</p>
-
-    <ul>
-      <li>Welke functie geeft de grootste uitvoer?</li>
-      <li>Welke functie stijgt sneller?</li>
-      <li>Waar hebben twee functies dezelfde uitvoer?</li>
-      <li>Voor welke invoer is een functie gedefinieerd?</li>
-      <li>Welke uitvoerwaarden zijn mogelijk?</li>
-    </ul>
-
-    <p>Daarbij kunnen we een tabel, grafiek of formule gebruiken.</p>
-
-    <p>Een functie is dus niet alleen iets waarmee je een getal uitrekent. Het is een manier om een <strong>afhankelijkheid</strong> te onderzoeken.</p>
-
-
-    <h4>Veelgemaakte fouten</h4>
-
-    <p><strong>Fout 1: denken dat een functie altijd een formule is.</strong></p>
-
-    <p>Een functie kan ook met woorden, een tabel of een grafiek worden beschreven.</p>
-
-    <p><strong>Fout 2: denken dat verschillende invoeren nooit dezelfde uitvoer mogen hebben.</strong></p>
-
-    <p>Dat mag wel. Bij <span class="formula-inline">f(x) = x²</span> geven 2 en −2 allebei de uitvoer 4.</p>
-
-    <p><strong>Fout 3: denken dat iedere relatie een functie is.</strong></p>
-
-    <p>Bij een functie mag één invoer niet naar verschillende uitvoerwaarden leiden.</p>
-
-    <p><strong>Fout 4: f(x) zien als vermenigvuldiging.</strong></p>
-
-    <p>De notatie <span class="formula-inline">f(x)</span> betekent niet automatisch f × x. Ze betekent: de uitvoer van functie f bij invoer x.</p>
-
-    <p><strong>Fout 5: domein en bereik verwarren.</strong></p>
-
-    <p>Het domein gaat over mogelijke invoerwaarden. Het bereik gaat over mogelijke uitvoerwaarden.</p>
-
-
-    <h4>Een vaste werkwijze</h4>
-
-    <p>Wanneer je een functie tegenkomt, kun je deze vragen in volgorde stellen:</p>
+    <p>
+      Wanneer je een functie tegenkomt, kun je steeds dezelfde vragen stellen:
+    </p>
 
     <ol>
       <li>Wat is de invoer?</li>
       <li>Wat is de uitvoer?</li>
       <li>Welke regel verbindt beide?</li>
-      <li>Is iedere toegelaten invoer gekoppeld aan precies één uitvoer?</li>
-      <li>Welke waarden behoren tot het domein?</li>
-      <li>Welke waarden kunnen tot het bereik behoren?</li>
-      <li>Kan ik het verband weergeven met een tabel, grafiek of formule?</li>
+      <li>Heeft iedere toegelaten invoer precies één uitvoer?</li>
+      <li>Wat is het domein?</li>
+      <li>Welke uitvoerwaarden behoren tot het bereik?</li>
+      <li>Kan ik het verband weergeven met woorden, een tabel, een grafiek of een formule?</li>
     </ol>
 
-    <p>Zo leer je niet alleen een formule gebruiken, maar ook begrijpen welk verband die formule beschrijft.</p>
+    <p>
+      Zo leer je niet alleen een formule gebruiken, maar vooral begrijpen
+      <strong>welk verband de formule beschrijft</strong>.
+    </p>
 
 
-    <h4>Wat hebben we eigenlijk geleerd?</h4>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
-    <p>Een <strong>functie</strong> beschrijft een afhankelijkheid tussen grootheden.</p>
-
-    <p>Je kunt een functie zien als een regel die een invoer omzet in een uitvoer:</p>
+    <p>
+      Een <strong>functie</strong> beschrijft een afhankelijkheid tussen
+      grootheden.
+    </p>
 
     <p class="formula">invoer → functie → uitvoer</p>
 
-    <p>Dezelfde invoer moet steeds dezelfde uitvoer geven. Verschillende invoeren mogen wel dezelfde uitvoer hebben.</p>
+    <p>
+      Iedere toegelaten invoer heeft precies één uitvoer.
+      Verschillende invoeren mogen wel dezelfde uitvoer hebben.
+    </p>
 
-    <p>Een functie kan worden weergegeven met woorden, een tabel, een grafiek of een formule.</p>
+    <p>
+      Een functie kan worden beschreven met woorden, een tabel, een grafiek
+      of een formule.
+    </p>
 
-    <p>Met de notatie:</p>
+    <p>
+      Met de notatie:
+    </p>
 
     <p class="formula">f(x)</p>
 
-    <p>geven we aan welke uitvoer de functie f geeft bij invoer x.</p>
+    <p>
+      geven we aan welke uitvoer functie <span class="formula-inline">f</span>
+      geeft bij invoer <span class="formula-inline">x</span>.
+    </p>
 
-    <p>Het <strong>domein</strong> beschrijft welke invoerwaarden toegestaan zijn. Het <strong>bereik</strong> beschrijft welke uitvoerwaarden mogelijk zijn.</p>
-
-    <p>Vanaf hier kunnen we verschillende soorten functies onderzoeken. In de volgende milestone bekijken we eerst de twee belangrijke algebraïsche vormen die we al eerder zijn tegengekomen: <strong>lineaire en kwadratische functies</strong>.</p>
-
+    <p>
+      Het <strong>domein</strong> beschrijft welke invoerwaarden zijn toegestaan.
+      Het <strong>bereik</strong> beschrijft welke uitvoerwaarden mogelijk zijn.
+    </p>
 
     <div class="callout">
-      <strong>Inzicht:</strong> Een functie is geen specifieke formule. Het is een structuur: iedere toegelaten invoer krijgt precies één uitvoer. Daardoor kunnen we afhankelijkheden uit de werkelijkheid beschrijven, berekenen, tekenen en vergelijken.
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een functie is geen specifieke formule. Het is een structuur:
+        iedere toegelaten invoer krijgt precies één uitvoer.
+      </p>
+      <p>
+        Daardoor kunnen we afhankelijkheden uit de werkelijkheid beschrijven,
+        berekenen, tekenen en vergelijken.
+      </p>
     </div>
   `
 },
 {
   id: "2.12",
   title: "Lineaire & kwadratische functies",
-  goal: "Hoe zien algebraïsche relaties eruit?",
-  theory:/*html*/ `
+  goal: "Hoe herkennen we lineaire en kwadratische verbanden?",
+  theory: /* html */`
+    <h2>Lineaire & kwadratische functies</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>lineaire functies herkennen en beschrijven met f(x) = ax + b</li>
-      <li>de betekenis van a en b begrijpen</li>
-      <li>lineaire functies tekenen en aflezen</li>
-      <li>een lineaire formule bepalen uit gegevens</li>
-      <li>begrijpen wanneer een verband niet lineair is</li>
-      <li>kwadratische functies en parabolen herkennen</li>
-      <li>de betekenis van a, b en c in een kwadratische functie begrijpen</li>
-      <li>het verband leggen tussen kwadratische functies en kwadratische vergelijkingen</li>
+      <li>Hoe herkennen we een lineaire functie?</li>
+      <li>Wat vertellen de helling en het snijpunt met de y-as?</li>
+      <li>Hoe tekenen we een lineaire functie?</li>
+      <li>Hoe bepalen we een formule uit punten of een helling?</li>
+      <li>Wanneer is een verband evenredig?</li>
+      <li>Hoe herkennen we een kwadratische functie?</li>
+      <li>Hoe beïnvloeden de coëfficiënten de vorm van een parabool?</li>
+      <li>Wat is het verband tussen nulpunten van een functie en kwadratische vergelijkingen?</li>
     </ul>
 
+    <p>
+      In les 2.11 leerden we dat een functie een verband beschrijft tussen
+      invoer en uitvoer. Nu onderzoeken we twee belangrijke soorten functies:
+      <strong>lineaire</strong> en <strong>kwadratische</strong> functies.
+    </p>
+
+    <p>
+      We zullen daarbij voortdurend heen en weer bewegen tussen drie
+      perspectieven:
+    </p>
+
+    <p class="formula">formule ↔ grafiek ↔ betekenis</p>
+
     <div class="callout">
-      <strong>Kernidee:</strong> Een lineaire functie beschrijft een constante verandering; een kwadratische functie beschrijft een verband waarvan de verandering zelf verandert. Grafieken maken dat verschil zichtbaar.
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De formule van een functie vertelt niet alleen hoe je een uitvoer
+        berekent. Ze bepaalt ook het gedrag en de vorm van de grafiek.
+      </p>
+      <p>
+        Bij een lineaire functie is de verandering constant. Bij een
+        kwadratische functie verandert die verandering zelf.
+      </p>
     </div>
+
 
     <h3>Van functie naar grafiek</h3>
 
-    <p>In de vorige milestone leerden we dat een functie een verband beschrijft tussen een invoer en een uitvoer.</p>
-
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Neem bijvoorbeeld de functie:
+    </p>
 
     <p class="formula">f(x) = 2x + 1</p>
 
-    <p>Voor iedere waarde van x kunnen we de bijbehorende waarde van f(x) berekenen.</p>
+    <p>
+      Voor iedere invoerwaarde kunnen we een uitvoer berekenen.
+      Zo krijgen we bijvoorbeeld:
+    </p>
 
-    <p>Maar een functie kunnen we niet alleen berekenen. We kunnen haar ook <strong>tekenen</strong>.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>x</th>
+          <th>f(x)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>7</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <p>De waarden van x en f(x) vormen samen punten in een assenstelsel.</p>
+    <p>
+      De koppels vormen punten in een assenstelsel:
+    </p>
 
-    <p>Zo ontstaat een grafiek die het gedrag van de functie zichtbaar maakt.</p>
+    <p class="formula">(0, 1), (1, 3), (2, 5), (3, 7)</p>
 
-    <p>In deze milestone bekijken we twee belangrijke soorten functies:</p>
-
-    <ul>
-      <li>lineaire functies;</li>
-      <li>kwadratische functies.</li>
-    </ul>
-
-    <p>We zullen zien dat de vorm van de formule rechtstreeks verbonden is met de vorm van de grafiek.</p>
+    <p>
+      Wanneer we die punten tekenen, zien we een rechte.
+      De grafiek maakt dus zichtbaar wat de formule beschrijft.
+    </p>
 
 
     <h3>Wat is een lineaire functie?</h3>
 
-    <p>Een lineaire functie heeft de vorm:</p>
+    <p>
+      Een lineaire functie heeft de vorm:
+    </p>
 
     <p class="formula">f(x) = ax + b</p>
 
     <div data-widget="lineGraph"></div>
 
-    <p>Hierbij zijn <span class="formula-inline">a</span> en <span class="formula-inline">b</span> vaste getallen.</p>
+    <p>
+      Hierbij zijn <span class="formula-inline">a</span> en
+      <span class="formula-inline">b</span> vaste getallen.
+    </p>
 
-    <p>De letter x is de invoer en f(x) is de uitvoer.</p>
+    <p>
+      Het belangrijkste kenmerk is dat de uitvoer met een
+      <strong>constant bedrag</strong> verandert wanneer de invoer telkens
+      met dezelfde hoeveelheid verandert.
+    </p>
 
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">f(x) = 3x + 2</p>
-
-    <p>Als x met 1 toeneemt, neemt de uitvoer steeds met 3 toe.</p>
-
-    <p>Dat constante gedrag is het belangrijkste kenmerk van een lineaire functie.</p>
-
-
-    <h3>Een constante verandering</h3>
-
-    <p>Kijk naar de functie:</p>
+    <p>
+      Neem:
+    </p>
 
     <p class="formula">f(x) = 4x + 1</p>
 
-    <p>We berekenen enkele waarden:</p>
+    <p>
+      Dan krijgen we:
+    </p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>x</th>
-          <th>f(x)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>0</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>9</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>13</td>
-        </tr>
-      </tbody>
-    </table>
+    <p class="formula">1, 5, 9, 13, 17, ...</p>
 
-    <p>Wanneer x telkens 1 groter wordt, wordt f(x) telkens 4 groter.</p>
+    <p>
+      Bij iedere stap van 1 in <span class="formula-inline">x</span> komt er
+      4 bij.
+    </p>
 
-    <p>De verandering is dus constant.</p>
-
-    <p>Dat is precies waarom de grafiek een rechte lijn wordt.</p>
+    <p>
+      De verandering is dus constant. Daarom is de grafiek een rechte.
+    </p>
 
 
-    <h3>De vorm f(x) = ax + b</h3>
+    <h3>De helling: wat betekent a?</h3>
 
-    <div class="callout"><strong>Notatie:</strong> De <span class="formula-inline">a</span> hier is de <span class="formula-inline">m</span> uit les 2.8: beide letters geven de helling van de rechte aan.</div>
-
-    <div class="callout"><strong>Notatie:</strong> in 2.8 gebruikten we <span class="formula-inline">m</span> voor de helling van een rechte. In functies gebruiken we hier <span class="formula-inline">a</span> voor dezelfde rol. Dus <span class="formula-inline">a = m</span> wanneer we hetzelfde verband beschrijven.</div>
-
-    <p>De algemene vorm van een lineaire functie is:</p>
+    <p>
+      In:
+    </p>
 
     <p class="formula">f(x) = ax + b</p>
 
-    <p>De twee getallen hebben elk een eigen betekenis.</p>
+    <p>
+      bepaalt <span class="formula-inline">a</span> de
+      <strong>helling</strong> van de rechte.
+    </p>
 
-    <p><span class="formula-inline">a</span> bepaalt hoe sterk de functie verandert wanneer x verandert.</p>
+    <p>
+      Het getal <span class="formula-inline">a</span> vertelt hoeveel de
+      uitvoer verandert wanneer <span class="formula-inline">x</span>
+      met 1 toeneemt.
+    </p>
 
-    <p><span class="formula-inline">b</span> bepaalt waar de grafiek de y-as snijdt.</p>
-
-    <p>De formule bevat dus meteen informatie over de grafiek.</p>
-
-
-    <h3>Wat betekent a?</h3>
-
-    <p>Het getal <span class="formula-inline">a</span> noemen we de <strong>helling</strong> of <strong>richtingscoëfficiënt</strong>.</p>
-
-    <p>Het vertelt hoeveel de uitvoer verandert wanneer de invoer met 1 toeneemt.</p>
-
-    <p>Neem:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">f(x) = 3x + 2</p>
 
-    <p>Als x met 1 toeneemt, neemt f(x) met 3 toe.</p>
+    <p>
+      Wanneer <span class="formula-inline">x</span> met 1 toeneemt,
+      neemt de uitvoer met 3 toe.
+    </p>
 
-    <p>Bij:</p>
+    <p>
+      Bij:
+    </p>
 
     <p class="formula">f(x) = -2x + 5</p>
 
-    <p>daalt de uitvoer met 2 wanneer x met 1 toeneemt.</p>
+    <p>
+      daalt de uitvoer met 2 wanneer <span class="formula-inline">x</span>
+      met 1 toeneemt.
+    </p>
 
-    <p>De helling kan dus positief, negatief of nul zijn.</p>
+    <p>
+      De helling kan dus positief, negatief of nul zijn.
+    </p>
 
-
-    <h3>De helling herkennen</h3>
-
-    <p>In:</p>
-
-    <p class="formula">f(x) = 5x - 7</p>
-
-    <p>is de helling 5.</p>
-
-    <p>Dat betekent:</p>
-
-    <p class="formula">Δy = 5\\ wanneer\\ Δx = 1</p>
-
-    <p>In:</p>
-
-    <p class="formula">f(x) = -0,5x + 4</p>
-
-    <p>is de helling −0,5.</p>
-
-    <p>Wanneer x met 1 toeneemt, daalt de uitvoer dus met 0,5.</p>
-
-    <p>Een grotere absolute waarde van de helling betekent een steilere rechte.</p>
+    <div class="callout">
+      <p><strong>Notatie:</strong></p>
+      <p>
+        In les 2.8 gebruikten we <span class="formula-inline">m</span>
+        voor de helling van een rechte.
+        Hier gebruiken we <span class="formula-inline">a</span> voor dezelfde
+        rol:
+      </p>
+      <p class="formula">a = m</p>
+      <p>
+        Het gaat dus om hetzelfde wiskundige begrip, maar in een andere
+        context gebruiken we een andere letter.
+      </p>
+    </div>
 
 
-    <h3>Wat betekent b?</h3>
+    <h3>Het snijpunt met de y-as: wat betekent b?</h3>
 
-    <p>In:</p>
+    <p>
+      In:
+    </p>
 
     <p class="formula">f(x) = ax + b</p>
 
-    <p>is <span class="formula-inline">b</span> de uitvoer wanneer x gelijk is aan nul.</p>
+    <p>
+      bepaalt <span class="formula-inline">b</span> de verticale positie
+      van de rechte.
+    </p>
 
-    <p>We vullen x = 0 in:</p>
+    <p>
+      Om te weten waar de grafiek de y-as snijdt, nemen we:
+    </p>
 
-    <p class="formula">f(0) = a × 0 + b = b</p>
+    <p class="formula">x = 0</p>
 
-    <p>Daarom snijdt de grafiek de y-as in het punt:</p>
+    <p>
+      Dan krijgen we:
+    </p>
+
+    <p class="formula">f(0) = a · 0 + b = b</p>
+
+    <p>
+      Het snijpunt met de y-as is dus:
+    </p>
 
     <p class="formula">(0, b)</p>
 
-    <p>Het getal b bepaalt dus de verticale positie van de rechte.</p>
-
-
-    <h3>Het snijpunt met de y-as</h3>
-
-    <p>Neem:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">f(x) = 2x + 5</p>
 
-    <p>Omdat:</p>
-
-    <p class="formula">f(0) = 5</p>
-
-    <p>gaat de grafiek door:</p>
+    <p>
+      heeft als y-snijpunt:
+    </p>
 
     <p class="formula">(0, 5)</p>
 
-    <p>We hoeven dus maar één ding te doen om het snijpunt met de y-as te vinden: x gelijk aan nul nemen.</p>
+    <p>
+      De twee parameters hebben dus een verschillende rol:
+    </p>
 
-    <p>Dit is een voorbeeld van hoe een algebraïsche formule rechtstreeks geometrische informatie bevat.</p>
+    <ul>
+      <li><strong>a</strong> bepaalt de helling;</li>
+      <li><strong>b</strong> bepaalt het snijpunt met de y-as.</li>
+    </ul>
 
 
     <h3>Een lineaire functie tekenen</h3>
 
-    <p>Neem:</p>
+    <p>
+      Neem:
+    </p>
 
     <p class="formula">f(x) = 2x + 1</p>
 
-    <p>We weten onmiddellijk dat de grafiek door:</p>
+    <p>
+      Uit de formule lezen we onmiddellijk:
+    </p>
+
+    <p class="formula">a = 2</p>
+
+    <p class="formula">b = 1</p>
+
+    <p>
+      De grafiek gaat dus door:
+    </p>
 
     <p class="formula">(0, 1)</p>
 
-    <p>gaat.</p>
+    <p>
+      De helling is 2. Wanneer we 1 naar rechts gaan, gaan we 2 omhoog.
+    </p>
 
-    <p>De helling is 2.</p>
-
-    <p>Dat betekent dat we vanaf dit punt:</p>
-
-    <ul>
-      <li>1 naar rechts gaan;</li>
-      <li>2 omhoog gaan.</li>
-    </ul>
-
-    <p>We komen dan in:</p>
+    <p>
+      Vanuit <span class="formula-inline">(0, 1)</span> krijgen we:
+    </p>
 
     <p class="formula">(1, 3)</p>
 
-    <p>Vanaf daar kunnen we opnieuw 1 naar rechts en 2 omhoog gaan.</p>
-
-    <p>Zo krijgen we:</p>
+    <p>
+      en vervolgens:
+    </p>
 
     <p class="formula">(2, 5)</p>
 
-    <p>Alle punten liggen op dezelfde rechte.</p>
+    <p>
+      Door deze punten te verbinden ontstaat de rechte.
+    </p>
+
+    <div class="callout">
+      <p><strong>Een rechte tekenen uit f(x) = ax + b:</strong></p>
+      <ol>
+        <li>zet het punt <span class="formula-inline">(0, b)</span> op de y-as;</li>
+        <li>gebruik de helling <span class="formula-inline">a</span> om een tweede punt te vinden;</li>
+        <li>trek de rechte door de punten.</li>
+      </ol>
+    </div>
 
 
     <h3>Een formule vinden uit twee punten</h3>
 
-    <p>Soms krijgen we geen formule, maar wel twee punten van een rechte.</p>
+    <p>
+      Soms kennen we de formule niet, maar wel twee punten van een rechte.
+    </p>
 
-    <p>Stel dat de rechte door:</p>
+    <p>
+      Stel dat de rechte door:
+    </p>
 
     <p class="formula">(1, 3)</p>
 
-    <p>en:</p>
+    <p>
+      en:
+    </p>
 
     <p class="formula">(4, 9)</p>
 
-    <p>gaat.</p>
+    <p>
+      gaat.
+    </p>
 
-    <p>De helling is de verandering in y gedeeld door de verandering in x:</p>
+    <p>
+      Eerst bepalen we de helling:
+    </p>
 
-    <p class="formula">a = \\frac{9 - 3}{4 - 1} = 2</p>
+    <p class="formula">
+      a = \\frac{9 - 3}{4 - 1} = 2
+    </p>
 
-    <p>De functie heeft dus de vorm:</p>
+    <p>
+      De functie heeft dus de vorm:
+    </p>
 
     <p class="formula">f(x) = 2x + b</p>
 
-    <p>We gebruiken één van de punten om b te vinden.</p>
+    <p>
+      We gebruiken vervolgens één van de punten.
+      Voor <span class="formula-inline">(1, 3)</span> geldt:
+    </p>
 
-    <p>Voor het punt (1, 3) geldt:</p>
+    <p class="formula">3 = 2 · 1 + b</p>
 
-    <p class="formula">3 = 2 × 1 + b</p>
-
-    <p>Dus:</p>
+    <p>
+      Dus:
+    </p>
 
     <p class="formula">b = 1</p>
 
-    <p>De functie is:</p>
+    <p>
+      De formule is:
+    </p>
 
     <p class="formula">f(x) = 2x + 1</p>
+
+    <div class="callout">
+      <p><strong>Vaste aanpak:</strong></p>
+      <p>
+        Eerst de helling bepalen, daarna het y-snijpunt.
+      </p>
+    </div>
 
 
     <h3>Een formule vinden uit een punt en een helling</h3>
 
-    <p>Als we de helling kennen en één punt van de rechte kennen, kunnen we ook de formule bepalen.</p>
+    <p>
+      Als we de helling en één punt kennen, kunnen we dezelfde redenering
+      gebruiken.
+    </p>
 
-    <p>Stel:</p>
+    <p>
+      Stel:
+    </p>
 
     <p class="formula">a = 3</p>
 
-    <p>en de rechte gaat door:</p>
+    <p>
+      en de rechte gaat door:
+    </p>
 
     <p class="formula">(2, 7)</p>
 
-    <p>We beginnen met:</p>
+    <p>
+      We weten dan:
+    </p>
 
     <p class="formula">f(x) = 3x + b</p>
 
-    <p>Omdat het punt (2, 7) op de rechte ligt, moet gelden:</p>
+    <p>
+      Omdat het punt op de rechte ligt:
+    </p>
 
-    <p class="formula">7 = 3 × 2 + b</p>
+    <p class="formula">7 = 3 · 2 + b</p>
 
-    <p>Dus:</p>
+    <p>
+      Dus:
+    </p>
 
     <p class="formula">b = 1</p>
 
-    <p>De formule is:</p>
+    <p>
+      en:
+    </p>
 
     <p class="formula">f(x) = 3x + 1</p>
 
 
-    <h3>Evenredige verbanden als bijzonder geval</h3>
+    <h3>Evenredige verbanden</h3>
 
-    <p>Een evenredig verband heeft de vorm:</p>
-
-    <p class="formula">f(x) = ax</p>
-
-    <p>Dit is een lineaire functie waarbij:</p>
+    <p>
+      Een bijzonder geval van een lineaire functie ontstaat wanneer:
+    </p>
 
     <p class="formula">b = 0</p>
 
-    <p>De grafiek gaat dan altijd door de oorsprong:</p>
+    <p>
+      Dan krijgen we:
+    </p>
+
+    <p class="formula">f(x) = ax</p>
+
+    <p>
+      De grafiek gaat door de oorsprong:
+    </p>
 
     <p class="formula">(0, 0)</p>
 
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Dit noemen we een <strong>rechtstreeks evenredig verband</strong>.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">f(x) = 4x</p>
 
-    <p>Een verdubbeling van x veroorzaakt dan ook een verdubbeling van f(x).</p>
+    <p>
+      Wanneer <span class="formula-inline">x</span> verdubbelt,
+      verdubbelt ook de uitvoer.
+    </p>
 
-    <p>Dit is de algebraïsche vorm van een rechtstreeks evenredig verband.</p>
+    <p>
+      Niet elke lineaire functie is dus evenredig. Alleen de lineaire functies
+      waarvan het y-snijpunt nul is.
+    </p>
 
 
-    <h3>Wanneer zijn twee rechten parallel?</h3>
+    <h3>Parallelle rechten en snijpunten</h3>
 
-    <p>Twee niet-samenvallende rechten zijn parallel wanneer ze dezelfde helling hebben.</p>
+    <p>
+      Twee niet-samenvallende rechten zijn parallel wanneer ze dezelfde
+      helling hebben.
+    </p>
 
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
     <p class="formula">f(x) = 2x + 1</p>
-
-    <p>en:</p>
 
     <p class="formula">g(x) = 2x - 5</p>
 
-    <p>hebben allebei helling 2.</p>
+    <p>
+      Beide hebben:
+    </p>
 
-    <p>Ze veranderen dus even snel en zullen elkaar niet snijden.</p>
+    <p class="formula">a = 2</p>
 
-    <p>Het verschil tussen de twee rechten zit alleen in hun verticale positie.</p>
+    <p>
+      Ze stijgen dus even snel, maar hebben een verschillende verticale
+      positie.
+    </p>
 
+    <p>
+      Hebben twee rechten verschillende hellingen, dan kunnen we hun
+      snijpunt vinden door de uitvoerwaarden gelijk te stellen.
+    </p>
 
-    <h3>Wanneer snijden twee rechten elkaar?</h3>
-
-    <p>Neem:</p>
+    <p>
+      Neem:
+    </p>
 
     <p class="formula">f(x) = 2x + 1</p>
 
-    <p>en:</p>
-
     <p class="formula">g(x) = -x + 7</p>
 
-    <p>Deze rechten hebben verschillende hellingen.</p>
-
-    <p>De ene stijgt terwijl de andere daalt.</p>
-
-    <p>Daarom zullen ze elkaar ergens snijden.</p>
-
-    <p>Het snijpunt vinden we door de twee uitvoerwaarden gelijk te stellen:</p>
+    <p>
+      In het snijpunt zijn de y-waarden gelijk:
+    </p>
 
     <p class="formula">2x + 1 = -x + 7</p>
 
-    <p>Dit is precies het soort vergelijking dat we in milestone 2.3 hebben leren oplossen.</p>
-
-
-    <h4>Het snijpunt berekenen</h4>
-
-    <p>We lossen de vergelijking op:</p>
-
-    <p class="formula">2x + 1 = -x + 7</p>
-
-    <p>Dus:</p>
+    <p>
+      Uit les 2.3 weten we hoe we deze vergelijking oplossen:
+    </p>
 
     <p class="formula">3x = 6</p>
 
-    <p>en:</p>
-
     <p class="formula">x = 2</p>
 
-    <p>Nu berekenen we de bijbehorende y-waarde:</p>
+    <p>
+      Vervolgens berekenen we de y-waarde:
+    </p>
 
-    <p class="formula">f(2) = 2 × 2 + 1 = 5</p>
+    <p class="formula">f(2) = 2 · 2 + 1 = 5</p>
 
-    <p>Het snijpunt is:</p>
+    <p>
+      Het snijpunt is dus:
+    </p>
 
     <p class="formula">(2, 5)</p>
 
-    <p>Een geometrisch probleem is hier dus opnieuw omgezet in een algebraïsch probleem.</p>
+    <div class="callout">
+      <p><strong>Verbinding met 2.3:</strong></p>
+      <p>
+        Het snijpunt van twee grafieken vinden betekent dat we zoeken naar
+        een invoer waarvoor beide functies dezelfde uitvoer hebben.
+        Dat wordt opnieuw een vergelijking.
+      </p>
+    </div>
 
 
-    <h4>Een lineair model uit de werkelijkheid</h4>
+    <h3>Van een lineair model naar de werkelijkheid</h3>
 
-    <p>Stel dat een taxirit €5 startkost en daarna €2 per kilometer kost.</p>
+    <p>
+      Lineaire functies zijn bijzonder bruikbaar wanneer een grootheid met
+      een constante snelheid verandert.
+    </p>
 
-    <p>De totale prijs hangt af van het aantal gereden kilometers.</p>
+    <p>
+      Stel dat een taxirit €5 startkost en daarna €2 per kilometer kost.
+    </p>
 
-    <p>Als x het aantal kilometer is, krijgen we:</p>
+    <p>
+      Als <span class="formula-inline">x</span> het aantal kilometer is,
+      krijgen we:
+    </p>
 
     <p class="formula">P(x) = 2x + 5</p>
 
-    <p>De 2 betekent dat de prijs per kilometer met €2 toeneemt.</p>
+    <p>
+      Hier betekent:
+    </p>
 
-    <p>De 5 is de vaste startkost.</p>
+    <ul>
+      <li><span class="formula-inline">2</span>: de prijs per kilometer;</li>
+      <li><span class="formula-inline">5</span>: de vaste startkost.</li>
+    </ul>
 
-    <p>De formule is dus niet zomaar een algebraïsche uitdrukking. Ze vertelt precies hoe de werkelijkheid gemodelleerd wordt.</p>
-
-
-    <h4>Niet elk verband is lineair</h4>
-
-    <p>Een lineaire functie heeft een constante verandering.</p>
-
-    <p>Maar in veel situaties verandert de verandering zelf.</p>
-
-    <p>Neem bijvoorbeeld:</p>
-
-    <p class="formula">f(x) = x²</p>
-
-    <p>De waarden zijn:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>x</th>
-          <th>f(x)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>0</td>
-          <td>0</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>9</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>De uitvoer neemt achtereenvolgens toe met 1, 3 en 5.</p>
-
-    <p>De verandering is dus niet constant.</p>
-
-    <p>De grafiek kan daarom geen rechte zijn.</p>
-
-    <p>Hier komen we bij een tweede belangrijke soort functie.</p>
+    <p>
+      De algebraïsche structuur vertelt dus iets over de werkelijkheid:
+      een vaste beginwaarde plus een constante toename.
+    </p>
 
 
-    <h4>De stap naar kwadratische functies</h4>
+    <h3>Wanneer is een verband niet lineair?</h3>
 
-    <p>Een kwadratische functie bevat een term met x².</p>
+    <p>
+      Niet elk verband verandert met een constant bedrag.
+    </p>
 
-    <p>De algemene vorm is:</p>
+    <p>
+      Neem:
+    </p>
 
-    <p class="formula">f(x) = ax² + bx + c</p>
+    <p class="formula">f(x) = x^{2}</p>
 
-    <div data-widget="parabolaGraph"></div>
+    <p>
+      Voor opeenvolgende gehele waarden van <span class="formula-inline">x</span>
+      krijgen we:
+    </p>
 
-    <p>waarbij <span class="formula-inline">a ≠ 0</span>.</p>
+    <p class="formula">0, 1, 4, 9, 16, ...</p>
 
-    <p>Als de term x² aanwezig is, verandert de functie op een andere manier dan een lineaire functie.</p>
+    <p>
+      De eerste verschillen zijn:
+    </p>
 
-    <p>De grafiek van een kwadratische functie is een <strong>parabool</strong>.</p>
+    <p class="formula">1, 3, 5, 7, ...</p>
+
+    <p>
+      Die zijn niet constant.
+    </p>
+
+    <p>
+      De grafiek kan daarom geen rechte zijn.
+      Hier hebben we een ander soort functie nodig.
+    </p>
+
+    <div class="callout">
+      <p><strong>Herkenningsregel:</strong></p>
+      <p>
+        Constante eerste verschillen wijzen op een lineair verband.
+        Veranderende eerste verschillen wijzen erop dat het verband niet lineair is.
+      </p>
+    </div>
 
 
     <h3>Wat is een kwadratische functie?</h3>
 
+    <p>
+      Een kwadratische functie bevat een term met
+      <span class="formula-inline">x^{2}</span>.
+      De algemene vorm is:
+    </p>
+
+    <p class="formula">f(x) = ax^{2} + bx + c</p>
+
+    <div data-widget="parabolaGraph"></div>
+
+    <p>
+      waarbij:
+    </p>
+
+    <p class="formula">a \\neq 0</p>
+
+    <p>
+      De grafiek van een kwadratische functie is een
+      <strong>parabool</strong>.
+    </p>
+
     <div class="theory-image">
-      <img src="assets/parabolen.svg" alt="Parabolen met verschillende waarden van de parameter a, die hun opening en kromming veranderen.">
+      <img
+        src="assets/parabolen.svg"
+        alt="Parabolen met verschillende waarden van de parameter a, die hun opening en kromming veranderen."
+      >
     </div>
 
-    <p>Een eenvoudige kwadratische functie is:</p>
+    <p>
+      De eenvoudigste kwadratische functie is:
+    </p>
 
-    <p class="formula">f(x) = x²</p>
+    <p class="formula">f(x) = x^{2}</p>
 
-    <p>Voor positieve en negatieve waarden van x krijgen we dezelfde uitvoer wanneer de absolute waarden gelijk zijn:</p>
+    <p>
+      Hieruit volgt bijvoorbeeld:
+    </p>
 
     <p class="formula">f(2) = 4</p>
 
     <p class="formula">f(-2) = 4</p>
 
-    <p>De grafiek is daardoor symmetrisch rond de y-as.</p>
-
-    <p>De vorm van de grafiek is geen rechte, maar een kromme die naar boven opent.</p>
-
-
-    <h4>De vorm f(x) = ax² + bx + c</h4>
-
-    <p>De algemene kwadratische functie is:</p>
-
-    <p class="formula">f(x) = ax² + bx + c</p>
-
-    <p>De drie coëfficiënten beïnvloeden de vorm en positie van de parabool.</p>
-
-    <p>Het getal <span class="formula-inline">a</span> bepaalt onder andere hoe sterk de parabool gekromd is en naar welke kant ze opent.</p>
-
-    <p>De waarde <span class="formula-inline">b</span> beïnvloedt de positie van de top en de symmetrie-as.</p>
-
-    <p>De waarde <span class="formula-inline">c</span> bepaalt waar de parabool de y-as snijdt.</p>
+    <p>
+      De grafiek is daardoor symmetrisch rond de y-as en opent naar boven.
+    </p>
 
 
-    <h4>Waarom ontstaat een parabool?</h4>
+    <h3>De rol van a, b en c</h3>
 
-    <p>Bij een lineaire functie verandert de uitvoer telkens met hetzelfde bedrag wanneer x met 1 toeneemt.</p>
+    <p>
+      In:
+    </p>
 
-    <p>Bij een kwadratische functie is die eerste verandering niet constant.</p>
+    <p class="formula">f(x) = ax^{2} + bx + c</p>
 
-    <p>Bij:</p>
+    <p>
+      hebben de drie coëfficiënten verschillende rollen.
+    </p>
 
-    <p class="formula">f(x) = x²</p>
+    <p>
+      <strong>a</strong> bepaalt onder andere de richting waarin de parabool
+      opent en hoe sterk ze gekromd is.
+    </p>
 
-    <p>krijgen we:</p>
-
-    <p class="formula">0, 1, 4, 9, 16, ...</p>
-
-    <p>De verschillen zijn:</p>
-
-    <p class="formula">1, 3, 5, 7, ...</p>
-
-    <p>Maar ook die verschillen veranderen volgens een vast patroon.</p>
-
-    <p>Dat geeft de grafiek haar gebogen vorm.</p>
-
-
-    <h4>De rol van a</h4>
-
-    <p>In:</p>
-
-    <p class="formula">f(x) = ax²</p>
-
-    <p>bepaalt <span class="formula-inline">a</span> de vorm van de parabool.</p>
-
-    <p>Als:</p>
+    <p>
+      Als:
+    </p>
 
     <p class="formula">a > 0</p>
 
-    <p>opent de parabool naar boven.</p>
+    <p>
+      opent de parabool naar boven.
+    </p>
 
-    <p>Als:</p>
+    <p>
+      Als:
+    </p>
 
     <p class="formula">a < 0</p>
 
-    <p>opent ze naar beneden.</p>
+    <p>
+      opent de parabool naar beneden.
+    </p>
 
-    <p>De absolute waarde van a beïnvloedt hoe breed of smal de parabool is.</p>
+    <p>
+      De absolute waarde van <span class="formula-inline">a</span> beïnvloedt
+      hoe breed of smal de parabool is.
+    </p>
 
-    <p>Een grotere absolute waarde betekent dat de parabool sterker van richting verandert.</p>
+    <p>
+      De waarde <strong>c</strong> bepaalt het snijpunt met de y-as.
+      Want:
+    </p>
+
+    <p class="formula">f(0) = c</p>
+
+    <p>
+      Het y-snijpunt is dus:
+    </p>
+
+    <p class="formula">(0, c)</p>
+
+    <p>
+      De waarde <strong>b</strong> beïnvloedt onder andere de positie van
+      de top en de symmetrie-as.
+    </p>
 
 
-    <h4>De rol van c</h4>
+    <h3>De top en de symmetrie-as</h3>
 
-    <p>Neem:</p>
+    <p>
+      Een parabool die naar boven opent heeft een laagste punt.
+      Een parabool die naar beneden opent heeft een hoogste punt.
+      Dit punt noemen we de <strong>top</strong>.
+    </p>
 
-    <p class="formula">f(x) = x² + 3x + 5</p>
+    <p>
+      Bij de functie:
+    </p>
 
-    <p>Als we x = 0 invullen:</p>
+    <p class="formula">f(x) = (x - 2)^{2} + 3</p>
 
-    <p class="formula">f(0) = 5</p>
-
-    <p>De parabool snijdt de y-as dus in:</p>
-
-    <p class="formula">(0, 5)</p>
-
-    <p>Net zoals bij lineaire functies is de constante term dus rechtstreeks verbonden met het snijpunt met de y-as.</p>
-
-
-    <h4>De top van een parabool</h4>
-
-    <p>Een parabool die naar boven opent heeft een laagste punt.</p>
-
-    <p>Een parabool die naar beneden opent heeft een hoogste punt.</p>
-
-    <p>Dit punt noemen we de <strong>top</strong> van de parabool.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">f(x) = (x - 2)² + 3</p>
-
-    <p>Deze functie is nul wanneer:</p>
-
-    <p class="formula">(x - 2)² = -3</p>
-
-    <p>maar dat is voor reële x onmogelijk.</p>
-
-    <p>De kleinste waarde van het kwadraat is 0. Die wordt bereikt wanneer:</p>
+    <p>
+      is het kwadraat minimaal wanneer:
+    </p>
 
     <p class="formula">x - 2 = 0</p>
 
-    <p>dus:</p>
+    <p>
+      dus:
+    </p>
 
     <p class="formula">x = 2</p>
 
-    <p>Daar is:</p>
+    <p>
+      Dan is:
+    </p>
 
     <p class="formula">f(2) = 3</p>
 
-    <p>De top is dus:</p>
+    <p>
+      De top is:
+    </p>
 
     <p class="formula">(2, 3)</p>
 
-    <p>Deze vorm van een kwadratische functie maakt de top bijzonder gemakkelijk zichtbaar.</p>
-
-
-    <h4>Symmetrie van een parabool</h4>
-
-    <p>Een parabool heeft een verticale <strong>symmetrie-as</strong>.</p>
-
-    <p>Punten die even ver links en rechts van deze as liggen, hebben dezelfde y-waarde.</p>
-
-    <p>Bij:</p>
-
-    <p class="formula">f(x) = x²</p>
-
-    <p>ligt de symmetrie-as op:</p>
-
-    <p class="formula">x = 0</p>
-
-    <p>Bij:</p>
-
-    <p class="formula">f(x) = (x - 2)² + 3</p>
-
-    <p>ligt de symmetrie-as op:</p>
+    <p>
+      De verticale symmetrie-as loopt door de top:
+    </p>
 
     <p class="formula">x = 2</p>
 
-    <p>De symmetrie-as loopt dus door de top.</p>
+    <p>
+      Punten die even ver links en rechts van deze as liggen, hebben dezelfde
+      y-waarde.
+    </p>
+
+    <div class="callout">
+      <p><strong>Belangrijk:</strong></p>
+      <p>
+        De top is het hoogste of laagste punt van de parabool.
+        De symmetrie-as loopt verticaal door die top.
+      </p>
+    </div>
 
 
-    <h4>Nulpunten van een kwadratische functie</h4>
+    <h3>Nulpunten van een kwadratische functie</h3>
 
-    <p>Een nulpunt is een invoerwaarde waarvoor de uitvoer nul is.</p>
-
-    <p>We zoeken dus de waarden van x waarvoor:</p>
+    <p>
+      Een nulpunt is een invoerwaarde waarvoor de uitvoer nul is.
+      We zoeken dus:
+    </p>
 
     <p class="formula">f(x) = 0</p>
 
-    <p>Bij:</p>
+    <p>
+      Neem:
+    </p>
 
-    <p class="formula">f(x) = x² - 5x + 6</p>
+    <p class="formula">f(x) = x^{2} - 5x + 6</p>
 
-    <p>zoeken we:</p>
+    <p>
+      Dan zoeken we:
+    </p>
 
-    <p class="formula">x² - 5x + 6 = 0</p>
+    <p class="formula">x^{2} - 5x + 6 = 0</p>
 
-    <p>Dit is precies een kwadratische vergelijking.</p>
-
-    <p>We kunnen factoriseren:</p>
+    <p>
+      Uit les 2.7 weten we hoe we dit kunnen oplossen door te factoriseren:
+    </p>
 
     <p class="formula">(x - 2)(x - 3) = 0</p>
 
-    <p>Dus:</p>
+    <p>
+      Dus:
+    </p>
 
     <p class="formula">x = 2</p>
 
-    <p>of:</p>
-
     <p class="formula">x = 3</p>
 
-    <p>De parabool snijdt de x-as dus in twee punten.</p>
+    <p>
+      De parabool snijdt de x-as daarom in:
+    </p>
+
+    <p class="formula">(2, 0)</p>
+
+    <p>
+      en:
+    </p>
+
+    <p class="formula">(3, 0)</p>
 
 
-    <h4>Verband met kwadratische vergelijkingen</h4>
+    <h3>Functie en kwadratische vergelijking</h3>
 
-    <p>In milestone 2.7 leerden we kwadratische vergelijkingen oplossen.</p>
+    <p>
+      Hier zien we een belangrijke verbinding met les 2.7.
+    </p>
 
-    <p>Nu zien we waarom die vergelijkingen ook in functies voorkomen.</p>
+    <p>
+      De kwadratische vergelijking:
+    </p>
 
-    <p>De vergelijking:</p>
+    <p class="formula">ax^{2} + bx + c = 0</p>
 
-    <p class="formula">ax² + bx + c = 0</p>
+    <p>
+      vraagt eigenlijk:
+    </p>
 
-    <p>is precies de vraag:</p>
+    <p>
+      <strong>Voor welke invoerwaarden is de uitvoer van de kwadratische
+      functie gelijk aan nul?</strong>
+    </p>
 
-    <p><strong>voor welke x-waarden is de uitvoer van de functie gelijk aan nul?</strong></p>
+    <p>
+      De oplossingen van de vergelijking zijn dus de
+      <strong>nulpunten van de functie</strong>.
+    </p>
 
-    <p>De oplossingen van de kwadratische vergelijking zijn dus de <strong>nulpunten van de kwadratische functie</strong>.</p>
+    <p>
+      Algebra en grafieken beschrijven hier hetzelfde verschijnsel vanuit
+      twee verschillende perspectieven.
+    </p>
 
-    <p>Algebra en grafieken vertellen hier hetzelfde verhaal vanuit twee verschillende invalshoeken.</p>
-
-
-    <h4>Een kwadratische functie onderzoeken</h4>
-
-    <p>Bij een kwadratische functie kunnen we verschillende eigenschappen onderzoeken:</p>
-
-    <ul>
-      <li>waar de parabool de y-as snijdt;</li>
-      <li>of ze naar boven of naar beneden opent;</li>
-      <li>waar de top ligt;</li>
-      <li>waar de symmetrie-as ligt;</li>
-      <li>of en waar ze de x-as snijdt.</li>
-    </ul>
-
-    <p>Daarvoor gebruiken we zowel de formule als de grafiek.</p>
-
-    <p>De formule geeft ons de algebraïsche structuur. De grafiek maakt het gedrag zichtbaar.</p>
+    <div class="callout">
+      <p><strong>Verbinding met 2.7:</strong></p>
+      <p>
+        Een kwadratische vergelijking oplossen betekent geometrisch dat je
+        de x-coördinaten zoekt van de snijpunten van de parabool met de x-as.
+      </p>
+    </div>
 
 
-    <h4>Lineair versus kwadratisch</h4>
+    <h3>Lineair versus kwadratisch</h3>
 
-    <p>De twee functietypen hebben een fundamenteel verschil.</p>
+    <p>
+      We kunnen de twee functietypen rechtstreeks vergelijken.
+    </p>
 
     <p><strong>Lineair:</strong></p>
 
     <p class="formula">f(x) = ax + b</p>
 
-    <p>De verandering per stap in x is constant. De grafiek is een rechte.</p>
+    <ul>
+      <li>de verandering per stap is constant;</li>
+      <li>de grafiek is een rechte;</li>
+      <li><span class="formula-inline">a</span> is de helling;</li>
+      <li><span class="formula-inline">b</span> is het y-snijpunt.</li>
+    </ul>
 
     <p><strong>Kwadratisch:</strong></p>
 
-    <p class="formula">f(x) = ax² + bx + c</p>
+    <p class="formula">f(x) = ax^{2} + bx + c</p>
 
-    <p>De verandering per stap in x is niet constant. De grafiek is een parabool.</p>
+    <ul>
+      <li>de eerste verandering is niet constant;</li>
+      <li>de grafiek is een parabool;</li>
+      <li>de parabool heeft een top en symmetrie-as;</li>
+      <li>de nulpunten vind je door <span class="formula-inline">f(x) = 0</span> op te lossen.</li>
+    </ul>
 
-    <p>De aanwezigheid van x² zorgt dus voor een fundamenteel ander soort verband.</p>
+    <p>
+      De aanwezigheid van <span class="formula-inline">x^{2}</span> zorgt dus
+      voor een fundamenteel ander soort gedrag.
+    </p>
 
 
-    <h4>Functies uit de werkelijkheid</h4>
+    <h3>Functies in de werkelijkheid</h3>
 
-    <p>Lineaire functies ontstaan bijvoorbeeld wanneer een grootheid met een constante snelheid verandert.</p>
+    <p>
+      Beide functietypen kunnen gebruikt worden om situaties uit de
+      werkelijkheid te modelleren.
+    </p>
 
-    <p>Voorbeelden zijn:</p>
+    <p>
+      Lineaire functies passen bijvoorbeeld bij:
+    </p>
 
     <ul>
       <li>een vaste prijs per kilometer;</li>
-      <li>een vast bedrag per uur;</li>
-      <li>een constante snelheid.</li>
+      <li>een vast bedrag per tijdseenheid;</li>
+      <li>een grootheid die met constante snelheid verandert.</li>
     </ul>
 
-    <p>Kwadratische functies ontstaan onder andere wanneer een grootheid afhangt van een kwadraat.</p>
-
-    <p>Voorbeelden zijn:</p>
+    <p>
+      Kwadratische functies komen bijvoorbeeld voor bij:
+    </p>
 
     <ul>
       <li>de oppervlakte van een vierkant als functie van zijn zijde;</li>
-      <li>de afstand die een voorwerp onder constante versnelling aflegt;</li>
-      <li>de baan van een ideaal geworpen voorwerp.</li>
+      <li>beweging onder constante versnelling;</li>
+      <li>een ideaal geworpen voorwerp.</li>
     </ul>
 
-    <p>Het functietype vertelt ons dus iets over het soort verandering dat in het model aanwezig is.</p>
+    <p>
+      Neem bijvoorbeeld een hoogte die tijdens een worp wordt beschreven door:
+    </p>
 
+    <p class="formula">h(t) = -5t^{2} + 20t + 1</p>
 
-    <h4>Een volledig voorbeeld: een bewegend voorwerp</h4>
+    <p>
+      Omdat een term met <span class="formula-inline">t^{2}</span> voorkomt,
+      is dit een kwadratische functie.
+    </p>
 
-    <p>Stel dat de hoogte van een voorwerp tijdens een worp wordt beschreven door:</p>
-
-    <p class="formula">h(t) = -5t² + 20t + 1</p>
-
-    <p>Hierbij is t de tijd en h(t) de hoogte.</p>
-
-    <p>Omdat er een term met t² aanwezig is, is dit een kwadratische functie.</p>
-
-    <p>De coefficient van t² is negatief:</p>
+    <p>
+      De coëfficiënt van <span class="formula-inline">t^{2}</span> is negatief:
+    </p>
 
     <p class="formula">a = -5</p>
 
-    <p>De parabool opent daarom naar beneden.</p>
+    <p>
+      De parabool opent daarom naar beneden.
+    </p>
 
-    <p>De constante term is 1:</p>
+    <p>
+      De constante term is:
+    </p>
 
     <p class="formula">c = 1</p>
 
-    <p>De beginhoogte is dus:</p>
+    <p>
+      De beginhoogte is dus:
+    </p>
 
     <p class="formula">h(0) = 1</p>
 
-    <p>Als we willen weten wanneer het voorwerp de grond bereikt, zoeken we:</p>
+    <p>
+      Als we willen weten wanneer het voorwerp de grond bereikt, zoeken we:
+    </p>
 
     <p class="formula">h(t) = 0</p>
 
-    <p>We krijgen dan een kwadratische vergelijking.</p>
-
-    <p>Zo wordt een fysisch probleem omgezet in een functieprobleem en vervolgens in een vergelijking.</p>
-
-    <p>Dit is een patroon dat we in latere wiskunde en natuurkunde voortdurend zullen tegenkomen.</p>
-
-
-    <h4>Veelgemaakte fouten</h4>
-
-    <p><strong>Fout 1: denken dat b de helling is.</strong></p>
-
-    <p>In <span class="formula-inline">f(x) = ax + b</span> is a de helling en b het snijpunt met de y-as.</p>
-
-    <p><strong>Fout 2: vergeten dat een negatieve helling betekent dat de functie daalt.</strong></p>
-
-    <p>Een negatieve waarde van a geeft een dalende rechte.</p>
-
-    <p><strong>Fout 3: denken dat iedere parabool naar boven opent.</strong></p>
-
-    <p>Bij een negatieve waarde van a opent de parabool naar beneden.</p>
-
-    <p><strong>Fout 4: een nulpunt verwarren met het snijpunt met de y-as.</strong></p>
-
-    <p>Een nulpunt heeft y = 0 en ligt dus op de x-as. Het snijpunt met de y-as heeft x = 0.</p>
-
-    <p><strong>Fout 5: denken dat x² hetzelfde soort verandering geeft als x.</strong></p>
-
-    <p>Bij x verandert de uitvoer met een constant bedrag. Bij x² verandert dat bedrag zelf.</p>
+    <p>
+      Daarmee ontstaat opnieuw een kwadratische vergelijking.
+      Zo kunnen functie, grafiek en vergelijking samen één fysisch probleem
+      beschrijven.
+    </p>
 
 
-    <h4>Een vaste werkwijze</h4>
+    <h3>Een vaste werkwijze</h3>
 
-    <p>Wanneer je een functie krijgt, kun je eerst bepalen met welk type verband je te maken hebt.</p>
+    <p>
+      Wanneer je een functie krijgt, kun je eerst bepalen met welk soort
+      verband je te maken hebt.
+    </p>
 
     <ol>
-      <li>Kijk welke machten van x voorkomen.</li>
-      <li>Bevat de formule alleen x en een constante? Dan kan ze lineair zijn.</li>
-      <li>Bevat ze x²? Dan kan ze kwadratisch zijn.</li>
-      <li>Bij een lineaire functie lees je de helling en het y-snijpunt af.</li>
-      <li>Bij een kwadratische functie onderzoek je onder andere de richting, top, symmetrie-as en nulpunten.</li>
-      <li>Gebruik een vergelijking wanneer je een specifieke x-waarde zoekt.</li>
-      <li>Gebruik de grafiek om het gedrag van de functie zichtbaar te maken.</li>
+      <li>Bekijk welke machten van de invoer voorkomen.</li>
+      <li>Bevat de formule alleen een eerste macht? Onderzoek dan of ze lineair is.</li>
+      <li>Bevat de formule een tweede macht? Onderzoek dan of ze kwadratisch is.</li>
+      <li>Bij een lineaire functie: bepaal de helling en het y-snijpunt.</li>
+      <li>Bij een kwadratische functie: onderzoek de opening, top, symmetrie-as en nulpunten.</li>
+      <li>Gebruik een vergelijking wanneer je een specifieke invoer zoekt.</li>
+      <li>Gebruik de grafiek om het gedrag zichtbaar te maken.</li>
     </ol>
 
-    <p>Zo kun je voortdurend wisselen tussen drie perspectieven:</p>
+    <p>
+      Blijf daarbij steeds schakelen tussen:
+    </p>
 
     <p class="formula">formule ↔ grafiek ↔ betekenis</p>
 
-    <p>De formule beschrijft de structuur, de grafiek laat het gedrag zien en de betekenis vertelt wat de grootheden in de werkelijkheid voorstellen.</p>
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een lineaire functie heeft een constante verandering en geeft daarom
+        een rechte grafiek.
+      </p>
+      <p>
+        Een kwadratische functie bevat een tweede macht en geeft daarom een
+        parabool. De vorm van de formule bepaalt wat we in de grafiek zien.
+      </p>
+    </div>
 
 
-    <h4>Wat hebben we eigenlijk geleerd?</h4>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
-    <p>Een <strong>lineaire functie</strong> heeft de vorm:</p>
+    <p>
+      Een lineaire functie heeft de vorm:
+    </p>
 
     <p class="formula">f(x) = ax + b</p>
 
-    <p>De grafiek is een rechte.</p>
+    <p>
+      De waarde <span class="formula-inline">a</span> is de helling en
+      <span class="formula-inline">b</span> is het snijpunt met de y-as.
+    </p>
 
-    <p>De waarde <span class="formula-inline">a</span> is de helling en bepaalt hoe snel de functie stijgt of daalt.</p>
+    <p>
+      Een kwadratische functie heeft de vorm:
+    </p>
 
-    <p>De waarde <span class="formula-inline">b</span> bepaalt het snijpunt met de y-as.</p>
+    <p class="formula">f(x) = ax^{2} + bx + c</p>
 
-    <p>Een <strong>kwadratische functie</strong> heeft de vorm:</p>
+    <p>
+      De grafiek is een parabool. De waarde van
+      <span class="formula-inline">a</span> bepaalt onder andere de
+      openingsrichting, terwijl <span class="formula-inline">c</span>
+      het y-snijpunt bepaalt.
+    </p>
 
-    <p class="formula">f(x) = ax² + bx + c</p>
-
-    <p>De grafiek is een parabool.</p>
-
-    <p>De waarde van a bepaalt onder andere of de parabool naar boven of naar beneden opent.</p>
-
-    <p>De parabool heeft een top en een symmetrie-as.</p>
-
-    <p>De nulpunten zijn de waarden waarvoor:</p>
+    <p>
+      De nulpunten van een functie vinden betekent:
+    </p>
 
     <p class="formula">f(x) = 0</p>
 
-    <p>Daarom zijn de oplossingen van een kwadratische vergelijking tegelijk de nulpunten van een kwadratische functie.</p>
+    <p>
+      Bij een kwadratische functie leidt dit rechtstreeks naar de
+      kwadratische vergelijkingen uit les 2.7.
+    </p>
 
-    <p>We hebben daarmee een belangrijke verbinding gelegd:</p>
+    <p>
+      Daarmee hebben we een belangrijke verbinding gelegd:
+    </p>
 
-    <p class="formula">algebra ↔ functies ↔ grafieken ↔ geometrie</p>
+    <p class="formula">algebra ↔ functies ↔ grafieken ↔ vergelijkingen</p>
 
-    <p>In de volgende milestone verlaten we deze twee relatief eenvoudige functietypen en bekijken we functies die een heel ander soort gedrag beschrijven: <strong>exponentiële en logaritmische functies</strong>.</p>
-
-
-    <div class="callout">
-      <strong>Inzicht:</strong> De formule van een functie vertelt niet alleen hoe je een getal berekent. Ze bepaalt ook de vorm en het gedrag van de grafiek. Bij een lineaire functie geeft een constante verandering een rechte; bij een kwadratische functie leidt de aanwezigheid van x² tot een parabool.
-    </div>
+    <p>
+      In de volgende milestone bekijken we functies met een heel ander
+      groeigedrag: <strong>exponentiële en logaritmische functies</strong>.
+    </p>
   `
 },
 {
   id: "2.13",
   title: "Exponentiële & logaritmische functies",
-  goal: "Hoe beschrijven we groei en inverse groei?",
+  goal: "Hoe beschrijven we groei en verval met een vaste factor?",
   theory: /* html */`
+    <h2>Exponentiële & logaritmische functies</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>exponentiële groei en afname herkennen</li>
-      <li>groeifactoren koppelen aan percentages</li>
-      <li>exponentiële functies herkennen en interpreteren</li>
-      <li>lineaire en exponentiële groei onderscheiden</li>
-      <li>logaritmen begrijpen als omgekeerde bewerking van machtsverheffen</li>
-      <li>eenvoudige exponentiële vergelijkingen met logaritmen oplossen</li>
-      <li>logaritmen vooral gebruiken als hulpmiddel om exponenten terug te vinden</li>
+      <li>Wat is het verschil tussen lineaire en exponentiële groei?</li>
+      <li>Wat betekent een groeifactor?</li>
+      <li>Hoe zetten we een groeipercentage om in een groeifactor?</li>
+      <li>Hoe beschrijven we exponentiële groei en verval met een formule?</li>
+      <li>Waarom staat bij een exponentiële functie de variabele in de exponent?</li>
+      <li>Wat is een logaritme en waarom is die de omgekeerde bewerking van machtsverheffen?</li>
+      <li>Hoe gebruiken we een logaritme om een onbekende exponent te vinden?</li>
+      <li>Wat is de relatie tussen exponentiële en logaritmische functies?</li>
     </ul>
 
+    <p>
+      In les 2.12 zagen we dat een lineaire functie een
+      <strong>constante verandering</strong> heeft. Nu bekijken we een ander
+      soort verandering: een grootheid wordt telkens met dezelfde
+      <strong>factor</strong> vermenigvuldigd.
+    </p>
+
+    <p>
+      Dat leidt tot exponentiële functies. Wanneer we de onbekende exponent
+      willen terugvinden, hebben we de logaritme nodig.
+    </p>
+
     <div class="callout">
-    <p><strong>Kernidee:</strong></p> 
-    <p>Exponentiële functies beschrijven vermenigvuldigende groei of afname. Een logaritme draait machtsverheffen om en helpt een onbekende exponent terug te vinden.</p>
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Lineaire groei betekent: telkens dezelfde hoeveelheid erbij.
+      </p>
+      <p>
+        Exponentiële groei betekent: telkens met dezelfde factor vermenigvuldigen.
+      </p>
+      <p>
+        Een logaritme draait machtsverheffen om en helpt een onbekende exponent
+        terug te vinden.
+      </p>
     </div>
+
 
     <h3>Groei is niet altijd een vaste toename</h3>
 
-    <p>In de vorige milestone zagen we dat een lineaire functie een constante verandering heeft.</p>
-
-    <p>Bijvoorbeeld:</p>
+    <p>
+      In les 2.12 zagen we bijvoorbeeld:
+    </p>
 
     <p class="formula">f(x) = 3x</p>
 
-    <p>Wanneer x telkens met 1 toeneemt, neemt de uitvoer telkens met 3 toe.</p>
+    <p>
+      Wanneer <span class="formula-inline">x</span> telkens met 1 toeneemt,
+      neemt de uitvoer telkens met 3 toe.
+    </p>
 
-    <p>Maar veel processen werken anders.</p>
+    <p>
+      De toename is constant:
+    </p>
 
-    <p>Stel dat een bedrag ieder jaar verdubbelt:</p>
+    <p class="formula">3, 3, 3, 3, ...</p>
+
+    <p>
+      Maar stel dat een bedrag ieder jaar verdubbelt:
+    </p>
 
     <p class="formula">100 → 200 → 400 → 800 → 1600</p>
 
-    <p>De verschillen zijn:</p>
+    <p>
+      De verschillen zijn:
+    </p>
 
     <p class="formula">100, 200, 400, 800</p>
 
-    <p>De toename is dus niet constant.</p>
+    <p>
+      De toename is dus niet constant.
+    </p>
 
-    <p>Maar er is wel iets dat constant blijft: telkens wordt het vorige bedrag met 2 vermenigvuldigd.</p>
+    <p>
+      Er is wel iets anders constant: telkens wordt de vorige waarde met
+      dezelfde factor vermenigvuldigd.
+    </p>
 
-    <p>Dat is het kenmerk van <strong>exponentiële groei</strong>.</p>
+    <p>
+      Dat is het kenmerk van <strong>exponentiële groei</strong>.
+    </p>
+
+    <div class="callout">
+      <p><strong>Vergelijk de twee soorten groei:</strong></p>
+      <p>
+        <strong>Lineair:</strong> telkens dezelfde hoeveelheid erbij.
+      </p>
+      <p>
+        <strong>Exponentieel:</strong> telkens dezelfde factor maal.
+      </p>
+    </div>
 
 
     <h3>Een vaste vermenigvuldigingsfactor</h3>
 
-    <p>Bij exponentiële groei wordt een grootheid telkens met dezelfde factor vermenigvuldigd.</p>
-
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Bij exponentiële groei wordt een grootheid telkens met dezelfde factor
+      vermenigvuldigd.
+    </p>
 
     <p class="formula">100 → × 2 → 200 → × 2 → 400 → × 2 → 800</p>
 
-    <p>De factor 2 noemen we de <strong>groeifactor</strong>.</p>
+    <p>
+      De factor 2 noemen we de <strong>groeifactor</strong>.
+    </p>
 
-    <p>Als de groeifactor groter is dan 1, groeit de grootheid.</p>
+    <p>
+      Een groeifactor groter dan 1 geeft groei.
+      Een groeifactor tussen 0 en 1 geeft verval.
+    </p>
 
-    <p>Bij een groeifactor tussen 0 en 1 wordt de grootheid kleiner.</p>
-
-    <p>Het belangrijke verschil met lineaire groei is dus:</p>
-
-    <p><strong>lineair:</strong> telkens dezelfde hoeveelheid erbij.</p>
-
-    <p><strong>exponentieel:</strong> telkens dezelfde factor maal.</p>
+    <p>
+      De groeifactor vertelt dus niet hoeveel er wordt toegevoegd, maar
+      hoeveel keer de vorige waarde behouden blijft.
+    </p>
 
 
     <h3>De vorm van een exponentiële functie</h3>
 
-    <p>Een eenvoudige exponentiële functie heeft de vorm:</p>
+    <p>
+      Een eenvoudig exponentieel model heeft de vorm:
+    </p>
 
-    <p class="formula">f(x) = b × g^x</p>
+    <p class="formula">f(x) = b · g^{x}</p>
 
-    <p>Hierbij is:</p>
+    <p>
+      Hierbij is:
+    </p>
 
     <ul>
-      <li><span class="formula-inline">b</span> de beginwaarde;</li>
-      <li><span class="formula-inline">g</span> de groeifactor;</li>
-      <li><span class="formula-inline">x</span> de invoer.</li>
+      <li><strong>b</strong> de beginwaarde;</li>
+      <li><strong>g</strong> de groeifactor;</li>
+      <li><strong>x</strong> de invoer, bijvoorbeeld het aantal perioden.</li>
     </ul>
 
-    <p>Neem bijvoorbeeld:</p>
+    <p>
+      Neem:
+    </p>
 
-    <p class="formula">f(x) = 100 × 2^x</p>
+    <p class="formula">f(x) = 100 · 2^{x}</p>
 
-    <p>Dan is de beginwaarde 100 en de groeifactor 2.</p>
+    <p>
+      Voor <span class="formula-inline">x = 0</span> krijgen we:
+    </p>
 
-    <p>Voor x = 0 krijgen we:</p>
+    <p class="formula">f(0) = 100 · 2^{0} = 100</p>
 
-    <p class="formula">f(0) = 100 × 2^0 = 100</p>
+    <p>
+      Voor <span class="formula-inline">x = 1</span>:
+    </p>
 
-    <p>Voor x = 1:</p>
+    <p class="formula">f(1) = 100 · 2^{1} = 200</p>
 
-    <p class="formula">f(1) = 100 × 2^1 = 200</p>
+    <p>
+      En voor <span class="formula-inline">x = 2</span>:
+    </p>
 
-    <p>Voor x = 2:</p>
+    <p class="formula">f(2) = 100 · 2^{2} = 400</p>
 
-    <p class="formula">f(2) = 100 × 2^2 = 400</p>
-
-    <p>De exponent bepaalt dus hoe vaak de groeifactor wordt toegepast.</p>
+    <p>
+      De exponent geeft dus aan hoe vaak de groeifactor wordt toegepast.
+    </p>
 
 
     <h3>Waarom staat de variabele in de exponent?</h3>
 
-    <p>Bij een lineaire functie staat de variabele bijvoorbeeld in:</p>
+    <p>
+      Vergelijk:
+    </p>
 
     <p class="formula">f(x) = 3x</p>
 
-    <p>Bij exponentiële groei staat de variabele in de exponent:</p>
+    <p>
+      met:
+    </p>
 
-    <p class="formula">f(x) = 2^x</p>
+    <p class="formula">g(x) = 3^{x}</p>
 
-    <p>Dat verschil is fundamenteel.</p>
+    <p>
+      Bij de eerste functie wordt 3 vermenigvuldigd met
+      <span class="formula-inline">x</span>.
+      Bij de tweede functie bepaalt <span class="formula-inline">x</span>
+      hoe vaak de factor 3 wordt toegepast.
+    </p>
 
-    <p>Bij x = 1 is:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
-    <p class="formula">2^1 = 2</p>
+    <p class="formula">3^{1} = 3</p>
 
-    <p>Bij x = 2:</p>
+    <p class="formula">3^{2} = 9</p>
 
-    <p class="formula">2^2 = 4</p>
+    <p class="formula">3^{3} = 27</p>
 
-    <p>Bij x = 3:</p>
+    <p>
+      Elke stap in <span class="formula-inline">x</span> betekent opnieuw
+      vermenigvuldigen met 3.
+    </p>
 
-    <p class="formula">2^3 = 8</p>
-
-    <p>Elke stap in x betekent dat we opnieuw met 2 vermenigvuldigen.</p>
-
-    <p>De exponent telt dus als het ware hoeveel keer de groeifactor wordt toegepast.</p>
+    <p>
+      Daarom kan exponentiële groei veel sneller toenemen dan lineaire groei.
+    </p>
 
 
     <h3>Exponentiële groei en procenten</h3>
 
-    <p>Exponentiële groei wordt vaak beschreven met een percentage.</p>
+    <p>
+      Exponentiële groei wordt vaak beschreven met een percentage.
+    </p>
 
-    <p>Stel dat een hoeveelheid ieder jaar met 5% groeit.</p>
-
-    <p>Een stijging van 5% betekent dat we 105% van de vorige waarde behouden.</p>
-
-    <p>Als factor schrijven we:</p>
+    <p>
+      Stel dat een hoeveelheid ieder jaar met 5% groeit.
+      Na één jaar hebben we 105% van de vorige waarde:
+    </p>
 
     <p class="formula">g = 1,05</p>
 
-    <p>Een beginwaarde van 100 wordt dan:</p>
+    <p>
+      Bij een beginwaarde van 100 krijgen we:
+    </p>
 
-    <p class="formula">100 × 1,05 = 105</p>
+    <p class="formula">100 · 1,05 = 105</p>
 
-    <p>Na twee perioden:</p>
+    <p>
+      Na twee perioden:
+    </p>
 
-    <p class="formula">100 × 1,05²</p>
+    <p class="formula">100 · 1,05^{2}</p>
 
-    <p>en na x perioden:</p>
+    <p>
+      Na <span class="formula-inline">x</span> perioden:
+    </p>
 
-    <p class="formula">f(x) = 100 × 1,05^x</p>
+    <p class="formula">f(x) = 100 · 1,05^{x}</p>
 
-    <p>Een percentage dat telkens op de <strong>nieuwe</strong> waarde wordt toegepast, leidt dus tot exponentiële groei.</p>
+    <p>
+      De factor wordt dus iedere periode opnieuw toegepast op de
+      <strong>nieuwe</strong> waarde.
+    </p>
 
 
     <h3>Van groeipercentage naar groeifactor</h3>
 
-    <p>Bij een groeipercentage p geldt:</p>
+    <p>
+      Bij een groeipercentage <span class="formula-inline">p</span>,
+      geschreven als decimaal, geldt bij groei:
+    </p>
 
     <p class="formula">g = 1 + p</p>
 
-    <p>Hierbij moet p als decimaal worden geschreven.</p>
-
-    <p>Bij 8% groei is:</p>
+    <p>
+      Bij 8% groei is:
+    </p>
 
     <p class="formula">p = 0,08</p>
 
-    <p>dus:</p>
-
     <p class="formula">g = 1,08</p>
 
-    <p>Bij 25% groei:</p>
+    <p>
+      Bij 25% groei:
+    </p>
 
     <p class="formula">g = 1,25</p>
 
-    <p>De groeifactor is dus de factor waarmee de oude waarde wordt vermenigvuldigd.</p>
+    <p>
+      De groeifactor is dus de factor waarmee de oude waarde wordt
+      vermenigvuldigd.
+    </p>
 
 
     <h3>Exponentieel verval</h3>
 
-    <p>Niet alleen groei kan exponentieel verlopen.</p>
+    <p>
+      Hetzelfde principe werkt wanneer een hoeveelheid kleiner wordt.
+    </p>
 
-    <p>Stel dat een hoeveelheid ieder jaar 20% kleiner wordt.</p>
-
-    <p>Dan blijft ieder jaar 80% over.</p>
-
-    <p>De groeifactor is:</p>
+    <p>
+      Stel dat een hoeveelheid ieder jaar 20% kleiner wordt.
+      Dan blijft 80% over:
+    </p>
 
     <p class="formula">g = 0,80</p>
 
-    <p>Bij een beginwaarde van 500 krijgen we:</p>
+    <p>
+      Bij een beginwaarde van 500 krijgen we:
+    </p>
 
-    <p class="formula">f(x) = 500 × 0,8^x</p>
+    <p class="formula">f(x) = 500 · 0,8^{x}</p>
 
-    <p>Na één periode:</p>
+    <p>
+      Na één periode:
+    </p>
 
-    <p class="formula">500 × 0,8 = 400</p>
+    <p class="formula">500 · 0,8 = 400</p>
 
-    <p>Na twee perioden:</p>
+    <p>
+      Na twee perioden:
+    </p>
 
-    <p class="formula">500 × 0,8² = 320</p>
+    <p class="formula">500 · 0,8^{2} = 320</p>
 
-    <p>De waarde wordt steeds kleiner, maar telkens volgens dezelfde vermenigvuldigingsfactor.</p>
+    <p>
+      De waarde wordt dus steeds kleiner, maar telkens met dezelfde factor.
+    </p>
 
-    <p>Dit noemen we <strong>exponentieel verval</strong>.</p>
-
-
-    <h3>Groeifactor tussen 0 en 1</h3>
-
-    <p>Een exponentiële functie:</p>
-
-    <p class="formula">f(x) = b × g^x</p>
-
-    <p>kan dus verschillende soorten gedrag hebben.</p>
-
-    <p>Als:</p>
-
-    <p class="formula">g > 1</p>
-
-    <p>hebben we exponentiële groei.</p>
-
-    <p>Als:</p>
-
-    <p class="formula">0 < g < 1</p>
-
-    <p>hebben we exponentieel verval.</p>
-
-    <p>Bij:</p>
-
-    <p class="formula">g = 1</p>
-
-    <p>verandert de waarde helemaal niet, want:</p>
-
-    <p class="formula">1^x = 1</p>
-
-    <p>De functie blijft dan constant.</p>
+    <div class="callout">
+      <p><strong>Groeifactor herkennen:</strong></p>
+      <p>
+        <span class="formula-inline">g > 1</span> → exponentiële groei.
+      </p>
+      <p>
+        <span class="formula-inline">0 &lt; g &lt; 1</span> → exponentieel verval.
+      </p>
+      <p>
+        <span class="formula-inline">g = 1</span> → constante waarde.
+      </p>
+    </div>
 
 
     <h3>De grafiek van een exponentiële functie</h3>
 
-    <p>Een exponentiële grafiek heeft een ander karakter dan een rechte of een parabool.</p>
+    <p>
+      Een exponentiële grafiek heeft een ander gedrag dan de rechte van een
+      lineaire functie.
+    </p>
 
-    <p>Bij exponentiële groei stijgt de grafiek steeds sneller.</p>
+    <p>
+      Bij exponentiële groei wordt de toename steeds groter.
+      Bij exponentieel verval wordt de waarde steeds kleiner.
+    </p>
 
-    <p>De waarden kunnen zeer snel groot worden.</p>
+    <p>
+      Voor:
+    </p>
 
-    <p>Bij exponentieel verval daalt de grafiek steeds verder, maar blijft ze bij een positieve beginwaarde boven nul.</p>
+    <p class="formula">f(x) = 2^{x}</p>
 
-    <p>De grafiek van:</p>
+    <p>
+      geldt:
+    </p>
 
-    <p class="formula">f(x) = 2^x</p>
+    <p class="formula">f(0) = 1</p>
 
-    <p>gaat door:</p>
+    <p>
+      De grafiek gaat dus door:
+    </p>
 
     <p class="formula">(0, 1)</p>
 
-    <p>want:</p>
-
-    <p class="formula">2^0 = 1</p>
-
-    <p>Voor negatieve x-waarden worden de waarden steeds kleiner.</p>
+    <p>
+      Voor negatieve waarden van <span class="formula-inline">x</span>
+      worden de waarden kleiner.
+    </p>
 
 
     <h3>Exponentiële groei tegenover lineaire groei</h3>
 
     <div class="theory-image">
-      <img src="assets/groei-vs-rechte.svg" alt="Een lineaire en een exponentiële groeicurve met hetzelfde beginpunt.">
+      <img
+        src="assets/groei-vs-rechte.svg"
+        alt="Een lineaire en een exponentiële groeicurve met hetzelfde beginpunt."
+      >
     </div>
 
-    <p>Vergelijk:</p>
+    <p>
+      Vergelijk:
+    </p>
 
     <p class="formula">f(x) = 100 + 20x</p>
 
-    <p>met:</p>
+    <p>
+      met:
+    </p>
 
-    <p class="formula">g(x) = 100 × 1,2^x</p>
+    <p class="formula">g(x) = 100 · 1,2^{x}</p>
 
-    <p>De eerste functie voegt telkens 20 toe.</p>
+    <p>
+      De lineaire functie voegt telkens 20 toe.
+      De exponentiële functie vermenigvuldigt telkens met 1,2.
+    </p>
 
-    <p>De tweede vermenigvuldigt telkens met 1,2.</p>
+    <p>
+      Bij kleine waarden van <span class="formula-inline">x</span> kunnen de
+      verschillen beperkt lijken. Naarmate <span class="formula-inline">x</span>
+      groter wordt, kan de exponentiële functie veel sneller groeien.
+    </p>
 
-    <p>Bij kleine waarden van x kunnen de verschillen beperkt lijken.</p>
-
-    <p>Maar naarmate x groter wordt, kan de exponentiële functie veel sneller groeien.</p>
-
-    <p>Dat komt doordat bij exponentiële groei ook de <strong>toename zelf</strong> steeds groter wordt.</p>
+    <p>
+      Dat komt doordat bij exponentiële groei niet alleen de waarde verandert,
+      maar ook de <strong>toename zelf</strong>.
+    </p>
 
 
     <h3>Een exponentiële vergelijking</h3>
 
-    <p>Soms kennen we de invoer niet, maar wel de uitvoer.</p>
+    <p>
+      Soms kennen we de uitvoer en zoeken we de invoer.
+    </p>
 
-    <p>Stel:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
-    <p class="formula">2^x = 8</p>
+    <p class="formula">2^{x} = 8</p>
 
-    <p>We weten dat:</p>
+    <p>
+      Omdat:
+    </p>
 
-    <p class="formula">2^3 = 8</p>
+    <p class="formula">2^{3} = 8</p>
 
-    <p>dus:</p>
+    <p>
+      weten we:
+    </p>
 
     <p class="formula">x = 3</p>
 
-    <p>Maar wat als we bijvoorbeeld krijgen:</p>
+    <p>
+      Maar bij:
+    </p>
 
-    <p class="formula">2^x = 10</p>
+    <p class="formula">2^{x} = 10</p>
 
-    <p>Dan is x geen eenvoudig geheel getal.</p>
-
-    <p>We hebben een nieuwe manier nodig om de exponent te vinden.</p>
-
-    <p>Daarvoor gebruiken we de <strong>logaritme</strong>.</p>
+    <p>
+      is de oplossing geen eenvoudig geheel getal.
+      We hebben een nieuwe bewerking nodig om de exponent terug te vinden.
+    </p>
 
 
     <h3>De logaritme als omgekeerde bewerking</h3>
 
-    <p>Optellen en aftrekken zijn omgekeerde bewerkingen.</p>
+    <p>
+      Optellen en aftrekken zijn omgekeerde bewerkingen.
+      Vermenigvuldigen en delen ook.
+    </p>
 
-    <p>Vermenigvuldigen en delen zijn omgekeerde bewerkingen.</p>
+    <p>
+      Op dezelfde manier is een logaritme de omgekeerde bewerking van
+      machtsverheffen.
+    </p>
 
-    <p>Machtsverheffen heeft ook een omgekeerde bewerking: de logaritme.</p>
+    <p>
+      De vraag:
+    </p>
 
-    <p>De vraag:</p>
+    <p class="formula">2^{x} = 8</p>
 
-    <p class="formula">2^x = 8</p>
+    <p>
+      kunnen we schrijven als:
+    </p>
 
-    <p>kunnen we formuleren als:</p>
+    <p class="formula">x = log_{2}(8)</p>
 
-    <p class="formula">x = log₂(8)</p>
+    <p>
+      De logaritme vraagt:
+    </p>
 
-    <p>De logaritme vraagt:</p>
+    <p>
+      <strong>
+        Tot welke macht moet ik het grondtal verheffen om de gegeven waarde
+        te krijgen?
+      </strong>
+    </p>
 
-    <p><strong>tot welke macht moet ik het grondtal verheffen om deze waarde te krijgen?</strong></p>
+    <p>
+      Omdat:
+    </p>
 
-    <p>Omdat:</p>
+    <p class="formula">2^{3} = 8</p>
 
-    <p class="formula">2^3 = 8</p>
+    <p>
+      geldt:
+    </p>
 
-    <p>geldt:</p>
+    <p class="formula">log_{2}(8) = 3</p>
 
-    <p class="formula">log₂(8) = 3</p>
-
-
-    <h3>De betekenis van log_b(a)</h3>
-
-    <p>Algemeen betekent:</p>
-
-    <p class="formula">log_b(a) = x</p>
-
-    <p>precies hetzelfde als:</p>
-
-    <p class="formula">b^x = a</p>
-
-    <p>De basis <span class="formula-inline">b</span> is het grondtal van de macht.</p>
-
-    <p>Het getal <span class="formula-inline">a</span> is de waarde waarvan we de logaritme nemen.</p>
-
-    <p>De uitkomst <span class="formula-inline">x</span> is de exponent die we zoeken.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">log₃(81) = 4</p>
-
-    <p>want:</p>
-
-    <p class="formula">3^4 = 81</p>
-
-
-    <h3>Logaritmen terugvertalen naar machten</h3>
-
-    <p>Een van de belangrijkste vaardigheden is kunnen wisselen tussen beide vormen.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">log₂(32) = 5</p>
-
-    <p>betekent:</p>
-
-    <p class="formula">2^5 = 32</p>
-
-    <p>Omgekeerd:</p>
-
-    <p class="formula">10^3 = 1000</p>
-
-    <p>betekent:</p>
-
-    <p class="formula">log₁₀(1000) = 3</p>
-
-    <p>De logaritme is dus geen losstaande nieuwe bewerking. Ze is de omgekeerde vraag bij machtsverheffen.</p>
+    <div class="callout">
+      <p><strong>De kern van een logaritme:</strong></p>
+      <p>
+        <span class="formula-inline">log_{b}(a) = x</span> betekent precies:
+      </p>
+      <p class="formula">b^{x} = a</p>
+    </div>
 
 
-    <h4>De logaritme van 1</h4>
+    <h3>Van logaritme naar macht en terug</h3>
 
-    <p>Elke toegestane basis heeft exponent 0 wanneer we de waarde 1 krijgen:</p>
+    <p>
+      Een belangrijke vaardigheid is kunnen wisselen tussen beide vormen.
+    </p>
 
-    <p class="formula">b^0 = 1</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
-    <p>Daarom geldt:</p>
+    <p class="formula">log_{2}(32) = 5</p>
 
-    <p class="formula">log_b(1) = 0</p>
+    <p>
+      betekent:
+    </p>
 
-    <p>Bijvoorbeeld:</p>
+    <p class="formula">2^{5} = 32</p>
 
-    <p class="formula">log₂(1) = 0</p>
+    <p>
+      Omgekeerd:
+    </p>
 
-    <p>en:</p>
+    <p class="formula">10^{3} = 1000</p>
 
-    <p class="formula">log₁₀(1) = 0</p>
+    <p>
+      betekent:
+    </p>
 
+    <p class="formula">log_{10}(1000) = 3</p>
 
-    <h4>De logaritme van een macht</h4>
-
-    <p>Omdat logaritmen machten terug ongedaan maken, geldt:</p>
-
-    <p class="formula">log_b(b^x) = x</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">log₂(2^7) = 7</p>
-
-    <p>De machtsverheffing maakt van 7 de waarde 128.</p>
-
-    <p>De logaritme kijkt vervolgens terug en vraagt welke exponent bij 2 nodig was om 128 te krijgen.</p>
+    <p>
+      De logaritme is dus geen volledig nieuwe wereld:
+      ze stelt de omgekeerde vraag bij een macht.
+    </p>
 
 
-    <h4>De basis 10</h4>
+    <h3>Belangrijke logaritmen</h3>
 
-    <p>De logaritme met basis 10 komt veel voor.</p>
+    <p>
+      Enkele logaritmen komen bijzonder vaak voor.
+    </p>
 
-    <p>We schrijven vaak:</p>
+    <p>
+      Omdat:
+    </p>
+
+    <p class="formula">b^{0} = 1</p>
+
+    <p>
+      geldt:
+    </p>
+
+    <p class="formula">log_{b}(1) = 0</p>
+
+    <p>
+      Voor basis 10 schrijven we vaak gewoon:
+    </p>
 
     <p class="formula">log(1000)</p>
 
-    <p>waarmee we bedoelen:</p>
+    <p>
+      waarmee we bedoelen:
+    </p>
 
-    <p class="formula">log₁₀(1000)</p>
+    <p class="formula">log_{10}(1000)</p>
 
-    <p>Omdat:</p>
+    <p>
+      Omdat:
+    </p>
 
-    <p class="formula">10³ = 1000</p>
+    <p class="formula">10^{3} = 1000</p>
 
-    <p>is:</p>
+    <p>
+      geldt:
+    </p>
 
     <p class="formula">log(1000) = 3</p>
 
-    <p>Deze logaritme wordt onder andere gebruikt bij grootheden die over zeer grote bereiken variëren.</p>
-
-
-    <h4>De natuurlijke logaritme</h4>
-
-    <p>Naast logaritmen met basis 10 is er een bijzonder belangrijke basis:</p>
-
-    <p class="formula">e</p>
-
-    <p>Het getal e is ongeveer:</p>
+    <p>
+      Er bestaat ook een bijzonder belangrijke basis:
+    </p>
 
     <p class="formula">e ≈ 2,71828</p>
 
-    <p>De logaritme met basis e noemen we de <strong>natuurlijke logaritme</strong> en schrijven we:</p>
+    <p>
+      De logaritme met basis <span class="formula-inline">e</span> noemen we
+      de <strong>natuurlijke logaritme</strong>:
+    </p>
 
-    <p class="formula">ln(x)</p>
+    <p class="formula">ln(x) = log_{e}(x)</p>
 
-    <p>Dus:</p>
-
-    <p class="formula">ln(x) = log_e(x)</p>
-
-    <p>De basis e is bijzonder omdat de functie:</p>
-
-    <p class="formula">f(x) = e^x</p>
-
-    <p>een fundamentele rol speelt bij continue groei en verval.</p>
-
-    <p>De diepere eigenschappen van e en de natuurlijke logaritme komen later in de wiskunde opnieuw terug.</p>
-
-
-    <h4>De logaritmische functie</h4>
-
-    <p>Net zoals exponentiële functies een grafiek hebben, hebben logaritmen dat ook.</p>
-
-    <p>De logaritmische functie:</p>
-
-    <p class="formula">f(x) = log_b(x)</p>
-
-    <p>is de inverse van:</p>
-
-    <p class="formula">g(x) = b^x</p>
-
-    <p>Dat betekent dat de twee functies elkaars bewerkingen ongedaan maken.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">2^3 = 8</p>
-
-    <p>en:</p>
-
-    <p class="formula">log₂(8) = 3</p>
-
-    <p>De ene functie gaat van exponent naar waarde; de andere gaat van waarde terug naar exponent.</p>
+    <p>
+      De natuurlijke logaritme wordt later bijzonder belangrijk bij continue
+      groei, afgeleiden en integralen. Hier volstaat het om het begrip en de
+      notatie te herkennen.
+    </p>
 
 
     <h3>Inverse functies</h3>
 
     <div class="theory-image">
-      <img src="assets/exp-log-invers.svg" alt="Een exponentiële en logaritmische grafiek als elkaars inverse.">
+      <img
+        src="assets/exp-log-invers.svg"
+        alt="Een exponentiële en logaritmische grafiek als elkaars inverse."
+      >
     </div>
 
-    <p>Het begrip <strong>inverse</strong> betekent dat een bewerking wordt teruggedraaid.</p>
+    <p>
+      De exponentiële functie en de logaritmische functie zijn
+      <strong>inverse functies</strong>.
+    </p>
 
-    <p>Bijvoorbeeld:</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
-    <p class="formula">3 × 5 = 15</p>
+    <p class="formula">2^{4} = 16</p>
 
-    <p>delen door 3 brengt ons terug:</p>
+    <p>
+      en:
+    </p>
 
-    <p class="formula">15 ÷ 3 = 5</p>
+    <p class="formula">log_{2}(16) = 4</p>
 
-    <p>Op dezelfde manier:</p>
+    <p>
+      De ene bewerking gaat van exponent naar waarde.
+      De andere gaat van waarde terug naar exponent.
+    </p>
 
-    <p class="formula">2^4 = 16</p>
+    <p>
+      Daarom zijn de grafieken van:
+    </p>
 
-    <p>en:</p>
+    <p class="formula">y = b^{x}</p>
 
-    <p class="formula">log₂(16) = 4</p>
+    <p>
+      en:
+    </p>
 
-    <p>De logaritme is dus de inverse functie van de exponentiële functie, wanneer dezelfde basis wordt gebruikt.</p>
+    <p class="formula">y = log_{b}(x)</p>
 
-
-    <h4>Een exponentiële vergelijking oplossen met een logaritme</h4>
-
-    <p>Stel dat:</p>
-
-    <p class="formula">2^x = 10</p>
-
-    <p>We nemen aan beide kanten de logaritme met basis 2:</p>
-
-    <p class="formula">log₂(2^x) = log₂(10)</p>
-
-    <p>Omdat de logaritme de macht ongedaan maakt, krijgen we:</p>
-
-    <p class="formula">x = log₂(10)</p>
-
-    <p>Met een rekenmachine kunnen we deze waarde benaderen:</p>
-
-    <p class="formula">x ≈ 3,32</p>
-
-    <p>Dit betekent dat 2 tot ongeveer de 3,32e macht gelijk is aan 10.</p>
-
-    <p>De logaritme maakt het dus mogelijk om exponenten te vinden die niet eenvoudig uit het hoofd kunnen worden bepaald.</p>
-
-
-    <h4>De grondtalwissel</h4>
-
-    <p>Rekenmachines hebben meestal een toets voor logaritmen met basis 10 en voor de natuurlijke logaritme.</p>
-
-    <p>Toch kunnen we ook een logaritme met een andere basis berekenen.</p>
-
-    <p>Daarvoor gebruiken we:</p>
-
-    <p class="formula">log_b(x) = \\frac{\\log(x)}{\\log(b)}</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">log₂(10) = \\frac{\\log(10)}{\\log(2)}</p>
-
-    <p>Zo kunnen we ook logaritmen met basis 2, 3, 5 of een andere toegestane basis berekenen.</p>
-
-
-    <h4>Logaritmen en vermenigvuldiging</h4>
-
-    <p>Logaritmen hebben een belangrijke eigenschap:</p>
-
-    <p class="formula">log_b(xy) = log_b(x) + log_b(y)</p>
-
-    <p>Een vermenigvuldiging wordt door een logaritme dus omgezet in een optelling.</p>
-
-    <p>Dit is bijzonder nuttig wanneer we met zeer grote of zeer kleine getallen werken.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">log_b(2 × 3) = log_b(2) + log_b(3)</p>
-
-    <p>Deze eigenschap is geen toeval. Ze volgt uit de rekenregels voor machten.</p>
-
-
-    <h4>Logaritmen en machten</h4>
-
-    <p>Een andere belangrijke regel is:</p>
-
-    <p class="formula">log_b(x^n) = n × log_b(x)</p>
-
-    <p>De exponent komt dus voor de logaritme te staan.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">log₂(8²) = 2 × log₂(8)</p>
-
-    <p>Omdat:</p>
-
-    <p class="formula">log₂(8) = 3</p>
-
-    <p>is:</p>
-
-    <p class="formula">log₂(64) = 6</p>
-
-    <p>Ook hier zien we dat logaritmen machten omzetten in vermenigvuldigingen.</p>
-
-
-    <h4>Waarom zijn logaritmen nuttig?</h4>
-
-    <p>Exponentiële groei kan extreem snel verlopen.</p>
-
-    <p>Een getal kan daardoor zeer groot worden zonder dat we het gemakkelijk kunnen vergelijken met gewone lineaire schalen.</p>
-
-    <p>Een logaritmische schaal comprimeert zulke grote verschillen.</p>
-
-    <p>Een factor 10 wordt op een logaritmische schaal telkens een vaste stap.</p>
-
-    <p>Dat idee wordt gebruikt in verschillende wetenschappelijke toepassingen, bijvoorbeeld bij grootheden die vele ordes van grootte kunnen bestrijken.</p>
-
-
-    <h4>Een volledig voorbeeld: bacteriegroei</h4>
-
-    <p>Stel dat een bacteriepopulatie aanvankelijk 500 bacteriën bevat en iedere uur verdubbelt.</p>
-
-    <p>De populatie wordt beschreven door:</p>
-
-    <p class="formula">N(t) = 500 × 2^t</p>
-
-    <p>Na 3 uur:</p>
-
-    <p class="formula">N(3) = 500 × 2³ = 4000</p>
-
-    <p>We willen nu weten wanneer de populatie 10.000 bacteriën bereikt.</p>
-
-    <p>We stellen de uitvoer gelijk aan 10.000:</p>
-
-    <p class="formula">500 × 2^t = 10000</p>
-
-    <p>We delen door 500:</p>
-
-    <p class="formula">2^t = 20</p>
-
-    <p>Nu gebruiken we de logaritme:</p>
-
-    <p class="formula">t = log₂(20)</p>
-
-    <p>Dus ongeveer:</p>
-
-    <p class="formula">t ≈ 4,32</p>
-
-    <p>De populatie bereikt volgens dit model na ongeveer 4,32 uur de waarde 10.000.</p>
-
-    <p>We hebben hier een volledig model gebruikt:</p>
-
-    <p class="formula">werkelijkheid → exponentiële functie → vergelijking → logaritme</p>
-
-
-    <h4>Het domein van een logaritme</h4>
-
-    <p>Een logaritme is niet voor iedere invoer gedefinieerd.</p>
-
-    <p>Bij:</p>
-
-    <p class="formula">log_b(x)</p>
-
-    <p>moet gelden:</p>
-
-    <p class="formula">x > 0</p>
-
-    <p>De logaritme van nul bestaat niet en de logaritme van een negatief getal is binnen de reële getallen niet gedefinieerd.</p>
-
-    <p>Daarom heeft de logaritmische functie alleen positieve invoerwaarden.</p>
-
-
-    <h4>De basis van een logaritme</h4>
-
-    <p>Ook de basis heeft voorwaarden.</p>
-
-    <p>Voor een reële logaritme moet de basis voldoen aan:</p>
-
-    <p class="formula">b > 0</p>
-
-    <p>en:</p>
-
-    <p class="formula">b ≠ 1</p>
-
-    <p>Een basis 1 zou geen bruikbare logaritme geven, omdat:</p>
-
-    <p class="formula">1^x = 1</p>
-
-    <p>voor iedere x.</p>
-
-    <p>Er is dan geen unieke exponent die bijvoorbeeld 2 of 10 kan opleveren.</p>
-
-
-    <h4>Exponentiële en logaritmische functies zijn elkaars spiegelbeeld</h4>
-
-    <p>Omdat exponentiële en logaritmische functies inversen van elkaar zijn, hebben hun grafieken een bijzondere relatie.</p>
-
-    <p>De grafieken van:</p>
-
-    <p class="formula">y = b^x</p>
-
-    <p>en:</p>
-
-    <p class="formula">y = log_b(x)</p>
-
-    <p>zijn elkaars spiegelbeeld in de lijn:</p>
+    <p>
+      elkaars spiegelbeeld in:
+    </p>
 
     <p class="formula">y = x</p>
 
-    <p>Dit komt doordat de invoer en uitvoer bij een inverse functie van plaats worden verwisseld.</p>
+
+    <h3>Een exponentiële vergelijking oplossen met een logaritme</h3>
+
+    <p>
+      Stel:
+    </p>
+
+    <p class="formula">2^{x} = 10</p>
+
+    <p>
+      We nemen aan beide kanten de logaritme met basis 2:
+    </p>
+
+    <p class="formula">log_{2}(2^{x}) = log_{2}(10)</p>
+
+    <p>
+      Omdat de logaritme de machtsverheffing met dezelfde basis ongedaan maakt,
+      krijgen we:
+    </p>
+
+    <p class="formula">x = log_{2}(10)</p>
+
+    <p>
+      Met een rekenmachine vinden we ongeveer:
+    </p>
+
+    <p class="formula">x ≈ 3,32</p>
+
+    <p>
+      De logaritme maakt het dus mogelijk om een exponent te vinden die niet
+      eenvoudig uit het hoofd kan worden bepaald.
+    </p>
 
 
-    <h4>Een exponentiële functie als model</h4>
+    <h3>De grondtalwissel</h3>
 
-    <p>Wanneer je een werkelijkheid als exponentieel model wilt beschrijven, kun je deze vragen stellen:</p>
+    <p>
+      Een rekenmachine heeft meestal toetsen voor de logaritme met basis 10
+      en voor de natuurlijke logaritme. Toch kunnen we ook andere bases
+      berekenen.
+    </p>
+
+    <p>
+      Hiervoor gebruiken we de grondtalwissel:
+    </p>
+
+    <p class="formula">
+      log_{b}(x) = \\frac{log(x)}{log(b)}
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      log_{2}(10) = \\frac{log(10)}{log(2)}
+    </p>
+
+    <p>
+      De grondtalwissel is vooral een praktisch hulpmiddel:
+      hij maakt een logaritme met een willekeurige basis berekenbaar met
+      standaardfuncties op een rekenmachine.
+    </p>
+
+
+    <h3>Logaritmeregels herkennen</h3>
+
+    <p>
+      Logaritmen hebben enkele belangrijke eigenschappen die rechtstreeks
+      samenhangen met de rekenregels voor machten.
+    </p>
+
+    <p>
+      Voor vermenigvuldiging geldt:
+    </p>
+
+    <p class="formula">
+      log_{b}(xy) = log_{b}(x) + log_{b}(y)
+    </p>
+
+    <p>
+      Een product wordt dus een som.
+    </p>
+
+    <p>
+      Voor een macht geldt:
+    </p>
+
+    <p class="formula">
+      log_{b}(x^{n}) = n · log_{b}(x)
+    </p>
+
+    <p>
+      De exponent komt dus voor de logaritme te staan.
+    </p>
+
+    <p>
+      Deze regels zijn nuttig, maar voor deze milestone is vooral belangrijk
+      dat je hun betekenis herkent. Een volledige theorie van logaritmische
+      rekenregels komt later terug wanneer ze nodig is.
+    </p>
+
+
+    <h3>Een volledig voorbeeld: bacteriegroei</h3>
+
+    <p>
+      Stel dat een bacteriepopulatie aanvankelijk 500 bacteriën bevat en
+      ieder uur verdubbelt.
+    </p>
+
+    <p>
+      Het exponentiële model is:
+    </p>
+
+    <p class="formula">N(t) = 500 · 2^{t}</p>
+
+    <p>
+      Na 3 uur:
+    </p>
+
+    <p class="formula">N(3) = 500 · 2^{3} = 4000</p>
+
+    <p>
+      We willen weten wanneer de populatie 10.000 bacteriën bereikt.
+    </p>
+
+    <p>
+      We stellen de uitvoer gelijk aan 10.000:
+    </p>
+
+    <p class="formula">500 · 2^{t} = 10000</p>
+
+    <p>
+      Deel door 500:
+    </p>
+
+    <p class="formula">2^{t} = 20</p>
+
+    <p>
+      Nu gebruiken we een logaritme:
+    </p>
+
+    <p class="formula">t = log_{2}(20)</p>
+
+    <p>
+      Dus ongeveer:
+    </p>
+
+    <p class="formula">t ≈ 4,32</p>
+
+    <p>
+      Volgens dit model bereikt de populatie na ongeveer 4,32 uur
+      de waarde 10.000.
+    </p>
+
+    <p>
+      Hier zien we de volledige keten:
+    </p>
+
+    <p class="formula">
+      werkelijkheid → exponentiële functie → vergelijking → logaritme
+    </p>
+
+
+    <h3>Domein en basis van een logaritme</h3>
+
+    <p>
+      Een reële logaritme is niet voor iedere invoer gedefinieerd.
+    </p>
+
+    <p>
+      Voor:
+    </p>
+
+    <p class="formula">log_{b}(x)</p>
+
+    <p>
+      moet gelden:
+    </p>
+
+    <p class="formula">x > 0</p>
+
+    <p>
+      De logaritme van nul en van een negatief getal is binnen de reële
+      getallen niet gedefinieerd.
+    </p>
+
+    <p>
+      Ook voor de basis gelden voorwaarden:
+    </p>
+
+    <p class="formula">b > 0</p>
+
+    <p class="formula">b \\neq 1</p>
+
+    <p>
+      De basis 1 kan niet gebruikt worden omdat:
+    </p>
+
+    <p class="formula">1^{x} = 1</p>
+
+    <p>
+      voor iedere <span class="formula-inline">x</span>.
+    </p>
+
+
+    <h3>Een exponentieel model herkennen</h3>
+
+    <p>
+      Wanneer je een situatie als exponentieel model wilt beschrijven,
+      kun je steeds dezelfde vragen stellen:
+    </p>
 
     <ol>
       <li>Wat is de beginwaarde?</li>
-      <li>Wordt de hoeveelheid telkens met dezelfde factor vermenigvuldigd?</li>
+      <li>Wordt de grootheid telkens met dezelfde factor vermenigvuldigd?</li>
       <li>Wat is de groeifactor?</li>
-      <li>Over welke tijdseenheid of stap gaat het?</li>
+      <li>Over welke periode of stap gaat het?</li>
       <li>Is er sprake van groei of verval?</li>
     </ol>
 
-    <p>Als de beginwaarde <span class="formula-inline">b</span> is en de groeifactor <span class="formula-inline">g</span>, dan kunnen we schrijven:</p>
+    <p>
+      Als de beginwaarde <span class="formula-inline">b</span> is en de
+      groeifactor <span class="formula-inline">g</span>, schrijven we:
+    </p>
 
-    <p class="formula">f(x) = b × g^x</p>
+    <p class="formula">f(x) = b · g^{x}</p>
 
-    <p>Daarmee hebben we een eenvoudig maar krachtig model.</p>
-
-
-    <h4>Wanneer gebruik je een logaritme?</h4>
-
-    <p>Een logaritme is vooral nuttig wanneer de onbekende in de exponent staat.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">2^x = 50</p>
-
-    <p>of:</p>
-
-    <p class="formula">100 × 1,03^x = 150</p>
-
-    <p>In beide gevallen is x de exponent die we zoeken.</p>
-
-    <p>Een logaritme geeft ons een systematische manier om die exponent te bepalen.</p>
-
-    <p>Daarom vormen exponentiële functies en logaritmen een natuurlijk paar:</p>
-
-    <p class="formula">macht ↔ logaritme</p>
+    <p>
+      Staat de onbekende vervolgens in de exponent, dan is een logaritme
+      het natuurlijke hulpmiddel.
+    </p>
 
 
-    <h4>Veelgemaakte fouten</h4>
+    <h3>Wanneer gebruik je een logaritme?</h3>
 
-    <p><strong>Fout 1: exponentiële groei verwarren met lineaire groei.</strong></p>
+    <p>
+      Een logaritme gebruik je vooral wanneer de onbekende in een exponent
+      staat.
+    </p>
 
-    <p>Bij lineaire groei komt telkens dezelfde hoeveelheid erbij. Bij exponentiële groei wordt telkens met dezelfde factor vermenigvuldigd.</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
-    <p><strong>Fout 2: een percentage rechtstreeks als groeifactor gebruiken.</strong></p>
+    <p class="formula">2^{x} = 50</p>
 
-    <p>Bij 5% groei is de groeifactor 1,05 en niet 0,05.</p>
+    <p>
+      of:
+    </p>
 
-    <p><strong>Fout 3: denken dat 20% daling een groeifactor van −0,20 geeft.</strong></p>
+    <p class="formula">100 · 1,03^{x} = 150</p>
 
-    <p>Bij 20% daling blijft 80% over. De groeifactor is dus 0,80.</p>
+    <p>
+      In beide gevallen is <span class="formula-inline">x</span> de exponent
+      die we zoeken.
+    </p>
 
-    <p><strong>Fout 4: een logaritme zien als een gewone deling.</strong></p>
-
-    <p>Een logaritme vraagt welke exponent nodig is om een bepaalde waarde te krijgen.</p>
-
-    <p><strong>Fout 5: vergeten dat het argument van een reële logaritme positief moet zijn.</strong></p>
-
-    <p>Voor <span class="formula-inline">log_b(x)</span> moet gelden <span class="formula-inline">x > 0</span>.</p>
-
-    <p><strong>Fout 6: denken dat logaritmen alleen met basis 10 bestaan.</strong></p>
-
-    <p>Elke toegestane basis kan worden gebruikt. Basis 10 en basis e zijn alleen bijzonder belangrijk.</p>
+    <p>
+      De logaritme geeft een systematische manier om die exponent te bepalen.
+    </p>
 
 
-    <h4>Een vaste werkwijze</h4>
+    <h3>Veelgemaakte fouten</h3>
 
-    <p>Bij een groeiprobleem kun je eerst bepalen welk soort verandering je ziet.</p>
+    <p>
+      <strong>Fout 1: exponentiële groei verwarren met lineaire groei.</strong>
+    </p>
+
+    <p>
+      Bij lineaire groei komt telkens dezelfde hoeveelheid erbij.
+      Bij exponentiële groei wordt telkens met dezelfde factor vermenigvuldigd.
+    </p>
+
+    <p>
+      <strong>Fout 2: een percentage rechtstreeks als groeifactor gebruiken.</strong>
+    </p>
+
+    <p>
+      Bij 5% groei is de groeifactor:
+    </p>
+
+    <p class="formula">1,05</p>
+
+    <p>
+      en niet 0,05.
+    </p>
+
+    <p>
+      <strong>Fout 3: een dalingspercentage verwarren met een negatieve factor.</strong>
+    </p>
+
+    <p>
+      Bij 20% daling blijft 80% over:
+    </p>
+
+    <p class="formula">g = 0,80</p>
+
+    <p>
+      <strong>Fout 4: een logaritme zien als een gewone bewerking op een getal.</strong>
+    </p>
+
+    <p>
+      Een logaritme vraagt welke exponent nodig is om een bepaalde waarde
+      te verkrijgen.
+    </p>
+
+    <p>
+      <strong>Fout 5: vergeten dat het argument van een reële logaritme positief moet zijn.</strong>
+    </p>
+
+    <p>
+      Voor <span class="formula-inline">log_{b}(x)</span> moet gelden:
+    </p>
+
+    <p class="formula">x > 0</p>
+
+
+    <h3>Een vaste werkwijze</h3>
 
     <ol>
-      <li>Kijk of er telkens een vaste hoeveelheid bijkomt of afgaat.</li>
+      <li>Bepaal wat de grootheid en de invoer voorstellen.</li>
+      <li>Kijk of er telkens een vaste hoeveelheid wordt toegevoegd of afgetrokken.</li>
       <li>Kijk of er telkens met een vaste factor wordt vermenigvuldigd.</li>
-      <li>Een vaste hoeveelheid wijst op lineaire groei.</li>
-      <li>Een vaste factor wijst op exponentiële groei of verval.</li>
-      <li>Bepaal de beginwaarde.</li>
-      <li>Bepaal de groeifactor.</li>
+      <li>Bij een vaste factor: bepaal de beginwaarde en groeifactor.</li>
       <li>Schrijf het exponentiële model.</li>
       <li>Als de onbekende in de exponent staat, gebruik je een logaritme.</li>
-      <li>Controleer of de gevonden waarde betekenis heeft binnen het model.</li>
+      <li>Controleer of de gevonden oplossing betekenis heeft binnen de oorspronkelijke situatie.</li>
     </ol>
 
+    <p>
+      Zo kun je een groeiprobleem stap voor stap vertalen:
+    </p>
 
-    <h4>Wat hebben we eigenlijk geleerd?</h4>
+    <p class="formula">
+      werkelijkheid → model → vergelijking → logaritme
+    </p>
 
-    <p>Bij exponentiële groei wordt een hoeveelheid telkens met dezelfde factor vermenigvuldigd.</p>
 
-    <p>Een eenvoudig exponentieel model heeft de vorm:</p>
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
 
-    <p class="formula">f(x) = b × g^x</p>
+    <p>
+      Exponentiële groei ontstaat wanneer een grootheid telkens met dezelfde
+      factor wordt vermenigvuldigd.
+    </p>
 
-    <p>waarbij b de beginwaarde is en g de groeifactor.</p>
+    <p>
+      Een eenvoudig exponentieel model heeft de vorm:
+    </p>
 
-    <p>Als <span class="formula-inline">g > 1</span>, hebben we groei.</p>
+    <p class="formula">f(x) = b · g^{x}</p>
 
-    <p>Als <span class="formula-inline">0 < g < 1</span>, hebben we verval.</p>
+    <p>
+      waarbij <span class="formula-inline">b</span> de beginwaarde is en
+      <span class="formula-inline">g</span> de groeifactor.
+    </p>
 
-    <p>Een groeipercentage kunnen we omzetten naar een groeifactor.</p>
+    <p>
+      Bij:
+    </p>
 
-    <p>Bij p procent groei:</p>
+    <p class="formula">g > 1</p>
+
+    <p>
+      spreken we van exponentiële groei.
+    </p>
+
+    <p>
+      Bij:
+    </p>
+
+    <p class="formula">0 < g < 1</p>
+
+    <p>
+      spreken we van exponentieel verval.
+    </p>
+
+    <p>
+      Een groeipercentage kunnen we omzetten naar een groeifactor.
+      Bij <span class="formula-inline">p</span> procent groei, geschreven
+      als decimaal:
+    </p>
 
     <p class="formula">g = 1 + p</p>
 
-    <p>De logaritme is de inverse bewerking van machtsverheffen.</p>
+    <p>
+      De logaritme is de inverse bewerking van machtsverheffen:
+    </p>
 
-    <p>De betekenis van:</p>
+    <p class="formula">log_{b}(a) = x</p>
 
-    <p class="formula">log_b(a) = x</p>
+    <p>
+      betekent:
+    </p>
 
-    <p>is:</p>
+    <p class="formula">b^{x} = a</p>
 
-    <p class="formula">b^x = a</p>
+    <p>
+      Daardoor kunnen we een onbekende exponent vinden.
+    </p>
 
-    <p>Logaritmen stellen ons daardoor in staat om onbekende exponenten te vinden.</p>
+    <p>
+      De exponentiële en logaritmische functies vormen dus een natuurlijk
+      paar:
+    </p>
 
-    <p>Exponentiële en logaritmische functies zijn inverse functies en vormen samen een belangrijk paar in de wiskunde.</p>
+    <p class="formula">macht ↔ logaritme</p>
 
-    <p>Deze functies zijn bovendien essentieel voor het beschrijven van processen zoals groei, verval en schaalverschillen.</p>
-
-    <p>In de volgende milestone maken we de laatste grote stap van Fase 2: we gebruiken <strong>hoeken en verhoudingen</strong> om lengtes, richtingen en periodieke verschijnselen te beschrijven.</p>
-
+    <p>
+      In de volgende milestone maken we de laatste grote stap van Fase 2:
+      we gebruiken <strong>hoeken en verhoudingen</strong> om lengtes,
+      richtingen en periodieke verschijnselen te beschrijven.
+    </p>
 
     <div class="callout">
-      <p><strong>Inzicht:</strong> </p>
-      <p>Bij lineaire groei verandert een grootheid telkens met dezelfde hoeveelheid. Bij exponentiële groei verandert ze telkens met dezelfde factor. De logaritme draait exponentiële groei weer om: ze beantwoordt de vraag welke exponent nodig is om een bepaalde waarde te bereiken.</p>
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Bij lineaire groei verandert een grootheid telkens met dezelfde
+        hoeveelheid. Bij exponentiële groei verandert ze telkens met
+        dezelfde factor.
+      </p>
+      <p>
+        De logaritme draait exponentiële groei weer om: ze beantwoordt de
+        vraag welke exponent nodig is om een bepaalde waarde te bereiken.
+      </p>
     </div>
   `
 },
@@ -8920,809 +8363,937 @@ const MILESTONES_2 = [
   id: "2.14",
   title: "Trigonometrie",
   goal: "Hoe verbinden we hoeken met lengtes en verhoudingen?",
-  theory: /*html*/`
+  theory: /* html */`
+    <h2>Trigonometrie</h2>
 
-    <p><strong>Doel:</strong></p>
+    <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
-      <li>sinus, cosinus en tangens begrijpen als verhoudingen in een rechthoekige driehoek</li>
-      <li>de juiste goniometrische verhouding kiezen</li>
-      <li>onbekende zijden en hoeken berekenen</li>
-      <li>het verband met gelijkvormigheid en Pythagoras begrijpen</li>
-      <li>sinus en cosinus herkennen op de eenheidscirkel</li>
-      <li>de verbinding leggen tussen hoeken, coördinaten, hellingen en periodieke beweging</li>
+      <li>Hoe koppelen we een hoek aan verhoudingen van zijden?</li>
+      <li>Waarom blijven die verhoudingen gelijk bij gelijkvormige driehoeken?</li>
+      <li>Hoe gebruiken we sinus, cosinus en tangens?</li>
+      <li>Hoe berekenen we een onbekende zijde of hoek?</li>
+      <li>Hoe hangen sinus en cosinus samen met de eenheidscirkel?</li>
+      <li>Hoe verbinden we trigonometrie met coördinaten en de helling van een rechte?</li>
+      <li>Waarom worden radialen en periodieke functies belangrijk in hogere wiskunde?</li>
     </ul>
 
+    <p>
+      In les 2.10 leerden we dat gelijkvormige figuren dezelfde verhoudingen
+      tussen overeenkomstige zijden hebben. In les 2.8 gebruikten we coördinaten
+      en de helling van een rechte.
+    </p>
+
+    <p>
+      Trigonometrie brengt deze ideeën samen: een <strong>hoek</strong> bepaalt
+      bepaalde <strong>verhoudingen</strong>, en die verhoudingen kunnen we
+      gebruiken om lengtes, richtingen en later ook bewegingen te beschrijven.
+    </p>
+
     <div class="callout">
-      <strong>Kernidee:</strong> Trigonometrie verbindt hoeken met verhoudingen van lengtes. Via gelijkvormigheid en de eenheidscirkel groeit dit uit tot een taal voor richtingen, coördinaten en periodieke verschijnselen.
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Trigonometrie koppelt hoeken aan verhoudingen van lengtes.
+        Via gelijkvormigheid blijven die verhoudingen voor een bepaalde hoek
+        hetzelfde, ongeacht de grootte van de driehoek.
+      </p>
+      <p>
+        Met de eenheidscirkel krijgen sinus en cosinus vervolgens een algemene
+        betekenis die verder gaat dan rechthoekige driehoeken.
+      </p>
     </div>
-
-    <h3>Een hoek vertelt meer dan alleen een richting</h3>
-
-    <p>In de vorige milestones hebben we geleerd hoe we lengtes en hoeken van figuren kunnen beschrijven.</p>
-
-    <p>Bij gelijkvormige figuren zagen we bovendien dat overeenkomstige lengtes altijd in dezelfde verhouding staan.</p>
-
-    <p>Nu combineren we die ideeën.</p>
-
-    <p>In een rechthoekige driehoek is er een bijzondere relatie tussen een <strong>hoek</strong> en de <strong>verhoudingen van de zijden</strong>.</p>
-
-    <p>Dat verband vormt de basis van de trigonometrie.</p>
 
 
     <h3>De rechthoekige driehoek</h3>
 
-    <p>Een rechthoekige driehoek heeft één rechte hoek van 90°.</p>
+    <p>
+      We vertrekken van een rechthoekige driehoek. De zijde tegenover de rechte
+      hoek noemen we de <strong>schuine zijde</strong> of <strong>hypotenusa</strong>.
+    </p>
 
-    <p>De zijde tegenover deze rechte hoek heeft een bijzondere naam: de <strong>schuine zijde</strong> of <strong>hypotenusa</strong>.</p>
+    <div class="theory-image">
+      <img
+        src="assets/driehoek-trig-zijden.svg"
+        alt="Rechthoekige driehoek met de schuine, overstaande en aanliggende zijde ten opzichte van een hoek theta."
+      >
+    </div>
 
-    <p>De andere twee zijden noemen we de rechthoekszijden.</p>
+    <p>
+      We bekijken één van de scherpe hoeken en noemen die hoek
+      <span class="formula-inline">θ</span>.
+    </p>
 
-          <div class="theory-image">
-        <img
-          src="assets/driehoek-trig-zijden.svg"
-          alt="Rechthoekige driehoek. Bij hoek theta: de aanliggende zijde naast de hoek, de overstaande ertegenover, de schuine zijde tegenover de rechte hoek."
-        >
-      </div>
-
-    <p>We bekijken nu één van de twee scherpe hoeken van de driehoek: de hoek θ (griekse letter theta)</p>
-
-    <p>Ten opzichte van die hoek krijgen de zijden een specifieke rol:</p>
+    <p>Ten opzichte van deze hoek onderscheiden we:</p>
 
     <ul>
-      <li>de <strong>schuine zijde</strong> ligt tegenover de rechte hoek;</li>
-      <li>de <strong>overstaande zijde</strong> ligt tegenover de gekozen hoek;</li>
-      <li>de <strong>aanliggende zijde</strong> ligt naast de gekozen hoek, maar is niet de schuine zijde.</li>
+      <li>de <strong>schuine zijde</strong>: tegenover de rechte hoek;</li>
+      <li>de <strong>overstaande zijde</strong>: tegenover hoek θ;</li>
+      <li>de <strong>aanliggende zijde</strong>: naast hoek θ, maar niet de schuine zijde.</li>
     </ul>
 
-    <p>De begrippen overstaand en aanliggend hangen dus af van de hoek die we bekijken.</p>
+    <p>
+      De woorden <strong>overstaand</strong> en <strong>aanliggend</strong>
+      hangen dus af van de hoek die we bekijken.
+    </p>
 
 
-    <h3>De verhouding tussen zijden</h3>
+    <h3>Waarom kunnen we verhoudingen aan een hoek koppelen?</h3>
 
-    <p>Stel dat we een bepaalde scherpe hoek hebben.</p>
+    <p>
+      Stel dat we twee rechthoekige driehoeken hebben met dezelfde scherpe hoek.
+      Volgens de eigenschappen van gelijkvormige driehoeken zijn ze gelijkvormig.
+    </p>
 
-    <p>We kunnen de verhouding nemen van de overstaande zijde tot de schuine zijde.</p>
+    <p>
+      Alle overeenkomstige lengtes worden dan met dezelfde factor vermenigvuldigd.
+      Als teller en noemer van een verhouding beide met dezelfde factor worden
+      vermenigvuldigd, verandert de verhouding niet.
+    </p>
 
     <p>Bijvoorbeeld:</p>
 
-    <p class="formula">overstaande zijde / schuine zijde</p>
+    <p class="formula">
+      \frac{3}{5} = \frac{6}{10} = \frac{9}{15}
+    </p>
 
-    <p>We kunnen ook andere verhoudingen maken:</p>
+    <p>
+      De driehoeken kunnen dus verschillende afmetingen hebben, terwijl dezelfde
+      hoek steeds dezelfde verhouding tussen overeenkomstige zijden geeft.
+    </p>
 
-    <p class="formula">aanliggende zijde / schuine zijde</p>
-
-    <p>en:</p>
-
-    <p class="formula">overstaande zijde / aanliggende zijde</p>
-
-    <p>Deze verhoudingen blijken niet willekeurig te zijn.</p>
-
-    <p>Voor een bepaalde hoek hebben ze steeds dezelfde waarde, ongeacht hoe groot de driehoek is.</p>
-
-
-    <h3>Waarom blijven die verhoudingen hetzelfde?</h3>
-
-    <p>Hier komt de gelijkvormigheid uit milestone 2.10 terug.</p>
-
-    <p>Neem twee rechthoekige driehoeken met dezelfde scherpe hoek.</p>
-
-    <p>Omdat ze dezelfde hoeken hebben, zijn ze gelijkvormig.</p>
-
-    <p>Hun overeenkomstige zijden zijn dus evenredig.</p>
-
-    <p>Als bijvoorbeeld alle lengtes van de tweede driehoek twee keer zo groot zijn, worden zowel de teller als de noemer van een verhouding twee keer zo groot.</p>
-
-    <p>De verhouding zelf verandert daardoor niet.</p>
-
-    <p>Dit is de fundamentele reden waarom we een verhouding aan een hoek kunnen koppelen.</p>
+    <div class="callout">
+      <p><strong>Het belangrijke inzicht:</strong></p>
+      <p>
+        Een goniometrische verhouding hoort bij een hoek, niet bij één bepaalde
+        driehoek.
+      </p>
+    </div>
 
 
     <h3>De sinus</h3>
 
-    <p>De verhouding van de overstaande zijde tot de schuine zijde noemen we de <strong>sinus</strong> van de hoek.</p>
+    <p>
+      De verhouding van de overstaande zijde tot de schuine zijde noemen we
+      de <strong>sinus</strong> van de hoek.
+    </p>
 
-    <p>We schrijven:</p>
+    <p class="formula">
+      \sin(θ) = \frac{\text{overstaande zijde}}{\text{schuine zijde}}
+    </p>
 
-    <p class="formula">sin(θ) = overstaande zijde / schuine zijde</p>
+    <p>
+      Stel dat de overstaande zijde 3 cm is en de schuine zijde 5 cm:
+    </p>
 
-    <p>Bijvoorbeeld, als de overstaande zijde 3 is en de schuine zijde 5:</p>
+    <p class="formula">
+      \sin(θ) = \frac{3}{5} = 0,6
+    </p>
 
-    <p class="formula">sin(θ) = 3 / 5</p>
-
-    <p>De sinus is dus geen extra lengte.</p>
-
-    <p>Het is een <strong>getal dat een verhouding beschrijft</strong>.</p>
+    <p>
+      De sinus is dus een <strong>getal</strong>: hij beschrijft een verhouding,
+      geen nieuwe lengte.
+    </p>
 
 
     <h3>De cosinus</h3>
 
-    <p>De verhouding van de aanliggende zijde tot de schuine zijde noemen we de <strong>cosinus</strong>.</p>
+    <p>
+      De verhouding van de aanliggende zijde tot de schuine zijde noemen we
+      de <strong>cosinus</strong>.
+    </p>
 
-    <p>We schrijven:</p>
+    <p class="formula">
+      \cos(θ) = \frac{\text{aanliggende zijde}}{\text{schuine zijde}}
+    </p>
 
-    <p class="formula">cos(θ) = aanliggende zijde / schuine zijde</p>
+    <p>
+      Als de aanliggende zijde 4 cm is en de schuine zijde 5 cm:
+    </p>
 
-    <p>Als de aanliggende zijde 4 is en de schuine zijde 5:</p>
-
-    <p class="formula">cos(θ) = 4 / 5</p>
-
-    <p>Ook de cosinus is dus een verhouding.</p>
+    <p class="formula">
+      \cos(θ) = \frac{4}{5} = 0,8
+    </p>
 
 
     <h3>De tangens</h3>
 
-    <p>De verhouding van de overstaande zijde tot de aanliggende zijde noemen we de <strong>tangens</strong>.</p>
+    <p>
+      De verhouding van de overstaande zijde tot de aanliggende zijde noemen
+      we de <strong>tangens</strong>.
+    </p>
 
-    <p>We schrijven:</p>
+    <p class="formula">
+      \tan(θ) = \frac{\text{overstaande zijde}}{\text{aanliggende zijde}}
+    </p>
 
-    <p class="formula">tan(θ) = overstaande zijde / aanliggende zijde</p>
+    <p>
+      Als de overstaande zijde 3 cm is en de aanliggende zijde 4 cm:
+    </p>
 
-    <p>Als de overstaande zijde 3 is en de aanliggende zijde 4:</p>
+    <p class="formula">
+      \tan(θ) = \frac{3}{4}
+    </p>
 
-    <p class="formula">tan(θ) = 3 / 4</p>
+    <p>We hebben nu de drie fundamentele verhoudingen:</p>
 
-    <p>We hebben nu drie fundamentele verhoudingen:</p>
+    <p class="formula">
+      \sin(θ) = \frac{\text{overstaande zijde}}{\text{schuine zijde}}
+    </p>
 
-    <p class="formula">sin(θ) = overstaande zijde / schuine zijde</p>
+    <p class="formula">
+      \cos(θ) = \frac{\text{aanliggende zijde}}{\text{schuine zijde}}
+    </p>
 
-    <p class="formula">cos(θ) = aanliggende zijde / schuine zijde</p>
+    <p class="formula">
+      \tan(θ) = \frac{\text{overstaande zijde}}{\text{aanliggende zijde}}
+    </p>
 
-    <p class="formula">tan(θ) = overstaande zijde / aanliggende zijde</p>
-
-
-    <h3>Een handige geheugensteun</h3>
-
-    <p>De drie verhoudingen kunnen kort worden onthouden als:</p>
-
-    <p class="formula">sin = overstaand / schuin</p>
-
-    <p class="formula">cos = aanliggend / schuin</p>
-
-    <p class="formula">tan = overstaand / aanliggend</p>
-
-    <p>Een geheugensteun kan handig zijn, maar het belangrijkste blijft dat je begrijpt <strong>welke zijden</strong> in de verhouding staan.</p>
-
-
-    <h3>Een hoek berekenen uit een driehoek</h3>
-
-    <p>Stel dat de overstaande zijde 3 cm is en de schuine zijde 5 cm.</p>
-
-    <p>Dan geldt:</p>
-
-    <p class="formula">sin(θ) = 3 / 5</p>
-
-    <p>Dus:</p>
-
-    <p class="formula">sin(θ) = 0,6</p>
-
-    <p>Om de hoek zelf te vinden, gebruiken we de inverse sinus:</p>
-
-    <p class="formula">hoek = sin⁻¹(0,6)</p>
-
-    <p>Dit geeft ongeveer:</p>
-
-    <p class="formula">hoek ≈ 36,87°</p>
-
-    <p>De inverse sinus beantwoordt dus de omgekeerde vraag:</p>
-
-    <p><strong>Welke hoek heeft een sinus van 0,6?</strong></p>
-
-
-    <h3>De inverse functies</h3>
-
-    <p>Net zoals de logaritme in 2.13 de inverse bewerking van machtsverheffen is, bestaan er inverse goniometrische functies.</p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">sin(θ) = 0,6</p>
-
-    <p>wordt:</p>
-
-    <p class="formula">hoek = sin⁻¹(0,6)</p>
-
-    <p>Op dezelfde manier bestaan:</p>
-
-    <p class="formula">cos⁻¹(x)</p>
-
-    <p>en:</p>
-
-    <p class="formula">tan⁻¹(x)</p>
-
-    <p>Deze functies worden gebruikt wanneer we de hoek kennen uit een verhouding van zijden.</p>
+    <div class="callout">
+      <p><strong>Geheugensteun:</strong></p>
+      <p>
+        sinus = overstaand / schuin
+      </p>
+      <p>
+        cosinus = aanliggend / schuin
+      </p>
+      <p>
+        tangens = overstaand / aanliggend
+      </p>
+      <p>
+        De geheugensteun is nuttig, maar het belangrijkste is dat je begrijpt
+        welke zijden in elke verhouding voorkomen.
+      </p>
+    </div>
 
 
     <h3>Een onbekende zijde berekenen</h3>
 
-    <p>Trigonometrie werkt ook in de andere richting.</p>
+    <p>
+      Trigonometrie wordt interessant wanneer één lengte onbekend is.
+    </p>
 
-    <p>Stel dat een rechthoekige driehoek een hoek van 30° heeft en een schuine zijde van 10 cm.</p>
+    <p>
+      Stel dat we een rechthoekige driehoek hebben met een hoek van 30° en
+      een schuine zijde van 10 cm. We zoeken de overstaande zijde.
+    </p>
 
-    <p>We zoeken de overstaande zijde.</p>
+    <p>
+      De bekende en onbekende zijde komen samen met de schuine zijde voor in
+      de sinus:
+    </p>
 
-    <p>Daarvoor gebruiken we de sinus:</p>
-
-    <p class="formula">sin(30°) = overstaande zijde / 10</p>
-
-    <p>Omdat:</p>
-
-    <p class="formula">sin(30°) = 0,5</p>
-
-    <p>krijgen we:</p>
-
-    <p class="formula">0,5 = overstaande zijde / 10</p>
-
-    <p>Dus:</p>
-
-    <p class="formula">overstaande zijde = 5 cm</p>
-
-    <p>Trigonometrie maakt het dus mogelijk om een onbekende lengte te vinden wanneer we een hoek en een andere lengte kennen.</p>
-
-
-    <h3>Een tweede voorbeeld: de aanliggende zijde</h3>
-
-    <p>Stel dat een rechthoekige driehoek een hoek van 60° heeft en een schuine zijde van 8 cm.</p>
-
-    <p>We zoeken de aanliggende zijde.</p>
-
-    <p>Daarvoor gebruiken we de cosinus:</p>
-
-    <p class="formula">cos(60°) = aanliggende zijde / 8</p>
+    <p class="formula">
+      \sin(30^\circ) = \frac{\text{overstaande zijde}}{10}
+    </p>
 
     <p>Omdat:</p>
 
-    <p class="formula">cos(60°) = 0,5</p>
+    <p class="formula">
+      \sin(30^\circ) = 0,5
+    </p>
 
     <p>volgt:</p>
 
-    <p class="formula">aanliggende zijde = 4 cm</p>
-
-
-    <h3>De tangens gebruiken</h3>
-
-    <p>Stel dat we een rechthoekige driehoek hebben met een hoek van 40°.</p>
-
-    <p>De aanliggende zijde is 6 cm.</p>
-
-    <p>We zoeken de overstaande zijde.</p>
-
-    <p>Dan is de tangens geschikt:</p>
-
-    <p class="formula">tan(40°) = overstaande zijde / 6</p>
+    <p class="formula">
+      0,5 = \frac{\text{overstaande zijde}}{10}
+    </p>
 
     <p>Dus:</p>
 
-    <p class="formula">overstaande zijde = 6 × tan(40°)</p>
+    <p class="formula">
+      \text{overstaande zijde} = 5\text{ cm}
+    </p>
 
-    <p>Met een rekenmachine vinden we ongeveer:</p>
+    <p>
+      Het patroon is steeds hetzelfde: kies de verhouding die de bekende en
+      onbekende zijden bevat en los daarna de vergelijking op.
+    </p>
 
-    <p class="formula">overstaande zijde ≈ 5,03 cm</p>
 
-    <p>De keuze van sinus, cosinus of tangens hangt dus af van welke zijden we kennen en welke zijde we zoeken.</p>
+    <h3>Een onbekende hoek berekenen</h3>
+
+    <p>
+      We kunnen ook de omgekeerde vraag stellen. Stel dat de overstaande zijde
+      3 cm is en de schuine zijde 5 cm.
+    </p>
+
+    <p class="formula">
+      \sin(θ) = \frac{3}{5} = 0,6
+    </p>
+
+    <p>
+      Nu kennen we de verhouding, maar zoeken we de hoek. Daarvoor gebruiken
+      we de <strong>inverse sinus</strong>:
+    </p>
+
+    <p class="formula">
+      θ = \sin^{-1}(0,6)
+    </p>
+
+    <p>Dit geeft ongeveer:</p>
+
+    <p class="formula">
+      θ \approx 36,87^\circ
+    </p>
+
+    <p>
+      De inverse sinus beantwoordt dus de vraag:
+      <strong>welke hoek heeft een sinus van 0,6?</strong>
+    </p>
+
+    <p>
+      Op dezelfde manier bestaan:
+    </p>
+
+    <p class="formula">
+      \cos^{-1}(x)
+    </p>
+
+    <p class="formula">
+      \tan^{-1}(x)
+    </p>
 
 
-    <h3>De juiste verhouding kiezen</h3>
+    <h3>Welke verhouding kies je?</h3>
 
-    <p>Een praktische werkwijze is:</p>
+    <p>
+      Je hoeft sinus, cosinus en tangens niet blind uit het hoofd te kiezen.
+      Kijk eerst welke zijden je kent en welke je zoekt.
+    </p>
 
     <ol>
       <li>Markeer de gegeven hoek.</li>
-      <li>Bepaal de schuine zijde.</li>
+      <li>Zoek de schuine zijde.</li>
       <li>Bepaal welke zijde overstaand is.</li>
       <li>Bepaal welke zijde aanliggend is.</li>
-      <li>Kijk welke verhouding de bekende en onbekende zijden bevat.</li>
+      <li>Kies de verhouding waarin de bekende en onbekende zijden voorkomen.</li>
+      <li>Schrijf de verhouding eerst op.</li>
+      <li>Los daarna de vergelijking op.</li>
     </ol>
 
-    <p>Als je de overstaande en schuine zijde gebruikt, heb je sinus.</p>
+    <p>
+      Bijvoorbeeld:
+    </p>
 
-    <p>Als je de aanliggende en schuine zijde gebruikt, heb je cosinus.</p>
+    <p class="formula">
+      \sin = \frac{\text{overstaand}}{\text{schuin}}
+    </p>
 
-    <p>Als je de overstaande en aanliggende zijde gebruikt, heb je tangens.</p>
+    <p class="formula">
+      \cos = \frac{\text{aanliggend}}{\text{schuin}}
+    </p>
 
+    <p class="formula">
+      \tan = \frac{\text{overstaand}}{\text{aanliggend}}
+    </p>
 
-    <h4>Een belangrijk verband tussen sinus en cosinus</h4>
-
-    <p>Sinus en cosinus zijn niet volledig onafhankelijke verhoudingen.</p>
-
-    <p>Voor een hoek in een rechthoekige driehoek geldt:</p>
-
-    <p class="formula">sin²(θ) + cos²(θ) = 1</p>
-
-    <p>Hierbij betekent bijvoorbeeld:</p>
-
-    <p class="formula">sin²(θ) = (sin(θ))²</p>
-
-    <p>Dit verband volgt rechtstreeks uit de stelling van Pythagoras.</p>
+    <p>
+      De keuze volgt dus uit de structuur van het probleem.
+    </p>
 
 
-    <h4>Waarom geldt sin² + cos² = 1?</h4>
+    <h3>Een volledig voorbeeld: de hoogte van een gebouw</h3>
 
-    <p>Neem een rechthoekige driehoek met schuine zijde c en rechthoekszijden a en b.</p>
+    <p>
+      Je staat 30 meter van een gebouw. De hoek tussen de horizontale grond
+      en je zichtlijn naar de top is 40°.
+    </p>
 
-    <p>Volgens Pythagoras:</p>
+    <p>
+      In het eenvoudige model vormt de situatie een rechthoekige driehoek.
+      De afstand van 30 meter is de aanliggende zijde en de hoogte van het
+      gebouw is de overstaande zijde.
+    </p>
 
-    <p class="formula">a² + b² = c²</p>
+    <p>
+      We gebruiken daarom de tangens:
+    </p>
 
-    <p>Voor een bepaalde hoek kunnen we schrijven:</p>
-
-    <p class="formula">sin(θ) = a / c</p>
-
-    <p>en:</p>
-
-    <p class="formula">cos(θ) = b / c</p>
-
-    <p>Als we beide kwadrateren:</p>
-
-    <p class="formula">sin²(θ) = a² / c²</p>
-
-    <p class="formula">cos²(θ) = b² / c²</p>
-
-    <p>Optellen geeft:</p>
-
-    <p class="formula">sin²(θ) + cos²(θ) = (a² + b²) / c²</p>
-
-    <p>Volgens Pythagoras is <span class="formula-inline">a² + b² = c²</span>.</p>
+    <p class="formula">
+      \tan(40^\circ) =
+      \frac{\text{hoogte}}{30}
+    </p>
 
     <p>Dus:</p>
 
-    <p class="formula">sin²(θ) + cos²(θ) = 1</p>
+    <p class="formula">
+      \text{hoogte} = 30 \cdot \tan(40^\circ)
+    </p>
 
-    <p>Een goniometrische identiteit blijkt hier dus rechtstreeks verbonden met een meetkundige stelling.</p>
+    <p>Daaruit volgt ongeveer:</p>
 
+    <p class="formula">
+      \text{hoogte} \approx 25,2\text{ m}
+    </p>
 
-    <h4>De bijzondere hoeken 30°, 45° en 60°</h4>
+    <p>
+      Met één hoek en één gemeten afstand kunnen we dus een andere lengte
+      bepalen.
+    </p>
 
-    <p>Sommige hoeken hebben bijzonder eenvoudige goniometrische waarden.</p>
-
-    <p>Voor 30° geldt:</p>
-
-    <p class="formula">sin(30°) = 1 / 2</p>
-
-    <p class="formula">cos(30°) = √3 / 2</p>
-
-    <p>Voor 45° geldt:</p>
-
-    <p class="formula">sin(45°) = √2 / 2</p>
-
-    <p class="formula">cos(45°) = √2 / 2</p>
-
-    <p>Voor 60° geldt:</p>
-
-    <p class="formula">sin(60°) = √3 / 2</p>
-
-    <p class="formula">cos(60°) = 1 / 2</p>
-
-    <p>Deze waarden kunnen worden afgeleid uit bijzondere rechthoekige driehoeken.</p>
+    <div class="callout">
+      <p><strong>Werkwijze:</strong></p>
+      <p>
+        Eerst herkennen we de geometrische structuur. Daarna kiezen we de
+        juiste verhouding. Pas daarna rekenen we.
+      </p>
+    </div>
 
 
-    <h4>Graden en radialen</h4>
+    <h3>Sinus en cosinus hangen samen met Pythagoras</h3>
 
-    <p>Tot nu toe hebben we hoeken uitgedrukt in graden.</p>
+    <p>
+      De drie goniometrische functies zijn niet volledig los van elkaar.
+      Uit de definities van sinus en cosinus en de stelling van Pythagoras
+      volgt een belangrijke identiteit.
+    </p>
 
-    <p>In hogere wiskunde wordt echter vaak een andere eenheid gebruikt: de <strong>radiaal</strong>.</p>
+    <p>Voor een rechthoekige driehoek met schuine zijde c:</p>
+
+    <p class="formula">
+      a^2 + b^2 = c^2
+    </p>
+
+    <p>Als:</p>
+
+    <p class="formula">
+      \sin(θ) = \frac{a}{c}
+    </p>
+
+    <p>en:</p>
+
+    <p class="formula">
+      \cos(θ) = \frac{b}{c}
+    </p>
+
+    <p>dan volgt:</p>
+
+    <p class="formula">
+      \sin^2(θ) + \cos^2(θ) = 1
+    </p>
+
+    <p>
+      Dit is een eerste voorbeeld van een <strong>goniometrische identiteit</strong>:
+      een verband dat voor alle toegelaten hoeken geldt.
+    </p>
+
+    <p>
+      De identiteit is dus geen nieuwe losstaande regel. Ze is rechtstreeks
+      verbonden met de geometrie van de rechthoekige driehoek.
+    </p>
+
+
+    <h3>Van graden naar radialen</h3>
+
+    <p>
+      Tot nu toe hebben we hoeken vooral in graden uitgedrukt. In hogere
+      wiskunde wordt echter vaak de <strong>radiaal</strong> gebruikt.
+    </p>
 
     <p>Een volledige omwenteling is:</p>
 
-    <p class="formula">360° = 2π radialen</p>
+    <p class="formula">
+      360^\circ = 2\pi\text{ rad}
+    </p>
 
-    <p>Daaruit volgt:</p>
+    <p>Daaruit volgen:</p>
 
-    <p class="formula">180° = π radialen</p>
+    <p class="formula">
+      180^\circ = \pi\text{ rad}
+    </p>
 
-    <p>en bijvoorbeeld:</p>
+    <p class="formula">
+      90^\circ = \frac{\pi}{2}\text{ rad}
+    </p>
 
-    <p class="formula">90° = π / 2 radialen</p>
+    <p>
+      Radialen zijn belangrijk omdat ze een directe relatie leggen tussen een
+      hoek en de booglengte op een cirkel.
+    </p>
 
-    <p>Radialen zijn belangrijk omdat ze een directe relatie leggen tussen een hoek en de lengte van een boog.</p>
-
-
-    <h4>De hoek als verhouding op een cirkel</h4>
-
-    <p>Tot nu toe gebruikten we trigonometrie in rechthoekige driehoeken.</p>
-
-    <p>Maar sinus en cosinus kunnen veel algemener worden opgevat.</p>
-
-    <p>Neem een cirkel met straal 1, de zogenaamde <strong>eenheidscirkel</strong>.</p>
-
-    <p>Bij een hoek kunnen we een punt op de cirkel aanwijzen.</p>
-
-    <p>De horizontale positie van dat punt hangt samen met de cosinus.</p>
-
-    <p>De verticale positie hangt samen met de sinus.</p>
-
-    <p>Daarmee krijgen sinus en cosinus een betekenis die verder gaat dan alleen rechthoekige driehoeken.</p>
+    <div class="callout">
+      <p><strong>Brug naar hogere wiskunde:</strong></p>
+      <p>
+        In de volgende fase worden radialen de natuurlijke manier om hoeken
+        te beschrijven wanneer we met functies, verandering en analyse werken.
+      </p>
+    </div>
 
 
     <h3>De eenheidscirkel</h3>
 
+    <p>
+      Tot nu toe gebruikten we sinus en cosinus in een rechthoekige driehoek.
+      Dezelfde functies kunnen veel algemener worden opgevat met de
+      <strong>eenheidscirkel</strong>: een cirkel met straal 1.
+    </p>
+
     <div class="theory-image">
-      <img src="assets/eenheidscirkel-sin-cos.svg" alt="De eenheidscirkel met een hoek en het punt met coördinaten cosinus en sinus.">
+      <img
+        src="assets/eenheidscirkel-sin-cos.svg"
+        alt="Eenheidscirkel met een hoek theta en een punt waarvan de horizontale en verticale coördinaten cosinus en sinus zijn."
+      >
     </div>
 
     <div data-widget="unitcircle"></div>
 
-    <p>Op de eenheidscirkel geldt voor een hoek θ:</p>
-
-    <p class="formula">x = cos(θ)</p>
-
-    <p>en:</p>
-
-    <p class="formula">y = sin(θ)</p>
-
-    <p>Het punt op de cirkel heeft dus coördinaten:</p>
-
-    <p class="formula">(cos(θ), sin(θ))</p>
-
-    <p>Omdat het punt op een cirkel met straal 1 ligt, geldt:</p>
-
-    <p class="formula">x² + y² = 1</p>
-
-    <p>Invullen van x en y geeft opnieuw:</p>
-
-    <p class="formula">cos²(θ) + sin²(θ) = 1</p>
-
-    <p>De identiteit uit de rechthoekige driehoek blijkt dus ook rechtstreeks uit de geometrie van de eenheidscirkel.</p>
-
-
-    <h4>Sinus en cosinus voor hoeken groter dan 90°</h4>
-
-    <p>De eenheidscirkel maakt het mogelijk om sinus en cosinus ook voor grotere hoeken te definiëren.</p>
-
-    <p>Bijvoorbeeld voor een hoek tussen 90° en 180° ligt het punt in het tweede kwadrant.</p>
-
-    <p>Daar is de x-coördinaat negatief en de y-coördinaat positief.</p>
-
-    <p>Daarom geldt in dat kwadrant:</p>
-
-    <p class="formula">cos(θ) < 0</p>
-
-    <p>en:</p>
-
-    <p class="formula">sin(θ) > 0</p>
-
-    <p>De goniometrische functies zijn dus niet beperkt tot scherpe hoeken van rechthoekige driehoeken.</p>
-
-
-    <h4>De tangens en de eenheidscirkel</h4>
-
-    <p>De tangens kan worden geschreven als:</p>
-
-    <p class="formula">tan(θ) = sin(θ) / cos(θ)</p>
-
-    <p>Dat volgt uit de definities:</p>
-
-    <p class="formula">sin(θ) = overstaande zijde / schuine zijde</p>
-
-    <p class="formula">cos(θ) = aanliggende zijde / schuine zijde</p>
-
-    <p>Als we de eerste verhouding door de tweede delen, valt de schuine zijde weg.</p>
-
-    <p>We krijgen:</p>
-
-    <p class="formula">tan(θ) = overstaande zijde / aanliggende zijde</p>
-
-    <p>De drie goniometrische functies zijn dus onderling verbonden.</p>
-
-
-    <h4>Wanneer is de tangens niet gedefinieerd?</h4>
-
-    <p>Uit:</p>
-
-    <p class="formula">tan(θ) = sin(θ) / cos(θ)</p>
-
-    <p>zien we dat de cosinus niet nul mag zijn.</p>
-
-    <p>Als:</p>
-
-    <p class="formula">cos(θ) = 0</p>
-
-    <p>zou er door nul worden gedeeld.</p>
-
-    <p>Daarom is de tangens niet gedefinieerd voor hoeken zoals:</p>
-
-    <p class="formula">90°</p>
-
-    <p>en:</p>
-
-    <p class="formula">270°</p>
-
-    <p>en alle hoeken die daarmee overeenkomen na volledige omwentelingen.</p>
-
-
-    <h4>Trigonometrie en coördinaten</h4>
-
-    <p>In milestone 2.8 gebruikten we coördinaten om punten en richtingen te beschrijven.</p>
-
-    <p>Trigonometrie geeft ons nu een krachtige manier om een richting aan een hoek te koppelen.</p>
-
-    <p>Op de eenheidscirkel hoort bij een hoek θ het punt:</p>
-
-    <p class="formula">(cos(θ), sin(θ))</p>
-
-    <p>Dit betekent dat een hoek rechtstreeks kan worden vertaald naar een horizontale en verticale component.</p>
-
-    <p>Dit idee wordt later essentieel voor vectoren en fysica.</p>
-
-
-    <h4>Een richting ontbinden in twee componenten</h4>
-
-    <p>Stel dat een kracht van 10 N onder een hoek van 30° ten opzichte van de horizontale richting werkt.</p>
-
-    <p>De horizontale component is:</p>
-
-    <p class="formula">F_x = 10 × cos(30°)</p>
-
-    <p>De verticale component is:</p>
-
-    <p class="formula">F_y = 10 × sin(30°)</p>
-
-    <p>We hebben een enkele grootheid met een richting dus opgesplitst in een horizontale en verticale bijdrage.</p>
-
-    <p>Dit is een eerste belangrijke verbinding tussen trigonometrie en fysica.</p>
-
-
-    <h4>Trigonometrie en helling</h4>
-
-    <p>In analytische meetkunde gebruikten we de helling van een rechte:</p>
-
-    <p class="formula">m = Δy / Δx</p>
-
-    <p>In een rechthoekige driehoek gevormd door een rechte kunnen we dit schrijven als:</p>
-
-    <p class="formula">m = overstaande zijde / aanliggende zijde</p>
-
-    <p>Maar die verhouding is precies de tangens van de hoek:</p>
-
-    <p class="formula">tan(θ) = overstaande zijde / aanliggende zijde</p>
+    <p>
+      Bij een hoek θ hoort op de eenheidscirkel een punt.
+      De coördinaten van dat punt zijn:
+    </p>
+
+    <p class="formula">
+      (\cos(θ), \sin(θ))
+    </p>
 
     <p>Dus:</p>
 
-    <p class="formula">m = tan(θ)</p>
+    <p class="formula">
+      x = \cos(θ)
+    </p>
 
-    <p>en omgekeerd:</p>
+    <p class="formula">
+      y = \sin(θ)
+    </p>
 
-    <p class="formula">θ = tan⁻¹(m)</p>
+    <p>
+      Omdat het punt op een cirkel met straal 1 ligt:
+    </p>
 
-    <p>De helling van een rechte kan dus worden geïnterpreteerd als een hoek.</p>
+    <p class="formula">
+      x^2 + y^2 = 1
+    </p>
+
+    <p>
+      Invullen van de coördinaten geeft opnieuw:
+    </p>
+
+    <p class="formula">
+      \cos^2(θ) + \sin^2(θ) = 1
+    </p>
+
+    <p>
+      De identiteit die we eerst uit een rechthoekige driehoek vonden, verschijnt
+      hier dus opnieuw als een rechtstreeks gevolg van de geometrie van de
+      eenheidscirkel.
+    </p>
 
 
-    <h4>Van hoek naar periodieke beweging</h4>
+    <h3>Waarom is de eenheidscirkel zo belangrijk?</h3>
 
-    <p>De eenheidscirkel bevat nog een belangrijk idee.</p>
+    <p>
+      De eenheidscirkel laat ons toe om sinus en cosinus ook voor hoeken groter
+      dan 90° te definiëren.
+    </p>
 
-    <p>Wanneer een punt één volledige omwenteling maakt, keert het terug naar zijn beginpositie.</p>
+    <p>
+      Voor een hoek tussen 90° en 180° ligt het punt bijvoorbeeld in het tweede
+      kwadrant. De x-coördinaat is daar negatief, terwijl de y-coördinaat
+      positief blijft.
+    </p>
 
-    <p>De waarden van sinus en cosinus herhalen zich dus steeds opnieuw.</p>
+    <p>Daarom:</p>
 
-    <p>Sinus en cosinus zijn daarom <strong>periodieke functies</strong>.</p>
+    <p class="formula">
+      \cos(θ) < 0
+    </p>
+
+    <p class="formula">
+      \sin(θ) > 0
+    </p>
+
+    <p>
+      De goniometrische functies zijn daardoor niet langer beperkt tot de
+      scherpe hoeken van één rechthoekige driehoek.
+    </p>
+
+
+    <h3>De tangens als verhouding van sinus en cosinus</h3>
+
+    <p>
+      Uit de definities van sinus en cosinus volgt:
+    </p>
+
+    <p class="formula">
+      \tan(θ) = \frac{\sin(θ)}{\cos(θ)}
+    </p>
+
+    <p>
+      De schuine zijde valt bij het delen van beide verhoudingen weg.
+      Daardoor krijgen we opnieuw:
+    </p>
+
+    <p class="formula">
+      \tan(θ) =
+      \frac{\text{overstaande zijde}}{\text{aanliggende zijde}}
+    </p>
+
+    <p>
+      Dit verklaart waarom de drie functies onderling verbonden zijn.
+    </p>
+
+    <p>
+      Omdat we door de cosinus delen, is tangens niet gedefinieerd wanneer:
+    </p>
+
+    <p class="formula">
+      \cos(θ) = 0
+    </p>
+
+    <p>
+      Dat gebeurt bijvoorbeeld bij 90° en 270°.
+    </p>
+
+
+    <h3>Trigonometrie en de helling van een rechte</h3>
+
+    <p>
+      In les 2.8 gebruikten we de helling van een rechte:
+    </p>
+
+    <p class="formula">
+      m = \frac{\Delta y}{\Delta x}
+    </p>
+
+    <p>
+      De horizontale en verticale verandering vormen samen een rechthoekige
+      driehoek. Als de rechte een hoek θ maakt met de horizontale richting,
+      krijgen we:
+    </p>
+
+    <p class="formula">
+      \tan(θ) =
+      \frac{\Delta y}{\Delta x}
+    </p>
+
+    <p>Dus:</p>
+
+    <p class="formula">
+      m = \tan(θ)
+    </p>
+
+    <p>En omgekeerd:</p>
+
+    <p class="formula">
+      θ = \tan^{-1}(m)
+    </p>
+
+    <p>
+      Een helling kan dus ook worden geïnterpreteerd als een hoek.
+      Daarmee verbinden we analytische meetkunde met trigonometrie.
+    </p>
+
+
+    <h3>Van een hoek naar richting en componenten</h3>
+
+    <p>
+      Op de eenheidscirkel wordt een hoek rechtstreeks vertaald naar een
+      horizontale en verticale component:
+    </p>
+
+    <p class="formula">
+      (\cos(θ), \sin(θ))
+    </p>
+
+    <p>
+      Stel dat een kracht van 10 N onder een hoek van 30° ten opzichte van
+      de horizontale richting werkt. Dan kunnen we de kracht opsplitsen in
+      een horizontale en verticale component:
+    </p>
+
+    <p class="formula">
+      F_x = 10 \cdot \cos(30^\circ)
+    </p>
+
+    <p class="formula">
+      F_y = 10 \cdot \sin(30^\circ)
+    </p>
+
+    <p>
+      We hebben één grootheid met een richting dus beschreven met twee
+      componenten.
+    </p>
+
+    <p>
+      Dit is een eerste brug naar vectoren, die in een latere fase systematisch
+      worden behandeld.
+    </p>
+
+
+    <h3>Van de eenheidscirkel naar periodieke functies</h3>
+
+    <p>
+      Wanneer een punt op de eenheidscirkel één volledige omwenteling maakt,
+      keert het terug naar zijn beginpositie.
+    </p>
+
+    <p>
+      De waarden van sinus en cosinus herhalen zich daarom telkens opnieuw.
+      We noemen zulke functies <strong>periodiek</strong>.
+    </p>
 
     <p>Een volledige periode is:</p>
 
-    <p class="formula">2π radialen</p>
+    <p class="formula">
+      2\pi
+    </p>
 
-    <p>of:</p>
+    <p>
+      radialen, oftewel:
+    </p>
 
-    <p class="formula">360°</p>
+    <p class="formula">
+      360^\circ
+    </p>
 
+    <p>
+      We kunnen sinus daardoor niet alleen zien als een verhouding in een
+      driehoek, maar ook als een functie die een periodiek proces beschrijft.
+    </p>
 
-    <h4>De sinusfunctie</h4>
 
-    <p>We kunnen sinus nu niet alleen gebruiken als verhouding in een driehoek, maar als functie van een hoek.</p>
+    <h3>Amplitude: hoe groot is de uitslag?</h3>
 
-    <p>We schrijven:</p>
+    <p>
+      Een eenvoudige sinusfunctie heeft bijvoorbeeld de vorm:
+    </p>
 
-    <p class="formula">f(x) = sin(x)</p>
+    <p class="formula">
+      f(x) = A \cdot \sin(x)
+    </p>
 
-    <p>De invoer x is een hoek en de uitvoer ligt altijd tussen −1 en 1.</p>
+    <p>
+      De factor <span class="formula-inline">A</span> bepaalt hoe groot de
+      maximale uitslag wordt.
+    </p>
 
-    <p>Dus:</p>
+    <p>De amplitude is:</p>
 
-    <p class="formula">−1 ≤ sin(x) ≤ 1</p>
+    <p class="formula">
+      |A|
+    </p>
 
-    <p>De functie herhaalt zichzelf steeds na één volledige omwenteling.</p>
+    <p>
+      Bij <span class="formula-inline">A = 2</span> ligt de functie bijvoorbeeld
+      tussen −2 en 2.
+    </p>
 
-    <p>De sinusfunctie vormt daarmee een eenvoudig wiskundig model voor periodieke verschijnselen.</p>
+    <p class="formula">
+      -2 \leq 2\sin(x) \leq 2
+    </p>
 
+    <p>
+      We behandelen amplitude hier alleen als eerste kennismaking. In de
+      volgende fase kunnen functies en hun verandering veel systematischer
+      worden onderzocht.
+    </p>
 
-    <h4>De cosinusfunctie</h4>
 
-    <p>Op dezelfde manier krijgen we:</p>
+    <h3>Een periodiek verschijnsel modelleren</h3>
 
-    <p class="formula">f(x) = cos(x)</p>
+    <p>
+      Stel dat een punt op een cirkel met straal 2 m beweegt.
+      De verticale positie ten opzichte van het middelpunt kan worden
+      beschreven door:
+    </p>
 
-    <p>Ook hier geldt:</p>
+    <p class="formula">
+      y = 2 \cdot \sin(θ)
+    </p>
 
-    <p class="formula">−1 ≤ cos(x) ≤ 1</p>
+    <p>
+      Wanneer θ verandert, verandert de hoogte. Na één volledige omwenteling
+      keert dezelfde waarde terug.
+    </p>
 
-    <p>En ook de cosinus heeft een periode van:</p>
-
-    <p class="formula">2π</p>
-
-    <p>Sinus en cosinus zijn nauw met elkaar verbonden, maar starten op een verschillend punt in hun periodieke beweging.</p>
-
-
-    <h4>Amplitude en periode</h4>
-
-    <p>Een algemene sinusfunctie kan bijvoorbeeld de vorm hebben:</p>
-
-    <p class="formula">f(x) = A × sin(x)</p>
-
-    <p>De factor A bepaalt hoe groot de uitslag van de functie is.</p>
-
-    <p>De grootste absolute waarde van de functie is dan:</p>
-
-    <p class="formula">|A|</p>
-
-    <p>Deze maximale uitslag noemen we de <strong>amplitude</strong>.</p>
-
-    <p>Een algemene periodieke functie kan ook een andere periode hebben. Bijvoorbeeld:</p>
-
-    <p class="formula">f(x) = sin(2x)</p>
-
-    <p>Hierdoor doorloopt de sinus twee volledige cycli in hetzelfde interval waarin sin(x) één cyclus doorloopt.</p>
-
-    <p>De parameters van sinusfuncties maken het mogelijk om echte periodieke verschijnselen te modelleren.</p>
-
-
-    <h4>Een toepassing: hoogte van een punt</h4>
-
-    <p>Stel dat een punt op een cirkel met straal 2 m beweegt.</p>
-
-    <p>De verticale positie ten opzichte van het middelpunt kan worden beschreven door:</p>
-
-    <p class="formula">y = 2 × sin(θ)</p>
-
-    <p>Wanneer de hoek verandert, verandert ook de hoogte.</p>
-
-    <p>Na één volledige omwenteling herhaalt de beweging zich.</p>
-
-    <p>Hetzelfde soort wiskundig model kan worden gebruikt voor periodieke bewegingen zoals trillingen en golven.</p>
-
-
-    <h4>Trigonometrie in de werkelijkheid</h4>
-
-    <p>Trigonometrie wordt gebruikt wanneer hoeken en lengtes met elkaar verbonden zijn.</p>
-
-    <p>Voorbeelden zijn:</p>
-
-    <ul>
-      <li>de hoogte van een gebouw bepalen;</li>
-      <li>een afstand bepalen die niet rechtstreeks meetbaar is;</li>
-      <li>een helling of richting berekenen;</li>
-      <li>krachten ontbinden in componenten;</li>
-      <li>posities en bewegingen beschrijven;</li>
-      <li>periodieke verschijnselen modelleren.</li>
-    </ul>
-
-    <p>Hetzelfde onderliggende idee komt telkens terug: een hoek bepaalt een verhouding of component.</p>
-
-
-    <h4>Een volledig voorbeeld: de hoogte van een gebouw</h4>
-
-    <p>Je staat 30 meter van een gebouw.</p>
-
-    <p>De hoek tussen de horizontale grond en je zichtlijn naar de top van het gebouw is 40°.</p>
-
-    <p>We nemen aan dat je ooghoogte verwaarloosbaar is voor dit eenvoudige model.</p>
-
-    <p>We krijgen een rechthoekige driehoek.</p>
-
-    <p>De afstand tot het gebouw is de aanliggende zijde.</p>
-
-    <p>De hoogte van het gebouw is de overstaande zijde.</p>
-
-    <p>Daarom gebruiken we de tangens:</p>
-
-    <p class="formula">tan(40°) = hoogte / 30</p>
-
-    <p>Dus:</p>
-
-    <p class="formula">hoogte = 30 × tan(40°)</p>
-
-    <p>Dit geeft ongeveer:</p>
-
-    <p class="formula">hoogte ≈ 25,2 m</p>
-
-    <p>Met een hoek en één gemeten afstand hebben we dus een andere lengte kunnen bepalen.</p>
-
-
-    <h4>Een vaste werkwijze</h4>
-
-    <p>Bij een trigonometrisch probleem kun je de volgende werkwijze gebruiken:</p>
-
-    <ol>
-      <li>Teken de situatie zo duidelijk mogelijk.</li>
-      <li>Herken de rechthoekige driehoek.</li>
-      <li>Markeer de gegeven hoek.</li>
-      <li>Benoem de schuine, overstaande en aanliggende zijde.</li>
-      <li>Bepaal welke zijden bekend zijn en welke je zoekt.</li>
-      <li>Kies sinus, cosinus of tangens.</li>
-      <li>Schrijf eerst de verhouding op.</li>
-      <li>Los daarna de vergelijking op.</li>
-      <li>Controleer of de uitkomst logisch is.</li>
-      <li>Let erop dat je rekenmachine in de juiste hoekeenheid staat.</li>
-    </ol>
-
-
-    <h4>Veelgemaakte fouten</h4>
-
-    <p><strong>Fout 1: de verkeerde zijde benoemen.</strong></p>
-
-    <p>De begrippen overstaand en aanliggend hangen af van de gekozen hoek.</p>
-
-    <p><strong>Fout 2: de schuine zijde verkeerd herkennen.</strong></p>
-
-    <p>De schuine zijde ligt altijd tegenover de rechte hoek.</p>
-
-    <p><strong>Fout 3: sinus, cosinus en tangens als losse formules leren.</strong></p>
-
-    <p>Het is belangrijker te begrijpen welke verhouding elke functie beschrijft.</p>
-
-    <p><strong>Fout 4: graden en radialen door elkaar halen.</strong></p>
-
-    <p>Controleer altijd de instelling van de rekenmachine.</p>
-
-    <p><strong>Fout 5: een inverse goniometrische functie verwarren met een macht.</strong></p>
-
-    <p>sin⁻¹(x) betekent hier de inverse sinusfunctie en niet simpelweg 1 / sin(x).</p>
-
-    <p><strong>Fout 6: te vroeg afronden.</strong></p>
-
-    <p>Bewaar tijdens de berekening voldoende decimalen en rond pas op het einde af.</p>
-
-
-    <h4>Wat hebben we eigenlijk geleerd?</h4>
-
-    <p>Trigonometrie verbindt <strong>hoeken</strong> met <strong>verhoudingen van lengtes</strong>.</p>
-
-    <p>In een rechthoekige driehoek hebben we drie belangrijke functies:</p>
-
-    <p class="formula">sin(θ) = overstaande zijde / schuine zijde</p>
-
-    <p class="formula">cos(θ) = aanliggende zijde / schuine zijde</p>
-
-    <p class="formula">tan(θ) = overstaande zijde / aanliggende zijde</p>
-
-    <p>Deze verhoudingen zijn onafhankelijk van de grootte van de driehoek omdat gelijkvormige driehoeken dezelfde verhoudingen hebben.</p>
-
-    <p>Met inverse goniometrische functies kunnen we uit een verhouding een hoek terugvinden.</p>
-
-    <p>Sinus en cosinus kunnen bovendien worden uitgebreid naar de eenheidscirkel:</p>
-
-    <p class="formula">(cos(θ), sin(θ))</p>
-
-    <p>Daarmee kunnen we hoeken verbinden met coördinaten, richtingen en periodieke bewegingen.</p>
-
-    <p>De tangens verbindt trigonometrie rechtstreeks met de helling van een rechte:</p>
-
-    <p class="formula">m = tan(θ)</p>
-
-    <p>En sinus en cosinus vormen periodieke functies die later gebruikt kunnen worden om golven, trillingen en andere periodieke processen te beschrijven.</p>
-
-    <p>Trigonometrie vormt daarmee een belangrijke brug tussen <strong>meetkunde, algebra, analyse en fysica</strong>.</p>
-
-
-    <h3>Van Fase 2 naar de volgende fase</h3>
-
-    <p>In Fase 2 hebben we een groot deel van de klassieke basiswiskunde opgebouwd.</p>
-
-    <p>We begonnen met variabelen en algebraïsche uitdrukkingen.</p>
-
-    <p>Daarna kwamen vergelijkingen, formules, ongelijkheden en machten.</p>
-
-    <p>Vervolgens leerden we kwadratische vergelijkingen, coördinaten, meetkunde, gelijkvormigheid en functies.</p>
-
-    <p>Met exponentiële en logaritmische functies leerden we groei en inverse bewerkingen beschrijven.</p>
-
-    <p>Met trigonometrie hebben we nu hoeken verbonden met lengtes, coördinaten en periodieke verschijnselen.</p>
-
-    <p>De volgende stap kan daardoor veel verder gaan.</p>
-
-    <p>We beschikken nu over de algebraïsche, geometrische en functionele taal die nodig is om nieuwe gebieden van de wiskunde systematisch op te bouwen.</p>
-
+    <p>
+      Hetzelfde soort model kan worden gebruikt voor trillingen, golven en
+      andere verschijnselen die zich periodiek herhalen.
+    </p>
 
     <div class="callout">
-      <strong>Inzicht:</strong> Trigonometrie is in essentie de studie van verhoudingen die door hoeken worden bepaald. Dankzij gelijkvormigheid blijven die verhoudingen gelijk voor driehoeken van verschillende grootte. Sinus, cosinus en tangens verbinden daardoor hoeken met lengtes. Via de eenheidscirkel groeien deze begrippen verder uit tot functies die richtingen, coördinaten en periodieke bewegingen beschrijven.
+      <p><strong>Brug naar Fase 3:</strong></p>
+      <p>
+        In Fase 2 gebruikten we functies vooral om verbanden te beschrijven.
+        In Fase 3 gaan we onderzoeken hoe functies veranderen.
+      </p>
+      <p>
+        Sinusfuncties zijn daarbij een eerste belangrijk voorbeeld van functies
+        die blijven veranderen en toch een herkenbaar patroon behouden.
+      </p>
     </div>
+
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <p><strong>Fout 1: de verkeerde zijde benoemen.</strong></p>
+    <p>
+      Overstaand en aanliggend worden altijd bepaald ten opzichte van de
+      gekozen hoek.
+    </p>
+
+    <p><strong>Fout 2: de schuine zijde verkeerd herkennen.</strong></p>
+    <p>
+      De schuine zijde ligt altijd tegenover de rechte hoek.
+    </p>
+
+    <p><strong>Fout 3: de verkeerde goniometrische verhouding kiezen.</strong></p>
+    <p>
+      Kijk eerst welke twee zijden bekend zijn en welke zijde je zoekt.
+    </p>
+
+    <p><strong>Fout 4: graden en radialen verwarren.</strong></p>
+    <p>
+      Controleer altijd de hoekeenheid van je rekenmachine.
+    </p>
+
+    <p><strong>Fout 5: een inverse functie verwarren met een breuk.</strong></p>
+
+    <p class="formula">
+      \sin^{-1}(x)
+    </p>
+
+    <p>
+      betekent hier de inverse sinusfunctie, niet:
+    </p>
+
+    <p class="formula">
+      \frac{1}{\sin(x)}
+    </p>
+
+    <p><strong>Fout 6: te vroeg afronden.</strong></p>
+    <p>
+      Bewaar voldoende decimalen tijdens de berekening en rond pas op het einde af.
+    </p>
+
+
+    <h3>Een vaste werkwijze</h3>
+
+    <p>Bij een trigonometrisch probleem:</p>
+
+    <ol>
+      <li>teken de situatie indien nodig;</li>
+      <li>markeer de gegeven hoek;</li>
+      <li>herken de schuine, overstaande en aanliggende zijde;</li>
+      <li>bepaal welke lengtes of hoeken bekend zijn;</li>
+      <li>kies sinus, cosinus of tangens;</li>
+      <li>schrijf de verhouding op;</li>
+      <li>los de vergelijking op;</li>
+      <li>gebruik een inverse goniometrische functie als je een hoek zoekt;</li>
+      <li>controleer of de uitkomst logisch is;</li>
+      <li>controleer graden/radialen op de rekenmachine.</li>
+    </ol>
+
+    <p>
+      Bij problemen met grotere hoeken of richtingen vormt de eenheidscirkel
+      het algemene kader.
+    </p>
+
+
+    <h3>Wat hebben we eigenlijk geleerd?</h3>
+
+    <p>
+      Trigonometrie begint met een eenvoudig idee:
+      <strong>een hoek bepaalt verhoudingen tussen lengtes</strong>.
+    </p>
+
+    <p>In een rechthoekige driehoek zijn de belangrijkste verhoudingen:</p>
+
+    <p class="formula">
+      \sin(θ) =
+      \frac{\text{overstaande zijde}}{\text{schuine zijde}}
+    </p>
+
+    <p class="formula">
+      \cos(θ) =
+      \frac{\text{aanliggende zijde}}{\text{schuine zijde}}
+    </p>
+
+    <p class="formula">
+      \tan(θ) =
+      \frac{\text{overstaande zijde}}{\text{aanliggende zijde}}
+    </p>
+
+    <p>
+      Met deze verhoudingen kunnen we onbekende lengtes en hoeken berekenen.
+    </p>
+
+    <p>
+      Gelijkvormigheid verklaart waarom de verhoudingen voor een bepaalde hoek
+      onafhankelijk zijn van de grootte van de driehoek.
+    </p>
+
+    <p>
+      De eenheidscirkel breidt het idee uit naar algemene hoeken:
+    </p>
+
+    <p class="formula">
+      (\cos(θ), \sin(θ))
+    </p>
+
+    <p>
+      Daardoor kunnen we trigonometrie verbinden met coördinaten, richtingen
+      en componenten.
+    </p>
+
+    <p>
+      De tangens verbindt trigonometrie rechtstreeks met de helling van een rechte:
+    </p>
+
+    <p class="formula">
+      m = \tan(θ)
+    </p>
+
+    <p>
+      Ten slotte zien we dat sinus en cosinus periodieke functies zijn.
+      Daarmee ontstaat een natuurlijke overgang naar functies die voortdurend
+      veranderen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Trigonometrie is de taal waarin <strong>hoeken, verhoudingen,
+        richtingen en periodieke verschijnselen</strong> met elkaar worden
+        verbonden.
+      </p>
+      <p>
+        Vanuit rechthoekige driehoeken en gelijkvormigheid groeien sinus,
+        cosinus en tangens uit tot functies die we met de eenheidscirkel,
+        coördinaten en periodieke bewegingen kunnen verbinden.
+      </p>
+    </div>
+
+
+    <h3>Van Fase 2 naar Fase 3</h3>
+
+    <p>
+      In Fase 2 hebben we algebra, vergelijkingen, ongelijkheden, meetkunde
+      en functies opgebouwd.
+    </p>
+
+    <p>
+      Met exponentiële en logaritmische functies leerden we verschillende
+      soorten groei en inverse bewerkingen beschrijven.
+    </p>
+
+    <p>
+      Met trigonometrie hebben we daar nu hoeken, richtingen en periodieke
+      functies aan toegevoegd.
+    </p>
+
+    <p>
+      De volgende vraag ligt voor de hand:
+    </p>
+
+    <p>
+      <strong>Hoe beschrijven we niet alleen een functie, maar ook hoe snel
+      die functie verandert?</strong>
+    </p>
+
+    <p>
+      Dat is het vertrekpunt van de volgende fase: verandering, limieten
+      en afgeleiden.
+    </p>
   `
 }
 ]
