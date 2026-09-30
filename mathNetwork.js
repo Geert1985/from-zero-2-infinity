@@ -693,11 +693,11 @@ const MATH_NETWORK_GRID = { originX: 130, originY: 80, colW: 118, rowH: 100 };
 const MATH_NETWORK_CAMERA = { x: 4, y: 0, scale: 1.3 };
 
 const MATH_NETWORK_PERIODS = [
-  { id: "oudheid", title: "Oudheid", tint: "#c4a06a", fill: "rgba(168,120,64,.16)", row0: -0.55, row1: 6.15 },
-  { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", fill: "rgba(70,110,72,.15)", row0: 6.15, row1: 11.15 },
-  { id: "vroegmodern", title: "Vroegmodern", tint: "#c4845a", fill: "rgba(176,96,56,.14)", row0: 11.15, row1: 18.15 },
-  { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", fill: "rgba(120,130,148,.13)", row0: 18.15, row1: 22.55 },
-  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", fill: "rgba(70,100,140,.16)", row0: 22.55, row1: 27.4 }
+  { id: "oudheid", title: "Oudheid", tint: "#c4a06a", row0: -0.55, row1: 6.15 },
+  { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", row0: 6.15, row1: 11.15 },
+  { id: "vroegmodern", title: "Vroegmodern", tint: "#c4845a", row0: 11.15, row1: 18.15 },
+  { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", row0: 18.15, row1: 22.55 },
+  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.55, row1: 27.4 }
 ];
 
 const MATH_NETWORK_NODE_PERIOD = {
@@ -1013,10 +1013,10 @@ function mathNetworkInjectStyles() {
     }
     .math-network-band-label {
       fill: #cbb98a;
-      fill-opacity: .34;
+      fill-opacity: .16;
       font-family: Cinzel, "Times New Roman", serif;
-      font-size: 13px;
-      letter-spacing: .22em;
+      font-size: 10px;
+      letter-spacing: .2em;
       text-anchor: start;
       pointer-events: none;
     }
@@ -1050,16 +1050,23 @@ function mathNetworkInjectStyles() {
       cursor: pointer;
     }
     .math-network-eras button.is-ready {
-      color: #f4ead3;
-      border-color: rgba(230,199,122,.55);
+      color: #e8dcc0;
+      border-color: rgba(230,199,122,.4);
     }
     .math-network-eras button.is-current {
       color: #fff6d8;
-      box-shadow: 0 0 0 1px rgba(230,199,122,.7);
+      border-color: rgba(230,199,122,.85);
+      box-shadow: 0 0 0 1px rgba(230,199,122,.55);
     }
     .math-network-eras button.is-locked {
-      opacity: .42;
+      opacity: .28;
+      color: #8a7d63;
+      border-color: rgba(230,199,122,.12);
       cursor: default;
+    }
+    .math-network-eras button.is-locked:hover {
+      border-color: rgba(230,199,122,.12);
+      color: #8a7d63;
     }
     .math-network-edge {
       stroke: rgba(230,199,122,.18);
@@ -1334,11 +1341,12 @@ function mathNetworkInjectStyles() {
 }
 
 function mathNetworkPeriodSvg() {
+  const pad = 420;
   return MATH_NETWORK_PERIODS.map((period) => {
     const b = mathNetworkPeriodBounds(period);
-    const labelY = b.y0 + 28;
+    const labelY = b.y0 + 36;
     return `<g class="math-network-band" data-period="${mathNetworkEsc(period.id)}">
-      <rect x="0" y="${b.y0}" width="${MATH_NETWORK_VIEW.width}" height="${b.y1 - b.y0}" fill="${period.fill}"></rect>
+      <rect x="${-pad}" y="${b.y0}" width="${MATH_NETWORK_VIEW.width + pad * 2}" height="${b.y1 - b.y0}" fill="url(#band-${mathNetworkEsc(period.id)})"></rect>
       <text class="math-network-band-label" x="18" y="${labelY}">${mathNetworkEsc(period.title.toUpperCase())}</text>
     </g>`;
   }).join("");
@@ -1577,10 +1585,10 @@ function mathNetworkFocusNode(id) {
   const rect = canvas.getBoundingClientRect();
   if (rect.width < 8 || rect.height < 8) return;
   const narrow = mathNetworkIsNarrow();
-  const scale = narrow ? 0.85 : 1.15;
+  const scale = narrow ? 1.05 : 1.42;
   MATH_NETWORK_CAMERA.scale = Math.min(MATH_NETWORK_ZOOM.max, Math.max(MATH_NETWORK_ZOOM.min, scale));
   MATH_NETWORK_CAMERA.x = rect.width / 2 - pos[0] * MATH_NETWORK_CAMERA.scale;
-  MATH_NETWORK_CAMERA.y = Math.max(40, rect.height * 0.2) - pos[1] * MATH_NETWORK_CAMERA.scale;
+  MATH_NETWORK_CAMERA.y = rect.height * 0.34 - pos[1] * MATH_NETWORK_CAMERA.scale;
   mathNetworkApplyCamera();
 }
 
@@ -1796,6 +1804,12 @@ function mathNetworkRender(selectedNodeId) {
             <clipPath id="math-network-node-clip" clipPathUnits="objectBoundingBox">
               <circle cx="0.5" cy="0.5" r="0.5"></circle>
             </clipPath>
+            ${MATH_NETWORK_PERIODS.map((period) => `<linearGradient id="band-${mathNetworkEsc(period.id)}" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="${period.tint}" stop-opacity="0"/>
+              <stop offset="18%" stop-color="${period.tint}" stop-opacity=".07"/>
+              <stop offset="82%" stop-color="${period.tint}" stop-opacity=".07"/>
+              <stop offset="100%" stop-color="${period.tint}" stop-opacity="0"/>
+            </linearGradient>`).join("")}
           </defs>
           <g class="math-network-regions">${regionSvg}</g>
           <g class="math-network-edges">${edgeSvg}</g>
