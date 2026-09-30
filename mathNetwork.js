@@ -1511,9 +1511,42 @@ function mathNetworkHideHint() {
   if (hint) hint.hidden = true;
 }
 
+function mathNetworkClampCamera() {
+  const canvas = document.querySelector(".math-network-canvas");
+  if (!canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  const viewW = rect.width;
+  const viewH = rect.height;
+  if (viewW < 8 || viewH < 8) return;
+
+  const scale = MATH_NETWORK_CAMERA.scale;
+  const worldW = MATH_NETWORK_VIEW.width;
+  const worldH = MATH_NETWORK_VIEW.height;
+  const pad = 48;
+  const screenW = worldW * scale;
+  const screenH = worldH * scale;
+
+  if (screenW + pad * 2 <= viewW) {
+    MATH_NETWORK_CAMERA.x = (viewW - screenW) / 2;
+  } else {
+    const minX = viewW - screenW - pad;
+    const maxX = pad;
+    MATH_NETWORK_CAMERA.x = Math.min(maxX, Math.max(minX, MATH_NETWORK_CAMERA.x));
+  }
+
+  if (screenH + pad * 2 <= viewH) {
+    MATH_NETWORK_CAMERA.y = (viewH - screenH) / 2;
+  } else {
+    const minY = viewH - screenH - pad;
+    const maxY = pad;
+    MATH_NETWORK_CAMERA.y = Math.min(maxY, Math.max(minY, MATH_NETWORK_CAMERA.y));
+  }
+}
+
 function mathNetworkApplyCamera() {
   const svg = document.querySelector(".math-network-svg");
   if (!svg) return;
+  mathNetworkClampCamera();
   const c = MATH_NETWORK_CAMERA;
   svg.style.transform = "translate(" + c.x + "px," + c.y + "px) scale(" + c.scale + ")";
   mathNetworkPlaceFloat();
