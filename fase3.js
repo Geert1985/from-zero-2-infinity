@@ -3,11 +3,22 @@ const MILESTONES_3 = [
 // Fase 3 — Calculus & Analyse
 // Van verandering naar afgeleiden, integralen en multivariabele calculus.
   {
-    id: "3.1",
-    title: "Verandering & gemiddelde snelheid",
-    goal: "Hoe meten we verandering?",
-    theory: /*html*/ `
+  id: "3.1",
+  title: "Verandering & gemiddelde snelheid",
+  goal: "Hoe meten we verandering?",
+  theory: /* html */`
     <h2>Verandering & gemiddelde snelheid</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Wat betekent het als een grootheid verandert?</li>
+      <li>Hoe meten we hoeveel iets verandert?</li>
+      <li>Hoe berekenen we de gemiddelde veranderingssnelheid?</li>
+      <li>Waarom is gemiddelde snelheid een voorbeeld van een algemener idee?</li>
+      <li>Hoe verschijnt veranderingssnelheid als de helling van een grafiek?</li>
+      <li>Waarom kunnen we met een gemiddelde snelheid nog niet beschrijven wat er op één moment gebeurt?</li>
+      <li>Hoe leidt een steeds kleiner interval naar het idee van de limiet?</li>
+    </ul>
 
     <p>
       In Fase 2 leerden we hoe we situaties kunnen beschrijven met getallen,
@@ -15,32 +26,32 @@ const MILESTONES_3 = [
     </p>
 
     <div class="callout">
-      <p><strong>Hoe kunnen we precies beschrijven hoe iets verandert?</strong></p>
+      <p><strong>Niet alleen: wat is de waarde?</strong></p>
+      <p><strong>Maar ook: hoe verandert die waarde?</strong></p>
     </div>
 
     <p>
-      Denk bijvoorbeeld aan een trein. De positie van de trein verandert voortdurend.
-      Soms rijdt hij sneller, soms langzamer en soms staat hij stil.
-      Om zulke processen wiskundig te beschrijven, moeten we leren meten
-      <strong>hoeveel iets verandert</strong>.
+      Dat verschil lijkt klein, maar het vormt het vertrekpunt van de
+      <strong>calculus</strong>.
     </p>
 
 
-    <h3>Van plaats naar verandering</h3>
+    <h3>Van positie naar verandering</h3>
 
     <p>
-      Stel dat een trein vertrekt uit een station.
-      Na 1 uur bevindt hij zich 80 km verderop.
-      Na 2 uur bevindt hij zich 160 km verderop.
+      Denk aan een trein die uit een station vertrekt.
+      We kunnen zijn positie op verschillende tijdstippen beschrijven.
     </p>
 
     <p>
-      We kunnen dan zeggen dat de trein in die twee uur
-      <strong>160 km van positie is veranderd</strong>.
+      Stel dat de trein bij het vertrekpunt op positie 0 km staat en
+      na twee uur op positie 160 km.
     </p>
+
+    <p>De verandering in positie is:</p>
 
     <p class="formula">
-      \\Delta s = 160 - 0 = 160\\ \\text{km}
+      \Delta s = 160 - 0 = 160\text{ km}
     </p>
 
     <p>
@@ -48,17 +59,13 @@ const MILESTONES_3 = [
       <strong>verandering in</strong>.
     </p>
 
-    <p>
-      We kunnen dus schrijven:
-    </p>
+    <p>Algemeen schrijven we:</p>
 
     <p class="formula">
-      \\Delta s = s_2 - s_1
+      \Delta s = s_2 - s_1
     </p>
 
-    <p>
-      waarbij:
-    </p>
+    <p>waarbij:</p>
 
     <ul>
       <li><strong>s₁</strong> de beginpositie is;</li>
@@ -66,148 +73,177 @@ const MILESTONES_3 = [
       <li><strong>Δs</strong> de verandering in positie is.</li>
     </ul>
 
+    <div class="callout">
+      <p><strong>Δ betekent steeds: eindwaarde − beginwaarde.</strong></p>
+    </div>
+
 
     <h3>Verandering per tijdseenheid</h3>
 
     <p>
-      Alleen weten dat een trein 160 km heeft afgelegd, vertelt ons nog niet
-      hoe snel dat gebeurde.
+      Alleen weten dat de trein 160 km van positie is veranderd,
+      vertelt ons nog niet hoe snel dat gebeurde.
     </p>
 
     <p>
-      Daarvoor moeten we ook weten <strong>hoeveel tijd</strong> daarvoor nodig was.
+      Daarvoor moeten we de verandering vergelijken met de tijd die daarvoor
+      nodig was.
     </p>
 
-    <p>
-      In ons voorbeeld duurt de rit 2 uur:
-    </p>
+    <p>De tijdsverandering is:</p>
 
     <p class="formula">
-      \\Delta t = 2 - 0 = 2\\ \\text{uur}
+      \Delta t = 2 - 0 = 2\text{ uur}
     </p>
 
-    <p>
-      De trein verandert dus 160 km van positie in 2 uur.
-      Per uur is dat gemiddeld:
-    </p>
+    <p>De gemiddelde snelheid is dan:</p>
 
     <p class="formula">
-      \\frac{160\\ \\text{km}}{2\\ \\text{uur}}
+      v_{\text{gem}}
       =
-      80\\ \\text{km/u}
+      \frac{\Delta s}{\Delta t}
+      =
+      \frac{160\text{ km}}{2\text{ uur}}
+      =
+      80\text{ km/u}
+    </p>
+
+    <p>
+      De trein heeft dus gemiddeld 80 km per uur afgelegd.
     </p>
 
     <div class="callout">
       <p><strong>
-        Gemiddelde snelheid = verandering in positie gedeeld door verandering in tijd.
+        Gemiddelde snelheid =
+        verandering in positie gedeeld door verandering in tijd.
       </strong></p>
     </div>
 
-    <p>
-      Dit is het eerste belangrijke idee van calculus:
-      we kijken niet alleen naar een waarde, maar naar
-      <strong>hoe die waarde verandert</strong>.
-    </p>
 
-
-    <h3>Een algemener voorbeeld</h3>
+    <h3>Gemiddelde snelheid betekent niet constante snelheid</h3>
 
     <p>
-      Stel dat een auto op tijdstip 2 uur een positie van 50 km heeft
-      en op tijdstip 4 uur een positie van 170 km.
+      Stel dat een trein gedurende een rit soms 40 km/u rijdt,
+      daarna 100 km/u en later weer 60 km/u.
     </p>
 
     <p>
-      De verandering in positie is:
+      De gemiddelde snelheid over de hele rit kan toch bijvoorbeeld
+      70 km/u zijn.
     </p>
+
+    <p>
+      Een gemiddelde snelheid beschrijft dus het volledige interval,
+      niet noodzakelijk wat er op ieder moment gebeurt.
+    </p>
+
+    <p>
+      Dat onderscheid wordt later in calculus heel belangrijk.
+    </p>
+
+    <div class="callout">
+      <p><strong>Gemiddeld beschrijft een interval.</strong></p>
+      <p><strong>Ogenblikkelijk beschrijft één moment.</strong></p>
+    </div>
+
+
+    <h3>Van snelheid naar algemene verandering</h3>
+
+    <p>
+      Hetzelfde idee geldt ook buiten beweging.
+    </p>
+
+    <p>
+      Denk bijvoorbeeld aan temperatuur. Stel dat de temperatuur
+      van 10 °C naar 25 °C stijgt in drie uur.
+    </p>
+
+    <p>De temperatuurverandering is:</p>
 
     <p class="formula">
-      \\Delta s = 170 - 50 = 120\\ \\text{km}
+      \Delta T = 25 - 10 = 15^\circ\text{C}
     </p>
 
-    <p>
-      De verandering in tijd is:
-    </p>
+    <p>De tijdsverandering is:</p>
 
     <p class="formula">
-      \\Delta t = 4 - 2 = 2\\ \\text{uur}
+      \Delta t = 3\text{ uur}
     </p>
 
-    <p>
-      De gemiddelde snelheid is dus:
-    </p>
+    <p>De gemiddelde verandering per uur is:</p>
 
     <p class="formula">
-      v_{\\text{gem}}
+      \frac{\Delta T}{\Delta t}
       =
-      \\frac{\\Delta s}{\\Delta t}
+      \frac{15}{3}
       =
-      \\frac{120}{2}
-      =
-      60\\ \\text{km/u}
+      5^\circ\text{C/u}
     </p>
 
     <p>
-      Let op: dit betekent niet noodzakelijk dat de auto voortdurend 60 km/u reed.
-      Misschien reed hij eerst 40 km/u, daarna 80 km/u en later 60 km/u.
-      <strong>60 km/u is de gemiddelde snelheid over het hele interval.</strong>
+      We kunnen dus hetzelfde wiskundige idee gebruiken voor
+      temperatuur, afstand, massa, energie, kosten en nog veel meer.
     </p>
 
 
-    <h3>Van gemiddelde snelheid naar gemiddelde verandering</h3>
+    <h3>Gemiddelde veranderingssnelheid</h3>
 
     <p>
-      Hetzelfde idee werkt ook buiten beweging.
-      We kunnen bijvoorbeeld kijken naar temperatuur, afstand, massa,
-      energie, kosten of een algemene wiskundige functie.
+      We kunnen het idee daarom algemener formuleren.
     </p>
 
     <p>
-      Stel dat de temperatuur stijgt van 10 ° C naar 25 ° C
-      gedurende 3 uur.
+      De <strong>gemiddelde veranderingssnelheid</strong> vertelt
+      hoeveel een grootheid gemiddeld verandert per eenheid van de
+      onafhankelijke variabele.
+    </p>
+
+    <p>
+      Als een grootheid <span class="formula-inline">y</span> verandert
+      wanneer <span class="formula-inline">x</span> verandert, schrijven we:
     </p>
 
     <p class="formula">
-      \\Delta T = 25 - 10 = 15\\ ^\\circ\\text{C}
-    </p>
-
-    <p class="formula">
-      \\Delta t = 3\\ \\text{uur}
+      \frac{\Delta y}{\Delta x}
     </p>
 
     <p>
-      De gemiddelde verandering per uur is:
+      Dit betekent letterlijk:
     </p>
 
     <p class="formula">
-      \\frac{\\Delta T}{\\Delta t}
-      =
-      \\frac{15}{3}
-      =
-      5\\ ^\\circ\\text{C/u}
+      \frac{\text{verandering in }y}
+      {\text{verandering in }x}
     </p>
 
     <p>
-      We spreken daarom niet alleen over gemiddelde snelheid,
-      maar algemener over <strong>gemiddelde veranderingssnelheid</strong>.
+      Bij beweging kan dat bijvoorbeeld worden:
+    </p>
+
+    <p class="formula">
+      v_{\text{gem}} = \frac{\Delta s}{\Delta t}
+    </p>
+
+    <p>
+      De context verandert, maar de wiskundige structuur blijft dezelfde.
     </p>
 
     <div class="callout">
       <p><strong>
-        De gemiddelde veranderingssnelheid vertelt hoeveel een grootheid
-        gemiddeld verandert per eenheid van de onafhankelijke variabele.
+        De centrale structuur is:
+        verandering gedeeld door verandering.
       </strong></p>
     </div>
 
 
-    <h3>Verandering bij een functie</h3>
+    <h3>De gemiddelde verandering van een functie</h3>
 
     <p>
-      Nu maken we de stap van concrete situaties naar functies.
+      Nu maken we de stap naar functies.
     </p>
 
     <p>
-      Stel dat:
+      Neem:
     </p>
 
     <p class="formula">
@@ -215,156 +251,111 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      We willen weten hoe sterk de functie gemiddeld verandert
-      tussen <strong>x = 1</strong> en <strong>x = 4</strong>.
+      We willen de gemiddelde veranderingssnelheid bepalen tussen
+      <span class="formula-inline">x = 1</span> en
+      <span class="formula-inline">x = 4</span>.
     </p>
 
-    <p>
-      Eerst bepalen we de twee functiewaarden:
+    <p>Eerst berekenen we de functiewaarden:</p>
+
+    <p class="formula">
+      f(1) = 1
     </p>
 
     <p class="formula">
-      f(1)=1
+      f(4) = 16
     </p>
+
+    <p>De verandering in de functiewaarde is:</p>
 
     <p class="formula">
-      f(4)=16
+      \Delta f = 16 - 1 = 15
     </p>
 
-    <p>
-      De verandering in de functiewaarde is:
-    </p>
+    <p>De verandering in x is:</p>
 
     <p class="formula">
-      \\Delta f = 16-1=15
+      \Delta x = 4 - 1 = 3
     </p>
 
-    <p>
-      De verandering in x is:
-    </p>
+    <p>Dus:</p>
 
     <p class="formula">
-      \\Delta x = 4-1=3
-    </p>
-
-    <p>
-      De gemiddelde veranderingssnelheid is daarom:
-    </p>
-
-    <p class="formula">
-      \\frac{\\Delta f}{\\Delta x}
+      \frac{\Delta f}{\Delta x}
       =
-      \\frac{15}{3}
+      \frac{15}{3}
       =
       5
     </p>
 
+    <p>
+      Gemiddeld stijgt de functie tussen
+      <span class="formula-inline">x = 1</span> en
+      <span class="formula-inline">x = 4</span>
+      dus met 5 eenheden per eenheid van x.
+    </p>
 
-    <h3>De algemene regel</h3>
+
+    <h3>De algemene formule</h3>
 
     <p>
-      Voor een functie <span class="math">f(x)</span> tussen
-      twee waarden <span class="math">x_1</span> en
-      <span class="math">x_2</span> berekenen we de gemiddelde
-      veranderingssnelheid met:
+      Voor een functie <span class="formula-inline">f(x)</span> tussen
+      twee waarden <span class="formula-inline">x_1</span> en
+      <span class="formula-inline">x_2</span> is de gemiddelde
+      veranderingssnelheid:
     </p>
 
     <p class="formula">
-      \\frac{f(x_2)-f(x_1)}{x_2-x_1}
+      \frac{f(x_2)-f(x_1)}
+      {x_2-x_1}
     </p>
 
     <p>
-      Dit is gewoon:
+      Dit is precies hetzelfde idee als:
     </p>
 
     <p class="formula">
-      \\frac{\\text{verandering in }f}{\\text{verandering in }x}
+      \frac{\Delta y}{\Delta x}
     </p>
 
     <p>
-      Met delta-notatie kunnen we dit korter schrijven als:
-    </p>
-
-    <p class="formula">
-      \\frac{\\Delta f}{\\Delta x}
+      De twee notaties leggen alleen een ander accent:
+      de eerste toont expliciet welke twee punten we gebruiken,
+      de tweede benadrukt de verandering.
     </p>
 
     <div class="callout">
       <p><strong>
-        Onthoud vooral de structuur:
-        <br><br>
-        verandering gedeeld door verandering.
+        Gemiddelde veranderingssnelheid =
+        verandering in de uitvoer gedeeld door verandering in de invoer.
       </strong></p>
     </div>
 
 
-    <h3>Dezelfde gedachte in verschillende situaties</h3>
+    <h3>Verandering als helling</h3>
 
     <p>
-      De formule verandert niet wanneer de context verandert.
+      Dezelfde verhouding heeft ook een geometrische betekenis.
     </p>
 
     <p>
-      Bij beweging:
+      Neem twee punten op de grafiek van een functie:
     </p>
 
     <p class="formula">
-      v_{\\text{gem}}=\\frac{\\Delta s}{\\Delta t}
-    </p>
-
-    <p>
-      Bij temperatuur:
+      P = (x_1,f(x_1))
     </p>
 
     <p class="formula">
-      \\frac{\\Delta T}{\\Delta t}
+      Q = (x_2,f(x_2))
     </p>
 
     <p>
-      Bij een algemene functie:
+      De verticale verandering tussen de punten is:
     </p>
 
     <p class="formula">
-      \\frac{\\Delta f}{\\Delta x}
-    </p>
-
-    <p>
-      Het onderliggende idee is steeds hetzelfde:
-    </p>
-
-    <div class="callout">
-      <p><strong>
-        Hoeveel verandert de ene grootheid wanneer de andere grootheid
-        met een bepaalde hoeveelheid verandert?
-      </strong></p>
-    </div>
-
-
-    <h3>De grafiek: verandering wordt helling</h3>
-
-    <p>
-      We kunnen hetzelfde idee ook geometrisch bekijken.
-    </p>
-
-    <p>
-      Een functie geeft punten in een coördinatenstelsel.
-      Neem twee punten op de grafiek:
-    </p>
-
-    <p class="formula">
-      P=(x_1,f(x_1))
-    </p>
-
-    <p class="formula">
-      Q=(x_2,f(x_2))
-    </p>
-
-    <p>
-      De verticale verandering tussen deze punten is:
-    </p>
-
-    <p class="formula">
-      \\Delta y=f(x_2)-f(x_1)
+      \Delta y = f(x_2)-f(x_1)
     </p>
 
     <p>
@@ -372,7 +363,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\Delta x=x_2-x_1
+      \Delta x = x_2-x_1
     </p>
 
     <p>
@@ -380,7 +371,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\frac{\\Delta y}{\\Delta x}
+      \frac{\Delta y}{\Delta x}
     </p>
 
     <p>
@@ -388,109 +379,113 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Zo ontstaat een belangrijke verbinding:
+      Die rechte noemen we de <strong>secant</strong> van de grafiek:
+      een rechte die de grafiek in twee punten snijdt.
     </p>
 
     <div class="callout">
       <p><strong>
-        verandering → verhouding van veranderingen → helling
+        Gemiddelde verandering heeft dus drie gezichten:
       </strong></p>
+      <p>
+        verandering per eenheid → verhouding van veranderingen → helling.
+      </p>
     </div>
 
 
-    <h3>Een positieve, negatieve of nulverandering</h3>
+    <h3>Positieve, negatieve en nulverandering</h3>
 
     <p>
       De gemiddelde veranderingssnelheid kan positief, negatief of nul zijn.
     </p>
 
-    <p>
-      Als een waarde toeneemt:
-    </p>
+    <p>Als de functiewaarde toeneemt:</p>
 
     <p class="formula">
-      \\Delta y > 0
+      \Delta y > 0
     </p>
 
     <p>
-      en de veranderingssnelheid is positief.
+      en is de gemiddelde veranderingssnelheid positief.
     </p>
 
-    <p>
-      Als een waarde afneemt:
-    </p>
+    <p>Als de functiewaarde afneemt:</p>
 
     <p class="formula">
-      \\Delta y < 0
+      \Delta y < 0
     </p>
 
     <p>
-      en de veranderingssnelheid is negatief.
+      en is de gemiddelde veranderingssnelheid negatief.
     </p>
 
-    <p>
-      Als de waarde niet verandert:
-    </p>
+    <p>Als de functiewaarde niet verandert:</p>
 
     <p class="formula">
-      \\Delta y = 0
+      \Delta y = 0
     </p>
 
     <p>
-      en de gemiddelde veranderingssnelheid is nul,
-      zolang <span class="math">\\Delta x \\neq 0</span>.
+      en is de gemiddelde veranderingssnelheid nul,
+      zolang <span class="formula-inline">\Delta x \neq 0</span>.
+    </p>
+
+    <p>
+      Op een grafiek betekent dit respectievelijk een gemiddeld stijgende,
+      dalende of horizontale secant.
     </p>
 
 
-    <h3>Een belangrijk onderscheid</h3>
+    <h3>Gemiddeld of ogenblikkelijk?</h3>
 
     <p>
-      Er zijn twee verschillende vragen die gemakkelijk door elkaar gehaald worden.
+      We kunnen nu twee verschillende vragen formuleren.
     </p>
 
     <p>
       <strong>Vraag 1:</strong>
-      Hoe snel verandert iets gemiddeld tussen twee momenten?
+      Hoe snel verandert een functie gemiddeld tussen twee punten?
     </p>
 
     <p class="formula">
-      \\frac{\\Delta y}{\\Delta x}
+      \frac{f(x_2)-f(x_1)}
+      {x_2-x_1}
     </p>
 
     <p>
       <strong>Vraag 2:</strong>
-      Hoe snel verandert iets precies op één bepaald moment?
+      Hoe snel verandert de functie precies op één bepaald punt?
     </p>
 
     <p>
-      De eerste vraag kunnen we met de kennis van deze milestone beantwoorden.
-      Voor de tweede hebben we een nieuw idee nodig.
+      Die tweede vraag kunnen we nog niet rechtstreeks beantwoorden.
+      Daarvoor moeten we het interval tussen de twee punten steeds kleiner maken.
     </p>
 
     <div class="callout">
       <p><strong>
-        De gemiddelde veranderingssnelheid kijkt naar een interval.
-        <br><br>
-        De volgende stap is ontdekken hoe we de verandering op één punt
-        kunnen bepalen.
+        De gemiddelde veranderingssnelheid gebruikt twee punten.
+      </strong></p>
+      <p><strong>
+        De ogenblikkelijke veranderingssnelheid gaat over één punt.
       </strong></p>
     </div>
 
 
-    <h3>Het interval steeds kleiner maken</h3>
+    <h3>Het interval kleiner maken</h3>
 
     <p>
       Stel dat we willen weten hoe snel een auto precies op tijdstip
-      <strong>2 uur</strong> rijdt.
+      <span class="formula-inline">t = 2</span> uur rijdt.
     </p>
 
     <p>
-      We kunnen eerst kijken naar de gemiddelde snelheid tussen 2 en 3 uur.
-      Maar dat is een heel groot interval.
+      We kunnen eerst de gemiddelde snelheid bekijken tussen 2 en 3 uur.
+      Maar dat interval is groot.
     </p>
 
     <p>
-      We kunnen het interval kleiner maken:
+      We kunnen het tweede tijdstip steeds dichter bij 2 brengen:
     </p>
 
     <p class="formula">
@@ -510,85 +505,194 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Telkens berekenen we opnieuw de gemiddelde veranderingssnelheid.
-      We bekijken vervolgens wat er gebeurt wanneer het tweede punt
+      Bij elk interval berekenen we opnieuw de gemiddelde veranderingssnelheid.
+    </p>
+
+    <p>
+      We onderzoeken vervolgens wat er gebeurt wanneer het tweede punt
       steeds dichter bij het eerste punt komt.
     </p>
 
     <p>
-      Daarmee staan we aan de grens van een nieuw wiskundig begrip:
-      <strong>de limiet</strong>.
+      Het doel is dus niet om twee verschillende punten onmiddellijk gelijk
+      te maken. We onderzoeken het gedrag wanneer hun afstand steeds kleiner wordt.
+    </p>
+
+
+    <h3>De eerste stap naar de limiet</h3>
+
+    <p>
+      Om dit proces algemeen te beschrijven, noemen we de kleine verandering
+      in <span class="formula-inline">x</span> bijvoorbeeld
+      <span class="formula-inline">h</span>.
+    </p>
+
+    <p>
+      Dan vergelijken we de waarden bij
+      <span class="formula-inline">x</span> en
+      <span class="formula-inline">x+h</span>.
+    </p>
+
+    <p>
+      De gemiddelde veranderingssnelheid over dit kleine interval is:
+    </p>
+
+    <p class="formula">
+      \frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Nu kunnen we het interval steeds kleiner maken:
+    </p>
+
+    <p class="formula">
+      h = 1
+    </p>
+
+    <p class="formula">
+      h = 0{,}1
+    </p>
+
+    <p class="formula">
+      h = 0{,}01
+    </p>
+
+    <p class="formula">
+      h = 0{,}001
+    </p>
+
+    <p>
+      We willen onderzoeken naar welke waarde de gemiddelde
+      veranderingssnelheid nadert wanneer <span class="formula-inline">h</span>
+      steeds dichter bij nul komt.
     </p>
 
     <div class="callout">
       <p><strong>
-        Van gemiddelde verandering naar ogenblikkelijke verandering:
-        we maken het interval steeds kleiner.
+        We zijn nu aangekomen bij de centrale vraag van 3.2:
+        wat gebeurt er wanneer het interval naar nul nadert?
       </strong></p>
     </div>
 
 
-    <h3>De brug naar de afgeleide</h3>
+    <h3>Van verandering naar calculus</h3>
 
     <p>
-      De centrale gedachte van Fase 3 begint nu zichtbaar te worden:
+      We hebben in deze milestone een eenvoudige maar zeer krachtige
+      gedachte opgebouwd:
     </p>
 
     <p class="formula">
-      \\text{gemiddelde verandering}
-      =
-      \\frac{\\text{verandering}}{\\text{interval}}
+      \text{verandering}
+      \rightarrow
+      \frac{\text{verandering}}{\text{interval}}
+      \rightarrow
+      \text{gemiddelde veranderingssnelheid}
     </p>
 
     <p>
-      Als we het interval steeds kleiner maken, ontstaat de vraag:
+      Op een grafiek is dezelfde verhouding:
+    </p>
+
+    <p class="formula">
+      \frac{\Delta y}{\Delta x}
+      =
+      \text{helling van een secant}
+    </p>
+
+    <p>
+      En wanneer we de twee punten steeds dichter bij elkaar brengen,
+      ontstaat een nieuwe vraag:
     </p>
 
     <div class="callout">
       <p><strong>
         Welke waarde nadert de gemiddelde veranderingssnelheid
-        wanneer het interval naar nul gaat?
+        wanneer het interval steeds kleiner wordt?
       </strong></p>
     </div>
 
     <p>
-      Dat is precies de vraag die we in de volgende milestone zullen onderzoeken.
+      Dat is het vertrekpunt van de volgende milestone:
+      <strong>het idee van de limiet</strong>.
     </p>
 
-  
-  `
-  },
 
-    {
-    id: "3.2",
-    title: "Het idee van de limiet",
-    goal: "Wat gebeurt er als we steeds dichterbij komen?",
-    theory: /*html*/ `
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Verandering kunnen we meten door de verandering in een grootheid
+        te vergelijken met de verandering in een andere grootheid.
+      </p>
+      <p>
+        De gemiddelde veranderingssnelheid is
+        <span class="formula-inline">\Delta y / \Delta x</span>.
+        Geometrisch is dat de helling van de secant door twee punten.
+      </p>
+      <p>
+        Door het interval steeds kleiner te maken, komen we bij de vraag
+        hoe snel een functie op één moment verandert. Die vraag leidt
+        rechtstreeks naar de limiet en vervolgens naar de afgeleide.
+      </p>
+    </div>
+  `
+},
+
+   {
+  id: "3.2",
+  title: "Het idee van de limiet",
+  goal: "Wat gebeurt er als we steeds dichterbij komen?",
+  theory: /* html */`
     <h2>Het idee van de limiet</h2>
 
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Wat betekent het dat een waarde een andere waarde nadert?</li>
+      <li>Hoe kunnen we het gedrag van een functie vlak bij een punt onderzoeken?</li>
+      <li>Waarom hoeft een functiewaarde niet gelijk te zijn aan haar limiet?</li>
+      <li>Waarom moeten we soms van links én van rechts kijken?</li>
+      <li>Wanneer bestaat een limiet niet?</li>
+      <li>Hoe kunnen we eenvoudige limieten berekenen?</li>
+      <li>Hoe leidt de limiet van een gemiddelde verandering naar de afgeleide?</li>
+    </ul>
+
     <p>
-      In de vorige milestone leerden we hoe we een
-      <strong>gemiddelde veranderingssnelheid</strong> berekenen.
-      We zagen ook een belangrijke nieuwe vraag ontstaan:
+      In 3.1 zagen we dat de gemiddelde veranderingssnelheid tussen twee
+      punten wordt gegeven door:
+    </p>
+
+    <p class="formula">
+      \frac{f(x_2)-f(x_1)}{x_2-x_1}
+    </p>
+
+    <p>
+      Maar we wilden uiteindelijk weten hoe snel een functie
+      <strong>op één bepaald punt</strong> verandert.
+    </p>
+
+    <p>
+      Daarvoor moeten we het interval tussen twee punten steeds kleiner maken.
+      Dat brengt ons bij een van de belangrijkste ideeën van de calculus:
+      <strong>de limiet</strong>.
     </p>
 
     <div class="callout">
-      <p><strong>
-        Wat gebeurt er met de gemiddelde verandering wanneer we het interval
-        steeds kleiner maken?
-      </strong></p>
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een limiet beschrijft waar een functiewaarde naartoe gaat wanneer
+        de invoer steeds dichter bij een bepaalde waarde komt.
+      </p>
+      <p>
+        We onderzoeken dus vooral het <strong>gedrag in de buurt</strong>
+        van een punt.
+      </p>
     </div>
-
-    <p>
-      Om die vraag te beantwoorden hebben we een nieuw wiskundig idee nodig:
-      <strong>de limiet</strong>.
-    </p>
 
 
     <h3>Van een interval naar één punt</h3>
 
     <p>
-      Stel dat we de functie
+      Neem de functie:
     </p>
 
     <p class="formula">
@@ -596,30 +700,26 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      bekijken.
-    </p>
-
-    <p>
-      In de vorige milestone konden we de gemiddelde veranderingssnelheid
-      berekenen tussen twee waarden van <span class="math">x</span>.
-      Bijvoorbeeld tussen <strong>x=2</strong> en <strong>x=3</strong>:
+      In 3.1 berekenden we bijvoorbeeld de gemiddelde veranderingssnelheid
+      tussen <span class="formula-inline">x=2</span> en
+      <span class="formula-inline">x=3</span>.
     </p>
 
     <p class="formula">
-      \\\\frac{f(3)-f(2)}{3-2}
+      \frac{f(3)-f(2)}{3-2}
       =
-      \\\\frac{9-4}{1}
+      \frac{9-4}{1}
       =
       5
     </p>
 
     <p>
-      Maar wat als we willen weten wat er gebeurt
+      Maar wat als we willen onderzoeken wat er gebeurt
       <strong>vlak bij x=2</strong>?
     </p>
 
     <p>
-      Dan kunnen we het tweede punt steeds dichter bij 2 plaatsen.
+      Dan kunnen we het tweede punt steeds dichter bij 2 brengen:
     </p>
 
     <p class="formula">
@@ -643,13 +743,13 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      We nemen dus steeds kleinere intervallen rond <span class="math">x=2</span>.
+      We maken het interval dus steeds kleiner.
     </p>
 
     <div class="callout">
       <p><strong>
-        We proberen niet meteen op het punt uit te komen.
-        We onderzoeken wat er gebeurt wanneer we het punt steeds dichter naderen.
+        We hoeven het punt niet meteen te bereiken.
+        We onderzoeken wat er gebeurt wanneer we het steeds dichter naderen.
       </strong></p>
     </div>
 
@@ -657,21 +757,21 @@ const MILESTONES_3 = [
     <h3>Wat betekent "naderen"?</h3>
 
     <p>
-      In het dagelijks taalgebruik betekent "naderen" dat iets steeds dichter
-      bij iets anders komt.
+      In het dagelijks leven betekent naderen dat iets steeds dichter bij
+      iets anders komt.
     </p>
 
     <p>
-      Stel dat een trein naar een station rijdt.
+      Stel bijvoorbeeld dat een trein naar een station rijdt.
       De afstand tot het station kan achtereenvolgens zijn:
     </p>
 
     <p class="formula">
-      10\\\\text{ km},\quad
-      5\\\\text{ km},\quad
-      1\\\\text{ km},\quad
-      0{,}1\\\\text{ km},\quad
-      0{,}01\\\\text{ km}
+      10\text{ km},\quad
+      5\text{ km},\quad
+      1\text{ km},\quad
+      0{,}1\text{ km},\quad
+      0{,}01\text{ km}
     </p>
 
     <p>
@@ -679,12 +779,12 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Hetzelfde idee gebruiken we in de wiskunde.
-      We kunnen zeggen dat een waarde <strong>naar een bepaalde waarde nadert</strong>.
+      In de wiskunde gebruiken we hetzelfde idee.
+      Een waarde kan een andere waarde steeds dichter naderen.
     </p>
 
     <p>
-      Belangrijk is dat "naderen" niet hetzelfde is als "bereiken".
+      Belangrijk is dat <strong>naderen niet hetzelfde is als bereiken</strong>.
     </p>
 
     <div class="callout">
@@ -695,7 +795,7 @@ const MILESTONES_3 = [
     </div>
 
 
-    <h3>Een eerste voorbeeld van een limiet</h3>
+    <h3>Een eerste limiet</h3>
 
     <p>
       Neem opnieuw:
@@ -706,42 +806,36 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      We willen weten wat er gebeurt wanneer <span class="math">x</span>
-      steeds dichter bij 2 komt.
-    </p>
-
-    <p>
-      We bekijken enkele waarden:
+      We onderzoeken wat er gebeurt wanneer
+      <span class="formula-inline">x</span> steeds dichter bij 2 komt.
     </p>
 
     <p class="formula">
       x=2{,}1
-      \\\\quad\\\\Rightarrow\\\\quad
+      \quad\Rightarrow\quad
       f(x)=2{,}1^2=4{,}41
     </p>
 
     <p class="formula">
       x=2{,}01
-      \\\\quad\\\\Rightarrow\\\\quad
+      \quad\Rightarrow\quad
       f(x)=2{,}01^2=4{,}0401
     </p>
 
     <p class="formula">
       x=2{,}001
-      \\\\quad\\\\Rightarrow\\\\quad
+      \quad\Rightarrow\quad
       f(x)=2{,}001^2=4{,}004001
     </p>
 
     <p>
-      De functiewaarde komt steeds dichter bij 4.
+      De functiewaarden komen steeds dichter bij 4.
     </p>
 
-    <p>
-      We schrijven daarom:
-    </p>
+    <p>We schrijven:</p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to2}x^2=4
+      \lim_{x\to2}x^2=4
     </p>
 
     <p>
@@ -750,8 +844,8 @@ const MILESTONES_3 = [
 
     <div class="callout">
       <p><strong>
-        De limiet van <span class="math">x^2</span> voor
-        <span class="math">x</span> naar 2 is 4.
+        De limiet van <span class="formula-inline">x^2</span>
+        voor <span class="formula-inline">x</span> naar 2 is 4.
       </strong></p>
     </div>
 
@@ -759,26 +853,25 @@ const MILESTONES_3 = [
     <h3>De betekenis van de notatie</h3>
 
     <p>
-      De notatie
+      Bekijk:
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to a}f(x)=L
+      \lim_{x\to a}f(x)=L
     </p>
 
     <p>
-      bevat drie belangrijke onderdelen.
+      Deze notatie bevat drie onderdelen:
     </p>
 
     <ul>
       <li>
         <strong>x → a</strong>:
-        we laten <span class="math">x</span> steeds dichter bij
-        <span class="math">a</span> komen;
+        x komt steeds dichter bij a;
       </li>
       <li>
         <strong>f(x)</strong>:
-        we kijken naar de overeenkomstige functiewaarden;
+        we volgen de overeenkomstige functiewaarden;
       </li>
       <li>
         <strong>L</strong>:
@@ -792,85 +885,86 @@ const MILESTONES_3 = [
 
     <div class="callout">
       <p>
-        Wanneer <span class="math">x</span> steeds dichter bij
-        <span class="math">a</span> komt, nadert
-        <span class="math">f(x)</span> steeds dichter bij
-        <span class="math">L</span>.
+        Wanneer <span class="formula-inline">x</span> steeds dichter bij
+        <span class="formula-inline">a</span> komt, nadert
+        <span class="formula-inline">f(x)</span> steeds dichter bij
+        <span class="formula-inline">L</span>.
       </p>
     </div>
 
 
-    <h3>De waarde van de functie is niet altijd de limiet</h3>
+    <h3>De functiewaarde en de limiet</h3>
 
     <p>
-      Dit is één van de belangrijkste ideeën van deze milestone.
+      Een van de belangrijkste inzichten is dat de functiewaarde op een punt
+      niet noodzakelijk gelijk hoeft te zijn aan de limiet.
+    </p>
+
+    <p>Bekijk bijvoorbeeld:</p>
+
+    <p class="formula">
+      f(x)=\frac{x^2-4}{x-2}
     </p>
 
     <p>
-      Bekijk de functie:
+      Als we <span class="formula-inline">x=2</span> rechtstreeks invullen,
+      krijgen we:
     </p>
 
     <p class="formula">
-      f(x)=\\\\frac{x^2-4}{x-2}
-    </p>
-
-    <p>
-      Wanneer <span class="math">x=2</span>, krijgen we:
-    </p>
-
-    <p class="formula">
-      \\\\frac{2^2-4}{2-2}
+      \frac{2^2-4}{2-2}
       =
-      \\\\frac{0}{0}
+      \frac{0}{0}
     </p>
 
     <p>
-      Dat is niet gedefinieerd.
-      De functie heeft dus <strong>geen functiewaarde bij x=2</strong>.
+      De functie is dus niet gedefinieerd voor
+      <span class="formula-inline">x=2</span>.
     </p>
 
     <p>
-      Maar we kunnen de uitdrukking voor andere waarden van
-      <span class="math">x</span> vereenvoudigen:
+      Toch kunnen we de uitdrukking voor andere waarden van
+      <span class="formula-inline">x</span> vereenvoudigen:
     </p>
 
     <p class="formula">
-      \\\\frac{x^2-4}{x-2}
+      \frac{x^2-4}{x-2}
       =
-      \\\\frac{(x-2)(x+2)}{x-2}
+      \frac{(x-2)(x+2)}{x-2}
       =
       x+2
     </p>
 
     <p>
-      zolang <span class="math">x\\\\neq2</span>.
-    </p>
-
-    <p>
-      Wanneer <span class="math">x</span> dicht bij 2 komt,
-      komt <span class="math">x+2</span> dicht bij 4.
-    </p>
-
-    <p>
-      Daarom geldt:
+      zolang:
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to2}
-      \\\\frac{x^2-4}{x-2}
+      x\neq2
+    </p>
+
+    <p>
+      Wanneer <span class="formula-inline">x</span> dicht bij 2 komt,
+      komt <span class="formula-inline">x+2</span> dicht bij 4.
+      Daarom:
+    </p>
+
+    <p class="formula">
+      \lim_{x\to2}
+      \frac{x^2-4}{x-2}
       =
       4
     </p>
 
     <div class="callout">
       <p><strong>
-        De functie is bij x=2 niet gedefinieerd,
-        maar de limiet voor x naar 2 bestaat wel en is gelijk aan 4.
+        Een functie kan op een punt niet gedefinieerd zijn,
+        terwijl de limiet op dat punt wel bestaat.
       </strong></p>
     </div>
 
     <p>
-      Dit maakt het onderscheid duidelijk tussen:
+      Dit laat het verschil zien tussen:
     </p>
 
     <ul>
@@ -878,45 +972,33 @@ const MILESTONES_3 = [
       <li>het gedrag van de functie in de buurt van dat punt.</li>
     </ul>
 
-    <p>
-      De limiet gaat over dat tweede:
-      <strong>het gedrag in de buurt</strong>.
-    </p>
 
-
-    <h3>Waarom mogen we x niet gewoon gelijk aan a maken?</h3>
+    <h3>Waarom vullen we niet gewoon x=a in?</h3>
 
     <p>
       Bij een limiet onderzoeken we wat er gebeurt wanneer
-      <span class="math">x</span> <strong>naar</strong> een waarde
-      <span class="math">a</span> gaat.
+      <span class="formula-inline">x</span> <strong>naar</strong>
+      <span class="formula-inline">a</span> gaat.
     </p>
 
     <p>
-      Dat betekent niet automatisch dat we
-      <span class="math">x=a</span> moeten invullen.
+      Dat betekent niet dat we noodzakelijk
+      <span class="formula-inline">x=a</span> moeten invullen.
     </p>
 
     <p>
-      Bij
-    </p>
-
-    <p class="formula">
-      \\\\lim_{x\\\\to2}
-      \\\\frac{x^2-4}{x-2}
+      In het vorige voorbeeld was rechtstreeks invullen zelfs onmogelijk,
+      omdat de noemer nul werd.
     </p>
 
     <p>
-      is de oorspronkelijke functie precies bij
-      <span class="math">x=2</span> niet gedefinieerd.
-      Toch kunnen we perfect onderzoeken wat er gebeurt
-      voor waarden die heel dicht bij 2 liggen.
+      De limiet kijkt daarom naar waarden <strong>rond</strong> het punt.
     </p>
 
     <div class="callout">
       <p><strong>
-        Een limiet kijkt naar de omgeving van een punt,
-        niet noodzakelijk naar het punt zelf.
+        Een limiet gaat over het gedrag in de omgeving van een punt,
+        niet noodzakelijk over de waarde op dat punt zelf.
       </strong></p>
     </div>
 
@@ -924,77 +1006,46 @@ const MILESTONES_3 = [
     <h3>Van links en van rechts</h3>
 
     <p>
-      Wanneer we zeggen dat <span class="math">x</span> naar 2 gaat,
-      kunnen we 2 langs twee kanten naderen.
+      Een punt kan vanuit twee richtingen worden benaderd.
     </p>
 
     <p>
-      Vanuit kleinere waarden:
+      Vanuit kleinere waarden van x schrijven we:
     </p>
 
     <p class="formula">
-      x\\\\to2^-
+      x\to a^-
     </p>
 
     <p>
-      Dit noemen we de <strong>linkerlimiet</strong>.
+      Dit noemen we de <strong>linkerbenadering</strong>.
     </p>
 
     <p>
-      Vanuit grotere waarden:
+      Vanuit grotere waarden van x schrijven we:
     </p>
 
     <p class="formula">
-      x\\\\to2^+
+      x\to a^+
     </p>
 
     <p>
-      Dit noemen we de <strong>rechterlimiet</strong>.
+      Dit noemen we de <strong>rechterbenadering</strong>.
     </p>
 
     <p>
-      Voor een gewone tweezijdige limiet moeten beide richtingen
-      naar dezelfde waarde gaan.
+      Voor een gewone tweezijdige limiet moeten beide richtingen naar
+      dezelfde waarde naderen.
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to a}f(x)=L
+      \lim_{x\to a^-}f(x)=L
     </p>
 
-    <p>
-      wanneer zowel
-    </p>
+    <p>en:</p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to a^-}f(x)=L
-    </p>
-
-    <p>
-      als
-    </p>
-
-    <p class="formula">
-      \\\\lim_{x\\\\to a^+}f(x)=L
-    </p>
-
-    <p>
-      gelden.
-    </p>
-
-    <div class="callout">
-      <p><strong>
-        Links en rechts moeten naar dezelfde waarde naderen
-        voordat de gewone limiet bestaat.
-      </strong></p>
-    </div>
-
-
-    <h3>Een voorbeeld waarbij de limiet niet bestaat</h3>
-
-    <p>
-      Stel dat een functie links van <span class="math">x=0</span>
-      naar 1 nadert, maar rechts van <span class="math">x=0</span>
-      naar 3.
+      \lim_{x\to a^+}f(x)=L
     </p>
 
     <p>
@@ -1002,32 +1053,54 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to0^-}f(x)=1
+      \lim_{x\to a}f(x)=L
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Links en rechts moeten naar dezelfde waarde naderen
+        voordat de tweezijdige limiet bestaat.
+      </strong></p>
+    </div>
+
+
+    <h3>Een limiet die niet bestaat</h3>
+
+    <p>
+      Stel dat een functie links van
+      <span class="formula-inline">x=0</span> naar 1 nadert,
+      maar rechts van 0 naar 3.
+    </p>
+
+    <p>Dan geldt:</p>
+
+    <p class="formula">
+      \lim_{x\to0^-}f(x)=1
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to0^+}f(x)=3
+      \lim_{x\to0^+}f(x)=3
     </p>
 
     <p>
-      Omdat 1 en 3 verschillend zijn, bestaat de tweezijdige limiet niet.
+      Omdat de linker- en rechterlimiet verschillend zijn,
+      bestaat de tweezijdige limiet niet.
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to0}f(x)
-      \\\\text{ bestaat niet}
+      \lim_{x\to0}f(x)\text{ bestaat niet}
     </p>
 
     <p>
-      Dit is belangrijk:
+      Dit is een belangrijk gevolg:
       <strong>niet elke limiet bestaat</strong>.
     </p>
 
 
-    <h3>De limiet als voorspelling van gedrag</h3>
+    <h3>De limiet beschrijft gedrag</h3>
 
     <p>
-      Een handige manier om over limieten te denken is als volgt.
+      We kunnen een limiet daarom het best zien als een uitspraak over gedrag.
     </p>
 
     <p>
@@ -1041,92 +1114,36 @@ const MILESTONES_3 = [
     </div>
 
     <p>
-      maar:
+      We vragen:
     </p>
 
     <div class="callout">
       <p><strong>
-        "Welke waarde begint de functie te benaderen wanneer we
-        steeds dichter bij dit punt komen?"
+        "Welke waarde begint de functie te benaderen wanneer
+        x steeds dichter bij dit punt komt?"
       </strong></p>
     </div>
 
     <p>
-      De limiet is dus een uitspraak over
-      <strong>gedrag</strong>.
+      Deze manier van denken is essentieel voor de verdere calculus.
     </p>
 
 
-    <h3>Rekenregels voor limieten</h3>
+    <h3>Rechtstreeks invullen</h3>
 
     <p>
-      Wanneer de afzonderlijke limieten bestaan, kunnen we limieten
-      vaak op dezelfde manier behandelen als gewone algebraïsche uitdrukkingen.
+      Niet iedere limiet is ingewikkeld.
+      Bij veel gewone functies kunnen we de waarde rechtstreeks invullen.
     </p>
 
-    <p>
-      Voor functies <span class="math">f(x)</span> en
-      <span class="math">g(x)</span> geldt:
-    </p>
+    <p>Bijvoorbeeld:</p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to a}(f(x)+g(x))
-      =
-      \\\\lim_{x\\\\to a}f(x)
-      +
-      \\\\lim_{x\\\\to a}g(x)
-    </p>
-
-    <p class="formula">
-      \\\\lim_{x\\\\to a}(f(x)-g(x))
-      =
-      \\\\lim_{x\\\\to a}f(x)
-      -
-      \\\\lim_{x\\\\to a}g(x)
-    </p>
-
-    <p class="formula">
-      \\\\lim_{x\\\\to a}(f(x)g(x))
-      =
-      \\\\left(\\\\lim_{x\\\\to a}f(x)\\\\right)
-      \\\\left(\\\\lim_{x\\\\to a}g(x)\\\\right)
+      \lim_{x\to3}(x^2+2x)
     </p>
 
     <p>
-      Voor een quotiënt geldt:
-    </p>
-
-    <p class="formula">
-      \\\\lim_{x\\\\to a}
-      \\\\frac{f(x)}{g(x)}
-      =
-      \\\\frac{\\\\lim_{x\\\\to a}f(x)}
-      {\\\\lim_{x\\\\to a}g(x)}
-    </p>
-
-    <p>
-      op voorwaarde dat de noemerlimiet niet nul is.
-    </p>
-
-    <p>
-      Deze regels geven ons een praktische manier om veel limieten
-      te berekenen zonder telkens een tabel met waarden te maken.
-    </p>
-
-
-    <h3>Direct invullen</h3>
-
-    <p>
-      Bekijk:
-    </p>
-
-    <p class="formula">
-      \\\\lim_{x\\\\to3}(x^2+2x)
-    </p>
-
-    <p>
-      De functie is hier netjes gedefinieerd.
-      We kunnen daarom rechtstreeks invullen:
+      Invullen van <span class="formula-inline">x=3</span> geeft:
     </p>
 
     <p class="formula">
@@ -1137,41 +1154,30 @@ const MILESTONES_3 = [
       15
     </p>
 
-    <p>
-      Dus:
-    </p>
+    <p>Dus:</p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to3}(x^2+2x)=15
+      \lim_{x\to3}(x^2+2x)=15
     </p>
 
     <p>
-      Bij veel eenvoudige functies komt de limiet dus overeen
-      met de gewone functiewaarde.
-    </p>
-
-    <p>
-      Maar het vorige voorbeeld liet zien dat dit niet altijd zo hoeft te zijn.
+      Voor zulke eenvoudige functies vallen functiewaarde en limiet samen.
     </p>
 
 
     <h3>De vorm 0/0</h3>
 
     <p>
-      Soms krijgen we bij rechtstreeks invullen:
+      Soms levert rechtstreeks invullen de vorm:
     </p>
 
     <p class="formula">
-      \\\\frac{0}{0}
+      \frac{0}{0}
     </p>
 
     <p>
-      Dit betekent <strong>niet</strong> dat de limiet gelijk is aan nul.
-    </p>
-
-    <p>
-      De vorm <span class="math">0/0</span> vertelt ons dat
-      rechtstreeks invullen onvoldoende informatie geeft.
+      Dit betekent <strong>niet</strong> dat de limiet nul is.
+      Het betekent dat rechtstreeks invullen ons nog geen antwoord geeft.
     </p>
 
     <p>
@@ -1179,183 +1185,232 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Bijvoorbeeld:
+      Neem opnieuw:
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to2}
-      \\\\frac{x^2-4}{x-2}
+      \lim_{x\to2}
+      \frac{x^2-4}{x-2}
     </p>
 
     <p>
-      geeft bij rechtstreeks invullen de vorm
-      <span class="math">0/0</span>.
-      Door te ontbinden in factoren vinden we:
+      Factoriseren geeft:
     </p>
 
     <p class="formula">
-      \\\\frac{x^2-4}{x-2}
+      \frac{x^2-4}{x-2}
       =
-      \\\\frac{(x-2)(x+2)}{x-2}
+      \frac{(x-2)(x+2)}{x-2}
       =
       x+2
     </p>
 
     <p>
-      voor <span class="math">x\\\\neq2</span>.
-      Daardoor kunnen we de limiet wel bepalen:
+      voor <span class="formula-inline">x\neq2</span>.
+      Daarom:
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to2}(x+2)=4
+      \lim_{x\to2}(x+2)=4
     </p>
 
     <div class="callout">
       <p><strong>
-        0/0 is geen antwoord.
+        De vorm 0/0 is geen antwoord.
         Het is een signaal dat we verder moeten onderzoeken.
       </strong></p>
     </div>
 
 
+    <h3>Rekenregels voor limieten</h3>
+
+    <p>
+      Wanneer de afzonderlijke limieten bestaan, kunnen we veel
+      limieten volgens gewone algebraïsche regels behandelen.
+    </p>
+
+    <p>Voor optellen geldt:</p>
+
+    <p class="formula">
+      \lim_{x\to a}(f(x)+g(x))
+      =
+      \lim_{x\to a}f(x)
+      +
+      \lim_{x\to a}g(x)
+    </p>
+
+    <p>Voor aftrekken:</p>
+
+    <p class="formula">
+      \lim_{x\to a}(f(x)-g(x))
+      =
+      \lim_{x\to a}f(x)
+      -
+      \lim_{x\to a}g(x)
+    </p>
+
+    <p>Voor vermenigvuldigen:</p>
+
+    <p class="formula">
+      \lim_{x\to a}(f(x)g(x))
+      =
+      \left(\lim_{x\to a}f(x)\right)
+      \left(\lim_{x\to a}g(x)\right)
+    </p>
+
+    <p>Voor delen geldt:</p>
+
+    <p class="formula">
+      \lim_{x\to a}\frac{f(x)}{g(x)}
+      =
+      \frac{\lim_{x\to a}f(x)}
+      {\lim_{x\to a}g(x)}
+    </p>
+
+    <p>
+      bij een niet-nul noemerlimiet.
+    </p>
+
+    <p>
+      Deze regels maken het mogelijk om veel limieten rechtstreeks
+      algebraïsch te berekenen.
+    </p>
+
+
     <h3>Limieten naar oneindig</h3>
 
     <p>
-      Tot nu toe lieten we <span class="math">x</span> naar een bepaalde
-      eindige waarde naderen.
-      We kunnen ook vragen wat er gebeurt wanneer
-      <span class="math">x</span> steeds groter wordt.
+      We kunnen niet alleen onderzoeken wat er gebeurt wanneer
+      <span class="formula-inline">x</span> een bepaalde waarde nadert.
+      We kunnen ook kijken wat er gebeurt wanneer
+      <span class="formula-inline">x</span> steeds groter wordt.
     </p>
 
     <p>
-      Bijvoorbeeld bij:
+      Neem:
     </p>
 
     <p class="formula">
-      f(x)=\\\\frac{1}{x}
+      f(x)=\frac{1}{x}
     </p>
 
     <p>
-      Voor steeds grotere waarden van <span class="math">x</span> krijgen we:
+      Voor steeds grotere waarden van x krijgen we:
     </p>
 
     <p class="formula">
-      \\\\frac{1}{10}=0{,}1
+      \frac{1}{10}=0{,}1
     </p>
 
     <p class="formula">
-      \\\\frac{1}{100}=0{,}01
+      \frac{1}{100}=0{,}01
     </p>
 
     <p class="formula">
-      \\\\frac{1}{1000}=0{,}001
+      \frac{1}{1000}=0{,}001
     </p>
 
     <p>
-      De waarden komen steeds dichter bij 0.
+      De functiewaarden naderen 0.
+    </p>
+
+    <p>We schrijven:</p>
+
+    <p class="formula">
+      \lim_{x\to\infty}\frac{1}{x}=0
     </p>
 
     <p>
-      We schrijven:
+      Hierbij is <strong>∞ geen gewoon getal</strong>.
+      We vullen dus niet letterlijk
+      <span class="formula-inline">x=\infty</span> in.
+    </p>
+
+    <p>
+      De notatie beschrijft wat er gebeurt wanneer x zonder bovengrens
+      blijft toenemen.
+    </p>
+
+
+    <h3>Wanneer de waarden onbeperkt groeien</h3>
+
+    <p>
+      Een limiet kan ook beschrijven dat functiewaarden onbeperkt groot worden.
+    </p>
+
+    <p>Bijvoorbeeld:</p>
+
+    <p class="formula">
+      f(x)=\frac{1}{x^2}
+    </p>
+
+    <p>
+      Wanneer x vanuit positieve waarden naar 0 nadert:
     </p>
 
     <p class="formula">
-      \\\\lim_{x\\\\to\\\\infty}\\\\frac{1}{x}=0
-    </p>
-
-    <p>
-      Dit betekent niet dat <span class="math">x=\\\\infty</span>.
-      <strong>Oneindig is geen gewoon getal</strong> dat we kunnen invullen.
-    </p>
-
-    <p>
-      De notatie beschrijft wat er gebeurt wanneer
-      <span class="math">x</span> zonder bovengrens blijft toenemen.
-    </p>
-
-
-    <h3>Een limiet kan ook oneindig zijn</h3>
-
-    <p>
-      We kunnen ook een situatie krijgen waarin functiewaarden
-      steeds groter worden zonder een eindige grenswaarde te naderen.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
+      \frac{1}{0{,}1^2}=100
     </p>
 
     <p class="formula">
-      f(x)=\\\\frac{1}{x^2}
-    </p>
-
-    <p>
-      Wanneer <span class="math">x</span> steeds dichter bij 0 komt,
-      worden de functiewaarden steeds groter:
+      \frac{1}{0{,}01^2}=10\,000
     </p>
 
     <p class="formula">
-      \\\\frac{1}{0{,}1^2}=100
+      \frac{1}{0{,}001^2}=1\,000\,000
+    </p>
+
+    <p>
+      De waarden worden onbeperkt groot.
     </p>
 
     <p class="formula">
-      \\\\frac{1}{0{,}01^2}=10\,000
-    </p>
-
-    <p class="formula">
-      \\\\frac{1}{0{,}001^2}=1\,000\,000
+      \lim_{x\to0^+}\frac{1}{x^2}=\infty
     </p>
 
     <p>
-      We schrijven:
-    </p>
-
-    <p class="formula">
-      \\\\lim_{x\\\\to0}\\\\frac{1}{x^2}=\\\\infty
-    </p>
-
-    <p>
-      Ook hier betekent dit niet dat de functie op
-      <span class="math">x=0</span> de waarde "oneindig" heeft.
-      De functie is daar zelfs niet gedefinieerd.
-    </p>
-
-    <p>
-      De notatie beschrijft alleen dat de functiewaarden
-      onbeperkt groot worden wanneer <span class="math">x</span>
-      naar 0 nadert.
-    </p>
-
-
-    <h3>Limieten en grafieken</h3>
-
-    <p>
-      De grafische betekenis van een limiet is bijzonder nuttig.
-    </p>
-
-    <p>
-      Wanneer we schrijven:
-    </p>
-
-    <p class="formula">
-      \\\\lim_{x\\\\to a}f(x)=L
-    </p>
-
-    <p>
-      betekent dit dat de punten van de grafiek steeds dichter bij
-      de hoogte <span class="math">L</span> komen wanneer
-      <span class="math">x</span> steeds dichter bij
-      <span class="math">a</span> komt.
-    </p>
-
-    <p>
-      De grafiek hoeft het punt
-      <span class="math">(a,L)</span> daarbij niet noodzakelijk te bevatten.
+      Ook hier betekent ∞ niet dat de functie op
+      <span class="formula-inline">x=0</span> een waarde "oneindig" heeft.
+      De functie is daar niet gedefinieerd.
     </p>
 
     <div class="callout">
       <p><strong>
-        Een limiet beschrijft het gedrag van de grafiek vlak bij een punt.
+        ∞ beschrijft hier onbeperkte groei, geen gewone functiewaarde.
+      </strong></p>
+    </div>
+
+
+    <h3>De grafische betekenis van een limiet</h3>
+
+    <p>
+      De limiet kunnen we ook rechtstreeks op een grafiek interpreteren.
+    </p>
+
+    <p>
+      Wanneer:
+    </p>
+
+    <p class="formula">
+      \lim_{x\to a}f(x)=L
+    </p>
+
+    <p>
+      betekent dit dat de grafiek steeds dichter bij de hoogte
+      <span class="formula-inline">L</span> komt wanneer
+      <span class="formula-inline">x</span> steeds dichter bij
+      <span class="formula-inline">a</span> komt.
+    </p>
+
+    <p>
+      De grafiek hoeft het punt
+      <span class="formula-inline">(a,L)</span> daarbij niet noodzakelijk
+      te bevatten.
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        De limiet beschrijft wat de grafiek doet vlak bij een punt.
       </strong></p>
     </div>
 
@@ -1363,155 +1418,126 @@ const MILESTONES_3 = [
     <h3>Waarom hebben we limieten nodig?</h3>
 
     <p>
-      De limiet is geen losstaand rekenkunstje.
-      Ze lost een fundamenteel probleem op.
+      We kunnen nu terugkeren naar de vraag waarmee deze milestone begon.
     </p>
 
     <p>
-      In de vorige milestone konden we de gemiddelde verandering
-      tussen twee punten berekenen:
+      In 3.1 berekenden we de gemiddelde veranderingssnelheid:
     </p>
 
     <p class="formula">
-      \\\\frac{f(x_2)-f(x_1)}{x_2-x_1}
+      \frac{f(x_2)-f(x_1)}
+      {x_2-x_1}
     </p>
 
     <p>
-      Maar we wilden uiteindelijk weten wat de verandering
-      <strong>op één punt</strong> is.
+      Maar we wilden weten hoe snel een functie
+      <strong>op één punt</strong> verandert.
     </p>
 
     <p>
-      Een interval tussen twee verschillende punten heeft altijd
-      een niet-nul lengte.
-      We kunnen daarom niet zomaar twee identieke punten invullen.
+      Daarvoor brengen we de twee punten steeds dichter bij elkaar.
+      We kunnen het tweede punt bijvoorbeeld schrijven als
+      <span class="formula-inline">x+h</span>.
     </p>
 
     <p>
-      De limiet geeft ons een andere mogelijkheid:
+      De gemiddelde veranderingssnelheid wordt dan:
+    </p>
+
+    <p class="formula">
+      \frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Nu laten we <span class="formula-inline">h</span> naar nul naderen:
+    </p>
+
+    <p class="formula">
+      \lim_{h\to0}
+      \frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      We hebben daarmee nog niet de afgeleide berekend.
+      We hebben het probleem alleen zo geformuleerd dat een
+      <strong>ogenblikkelijke veranderingssnelheid</strong> mogelijk wordt.
     </p>
 
     <div class="callout">
       <p><strong>
-        We laten het tweede punt steeds dichter bij het eerste punt komen
-        en onderzoeken naar welke waarde de gemiddelde verandering nadert.
+        De limiet vormt de brug van gemiddelde verandering
+        naar verandering op één punt.
       </strong></p>
     </div>
 
-    <p>
-      Daarmee krijgen we de brug van
-      <strong>gemiddelde verandering</strong>
-      naar
-      <strong>ogenblikkelijke verandering</strong>.
-    </p>
 
-
-    <h3>De limiet van de gemiddelde veranderingssnelheid</h3>
+    <h3>Een laatste voorbeeld: de afgeleide komt in zicht</h3>
 
     <p>
-      Stel dat we de gemiddelde veranderingssnelheid willen berekenen
-      tussen <span class="math">x</span> en
-      <span class="math">x+h</span>.
-    </p>
-
-    <p>
-      De verandering in <span class="math">x</span> is dan:
+      Neem opnieuw:
     </p>
 
     <p class="formula">
-      \\\\Delta x=h
+      f(x)=x^2
     </p>
 
     <p>
-      De gemiddelde veranderingssnelheid wordt:
+      De gemiddelde veranderingssnelheid tussen
+      <span class="formula-inline">x</span> en
+      <span class="formula-inline">x+h</span> is:
     </p>
 
     <p class="formula">
-      \\\\frac{f(x+h)-f(x)}{h}
+      \frac{(x+h)^2-x^2}{h}
     </p>
 
     <p>
-      Nu laten we <span class="math">h</span> steeds kleiner worden:
+      Uitwerken geeft:
     </p>
 
     <p class="formula">
-      h=1
+      \frac{x^2+2xh+h^2-x^2}{h}
     </p>
 
     <p class="formula">
-      h=0{,}1
+      \frac{2xh+h^2}{h}
     </p>
 
     <p class="formula">
-      h=0{,}01
-    </p>
-
-    <p class="formula">
-      h=0{,}001
+      2x+h
     </p>
 
     <p>
-      We onderzoeken dus wat er gebeurt wanneer
-      <span class="math">h</span> naar nul nadert.
+      Wanneer <span class="formula-inline">h</span> steeds dichter bij nul komt,
+      komt deze uitdrukking steeds dichter bij:
     </p>
 
     <p class="formula">
-      \\\\lim_{h\\\\to0}
-      \\\\frac{f(x+h)-f(x)}{h}
+      2x
     </p>
 
     <p>
-      Deze uitdrukking vormt de basis voor de volgende stap in calculus:
-      de <strong>afgeleide</strong>.
+      We hebben hiermee het mechanisme achter de afgeleide al zichtbaar gemaakt.
+      De formele definitie en de praktische regels voor afgeleiden komen in
+      de volgende milestones.
     </p>
 
     <div class="callout">
       <p><strong>
-        De limiet maakt het mogelijk om een proces van steeds kleiner wordende
-        intervallen wiskundig te beschrijven.
+        Gemiddelde verandering
+        → interval kleiner maken
+        → limiet nemen
+        → ogenblikkelijke verandering.
       </strong></p>
     </div>
-
-
-    <h3>De centrale gedachte van deze milestone</h3>
-
-    <p>
-      We hebben nu een tweede fundamentele beweging in de wiskunde geleerd:
-    </p>
-
-    <p class="formula">
-      \\\\text{afstand}
-      \\\\rightarrow
-      \\\\text{dichterbij}
-      \\\\rightarrow
-      \\\\text{naderen}
-      \\\\rightarrow
-      \\\\text{limiet}
-    </p>
-
-    <p>
-      De limiet stelt ons in staat om processen te bestuderen
-      waarbij een grootheid steeds dichter bij een bepaalde waarde komt.
-    </p>
-
-    <p>
-      Daarbij kunnen we onderscheid maken tussen:
-    </p>
-
-    <ul>
-      <li>een functiewaarde op een punt;</li>
-      <li>het gedrag van een functie in de buurt van dat punt;</li>
-      <li>een linker- en rechterbenadering;</li>
-      <li>een eindige limiet;</li>
-      <li>gedrag waarbij waarden onbeperkt groot of klein worden.</li>
-    </ul>
 
 
     <h3>Van limiet naar continuïteit</h3>
 
     <p>
-      We hebben gezien dat een functie een limiet kan hebben
-      op een punt waar de functie zelf niet gedefinieerd is.
+      We hebben gezien dat een functie een limiet kan hebben op een punt
+      waar de functie zelf niet gedefinieerd is.
     </p>
 
     <p>
@@ -1520,7 +1546,8 @@ const MILESTONES_3 = [
 
     <div class="callout">
       <p><strong>
-        Wanneer gedraagt een functie zich op een punt zonder onderbreking?
+        Wanneer sluit het gedrag van een functie rond een punt
+        netjes aan op de functiewaarde zelf?
       </strong></p>
     </div>
 
@@ -1530,75 +1557,795 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Dat leidt rechtstreeks naar het volgende begrip:
+      Dat leidt naar het volgende begrip:
       <strong>continuïteit</strong>.
     </p>
 
 
-    <h3>Van limiet naar de afgeleide</h3>
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een limiet beschrijft het gedrag van een functie wanneer de invoer
+        steeds dichter bij een bepaalde waarde komt.
+      </p>
+      <p>
+        De functiewaarde op dat punt hoeft niet gelijk te zijn aan de limiet,
+        en de limiet hoeft zelfs niet te bestaan als de linker- en
+        rechterbenadering verschillend zijn.
+      </p>
+      <p>
+        Door het interval in de gemiddelde veranderingssnelheid steeds kleiner
+        te maken, ontstaat de limiet die de brug vormt naar de
+        <strong>ogenblikkelijke veranderingssnelheid</strong> en dus naar
+        de afgeleide.
+      </p>
+    </div>
+  `
+},
+
+  {
+  id: "3.3",
+  title: "Continuïteit",
+  goal: "Wanneer vormt een functie één ononderbroken geheel?",
+  theory: /* html */`
+    <h2>Continuïteit</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Wat betekent het dat een functie continu is?</li>
+      <li>Waarom zijn limiet, functiewaarde en continuïteit met elkaar verbonden?</li>
+      <li>Wat is een gat in een grafiek?</li>
+      <li>Wat is het verschil tussen een gat, een sprong en een verticale asymptoot?</li>
+      <li>Welke functies zijn vanzelfsprekend continu?</li>
+      <li>Hoe kunnen we continuïteit onderzoeken met limieten?</li>
+      <li>Waarom is continuïteit belangrijk voor de verdere calculus?</li>
+    </ul>
 
     <p>
-      Er is nog een tweede belangrijke toepassing.
+      In 3.2 leerden we dat een limiet beschrijft wat er met een functie
+      gebeurt wanneer <span class="formula-inline">x</span> steeds dichter
+      bij een bepaalde waarde komt.
     </p>
 
     <p>
-      In milestone 3.1 zagen we:
+      Nu combineren we dat idee met de werkelijke functiewaarde op het punt.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een functie is continu op een punt wanneer de functiewaarde,
+        de limiet en het punt zelf netjes op elkaar aansluiten.
+      </p>
+    </div>
+
+
+    <h3>Een grafiek zonder onderbreking</h3>
+
+    <p>
+      Denk eerst aan een eenvoudige grafiek die je met één vloeiende beweging
+      kunt tekenen zonder je potlood van het papier te halen.
+    </p>
+
+    <p>
+      Dat geeft een goede eerste intuïtie voor <strong>continuïteit</strong>.
+    </p>
+
+    <p>
+      Een continue functie heeft op het onderzochte punt geen gat,
+      sprong of andere onderbreking.
+    </p>
+
+    <p>
+      Deze intuïtie is nuttig, maar in de wiskunde willen we continuïteit
+      precies kunnen definiëren.
+    </p>
+
+
+    <h3>Terug naar de limiet</h3>
+
+    <p>
+      Neem de functie:
     </p>
 
     <p class="formula">
-      \\\\frac{f(x_2)-f(x_1)}{x_2-x_1}
+      f(x)=x^2
     </p>
 
     <p>
-      Dit is de gemiddelde veranderingssnelheid over een interval.
-    </p>
-
-    <p>
-      In deze milestone hebben we geleerd hoe we dat interval
-      steeds kleiner kunnen maken.
-    </p>
-
-    <p>
-      Daardoor ontstaat:
+      We zagen in 3.2 dat:
     </p>
 
     <p class="formula">
-      \\\\lim_{h\\\\to0}
-      \\\\frac{f(x+h)-f(x)}{h}
+      \lim_{x\to2}x^2=4
     </p>
 
     <p>
-      In de volgende milestones zullen we onderzoeken
-      wat deze limiet betekent en hoe we ze kunnen gebruiken
-      om de <strong>ogenblikkelijke veranderingssnelheid</strong>
-      van een functie te bepalen.
+      Tegelijk is:
+    </p>
+
+    <p class="formula">
+      f(2)=4
+    </p>
+
+    <p>
+      De limiet en de functiewaarde zijn dus gelijk.
+    </p>
+
+    <p>
+      Bovendien is de functie daadwerkelijk gedefinieerd bij
+      <span class="formula-inline">x=2</span>.
+    </p>
+
+    <p>
+      Alles sluit hier netjes op elkaar aan.
+    </p>
+
+
+    <h3>De drie voorwaarden</h3>
+
+    <p>
+      Een functie <span class="formula-inline">f</span> is continu in
+      <span class="formula-inline">x=a</span> wanneer drie zaken tegelijk
+      gelden.
+    </p>
+
+    <p><strong>1. De functiewaarde bestaat:</strong></p>
+
+    <p class="formula">
+      f(a)\text{ bestaat}
+    </p>
+
+    <p><strong>2. De limiet bestaat:</strong></p>
+
+    <p class="formula">
+      \lim_{x\to a}f(x)\text{ bestaat}
+    </p>
+
+    <p><strong>3. De limiet is gelijk aan de functiewaarde:</strong></p>
+
+    <p class="formula">
+      \lim_{x\to a}f(x)=f(a)
+    </p>
+
+    <p>
+      Deze drie voorwaarden vormen samen de formele basis van continuïteit
+      op een punt.
     </p>
 
     <div class="callout">
       <p><strong>
-        De rode draad tot nu toe:
-        <br><br>
-        verandering
-        →
-        gemiddelde verandering
-        →
-        steeds kleiner interval
-        →
-        limiet
-        →
-        ogenblikkelijke verandering.
+        Continuïteit in x=a betekent:
+      </strong></p>
+      <p>
+        de functie bestaat op a, de limiet bestaat en de limiet
+        is precies gelijk aan de functiewaarde.
+      </p>
+    </div>
+
+
+    <h3>Een voorbeeld van continuïteit</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x)=x^2+3x-1
+    </p>
+
+    <p>
+      We onderzoeken de continuïteit bij
+      <span class="formula-inline">x=2</span>.
+    </p>
+
+    <p>
+      Eerst berekenen we de functiewaarde:
+    </p>
+
+    <p class="formula">
+      f(2)=2^2+3(2)-1=4+6-1=9
+    </p>
+
+    <p>
+      Vervolgens bekijken we de limiet:
+    </p>
+
+    <p class="formula">
+      \lim_{x\to2}(x^2+3x-1)=9
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      \lim_{x\to2}f(x)=f(2)=9
+    </p>
+
+    <p>
+      De functie is daarom continu bij
+      <span class="formula-inline">x=2</span>.
+    </p>
+
+
+    <h3>Een gat in de grafiek</h3>
+
+    <p>
+      In 3.2 bekeken we:
+    </p>
+
+    <p class="formula">
+      f(x)=\frac{x^2-4}{x-2}
+    </p>
+
+    <p>
+      Deze functie is niet gedefinieerd bij
+      <span class="formula-inline">x=2</span>.
+    </p>
+
+    <p>
+      Voor andere waarden van x kunnen we schrijven:
+    </p>
+
+    <p class="formula">
+      \frac{x^2-4}{x-2}=x+2
+    </p>
+
+    <p>
+      en daarom:
+    </p>
+
+    <p class="formula">
+      \lim_{x\to2}f(x)=4
+    </p>
+
+    <p>
+      De grafiek gedraagt zich dus vlak bij
+      <span class="formula-inline">x=2</span> alsof ze de rechte
+      <span class="formula-inline">y=x+2</span> volgt,
+      maar het punt bij
+      <span class="formula-inline">x=2</span> ontbreekt.
+    </p>
+
+    <p>
+      We noemen dit een <strong>gat</strong> in de grafiek.
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        De limiet bestaat, maar de functiewaarde ontbreekt.
+        De functie is daardoor niet continu op dat punt.
       </strong></p>
     </div>
 
-  `
-  },
 
-  {
-    id: "3.3",
-    title: "Continuïteit",
-    goal: "Wanneer vormt een functie één ononderbroken geheel?",
-    theory: ``
-  },
+    <h3>Een gat kan soms worden opgevuld</h3>
+
+    <p>
+      Stel dat we de vorige functie uitbreiden door te bepalen:
+    </p>
+
+    <p class="formula">
+      f(2)=4
+    </p>
+
+    <p>
+      Dan wordt de functie op dat punt gedefinieerd en geldt:
+    </p>
+
+    <p class="formula">
+      \lim_{x\to2}f(x)=f(2)=4
+    </p>
+
+    <p>
+      Het gat is dan verdwenen en de functie is continu bij
+      <span class="formula-inline">x=2</span>.
+    </p>
+
+    <p>
+      Dit laat zien dat een discontinuïteit soms kan worden verwijderd
+      door de functiewaarde op het ontbrekende punt juist te kiezen.
+    </p>
+
+
+    <h3>Een sprong in de grafiek</h3>
+
+    <p>
+      Niet elke discontinuïteit kan worden opgelost door één punt toe te voegen.
+    </p>
+
+    <p>
+      Stel dat links van
+      <span class="formula-inline">x=0</span> een functie naar 1 nadert,
+      terwijl ze rechts van 0 naar 3 nadert.
+    </p>
+
+    <p class="formula">
+      \lim_{x\to0^-}f(x)=1
+    </p>
+
+    <p class="formula">
+      \lim_{x\to0^+}f(x)=3
+    </p>
+
+    <p>
+      Omdat de linker- en rechterlimiet verschillend zijn,
+      bestaat de tweezijdige limiet niet.
+    </p>
+
+    <p>
+      De grafiek maakt op dat punt als het ware een <strong>sprong</strong>.
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Bij een sprong is er geen enkele waarde waar de functie
+        van beide kanten naartoe nadert.
+      </strong></p>
+    </div>
+
+
+    <h3>Een verticale asymptoot</h3>
+
+    <p>
+      Er is nog een ander type onderbreking.
+    </p>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x)=\frac{1}{x}
+    </p>
+
+    <p>
+      Deze functie is niet gedefinieerd bij
+      <span class="formula-inline">x=0</span>.
+    </p>
+
+    <p>
+      Wanneer x vanuit positieve waarden naar nul nadert,
+      worden de functiewaarden onbeperkt groot:
+    </p>
+
+    <p class="formula">
+      \lim_{x\to0^+}\frac{1}{x}=\infty
+    </p>
+
+    <p>
+      Vanuit negatieve waarden worden ze onbeperkt negatief:
+    </p>
+
+    <p class="formula">
+      \lim_{x\to0^-}\frac{1}{x}=-\infty
+    </p>
+
+    <p>
+      De rechte
+    </p>
+
+    <p class="formula">
+      x=0
+    </p>
+
+    <p>
+      noemen we een <strong>verticale asymptoot</strong>.
+    </p>
+
+    <p>
+      Hier is dus niet simpelweg sprake van een klein gat.
+      De functiewaarden worden onbeperkt groot in de buurt van het punt.
+    </p>
+
+
+    <h3>Drie verschillende soorten onderbreking</h3>
+
+    <p>
+      We kunnen de belangrijkste situaties nu naast elkaar zetten.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Gat:</strong>
+        de limiet bestaat, maar de functiewaarde ontbreekt of is verkeerd.
+      </li>
+      <li>
+        <strong>Sprong:</strong>
+        de linker- en rechterlimiet zijn verschillend.
+      </li>
+      <li>
+        <strong>Verticale asymptoot:</strong>
+        de functiewaarden worden onbeperkt groot of klein in de buurt van
+        het punt.
+      </li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>
+        Continuïteit betekent dus meer dan "de grafiek ziet er mooi uit".
+        De limiet en de functiewaarde moeten wiskundig op elkaar aansluiten.
+      </strong></p>
+    </div>
+
+
+    <h3>Veel functies zijn continu</h3>
+
+    <p>
+      Gelukkig hoeven we niet voor iedere functie op ieder punt
+      een volledige limietanalyse uit te voeren.
+    </p>
+
+    <p>
+      Belangrijke elementaire functies zijn continu op hun domein.
+    </p>
+
+    <p>
+      Zo zijn polynomen zoals:
+    </p>
+
+    <p class="formula">
+      f(x)=x^3-2x+5
+    </p>
+
+    <p>
+      overal continu.
+    </p>
+
+    <p>
+      Ook machtsfuncties zoals:
+    </p>
+
+    <p class="formula">
+      f(x)=\sqrt{x}
+    </p>
+
+    <p>
+      zijn continu waar ze gedefinieerd zijn.
+    </p>
+
+    <p>
+      Bij rationale functies zoals:
+    </p>
+
+    <p class="formula">
+      f(x)=\frac{x+1}{x-3}
+    </p>
+
+    <p>
+      moeten we opletten voor waarden waarvoor de noemer nul wordt.
+    </p>
+
+    <p class="formula">
+      x\neq3
+    </p>
+
+    <p>
+      De functie is continu op haar domein, maar niet gedefinieerd bij
+      <span class="formula-inline">x=3</span>.
+    </p>
+
+
+    <h3>Continuïteit van sommen en producten</h3>
+
+    <p>
+      Continuïteit gedraagt zich goed onder veel gewone algebraïsche bewerkingen.
+    </p>
+
+    <p>
+      Als twee functies continu zijn in een punt, dan zijn hun som en verschil
+      daar ook continu.
+    </p>
+
+    <p class="formula">
+      f(x)+g(x)
+    </p>
+
+    <p class="formula">
+      f(x)-g(x)
+    </p>
+
+    <p>
+      Ook het product is continu:
+    </p>
+
+    <p class="formula">
+      f(x)g(x)
+    </p>
+
+    <p>
+      Voor een quotiënt geldt dit wanneer de noemer niet nul is.
+    </p>
+
+    <p class="formula">
+      \frac{f(x)}{g(x)}
+      \qquad
+      \text{met }g(x)\neq0
+    </p>
+
+    <p>
+      Hierdoor kunnen we de continuïteit van veel samengestelde functies
+      afleiden uit functies die we al kennen.
+    </p>
+
+
+    <h3>Continuïteit op een interval</h3>
+
+    <p>
+      Tot nu toe onderzochten we continuïteit op één punt.
+      We kunnen ook vragen of een functie continu is over een volledig interval.
+    </p>
+
+    <p>
+      Een functie is bijvoorbeeld continu op:
+    </p>
+
+    <p class="formula">
+      [0,5]
+    </p>
+
+    <p>
+      wanneer ze op ieder punt van dat interval continu is,
+      met de gebruikelijke eenzijdige interpretatie aan de uiteinden.
+    </p>
+
+    <p>
+      Grafisch betekent dit dat de functie nergens binnen het interval
+      een gat, sprong of andere discontinuïteit vertoont.
+    </p>
+
+
+    <h3>Een belangrijke eigenschap van continue functies</h3>
+
+    <p>
+      Continuïteit heeft niet alleen een grafische betekenis.
+      Ze geeft ons ook krachtige informatie over wat een functie moet doen.
+    </p>
+
+    <p>
+      Stel dat een functie continu is op een interval en dat:
+    </p>
+
+    <p class="formula">
+      f(a)<0
+    </p>
+
+    <p>en:</p>
+
+    <p class="formula">
+      f(b)>0
+    </p>
+
+    <p>
+      Dan moet de grafiek ergens tussen a en b de x-as kruisen.
+    </p>
+
+    <p>
+      Er moet dus een waarde c tussen a en b bestaan waarvoor:
+    </p>
+
+    <p class="formula">
+      f(c)=0
+    </p>
+
+    <p>
+      Dit is de kern van de <strong>tussenwaardestelling</strong>.
+    </p>
+
+
+    <h3>De tussenwaardestelling intuïtief</h3>
+
+    <p>
+      Denk aan een continue temperatuur die van
+      <span class="formula-inline">-5 °C</span> naar
+      <span class="formula-inline">8 °C</span> stijgt.
+    </p>
+
+    <p>
+      Als de temperatuur continu verandert, moet er een moment zijn
+      waarop ze precies:
+    </p>
+
+    <p class="formula">
+      0^\circ\text{C}
+    </p>
+
+    <p>
+      bedraagt.
+    </p>
+
+    <p>
+      Een continue functie kan een tussenliggende waarde dus niet zomaar
+      overslaan.
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Continuïteit betekent dat tussenliggende waarden niet kunnen
+        worden overgeslagen.
+      </strong></p>
+    </div>
+
+
+    <h3>Waarom is dit belangrijk?</h3>
+
+    <p>
+      Deze eigenschap maakt continuïteit veel meer dan een beschrijving
+      van een "mooie" grafiek.
+    </p>
+
+    <p>
+      Ze stelt ons in staat om conclusies te trekken zonder iedere waarde
+      van een functie afzonderlijk te berekenen.
+    </p>
+
+    <p>
+      Als we bijvoorbeeld weten dat een continue functie aan de ene kant
+      van nul negatief is en aan de andere kant positief, weten we dat
+      er ergens een nulpunt tussenin moet liggen.
+    </p>
+
+    <p>
+      Dit idee speelt later een belangrijke rol bij het zoeken naar
+      nulpunten en bij numerieke methoden.
+    </p>
+
+
+    <h3>Continuïteit en de grafiek</h3>
+
+    <p>
+      We kunnen de drie kernideeën van de vorige milestones nu verbinden.
+    </p>
+
+    <p>
+      De <strong>functiewaarde</strong> vertelt wat de functie op een punt doet.
+    </p>
+
+    <p>
+      De <strong>limiet</strong> vertelt wat de functie in de buurt van
+      dat punt doet.
+    </p>
+
+    <p>
+      <strong>Continuïteit</strong> vertelt dat die twee perfect op elkaar aansluiten.
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Functiewaarde → gedrag in de buurt → aansluiting.
+      </strong></p>
+    </div>
+
+
+    <h3>Een praktische controle</h3>
+
+    <p>
+      Wanneer je moet onderzoeken of een functie continu is bij
+      <span class="formula-inline">x=a</span>, kun je steeds dezelfde stappen volgen.
+    </p>
+
+    <ol>
+      <li>Bereken of bepaal <span class="formula-inline">f(a)</span>.</li>
+      <li>Onderzoek de linkerlimiet.</li>
+      <li>Onderzoek de rechterlimiet.</li>
+      <li>Controleer of beide limieten gelijk zijn.</li>
+      <li>Vergelijk de limiet met <span class="formula-inline">f(a)</span>.</li>
+    </ol>
+
+    <p>
+      Als alles overeenkomt, is de functie continu bij a.
+    </p>
+
+    <div class="callout">
+      <p><strong>Vaste werkwijze:</strong></p>
+      <p>
+        functiewaarde → linkerlimiet → rechterlimiet
+        → limiet → vergelijken met functiewaarde.
+      </p>
+    </div>
+
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        <strong>Een bestaande limiet verwarren met continuïteit.</strong>
+        Een limiet kan bestaan terwijl de functiewaarde ontbreekt.
+      </li>
+      <li>
+        <strong>Alleen de functiewaarde controleren.</strong>
+        Dat zegt niets over wat er vlak naast het punt gebeurt.
+      </li>
+      <li>
+        <strong>Alleen van één kant kijken.</strong>
+        Voor een tweezijdige limiet moeten links en rechts overeenkomen.
+      </li>
+      <li>
+        <strong>Een gat verwarren met een verticale asymptoot.</strong>
+        Bij een gat nadert de functie een eindige waarde; bij een verticale
+        asymptoot kunnen de functiewaarden onbeperkt groeien.
+      </li>
+      <li>
+        <strong>Denken dat elke functie overal continu is.</strong>
+        Functies kunnen onderbrekingen hebben of op bepaalde punten
+        niet gedefinieerd zijn.
+      </li>
+    </ul>
+
+
+    <h3>Van continuïteit naar de afgeleide</h3>
+
+    <p>
+      We hebben nu drie begrippen met elkaar verbonden:
+    </p>
+
+    <p class="formula">
+      \text{functiewaarde}
+      \rightarrow
+      \text{limiet}
+      \rightarrow
+      \text{continuïteit}
+    </p>
+
+    <p>
+      In 3.1 zagen we vervolgens hoe gemiddelde verandering ontstaat uit:
+    </p>
+
+    <p class="formula">
+      \frac{\Delta y}{\Delta x}
+    </p>
+
+    <p>
+      In 3.2 maakten we het interval steeds kleiner:
+    </p>
+
+    <p class="formula">
+      \lim_{h\to0}
+      \frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Nu weten we bovendien hoe we moeten denken over het gedrag
+      van een functie rond een punt.
+    </p>
+
+    <p>
+      De volgende vraag ligt daardoor voor de hand:
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Als een functie op een punt continu is,
+        hoe snel verandert ze daar dan precies?
+      </strong></p>
+    </div>
+
+    <p>
+      Dat brengt ons bij de <strong>afgeleide</strong> in 3.4.
+    </p>
+
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een functie is continu in een punt wanneer de functiewaarde bestaat,
+        de limiet bestaat en beide gelijk zijn:
+      </p>
+      <p class="formula">
+        \lim_{x\to a}f(x)=f(a)
+      </p>
+      <p>
+        Een gat, een sprong of een verticale asymptoot verbreekt die
+        continuïteit.
+      </p>
+      <p>
+        Continuïteit verbindt daarmee het gedrag van een functie in de buurt
+        van een punt met de werkelijke functiewaarde op dat punt.
+      </p>
+    </div>
+  `
+},
 
   {
     id: "3.4",
