@@ -1590,10 +1590,6 @@ function mathNetworkRender(selectedNodeId) {
           <button type="button" data-network-zoom="out" title="Zoom uit">−</button>
           <button type="button" data-network-zoom="reset" title="Reset weergave">↺</button>
         </div>
-        <div class="math-network-score">
-          <img src="assets/inzicht.png" alt="">
-          <strong>${mathNetworkInsightScore()}</strong>
-        </div>
         <svg class="math-network-svg" viewBox="0 0 ${MATH_NETWORK_VIEW.width} ${MATH_NETWORK_VIEW.height}"
              role="img" aria-label="Historisch Wiskunde Netwerk">
           <defs>
