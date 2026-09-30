@@ -2348,18 +2348,1340 @@ const MILESTONES_3 = [
 },
 
   {
-    id: "3.4",
-    title: "De afgeleide",
-    goal: "Hoe snel verandert iets precies op één moment?",
-    theory: ``
-  },
+  id: "3.4",
+  title: "De afgeleide",
+  goal: "Hoe snel verandert iets precies op één moment?",
+  theory: /* html */`
+    <h2>De afgeleide</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Waarom is gemiddelde veranderingssnelheid niet genoeg om één moment te beschrijven?</li>
+      <li>Hoe maken we een interval steeds kleiner?</li>
+      <li>Hoe ontstaat de afgeleide uit een limiet?</li>
+      <li>Wat betekent de afgeleide van een functie op één punt?</li>
+      <li>Hoe kunnen we de afgeleide geometrisch begrijpen als een helling?</li>
+      <li>Wat betekent een positieve, negatieve of nulafgeleide?</li>
+      <li>Hoe gebruiken we de afgeleide in beweging en andere toepassingen?</li>
+    </ul>
+
+    <p>
+      In 3.1 leerden we de <strong>gemiddelde veranderingssnelheid</strong>.
+      Die vertelt ons hoe sterk een grootheid verandert over een interval.
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta y}{\\Delta x}
+    </p>
+
+    <p>
+      Maar daarmee kunnen we nog niet beschrijven wat er
+      <strong>precies op één moment</strong> gebeurt.
+    </p>
+
+    <div class="callout">
+      <p><strong>De centrale vraag:</strong></p>
+      <p>
+        Hoe snel verandert een functie precies op één bepaald punt?
+      </p>
+    </div>
+
+
+    <h3>Van gemiddelde naar ogenblikkelijke verandering</h3>
+
+    <p>
+      Stel dat een trein tijdens een rit 100 km aflegt in 2 uur.
+      De gemiddelde snelheid is:
+    </p>
+
+    <p class="formula">
+      v_{\\text{gem}} = \\frac{100}{2} = 50\\ \\mathrm{km/u}
+    </p>
+
+    <p>
+      Dat vertelt ons hoeveel kilometer de trein gemiddeld per uur aflegt.
+      Maar de trein hoeft niet voortdurend 50 km/u te rijden.
+    </p>
+
+    <p>
+      Misschien rijdt hij eerst langzaam, versnelt hij daarna en remt hij
+      later opnieuw.
+    </p>
+
+    <p>
+      De vraag naar de snelheid <strong>op één bepaald moment</strong>
+      is dus iets anders dan de gemiddelde snelheid over de hele rit.
+    </p>
+
+
+    <h3>Het interval kleiner maken</h3>
+
+    <p>
+      In 3.1 zagen we dat we een gemiddelde veranderingssnelheid
+      kunnen berekenen tussen twee punten.
+    </p>
+
+    <p class="formula">
+      \\frac{f(x_2)-f(x_1)}{x_2-x_1}
+    </p>
+
+    <p>
+      Stel dat we willen weten hoe snel de functie verandert bij
+      <span class="formula-inline">x=a</span>.
+    </p>
+
+    <p>
+      We kunnen dan een tweede punt steeds dichter bij
+      <span class="formula-inline">a</span> brengen.
+    </p>
+
+    <p>
+      We bekijken bijvoorbeeld de gemiddelde verandering tussen
+      <span class="formula-inline">a</span> en:
+    </p>
+
+    <p class="formula">
+      a+1
+    </p>
+
+    <p class="formula">
+      a+0{,}1
+    </p>
+
+    <p class="formula">
+      a+0{,}01
+    </p>
+
+    <p class="formula">
+      a+0{,}001
+    </p>
+
+    <p>
+      Het interval wordt steeds kleiner.
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        We proberen de gemiddelde verandering steeds dichter bij één
+        bepaald punt te brengen.
+      </strong></p>
+    </div>
+
+
+    <h3>De verandering over een klein interval</h3>
+
+    <p>
+      We noemen de kleine verandering in
+      <span class="formula-inline">x</span> bijvoorbeeld
+      <span class="formula-inline">h</span>.
+    </p>
+
+    <p>
+      Het tweede punt is dan:
+    </p>
+
+    <p class="formula">
+      x+h
+    </p>
+
+    <p>
+      De gemiddelde veranderingssnelheid tussen
+      <span class="formula-inline">x</span> en
+      <span class="formula-inline">x+h</span> is:
+    </p>
+
+    <p class="formula">
+      \\frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Dit is nog steeds een <strong>gemiddelde</strong> verandering.
+      Er liggen nog altijd twee punten op de grafiek.
+    </p>
+
+
+    <h3>Wat gebeurt er als h naar nul gaat?</h3>
+
+    <p>
+      Nu maken we het interval steeds kleiner.
+    </p>
+
+    <p class="formula">
+      h=1
+    </p>
+
+    <p class="formula">
+      h=0{,}1
+    </p>
+
+    <p class="formula">
+      h=0{,}01
+    </p>
+
+    <p class="formula">
+      h=0{,}001
+    </p>
+
+    <p>
+      We onderzoeken naar welke waarde de gemiddelde
+      veranderingssnelheid nadert wanneer
+      <span class="formula-inline">h</span> steeds dichter bij nul komt.
+    </p>
+
+    <p>
+      Dat is precies het idee van een limiet.
+    </p>
+
+    <p class="formula">
+      f'(x)
+      =
+      \\lim_{h\\to0}
+      \\frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <div class="callout">
+      <p><strong>Dit is de afgeleide.</strong></p>
+      <p>
+        De afgeleide beschrijft de ogenblikkelijke veranderingssnelheid
+        van een functie.
+      </p>
+    </div>
+
+
+    <h3>De betekenis van f'(a)</h3>
+
+    <p>
+      Als we de afgeleide bekijken bij
+      <span class="formula-inline">x=a</span>, schrijven we:
+    </p>
+
+    <p class="formula">
+      f'(a)
+      =
+      \\lim_{h\\to0}
+      \\frac{f(a+h)-f(a)}{h}
+    </p>
+
+    <p>
+      De waarde <span class="formula-inline">f'(a)</span> vertelt
+      hoe snel de functie verandert op het punt
+      <span class="formula-inline">x=a</span>.
+    </p>
+
+    <p>
+      Bij een bewegend voorwerp kan dit bijvoorbeeld de
+      <strong>ogenblikkelijke snelheid</strong> zijn.
+    </p>
+
+
+    <h3>Een eerste afgeleide berekenen</h3>
+
+    <p>
+      Neem de eenvoudige functie:
+    </p>
+
+    <p class="formula">
+      f(x)=x^2
+    </p>
+
+    <p>
+      We gebruiken rechtstreeks de definitie van de afgeleide:
+    </p>
+
+    <p class="formula">
+      f'(x)
+      =
+      \\lim_{h\\to0}
+      \\frac{(x+h)^2-x^2}{h}
+    </p>
+
+    <p>
+      Eerst werken we het kwadraat uit:
+    </p>
+
+    <p class="formula">
+      (x+h)^2=x^2+2xh+h^2
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      f'(x)
+      =
+      \\lim_{h\\to0}
+      \\frac{x^2+2xh+h^2-x^2}{h}
+    </p>
+
+    <p>
+      De termen <span class="formula-inline">x^2</span> vallen weg:
+    </p>
+
+    <p class="formula">
+      f'(x)
+      =
+      \\lim_{h\\to0}
+      \\frac{2xh+h^2}{h}
+    </p>
+
+    <p>
+      We kunnen <span class="formula-inline">h</span> wegdelen:
+    </p>
+
+    <p class="formula">
+      f'(x)
+      =
+      \\lim_{h\\to0}(2x+h)
+    </p>
+
+    <p>
+      Wanneer <span class="formula-inline">h</span> naar nul gaat, krijgen we:
+    </p>
+
+    <p class="formula">
+      f'(x)=2x
+    </p>
+
+    <div class="callout">
+      <p><strong>Belangrijk:</strong></p>
+      <p>
+        Uit één functie
+        <span class="formula-inline">f(x)=x^2</span>
+        ontstaat een nieuwe functie
+        <span class="formula-inline">f'(x)=2x</span>.
+      </p>
+    </div>
+
+
+    <h3>De afgeleide als helling</h3>
+
+    <p>
+      In 3.1 zagen we dat
+      <span class="formula-inline">Δy/Δx</span>
+      de helling geeft van een rechte door twee punten.
+    </p>
+
+    <p>
+      Die rechte noemen we een <strong>secant</strong>.
+    </p>
+
+    <p>
+      Wanneer we de twee punten steeds dichter bij elkaar brengen,
+      verandert de secant steeds meer in een rechte die de grafiek
+      op één punt raakt.
+    </p>
+
+    <p>
+      Die rechte noemen we de <strong>raaklijn</strong> of
+      <strong>tangent</strong>.
+    </p>
+
+    <div class="callout">
+      <p><strong>Geometrische betekenis:</strong></p>
+      <p>
+        De afgeleide in een punt is de helling van de raaklijn
+        aan de grafiek in dat punt.
+      </p>
+    </div>
+
+
+    <h3>Een positieve afgeleide</h3>
+
+    <p>
+      Als:
+    </p>
+
+    <p class="formula">
+      f'(x)>0
+    </p>
+
+    <p>
+      dan stijgt de functie op dat punt.
+    </p>
+
+    <p>
+      De raaklijn heeft dan een positieve helling.
+    </p>
+
+
+    <h3>Een negatieve afgeleide</h3>
+
+    <p>
+      Als:
+    </p>
+
+    <p class="formula">
+      f'(x)<0
+    </p>
+
+    <p>
+      dan daalt de functie op dat punt.
+    </p>
+
+    <p>
+      De raaklijn heeft dan een negatieve helling.
+    </p>
+
+
+    <h3>Een afgeleide gelijk aan nul</h3>
+
+    <p>
+      Als:
+    </p>
+
+    <p class="formula">
+      f'(x)=0
+    </p>
+
+    <p>
+      dan is de raaklijn horizontaal.
+    </p>
+
+    <p>
+      Zo'n punt kan bijvoorbeeld een lokaal maximum of minimum zijn.
+      In 3.8 zullen we leren hoe we zulke punten systematisch onderzoeken.
+    </p>
+
+
+    <h3>De vergelijking van een raaklijn</h3>
+
+    <p>
+      We kennen uit Fase 2 de vergelijking van een rechte.
+      Als we een punt en de helling kennen, kunnen we de raaklijn bepalen.
+    </p>
+
+    <p>
+      In het punt
+      <span class="formula-inline">(a,f(a))</span>
+      is de helling:
+    </p>
+
+    <p class="formula">
+      f'(a)
+    </p>
+
+    <p>
+      De vergelijking van de raaklijn is:
+    </p>
+
+    <p class="formula">
+      y-f(a)=f'(a)(x-a)
+    </p>
+
+    <div class="callout">
+      <p><strong>Vaste structuur:</strong></p>
+      <p>
+        punt → helling → vergelijking van de raaklijn.
+      </p>
+    </div>
+
+
+    <h3>Voorbeeld: de raaklijn aan x²</h3>
+
+    <p>
+      Neem opnieuw:
+    </p>
+
+    <p class="formula">
+      f(x)=x^2
+    </p>
+
+    <p>
+      We vonden:
+    </p>
+
+    <p class="formula">
+      f'(x)=2x
+    </p>
+
+    <p>
+      We zoeken de raaklijn bij
+      <span class="formula-inline">x=2</span>.
+    </p>
+
+    <p>
+      Eerst berekenen we het punt:
+    </p>
+
+    <p class="formula">
+      f(2)=4
+    </p>
+
+    <p>
+      De helling is:
+    </p>
+
+    <p class="formula">
+      f'(2)=4
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      y-4=4(x-2)
+    </p>
+
+    <p>
+      Uitwerken geeft:
+    </p>
+
+    <p class="formula">
+      y=4x-4
+    </p>
+
+
+    <h3>De afgeleide als nieuwe functie</h3>
+
+    <p>
+      Een belangrijk inzicht is dat de afgeleide niet slechts één getal is.
+      We kunnen voor ieder punt van de oorspronkelijke functie de
+      veranderingssnelheid bepalen.
+    </p>
+
+    <p>
+      Daardoor ontstaat een nieuwe functie:
+    </p>
+
+    <p class="formula">
+      f(x)\\rightarrow f'(x)
+    </p>
+
+    <p>
+      De oorspronkelijke functie vertelt ons <strong>waar we zijn</strong>.
+      De afgeleide vertelt ons <strong>hoe snel we daar veranderen</strong>.
+    </p>
+
+
+    <h3>Een voorbeeld uit de fysica</h3>
+
+    <p>
+      Stel dat de positie van een voorwerp wordt beschreven door:
+    </p>
+
+    <p class="formula">
+      s(t)
+    </p>
+
+    <p>
+      De afgeleide van de positie naar de tijd geeft de snelheid:
+    </p>
+
+    <p class="formula">
+      v(t)=s'(t)
+    </p>
+
+    <p>
+      De afgeleide van de snelheid geeft vervolgens de versnelling:
+    </p>
+
+    <p class="formula">
+      a(t)=v'(t)
+    </p>
+
+    <div class="callout">
+      <p><strong>In de fysica:</strong></p>
+      <p>
+        positie → snelheid → versnelling.
+      </p>
+    </div>
+
+
+    <h3>Vaste werkwijze</h3>
+
+    <p>
+      Wanneer je het idee van de afgeleide moet toepassen, kun je deze
+      structuur volgen:
+    </p>
+
+    <ol>
+      <li>Bepaal welke grootheid verandert.</li>
+      <li>Bepaal naar welke variabele je de verandering onderzoekt.</li>
+      <li>Gebruik de gemiddelde veranderingssnelheid over een klein interval.</li>
+      <li>Laat het interval naar nul naderen.</li>
+      <li>Interpreteer de afgeleide als ogenblikkelijke verandering of helling.</li>
+    </ol>
+
+    <p class="formula">
+      \\frac{f(x+h)-f(x)}{h}
+      \\longrightarrow
+      \\lim_{h\\to0}
+      \\frac{f(x+h)-f(x)}{h}
+      =
+      f'(x)
+    </p>
+
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        <strong>Gemiddelde en ogenblikkelijke verandering verwarren.</strong>
+        De gemiddelde verandering gebruikt een interval; de afgeleide
+        beschrijft één punt.
+      </li>
+      <li>
+        <strong>h meteen gelijk aan nul zetten.</strong>
+        In de breuk zou dan een deling door nul ontstaan.
+        We onderzoeken de limiet wanneer h naar nul gaat.
+      </li>
+      <li>
+        <strong>De afgeleide verwarren met de functiewaarde.</strong>
+        <span class="formula-inline">f(x)</span> en
+        <span class="formula-inline">f'(x)</span> beschrijven verschillende dingen.
+      </li>
+      <li>
+        <strong>Denken dat f'(x)=0 betekent dat de functie constant is.</strong>
+        Een afgeleide van nul op één punt betekent alleen dat de raaklijn
+        daar horizontaal is.
+      </li>
+    </ul>
+
+
+    <h3>Van de definitie naar praktische regels</h3>
+
+    <p>
+      We hebben nu gezien waar de afgeleide vandaan komt:
+    </p>
+
+    <p class="formula">
+      f'(x)
+      =
+      \\lim_{h\\to0}
+      \\frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Deze definitie is fundamenteel, maar het zou onpraktisch zijn om
+      voor iedere nieuwe functie opnieuw de volledige limietberekening
+      uit te voeren.
+    </p>
+
+    <p>
+      Daarom leiden we in de volgende milestones handige
+      <strong>afgeleideregel</strong> af.
+    </p>
+
+    <div class="callout">
+      <p><strong>Volgende stap:</strong></p>
+      <p>
+        In 3.5 leren we de afgeleiden van belangrijke basisfuncties
+        rechtstreeks berekenen.
+      </p>
+    </div>
+
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De afgeleide beschrijft hoe snel een functie precies op één
+        moment verandert.
+      </p>
+      <p>
+        Ze ontstaat door de gemiddelde veranderingssnelheid
+        over een steeds kleiner interval te laten naderen tot één punt:
+      </p>
+      <p class="formula">
+        f'(x)
+        =
+        \\lim_{h\\to0}
+        \\frac{f(x+h)-f(x)}{h}
+      </p>
+      <p>
+        Geometrisch is de afgeleide de helling van de raaklijn aan
+        de grafiek.
+      </p>
+    </div>
+  `
+},
 
   {
-    id: "3.5",
-    title: "Afgeleiden van basisfuncties",
-    goal: "Kunnen we veranderingssnelheden berekenen?",
-    theory: ``
-  },
+  id: "3.5",
+  title: "Afgeleiden van basisfuncties",
+  goal: "Kunnen we veranderingssnelheden berekenen?",
+  theory: /* html */`
+    <h2>Afgeleiden van basisfuncties</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Hoe kunnen we de afgeleide van een machtsfunctie snel bepalen?</li>
+      <li>Wat is de afgeleide van een constante?</li>
+      <li>Hoe werken afgeleiden bij sommen en verschillen?</li>
+      <li>Hoe werkt een constante factor?</li>
+      <li>Hoe gaan we om met negatieve en gebroken exponenten?</li>
+      <li>Wat zijn de basisafgeleiden van exponentiële en logaritmische functies?</li>
+      <li>Wat zijn de basisafgeleiden van sinus en cosinus?</li>
+      <li>Hoe controleren en interpreteren we een gevonden afgeleide?</li>
+    </ul>
+
+    <p>
+      In 3.4 hebben we gezien waar de afgeleide vandaan komt:
+    </p>
+
+    <p class="formula">
+      f'(x)
+      =
+      \\lim_{h\\to0}
+      \\frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Nu gaan we een stap verder. We willen niet telkens opnieuw
+      de volledige limietberekening uitvoeren.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Voor veel belangrijke functies bestaan vaste regels waarmee we
+        de afgeleide rechtstreeks kunnen bepalen.
+      </p>
+    </div>
+
+
+    <h3>De machtsregel</h3>
+
+    <p>
+      Een van de belangrijkste regels is de <strong>machtsregel</strong>.
+    </p>
+
+    <p>
+      Voor:
+    </p>
+
+    <p class="formula">
+      f(x)=x^n
+    </p>
+
+    <p>
+      geldt:
+    </p>
+
+    <p class="formula">
+      f'(x)=n x^{n-1}
+    </p>
+
+    <p>
+      De exponent komt dus vooraan te staan en wordt daarna met één
+      verminderd.
+    </p>
+
+    <div class="callout">
+      <p><strong>Machtsregel:</strong></p>
+      <p class="formula">
+        \\left(x^n\\right)'=n x^{n-1}
+      </p>
+    </div>
+
+
+    <h3>Een eenvoudig voorbeeld</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x)=x^5
+    </p>
+
+    <p>
+      De exponent 5 komt vooraan:
+    </p>
+
+    <p class="formula">
+      f'(x)=5x^4
+    </p>
+
+    <p>
+      De exponent wordt dus één kleiner:
+    </p>
+
+    <p class="formula">
+      5\\rightarrow4
+    </p>
+
+
+    <h3>De functie x</h3>
+
+    <p>
+      De functie <span class="formula-inline">x</span> kunnen we schrijven als:
+    </p>
+
+    <p class="formula">
+      x=x^1
+    </p>
+
+    <p>
+      De machtsregel geeft:
+    </p>
+
+    <p class="formula">
+      \\left(x^1\\right)'=1x^0=1
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      (x)'=1
+    </p>
+
+    <p>
+      Dat past bij de grafiek van
+      <span class="formula-inline">y=x</span>: de helling is overal 1.
+    </p>
+
+
+    <h3>De afgeleide van een constante</h3>
+
+    <p>
+      Een constante verandert niet wanneer
+      <span class="formula-inline">x</span> verandert.
+    </p>
+
+    <p>
+      Daarom is:
+    </p>
+
+    <p class="formula">
+      (c)'=0
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      (7)'=0
+    </p>
+
+    <p class="formula">
+      (-12)'=0
+    </p>
+
+    <p>
+      Geometrisch klopt dit ook: een horizontale rechte heeft helling nul.
+    </p>
+
+
+    <h3>Een som afleiden</h3>
+
+    <p>
+      Bij een som mogen we de afgeleide van iedere term afzonderlijk bepalen.
+    </p>
+
+    <p class="formula">
+      (f(x)+g(x))'=f'(x)+g'(x)
+    </p>
+
+    <p>
+      Hetzelfde geldt voor een verschil:
+    </p>
+
+    <p class="formula">
+      (f(x)-g(x))'=f'(x)-g'(x)
+    </p>
+
+    <p>
+      Daardoor kunnen we veeltermen term voor term afleiden.
+    </p>
+
+
+    <h3>Een constante factor</h3>
+
+    <p>
+      Staat er een constante voor een functie, dan blijft die factor staan.
+    </p>
+
+    <p class="formula">
+      (c f(x))'=c f'(x)
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x)=4x^3
+    </p>
+
+    <p>
+      Dan:
+    </p>
+
+    <p class="formula">
+      f'(x)=4\\cdot3x^2=12x^2
+    </p>
+
+
+    <h3>Een volledige veelterm</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x)=3x^4-5x^2+7x-2
+    </p>
+
+    <p>
+      We leiden iedere term afzonderlijk af:
+    </p>
+
+    <p class="formula">
+      (3x^4)'=12x^3
+    </p>
+
+    <p class="formula">
+      (-5x^2)'=-10x
+    </p>
+
+    <p class="formula">
+      (7x)'=7
+    </p>
+
+    <p class="formula">
+      (-2)'=0
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      f'(x)=12x^3-10x+7
+    </p>
+
+    <div class="callout">
+      <p><strong>Werkwijze:</strong></p>
+      <p>
+        Leid iedere term afzonderlijk af en tel de resultaten daarna weer op.
+      </p>
+    </div>
+
+
+    <h3>Negatieve exponenten</h3>
+
+    <p>
+      De machtsregel werkt ook voor negatieve exponenten.
+    </p>
+
+    <p class="formula">
+      f(x)=x^{-2}
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      f'(x)=-2x^{-3}
+    </p>
+
+    <p>
+      Omdat:
+    </p>
+
+    <p class="formula">
+      x^{-3}=\\frac{1}{x^3}
+    </p>
+
+    <p>
+      kunnen we dit ook schrijven als:
+    </p>
+
+    <p class="formula">
+      f'(x)=-\\frac{2}{x^3}
+    </p>
+
+
+    <h3>Gebroken exponenten</h3>
+
+    <p>
+      Ook een wortelfunctie kunnen we als macht schrijven.
+    </p>
+
+    <p class="formula">
+      \\sqrt{x}=x^{1/2}
+    </p>
+
+    <p>
+      De machtsregel geeft:
+    </p>
+
+    <p class="formula">
+      \\left(x^{1/2}\\right)'
+      =
+      \\frac{1}{2}x^{-1/2}
+    </p>
+
+    <p>
+      Omdat:
+    </p>
+
+    <p class="formula">
+      x^{-1/2}=\\frac{1}{\\sqrt{x}}
+    </p>
+
+    <p>
+      volgt:
+    </p>
+
+    <p class="formula">
+      \\left(\\sqrt{x}\\right)'
+      =
+      \\frac{1}{2\\sqrt{x}}
+    </p>
+
+
+    <h3>De exponentiële functie e^x</h3>
+
+    <p>
+      Er bestaat één bijzonder belangrijke exponentiële functie:
+    </p>
+
+    <p class="formula">
+      f(x)=e^x
+    </p>
+
+    <p>
+      De afgeleide van deze functie is opvallend eenvoudig:
+    </p>
+
+    <p class="formula">
+      \\left(e^x\\right)'=e^x
+    </p>
+
+    <p>
+      De functie verandert dus met een snelheid die gelijk is aan haar
+      eigen waarde.
+    </p>
+
+    <div class="callout">
+      <p><strong>Bijzonder geval:</strong></p>
+      <p>
+        De exponentiële functie <span class="formula-inline">e^x</span>
+        is haar eigen afgeleide.
+      </p>
+    </div>
+
+
+    <h3>Een algemene exponentiële functie</h3>
+
+    <p>
+      Voor een positieve basis
+      <span class="formula-inline">a</span>, met
+      <span class="formula-inline">a\\gt0</span> en
+      <span class="formula-inline">a\\neq1</span>, geldt:
+    </p>
+
+    <p class="formula">
+      \\left(a^x\\right)'=a^x\\ln(a)
+    </p>
+
+    <p>
+      Voor <span class="formula-inline">a=e</span> geldt
+      <span class="formula-inline">\\ln(e)=1</span>.
+      Daardoor krijgen we opnieuw:
+    </p>
+
+    <p class="formula">
+      \\left(e^x\\right)'=e^x
+    </p>
+
+
+    <h3>De natuurlijke logaritme</h3>
+
+    <p>
+      De natuurlijke logaritme is de inverse functie van
+      <span class="formula-inline">e^x</span>.
+    </p>
+
+    <p class="formula">
+      f(x)=\\ln(x)
+    </p>
+
+    <p>
+      Voor positieve waarden van
+      <span class="formula-inline">x</span> geldt:
+    </p>
+
+    <p class="formula">
+      (\\ln x)'=\\frac{1}{x}
+    </p>
+
+    <p>
+      De afgeleide is dus positief, maar wordt kleiner wanneer
+      <span class="formula-inline">x</span> groter wordt.
+    </p>
+
+
+    <h3>De sinus</h3>
+
+    <p>
+      Voor de sinusfunctie geldt:
+    </p>
+
+    <p class="formula">
+      (\\sin x)'=\\cos x
+    </p>
+
+    <p>
+      De sinus verandert dus volgens de cosinus.
+    </p>
+
+
+    <h3>De cosinus</h3>
+
+    <p>
+      Voor de cosinusfunctie geldt:
+    </p>
+
+    <p class="formula">
+      (\\cos x)'=-\\sin x
+    </p>
+
+    <p>
+      Het minteken is belangrijk.
+    </p>
+
+
+    <h3>Een compacte verzameling basisregels</h3>
+
+    <p>
+      We kunnen de belangrijkste regels nu verzamelen:
+    </p>
+
+    <p class="formula">
+      (c)'=0
+    </p>
+
+    <p class="formula">
+      (x)'=1
+    </p>
+
+    <p class="formula">
+      \\left(x^n\\right)'=n x^{n-1}
+    </p>
+
+    <p class="formula">
+      (f+g)'=f'+g'
+    </p>
+
+    <p class="formula">
+      (f-g)'=f'-g'
+    </p>
+
+    <p class="formula">
+      (cf)'=cf'
+    </p>
+
+    <p class="formula">
+      \\left(e^x\\right)'=e^x
+    </p>
+
+    <p class="formula">
+      \\left(a^x\\right)'=a^x\\ln(a)
+    </p>
+
+    <p class="formula">
+      (\\ln x)'=\\frac{1}{x}
+    </p>
+
+    <p class="formula">
+      (\\sin x)'=\\cos x
+    </p>
+
+    <p class="formula">
+      (\\cos x)'=-\\sin x
+    </p>
+
+
+    <h3>De betekenis blijft hetzelfde</h3>
+
+    <p>
+      De regels veranderen niets aan de betekenis van de afgeleide.
+    </p>
+
+    <p>
+      De uitkomst vertelt nog steeds hoe snel de oorspronkelijke functie
+      op ieder punt verandert.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x)=x^2
+    </p>
+
+    <p class="formula">
+      f'(x)=2x
+    </p>
+
+    <p>
+      Bij <span class="formula-inline">x=3</span> is:
+    </p>
+
+    <p class="formula">
+      f'(3)=6
+    </p>
+
+    <p>
+      De grafiek van <span class="formula-inline">x^2</span> heeft daar dus
+      een raaklijn met helling 6.
+    </p>
+
+
+    <h3>De eenheid van een afgeleide</h3>
+
+    <p>
+      De afgeleide heeft vaak een betekenisvolle eenheid.
+    </p>
+
+    <p>
+      Als de positie in kilometer wordt gemeten en de tijd in uren,
+      dan heeft de afgeleide de eenheid:
+    </p>
+
+    <p class="formula">
+      \\frac{\\mathrm{km}}{\\mathrm{u}}
+    </p>
+
+    <p>
+      Als we een temperatuur in graden Celsius delen door tijd in uren,
+      krijgen we bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \\frac{^\\circ\\mathrm{C}}{\\mathrm{u}}
+    </p>
+
+    <p>
+      De eenheid helpt dus om de betekenis van een afgeleide te begrijpen.
+    </p>
+
+
+    <h3>Vaste werkwijze</h3>
+
+    <p>
+      Wanneer je een basisfunctie moet afleiden, kun je deze stappen volgen:
+    </p>
+
+    <ol>
+      <li>Herken het type functie.</li>
+      <li>Schrijf de functie indien nodig in een geschikte vorm.</li>
+      <li>Kies de bijbehorende afgeleideregel.</li>
+      <li>Pas de regel term voor term toe.</li>
+      <li>Vereenvoudig de uitkomst.</li>
+      <li>Controleer of de uitkomst logisch is.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>Voorbeeld:</strong></p>
+      <p>
+        Een macht → machtsregel.
+        Een constante → afgeleide nul.
+        Een som → term voor term.
+        Een constante factor → factor blijft staan.
+      </p>
+    </div>
+
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        <strong>De exponent vergeten te vermenigvuldigen.</strong>
+        Uit <span class="formula-inline">x^5</span> volgt niet
+        <span class="formula-inline">x^4</span>, maar
+        <span class="formula-inline">5x^4</span>.
+      </li>
+      <li>
+        <strong>De exponent niet met één verminderen.</strong>
+        Bij de machtsregel wordt de nieuwe exponent
+        <span class="formula-inline">n-1</span>.
+      </li>
+      <li>
+        <strong>Een constante laten staan.</strong>
+        De afgeleide van een constante is nul.
+      </li>
+      <li>
+        <strong>Het minteken bij cosinus vergeten.</strong>
+        <span class="formula-inline">(\\cos x)'=-\\sin x</span>.
+      </li>
+      <li>
+        <strong>De domeinvoorwaarde vergeten.</strong>
+        Bij
+        <span class="formula-inline">\\ln x</span>
+        moet <span class="formula-inline">x\\gt0</span> gelden.
+      </li>
+    </ul>
+
+
+    <h3>Van basisfuncties naar gecombineerde functies</h3>
+
+    <p>
+      Met deze regels kunnen we veel functies rechtstreeks afleiden.
+    </p>
+
+    <p>
+      Maar wat als functies met elkaar worden vermenigvuldigd,
+      gedeeld of in elkaar worden geplaatst?
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x)=x^2\\sin x
+    </p>
+
+    <p class="formula">
+      g(x)=\\frac{x^2+1}{x}
+    </p>
+
+    <p class="formula">
+      h(x)=\\sin(x^2)
+    </p>
+
+    <p>
+      Voor zulke functies hebben we nieuwe regels nodig.
+    </p>
+
+    <div class="callout">
+      <p><strong>Volgende stap:</strong></p>
+      <p>
+        In 3.6 leren we de productregel, quotiëntregel en kettingregel.
+      </p>
+    </div>
+
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De afgeleide van veel belangrijke basisfuncties kunnen we
+        rechtstreeks berekenen met vaste regels.
+      </p>
+      <p>
+        De belangrijkste basisregel is:
+      </p>
+      <p class="formula">
+        \\left(x^n\\right)'=n x^{n-1}
+      </p>
+      <p>
+        Samen met de regels voor constanten, sommen, exponentiële functies,
+        logaritmen en goniometrische functies vormt dit de basis voor het
+        afleiden van complexere functies.
+      </p>
+    </div>
+  `
+},
 
   {
     id: "3.6",
