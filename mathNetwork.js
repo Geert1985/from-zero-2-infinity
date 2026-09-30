@@ -1385,14 +1385,46 @@ function mathNetworkApplyCamera() {
   mathNetworkPlaceFloat();
 }
 
+function mathNetworkIsNarrow() {
+  return window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
+}
+
+function mathNetworkFocusNode(id) {
+  const canvas = document.querySelector(".math-network-canvas");
+  const pos = mathNetworkLayout()[id || "tellen"];
+  if (!canvas || !pos) return;
+  const rect = canvas.getBoundingClientRect();
+  if (rect.width < 8 || rect.height < 8) return;
+  const narrow = mathNetworkIsNarrow();
+  const scale = narrow ? 0.85 : 1.15;
+  MATH_NETWORK_CAMERA.scale = Math.min(MATH_NETWORK_ZOOM.max, Math.max(MATH_NETWORK_ZOOM.min, scale));
+  MATH_NETWORK_CAMERA.x = rect.width / 2 - pos[0] * MATH_NETWORK_CAMERA.scale;
+  MATH_NETWORK_CAMERA.y = Math.max(40, rect.height * 0.2) - pos[1] * MATH_NETWORK_CAMERA.scale;
+  mathNetworkApplyCamera();
+}
+
+function mathNetworkZoomAt(clientX, clientY, nextScale) {
+  const canvas = document.querySelector(".math-network-canvas");
+  const old = MATH_NETWORK_CAMERA.scale;
+  const next = Math.min(MATH_NETWORK_ZOOM.max, Math.max(MATH_NETWORK_ZOOM.min, nextScale));
+  if (next === old) return;
+  const rect = canvas ? canvas.getBoundingClientRect() : { left: 0, top: 0, width: 800, height: 600 };
+  const cx = clientX - rect.left;
+  const cy = clientY - rect.top;
+  const worldX = (cx - MATH_NETWORK_CAMERA.x) / old;
+  const worldY = (cy - MATH_NETWORK_CAMERA.y) / old;
+  MATH_NETWORK_CAMERA.scale = next;
+  MATH_NETWORK_CAMERA.x = cx - worldX * next;
+  MATH_NETWORK_CAMERA.y = cy - worldY * next;
+  mathNetworkHideHint();
+  mathNetworkApplyCamera();
+}
+
 function mathNetworkZoomBy(direction) {
   const canvas = document.querySelector(".math-network-canvas");
   const old = MATH_NETWORK_CAMERA.scale;
   if (direction === "reset") {
-    MATH_NETWORK_CAMERA.x = 4;
-    MATH_NETWORK_CAMERA.y = 0;
-    MATH_NETWORK_CAMERA.scale = 1.3;
-    mathNetworkApplyCamera();
+    mathNetworkFocusNode("tellen");
     return;
   }
   const delta = direction === "in" ? MATH_NETWORK_ZOOM.step : -MATH_NETWORK_ZOOM.step;
@@ -1421,6 +1453,9 @@ function mathNetworkBindPanZoom() {
   let lastX = 0;
   let lastY = 0;
   let nodeId = null;
+  const pointers = new Map();
+  let pinchStartDist = 0;
+  let pinchStartScale = 1;
 
   canvas.addEventListener("dragstart", function (e) {
     e.preventDefault();
@@ -1434,6 +1469,18 @@ function mathNetworkBindPanZoom() {
     if (e.target.closest("[data-network-zoom]")) return;
     if (e.target.closest("#math-network-float")) return;
     if (e.button != null && e.button !== 0) return;
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size >= 2) {
+      dragging = false;
+      const pts = Array.from(pointers.values());
+      const dx = pts[0].x - pts[1].x;
+      const dy = pts[0].y - pts[1].y;
+      pinchStartDist = Math.hypot(dx, dy) || 1;
+      pinchStartScale = MATH_NETWORK_CAMERA.scale;
+      canvas.classList.remove("is-panning");
+      e.preventDefault();
+      return;
+    }
     dragging = true;
     moved = false;
     lastX = e.clientX;
@@ -1441,11 +1488,24 @@ function mathNetworkBindPanZoom() {
     const node = e.target.closest("[data-network-node]");
     nodeId = node ? node.getAttribute("data-network-node") : null;
     canvas.classList.add("is-panning");
-    if (canvas.setPointerCapture) canvas.setPointerCapture(e.pointerId);
     e.preventDefault();
   });
 
   canvas.addEventListener("pointermove", function (e) {
+    if (pointers.has(e.pointerId)) {
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    }
+    if (pointers.size >= 2) {
+      const pts = Array.from(pointers.values());
+      const dx = pts[0].x - pts[1].x;
+      const dy = pts[0].y - pts[1].y;
+      const dist = Math.hypot(dx, dy) || 1;
+      const midX = (pts[0].x + pts[1].x) / 2;
+      const midY = (pts[0].y + pts[1].y) / 2;
+      mathNetworkZoomAt(midX, midY, pinchStartScale * (dist / pinchStartDist));
+      e.preventDefault();
+      return;
+    }
     if (!dragging) return;
     const dx = e.clientX - lastX;
     const dy = e.clientY - lastY;
@@ -1460,12 +1520,22 @@ function mathNetworkBindPanZoom() {
   });
 
   function endPan(e) {
-    if (!dragging) return;
+    if (e && e.pointerId != null) pointers.delete(e.pointerId);
+    if (pointers.size >= 2) return;
+    if (pointers.size === 1) {
+      const rem = Array.from(pointers.values())[0];
+      lastX = rem.x;
+      lastY = rem.y;
+      dragging = true;
+      return;
+    }
+    if (!dragging) {
+      nodeId = null;
+      canvas.classList.remove("is-panning");
+      return;
+    }
     dragging = false;
     canvas.classList.remove("is-panning");
-    if (canvas.releasePointerCapture && e && e.pointerId != null) {
-      try { canvas.releasePointerCapture(e.pointerId); } catch (err) {}
-    }
     if (!moved && nodeId) mathNetworkRenderDetail(nodeId);
     else if (!moved && !nodeId) mathNetworkRenderDetail(null);
     nodeId = null;
@@ -1570,6 +1640,10 @@ function mathNetworkRender(selectedNodeId) {
 
   if (selectedNodeId) {
     mathNetworkRenderDetail(selectedNodeId);
+  } else {
+    requestAnimationFrame(function () {
+      mathNetworkFocusNode("tellen");
+    });
   }
 }
 
