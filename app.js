@@ -81,6 +81,12 @@ function parseHash() {
   return location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
 }
 
+function currentView() {
+  const parts = parseHash();
+  if (!parts.length) return "home";
+  return parts[0];
+}
+
 function go(path) {
   location.hash = path.startsWith("/") ? path : "/" + path;
 }
@@ -102,6 +108,22 @@ function pctDone(phaseId) {
   return Math.round((n / list.length) * 100);
 }
 
+function navLink(path, label, view) {
+  const active = currentView() === view ? " is-active" : "";
+  return '<button type="button" class="btn ghost nav-link' + active + '" data-go="' + path + '">' + label + "</button>";
+}
+
+function fasenLink() {
+  if (currentView() === "home") return "";
+  return navLink("/", "De 7 Fasen", "home");
+}
+
+function adminMenuLink() {
+  if (!isAdmin()) return "";
+  const active = currentView() === "admin" ? " is-active" : "";
+  return '<button type="button" class="btn ghost nav-link' + active + '" data-go="/admin">Admin aan</button>';
+}
+
 function topbar(extra) {
   extra = extra || "";
   const n = leerstofScore();
@@ -109,32 +131,94 @@ function topbar(extra) {
   const i = inzichtScore();
   return (
     '<div class="topbar">' +
-      '<div class="brand">From Zero 2 Infinity</div>' +
+      '<button type="button" class="brand" data-go="/" title="Naar de 7 fasen">From Zero 2 Infinity</button>' +
         '<div class="score-row">' +
-          '<div class="lesstof-score" id="score-lesstof">' +
+          '<button type="button" class="lesstof-score" id="score-lesstof" aria-expanded="false" aria-controls="score-legend" title="Wat betekenen deze cijfers?">' +
             '<div class="score-item">' +
-              '<img src="assets/book-open.png" title="Verzamelde lesstof">' +
+              '<img src="assets/book-open.png" alt="">' +
               "<span>" + n + "</span>" +
             '</div>' +
             '<div class="score-item">' +
-              '<img src="assets/medaille.png" title="Gehaalde toetsen">' +
+              '<img src="assets/medaille.png" alt="">' +
               "<span>" + t + "</span>" +
             '</div>' +
             '<div class="score-item">' +
-              '<img src="assets/inzicht.png" title="Inzichtpunten">' +
+              '<img src="assets/inzicht.png" alt="">' +
               "<span>" + i + "</span>" +
             '</div>' +
+          '</button>' +
+          '<div class="score-legend" id="score-legend" hidden>' +
+            '<p><img src="assets/book-open.png" alt=""> Verzamelde lessen</p>' +
+            '<p><img src="assets/medaille.png" alt=""> Gehaalde toetsen</p>' +
+            '<p><img src="assets/inzicht.png" alt=""> Inzichtpunten</p>' +
           '</div>' +
         '</div>' +
       '<div class="nav-actions">' +
        extra +
-      '<button class="btn ghost" data-go="/">De 7 Fasen</button>' +
-      '<button class="btn ghost" data-go="/wiskundeboom">Wiskundeboom</button>' +
-      '<button class="btn ghost" data-go="/admin">' + (isAdmin() ? "Admin aan" : "Admin") + '</button>' +
-      '<button class="btn ghost" id="reset-btn">Reset</button>' +
-      '</div>' +
-    '</div>'
+      '<div class="nav-primary">' +
+        fasenLink() +
+        navLink("/wiskundeboom", "Wiskundeboom", "wiskundeboom") +
+      "</div>" +
+      '<div class="nav-menu">' +
+        '<button type="button" class="btn ghost nav-menu-toggle" id="nav-menu-btn" aria-expanded="false" aria-controls="nav-menu-panel" aria-label="Menu openen">' +
+          '<span class="nav-menu-icon" aria-hidden="true"></span>' +
+        "</button>" +
+        '<div class="nav-menu-panel" id="nav-menu-panel" hidden>' +
+          '<div class="nav-menu-primary">' +
+            fasenLink() +
+            navLink("/wiskundeboom", "Wiskundeboom", "wiskundeboom") +
+          "</div>" +
+          '<div class="nav-menu-tools">' +
+            adminMenuLink() +
+            '<button type="button" class="btn ghost nav-link" id="reset-btn">Reset</button>' +
+          "</div>" +
+        "</div>" +
+      "</div>" +
+      "</div>" +
+    "</div>"
   );
+}
+
+function closeNavMenu() {
+  const panel = document.getElementById("nav-menu-panel");
+  const btn = document.getElementById("nav-menu-btn");
+  if (panel) panel.hidden = true;
+  if (btn) {
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", "Menu openen");
+    const wrap = btn.closest(".nav-menu");
+    if (wrap) wrap.classList.remove("is-open");
+  }
+}
+
+function closeScoreLegend() {
+  const box = document.getElementById("score-legend");
+  const btn = document.getElementById("score-lesstof");
+  if (box) box.hidden = true;
+  if (btn) btn.setAttribute("aria-expanded", "false");
+}
+
+function toggleScoreLegend() {
+  const box = document.getElementById("score-legend");
+  const btn = document.getElementById("score-lesstof");
+  if (!box || !btn) return;
+  const open = box.hidden;
+  box.hidden = !open;
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+  if (open) closeNavMenu();
+}
+
+function toggleNavMenu() {
+  closeScoreLegend();
+  const panel = document.getElementById("nav-menu-panel");
+  const btn = document.getElementById("nav-menu-btn");
+  if (!panel || !btn) return;
+  const open = panel.hidden;
+  panel.hidden = !open;
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+  btn.setAttribute("aria-label", open ? "Menu sluiten" : "Menu openen");
+  const wrap = btn.closest(".nav-menu");
+  if (wrap) wrap.classList.toggle("is-open", open);
 }
 
 function renderAdmin() {
@@ -210,9 +294,22 @@ function render() {
 }
 
 document.addEventListener("click", function (e) {
+  const menuBtn = e.target.closest("#nav-menu-btn");
+  if (menuBtn) {
+    e.preventDefault();
+    toggleNavMenu();
+    return;
+  }
+  if (e.target.closest("#score-lesstof")) {
+    e.preventDefault();
+    toggleScoreLegend();
+    return;
+  }
+
   const goBtn = e.target.closest("[data-go]");
   if (goBtn) {
     e.preventDefault();
+    closeNavMenu();
     go(goBtn.getAttribute("data-go"));
     return;
   }
@@ -254,10 +351,13 @@ document.addEventListener("click", function (e) {
     const already = typeof inzichtCollected === "function" && inzichtCollected(key);
     store.dispatch({ type: "COLLECT_INZICHT", payload: key });
     if (!already && typeof burstInzicht === "function") burstInzicht(collectInzicht);
-    collectInzicht.outerHTML = '<span class="inzicht-done"><img class="book-ico" src="assets/inzicht.png" alt=""> Inzicht verzameld</span>';
+    document.querySelectorAll('.collect-inzicht[data-ikey="' + key + '"]').forEach(function (el) {
+      el.outerHTML = '<span class="inzicht-done"><img class="book-ico" src="assets/inzicht.png" alt=""> Inzicht verzameld</span>';
+    });
     return;
   }
-  if (e.target.id === "reset-btn") {
+  const resetBtn = e.target.closest("#reset-btn");
+  if (resetBtn) {
     if (confirm("Voortgang wissen?")) {
       store.dispatch({ type: "RESET_PROGRESS" });
       render();
@@ -283,6 +383,16 @@ document.addEventListener("click", function (e) {
       : '<p>Nog niet gehaald.</p><button class="btn" data-go="/fase/' + phaseId + '">Terug</button>';
     document.getElementById("score").innerHTML =
       '<p class="score-banner">' + res.correct + " / " + res.total + " — " + (passed ? "Geslaagd" : "Niet gehaald") + "</p>" + next;
+  }
+
+  if (!e.target.closest(".nav-menu")) closeNavMenu();
+  if (!e.target.closest(".score-row")) closeScoreLegend();
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeNavMenu();
+    closeScoreLegend();
   }
 });
 
