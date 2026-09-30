@@ -1280,8 +1280,6 @@ function mathNetworkPlaceFloat() {
 }
 
 function mathNetworkRenderDetail(nodeId) {
-  const visibleNodes = MATH_NETWORK_NODES.filter(mathNetworkIsVisible);
-  const nodeSvg = visibleNodes.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
   const host = document.getElementById("math-network-float");
   if (!host) return;
 
@@ -1575,7 +1573,8 @@ function mathNetworkRender(selectedNodeId) {
       x2="${pb[0]}" y2="${pb[1]}"></line>`;
   }).join("");
 
-  const nodeSvg = MATH_NETWORK_NODES.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
+  const visibleNodes = MATH_NETWORK_NODES.filter(mathNetworkIsVisible);
+  const nodeSvg = visibleNodes.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
 
   app.innerHTML = `
     <div class="screen math-network-screen">
