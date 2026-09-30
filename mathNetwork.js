@@ -688,9 +688,87 @@ function mathNetworkConnectedEdges() {
   });
 }
 
-const MATH_NETWORK_VIEW = { width: 1480, height: 2200 };
+const MATH_NETWORK_VIEW = { width: 1480, height: 2920 };
 const MATH_NETWORK_GRID = { originX: 130, originY: 80, colW: 118, rowH: 100 };
 const MATH_NETWORK_CAMERA = { x: 4, y: 0, scale: 1.3 };
+
+const MATH_NETWORK_PERIODS = [
+  { id: "oudheid", title: "Oudheid", tint: "#c4a06a", fill: "rgba(168,120,64,.16)", row0: -0.55, row1: 6.15 },
+  { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", fill: "rgba(70,110,72,.15)", row0: 6.15, row1: 11.15 },
+  { id: "vroegmodern", title: "Vroegmodern", tint: "#c4845a", fill: "rgba(176,96,56,.14)", row0: 11.15, row1: 18.15 },
+  { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", fill: "rgba(120,130,148,.13)", row0: 18.15, row1: 22.55 },
+  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", fill: "rgba(70,100,140,.16)", row0: 22.55, row1: 27.4 }
+];
+
+const MATH_NETWORK_NODE_PERIOD = {
+  "tellen": "oudheid",
+  "getal": "oudheid",
+  "natuurlijke-getallen": "oudheid",
+  "breuken": "oudheid",
+  "pythagoras": "oudheid",
+  "bewijs": "oudheid",
+  "euclides": "oudheid",
+  "priemgetallen": "oudheid",
+  "archimedes": "oudheid",
+  "kegelsneden": "oudheid",
+  "nul": "middeleeuwen",
+  "plaatswaarde": "middeleeuwen",
+  "negatieve-getallen": "middeleeuwen",
+  "brahmagupta": "middeleeuwen",
+  "al-khwarizmi": "middeleeuwen",
+  "algoritme": "middeleeuwen",
+  "algebra": "middeleeuwen",
+  "fibonacci": "middeleeuwen",
+  "descartes": "vroegmodern",
+  "fermat": "vroegmodern",
+  "pascal": "vroegmodern",
+  "kansrekening": "vroegmodern",
+  "newton": "vroegmodern",
+  "leibniz": "vroegmodern",
+  "calculus": "vroegmodern",
+  "de-moivre": "vroegmodern",
+  "euler": "vroegmodern",
+  "differentiaalvergelijkingen": "vroegmodern",
+  "lagrange": "vroegmodern",
+  "laplace": "vroegmodern",
+  "gauss": "eeuw19",
+  "fourier": "eeuw19",
+  "cauchy": "eeuw19",
+  "galois": "eeuw19",
+  "niet-euclidische-geometrie": "eeuw19",
+  "riemann": "eeuw19",
+  "cantor": "eeuw19",
+  "topologie": "eeuw19",
+  "hilbert": "eeuw20",
+  "noether": "eeuw20",
+  "godel": "eeuw20",
+  "turing": "eeuw20",
+  "formele-bewijzen": "eeuw20",
+  "ai-wiskunde": "eeuw20",
+  "navier-stokes-ai-2026": "eeuw20"
+};
+
+function mathNetworkPeriodById(id) {
+  return MATH_NETWORK_PERIODS.find((p) => p.id === id) || null;
+}
+
+function mathNetworkNodePeriod(id) {
+  return MATH_NETWORK_NODE_PERIOD[id] || "oudheid";
+}
+
+function mathNetworkPeriodBounds(period) {
+  const y0 = MATH_NETWORK_GRID.originY + period.row0 * MATH_NETWORK_GRID.rowH;
+  const y1 = MATH_NETWORK_GRID.originY + period.row1 * MATH_NETWORK_GRID.rowH;
+  return { y0: y0, y1: y1, mid: (y0 + y1) / 2 };
+}
+
+function mathNetworkPeriodUnlocked(periodId) {
+  if (mathNetworkIsAdmin()) return true;
+  if (periodId === "oudheid") return true;
+  return MATH_NETWORK_NODES.some((node) => {
+    return mathNetworkNodePeriod(node.id) === periodId && mathNetworkIsVisible(node);
+  });
+}
 let MATH_NETWORK_HINT_HIDDEN = false;
 const MATH_NETWORK_ZOOM = { min: 0.5, max: 1.85, step: 0.15 };
 let MATH_NETWORK_OPEN_ID = null;
@@ -714,47 +792,47 @@ function mathNetworkLayout() {
     "getal": g(4, 1),
     "natuurlijke-getallen": g(2, 2),
     "breuken": g(6, 2),
-    "nul": g(1, 3),
-    "plaatswaarde": g(3, 3),
     "pythagoras": g(6, 3),
-    "negatieve-getallen": g(1, 4),
-    "al-khwarizmi": g(3, 4),
     "bewijs": g(6, 4),
-    "brahmagupta": g(0, 5),
-    "algoritme": g(2, 5),
-    "algebra": g(4, 5),
-    "fibonacci": g(5, 5),
-    "euclides": g(7, 5),
-    "pascal": g(3, 6),
-    "descartes": g(4, 6),
-    "fermat": g(5, 6),
-    "priemgetallen": g(6, 6),
-    "archimedes": g(7, 6),
-    "kegelsneden": g(8, 6),
-    "kansrekening": g(3, 7),
-    "newton": g(5, 7),
-    "leibniz": g(7, 7),
-    "de-moivre": g(2, 8),
-    "calculus": g(6, 8),
-    "lagrange": g(3, 9),
-    "euler": g(5, 9),
-    "differentiaalvergelijkingen": g(7, 9),
-    "niet-euclidische-geometrie": g(8, 9),
-    "galois": g(1, 10),
-    "laplace": g(3, 10),
-    "gauss": g(5, 10),
-    "fourier": g(6, 10),
-    "cauchy": g(8, 10),
-    "cantor": g(1, 11),
-    "riemann": g(6, 11),
-    "hilbert": g(2, 12),
-    "topologie": g(5, 12),
-    "noether": g(3, 13),
-    "godel": g(5, 13),
-    "turing": g(4, 14),
-    "formele-bewijzen": g(6, 14),
-    "ai-wiskunde": g(5, 15),
-    "navier-stokes-ai-2026": g(7, 15)
+    "euclides": g(5, 5),
+    "priemgetallen": g(3.6, 5),
+    "archimedes": g(6.5, 5),
+    "kegelsneden": g(8, 5),
+    "nul": g(2, 7),
+    "plaatswaarde": g(4, 7),
+    "negatieve-getallen": g(2, 8),
+    "brahmagupta": g(0.8, 8.6),
+    "al-khwarizmi": g(4, 8.6),
+    "algoritme": g(3, 9.6),
+    "algebra": g(5, 9.6),
+    "fibonacci": g(6.4, 9.6),
+    "pascal": g(3, 12.2),
+    "descartes": g(4.6, 12.2),
+    "fermat": g(6.2, 12.2),
+    "kansrekening": g(3, 13.3),
+    "newton": g(5.2, 13.3),
+    "leibniz": g(7, 13.3),
+    "calculus": g(6, 14.4),
+    "de-moivre": g(2.2, 15.4),
+    "euler": g(5, 15.4),
+    "lagrange": g(3.2, 16.5),
+    "differentiaalvergelijkingen": g(6.4, 16.5),
+    "laplace": g(4.4, 17.4),
+    "galois": g(1.6, 19.2),
+    "gauss": g(4.8, 19.2),
+    "fourier": g(6.4, 19.2),
+    "cauchy": g(8, 19.2),
+    "niet-euclidische-geometrie": g(7.6, 20.3),
+    "riemann": g(5.8, 20.3),
+    "cantor": g(2, 21.4),
+    "topologie": g(5, 21.4),
+    "hilbert": g(3, 23.4),
+    "noether": g(2, 24.4),
+    "godel": g(5, 24.4),
+    "turing": g(4, 25.4),
+    "formele-bewijzen": g(6.2, 25.4),
+    "ai-wiskunde": g(5, 26.4),
+    "navier-stokes-ai-2026": g(7.2, 26.4)
   };
 
   MATH_NETWORK_NODES.forEach((node, index) => {
@@ -930,14 +1008,58 @@ function mathNetworkInjectStyles() {
       border-color: var(--gold);
       color: #fff6d8;
     }
-    .math-network-region {
-      fill: #cbb98a;
-      fill-opacity: .14;
-      font-family: Cinzel, "Times New Roman", serif;
-      font-size: 10px;
-      letter-spacing: .22em;
-      text-anchor: middle;
+    .math-network-band {
       pointer-events: none;
+    }
+    .math-network-band-label {
+      fill: #cbb98a;
+      fill-opacity: .34;
+      font-family: Cinzel, "Times New Roman", serif;
+      font-size: 13px;
+      letter-spacing: .22em;
+      text-anchor: start;
+      pointer-events: none;
+    }
+    .math-network-node .node-era {
+      fill: none;
+      stroke-width: 2;
+      pointer-events: none;
+      vector-effect: non-scaling-stroke;
+    }
+    .math-network-eras {
+      position: absolute;
+      top: 12px;
+      left: 58px;
+      right: 12px;
+      z-index: 4;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+      pointer-events: none;
+    }
+    .math-network-eras button {
+      pointer-events: auto;
+      border: 1px solid rgba(230,199,122,.28);
+      background: rgba(12,9,6,.82);
+      color: #cbb98a;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      letter-spacing: .04em;
+      cursor: pointer;
+    }
+    .math-network-eras button.is-ready {
+      color: #f4ead3;
+      border-color: rgba(230,199,122,.55);
+    }
+    .math-network-eras button.is-current {
+      color: #fff6d8;
+      box-shadow: 0 0 0 1px rgba(230,199,122,.7);
+    }
+    .math-network-eras button.is-locked {
+      opacity: .42;
+      cursor: default;
     }
     .math-network-edge {
       stroke: rgba(230,199,122,.18);
@@ -1211,14 +1333,16 @@ function mathNetworkInjectStyles() {
   document.head.appendChild(style);
 }
 
-const MATH_NETWORK_REGION_LABELS = [
-  { text: "OORSPRONG", col: 4, row: -0.42 },
-  { text: "GETALLEN", col: 2, row: 1.58 },
-  { text: "GRIEKEN", col: 6.4, row: 2.58 },
-  { text: "ALGEBRA", col: 3.2, row: 3.58 },
-  { text: "CALCULUS", col: 6, row: 7.58 },
-  { text: "GRONDSLAGEN", col: 3.5, row: 11.58 }
-];
+function mathNetworkPeriodSvg() {
+  return MATH_NETWORK_PERIODS.map((period) => {
+    const b = mathNetworkPeriodBounds(period);
+    const labelY = b.y0 + 28;
+    return `<g class="math-network-band" data-period="${mathNetworkEsc(period.id)}">
+      <rect x="0" y="${b.y0}" width="${MATH_NETWORK_VIEW.width}" height="${b.y1 - b.y0}" fill="${period.fill}"></rect>
+      <text class="math-network-band-label" x="18" y="${labelY}">${mathNetworkEsc(period.title.toUpperCase())}</text>
+    </g>`;
+  }).join("");
+}
 
 function mathNetworkImageSrc(id) {
   const key = String(id || "");
@@ -1231,10 +1355,16 @@ function mathNetworkNodeSvg(node, pos, selectedId) {
   const state = mathNetworkNodeState(node);
   const selected = selectedId === node.id ? " selected" : "";
 
+  const period = mathNetworkPeriodById(mathNetworkNodePeriod(node.id));
+  const eraRing = period
+    ? `<circle class="node-era" r="29" stroke="${period.tint}"></circle>`
+    : "";
+
   return `
     <g class="math-network-node ${state}${selected}" data-network-node="${mathNetworkEsc(node.id)}"
        transform="translate(${x},${y})">
       <circle class="node-hit" r="40"></circle>
+      ${eraRing}
       <circle class="node-ring" r="34"></circle>
       <circle class="node-core" r="24"></circle>
       <image class="node-photo"
@@ -1379,6 +1509,61 @@ function mathNetworkApplyCamera() {
   const c = MATH_NETWORK_CAMERA;
   svg.style.transform = "translate(" + c.x + "px," + c.y + "px) scale(" + c.scale + ")";
   mathNetworkPlaceFloat();
+  mathNetworkSyncPeriodButtons();
+}
+
+function mathNetworkCurrentPeriodId() {
+  const canvas = document.querySelector(".math-network-canvas");
+  if (!canvas) return "oudheid";
+  const rect = canvas.getBoundingClientRect();
+  const worldY = (rect.height * 0.42 - MATH_NETWORK_CAMERA.y) / MATH_NETWORK_CAMERA.scale;
+  let best = MATH_NETWORK_PERIODS[0].id;
+  let bestDist = Infinity;
+  MATH_NETWORK_PERIODS.forEach((period) => {
+    const b = mathNetworkPeriodBounds(period);
+    const dist = Math.abs(worldY - b.mid);
+    if (dist < bestDist) {
+      bestDist = dist;
+      best = period.id;
+    }
+  });
+  return best;
+}
+
+function mathNetworkFocusPeriod(id) {
+  if (!mathNetworkPeriodUnlocked(id)) return;
+  const period = mathNetworkPeriodById(id);
+  const canvas = document.querySelector(".math-network-canvas");
+  if (!period || !canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  const b = mathNetworkPeriodBounds(period);
+  const scale = MATH_NETWORK_CAMERA.scale || 1;
+  MATH_NETWORK_CAMERA.x = rect.width / 2 - (MATH_NETWORK_VIEW.width / 2) * scale;
+  MATH_NETWORK_CAMERA.y = rect.height * 0.38 - b.mid * scale;
+  mathNetworkHideHint();
+  mathNetworkApplyCamera();
+}
+
+function mathNetworkSyncPeriodButtons() {
+  const current = mathNetworkCurrentPeriodId();
+  document.querySelectorAll("[data-network-period]").forEach((btn) => {
+    const id = btn.getAttribute("data-network-period");
+    const open = mathNetworkPeriodUnlocked(id);
+    btn.classList.toggle("is-locked", !open);
+    btn.classList.toggle("is-ready", open);
+    btn.classList.toggle("is-current", id === current);
+    btn.disabled = !open;
+  });
+}
+
+function mathNetworkPeriodButtons() {
+  return MATH_NETWORK_PERIODS.map((period) => {
+    const open = mathNetworkPeriodUnlocked(period.id);
+    const cls = open ? "is-ready" : "is-locked";
+    return `<button type="button" class="${cls}" data-network-period="${mathNetworkEsc(period.id)}" ${open ? "" : "disabled"}>
+      ${mathNetworkEsc(period.title)}
+    </button>`;
+  }).join("");
 }
 
 function mathNetworkIsNarrow() {
@@ -1470,6 +1655,7 @@ function mathNetworkBindPanZoom() {
 
   canvas.addEventListener("pointerdown", function (e) {
     if (e.target.closest("[data-network-zoom]")) return;
+    if (e.target.closest("[data-network-period]")) return;
     if (e.target.closest("#math-network-float")) return;
     if (e.button != null && e.button !== 0) return;
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
@@ -1557,6 +1743,15 @@ function mathNetworkBindPanZoom() {
       mathNetworkZoomBy(btn.getAttribute("data-network-zoom"));
     });
   });
+
+  canvas.querySelectorAll("[data-network-period]").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      mathNetworkFocusPeriod(btn.getAttribute("data-network-period"));
+    });
+  });
+  mathNetworkSyncPeriodButtons();
 }
 
 function mathNetworkRender(selectedNodeId) {
@@ -1567,10 +1762,7 @@ function mathNetworkRender(selectedNodeId) {
 
   const positions = mathNetworkLayout();
 
-  const regionSvg = MATH_NETWORK_REGION_LABELS.map((r) => {
-    const [x, y] = mathNetworkGrid(r.col, r.row);
-    return `<text class="math-network-region" x="${x}" y="${y}">${mathNetworkEsc(r.text)}</text>`;
-  }).join("");
+  const regionSvg = mathNetworkPeriodSvg();
 
   const edgeSvg = mathNetworkConnectedEdges().map(([a, b]) => {
     const pa = positions[a];
@@ -1597,6 +1789,7 @@ function mathNetworkRender(selectedNodeId) {
           <button type="button" data-network-zoom="out" title="Zoom uit">−</button>
           <button type="button" data-network-zoom="reset" title="Reset weergave">↺</button>
         </div>
+        <div class="math-network-eras">${mathNetworkPeriodButtons()}</div>
         <svg class="math-network-svg" viewBox="0 0 ${MATH_NETWORK_VIEW.width} ${MATH_NETWORK_VIEW.height}"
              role="img" aria-label="Historisch Wiskunde Netwerk">
           <defs>
