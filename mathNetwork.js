@@ -1215,27 +1215,11 @@ function mathNetworkNodeSvg(node, pos, selectedId) {
   const [x, y] = pos;
   const state = mathNetworkNodeState(node);
   const selected = selectedId === node.id ? " selected" : "";
-  const lines = mathNetworkWrapTitle(mathNetworkMapTitle(node));
-  const admin = mathNetworkIsAdmin();
-  const pillW = Math.max(mathNetworkLabelWidth(lines), 78);
-  const pillH = 18 + lines.length * 13 + 14;
-  const pillY = 32;
-  const costY = pillY + 14 + lines.length * 13 + 2;
-  const showCost = !mathNetworkUnlocked(node.id) && !admin;
-  const costMark = showCost
-    ? `<text class="node-cost" x="-8" y="${costY}" text-anchor="end">${Number(node.cost || 0)}</text>
-       <image href="assets/inzicht.png" x="-6" y="${costY - 10}" width="13" height="13"></image>`
-    : `<text class="node-cost" y="${costY}">✓</text>`;
-
-  const labelTs = lines.map((line, i) => {
-    const ly = pillY + 14 + i * 13;
-    return `<text class="node-label" y="${ly}">${mathNetworkEsc(line)}</text>`;
-  }).join("");
 
   return `
     <g class="math-network-node ${state}${selected}" data-network-node="${mathNetworkEsc(node.id)}"
        transform="translate(${x},${y})">
-      <circle class="node-hit" r="52"></circle>
+      <circle class="node-hit" r="40"></circle>
       <circle class="node-ring" r="34"></circle>
       <circle class="node-core" r="24"></circle>
       <image class="node-photo"
@@ -1243,9 +1227,6 @@ function mathNetworkNodeSvg(node, pos, selectedId) {
              x="-24" y="-24" width="48" height="48"
              clip-path="url(#math-network-node-clip)"
              preserveAspectRatio="xMidYMid slice"></image>
-      <rect class="node-pill" x="${-pillW / 2}" y="${pillY}" width="${pillW}" height="${pillH}" rx="12"></rect>
-      ${labelTs}
-      ${costMark}
     </g>
   `;
 }
