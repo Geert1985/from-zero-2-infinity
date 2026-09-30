@@ -163,6 +163,117 @@ const MATH_NETWORK_NODES = [
     unlockText: "Nieuwe soorten krommen worden onderdeel van de wiskundige taal."
   },
 
+  {
+    id: "rekenkunde",
+    title: "Rekenkunde",
+    type: "idea",
+    era: "Vroege wiskunde",
+    year: null,
+    cost: 1,
+    prerequisites: ["tellen"],
+    description: "Tellen zegt hoeveel er is, maar niet hoe hoeveelheden samengaan. Optellen, aftrekken en verdelen vragen om vaste rekengebaren.",
+    unlockText: "Hoeveelheden kunnen worden bewerkt, niet alleen aangewezen. Rekenen wordt een methode."
+  },
+  {
+    id: "combinatieleer",
+    title: "Combinatieleer",
+    type: "idea",
+    era: "Oudheid",
+    year: null,
+    cost: 2,
+    prerequisites: ["natuurlijke-getallen"],
+    description: "Zodra je voorwerpen in rijen of groepen zet, groeit het aantal schikkingen sneller dan het oog volgt.",
+    unlockText: "Tellen van mogelijkheden wordt zelf een vraag. Combinaties zijn geen toeval meer."
+  },
+  {
+    id: "thales",
+    title: "Thales van Milete",
+    type: "person",
+    era: "Oud-Griekenland",
+    year: "ca. 624–546 v.Chr.",
+    cost: 2,
+    prerequisites: ["getal", "breuken"],
+    description: "Meetkunde was een verzameling handgrepen tot iemand naar de reden achter een hoek of evenwijdige lijn vroeg.",
+    unlockText: "Een figuur kan een algemene regel dragen. Meten krijgt een eerste deductieve trek."
+  },
+  {
+    id: "stelling-pythagoras",
+    title: "Stelling van Pythagoras",
+    type: "idea",
+    era: "Oud-Griekenland",
+    year: null,
+    cost: 2,
+    prerequisites: ["pythagoras"],
+    description: "In een rechte hoek lijken de zijden een vast verband te hebben, maar dat verband vraagt om een uitspraak die altijd geldt.",
+    unlockText: "De som van de kwadraten van de rechthoekszijden is het kwadraat van de schuine zijde. Getal en driehoek delen één wet."
+  },
+  {
+    id: "irrationale-getallen",
+    title: "Irrationale getallen",
+    type: "idea",
+    era: "Oud-Griekenland",
+    year: null,
+    cost: 3,
+    prerequisites: ["stelling-pythagoras"],
+    description: "Sommige lengtes in een figuur zijn geen breuk van twee gehele getallen, hoe fijn je ook verdeelt.",
+    unlockText: "Niet elke grootte is een verhouding van tellen. Het getalbegrip moet wijder dan de breuk."
+  },
+  {
+    id: "polyeders",
+    title: "Polyeders",
+    type: "idea",
+    era: "Oud-Griekenland",
+    year: null,
+    cost: 3,
+    prerequisites: ["euclides"],
+    description: "Ruimtefiguren met platte vlakken lijken eindeloos, tot je vraagt welke regelmatige lichamen echt kunnen sluiten.",
+    unlockText: "Er zijn maar vijf regelmatige veelvlakken. Vorm in de ruimte krijgt een eindige catalogus."
+  },
+  {
+    id: "perfecte-getallen",
+    title: "Perfecte getallen",
+    type: "idea",
+    era: "Oud-Griekenland",
+    year: null,
+    cost: 2,
+    prerequisites: ["priemgetallen"],
+    description: "Een getal kan gelijk zijn aan de som van zijn echte delers. Die zeldzame balans vraagt om een eigen naam.",
+    unlockText: "Volmaaktheid wordt een rekenfeit: 6 en 28 zijn geen mystiek, maar een structuur van delers."
+  },
+  {
+    id: "eratosthenes",
+    title: "Eratosthenes van Cyrene",
+    type: "person",
+    era: "Hellenistische periode",
+    year: "ca. 276–194 v.Chr.",
+    cost: 3,
+    prerequisites: ["priemgetallen"],
+    description: "Priemen vinden door elk getal te beproeven is traag. Er is een zeef nodig die veelvouden in één beweging wegneemt.",
+    unlockText: "De zeef van Eratosthenes maakt priemen tot een procedure. De aarde zelf wordt meetbaar met schaduw en afstand."
+  },
+  {
+    id: "pi",
+    title: "Pi",
+    type: "idea",
+    era: "Hellenistische periode",
+    year: null,
+    cost: 3,
+    prerequisites: ["archimedes"],
+    description: "Omtrek en middellijn van een cirkel houden verband, maar dat getal is geen nette breuk.",
+    unlockText: "De verhouding krijgt een eigen constante. Benadering van de cirkel wordt een eindeloos nauwkeuriger werk."
+  },
+  {
+    id: "hypatia",
+    title: "Hypatia",
+    type: "person",
+    era: "Late oudheid",
+    year: "ca. 350–415",
+    cost: 3,
+    prerequisites: ["euclides", "kegelsneden"],
+    description: "Hellenistische meetkunde dreigde een dode bibliotheek te worden zonder wie haar uitlegde en bewerkte.",
+    unlockText: "Commentaar en onderwijs houden Euclides en de kegelsneden levend. Wiskunde overleeft als overdracht, niet alleen als vondst."
+  },
+
   // ─────────────────────────────────────────────────────────────
   // India / islamitische wereld
   // ─────────────────────────────────────────────────────────────
@@ -538,6 +649,21 @@ const MATH_NETWORK_NODES = [
 ];
 
 const MATH_NETWORK_EDGES = [
+    ["tellen", "rekenkunde"],
+  ["rekenkunde", "getal"],
+  ["natuurlijke-getallen", "combinatieleer"],
+  ["getal", "thales"],
+  ["breuken", "thales"],
+  ["thales", "pythagoras"],
+  ["pythagoras", "stelling-pythagoras"],
+  ["stelling-pythagoras", "irrationale-getallen"],
+  ["irrationale-getallen", "bewijs"],
+  ["euclides", "polyeders"],
+  ["euclides", "hypatia"],
+  ["kegelsneden", "hypatia"],
+  ["priemgetallen", "perfecte-getallen"],
+  ["priemgetallen", "eratosthenes"],
+  ["archimedes", "pi"],
   ["tellen", "getal"],
   ["getal", "natuurlijke-getallen"],
   ["natuurlijke-getallen", "nul"],
@@ -693,8 +819,8 @@ const MATH_NETWORK_GRID = { originX: 130, originY: 80, colW: 118, rowH: 100 };
 const MATH_NETWORK_CAMERA = { x: 4, y: 0, scale: 1.3 };
 
 const MATH_NETWORK_PERIODS = [
-  { id: "oudheid", title: "Oudheid", tint: "#c4a06a", row0: -0.55, row1: 6.15 },
-  { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", row0: 6.15, row1: 11.15 },
+  { id: "oudheid", title: "Oudheid", tint: "#c4a06a", row0: -0.55, row1: 6.7 },
+  { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", row0: 6.7, row1: 11.15 },
   { id: "vroegmodern", title: "Vroegmodern", tint: "#c4845a", row0: 11.15, row1: 18.15 },
   { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", row0: 18.15, row1: 22.55 },
   { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.55, row1: 27.4 }
@@ -711,6 +837,17 @@ const MATH_NETWORK_NODE_PERIOD = {
   "priemgetallen": "oudheid",
   "archimedes": "oudheid",
   "kegelsneden": "oudheid",
+  "rekenkunde": "oudheid",
+  "combinatieleer": "oudheid",
+  "thales": "oudheid",
+  "stelling-pythagoras": "oudheid",
+  "irrationale-getallen": "oudheid",
+  "polyeders": "oudheid",
+  "perfecte-getallen": "oudheid",
+  "eratosthenes": "oudheid",
+  "pi": "oudheid",
+  "hypatia": "oudheid",
+
   "nul": "middeleeuwen",
   "plaatswaarde": "middeleeuwen",
   "negatieve-getallen": "middeleeuwen",
@@ -798,6 +935,17 @@ function mathNetworkLayout() {
     "priemgetallen": g(3.6, 5),
     "archimedes": g(6.5, 5),
     "kegelsneden": g(8, 5),
+    "rekenkunde": g(2.4, 1),
+    "combinatieleer": g(0.7, 2.3),
+    "thales": g(8, 2.15),
+    "stelling-pythagoras": g(7.7, 3),
+    "irrationale-getallen": g(8, 4),
+    "eratosthenes": g(2.1, 4.2),
+    "perfecte-getallen": g(2.2, 5.7),
+    "polyeders": g(8.7, 5.5),
+    "hypatia": g(4.1, 5.85),
+    "pi": g(7.35, 5.85),
+
     "nul": g(2, 7),
     "plaatswaarde": g(4, 7),
     "negatieve-getallen": g(2, 8),
@@ -855,7 +1003,13 @@ const MATH_NETWORK_SHORT_TITLES = {
   "de-moivre": "De Moivre",
   "leibniz": "G.W. Leibniz",
   "descartes": "Descartes",
-  "al-khwarizmi": "Al-Khwarizmi"
+  "al-khwarizmi": "Al-Khwarizmi",
+  "stelling-pythagoras": "Stelling van\nPythagoras",
+  "irrationale-getallen": "Irrationale\ngetallen",
+  "perfecte-getallen": "Perfecte\ngetallen",
+  "combinatieleer": "Combinatieleer",
+  "eratosthenes": "Eratosthenes",
+
 };
 
 function mathNetworkEsc(text) {
