@@ -203,6 +203,10 @@ function render() {
   if (typeof mountWidgets === "function" && parts[0] === "fase" && parts[2] === "m" && parts[4] === "les") {
     if (app.querySelector("[data-widget]")) mountWidgets(app, parts[3]);
   }
+
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
 }
 
 document.addEventListener("click", function (e) {
