@@ -50,8 +50,11 @@ function renderHome() {
   return (
     '<div class="screen" style="background-image:url(\'' + bgFor() + "')\">" +
     topbar() +
-    '<div class="layout"><div class="panel hero"><h1>' + COURSE.title + "</h1><p>" + COURSE.tagline + "</p></div>" +
-    '<div class="phase-grid">' + cards + "</div></div></div>"
+    '<div class="hero"><div class="hero-plate">' +
+    "<h1>" + COURSE.title + "</h1>" +
+    "<p>" + COURSE.tagline + "</p>" +
+    "</div></div>" +
+    '<div class="phase-grid">' + cards + "</div></div>"
   );
 }
 
@@ -78,9 +81,9 @@ function renderPhase(phaseId) {
     const st = done ? "done" : "";
     return (
       '<article class="stone ' + st + '" data-mid="' + m.id + '" data-phase="' + phaseId + '" tabindex="0" role="button" aria-label="' + escText(m.id + " " + (m.title || "")) + '">' +
-'<span class="stone-num">' + escText(m.id) + "</span>" +
-'<img class="stone-art" src="assets/mile-' + m.id + '.png?v=4" alt="">' +
-"</article>"
+      '<span class="stone-num">' + escText(m.id) + "</span>" +
+      '<img class="stone-art" src="assets/mile-' + m.id + '.png?v=4" alt="">' +
+      "</article>"
     );
   }).join("");
   const next = COURSE.phases.find((p) => p.id === phaseId + 1);
