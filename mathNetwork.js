@@ -647,6 +647,13 @@ function mathNetworkPrerequisitesMet(node) {
   return (node.prerequisites || []).every(mathNetworkUnlocked);
 }
 
+function mathNetworkIsVisible(node) {
+  if (!node) return false;
+  if (mathNetworkIsAdmin()) return true;
+  if (mathNetworkUnlocked(node.id)) return true;
+  return mathNetworkPrerequisitesMet(node);
+}
+
 function mathNetworkCanUnlock(node) {
   if (mathNetworkUnlocked(node.id)) return false;
   return mathNetworkInsightScore() >= Number(node.cost || 0)
@@ -674,7 +681,11 @@ function mathNetworkNodeById(id) {
 }
 
 function mathNetworkConnectedEdges() {
-  return MATH_NETWORK_EDGES.filter(([a, b]) => mathNetworkNodeById(a) && mathNetworkNodeById(b));
+  return MATH_NETWORK_EDGES.filter(([a, b]) => {
+    const na = mathNetworkNodeById(a);
+    const nb = mathNetworkNodeById(b);
+    return mathNetworkIsVisible(na) && mathNetworkIsVisible(nb);
+  });
 }
 
 const MATH_NETWORK_VIEW = { width: 1480, height: 2200 };
@@ -1269,6 +1280,8 @@ function mathNetworkPlaceFloat() {
 }
 
 function mathNetworkRenderDetail(nodeId) {
+  const visibleNodes = MATH_NETWORK_NODES.filter(mathNetworkIsVisible);
+  const nodeSvg = visibleNodes.map((n) => mathNetworkNodeSvg(n, positions[n.id], selectedNodeId)).join("");
   const host = document.getElementById("math-network-float");
   if (!host) return;
 
