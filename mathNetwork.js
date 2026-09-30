@@ -1086,6 +1086,8 @@ const MATH_NETWORK_EDGES = [
   ["getal", "thales"],
   ["breuken", "thales"],
   ["thales", "pythagoras"],
+  ["getal", "pythagoras"],
+  ["breuken", "pythagoras"],
   ["pythagoras", "stelling-pythagoras"],
   ["stelling-pythagoras", "irrationale-getallen"],
   ["irrationale-getallen", "bewijs"],
@@ -1129,6 +1131,7 @@ const MATH_NETWORK_EDGES = [
   ["breuken", "al-khwarizmi"],
   ["al-khwarizmi", "algoritme"],
   ["al-khwarizmi", "algebra"],
+  ["negatieve-getallen", "algebra"],
   ["plaatswaarde", "fibonacci"],
   ["al-khwarizmi", "fibonacci"],
   ["algebra", "descartes"],
@@ -1304,7 +1307,7 @@ function mathNetworkConnectedEdges() {
   });
 }
 
-const MATH_NETWORK_VIEW = { width: 1480, height: 3180 };
+const MATH_NETWORK_VIEW = { width: 1480, height: 3280 };
 const MATH_NETWORK_GRID = { originX: 130, originY: 80, colW: 118, rowH: 100 };
 const MATH_NETWORK_CAMERA = { x: 4, y: 0, scale: 1.3 };
 
@@ -1313,7 +1316,7 @@ const MATH_NETWORK_PERIODS = [
   { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", row0: 6.7, row1: 11.35 },
   { id: "vroegmodern", title: "Vroegmodern", tint: "#c4845a", row0: 11.15, row1: 18.15 },
   { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", row0: 18.15, row1: 22.85 },
-  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.85, row1: 28.6 }
+  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.85, row1: 29.4 }
 ];
 
 const MATH_NETWORK_NODE_PERIOD = {
@@ -1435,6 +1438,13 @@ function mathNetworkPeriodUnlocked(periodId) {
     return mathNetworkNodePeriod(node.id) === periodId && mathNetworkIsVisible(node);
   });
 }
+
+function mathNetworkPeriodProgress(periodId) {
+  const nodes = MATH_NETWORK_NODES.filter((node) => mathNetworkNodePeriod(node.id) === periodId);
+  const total = nodes.length;
+  const done = nodes.filter((node) => mathNetworkUnlocked(node.id)).length;
+  return { done: done, total: total };
+}
 let MATH_NETWORK_HINT_HIDDEN = false;
 const MATH_NETWORK_ZOOM = { min: 0.5, max: 1.85, step: 0.15 };
 let MATH_NETWORK_OPEN_ID = null;
@@ -1538,7 +1548,7 @@ function mathNetworkLayout() {
     "turing": g(4, 25.4),
     "formele-bewijzen": g(6.2, 25.4),
     "ai-wiskunde": g(5, 26.4),
-    "navier-stokes-ai-2026": g(7.2, 26.4),
+    "navier-stokes-ai-2026": g(5.0, 28.55),
     "ramanujan": g(6.6, 23.5),
     "fractals": g(8.3, 24.45),
     "von-neumann": g(1.15, 25.35),
@@ -1811,18 +1821,21 @@ function mathNetworkInjectStyles() {
       color: #8a7d63;
     }
     .math-network-edge {
-      stroke: rgba(230,199,122,.18);
-      stroke-width: 1.35;
+      stroke: rgba(230,199,122,.10);
+      stroke-width: 1;
       fill: none;
       vector-effect: non-scaling-stroke;
     }
     .math-network-edge.edge-unlocked {
-      stroke: rgba(230,199,122,.58);
-      stroke-width: 2;
+      stroke: rgba(230,199,122,.16);
+      stroke-width: 1.1;
+    }
+    .math-network-edges.has-focus .math-network-edge:not(.edge-focus) {
+      stroke: rgba(230,199,122,.06);
     }
     .math-network-edge.edge-focus {
-      stroke: rgba(246,220,150,.92);
-      stroke-width: 2.4;
+      stroke: rgba(255,226,150,.95);
+      stroke-width: 2.6;
     }
     .math-network-node {
       cursor: pointer;
@@ -1846,10 +1859,9 @@ function mathNetworkInjectStyles() {
       stroke: #5a513f;
     }
     .math-network-node.available .node-core {
-      fill: #1a140c;
-      stroke: #ffe29a;
-      stroke-width: 2.6;
-      filter: drop-shadow(0 0 11px rgba(255,214,120,.85));
+      fill: #161310;
+      stroke: #5a513f;
+      filter: none;
     }
     .math-network-node.unlocked .node-core {
       fill: #3a2e16;
@@ -1861,8 +1873,8 @@ function mathNetworkInjectStyles() {
       stroke: var(--good);
     }
     .math-network-node.available .node-ring {
-      stroke: rgba(255,226,150,.7);
-      stroke-width: 2;
+      stroke: rgba(160,160,160,.45);
+      stroke-width: 1.4;
       animation: math-network-pulse 1.7s ease-in-out infinite;
     }
     .math-network-node.unlocked .node-ring {
@@ -1891,7 +1903,8 @@ function mathNetworkInjectStyles() {
       opacity: .82;
     }
     .math-network-node.available .node-photo {
-      filter: none;
+      filter: grayscale(1) brightness(.42);
+      opacity: .82;
     }
     .math-network-node.unlocked .node-photo {
       filter: saturate(.92);
@@ -1976,15 +1989,20 @@ function mathNetworkInjectStyles() {
     .math-network-float {
       position: absolute;
       z-index: 5;
+      box-sizing: border-box;
       width: min(340px, calc(100% - 24px));
       max-height: calc(100% - 24px);
-      overflow: auto;
+      overflow: hidden;
+      scrollbar-width: none;
       border: 1px solid rgba(230,199,122,.38);
       border-radius: 16px;
       padding: 14px 14px 12px;
       background: rgba(10,8,6,.94);
       box-shadow: 0 16px 40px rgba(0,0,0,.45);
       pointer-events: auto;
+    }
+    .math-network-float::-webkit-scrollbar {
+      display: none;
     }
     .math-network-float[hidden] { display: none; }
     .math-network-float-close {
@@ -2033,9 +2051,12 @@ function mathNetworkInjectStyles() {
       object-fit: cover;
       display: block;
     }
-    .math-network-detail-body { min-width: 0; flex: 1; }
-    .math-network-detail h3 {
+    .math-network-detail-body { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+    .math-network-detail h3,
+    .math-network-float h3 {
       margin: 0 0 8px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
     .math-network-meta {
       color: #cbb98a;
@@ -2135,6 +2156,8 @@ function mathNetworkMarkSelected(nodeId) {
     const b = el.getAttribute("data-to");
     el.classList.toggle("edge-focus", Boolean(nodeId) && (a === nodeId || b === nodeId));
   });
+  const edges = document.querySelector(".math-network-edges");
+  if (edges) edges.classList.toggle("has-focus", Boolean(nodeId));
 }
 
 function mathNetworkInzichtIco() {
@@ -2332,10 +2355,13 @@ function mathNetworkSyncPeriodButtons() {
   document.querySelectorAll("[data-network-period]").forEach((btn) => {
     const id = btn.getAttribute("data-network-period");
     const open = mathNetworkPeriodUnlocked(id);
+    const prog = mathNetworkPeriodProgress(id);
     btn.classList.toggle("is-locked", !open);
     btn.classList.toggle("is-ready", open);
     btn.classList.toggle("is-current", id === current);
     btn.disabled = !open;
+    const count = btn.querySelector(".math-network-era-count");
+    if (count) count.textContent = prog.done + "/" + prog.total;
   });
 }
 
@@ -2343,8 +2369,10 @@ function mathNetworkPeriodButtons() {
   return MATH_NETWORK_PERIODS.map((period) => {
     const open = mathNetworkPeriodUnlocked(period.id);
     const cls = open ? "is-ready" : "is-locked";
+    const prog = mathNetworkPeriodProgress(period.id);
     return `<button type="button" class="${cls}" data-network-period="${mathNetworkEsc(period.id)}" ${open ? "" : "disabled"}>
       ${mathNetworkEsc(period.title)}
+      <span class="math-network-era-count">${prog.done}/${prog.total}</span>
     </button>`;
   }).join("");
 }
