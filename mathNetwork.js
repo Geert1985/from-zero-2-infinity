@@ -965,7 +965,118 @@ const MATH_NETWORK_NODES = [
     description: "Een hedendaagse AI-gerelateerde doorbraak rond het Navier–Stokes existence-and-smoothness problem.",
     unlockText: "Een actuele casus waarin moderne analyse, PDE-theorie, formele verificatie en AI-assisted mathematics samenkomen.",
     note: "Historische status zorgvuldig formuleren: de node beschrijft een in 2026 door OpenAI gepubliceerde AI-oplossing, niet een onafhankelijk door het spel vastgesteld eindpunt."
-  }
+  },
+
+  {
+    id: "ramanujan",
+    title: "Srinivasa Ramanujan",
+    type: "person",
+    era: "20e eeuw",
+    year: "1887–1920",
+    cost: 8,
+    prerequisites: ["priemgetallen", "oneindige-reeksen"],
+    description: "Formules arriveerden sneller dan bewijzen. De vraag was welke van die vondsten standhouden.",
+    unlockText: "Oneindige sommen en partities krijgen nieuwe identiteiten. Intuïtie eist daarna een bewijs."
+  },
+  {
+    id: "von-neumann",
+    title: "John von Neumann",
+    type: "person",
+    era: "20e eeuw",
+    year: "1903–1957",
+    cost: 13,
+    prerequisites: ["hilbert", "kansrekening"],
+    description: "Spel, machine en kwantum vroegen om één soort wiskundige architectuur.",
+    unlockText: "Strategie, computers en operatoren komen in één hoofd bijeen. De eeuw krijgt een ontwerper."
+  },
+  {
+    id: "speltheorie",
+    title: "Speltheorie",
+    type: "idea",
+    era: "20e eeuw",
+    year: null,
+    cost: 8,
+    prerequisites: ["von-neumann"],
+    description: "Winst hangt af van wat de ander doet. Dat is geen moraal, maar een evenwicht.",
+    unlockText: "Een spel wordt een wiskundig object. Strategie is een evenwicht, geen gok."
+  },
+  {
+    id: "nash",
+    title: "John Nash",
+    type: "person",
+    era: "20e eeuw",
+    year: "1928–2015",
+    cost: 8,
+    prerequisites: ["speltheorie"],
+    description: "Niet elk spel heeft een duidelijke winnaar. Toch kan niemand eenzijdig beter af zijn.",
+    unlockText: "Het Nash-evenwicht maakt conflict berekenbaar zonder dat iemand de ander hoeft te verslaan."
+  },
+  {
+    id: "informatietheorie",
+    title: "Informatietheorie",
+    type: "idea",
+    era: "20e eeuw",
+    year: null,
+    cost: 8,
+    prerequisites: ["turing", "kansrekening"],
+    description: "Een boodschap is geen betekenis alleen: ze heeft een hoeveelheid die je kunt meten en beschermen.",
+    unlockText: "Informatie krijgt een eenheid. Ruis en code worden wiskunde."
+  },
+  {
+    id: "p-versus-np",
+    title: "P versus NP",
+    type: "idea",
+    era: "20e eeuw",
+    year: "1971",
+    cost: 13,
+    prerequisites: ["turing"],
+    description: "Sommige antwoorden zijn snel te checken en toch hard te vinden. Of die kloof wiskundig vastligt, is open.",
+    unlockText: "Gemakkelijk controleren is niet hetzelfde als gemakkelijk vinden. De grens is een van de grote open vragen."
+  },
+  {
+    id: "fractals",
+    title: "Fractals",
+    type: "idea",
+    era: "20e eeuw",
+    year: null,
+    cost: 8,
+    prerequisites: ["calculus"],
+    description: "Een kustlijn wordt langer naarmate je fijner meet. Dimensie is dan geen geheel getal meer.",
+    unlockText: "Herhaling op elke schaal wordt een meetkundig object. Ruwheid krijgt een maat."
+  },
+  {
+    id: "mandelbrot",
+    title: "Benoît Mandelbrot",
+    type: "person",
+    era: "20e eeuw",
+    year: "1924–2010",
+    cost: 8,
+    prerequisites: ["fractals"],
+    description: "Die gebroken vormen hadden een naam en een plaatje nodig voordat ze een vak werden.",
+    unlockText: "De Mandelbrotverzameling maakt oneindige rand zichtbaar. Fractals krijgen een gezicht."
+  },
+  {
+    id: "wiles",
+    title: "Andrew Wiles",
+    type: "person",
+    era: "20e eeuw",
+    year: "1953–",
+    cost: 13,
+    prerequisites: ["fermat", "groepentheorie"],
+    description: "Fermats kanttekening bleef drie eeuwen een rand. De sluiting vroeg om moderne algebraïsche meetkunde.",
+    unlockText: "Fermats laatste stelling is bewezen. Een oude claim wordt een stelling van deze eeuw."
+  },
+  {
+    id: "perelman",
+    title: "Grigori Perelman",
+    type: "person",
+    era: "21e eeuw",
+    year: "1966–",
+    cost: 13,
+    prerequisites: ["topologie"],
+    description: "Poincarés vraag over de driedimensionale sfeer bleef open tot de Ricci-stroom haar dwong.",
+    unlockText: "Het Poincarévermoeden is opgelost. Vorm in drie dimensies krijgt een sluitstuk."
+  },
 ];
 
 const MATH_NETWORK_EDGES = [
@@ -1096,7 +1207,22 @@ const MATH_NETWORK_EDGES = [
   ["turing", "ai-wiskunde"],
   ["fourier", "ai-wiskunde"],
   ["ai-wiskunde", "navier-stokes-ai-2026"],
-  ["differentiaalvergelijkingen", "navier-stokes-ai-2026"]
+  ["differentiaalvergelijkingen", "navier-stokes-ai-2026"],
+  ["priemgetallen", "ramanujan"],
+  ["oneindige-reeksen", "ramanujan"],
+  ["hilbert", "von-neumann"],
+  ["kansrekening", "von-neumann"],
+  ["von-neumann", "speltheorie"],
+  ["speltheorie", "nash"],
+  ["turing", "informatietheorie"],
+  ["kansrekening", "informatietheorie"],
+  ["turing", "p-versus-np"],
+  ["calculus", "fractals"],
+  ["fractals", "mandelbrot"],
+  ["fermat", "wiles"],
+  ["groepentheorie", "wiles"],
+  ["topologie", "perelman"],
+  ["informatietheorie", "ai-wiskunde"]
 ];
 
 const MATH_NETWORK_TYPE_LABELS = {
@@ -1178,7 +1304,7 @@ function mathNetworkConnectedEdges() {
   });
 }
 
-const MATH_NETWORK_VIEW = { width: 1480, height: 2920 };
+const MATH_NETWORK_VIEW = { width: 1480, height: 3180 };
 const MATH_NETWORK_GRID = { originX: 130, originY: 80, colW: 118, rowH: 100 };
 const MATH_NETWORK_CAMERA = { x: 4, y: 0, scale: 1.3 };
 
@@ -1187,7 +1313,7 @@ const MATH_NETWORK_PERIODS = [
   { id: "middeleeuwen", title: "Middeleeuwen", tint: "#7d9a6a", row0: 6.7, row1: 11.35 },
   { id: "vroegmodern", title: "Vroegmodern", tint: "#c4845a", row0: 11.15, row1: 18.15 },
   { id: "eeuw19", title: "19e eeuw", tint: "#9aa3b0", row0: 18.15, row1: 22.85 },
-  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.85, row1: 27.4 }
+  { id: "eeuw20", title: "20e eeuw+", tint: "#6e88a8", row0: 22.85, row1: 28.6 }
 ];
 
 const MATH_NETWORK_NODE_PERIOD = {
@@ -1275,7 +1401,17 @@ const MATH_NETWORK_NODE_PERIOD = {
   "turing": "eeuw20",
   "formele-bewijzen": "eeuw20",
   "ai-wiskunde": "eeuw20",
-  "navier-stokes-ai-2026": "eeuw20"
+  "navier-stokes-ai-2026": "eeuw20",
+  "ramanujan": "eeuw20",
+  "von-neumann": "eeuw20",
+  "speltheorie": "eeuw20",
+  "nash": "eeuw20",
+  "informatietheorie": "eeuw20",
+  "p-versus-np": "eeuw20",
+  "fractals": "eeuw20",
+  "mandelbrot": "eeuw20",
+  "wiles": "eeuw20",
+  "perelman": "eeuw20"
 };
 
 function mathNetworkPeriodById(id) {
@@ -1402,7 +1538,17 @@ function mathNetworkLayout() {
     "turing": g(4, 25.4),
     "formele-bewijzen": g(6.2, 25.4),
     "ai-wiskunde": g(5, 26.4),
-    "navier-stokes-ai-2026": g(7.2, 26.4)
+    "navier-stokes-ai-2026": g(7.2, 26.4),
+    "ramanujan": g(6.6, 23.5),
+    "fractals": g(8.3, 24.45),
+    "von-neumann": g(1.15, 25.35),
+    "mandelbrot": g(8.3, 25.5),
+    "speltheorie": g(0.2, 26.4),
+    "informatietheorie": g(2.6, 26.45),
+    "nash": g(0.2, 27.4),
+    "p-versus-np": g(3.9, 27.4),
+    "wiles": g(8.0, 27.35),
+    "perelman": g(6.3, 27.4)
   };
 
   MATH_NETWORK_NODES.forEach((node, index) => {
@@ -1441,6 +1587,10 @@ const MATH_NETWORK_SHORT_TITLES = {
   "booleaanse-logica": "Booleaanse\nlogica",
   "riemann-hypothese": "Riemann-\nhypothese",
   "verzamelingenleer": "Verzamelingenleer",
+  "von-neumann": "Von Neumann",
+  "informatietheorie": "Informatie-\ntheorie",
+  "p-versus-np": "P versus NP",
+  "speltheorie": "Speltheorie",
   "quaternionen": "Quaternionen",
   "stelling-pythagoras": "Stelling van\nPythagoras",
   "irrationale-getallen": "Irrationale\ngetallen",
