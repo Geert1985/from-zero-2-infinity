@@ -36,7 +36,14 @@ const MILESTONES_3 = [
     </p>
 
 
-    <h3>Van positie naar verandering</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.1-gemiddelde-verandering.svg"
+        alt="Twee punten op een grafiek met de secant ertussen; de horizontale verandering Δx en verticale verandering Δy bepalen samen de gemiddelde veranderingssnelheid."
+      >
+    </div>
+
+<h3>Van positie naar verandering</h3>
 
     <p>
       Denk aan een trein die uit een station vertrekt.
@@ -689,7 +696,14 @@ const MILESTONES_3 = [
     </div>
 
 
-    <h3>Van een interval naar één punt</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.2-limiet.svg"
+        alt="Een functiewaarde nadert de waarde L wanneer x steeds dichter bij a komt."
+      >
+    </div>
+
+<h3>Van een interval naar één punt</h3>
 
     <p>
       Neem de functie:
@@ -1465,7 +1479,14 @@ const MILESTONES_3 = [
     </div>
 
 
-    <h3>Een grafiek zonder onderbreking</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.3-continuiteit.svg"
+        alt="Vergelijking tussen een continue grafiek zonder onderbreking en een grafiek met een onderbreking."
+      >
+    </div>
+
+<h3>Een grafiek zonder onderbreking</h3>
 
     <p>
       Denk eerst aan een eenvoudige grafiek die je met één vloeiende beweging
@@ -2281,7 +2302,14 @@ const MILESTONES_3 = [
     </div>
 
 
-    <h3>Van gemiddelde naar ogenblikkelijke verandering</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.4-afgeleide-raaklijn.svg"
+        alt="Een raaklijn aan een kromme in één punt; de helling van de raaklijn stelt de afgeleide voor."
+      >
+    </div>
+
+<h3>Van gemiddelde naar ogenblikkelijke verandering</h3>
 
     <p>
       Stel dat een trein tijdens een rit 100 km aflegt in 2 uur.
@@ -2946,7 +2974,14 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-    <h3>De machtsregel</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.5-basisafgeleiden.svg"
+        alt="Voorbeelden van basisfuncties met hun overeenkomstige afgeleiden."
+      >
+    </div>
+
+<h3>De machtsregel</h3>
 
     <p>
       Een van de belangrijkste regels is de <strong>machtsregel</strong>.
@@ -3201,7 +3236,14 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-    <h3>Van eenvoudige naar gecombineerde functies</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.6-product-ketting-quotiënt.svg"
+        alt="Overzicht van productregel, quotiëntregel en kettingregel voor gecombineerde functies."
+      >
+    </div>
+
+<h3>Van eenvoudige naar gecombineerde functies</h3>
 
     <p>
       In les 3.5 konden we bijvoorbeeld afleiden:
@@ -3726,7 +3768,14 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-    <h3>Exponentiële functies</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.7-belangrijke-functies.svg"
+        alt="Grafieken die de typische vormen van goniometrische, exponentiële en logaritmische functies tonen."
+      >
+    </div>
+
+<h3>Exponentiële functies</h3>
 
     <p>Een exponentiële functie heeft de vorm:</p>
     <p class="formula">f(x)=a^x</p>
@@ -3970,7 +4019,14 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-    <h3>Van veranderingssnelheid naar gedrag</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.8-toepassingen-afgeleide.svg"
+        alt="Overzicht van toepassingen van afgeleiden: beweging, extrema, groei en daling en optimalisatie."
+      >
+    </div>
+
+<h3>Van veranderingssnelheid naar gedrag</h3>
 
     <p>
       In 3.4 leerden we wat het teken van de afgeleide betekent op één punt.
@@ -4349,7 +4405,14 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-    <h3>Van snelheid naar afgelegde afstand</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.9-integraal-oppervlakte.svg"
+        alt="Een grafiek met kleine rechthoekige bijdragen die samen de oppervlakte onder de curve benaderen."
+      >
+    </div>
+
+<h3>Van snelheid naar afgelegde afstand</h3>
 
     <p>
       Stel dat een trein gedurende drie uur met een constante snelheid van
@@ -4901,7 +4964,14 @@ const MILESTONES_3 = [
       <p>we onderzoeken waarom deze twee bewerkingen zo nauw met elkaar verbonden zijn.</p>
     </div>
 
-    <h3>Een verrassende omkering</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.10-fundamentele-stelling.svg"
+        alt="De fundamentele verbinding tussen afgeleiden als lokale verandering en integralen als accumulatie."
+      >
+    </div>
+
+<h3>Een verrassende omkering</h3>
 
     <p>
       3.9 heeft de integraal al opgebouwd als een manier om kleine bijdragen
@@ -5696,7 +5766,14 @@ const MILESTONES_3 = [
       kleine verzameling betrouwbare integratieregels rond.
     </p>
 
-    <h3>Van de afgeleide terug naar een functie</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.11-integraalrekenen.svg"
+        alt="Een oppervlakte onder een functie opgebouwd uit steeds kleinere rechthoekige bijdragen."
+      >
+    </div>
+
+<h3>Van de afgeleide terug naar een functie</h3>
 
     <p>
       In 3.10 zagen we dat een primitieve functie <span class="formula-inline">F</span>
@@ -6529,7 +6606,14 @@ const MILESTONES_3 = [
       bijdrage voorstelt</strong>.
     </p>
 
-    <h3>Van kleine bijdrage naar concrete grootheid</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.12-toepassingen-integralen.svg"
+        alt="Overzicht van integralen voor oppervlakte, verplaatsing, volume en totale hoeveelheden."
+      >
+    </div>
+
+<h3>Van kleine bijdrage naar concrete grootheid</h3>
 
     <p>
       Stel dat een grootheid op elk klein stukje van een interval een
@@ -7366,7 +7450,14 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-    <h3>Van één invoer naar twee invoeren</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.13-meerdere-variabelen.svg"
+        alt="Een oppervlak z boven een vlak met x- en y-richting als voorstelling van een functie van meerdere variabelen."
+      >
+    </div>
+
+<h3>Van één invoer naar twee invoeren</h3>
 
     <p>
       Een gewone functie kan bijvoorbeeld zeggen:
@@ -8256,7 +8347,14 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-    <h3>Van twee richtingen naar elke richting</h3>
+        <div class="theory-image">
+      <img
+        src="assets/fase3-3.14-vectorveld.svg"
+        alt="Een vectorveld waarin op verschillende punten pijlen richting en grootte aangeven."
+      >
+    </div>
+
+<h3>Van twee richtingen naar elke richting</h3>
 
     <p>
       Stel dat we ons op een punt van een landschap bevinden.
