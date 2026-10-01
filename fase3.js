@@ -5632,7 +5632,10 @@ const MILESTONES_3 = [
       </p>
     </div>
   `
-},id: "3.11",
+},
+
+  {
+  id: "3.11",
     title: "Integraalrekenen",
     goal: "Hoe berekenen we integralen?",
     theory: ``
