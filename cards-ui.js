@@ -82,7 +82,7 @@ function renderPhase(phaseId) {
     return (
       '<article class="stone ' + st + '" data-mid="' + m.id + '" data-phase="' + phaseId + '" tabindex="0" role="button" aria-label="' + escText(m.id + " " + (m.title || "")) + '">' +
       '<span class="stone-num">' + escText(m.id) + "</span>" +
-      '<img class="stone-art" src="assets/mile-' + m.id + '.png?v=4" alt="">' +
+      '<img class="stone-art" src="assets/milestones/mile-' + m.id + '.png?v=4" alt="">' +
       "</article>"
     );
   }).join("");
