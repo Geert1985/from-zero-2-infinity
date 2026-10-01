@@ -4339,7 +4339,7 @@ const MILESTONES_3 = [
     <p>De afgelegde afstand is:</p>
 
     <p class="formula">
-      s = 80 \\\\cdot 3 = 240\\\\text{ km}
+      s = 80 \\cdot 3 = 240\\text{ km}
     </p>
 
     <p>
@@ -4348,7 +4348,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{afstand} = \\\\text{snelheid} \\\\cdot \\\\text{tijd}
+      \\text{afstand} = \\text{snelheid} \\cdot \\text{tijd}
     </p>
 
     <p>
@@ -4380,12 +4380,12 @@ const MILESTONES_3 = [
     <p>
       Als de snelheid tijdens een klein interval ongeveer
       <span class="formula-inline">v</span> is en het interval een duur
-      <span class="formula-inline">\\\\Delta t</span> heeft, dan is de afgelegde
+      <span class="formula-inline">\\Delta t</span> heeft, dan is de afgelegde
       afstand ongeveer:
     </p>
 
     <p class="formula">
-      \\\\Delta s \\\\approx v\\\\,\\\\Delta t
+      \\Delta s \\approx v\\,\\Delta t
     </p>
 
     <p>
@@ -4401,15 +4401,15 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta s_1 \\\\approx v_1\\\\Delta t
+      \\Delta s_1 \\approx v_1\\Delta t
     </p>
 
     <p class="formula">
-      \\\\Delta s_2 \\\\approx v_2\\\\Delta t
+      \\Delta s_2 \\approx v_2\\Delta t
     </p>
 
     <p class="formula">
-      \\\\Delta s_3 \\\\approx v_3\\\\Delta t
+      \\Delta s_3 \\approx v_3\\Delta t
     </p>
 
     <p>
@@ -4417,11 +4417,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      s \\\\approx
-      v_1\\\\Delta t+
-      v_2\\\\Delta t+
-      v_3\\\\Delta t+
-      \\\\cdots
+      s \\approx
+      v_1\\Delta t+
+      v_2\\Delta t+
+      v_3\\Delta t+
+      \\cdots
     </p>
 
     <p>
@@ -4429,7 +4429,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      s \\\\approx \\\\sum_{i=1}^{n} v_i\\\\Delta t
+      s \\approx \\sum_{i=1}^{n} v_i\\Delta t
     </p>
 
     <p>
@@ -4463,7 +4463,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{afstand} \\\\approx \\\\text{hoogte} \\\\cdot \\\\text{breedte}
+      \\text{afstand} \\approx \\text{hoogte} \\cdot \\text{breedte}
     </p>
 
     <p>
@@ -4473,7 +4473,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      s \\\\approx \\\\sum_{i=1}^{n} v(t_i^*)\\\\Delta t
+      s \\approx \\sum_{i=1}^{n} v(t_i^*)\\Delta t
     </p>
 
     <p>
@@ -4501,19 +4501,19 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta t=1
+      \\Delta t=1
     </p>
 
     <p class="formula">
-      \\\\Delta t=0{,}1
+      \\Delta t=0{,}1
     </p>
 
     <p class="formula">
-      \\\\Delta t=0{,}01
+      \\Delta t=0{,}01
     </p>
 
     <p class="formula">
-      \\\\Delta t=0{,}001
+      \\Delta t=0{,}001
     </p>
 
     <p>
@@ -4541,7 +4541,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx
+      \\int_a^b f(x)\\,dx
     </p>
 
     <p>
@@ -4562,7 +4562,7 @@ const MILESTONES_3 = [
     <p>In:</p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx
+      \\int_a^b f(x)\\,dx
     </p>
 
     <ul>
@@ -4580,7 +4580,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(t)\\\\,dt
+      \\int_a^b f(t)\\,dt
     </p>
 
     <p>
@@ -4590,7 +4590,7 @@ const MILESTONES_3 = [
     <h3>De oppervlakte onder een positieve grafiek</h3>
 
     <p>
-      Wanneer <span class="formula-inline">f(x)\\\\gt0</span> op het volledige interval,
+      Wanneer <span class="formula-inline">f(x)\\gt0</span> op het volledige interval,
       kunnen we de integraal interpreteren als de oppervlakte tussen de grafiek
       en de x-as.
     </p>
@@ -4609,7 +4609,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_0^3 4\\\\,dx = 4\\\\cdot3 = 12
+      \\int_0^3 4\\,dx = 4\\cdot3 = 12
     </p>
 
     <p>
@@ -4633,7 +4633,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f(x)\\\\lt0
+      f(x)\\lt0
     </p>
 
     <p>
@@ -4675,7 +4675,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta s \\\\approx v(t)\\\\,\\\\Delta t
+      \\Delta s \\approx v(t)\\,\\Delta t
     </p>
 
     <p>
@@ -4684,9 +4684,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta s_{\\\\text{totaal}}
+      \\Delta s_{\\text{totaal}}
       =
-      \\\\int_a^b v(t)\\\\,dt
+      \\int_a^b v(t)\\,dt
     </p>
 
     <p>
@@ -4702,9 +4702,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta Q
+      \\Delta Q
       =
-      \\\\int_a^b r(t)\\\\,dt
+      \\int_a^b r(t)\\,dt
     </p>
 
     <p>
@@ -4724,9 +4724,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\text{km}}{\\\\text{u}}\\\\cdot\\\\text{u}
+      \\frac{\\text{km}}{\\text{u}}\\cdot\\text{u}
       =
-      \\\\text{km}
+      \\text{km}
     </p>
 
     <p>
@@ -4746,11 +4746,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{afgeleide: hoeveelheid} \\\\rightarrow \\\\text{veranderingssnelheid}
+      \\text{afgeleide: hoeveelheid} \\rightarrow \\text{veranderingssnelheid}
     </p>
 
     <p class="formula">
-      \\\\text{integraal: veranderingssnelheid} \\\\rightarrow \\\\text{totale verandering}
+      \\text{integraal: veranderingssnelheid} \\rightarrow \\text{totale verandering}
     </p>
 
     <p>
@@ -4810,7 +4810,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta Q \\\\approx r(x)\\\\,\\\\Delta x
+      \\Delta Q \\approx r(x)\\,\\Delta x
     </p>
 
     <p>
@@ -4818,7 +4818,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\sum_{i=1}^{n} r(x_i^*)\\\\Delta x
+      \\sum_{i=1}^{n} r(x_i^*)\\Delta x
     </p>
 
     <p>
@@ -4826,7 +4826,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b r(x)\\\\,dx
+      \\int_a^b r(x)\\,dx
     </p>
 
     <div class="callout">
