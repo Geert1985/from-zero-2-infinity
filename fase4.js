@@ -101,6 +101,10 @@ const MILESTONES_4 = [
 
       <h3>Vectoren met componenten</h3>
 
+      <div class="theory-image">
+        <img src="assets/vector-components.svg" alt="Een vector met horizontale en verticale componenten die samen de volledige verplaatsing vormen.">
+      </div>
+
       <p>
         In een cartesisch assenstelsel kunnen we de richting van een vector beschrijven
         met zijn <strong>componenten</strong>. Componenten zijn de bijdragen in de
@@ -638,6 +642,10 @@ const MILESTONES_4 = [
 
       <h3>De geometrische betekenis</h3>
 
+      <div class="theory-image">
+        <img src="assets/dot-product-angle.svg" alt="Twee vectoren met de hoek θ ertussen, waarmee het inwendig product geometrisch wordt geïnterpreteerd.">
+      </div>
+
       <p>
         Voor twee niet-nulvectoren geldt:
       </p>
@@ -1048,6 +1056,10 @@ const MILESTONES_4 = [
       </div>
 
       <h3>Het kruisproduct werkt in drie dimensies</h3>
+
+      <div class="theory-image">
+        <img src="assets/cross-product-normal.svg" alt="Twee vectoren spannen een vlak op en hun kruisproduct wijst loodrecht op dat vlak.">
+      </div>
 
       <p>
         Het gewone kruisproduct dat we hier leren is gedefinieerd voor vectoren in
@@ -1552,6 +1564,10 @@ const MILESTONES_4 = [
 
       <h3>De afmetingen van een matrix</h3>
 
+      <div class="theory-image">
+        <img src="assets/matrix-anatomy.svg" alt="Een 2 bij 3 matrix met een gemarkeerde rij, kolom, element en de afmetingen.">
+      </div>
+
       <p>
         De afmetingen geven aan hoeveel rijen en kolommen een matrix heeft.
         Een matrix met <span class="formula-inline">m</span> rijen en
@@ -1782,7 +1798,17 @@ const MILESTONES_4 = [
     `
   },
 
+  { id: "4.5", title: "Matrixvermenigvuldiging & compositie", goal: "Hoe combineren we lineaire bewerkingen stap voor stap?", theory: `` },
+  { id: "4.6", title: "Lineaire stelsels & Gauss-eliminatie", goal: "Hoe lossen we meerdere lineaire vergelijkingen systematisch op?", theory: `` },
+  { id: "4.7", title: "Lineaire transformaties", goal: "Hoe beschrijven matrices systematische veranderingen van vectoren?", theory: `` },
+  { id: "4.8", title: "Determinanten, inverse & invertibiliteit", goal: "Wanneer verliest een lineaire transformatie informatie en wanneer kunnen we haar omkeren?", theory: `` },
+  { id: "4.9", title: "Vectorruimten & deelruimten", goal: "Wat maakt een verzameling vectoren tot een ruimte waarin we lineair kunnen rekenen?", theory: `` },
+  { id: "4.10", title: "Lineaire combinaties, onafhankelijkheid, opspanning, basis & dimensie", goal: "Hoe bouwen we een vectorruimte op uit onafhankelijke richtingen?", theory: `` },
+  { id: "4.11", title: "Kern, beeld, rang & verandering van basis", goal: "Welke informatie behoudt een lineaire transformatie en hoe verandert haar beschrijving bij een andere basis?", theory: `` },
+  { id: "4.12", title: "Orthogonaliteit, projecties & kleinste kwadraten", goal: "Hoe vinden we loodrechte componenten en de beste benadering wanneer een exact antwoord niet bestaat?", theory: `` },
+  { id: "4.13", title: "Eigenwaarden & eigenvectoren", goal: "Welke richtingen blijven onder een transformatie invariant?", theory: `` },
+  { id: "4.14", title: "Diagonalisatie & toepassingen", goal: "Hoe maken we eigenrichtingen complexe lineaire transformaties eenvoudiger?", theory: `` }
+
 
 ];
-
 const PHASE_EXAM_4 = [];
