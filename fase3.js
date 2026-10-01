@@ -155,13 +155,13 @@ const MILESTONES_3 = [
 
     <p>
       Denk bijvoorbeeld aan temperatuur. Stel dat de temperatuur
-      van 10 °C naar 25 °C stijgt in drie uur.
+      van 10&#8451 naar 25&#8451 stijgt in drie uur tijd.
     </p>
 
     <p>De temperatuurverandering is:</p>
 
     <p class="formula">
-      \\Delta T = 25 - 10 = 15^\\circ\\text{C}
+      \\Delta T = 25 - 10 = 15{°C}
     </p>
 
     <p>De tijdsverandering is:</p>
@@ -177,7 +177,7 @@ const MILESTONES_3 = [
       =
       \\frac{15}{3}
       =
-      5^\\circ\\text{C/u}
+      5{°C/u}
     </p>
 
     <p>
@@ -1985,7 +1985,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      0^\\circ\\text{C}
+      0{°C}
     </p>
 
     <p>
@@ -3398,7 +3398,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\frac{^\\circ\\mathrm{C}}{\\mathrm{u}}
+      \\frac{°C}{u}
     </p>
 
     <p>
