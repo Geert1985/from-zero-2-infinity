@@ -1433,17 +1433,355 @@ const MILESTONES_4 = [
       </div>
     `
   },
-  { id: "4.4", title: "Matrices & matrixbewerkingen", goal: "Hoe organiseren en bewerken we meerdere getallen tegelijk?", theory: `` },
-  { id: "4.5", title: "Matrixvermenigvuldiging & compositie", goal: "Hoe combineren we lineaire bewerkingen stap voor stap?", theory: `` },
-  { id: "4.6", title: "Lineaire stelsels & Gauss-eliminatie", goal: "Hoe lossen we meerdere lineaire vergelijkingen systematisch op?", theory: `` },
-  { id: "4.7", title: "Lineaire transformaties", goal: "Hoe beschrijven matrices systematische veranderingen van vectoren?", theory: `` },
-  { id: "4.8", title: "Determinanten, inverse & invertibiliteit", goal: "Wanneer verliest een lineaire transformatie informatie en wanneer kunnen we haar omkeren?", theory: `` },
-  { id: "4.9", title: "Vectorruimten & deelruimten", goal: "Wat maakt een verzameling vectoren tot een ruimte waarin we lineair kunnen rekenen?", theory: `` },
-  { id: "4.10", title: "Lineaire combinaties, onafhankelijkheid, opspanning, basis & dimensie", goal: "Hoe bouwen we een vectorruimte op uit onafhankelijke richtingen?", theory: `` },
-  { id: "4.11", title: "Kern, beeld, rang & verandering van basis", goal: "Welke informatie behoudt een lineaire transformatie en hoe verandert haar beschrijving bij een andere basis?", theory: `` },
-  { id: "4.12", title: "Orthogonaliteit, projecties & kleinste kwadraten", goal: "Hoe vinden we loodrechte componenten en de beste benadering wanneer een exact antwoord niet bestaat?", theory: `` },
-  { id: "4.13", title: "Eigenwaarden & eigenvectoren", goal: "Welke richtingen blijven onder een transformatie invariant?", theory: `` },
-  { id: "4.14", title: "Diagonalisatie & toepassingen", goal: "Hoe maken eigenrichtingen complexe lineaire transformaties eenvoudiger?", theory: `` }
+  {
+    id: "4.4",
+    title: "Matrices & matrixbewerkingen",
+    goal: "Hoe organiseren en bewerken we meerdere getallen tegelijk?",
+    theory: /* html */`
+      <h2>Matrices & matrixbewerkingen</h2>
+
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Waarom een matrix handig is om veel getallen tegelijk te organiseren.</li>
+        <li>Hoe we de afmetingen en posities van elementen in een matrix beschrijven.</li>
+        <li>Hoe we matrices optellen en aftrekken.</li>
+        <li>Hoe we een matrix met een getal vermenigvuldigen.</li>
+        <li>Wat een rij, kolom en element van een matrix zijn.</li>
+        <li>Hoe de nulmatrix, vierkante matrix en eenheidsmatrix werken.</li>
+        <li>Waarom matrixvermenigvuldiging een aparte bewerking is die we pas in 4.5 invoeren.</li>
+      </ul>
+
+      <p>
+        In 4.1–4.3 leerden we vectoren gebruiken om richting en grootte te beschrijven.
+        Een vector kun je zien als een geordende rij getallen. Maar zodra we meerdere
+        vectoren of meerdere soorten informatie tegelijk willen organiseren, wordt
+        één rij of kolom al snel onhandig.
+      </p>
+
+      <p>
+        Daarvoor gebruiken we een <strong>matrix</strong>: een rechthoekig rooster
+        van getallen waarin de positie van elk getal betekenis kan hebben.
+      </p>
+
+      <div class="callout">
+        <p><strong>Een matrix organiseert getallen in rijen en kolommen.</strong></p>
+        <p>Een vector is een eenvoudige vorm van zo'n geordende getallenstructuur; een matrix kan er meerdere tegelijk organiseren.</p>
+      </div>
+
+      <h3>Van een lijst getallen naar een matrix</h3>
+
+      <p>
+        Stel dat we van drie treinen de snelheid en massa willen bijhouden. We kunnen
+        de gegevens overzichtelijk in een rooster plaatsen:
+      </p>
+
+      <p class="formula">A = ( 120  80 ;  900  650 ;  110  720 )</p>
+
+      <p>
+        In de eerste kolom kunnen bijvoorbeeld de snelheden staan en in de tweede
+        kolom de massa's. De exacte betekenis hangt af van wat we met de matrix
+        willen voorstellen.
+      </p>
+
+      <p>
+        De matrix bevat hier 3 rijen en 2 kolommen. We zeggen daarom dat de matrix
+        <strong>3 × 2</strong> is.
+      </p>
+
+      <p>
+        De notatie <span class="formula-inline">3 × 2</span> betekent hier niet dat
+        we 3 en 2 met elkaar vermenigvuldigen. Het beschrijft de vorm:
+        <strong>3 rijen × 2 kolommen</strong>.
+      </p>
+
+      <h3>Rijen en kolommen</h3>
+
+      <p>
+        Een <strong>rij</strong> loopt horizontaal door een matrix.
+        Een <strong>kolom</strong> loopt verticaal.
+      </p>
+
+      <p>Bijvoorbeeld:</p>
+
+      <p class="formula">A = ( 2  5  7 ;  1  4  6 )</p>
+
+      <p>
+        Deze matrix heeft 2 rijen en 3 kolommen. We noemen haar daarom een
+        <strong>2 × 3-matrix</strong>.
+      </p>
+
+      <p>
+        De eerste rij is <span class="formula-inline">(2,5,7)</span>.
+        De tweede kolom is <span class="formula-inline">(5,4)</span>.
+      </p>
+
+      <div class="callout">
+        <p><strong>Rij = horizontaal.</strong></p>
+        <p><strong>Kolom = verticaal.</strong></p>
+      </div>
+
+      <h3>De plaats van een element</h3>
+
+      <p>
+        Elk afzonderlijk getal in een matrix noemen we een <strong>element</strong>
+        of <strong>entry</strong>. We moeten kunnen aangeven waar dat element staat.
+      </p>
+
+      <p>
+        We schrijven een matrix bijvoorbeeld als <span class="formula-inline">A</span>
+        en noemen een element:
+      </p>
+
+      <p class="formula">aᵢⱼ</p>
+
+      <p>
+        Het eerste indexcijfer <span class="formula-inline">i</span> geeft de rij aan.
+        Het tweede <span class="formula-inline">j</span> de kolom.
+      </p>
+
+      <p>Neem:</p>
+      <p class="formula">A = ( 2  5  7 ;  1  4  6 )</p>
+
+      <p>Dan is:</p>
+      <p class="formula">a₁₂ = 5</p>
+      <p class="formula">a₂₃ = 6</p>
+
+      <div class="callout">
+        <p><strong>aᵢⱼ betekent: element op rij i, kolom j.</strong></p>
+      </div>
+
+      <h3>De afmetingen van een matrix</h3>
+
+      <p>
+        De afmetingen geven aan hoeveel rijen en kolommen een matrix heeft.
+        Een matrix met <span class="formula-inline">m</span> rijen en
+        <span class="formula-inline">n</span> kolommen noemen we een
+        <strong>m × n-matrix</strong>.
+      </p>
+
+      <p class="formula">A ∈ ℝᵐˣⁿ</p>
+
+      <p>
+        Deze notatie betekent dat <span class="formula-inline">A</span> een matrix
+        is met <span class="formula-inline">m</span> rijen en
+        <span class="formula-inline">n</span> kolommen waarvan de elementen reële
+        getallen zijn.
+      </p>
+
+      <h3>Wanneer zijn twee matrices gelijk?</h3>
+
+      <p>
+        Twee matrices zijn gelijk wanneer ze dezelfde afmetingen hebben én elk
+        overeenkomstig element gelijk is.
+      </p>
+
+      <p class="formula">A = ( 1  2 ;  3  4 )</p>
+      <p class="formula">B = ( 1  2 ;  3  4 )</p>
+
+      <p>
+        Dan geldt <span class="formula-inline">A = B</span>. De positie van elk
+        element hoort bij de informatie, dus dezelfde getallen in een andere
+        rangschikking geven niet automatisch dezelfde matrix.
+      </p>
+
+      <h3>Matrixoptelling</h3>
+
+      <p>
+        We kunnen twee matrices optellen wanneer ze dezelfde afmetingen hebben.
+        We tellen overeenkomstige elementen bij elkaar op.
+      </p>
+
+      <p class="formula">A = ( 1  2 ;  3  4 )</p>
+      <p class="formula">B = ( 5  1 ;  2  3 )</p>
+      <p class="formula">A + B = ( 6  3 ;  5  7 )</p>
+
+      <p>In algemene vorm:</p>
+      <p class="formula">(A + B)ᵢⱼ = aᵢⱼ + bᵢⱼ</p>
+
+      <div class="callout">
+        <p><strong>Optellen kan alleen wanneer de matrices dezelfde vorm hebben.</strong></p>
+      </div>
+
+      <h3>Matrixaftrekking</h3>
+
+      <p>
+        Aftrekken werkt op dezelfde manier: overeenkomstige elementen worden van
+        elkaar afgetrokken.
+      </p>
+
+      <p class="formula">A − B = A + (−B)</p>
+      <p class="formula">( 7  5 ;  4  2 ) − ( 2  1 ;  3  6 ) = ( 5  4 ;  1  −4 )</p>
+
+      <p>
+        Ook hier moeten de twee matrices dezelfde afmetingen hebben.
+      </p>
+
+      <h3>Een matrix vermenigvuldigen met een getal</h3>
+
+      <p>
+        Net zoals bij vectoren kunnen we een matrix met een getal vermenigvuldigen.
+        Zo'n getal noemen we een <strong>scalaire factor</strong>.
+      </p>
+
+      <p class="formula">3( 1  −2 ;  4  5 ) = ( 3  −6 ;  12  15 )</p>
+      <p class="formula">(kA)ᵢⱼ = k aᵢⱼ</p>
+
+      <div class="callout">
+        <p><strong>Een matrix schalen betekent elk element met dezelfde factor vermenigvuldigen.</strong></p>
+      </div>
+
+      <h3>De nulmatrix</h3>
+
+      <p>
+        Voor elke matrixvorm bestaat een <strong>nulmatrix</strong>: een matrix
+        waarvan alle elementen nul zijn.
+      </p>
+
+      <p class="formula">0₂ˣ₃ = ( 0  0  0 ;  0  0  0 )</p>
+      <p class="formula">A + 0 = A</p>
+
+      <p>
+        De nulmatrix speelt later een belangrijke rol bij matrixvergelijkingen
+        en lineaire stelsels.
+      </p>
+
+      <h3>Vierkante matrices</h3>
+
+      <p>
+        Een matrix met evenveel rijen als kolommen noemen we een
+        <strong>vierkante matrix</strong>.
+      </p>
+
+      <p class="formula">A = ( 2  1 ;  0  3 )</p>
+
+      <p>
+        Dit is een <span class="formula-inline">2 × 2</span>-matrix.
+        Vierkante matrices worden later belangrijk bij determinanten, inverses
+        en eigenwaarden.
+      </p>
+
+      <h3>De hoofddiagonaal</h3>
+
+      <p>
+        Bij een vierkante matrix loopt de <strong>hoofddiagonaal</strong> van
+        linksboven naar rechtsonder.
+      </p>
+
+      <p class="formula">A = ( 2  1  4 ;  0  3  5 ;  7  2  6 )</p>
+      <p class="formula">a₁₁ = 2, a₂₂ = 3, a₃₃ = 6</p>
+
+      <p>
+        De diagonaal wordt later belangrijk bij onder andere determinanten,
+        diagonale matrices en eigenwaarden.
+      </p>
+
+      <h3>De eenheidsmatrix</h3>
+
+      <p>
+        Voor vierkante matrices bestaat een bijzondere matrix die later de rol
+        van het getal 1 bij matrixvermenigvuldiging krijgt: de
+        <strong>eenheidsmatrix</strong>.
+      </p>
+
+      <p class="formula">I₂ = ( 1  0 ;  0  1 )</p>
+
+      <p>
+        Op de hoofddiagonaal staan enen en daarbuiten nullen. De volledige betekenis
+        wordt duidelijk in 4.5, waar we matrixvermenigvuldiging invoeren:
+      </p>
+
+      <p class="formula">AI = IA = A</p>
+
+      <h3>Transponeren: rijen worden kolommen</h3>
+
+      <p>
+        We kunnen een matrix ook <strong>transponeren</strong>. Daarbij worden
+        de rijen kolommen en de kolommen rijen.
+      </p>
+
+      <p class="formula">A = ( 1  2  3 ;  4  5  6 )</p>
+      <p class="formula">Aᵀ = ( 1  4 ;  2  5 ;  3  6 )</p>
+
+      <p>
+        Een <span class="formula-inline">2 × 3</span>-matrix wordt dus een
+        <span class="formula-inline">3 × 2</span>-matrix.
+      </p>
+
+      <div class="callout">
+        <p><strong>Transponeren verwisselt de rol van rijen en kolommen.</strong></p>
+      </div>
+
+      <h3>Matrix als verzameling vectoren</h3>
+
+      <p>
+        Een matrix kan ook worden bekeken als een verzameling kolomvectoren.
+      </p>
+
+      <p class="formula">A = ( 1  3 ;  2  4 )</p>
+      <p class="formula">a₁ = (1,2)</p>
+      <p class="formula">a₂ = (3,4)</p>
+
+      <p>
+        Dit is een belangrijke brug naar de vorige milestones. Een matrix is niet
+        alleen een tabel met getallen; zijn kolommen kunnen zelf vectoren zijn.
+        Later gebruiken we deze manier van kijken om matrices als lineaire
+        transformaties te begrijpen.
+      </p>
+
+      <h3>Wat we nog niet doen: matrixvermenigvuldiging</h3>
+
+      <p>
+        Misschien valt op dat we nog geen twee matrices met elkaar hebben
+        vermenigvuldigd. Dat is bewust.
+      </p>
+
+      <p>
+        Bij matrixvermenigvuldiging kun je niet zomaar overeenkomstige elementen
+        met elkaar vermenigvuldigen. De regel is gebaseerd op het combineren van
+        rijen en kolommen en krijgt in 4.5 een betekenis als compositie van
+        lineaire bewerkingen.
+      </p>
+
+      <div class="callout">
+        <p><strong>4.4 leert ons hoe matrices eruitzien en welke eenvoudige bewerkingen natuurlijk zijn.</strong></p>
+        <p><strong>4.5 leert ons waarom matrixvermenigvuldiging werkt en wat ze betekent.</strong></p>
+      </div>
+
+      <h3>Veelgemaakte fouten</h3>
+
+      <ul>
+        <li><strong>Rijen en kolommen verwisselen.</strong> Bij <span class="formula-inline">aᵢⱼ</span> komt de rij eerst en de kolom tweede.</li>
+        <li><strong>Een 3 × 2-matrix verwarren met een 2 × 3-matrix.</strong> De volgorde van de afmetingen is betekenisvol.</li>
+        <li><strong>Matrices met verschillende vormen optellen.</strong> Matrixoptelling vereist dezelfde afmetingen.</li>
+        <li><strong>Transponeren verwarren met spiegelen.</strong> Rijen worden systematisch kolommen en omgekeerd.</li>
+        <li><strong>Elementgewijze vermenigvuldiging aanzien voor matrixvermenigvuldiging.</strong> De echte matrixvermenigvuldiging komt in 4.5.</li>
+        <li><strong>Denken dat een vierkante matrix automatisch een eenheidsmatrix is.</strong> Vierkant zegt alleen iets over de vorm.</li>
+      </ul>
+
+      <h3>Van matrices naar lineaire bewerkingen</h3>
+
+      <p>
+        We kunnen nu matrices lezen, hun afmetingen bepalen, elementen aanwijzen,
+        optellen, aftrekken, schalen en transponeren. We hebben ook gezien dat
+        kolommen van een matrix zelf vectoren kunnen zijn.
+      </p>
+
+      <p>
+        Daarmee staat de deur open naar een veel krachtiger idee:
+        <strong>een matrix kan een bewerking op vectoren voorstellen.</strong>
+      </p>
+
+      <p>
+        Om dat idee echt te begrijpen moeten we leren hoe twee matrices met elkaar
+        worden gecombineerd en hoe een matrix op een vector werkt.
+      </p>
+
+      <div class="callout">
+        <p><strong>In 4.5 wordt matrixvermenigvuldiging de brug tussen getallenroosters, vectoren en lineaire transformaties.</strong></p>
+      </div>
+    `
+  },
+
 
 ];
 
