@@ -5665,7 +5665,7 @@ const MILESTONES_3 = [
   id: "3.11",
   title: "Integraalrekenen",
   goal: "Hoe berekenen we integralen?",
-  theory: /* html */\`
+  theory: /* html */`
     <h2>Integraalrekenen</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -6488,7 +6488,7 @@ const MILESTONES_3 = [
         de structuur van de functie en kiest daarna de passende techniek.
       </p>
     </div>
-  \`
+  `
 },
 
   {
