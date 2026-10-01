@@ -954,6 +954,13 @@ const MILESTONES_3 = [
     <h3>Een gat in de grafiek</h3>
 
     <p>
+      In 3.2 gebruikten we een gat om te zien dat een limiet kan bestaan
+      terwijl de functiewaarde op dat punt ontbreekt. Hier gebruiken we
+      hetzelfde idee voor een nieuwe vraag: wanneer noemen we een functie
+      <strong>continu</strong>?
+    </p>
+
+    <p>
       Het vorige voorbeeld heeft een eenvoudig beeld.
     </p>
 
@@ -2152,6 +2159,13 @@ const MILESTONES_3 = [
 
 
     <h3>Van continuïteit naar de afgeleide</h3>
+
+    <p>
+      In 3.2 onderzochten we vooral wat een limiet betekent. In deze milestone
+      hebben we dezelfde limiet gekoppeld aan de functiewaarde en zo
+      continuïteit gedefinieerd. We zijn nu klaar om die begrippen opnieuw te
+      gebruiken voor een nieuwe vraag: de afgeleide.
+    </p>
 
     <p>
       We hebben nu drie begrippen met elkaar verbonden:
@@ -3959,6 +3973,12 @@ const MILESTONES_3 = [
     <h3>Van veranderingssnelheid naar gedrag</h3>
 
     <p>
+      In 3.4 leerden we wat het teken van de afgeleide betekent op één punt.
+      Nu gebruiken we datzelfde inzicht om het gedrag van een volledige functie
+      over een interval te onderzoeken.
+    </p>
+
+    <p>
       We weten uit 3.4 dat de afgeleide de helling van de raaklijn beschrijft.
       Daardoor vertelt het teken van de afgeleide ons wat de functie lokaal doet.
     </p>
@@ -4882,6 +4902,13 @@ const MILESTONES_3 = [
     </div>
 
     <h3>Een verrassende omkering</h3>
+
+    <p>
+      3.9 heeft de integraal al opgebouwd als een manier om kleine bijdragen
+      op te tellen en zo een totale verandering te verkrijgen. We hoeven dat
+      proces hier niet opnieuw op te bouwen. De nieuwe vraag is:
+      <strong>waarom is deze integraal wiskundig verbonden met de afgeleide?</strong>
+    </p>
 
     <p>
       We weten uit 3.4 dat de afgeleide een veranderingssnelheid beschrijft.
