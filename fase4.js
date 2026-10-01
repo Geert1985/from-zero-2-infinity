@@ -981,7 +981,7 @@ const MILESTONES_4 = [
       </p>
 
       <p>
-        In 4.3 beginnen we daarom niet meteen met ingewikkelde matrixvermenigvuldiging.
+        In 4.4 beginnen we daarom niet meteen met ingewikkelde matrixvermenigvuldiging.
         Eerst bekijken we hoe een rechthoekig getallenrooster informatie kan
         organiseren en welke bewerkingen daarop natuurlijk zijn.
       </p>
@@ -990,17 +990,461 @@ const MILESTONES_4 = [
         <p><strong>Vectoren geven ons richtingen. Matrices geven ons een manier om zulke richtingen systematisch te bewerken.</strong></p>
       </div>
     ` },
-  { id: "4.3", title: "Matrices & matrixbewerkingen", goal: "Hoe organiseren en bewerken we meerdere getallen tegelijk?", theory: `` },
-  { id: "4.4", title: "Matrixvermenigvuldiging & compositie", goal: "Hoe combineren we lineaire bewerkingen stap voor stap?", theory: `` },
-  { id: "4.5", title: "Lineaire stelsels & Gauss-eliminatie", goal: "Hoe lossen we meerdere lineaire vergelijkingen systematisch op?", theory: `` },
-  { id: "4.6", title: "Lineaire transformaties", goal: "Hoe beschrijven matrices systematische veranderingen van vectoren?", theory: `` },
-  { id: "4.7", title: "Determinanten & invertibiliteit", goal: "Wanneer verliest een lineaire transformatie informatie en wanneer niet?", theory: `` },
-  { id: "4.8", title: "Vectorruimten & deelruimten", goal: "Wat maakt een verzameling vectoren tot een ruimte waarin we lineair kunnen rekenen?", theory: `` },
-  { id: "4.9", title: "Lineaire combinaties, opspanning, basis & dimensie", goal: "Hoe bouwen we een vectorruimte op uit elementaire richtingen?", theory: `` },
-  { id: "4.10", title: "Kern, beeld & rang", goal: "Welke informatie behoudt een lineaire transformatie en welke gaat verloren?", theory: `` },
-  { id: "4.11", title: "Orthogonaliteit, projecties & kleinste kwadraten", goal: "Hoe vinden we de beste benadering wanneer een exact antwoord niet bestaat?", theory: `` },
-  { id: "4.12", title: "Eigenwaarden & eigenvectoren", goal: "Welke richtingen blijven onder een transformatie invariant?", theory: `` },
-  { id: "4.13", title: "Diagonalisatie & toepassingen", goal: "Hoe maken eigenrichtingen complexe lineaire transformaties eenvoudiger?", theory: `` }
+  {
+    id: "4.3",
+    title: "Kruisproduct & ruimtelijke geometrie",
+    goal: "Hoe vinden we een richting die loodrecht staat op twee vectoren?",
+    theory: /* html */`
+      <h2>Kruisproduct & ruimtelijke geometrie</h2>
+
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Waarom we in drie dimensies een tweede soort vectorproduct nodig hebben.</li>
+        <li>Wat het kruisproduct van twee vectoren betekent.</li>
+        <li>Hoe de richting van het resultaat met de rechterhandregel wordt bepaald.</li>
+        <li>Waarom de grootte van het kruisproduct een oppervlakte geeft.</li>
+        <li>Hoe we het kruisproduct in componenten berekenen.</li>
+        <li>Hoe we met het kruisproduct een vector loodrecht op twee andere vectoren vinden.</li>
+        <li>Hoe het kruisproduct terugkomt in moment en andere fysische toepassingen.</li>
+      </ul>
+
+      <p>
+        In 4.2 gebruikten we het <strong>inwendig product</strong> om informatie over
+        de hoek tussen twee vectoren te vinden. Dat product levert een getal op.
+        In drie dimensies ontstaat een andere natuurlijke vraag:
+        <strong>kunnen we uit twee vectoren een nieuwe vector maken die loodrecht
+        op beide staat?</strong>
+      </p>
+
+      <div class="callout">
+        <p><strong>Het inwendig product meet een relatie tussen twee richtingen.</strong></p>
+        <p><strong>Het kruisproduct gebruikt twee richtingen om een nieuwe loodrechte richting te construeren.</strong></p>
+      </div>
+
+      <h3>Waarom hebben we een tweede vectorproduct nodig?</h3>
+
+      <p>
+        Stel dat twee vectoren in een vlak liggen. In drie dimensies is er dan een
+        richting die loodrecht staat op dat hele vlak. Die richting staat dus
+        loodrecht op beide vectoren.
+      </p>
+
+      <p>
+        Dat is precies wat het kruisproduct ons geeft. We schrijven het met een
+        kruisje:
+      </p>
+
+      <p class="formula">u × v</p>
+
+      <p>
+        Het resultaat is een <strong>vector</strong>, in tegenstelling tot het
+        inwendig product <span class="formula-inline">u · v</span>, dat een getal
+        oplevert.
+      </p>
+
+      <div class="callout">
+        <p><strong>u · v → getal</strong></p>
+        <p><strong>u × v → vector</strong></p>
+      </div>
+
+      <h3>Het kruisproduct werkt in drie dimensies</h3>
+
+      <p>
+        Het gewone kruisproduct dat we hier leren is gedefinieerd voor vectoren in
+        drie dimensies. We schrijven:
+      </p>
+
+      <p class="formula">u = (uₓ,uᵧ,u_z)</p>
+
+      <p class="formula">v = (vₓ,vᵧ,v_z)</p>
+
+      <p>
+        Het resultaat <span class="formula-inline">u × v</span> is opnieuw een
+        driedimensionale vector.
+      </p>
+
+      <p>
+        Dit is een belangrijk onderscheid met het inwendig product. Het kruisproduct
+        is geen algemene vermenigvuldiging van willekeurige vectoren in elke
+        dimensie. De specifieke vorm die we hier gebruiken hoort bij de gewone
+        driedimensionale ruimte.
+      </p>
+
+      <h3>De geometrische betekenis</h3>
+
+      <p>
+        De vectoren <span class="formula-inline">u</span> en
+        <span class="formula-inline">v</span> spannen samen een parallellogram op.
+        De grootte van het kruisproduct is precies de oppervlakte van dat
+        parallellogram.
+      </p>
+
+      <p class="formula">|u × v| = |u| |v| sin(θ)</p>
+
+      <p>
+        Hierbij is <span class="formula-inline">θ</span> de hoek tussen de twee
+        vectoren.
+      </p>
+
+      <p>
+        Dit lijkt sterk op de formule van het inwendig product uit 4.2, maar met
+        <span class="formula-inline">sin(θ)</span> in plaats van
+        <span class="formula-inline">cos(θ)</span>. Daardoor meet het kruisproduct
+        hoeveel van de twee richtingen een oppervlakte opspant.
+      </p>
+
+      <p>
+        Als de vectoren parallel zijn, is de hoek 0° en dus:
+      </p>
+
+      <p class="formula">u × v = 0</p>
+
+      <p>
+        Geometrisch klopt dat: twee parallelle vectoren spannen geen oppervlakte op.
+      </p>
+
+      <p>
+        Als de vectoren loodrecht staan, is de sinus maximaal en wordt de oppervlakte
+        gelijk aan <span class="formula-inline">|u||v|</span>.
+      </p>
+
+      <h3>De richting: de rechterhandregel</h3>
+
+      <p>
+        De grootte vertelt nog niet welke kant de nieuwe vector op wijst.
+        De richting van het kruisproduct staat loodrecht op beide oorspronkelijke
+        vectoren.
+      </p>
+
+      <p>
+        Om de juiste van de twee mogelijke loodrechte richtingen te kiezen gebruiken
+        we de <strong>rechterhandregel</strong>: richt de vingers van je rechterhand
+        volgens de eerste vector en krul ze in de richting van de tweede vector.
+        Je duim wijst dan in de richting van het kruisproduct.
+      </p>
+
+      <p>
+        De volgorde is dus belangrijk. In het algemeen geldt:
+      </p>
+
+      <p class="formula">u × v = −(v × u)</p>
+
+      <p>
+        Als je de vectoren omwisselt, blijft de grootte gelijk maar draait de richting
+        om.
+      </p>
+
+      <div class="callout">
+        <p><strong>Bij het kruisproduct is de volgorde onderdeel van de betekenis.</strong></p>
+      </div>
+
+      <h3>De basisrichtingen</h3>
+
+      <p>
+        In een cartesisch assenstelsel gebruiken we de drie basisrichtingen
+        x, y en z. We kunnen ze voorstellen door:
+      </p>
+
+      <p class="formula">i = (1,0,0)</p>
+
+      <p class="formula">j = (0,1,0)</p>
+
+      <p class="formula">k = (0,0,1)</p>
+
+      <p>
+        Met de rechterhandregel krijgen we:
+      </p>
+
+      <p class="formula">i × j = k</p>
+
+      <p class="formula">j × k = i</p>
+
+      <p class="formula">k × i = j</p>
+
+      <p>
+        Als we de volgorde omdraaien, krijgen we de tegengestelde richting:
+      </p>
+
+      <p class="formula">j × i = −k</p>
+
+      <p class="formula">k × j = −i</p>
+
+      <p class="formula">i × k = −j</p>
+
+      <p>
+        Deze relaties zijn een compacte manier om de oriëntatie van de
+        driedimensionale ruimte vast te leggen.
+      </p>
+
+      <h3>Het kruisproduct berekenen met componenten</h3>
+
+      <p>
+        Voor:
+      </p>
+
+      <p class="formula">u = (uₓ,uᵧ,u_z)</p>
+
+      <p class="formula">v = (vₓ,vᵧ,v_z)</p>
+
+      <p>
+        is het kruisproduct:
+      </p>
+
+      <p class="formula">u × v = (uᵧv_z − u_zvᵧ, u_zvₓ − uₓv_z, uₓvᵧ − uᵧvₓ)</p>
+
+      <p>
+        Elke component van het resultaat gebruikt twee componenten van de
+        oorspronkelijke vectoren.
+      </p>
+
+      <p>
+        Neem bijvoorbeeld:
+      </p>
+
+      <p class="formula">u = (1,0,0)</p>
+
+      <p class="formula">v = (0,1,0)</p>
+
+      <p>
+        Dan volgt:
+      </p>
+
+      <p class="formula">u × v = (0,0,1)</p>
+
+      <p>
+        Het resultaat wijst dus in de positieve z-richting, precies zoals de
+        rechterhandregel voorspelt.
+      </p>
+
+      <div class="callout">
+        <p><strong>De componentenformule is de rekenmethode.</strong></p>
+        <p><strong>De geometrische betekenis en de rechterhandregel vertellen ons waarom het resultaat logisch is.</strong></p>
+      </div>
+
+      <h3>Een vector loodrecht op twee andere vectoren</h3>
+
+      <p>
+        Een van de krachtigste toepassingen van het kruisproduct is het vinden van
+        een richting die loodrecht staat op twee gegeven vectoren.
+      </p>
+
+      <p>
+        Neem:
+      </p>
+
+      <p class="formula">u = (1,2,0)</p>
+
+      <p class="formula">v = (0,1,3)</p>
+
+      <p>
+        Dan:
+      </p>
+
+      <p class="formula">u × v = (6,−3,1)</p>
+
+      <p>
+        We kunnen controleren of dit resultaat werkelijk loodrecht staat op beide
+        vectoren met het inwendig product:
+      </p>
+
+      <p class="formula">(6,−3,1) · (1,2,0) = 6 − 6 + 0 = 0</p>
+
+      <p class="formula">(6,−3,1) · (0,1,3) = 0 − 3 + 3 = 0</p>
+
+      <p>
+        Het kruisproduct en het inwendig product werken hier dus samen:
+        het kruisproduct construeert een kandidaat voor de loodrechte richting,
+        waarna het inwendig product de loodrechtheid controleert.
+      </p>
+
+      <h3>Oppervlakte van een parallellogram en driehoek</h3>
+
+      <p>
+        Omdat de grootte van het kruisproduct de oppervlakte van het opgespannen
+        parallellogram geeft, kunnen we ook oppervlakten berekenen.
+      </p>
+
+      <p>
+        Voor twee vectoren geldt:
+      </p>
+
+      <p class="formula">A_parallellogram = |u × v|</p>
+
+      <p>
+        Een driehoek met dezelfde twee zijvectoren heeft de helft van die oppervlakte:
+      </p>
+
+      <p class="formula">A_driehoek = 1/2 |u × v|</p>
+
+      <p>
+        Dit is de driedimensionale tegenhanger van de bekende oppervlakteformule
+        voor een parallellogram, maar nu kunnen de twee zijden in elke richting
+        liggen.
+      </p>
+
+      <h3>Een toepassing in de natuurkunde: moment</h3>
+
+      <p>
+        Het kruisproduct krijgt een directe fysische betekenis bij het
+        <strong>moment</strong> van een kracht rond een punt of as.
+      </p>
+
+      <p>
+        Als <span class="formula-inline">r</span> de positievector van het
+        aangrijpingspunt is en <span class="formula-inline">F</span> de krachtvector,
+        schrijven we:
+      </p>
+
+      <p class="formula">τ = r × F</p>
+
+      <p>
+        De vector <span class="formula-inline">τ</span> wijst langs de rotatie-as
+        volgens de rechterhandregel. De grootte is:
+      </p>
+
+      <p class="formula">|τ| = |r| |F| sin(θ)</p>
+
+      <p>
+        Alleen de component van de kracht die loodrecht op de arm werkt, draagt
+        bij aan het moment. Dit maakt de geometrische betekenis van het kruisproduct
+        direct herkenbaar in een fysische situatie.
+      </p>
+
+      <h3>Verschil tussen dot product en cross product</h3>
+
+      <p>
+        We kunnen de twee vectorproducten nu naast elkaar zetten:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Inwendig product:</strong> levert een getal en beschrijft onder
+          andere hoeken, lengte en loodrechtheid.
+        </li>
+        <li>
+          <strong>Kruisproduct:</strong> levert in drie dimensies een vector die
+          loodrecht staat op beide oorspronkelijke vectoren.
+        </li>
+        <li>
+          Bij het inwendig product gebruiken we <span class="formula-inline">cos(θ)</span>.
+        </li>
+        <li>
+          Bij de grootte van het kruisproduct gebruiken we
+          <span class="formula-inline">sin(θ)</span>.
+        </li>
+        <li>
+          Het inwendig product is verwisselbaar:
+          <span class="formula-inline">u · v = v · u</span>.
+        </li>
+        <li>
+          Het kruisproduct verandert van richting bij verwisselen:
+          <span class="formula-inline">u × v = −(v × u)</span>.
+        </li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Dot product → hoeveel wijzen twee vectoren in dezelfde richting?</strong></p>
+        <p><strong>Cross product → welke loodrechte richting ontstaat uit twee vectoren?</strong></p>
+      </div>
+
+      <h3>Van kruisproduct naar lijnen en vlakken</h3>
+
+      <p>
+        Een vector loodrecht op twee richtingen is bijzonder nuttig wanneer we
+        ruimtelijke geometrie willen beschrijven. Zo'n vector noemen we vaak een
+        <strong>normaalvector</strong>.
+      </p>
+
+      <p>
+        Een vlak kan bijvoorbeeld worden beschreven door een punt op het vlak en
+        een normaalvector. In symbolische vorm heeft zo'n beschrijving de structuur:
+      </p>
+
+      <p class="formula">n · (r − r₀) = 0</p>
+
+      <p>
+        Hierbij is <span class="formula-inline">n</span> een normaalvector,
+        <span class="formula-inline">r₀</span> een bekend punt op het vlak en
+        <span class="formula-inline">r</span> een willekeurig punt van het vlak.
+      </p>
+
+      <p>
+        Het kruisproduct kan helpen om zo'n normaalvector te construeren uit twee
+        richtingsvectoren die in het vlak liggen:
+      </p>
+
+      <p class="formula">n = u × v</p>
+
+      <p>
+        We werken deze vectorbeschrijving van lijnen en vlakken later verder uit
+        wanneer ze nodig is voor lineaire stelsels en transformaties. Hier is het
+        belangrijkste inzicht dat het kruisproduct een praktische manier geeft om
+        een loodrechte richting te construeren.
+      </p>
+
+      <h3>Veelgemaakte fouten</h3>
+
+      <ul>
+        <li>
+          <strong>Het kruisproduct verwarren met het inwendig product.</strong>
+          Het eerste geeft een vector, het tweede een getal.
+        </li>
+        <li>
+          <strong>Vergeten dat de volgorde telt.</strong>
+          Omwisselen verandert het teken en dus de richting.
+        </li>
+        <li>
+          <strong>Het kruisproduct in twee dimensies behandelen alsof het een gewone
+          2D-bewerking is.</strong>
+          De standaardvorm die we hier gebruiken hoort bij drie dimensies.
+        </li>
+        <li>
+          <strong>Alleen de componenten uitrekenen.</strong>
+          Controleer ook of de richting en de geometrische betekenis kloppen.
+        </li>
+        <li>
+          <strong>Denken dat een nul-kruisproduct betekent dat een vector nul is.</strong>
+          Voor niet-nulvectoren betekent een nul-kruisproduct dat de vectoren
+          parallel zijn.
+        </li>
+      </ul>
+
+      <h3>De vectorbouwstenen zijn compleet</h3>
+
+      <p>
+        Met 4.1, 4.2 en 4.3 hebben we nu de belangrijkste elementaire
+        vectorbewerkingen die we in de rest van Fase 4 nodig hebben:
+      </p>
+
+      <ul>
+        <li>vectoren optellen, aftrekken en schalen;</li>
+        <li>lengte en eenheidsvectoren;</li>
+        <li>inwendig product, hoeken en orthogonaliteit;</li>
+        <li>kruisproduct, loodrechte richtingen en ruimtelijke oppervlakte.</li>
+      </ul>
+
+      <p>
+        Daarmee kunnen we de stap maken van afzonderlijke vectoren naar een
+        systematische manier om veel getallen en vectoren tegelijk te organiseren.
+      </p>
+
+      <div class="callout">
+        <p><strong>In 4.4 maken we kennis met matrices: rechthoekige structuren waarin we getallen systematisch kunnen organiseren en bewerken.</strong></p>
+      </div>
+    `
+  },
+  { id: "4.4", title: "Matrices & matrixbewerkingen", goal: "Hoe organiseren en bewerken we meerdere getallen tegelijk?", theory: `` },
+  { id: "4.5", title: "Matrixvermenigvuldiging & compositie", goal: "Hoe combineren we lineaire bewerkingen stap voor stap?", theory: `` },
+  { id: "4.6", title: "Lineaire stelsels & Gauss-eliminatie", goal: "Hoe lossen we meerdere lineaire vergelijkingen systematisch op?", theory: `` },
+  { id: "4.7", title: "Lineaire transformaties", goal: "Hoe beschrijven matrices systematische veranderingen van vectoren?", theory: `` },
+  { id: "4.8", title: "Determinanten, inverse & invertibiliteit", goal: "Wanneer verliest een lineaire transformatie informatie en wanneer kunnen we haar omkeren?", theory: `` },
+  { id: "4.9", title: "Vectorruimten & deelruimten", goal: "Wat maakt een verzameling vectoren tot een ruimte waarin we lineair kunnen rekenen?", theory: `` },
+  { id: "4.10", title: "Lineaire combinaties, onafhankelijkheid, opspanning, basis & dimensie", goal: "Hoe bouwen we een vectorruimte op uit onafhankelijke richtingen?", theory: `` },
+  { id: "4.11", title: "Kern, beeld, rang & verandering van basis", goal: "Welke informatie behoudt een lineaire transformatie en hoe verandert haar beschrijving bij een andere basis?", theory: `` },
+  { id: "4.12", title: "Orthogonaliteit, projecties & kleinste kwadraten", goal: "Hoe vinden we loodrechte componenten en de beste benadering wanneer een exact antwoord niet bestaat?", theory: `` },
+  { id: "4.13", title: "Eigenwaarden & eigenvectoren", goal: "Welke richtingen blijven onder een transformatie invariant?", theory: `` },
+  { id: "4.14", title: "Diagonalisatie & toepassingen", goal: "Hoe maken eigenrichtingen complexe lineaire transformaties eenvoudiger?", theory: `` }
+
 ];
 
 const PHASE_EXAM_4 = [];
