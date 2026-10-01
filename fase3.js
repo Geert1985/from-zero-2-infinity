@@ -6495,7 +6495,824 @@ const MILESTONES_3 = [
     id: "3.12",
     title: "Toepassingen van integralen",
     goal: "Hoe tellen we oneindig veel kleine bijdragen op?",
-    theory: ``
+    theory: \`
+    <h2>Toepassingen van integralen</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Hoe gebruiken we integralen om oppervlaktes te berekenen?</li>
+      <li>Hoe vinden we de oppervlakte tussen twee grafieken?</li>
+      <li>Hoe kunnen we uit een veranderingssnelheid een totale verandering vinden?</li>
+      <li>Hoe berekenen we afstand wanneer een snelheid van teken verandert?</li>
+      <li>Hoe vinden we het volume van een lichaam uit dunne doorsneden?</li>
+      <li>Wat betekent de gemiddelde waarde van een functie?</li>
+      <li>Hoe herkennen we welke grootheid we moeten optellen?</li>
+    </ul>
+
+    <p>
+      In 3.9 leerden we dat een integraal kleine bijdragen optelt.
+      In 3.10 zagen we waarom integralen en afgeleiden verbonden zijn.
+      In 3.11 leerden we hoe we integralen kunnen berekenen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Nu draaien we de vraag om:</strong></p>
+      <p>
+        Wat kunnen we met een integraal berekenen?
+      </p>
+    </div>
+
+    <p>
+      Het belangrijkste nieuwe inzicht is dat een integraal geen
+      "oppervlakteformule" is. De integraal is een algemene optelsom.
+      De betekenis van het resultaat hangt af van <strong>wat de kleine
+      bijdrage voorstelt</strong>.
+    </p>
+
+    <h3>Van kleine bijdrage naar concrete grootheid</h3>
+
+    <p>
+      Stel dat een grootheid op elk klein stukje van een interval een
+      bijdrage levert. Dan kunnen we die bijdragen optellen:
+    </p>
+
+    <p class="formula">
+      \\\\text{totale hoeveelheid}
+      =
+      \\\\int_a^b \\\\text{kleine bijdrage}
+    </p>
+
+    <p>
+      In een grafiek kan de kleine bijdrage bijvoorbeeld een smalle
+      rechthoek zijn:
+    </p>
+
+    <p class="formula">
+      \\\\Delta A \\\\approx f(x)\\\\,\\\\Delta x
+    </p>
+
+    <p>
+      Wanneer we alle kleine bijdragen over het interval optellen,
+      krijgen we in de limiet:
+    </p>
+
+    <p class="formula">
+      A=\\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      Maar dezelfde structuur kan ook een verandering in positie,
+      een volume, een massa of een andere opgebouwde grootheid voorstellen.
+    </p>
+
+    <div class="callout">
+      <p><strong>De integraal vertelt niet vanzelf wat je berekent.</strong></p>
+      <p>
+        Je moet eerst begrijpen wat één kleine bijdrage betekent.
+      </p>
+    </div>
+
+    <h3>Oppervlakte onder een positieve grafiek</h3>
+
+    <p>
+      De bekendste toepassing is de oppervlakte onder een grafiek.
+      Als <span class="formula-inline">f(x)≥0</span> op het interval
+      <span class="formula-inline">[a,b]</span>, dan is:
+    </p>
+
+    <p class="formula">
+      A=\\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      de gewone geometrische oppervlakte tussen de grafiek en de
+      <span class="formula-inline">x</span>-as.
+    </p>
+
+    <p>
+      Neem bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x)=x^2
+    </p>
+
+    <p>
+      tussen <span class="formula-inline">x=0</span> en
+      <span class="formula-inline">x=2</span>.
+      Uit 3.11 weten we dat een primitieve is:
+    </p>
+
+    <p class="formula">
+      F(x)=\\\\frac{x^3}{3}
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      A=\\\\int_0^2 x^2\\\\,dx
+      =F(2)-F(0)
+      =\\\\frac{8}{3}
+    </p>
+
+    <p>
+      De integraal heeft hier de betekenis van een oppervlakte.
+    </p>
+
+    <h3>Wanneer de grafiek onder de x-as komt</h3>
+
+    <p>
+      Een integraal telt positieve en negatieve bijdragen met hun teken.
+      Als <span class="formula-inline">f(x)&lt;0</span>, dragen de kleine
+      rechthoeken dus negatief bij.
+    </p>
+
+    <p>
+      Daardoor geeft:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      de <strong>netto-oppervlakte</strong>, niet noodzakelijk de totale
+      geometrische oppervlakte.
+    </p>
+
+    <p>
+      Stel bijvoorbeeld dat een grafiek eerst boven de as ligt en daarna
+      even ver onder de as. De positieve en negatieve bijdragen kunnen
+      elkaar gedeeltelijk of volledig opheffen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Integraal = gesigneerde optelsom.</strong></p>
+      <p>
+        Positieve bijdragen tellen positief mee, negatieve bijdragen
+        negatief.
+      </p>
+    </div>
+
+    <h3>Totale geometrische oppervlakte</h3>
+
+    <p>
+      Soms willen we juist dat alle oppervlakten positief meetellen.
+      Dan moeten we de delen onder de <span class="formula-inline">x</span>-as
+      positief maken.
+    </p>
+
+    <p class="formula">
+      A=\\\\int_a^b |f(x)|\\\\,dx
+    </p>
+
+    <p>
+      Hiervoor moet je eerst weten waar de functie van teken verandert.
+      In de praktijk splits je het interval op bij de nulpunten van
+      <span class="formula-inline">f</span>.
+    </p>
+
+    <p>
+      Stel dat <span class="formula-inline">f</span> een nulpunt heeft
+      bij <span class="formula-inline">c</span> en positief is links van
+      <span class="formula-inline">c</span> maar negatief rechts ervan.
+      Dan:
+    </p>
+
+    <p class="formula">
+      A
+      =
+      \\\\int_a^c f(x)\\\\,dx
+      -
+      \\\\int_c^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      Het minteken verandert het negatieve stuk in een positieve
+      geometrische oppervlakte.
+    </p>
+
+    <h3>Oppervlakte tussen twee grafieken</h3>
+
+    <p>
+      Een integraal kan ook de oppervlakte tussen twee functies berekenen.
+      Stel dat <span class="formula-inline">f(x)</span> boven
+      <span class="formula-inline">g(x)</span> ligt op
+      <span class="formula-inline">[a,b]</span>.
+    </p>
+
+    <p>
+      Op een klein stukje is de verticale afstand:
+    </p>
+
+    <p class="formula">
+      f(x)-g(x)
+    </p>
+
+    <p>
+      De kleine oppervlakte is dan ongeveer:
+    </p>
+
+    <p class="formula">
+      \\\\Delta A
+      \\\\approx
+      [f(x)-g(x)]\\\\,\\\\Delta x
+    </p>
+
+    <p>
+      Daarom is de totale oppervlakte:
+    </p>
+
+    <p class="formula">
+      A=\\\\int_a^b [f(x)-g(x)]\\\\,dx
+    </p>
+
+    <div class="callout">
+      <p><strong>Bij oppervlakte tussen grafieken:</strong></p>
+      <p>
+        bovenste functie − onderste functie.
+      </p>
+    </div>
+
+    <p>
+      Neem bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x)=x+2
+    </p>
+
+    <p class="formula">
+      g(x)=x
+    </p>
+
+    <p>
+      Tussen <span class="formula-inline">x=0</span> en
+      <span class="formula-inline">x=3</span> is de verticale afstand
+      overal 2. De oppervlakte is:
+    </p>
+
+    <p class="formula">
+      A=\\\\int_0^3 [(x+2)-x]\\\\,dx
+      =\\\\int_0^3 2\\\\,dx
+      =6
+    </p>
+
+    <h3>De grenzen zijn deel van het probleem</h3>
+
+    <p>
+      Bij toepassingen zijn de grenzen niet zomaar cijfers die je in
+      een formule invult. Ze vertellen <strong>over welk gebied of welke
+      periode</strong> je optelt.
+    </p>
+
+    <p>
+      Bij een oppervlakte zijn ze bijvoorbeeld de begin- en eindwaarde
+      van <span class="formula-inline">x</span>.
+      Bij beweging kunnen ze begin- en eindtijd zijn.
+      Bij een volume kunnen ze begin- en eindpositie langs een as zijn.
+    </p>
+
+    <div class="callout">
+      <p><strong>Vraag altijd:</strong></p>
+      <p>
+        Wat stelt de ondergrens voor? Wat stelt de bovengrens voor?
+      </p>
+    </div>
+
+    <h3>Van snelheid naar verplaatsing</h3>
+
+    <p>
+      We zagen in 3.9 al dat een snelheid een veranderingssnelheid van
+      positie is. Als:
+    </p>
+
+    <p class="formula">
+      s'(t)=v(t)
+    </p>
+
+    <p>
+      dan geeft de fundamentele stelling:
+    </p>
+
+    <p class="formula">
+      s(b)-s(a)=\\\\int_a^b v(t)\\\\,dt
+    </p>
+
+    <p>
+      De integraal van de snelheid over een tijdsinterval geeft dus de
+      <strong>verplaatsing</strong>: eindpositie minus beginpositie.
+    </p>
+
+    <p>
+      Neem bijvoorbeeld een constante snelheid:
+    </p>
+
+    <p class="formula">
+      v(t)=60
+    </p>
+
+    <p>
+      gedurende 2 uur. Dan:
+    </p>
+
+    <p class="formula">
+      \\\\Delta s
+      =
+      \\\\int_0^2 60\\\\,dt
+      =
+      120
+    </p>
+
+    <p>
+      Als de eenheid van <span class="formula-inline">v</span> km/u is,
+      is de uitkomst 120 km.
+    </p>
+
+    <h3>Verplaatsing is niet hetzelfde als afgelegde afstand</h3>
+
+    <p>
+      Hier ontstaat een belangrijk onderscheid. Verplaatsing houdt rekening
+      met de richting. Afstand niet.
+    </p>
+
+    <p>
+      Stel dat een voorwerp eerst vooruit beweegt en daarna terugkeert.
+      De snelheid verandert dan van teken.
+    </p>
+
+    <p>
+      De verplaatsing is:
+    </p>
+
+    <p class="formula">
+      \\\\Delta s=\\\\int_a^b v(t)\\\\,dt
+    </p>
+
+    <p>
+      De totale afgelegde afstand is:
+    </p>
+
+    <p class="formula">
+      d=\\\\int_a^b |v(t)|\\\\,dt
+    </p>
+
+    <p>
+      Bij afstand tellen we alle kleine afgelegde stukjes positief op.
+      Daarom is de absolute waarde nodig.
+    </p>
+
+    <div class="callout">
+      <p><strong>Verplaatsing:</strong> richting telt mee.</p>
+      <p><strong>Afstand:</strong> alle afgelegde stukjes tellen positief mee.</p>
+    </div>
+
+    <h3>Een concreet bewegingsvoorbeeld</h3>
+
+    <p>
+      Stel dat:
+    </p>
+
+    <p class="formula">
+      v(t)=t-2
+    </p>
+
+    <p>
+      voor <span class="formula-inline">0≤t≤4</span>.
+      De snelheid is negatief vóór <span class="formula-inline">t=2</span>
+      en positief erna.
+    </p>
+
+    <p>
+      De totale verplaatsing is eenvoudig:
+    </p>
+
+    <p class="formula">
+      \\\\int_0^4 (t-2)\\\\,dt
+      =0
+    </p>
+
+    <p>
+      Het voorwerp eindigt dus op dezelfde positie als waar het begon.
+      Maar dat betekent niet dat het niet bewogen heeft.
+    </p>
+
+    <p>
+      De afgelegde afstand is:
+    </p>
+
+    <p class="formula">
+      \\\\int_0^2 |t-2|\\\\,dt
+      +
+      \\\\int_2^4 |t-2|\\\\,dt
+      =4
+    </p>
+
+    <p>
+      De twee bewegingen heffen elkaar op voor de verplaatsing,
+      maar niet voor de afstand.
+    </p>
+
+    <h3>Van doorsneden naar volume</h3>
+
+    <p>
+      Tot nu toe telden we vooral kleine oppervlaktes op.
+      Hetzelfde idee werkt voor volume.
+    </p>
+
+    <p>
+      Stel dat een driedimensionaal lichaam op positie
+      <span class="formula-inline">x</span> een doorsnede heeft met
+      oppervlakte <span class="formula-inline">A(x)</span>.
+    </p>
+
+    <p>
+      Een heel dun plakje met dikte <span class="formula-inline">dx</span>
+      heeft ongeveer volume:
+    </p>
+
+    <p class="formula">
+      dV\\\\approx A(x)\\\\,dx
+    </p>
+
+    <p>
+      Alle plakjes samen geven:
+    </p>
+
+    <p class="formula">
+      V=\\\\int_a^b A(x)\\\\,dx
+    </p>
+
+    <div class="callout">
+      <p><strong>Volume = optelsom van dunne doorsneden.</strong></p>
+      <p>
+        De doorsnede bepaalt de grootte van één klein volumestuk.
+      </p>
+    </div>
+
+    <h3>Een eenvoudig voorbeeld van een volume</h3>
+
+    <p>
+      Neem een cilinder met constante doorsnede. Als de straal
+      <span class="formula-inline">r</span> constant is, heeft iedere
+      doorsnede oppervlakte:
+    </p>
+
+    <p class="formula">
+      A(x)=\\\\pi r^2
+    </p>
+
+    <p>
+      Over een lengte <span class="formula-inline">h</span> wordt het volume:
+    </p>
+
+    <p class="formula">
+      V=\\\\int_0^h \\\\pi r^2\\\\,dx
+    </p>
+
+    <p>
+      Omdat de doorsnede constant is:
+    </p>
+
+    <p class="formula">
+      V=\\\\pi r^2h
+    </p>
+
+    <p>
+      We krijgen dus de bekende formule voor het volume van een cilinder
+      opnieuw, maar nu vanuit hetzelfde algemene principe:
+      <strong>kleine volumes optellen</strong>.
+    </p>
+
+    <h3>Waarom dit meer is dan een truc voor cilinders</h3>
+
+    <p>
+      Bij een cilinder is de doorsnede overal hetzelfde. Bij een kegel,
+      bol of ander lichaam kan de doorsnede veranderen met
+      <span class="formula-inline">x</span>.
+    </p>
+
+    <p>
+      Dan wordt:
+    </p>
+
+    <p class="formula">
+      V=\\\\int_a^b A(x)\\\\,dx
+    </p>
+
+    <p>
+      juist krachtig. We hoeven geen eenvoudige vaste-vormformule te
+      hebben. We moeten alleen kunnen beschrijven hoe groot een dunne
+      doorsnede is.
+    </p>
+
+    <h3>Gemiddelde waarde van een functie</h3>
+
+    <p>
+      Een andere toepassing is de <strong>gemiddelde waarde</strong> van
+      een functie op een interval.
+    </p>
+
+    <p>
+      Bij gewone getallen berekenen we een gemiddelde door op te tellen
+      en te delen door het aantal waarden. Bij een continue functie zijn
+      er oneindig veel waarden. De integraal vervult de rol van die
+      optelsom.
+    </p>
+
+    <p>
+      De gemiddelde waarde van <span class="formula-inline">f</span> op
+      <span class="formula-inline">[a,b]</span> is:
+    </p>
+
+    <p class="formula">
+      f_{\\\\text{gem}}
+      =
+      \\\\frac{1}{b-a}
+      \\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      We delen dus de totale gesommeerde bijdrage door de lengte van
+      het interval.
+    </p>
+
+    <h3>Een voorbeeld van een gemiddelde waarde</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x)=x
+    </p>
+
+    <p>
+      op het interval <span class="formula-inline">[0,4]</span>.
+      Dan:
+    </p>
+
+    <p class="formula">
+      f_{\\\\text{gem}}
+      =
+      \\\\frac{1}{4}
+      \\\\int_0^4 x\\\\,dx
+    </p>
+
+    <p class="formula">
+      =
+      \\\\frac{1}{4}
+      \\\\left[\\\\frac{x^2}{2}\\\\right]_0^4
+      =2
+    </p>
+
+    <p>
+      De gemiddelde waarde is dus 2. Dat is precies het midden van de
+      waarden die de functie op dit interval aanneemt.
+    </p>
+
+    <div class="callout">
+      <p><strong>De integraal telt op; delen door de interval-lengte maakt er een gemiddelde van.</strong></p>
+    </div>
+
+    <h3>Een integraal met een fysieke betekenis</h3>
+
+    <p>
+      Dezelfde structuur komt voortdurend terug in de natuurkunde.
+      Als een grootheid per tijdseenheid wordt opgebouwd, kan integreren
+      de totale hoeveelheid geven.
+    </p>
+
+    <p>
+      Bij snelheid zagen we:
+    </p>
+
+    <p class="formula">
+      \\\\text{verplaatsing}
+      =
+      \\\\int \\\\text{snelheid}\\\\,dt
+    </p>
+
+    <p>
+      Als bijvoorbeeld een massastroom <span class="formula-inline">q(t)</span>
+      in kilogram per seconde wordt gegeven, dan is de totale massa die
+      in een tijdsinterval passeert:
+    </p>
+
+    <p class="formula">
+      m=\\\\int_a^b q(t)\\\\,dt
+    </p>
+
+    <p>
+      De eenheden controleren de betekenis:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\text{kg}}{\\\\text{s}}\\\\times\\\\text{s}
+      =
+      \\\\text{kg}
+    </p>
+
+    <div class="callout">
+      <p><strong>Eenheden zijn een krachtige controle bij toepassingen.</strong></p>
+      <p>
+        De integraal vermenigvuldigt in essentie een grootheid met de
+        eenheid van de integratievariabele en telt die bijdragen op.
+      </p>
+    </div>
+
+    <h3>Een algemene strategie voor toepassingen</h3>
+
+    <p>
+      Bij toepassingen is de moeilijkste stap vaak niet het rekenen,
+      maar het opstellen van de juiste integraal.
+    </p>
+
+    <ol>
+      <li>Bepaal <strong>wat</strong> je wilt berekenen.</li>
+      <li>Identificeer één kleine bijdrage.</li>
+      <li>Bepaal welke grootheid die bijdrage beschrijft.</li>
+      <li>Kies de integratievariabele.</li>
+      <li>Bepaal de grenzen.</li>
+      <li>Schrijf de integraal vóór je gaat rekenen.</li>
+      <li>Bereken de integraal met de technieken van 3.11.</li>
+      <li>Controleer teken, eenheden en grootteorde.</li>
+      <li>Vertaal het resultaat terug naar de oorspronkelijke situatie.</li>
+    </ol>
+
+    <h3>Welke integraal heb je nodig?</h3>
+
+    <p>
+      Een handige manier om een toepassing te herkennen is te vragen:
+      <strong>wat is de kleine bijdrage?</strong>
+    </p>
+
+    <ul>
+      <li>
+        kleine oppervlakte:
+        <span class="formula-inline">f(x)\\\\,dx</span>
+      </li>
+      <li>
+        kleine verplaatsing:
+        <span class="formula-inline">v(t)\\\\,dt</span>
+      </li>
+      <li>
+        klein volume:
+        <span class="formula-inline">A(x)\\\\,dx</span>
+      </li>
+      <li>
+        kleine hoeveelheid uit een stroom:
+        <span class="formula-inline">q(t)\\\\,dt</span>
+      </li>
+    </ul>
+
+    <p>
+      De integratietechniek kan telkens dezelfde zijn. Wat verandert,
+      is de <strong>interpretatie van de integrand</strong>.
+    </p>
+
+    <h3>Wat moet je niet verwarren?</h3>
+
+    <ul>
+      <li>
+        <strong>netto-oppervlakte</strong> houdt rekening met het teken;
+      </li>
+      <li>
+        <strong>totale geometrische oppervlakte</strong> telt alle delen positief;
+      </li>
+      <li>
+        <strong>verplaatsing</strong> houdt rekening met richting;
+      </li>
+      <li>
+        <strong>afstand</strong> telt alle afgelegde beweging positief;
+      </li>
+        <li>
+        <strong>gemiddelde waarde</strong> is een integraal gedeeld door
+        de lengte van het interval;
+      </li>
+      <li>
+        <strong>volume</strong> ontstaat door kleine doorsneden op te tellen.
+      </li>
+    </ul>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        Een integraal automatisch als gewone oppervlakte interpreteren.
+      </li>
+      <li>
+        Verplaatsing verwarren met totale afstand.
+      </li>
+      <li>
+        Bij een gebied tussen grafieken de onderste functie niet aftrekken.
+      </li>
+      <li>
+        Vergeten het interval op te splitsen wanneer een functie van teken verandert.
+      </li>
+      <li>
+        Verkeerde grenzen gebruiken omdat niet eerst is bepaald wat het
+        interval fysisch of geometrisch voorstelt.
+      </li>
+      <li>
+        Een resultaat zonder eenheid of zonder betekenis voor de oorspronkelijke
+        situatie geven.
+      </li>
+      <li>
+        Meteen beginnen rekenen zonder eerst de kleine bijdrage te identificeren.
+      </li>
+    </ul>
+
+    <h3>Een vaste werkwijze</h3>
+
+    <ol>
+      <li>Lees de situatie en bepaal de gevraagde grootheid.</li>
+      <li>Maak duidelijk wat één klein stukje betekent.</li>
+      <li>Schrijf de kleine bijdrage.</li>
+      <li>Bouw daaruit de integraal op.</li>
+      <li>Bepaal de juiste grenzen.</li>
+      <li>Bereken de integraal met een passende techniek uit 3.11.</li>
+      <li>Controleer teken, eenheden en grootteorde.</li>
+      <li>Interpreteer het antwoord in de context.</li>
+    </ol>
+
+    <h3>De rode draad van 3.9 tot 3.12</h3>
+
+    <p>
+      In 3.9 leerden we de integraal zien als een limiet van steeds fijnere
+      optelsommen.
+    </p>
+
+    <p>
+      In 3.10 kregen we de fundamentele stelling:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx=F(b)-F(a)
+    </p>
+
+    <p>
+      In 3.11 leerden we primitieve functies en integratietechnieken vinden.
+    </p>
+
+    <p>
+      Nu gebruiken we die gereedschappen om concrete grootheden te berekenen:
+    </p>
+
+    <p class="formula">
+      \\\\text{kleine bijdragen}
+      \\\\rightarrow
+      \\\\text{integraal}
+      \\\\rightarrow
+      \\\\text{totale grootheid}
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een integraal is een algemene manier om oneindig veel kleine
+        bijdragen op te tellen. De toepassing bepaalt wat die bijdragen
+        voorstellen: oppervlakte, verplaatsing, afstand, volume,
+        gemiddelde waarde of een andere opgebouwde hoeveelheid.
+      </p>
+      <p>
+        De belangrijkste vaardigheid is daarom niet alleen een integraal
+        kunnen uitrekenen, maar een situatie kunnen vertalen naar de
+        juiste kleine bijdrage, grenzen en interpretatie.
+      </p>
+    </div>
+
+    <h3>Brug naar 3.13</h3>
+
+    <p>
+      Tot nu toe veranderde meestal één onafhankelijke variabele tegelijk.
+      We konden bijvoorbeeld een grootheid beschrijven als functie van
+      <span class="formula-inline">x</span> of van tijd <span class="formula-inline">t</span>.
+    </p>
+
+    <p>
+      Maar veel verschijnselen hangen tegelijk af van meerdere grootheden.
+      Een temperatuur kan bijvoorbeeld afhangen van plaats én tijd:
+    </p>
+
+    <p class="formula">
+      T=T(x,y,t)
+    </p>
+
+    <p>
+      Dan ontstaat een nieuwe vraag:
+    </p>
+
+    <div class="callout">
+      <p><strong>Wat verandert er als meerdere variabelen tegelijk veranderen?</strong></p>
+    </div>
+
+    <p>
+      Dat is het vertrekpunt van 3.13: functies van meerdere variabelen.
+    </p>
+  \`
   },
 
   {
