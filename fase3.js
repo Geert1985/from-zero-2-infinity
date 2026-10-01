@@ -4298,7 +4298,554 @@ const MILESTONES_3 = [
   id: "3.9",
     title: "De integraal als omgekeerde verandering",
     goal: "Kunnen we verandering weer optellen?",
-    theory: ``
+    theory: `
+    <h2>De integraal als omgekeerde verandering</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Waarom kunnen we uit een veranderingssnelheid weer een totale verandering opbouwen?</li>
+      <li>Hoe kunnen we een hoeveelheid vinden door heel veel kleine bijdragen op te tellen?</li>
+      <li>Waarom verschijnt de oppervlakte onder een grafiek bij integralen?</li>
+      <li>Hoe gaan we van een benadering met rechthoeken naar een exacte integraal?</li>
+      <li>Wat betekent het integraalteken en wat stellen de grenzen voor?</li>
+      <li>Waarom kan een integraal positief, negatief of nul zijn?</li>
+      <li>Hoe vormt de integraal de natuurlijke volgende stap na de afgeleide?</li>
+    </ul>
+
+    <p>
+      In 3.8 hebben we de afgeleide gebruikt om te beschrijven
+      <strong>hoe snel iets verandert</strong>.
+      We gingen bijvoorbeeld van positie naar snelheid en van snelheid naar versnelling.
+    </p>
+
+    <div class="callout">
+      <p><strong>Tot nu toe:</strong></p>
+      <p>
+        hoeveelheid → veranderingssnelheid
+      </p>
+      <p><strong>Nu draaien we de vraag om:</strong></p>
+      <p>
+        veranderingssnelheid → totale verandering
+      </p>
+    </div>
+
+    <h3>Van snelheid naar afgelegde afstand</h3>
+
+    <p>
+      Stel dat een trein gedurende drie uur met een constante snelheid van
+      80 km/u rijdt.
+    </p>
+
+    <p>De afgelegde afstand is:</p>
+
+    <p class="formula">
+      s = 80 \\\\cdot 3 = 240\\\\text{ km}
+    </p>
+
+    <p>
+      We hebben hier een veranderingssnelheid vermenigvuldigd met een tijdsinterval.
+      Dat geeft de totale verandering:
+    </p>
+
+    <p class="formula">
+      \\\\text{afstand} = \\\\text{snelheid} \\\\cdot \\\\text{tijd}
+    </p>
+
+    <p>
+      Bij constante snelheid is dit eenvoudig.
+      Maar in de werkelijkheid verandert de snelheid voortdurend.
+    </p>
+
+    <div class="callout">
+      <p><strong>De interessante vraag:</strong></p>
+      <p>
+        Hoe vinden we de totale verandering als de veranderingssnelheid
+        zelf voortdurend verandert?
+      </p>
+    </div>
+
+    <h3>Een veranderlijke snelheid</h3>
+
+    <p>
+      Stel dat de snelheid van een trein tijdens een rit verandert.
+      Op het ene moment rijdt hij 60 km/u, later 90 km/u en daarna 120 km/u.
+    </p>
+
+    <p>
+      We kunnen de volledige rit opdelen in kleine tijdsintervallen.
+      Binnen een klein interval verandert de snelheid misschien maar weinig.
+      We kunnen de snelheid daar dan benaderen met één waarde.
+    </p>
+
+    <p>
+      Als de snelheid tijdens een klein interval ongeveer
+      <span class="formula-inline">v</span> is en het interval een duur
+      <span class="formula-inline">\\\\Delta t</span> heeft, dan is de afgelegde
+      afstand ongeveer:
+    </p>
+
+    <p class="formula">
+      \\\\Delta s \\\\approx v\\\\,\\\\Delta t
+    </p>
+
+    <p>
+      Dit is dezelfde gedachte als bij een constante snelheid:
+      snelheid maal tijd geeft afstand.
+    </p>
+
+    <h3>De hele rit opdelen</h3>
+
+    <p>
+      Stel dat we de rit opdelen in veel kleine intervallen.
+      Voor elk interval berekenen we een kleine bijdrage aan de afgelegde afstand.
+    </p>
+
+    <p class="formula">
+      \\\\Delta s_1 \\\\approx v_1\\\\Delta t
+    </p>
+
+    <p class="formula">
+      \\\\Delta s_2 \\\\approx v_2\\\\Delta t
+    </p>
+
+    <p class="formula">
+      \\\\Delta s_3 \\\\approx v_3\\\\Delta t
+    </p>
+
+    <p>
+      De totale afstand is dan ongeveer de som van al die kleine bijdragen:
+    </p>
+
+    <p class="formula">
+      s \\\\approx
+      v_1\\\\Delta t+
+      v_2\\\\Delta t+
+      v_3\\\\Delta t+
+      \\\\cdots
+    </p>
+
+    <p>
+      Of korter:
+    </p>
+
+    <p class="formula">
+      s \\\\approx \\\\sum_{i=1}^{n} v_i\\\\Delta t
+    </p>
+
+    <p>
+      Hoe meer intervallen we gebruiken, hoe kleiner de intervallen worden
+      en hoe nauwkeuriger onze benadering wordt.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een veranderende hoeveelheid kunnen we benaderen door
+        heel veel kleine veranderingen op te tellen.
+      </p>
+    </div>
+
+    <h3>Van rechthoeken naar oppervlakte</h3>
+
+    <p>
+      Hetzelfde idee kunnen we geometrisch bekijken.
+    </p>
+
+    <p>
+      Stel dat we de snelheid <span class="formula-inline">v(t)</span>
+      als functie van de tijd tekenen.
+      Op een klein tijdsinterval kunnen we de snelheid benaderen met
+      een constante waarde.
+    </p>
+
+    <p>
+      De bijbehorende afstand is dan ongeveer:
+    </p>
+
+    <p class="formula">
+      \\\\text{afstand} \\\\approx \\\\text{hoogte} \\\\cdot \\\\text{breedte}
+    </p>
+
+    <p>
+      Dat is precies de oppervlakte van een rechthoek.
+      De totale afgelegde afstand kunnen we daarom benaderen
+      door de oppervlakten van veel rechthoeken op te tellen.
+    </p>
+
+    <p class="formula">
+      s \\\\approx \\\\sum_{i=1}^{n} v(t_i^*)\\\\Delta t
+    </p>
+
+    <p>
+      Hier is <span class="formula-inline">t_i^*</span> een gekozen punt
+      binnen het <span class="formula-inline">i</span>-de kleine interval.
+    </p>
+
+    <div class="callout">
+      <p><strong>Een belangrijke ontdekking:</strong></p>
+      <p>
+        Een totale verandering kan geometrisch verschijnen als
+        een oppervlakte onder een grafiek.
+      </p>
+    </div>
+
+    <h3>Steeds kleinere rechthoeken</h3>
+
+    <p>
+      Met een klein aantal rechthoeken krijgen we slechts een benadering.
+      De grafiek kan binnen elk interval nog behoorlijk veranderen.
+    </p>
+
+    <p>
+      Daarom maken we de intervallen steeds kleiner:
+    </p>
+
+    <p class="formula">
+      \\\\Delta t=1
+    </p>
+
+    <p class="formula">
+      \\\\Delta t=0{,}1
+    </p>
+
+    <p class="formula">
+      \\\\Delta t=0{,}01
+    </p>
+
+    <p class="formula">
+      \\\\Delta t=0{,}001
+    </p>
+
+    <p>
+      De rechthoeken volgen de grafiek steeds beter.
+      In de limiet krijgen we een exacte waarde, wanneer die limiet bestaat.
+    </p>
+
+    <p>
+      Dit is dezelfde strategie die we in 3.2 gebruikten:
+      we vervangen een moeilijk direct probleem door een reeks steeds betere
+      benaderingen en onderzoeken vervolgens de limiet.
+    </p>
+
+    <h3>De integraal</h3>
+
+    <p>
+      De exacte totale hoeveelheid die ontstaat uit deze limiet van
+      steeds fijnere sommen noemen we een <strong>integraal</strong>.
+    </p>
+
+    <p>
+      Voor een functie <span class="formula-inline">f(x)</span> op het interval
+      van <span class="formula-inline">a</span> tot <span class="formula-inline">b</span>
+      schrijven we:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      Dit is de <strong>bepaalde integraal</strong> van
+      <span class="formula-inline">f(x)</span> van
+      <span class="formula-inline">a</span> tot
+      <span class="formula-inline">b</span>.
+    </p>
+
+    <p>
+      De notatie vertelt ons dat we de bijdragen van de functie
+      over het volledige interval van <span class="formula-inline">a</span>
+      tot <span class="formula-inline">b</span> optellen.
+    </p>
+
+    <h3>Wat betekenen de onderdelen?</h3>
+
+    <p>In:</p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <ul>
+      <li><span class="formula-inline">∫</span> is het integraalteken;</li>
+      <li><span class="formula-inline">a</span> is de ondergrens;</li>
+      <li><span class="formula-inline">b</span> is de bovengrens;</li>
+      <li><span class="formula-inline">f(x)</span> is de functie die we optellen;</li>
+      <li><span class="formula-inline">dx</span> geeft aan dat we integreren met betrekking tot <span class="formula-inline">x</span>.</li>
+    </ul>
+
+    <p>
+      De letter <span class="formula-inline">x</span> is hier slechts een
+      variabele die door het interval loopt.
+      We zouden bijvoorbeeld ook <span class="formula-inline">t</span> kunnen gebruiken:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(t)\\\\,dt
+    </p>
+
+    <p>
+      Het idee blijft hetzelfde.
+    </p>
+
+    <h3>De oppervlakte onder een positieve grafiek</h3>
+
+    <p>
+      Wanneer <span class="formula-inline">f(x)\\\\gt0</span> op het volledige interval,
+      kunnen we de integraal interpreteren als de oppervlakte tussen de grafiek
+      en de x-as.
+    </p>
+
+    <p>
+      Bijvoorbeeld bij een constante functie:
+    </p>
+
+    <p class="formula">
+      f(x)=4
+    </p>
+
+    <p>
+      op het interval van 0 tot 3 ontstaat een rechthoek met hoogte 4
+      en breedte 3.
+    </p>
+
+    <p class="formula">
+      \\\\int_0^3 4\\\\,dx = 4\\\\cdot3 = 12
+    </p>
+
+    <p>
+      Hier kunnen we de integraal dus rechtstreeks als oppervlakte herkennen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Maar:</strong></p>
+      <p>
+        De integraal is meer dan alleen een formule voor oppervlakte.
+        De oppervlakte is één belangrijke geometrische interpretatie
+        van het algemene idee van opgetelde kleine bijdragen.
+      </p>
+    </div>
+
+    <h3>Wanneer de grafiek onder de x-as komt</h3>
+
+    <p>
+      Stel dat <span class="formula-inline">f(x)</span> negatief is.
+      Dan zijn de bijdragen aan de integraal negatief.
+    </p>
+
+    <p class="formula">
+      f(x)\\\\lt0
+    </p>
+
+    <p>
+      Een gebied onder de x-as telt dus niet gewoon als een positieve oppervlakte.
+      Het draagt negatief bij aan de integraal.
+    </p>
+
+    <p>
+      Daarom spreken we bij een bepaalde integraal vaak over
+      <strong>gesigneerde oppervlakte</strong> of <strong>netto-oppervlakte</strong>.
+    </p>
+
+    <p>
+      Een positieve bijdrage en een negatieve bijdrage kunnen elkaar gedeeltelijk
+      opheffen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Belangrijk onderscheid:</strong></p>
+      <p>
+        Geometrische oppervlakte is altijd positief.
+      </p>
+      <p>
+        Een bepaalde integraal kan positief, negatief of nul zijn,
+        omdat de bijdragen een teken hebben.
+      </p>
+    </div>
+
+    <h3>De integraal als totale verandering</h3>
+
+    <p>
+      De geometrische interpretatie is nuttig, maar voor calculus is
+      de interpretatie als <strong>opgetelde verandering</strong> nog belangrijker.
+    </p>
+
+    <p>
+      Stel dat <span class="formula-inline">v(t)</span> de snelheid van een voorwerp is.
+      Dan levert een klein tijdsinterval ongeveer de verandering in positie:
+    </p>
+
+    <p class="formula">
+      \\\\Delta s \\\\approx v(t)\\\\,\\\\Delta t
+    </p>
+
+    <p>
+      Als we alle kleine bijdragen optellen en de intervallen steeds kleiner maken,
+      krijgen we:
+    </p>
+
+    <p class="formula">
+      \\\\Delta s_{\\\\text{totaal}}
+      =
+      \\\\int_a^b v(t)\\\\,dt
+    </p>
+
+    <p>
+      De integraal van snelheid over de tijd geeft dus de
+      <strong>netto verandering in positie</strong>.
+    </p>
+
+    <p>
+      Dit idee geldt veel algemener.
+      Als <span class="formula-inline">r(t)</span> een veranderingssnelheid
+      van een grootheid is, dan kunnen we de totale verandering over een interval
+      schrijven als:
+    </p>
+
+    <p class="formula">
+      \\\\Delta Q
+      =
+      \\\\int_a^b r(t)\\\\,dt
+    </p>
+
+    <p>
+      De letters kunnen veranderen, maar de structuur blijft dezelfde:
+      we tellen kleine veranderingen op.
+    </p>
+
+    <h3>Eenheden controleren</h3>
+
+    <p>
+      De eenheden van een integraal volgen logisch uit het idee
+      van een kleine bijdrage.
+    </p>
+
+    <p>
+      Bij snelheid in km/u en tijd in uur krijgen we:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\text{km}}{\\\\text{u}}\\\\cdot\\\\text{u}
+      =
+      \\\\text{km}
+    </p>
+
+    <p>
+      De integraal van snelheid over tijd heeft dus de eenheid van afstand.
+    </p>
+
+    <p>
+      Dit is een krachtige controle:
+      als de eenheden van je integraal niet overeenkomen met de grootheid
+      die je probeert te vinden, moet je je model opnieuw bekijken.
+    </p>
+
+    <h3>De integraal en de afgeleide kijken in tegengestelde richtingen</h3>
+
+    <p>
+      We hebben nu twee fundamentele bewerkingen naast elkaar.
+    </p>
+
+    <p class="formula">
+      \\\\text{afgeleide: hoeveelheid} \\\\rightarrow \\\\text{veranderingssnelheid}
+    </p>
+
+    <p class="formula">
+      \\\\text{integraal: veranderingssnelheid} \\\\rightarrow \\\\text{totale verandering}
+    </p>
+
+    <p>
+      Ze lijken daardoor elkaars omgekeerde te zijn.
+      Maar we hebben nog niet uitgelegd <strong>precies hoe</strong>
+      deze twee bewerkingen met elkaar verbonden zijn.
+    </p>
+
+    <div class="callout">
+      <p><strong>Dat is de volgende stap.</strong></p>
+      <p>
+        In 3.10 onderzoeken we de fundamentele stelling van de calculus:
+        de diepe verbinding tussen differentiëren en integreren.
+      </p>
+    </div>
+
+    <h3>Wat we nog niet nodig hebben</h3>
+
+    <p>
+      We hoeven op dit punt nog geen ingewikkelde integralen te kunnen berekenen.
+      De belangrijkste stap is begrijpen <strong>wat een integraal betekent</strong>.
+    </p>
+
+    <p>
+      De exacte berekening van integralen wordt pas veel eenvoudiger
+      wanneer we de verbinding met afgeleiden begrijpen.
+      Die verbinding vormt het onderwerp van 3.10.
+    </p>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>Denken dat een integraal altijd gewoon een positieve oppervlakte is.</li>
+      <li>Vergeten dat bijdragen onder de x-as negatief meetellen.</li>
+      <li>De onder- en bovengrens van een bepaalde integraal verwarren.</li>
+      <li>Vergeten welke grootheid de veranderingssnelheid voorstelt.</li>
+      <li>De eenheden van de integraal niet controleren.</li>
+      <li>De integraal meteen als een rekenregel zien zonder eerst de betekenis te begrijpen.</li>
+    </ul>
+
+    <h3>Een vaste werkwijze</h3>
+
+    <ol>
+      <li>Bepaal welke grootheid je wilt opbouwen of terugvinden.</li>
+      <li>Zoek de bijbehorende veranderingssnelheid.</li>
+      <li>Bepaal over welk interval je de verandering wilt kennen.</li>
+      <li>Stel de integraal op.</li>
+      <li>Controleer het teken en de eenheden.</li>
+      <li>Interpreteer het resultaat in de oorspronkelijke context.</li>
+    </ol>
+
+    <h3>Van kleine bijdragen naar een nieuwe rekenbewerking</h3>
+
+    <p>
+      We zijn vertrokken van een eenvoudig idee:
+      een kleine verandering is ongeveer veranderingssnelheid maal een klein interval.
+    </p>
+
+    <p class="formula">
+      \\\\Delta Q \\\\approx r(x)\\\\,\\\\Delta x
+    </p>
+
+    <p>
+      Door alle kleine bijdragen op te tellen krijgen we een steeds betere benadering:
+    </p>
+
+    <p class="formula">
+      \\\\sum_{i=1}^{n} r(x_i^*)\\\\Delta x
+    </p>
+
+    <p>
+      En wanneer de intervallen steeds kleiner worden, ontstaat de integraal:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b r(x)\\\\,dx
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Integreren betekent in essentie: kleine bijdragen over een interval
+        systematisch optellen.
+      </p>
+      <p>
+        De integraal kan daardoor een oppervlakte voorstellen,
+        maar ook een totale verandering, afstand, hoeveelheid energie,
+        massa of een andere grootheid die ontstaat uit opgetelde kleine bijdragen.
+      </p>
+      <p>
+        De volgende milestone verklaart waarom deze nieuwe bewerking zo nauw
+        verbonden is met de afgeleide.
+      </p>
+    </div>
+`
   },
 
   {
