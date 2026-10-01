@@ -1577,7 +1577,7 @@ const MILESTONES_4 = [
         <strong>m × n-matrix</strong>.
       </p>
 
-      <p class="formula">A ∈ ℝᵐˣⁿ</p>
+      <p class="formula">A \\in \\mathbb{R}^{m\\times n}</p>
 
       <p>
         Deze notatie betekent dat <span class="formula-inline">A</span> een matrix
