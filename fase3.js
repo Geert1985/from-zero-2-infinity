@@ -3962,9 +3962,9 @@ const MILESTONES_3 = [
       We weten uit 3.4 dat de afgeleide de helling van de raaklijn beschrijft.
       Daardoor vertelt het teken van de afgeleide ons wat de functie lokaal doet.
     </p>
-    <p class="formula">f'(x)\\\\gt0</p>
+    <p class="formula">f'(x)\\gt0</p>
     <p>De functie stijgt daar.</p>
-    <p class="formula">f'(x)\\\\lt0</p>
+    <p class="formula">f'(x)\\lt0</p>
     <p>De functie daalt daar.</p>
 
     <p>Bijvoorbeeld voor:</p>
@@ -3972,8 +3972,8 @@ const MILESTONES_3 = [
     <p>geldt:</p>
     <p class="formula">f'(x)=2x</p>
     <p>
-      De functie daalt voor <span class="formula-inline">x\\\\lt0</span> en
-      stijgt voor <span class="formula-inline">x\\\\gt0</span>.
+      De functie daalt voor <span class="formula-inline">x\\lt0</span> en
+      stijgt voor <span class="formula-inline">x\\gt0</span>.
     </p>
 
     <h3>Stationaire en kritieke punten</h3>
@@ -4079,7 +4079,7 @@ const MILESTONES_3 = [
     <p>
       De rechthoek met maximale oppervlakte is dus een vierkant:
     </p>
-    <p class="formula">A=5\\\\cdot5=25\\\\text{ m}^2</p>
+    <p class="formula">A=5\\cdot5=25\\text{ m}^2</p>
 
     <h3>Waarom controleren we het antwoord?</h3>
 
@@ -4094,7 +4094,7 @@ const MILESTONES_3 = [
       van het probleem liggen.
     </p>
 
-    <p class="formula">0\\\\lt x\\\\lt10</p>
+    <p class="formula">0\\lt x\\lt10</p>
 
     <p>
       Een negatieve zijde of een zijde langer dan 10 meter heeft in het
@@ -4112,7 +4112,7 @@ const MILESTONES_3 = [
       De versnelling is de verandering van de snelheid:
     </p>
     <p class="formula">a(t)=v'(t)=s''(t)</p>
-    <p class="formula">positie \\\\rightarrow snelheid \\\\rightarrow versnelling</p>
+    <p class="formula">positie \\rightarrow snelheid \\rightarrow versnelling</p>
 
     <p>
       Stel bijvoorbeeld:
@@ -4194,9 +4194,9 @@ const MILESTONES_3 = [
     </p>
 
     <p>Voor de oppervlakte van een cirkel geldt:</p>
-    <p class="formula">A=\\\\pi r^2</p>
+    <p class="formula">A=\\pi r^2</p>
     <p>Differentieer naar de straal:</p>
-    <p class="formula">\\\\frac{dA}{dr}=2\\\\pi r</p>
+    <p class="formula">\\frac{dA}{dr}=2\\pi r</p>
     <p>
       Dit vertelt hoe gevoelig de oppervlakte is voor een verandering van
       de straal.
@@ -4262,7 +4262,7 @@ const MILESTONES_3 = [
     <p>
       De afgeleide gaat van een grootheid naar haar veranderingssnelheid:
     </p>
-    <p class="formula">hoeveelheid \\\\rightarrow veranderingssnelheid</p>
+    <p class="formula">hoeveelheid \\rightarrow veranderingssnelheid</p>
 
     <p>
       We kunnen ook de omgekeerde vraag stellen:
@@ -4274,7 +4274,7 @@ const MILESTONES_3 = [
       Dat leidt naar het volgende grote idee van de calculus:
       <strong>integreren</strong>.
     </p>
-    <p class="formula">veranderingssnelheid \\\\rightarrow hoeveelheid</p>
+    <p class="formula">veranderingssnelheid \\rightarrow hoeveelheid</p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
