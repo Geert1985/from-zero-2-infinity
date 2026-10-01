@@ -5663,10 +5663,833 @@ const MILESTONES_3 = [
 
   {
   id: "3.11",
-    title: "Integraalrekenen",
-    goal: "Hoe berekenen we integralen?",
-    theory: ``
-  },
+  title: "Integraalrekenen",
+  goal: "Hoe berekenen we integralen?",
+  theory: /* html */\`
+    <h2>Integraalrekenen</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Waarom hebben we naast de betekenis van een integraal ook rekenmethoden nodig?</li>
+      <li>Hoe vinden we een primitieve functie?</li>
+      <li>Welke basisregels voor integreren volgen rechtstreeks uit de afgeleideregel?</li>
+      <li>Hoe gebruiken we lineariteit en constante factoren?</li>
+      <li>Hoe werkt substitutie als verandering van variabele?</li>
+      <li>Wanneer is een primitieve een handige route naar een bepaalde integraal?</li>
+      <li>Hoe controleren en interpreteren we een integraal die we berekend hebben?</li>
+    </ul>
+
+    <p>
+      In 3.9 leerden we wat een integraal betekent: kleine bijdragen worden
+      opgeteld om een totale verandering of netto-oppervlakte te verkrijgen.
+      In 3.10 zagen we waarom integreren en differentiëren met elkaar verbonden
+      zijn. Nu komt de praktische vraag:
+    </p>
+
+    <div class="callout">
+      <p><strong>Hoe kunnen we een integraal systematisch berekenen?</strong></p>
+    </div>
+
+    <p>
+      We gaan dus niet opnieuw de integraal definiëren. We gebruiken de
+      fundamentele stelling van 3.10 als rekeninstrument en bouwen daar een
+      kleine verzameling betrouwbare integratieregels rond.
+    </p>
+
+    <h3>Van de afgeleide terug naar een functie</h3>
+
+    <p>
+      In 3.10 zagen we dat een primitieve functie <span class="formula-inline">F</span>
+      voldoet aan:
+    </p>
+
+    <p class="formula">
+      F'(x)=f(x)
+    </p>
+
+    <p>
+      Integreren begint dus met de omgekeerde vraag van differentiëren:
+    </p>
+
+    <div class="callout">
+      <p><strong>Welke functie heeft <span class="formula-inline">f(x)</span> als afgeleide?</strong></p>
+    </div>
+
+    <p>
+      Neem bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x)=2x
+    </p>
+
+    <p>
+      Uit 3.5 weten we:
+    </p>
+
+    <p class="formula">
+      \\\\frac{d}{dx}(x^2)=2x
+    </p>
+
+    <p>
+      Dus is:
+    </p>
+
+    <p class="formula">
+      \\\\int 2x\\\\,dx=x^2+C
+    </p>
+
+    <p>
+      Het symbool <span class="formula-inline">C</span> staat voor een willekeurige
+      constante. Die hoort erbij omdat elke constante bij differentiëren verdwijnt.
+    </p>
+
+    <h3>Waarom staat er een constante bij?</h3>
+
+    <p>
+      Kijk naar de functies:
+    </p>
+
+    <p class="formula">
+      x^2
+    </p>
+
+    <p class="formula">
+      x^2+3
+    </p>
+
+    <p class="formula">
+      x^2-10
+    </p>
+
+    <p>
+      Ze hebben allemaal dezelfde afgeleide:
+    </p>
+
+    <p class="formula">
+      2x
+    </p>
+
+    <p>
+      Daarom bestaat er niet één enkele primitieve. Er is een hele familie:
+    </p>
+
+    <p class="formula">
+      F(x)=x^2+C
+    </p>
+
+    <div class="callout">
+      <p><strong>Onbepaalde integraal:</strong></p>
+      <p>
+        Een onbepaalde integraal beschrijft de familie van alle primitieve functies.
+      </p>
+      <p class="formula">
+        \\\\int f(x)\\\\,dx=F(x)+C
+      </p>
+      <p>
+        als <span class="formula-inline">F'(x)=f(x)</span>.
+      </p>
+    </div>
+
+    <h3>De machtsregel omgekeerd</h3>
+
+    <p>
+      In 3.5 leerden we de machtsregel voor afgeleiden:
+    </p>
+
+    <p class="formula">
+      \\\\frac{d}{dx}(x^n)=nx^{n-1}
+    </p>
+
+    <p>
+      We kunnen deze regel omkeren. Als <span class="formula-inline">n\\\\neq-1</span>,
+      dan:
+    </p>
+
+    <p class="formula">
+      \\\\int x^n\\\\,dx=\\\\frac{x^{n+1}}{n+1}+C
+    </p>
+
+    <p>
+      De exponent wordt dus één groter en daarna delen we door die nieuwe exponent.
+    </p>
+
+    <p>
+      Controleer bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \\\\int x^4\\\\,dx=\\\\frac{x^5}{5}+C
+    </p>
+
+    <p>
+      Differentieer de rechterkant:
+    </p>
+
+    <p class="formula">
+      \\\\frac{d}{dx}\\\\left(\\\\frac{x^5}{5}+C\\\\right)=x^4
+    </p>
+
+    <p>
+      De oorspronkelijke functie komt terug. Dat is precies de controle die we
+      uit 3.10 kennen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Integreren is hier letterlijk differentiëren achteruit.</strong></p>
+      <p>
+        De regel is geen los trucje: hij is rechtstreeks afgeleid van de
+        machtsregel voor afgeleiden.
+      </p>
+    </div>
+
+    <h3>De speciale exponent n = −1</h3>
+
+    <p>
+      De machtsregel heeft één belangrijk uitzonderingsgeval. Als
+      <span class="formula-inline">n=-1</span>, zou de formule delen door nul:
+    </p>
+
+    <p class="formula">
+      \\\\frac{x^{(-1)+1}}{(-1)+1}
+      =
+      \\\\frac{x^0}{0}
+    </p>
+
+    <p>
+      Dat kan natuurlijk niet. Voor <span class="formula-inline">1/x</span>
+      hebben we daarom een andere primitieve nodig:
+    </p>
+
+    <p class="formula">
+      \\\\int \\\\frac{1}{x}\\\\,dx=\\\\ln|x|+C
+    </p>
+
+    <p>
+      Hier is <span class="formula-inline">\\\\ln</span> de natuurlijke logaritme.
+      De absolute waarde is nodig omdat de afgeleide van
+      <span class="formula-inline">\\\\ln|x|</span> gelijk is aan
+      <span class="formula-inline">1/x</span> voor <span class="formula-inline">x\\\\neq0</span>.
+    </p>
+
+    <p>
+      Dit is meteen een belangrijke herinnering: niet iedere integraal kan met
+      één algemene machtsregel worden behandeld.
+    </p>
+
+    <h3>Constante factoren buiten de integraal</h3>
+
+    <p>
+      Stel dat een functie met een constante wordt vermenigvuldigd:
+    </p>
+
+    <p class="formula">
+      f(x)=5x^2
+    </p>
+
+    <p>
+      De constante 5 verandert de aard van de primitieve niet:
+    </p>
+
+    <p class="formula">
+      \\\\int 5x^2\\\\,dx
+      =
+      5\\\\int x^2\\\\,dx
+    </p>
+
+    <p>
+      Vervolgens gebruiken we de machtsregel:
+    </p>
+
+    <p class="formula">
+      5\\\\int x^2\\\\,dx
+      =
+      5\\\\frac{x^3}{3}+C
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      \\\\int 5x^2\\\\,dx=\\\\frac{5x^3}{3}+C
+    </p>
+
+    <div class="callout">
+      <p><strong>Constante-factorregel:</strong></p>
+      <p class="formula">
+        \\\\int cf(x)\\\\,dx=c\\\\int f(x)\\\\,dx
+      </p>
+    </div>
+
+    <h3>Een som splitsen</h3>
+
+    <p>
+      Ook een som mogen we term voor term integreren:
+    </p>
+
+    <p class="formula">
+      \\\\int [f(x)+g(x)]\\\\,dx
+      =
+      \\\\int f(x)\\\\,dx
+      +
+      \\\\int g(x)\\\\,dx
+    </p>
+
+    <p>
+      Neem bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \\\\int (3x^2+4x-5)\\\\,dx
+    </p>
+
+    <p>
+      We splitsen de drie termen:
+    </p>
+
+    <p class="formula">
+      3\\\\int x^2\\\\,dx
+      +
+      4\\\\int x\\\\,dx
+      -
+      5\\\\int 1\\\\,dx
+    </p>
+
+    <p>
+      En integreren elke term afzonderlijk:
+    </p>
+
+    <p class="formula">
+      x^3+2x^2-5x+C
+    </p>
+
+    <p>
+      Controleer:
+    </p>
+
+    <p class="formula">
+      \\\\frac{d}{dx}(x^3+2x^2-5x+C)
+      =
+      3x^2+4x-5
+    </p>
+
+    <div class="callout">
+      <p><strong>Lineariteit maakt een ingewikkelder integraal vaak eenvoudiger:</strong></p>
+      <p>
+        splits een som en haal constante factoren naar buiten.
+      </p>
+    </div>
+
+    <h3>Integreren van een constante</h3>
+
+    <p>
+      Een constante kunnen we zien als <span class="formula-inline">cx^0</span>.
+      De primitieve van een constante <span class="formula-inline">c</span> is:
+    </p>
+
+    <p class="formula">
+      \\\\int c\\\\,dx=cx+C
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \\\\int 7\\\\,dx=7x+C
+    </p>
+
+    <p>
+      Want:
+    </p>
+
+    <p class="formula">
+      \\\\frac{d}{dx}(7x+C)=7
+    </p>
+
+    <h3>Van onbepaalde naar bepaalde integraal</h3>
+
+    <p>
+      Tot nu toe kregen we een familie van primitieve functies.
+      Bij een bepaalde integraal hebben we grenzen en zoeken we één getal:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      Volgens de fundamentele stelling van 3.10 zoeken we een primitieve
+      <span class="formula-inline">F</span> en gebruiken we:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx=F(b)-F(a)
+    </p>
+
+    <p>
+      Het is nuttig om het verschil scherp te houden:
+    </p>
+
+    <ul>
+      <li><strong>onbepaalde integraal:</strong> een familie van primitieve functies;</li>
+      <li><strong>bepaalde integraal:</strong> één waarde tussen twee grenzen.</li>
+    </ul>
+
+    <h3>Een volledig voorbeeld</h3>
+
+    <p>
+      Bereken:
+    </p>
+
+    <p class="formula">
+      \\\\int_0^2 (3x^2+2x+1)\\\\,dx
+    </p>
+
+    <p>
+      <strong>Stap 1 — zoek een primitieve.</strong>
+    </p>
+
+    <p class="formula">
+      F(x)=x^3+x^2+x
+    </p>
+
+    <p>
+      Controle:
+    </p>
+
+    <p class="formula">
+      F'(x)=3x^2+2x+1
+    </p>
+
+    <p>
+      <strong>Stap 2 — gebruik de grenzen.</strong>
+    </p>
+
+    <p class="formula">
+      \\\\int_0^2 (3x^2+2x+1)\\\\,dx
+      =
+      F(2)-F(0)
+    </p>
+
+    <p>
+      <strong>Stap 3 — vul in.</strong>
+    </p>
+
+    <p class="formula">
+      =(8+4+2)-(0+0+0)
+    </p>
+
+    <p class="formula">
+      =14
+    </p>
+
+    <p>
+      De bepaalde integraal is dus 14.
+      Omdat de functie op het interval van 0 tot 2 positief is,
+      kunnen we dit hier ook interpreteren als de oppervlakte onder de grafiek.
+    </p>
+
+    <h3>Waarom hoeven we C niet te gebruiken?</h3>
+
+    <p>
+      Bij een onbepaalde integraal hoort <span class="formula-inline">+C</span>.
+      Bij een bepaalde integraal valt dezelfde constante aan beide grenzen weg:
+    </p>
+
+    <p class="formula">
+      [F(b)+C]-[F(a)+C]=F(b)-F(a)
+    </p>
+
+    <p>
+      Daarom schrijven we bij de berekening van een bepaalde integraal
+      meestal rechtstreeks een primitieve zonder <span class="formula-inline">+C</span>.
+    </p>
+
+    <div class="callout">
+      <p><strong>Praktisch:</strong></p>
+      <p>
+        Onbepaalde integraal → schrijf <span class="formula-inline">+C</span>.
+      </p>
+      <p>
+        Bepaalde integraal → bepaal een primitieve en bereken
+        <span class="formula-inline">F(b)-F(a)</span>.
+      </p>
+    </div>
+
+    <h3>Een verandering van variabele</h3>
+
+    <p>
+      Niet elke integraal staat meteen in de vorm van een eenvoudige macht.
+      Soms zit een functie binnen een andere functie.
+    </p>
+
+    <p>
+      Kijk bijvoorbeeld naar:
+    </p>
+
+    <p class="formula">
+      \\\\int 2x(x^2+1)^3\\\\,dx
+    </p>
+
+    <p>
+      We herkennen hier twee delen:
+    </p>
+
+    <p class="formula">
+      x^2+1
+    </p>
+
+    <p class="formula">
+      2x
+    </p>
+
+    <p>
+      De afgeleide van <span class="formula-inline">x^2+1</span> is precies
+      <span class="formula-inline">2x</span>. Dat suggereert dat we de binnenste
+      uitdrukking tijdelijk een nieuwe naam kunnen geven.
+    </p>
+
+    <p class="formula">
+      u=x^2+1
+    </p>
+
+    <p>
+      Differentieer:
+    </p>
+
+    <p class="formula">
+      du=2x\\\\,dx
+    </p>
+
+    <p>
+      De integraal wordt dan:
+    </p>
+
+    <p class="formula">
+      \\\\int u^3\\\\,du
+    </p>
+
+    <p>
+      Nu kunnen we de machtsregel gebruiken:
+    </p>
+
+    <p class="formula">
+      \\\\int u^3\\\\,du=\\\\frac{u^4}{4}+C
+    </p>
+
+    <p>
+      We vervangen <span class="formula-inline">u</span> opnieuw:
+    </p>
+
+    <p class="formula">
+      \\\\frac{(x^2+1)^4}{4}+C
+    </p>
+
+    <p>
+      Dit is de basisgedachte van <strong>substitutie</strong>:
+      een ingewikkelde integraal wordt eenvoudiger door een geschikte
+      verandering van variabele.
+    </p>
+
+    <div class="callout">
+      <p><strong>Herkenningspatroon:</strong></p>
+      <p>
+        Staat er een samengestelde functie en verschijnt haar afgeleide
+        als factor? Dan kan substitutie de natuurlijke aanpak zijn.
+      </p>
+    </div>
+
+    <h3>Substitutie controleren</h3>
+
+    <p>
+      Ook hier blijft de controle dezelfde: differentieer het resultaat.
+    </p>
+
+    <p class="formula">
+      F(x)=\\\\frac{(x^2+1)^4}{4}
+    </p>
+
+    <p class="formula">
+      F'(x)
+      =
+      \\\\frac{1}{4}\\\\cdot4(x^2+1)^3\\\\cdot2x
+      =
+      2x(x^2+1)^3
+    </p>
+
+    <p>
+      We krijgen de oorspronkelijke integrand terug. De substitutie klopt dus.
+    </p>
+
+    <h3>Bepaalde integralen met substitutie</h3>
+
+    <p>
+      Bij een bepaalde integraal moet de verandering van variabele ook in
+      de grenzen worden verwerkt. Neem:
+    </p>
+
+    <p class="formula">
+      \\\\int_0^1 2x(x^2+1)^3\\\\,dx
+    </p>
+
+    <p>
+      Met:
+    </p>
+
+    <p class="formula">
+      u=x^2+1
+    </p>
+
+    <p>
+      worden de grenzen:
+    </p>
+
+    <p class="formula">
+      x=0 \\\\rightarrow u=1
+    </p>
+
+    <p class="formula">
+      x=1 \\\\rightarrow u=2
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      \\\\int_1^2 u^3\\\\,du
+    </p>
+
+    <p>
+      en:
+    </p>
+
+    <p class="formula">
+      =\\\\left[\\\\frac{u^4}{4}\\\\right]_1^2
+    </p>
+
+    <p class="formula">
+      =\\\\frac{16}{4}-\\\\frac{1}{4}
+      =\\\\frac{15}{4}
+    </p>
+
+    <p>
+      We kunnen dus óf teruggaan naar <span class="formula-inline">x</span>
+      en daar de grenzen gebruiken, óf bij een definitieve substitutie de
+      grenzen meteen omzetten.
+    </p>
+
+    <div class="callout">
+      <p><strong>Belangrijk:</strong> verander je de variabele volledig naar
+      <span class="formula-inline">u</span>, verander dan ook de grenzen.
+      Zo voorkom je dat <span class="formula-inline">u</span> en
+      <span class="formula-inline">x</span> door elkaar lopen.</p>
+    </div>
+
+    <h3>Integreren en differentiëren naast elkaar</h3>
+
+    <p>
+      We kunnen de belangrijkste relatie van deze milestone samenvatten:
+    </p>
+
+    <p class="formula">
+      \\\\frac{d}{dx}(F(x))=f(x)
+      \\\\Longleftrightarrow
+      \\\\int f(x)\\\\,dx=F(x)+C
+    </p>
+
+    <p>
+      In de praktijk gebruiken we de link meestal zo:
+    </p>
+
+    <ol>
+      <li>herken de vorm van de integrand;</li>
+      <li>zoek een geschikte primitieve;</li>
+      <li>differentieer de primitieve als controle;</li>
+      <li>gebruik bij grenzen de fundamentele stelling.</li>
+    </ol>
+
+    <h3>Wat met producten en ingewikkelde functies?</h3>
+
+    <p>
+      De regels van 3.11 zijn krachtig, maar niet volledig.
+      Een product van twee functies is bijvoorbeeld niet in het algemeen
+      op te lossen door beide factoren afzonderlijk te integreren:
+    </p>
+
+    <p class="formula">
+      \\\\int f(x)g(x)\\\\,dx
+      \\\\neq
+      \\\\left(\\\\int f(x)\\\\,dx\\\\right)
+      \\\\left(\\\\int g(x)\\\\,dx\\\\right)
+    </p>
+
+    <p>
+      Dat zou ook niet stroken met de productregel voor afgeleiden.
+      Voor sommige producten is <strong>partiële integratie</strong> nodig.
+      Voor andere vormen zijn bijvoorbeeld trigonometrische technieken of
+      verdere substituties geschikt.
+    </p>
+
+    <p>
+      We behandelen zulke technieken niet als losse trucjes in deze eerste
+      kennismaking. Het belangrijke inzicht is:
+    </p>
+
+    <div class="callout">
+      <p><strong>Niet elke integraal heeft dezelfde rekenroute.</strong></p>
+      <p>
+        Eerst herken je de structuur; daarna kies je de techniek die bij die
+        structuur past.
+      </p>
+    </div>
+
+    <h3>Een korte techniekkaart</h3>
+
+    <ul>
+      <li>
+        <strong>macht van x:</strong>
+        gebruik de omgekeerde machtsregel.
+      </li>
+      <li>
+        <strong>som of verschil:</strong>
+        splits term voor term.
+      </li>
+      <li>
+        <strong>constante factor:</strong>
+        haal de constante buiten de integraal.
+      </li>
+      <li>
+        <strong>samengestelde functie met passende afgeleide:</strong>
+        probeer substitutie.
+      </li>
+      <li>
+        <strong>product van functies:</strong>
+        controleer of een andere techniek nodig is; niet zomaar factoren
+        afzonderlijk integreren.
+      </li>
+    </ul>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        De machtsregel gebruiken voor <span class="formula-inline">1/x</span>
+        en daardoor delen door nul.
+      </li>
+      <li>
+        Bij een onbepaalde integraal <span class="formula-inline">+C</span> vergeten.
+      </li>
+      <li>
+        Bij een bepaalde integraal <span class="formula-inline">F(a)-F(b)</span>
+        schrijven in plaats van <span class="formula-inline">F(b)-F(a)</span>.
+      </li>
+      <li>
+        Een gevonden primitieve niet terug differentiëren.
+      </li>
+      <li>
+        Bij substitutie <span class="formula-inline">x</span> en
+        <span class="formula-inline">u</span> door elkaar gebruiken.
+      </li>
+      <li>
+        Bij een bepaalde integraal de grenzen niet aanpassen wanneer de
+        substitutie volledig in de nieuwe variabele wordt uitgevoerd.
+      </li>
+      <li>
+        Denken dat integreren over een product hetzelfde werkt als
+        integreren over een som.
+      </li>
+      <li>
+        Vergeten dat een integraal een gesigneerde grootheid kan zijn.
+        De interpretatie van 3.9 blijft gelden.
+      </li>
+    </ul>
+
+    <h3>Een vaste werkwijze</h3>
+
+    <ol>
+      <li>Lees de integrand en zoek eerst naar de structuur.</li>
+      <li>Splits sommen en haal constante factoren naar buiten.</li>
+      <li>Probeer een basisregel of de omgekeerde machtsregel.</li>
+      <li>Herken je een samengestelde functie met haar afgeleide? Probeer substitutie.</li>
+      <li>Controleer een primitieve door te differentiëren.</li>
+      <li>Heeft de integraal grenzen? Gebruik dan <span class="formula-inline">F(b)-F(a)</span>.</li>
+      <li>Controleer teken, grenzen en eenheden wanneer die betekenisvol zijn.</li>
+    </ol>
+
+    <h3>Van rekenen naar kiezen</h3>
+
+    <p>
+      In het begin lijkt integreren misschien op een verzameling regels.
+      Maar de echte vaardigheid is niet alleen de regels onthouden.
+      Het is leren herkennen <strong>welke structuur een integraal heeft</strong>.
+    </p>
+
+    <p>
+      Dat is een belangrijke stap in calculus. Bij differentiëren leerden we
+      verschillende regels combineren. Bij integreren moeten we vaak de
+      omgekeerde structuur herkennen.
+    </p>
+
+    <div class="callout">
+      <p><strong>De centrale vraag is niet alleen:</strong></p>
+      <p>“Welke regel ken ik?”</p>
+      <p><strong>maar:</strong></p>
+      <p>“Welke structuur zie ik in deze integraal?”</p>
+    </div>
+
+    <h3>De plaats van 3.11 in Fase 3</h3>
+
+    <p>
+      De lijn van de vorige milestones wordt nu concreet:
+    </p>
+
+    <p class="formula">
+      \\\\text{gemiddelde verandering}
+      \\\\rightarrow
+      \\\\text{limiet}
+      \\\\rightarrow
+      \\\\text{afgeleide}
+    </p>
+
+    <p class="formula">
+      \\\\text{afgeleide}
+      \\\\rightarrow
+      \\\\text{veranderingssnelheid}
+      \\\\rightarrow
+      \\\\text{integraal}
+    </p>
+
+    <p>
+      In 3.9 leerden we de integraal begrijpen.
+      In 3.10 leerden we waarom ze verbonden is met de afgeleide.
+      In 3.11 leren we de belangrijkste manieren om die verbinding
+      daadwerkelijk als rekenmethode te gebruiken.
+    </p>
+
+    <p>
+      In 3.12 verschuift de vraag opnieuw:
+      niet langer <em>hoe berekenen we een integraal?</em>,
+      maar <strong>wat kunnen we ermee berekenen?</strong>
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Integreren is de omgekeerde richting van differentiëren.
+        We zoeken een primitieve functie en gebruiken vervolgens de
+        fundamentele stelling om bepaalde integralen te evalueren.
+      </p>
+      <p>
+        De basisgereedschappen zijn de omgekeerde machtsregel,
+        lineariteit en substitutie. Een goede integrator herkent eerst
+        de structuur van de functie en kiest daarna de passende techniek.
+      </p>
+    </div>
+  \`
+},
 
   {
     id: "3.12",
