@@ -4852,7 +4852,7 @@ const MILESTONES_3 = [
     id: "3.10",
     title: "De fundamentele stelling van de calculus",
     goal: "Waarom zijn afgeleiden en integralen verbonden?",
-    theory: /* html */\`
+    theory: /* html */`
     <h2>De fundamentele stelling van de calculus</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -4899,7 +4899,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta s=\\\\int_a^b v(t)\\\\,dt
+      \\Delta s=\\int_a^b v(t)\\,dt
     </p>
 
     <p>
@@ -4926,7 +4926,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(t)\\\\,dt
+      \\int_a^b f(t)\\,dt
     </p>
 
     <p>
@@ -4940,7 +4940,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      F(x)=\\\\int_a^x f(t)\\\\,dt
+      F(x)=\\int_a^x f(t)\\,dt
     </p>
 
     <p>
@@ -4971,7 +4971,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      F(x)=\\\\int_0^x 2\\\\,dt
+      F(x)=\\int_0^x 2\\,dt
     </p>
 
     <p>
@@ -5020,7 +5020,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      F(x)=\\\\int_a^x f(t)\\\\,dt
+      F(x)=\\int_a^x f(t)\\,dt
     </p>
 
     <p>
@@ -5032,7 +5032,7 @@ const MILESTONES_3 = [
     <p class="formula">
       F(x+h)-F(x)
       =
-      \\\\int_x^{x+h} f(t)\\\\,dt
+      \\int_x^{x+h} f(t)\\,dt
     </p>
 
     <p>
@@ -5041,7 +5041,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      F(x+h)-F(x) \\\\approx f(x)h
+      F(x+h)-F(x) \\approx f(x)h
     </p>
 
     <p>
@@ -5049,8 +5049,8 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{F(x+h)-F(x)}{h}
-      \\\\approx
+      \\frac{F(x+h)-F(x)}{h}
+      \\approx
       f(x)
     </p>
 
@@ -5084,7 +5084,7 @@ const MILESTONES_3 = [
         Als <span class="formula-inline">f</span> continu is en
       </p>
       <p class="formula">
-        F(x)=\\\\int_a^x f(t)\\\\,dt
+        F(x)=\\int_a^x f(t)\\,dt
       </p>
       <p>
         dan geldt:
@@ -5099,9 +5099,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{integraal als accumulatie}
-      \\\\rightarrow
-      \\\\text{afgeleide}
+      \\text{integraal als accumulatie}
+      \\rightarrow
+      \\text{afgeleide}
     </p>
 
     <p>
@@ -5187,7 +5187,7 @@ const MILESTONES_3 = [
         <span class="formula-inline">f</span> op het interval, dan:
       </p>
       <p class="formula">
-        \\\\int_a^b f(x)\\\\,dx
+        \\int_a^b f(x)\\,dx
         =
         F(b)-F(a)
       </p>
@@ -5215,7 +5215,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{d}{dx}(x^2)=2x
+      \\frac{d}{dx}(x^2)=2x
     </p>
 
     <p>
@@ -5232,7 +5232,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_1^3 2x\\\\,dx
+      \\int_1^3 2x\\,dx
     </p>
 
     <p>
@@ -5240,7 +5240,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_1^3 2x\\\\,dx
+      \\int_1^3 2x\\,dx
       =
       F(3)-F(1)
     </p>
@@ -5290,7 +5290,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta F=F(b)-F(a)
+      \\Delta F=F(b)-F(a)
     </p>
 
     <p>
@@ -5301,7 +5301,7 @@ const MILESTONES_3 = [
     <p class="formula">
       F(b)-F(a)
       =
-      \\\\int_a^b F'(x)\\\\,dx
+      \\int_a^b F'(x)\\,dx
     </p>
 
     <p>
@@ -5311,7 +5311,7 @@ const MILESTONES_3 = [
     <p class="formula">
       F(b)-F(a)
       =
-      \\\\int_a^b f(x)\\\\,dx
+      \\int_a^b f(x)\\,dx
     </p>
 
     <div class="callout">
@@ -5331,13 +5331,13 @@ const MILESTONES_3 = [
 
     <p class="formula">
       F(x)
-      \\\\xrightarrow{\\\\text{afgeleide}}
+      \\xrightarrow{\\text{afgeleide}}
       F'(x)=f(x)
     </p>
 
     <p class="formula">
       f(x)
-      \\\\xrightarrow{\\\\text{integreren}}
+      \\xrightarrow{\\text{integreren}}
       F(x)+C
     </p>
 
@@ -5357,7 +5357,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx=F(b)-F(a)
+      \\int_a^b f(x)\\,dx=F(b)-F(a)
     </p>
 
     <div class="callout">
@@ -5386,7 +5386,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      F(x)=\\\\frac{x^3}{3}
+      F(x)=\\frac{x^3}{3}
     </p>
 
     <p>
@@ -5476,7 +5476,7 @@ const MILESTONES_3 = [
     <p class="formula">
       F(b)-F(a)
       =
-      \\\\int_a^b F'(x)\\\\,dx
+      \\int_a^b F'(x)\\,dx
     </p>
 
     <p>
@@ -5497,7 +5497,7 @@ const MILESTONES_3 = [
     <p class="formula">
       s(b)-s(a)
       =
-      \\\\int_a^b v(t)\\\\,dt
+      \\int_a^b v(t)\\,dt
     </p>
 
     <p>
@@ -5591,15 +5591,15 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{hoeveelheid}
-      \\\\xrightarrow{\\\\text{differentieer}}
-      \\\\text{veranderingssnelheid}
+      \\text{hoeveelheid}
+      \\xrightarrow{\\text{differentieer}}
+      \\text{veranderingssnelheid}
     </p>
 
     <p class="formula">
-      \\\\text{veranderingssnelheid}
-      \\\\xrightarrow{\\\\text{integreer}}
-      \\\\text{totale verandering}
+      \\text{veranderingssnelheid}
+      \\xrightarrow{\\text{integreer}}
+      \\text{totale verandering}
     </p>
 
     <p>
@@ -5618,20 +5618,20 @@ const MILESTONES_3 = [
         de oorspronkelijke functie teruggeeft:
       </p>
       <p class="formula">
-        \\\\frac{d}{dx}\\\\left(\\\\int_a^x f(t)\\\\,dt\\\\right)=f(x)
+        \\frac{d}{dx}\\left(\\int_a^x f(t)\\,dt\\right)=f(x)
       </p>
       <p>
         Deel 2 geeft de praktische evaluatieregel:
       </p>
       <p class="formula">
-        \\\\int_a^b f(x)\\\\,dx=F(b)-F(a)
+        \\int_a^b f(x)\\,dx=F(b)-F(a)
       </p>
       <p>
         In 3.11 gebruiken we deze verbinding om integralen systematisch
         te leren berekenen.
       </p>
     </div>
-  \`
+  `
 },id: "3.11",
     title: "Integraalrekenen",
     goal: "Hoe berekenen we integralen?",
