@@ -263,6 +263,95 @@ function mountGroups(root) {
   draw();
 }
 
+function mountCrossProduct(root) {
+  root.innerHTML = widgetShell(
+    "Kruisproduct",
+    "Draai het vlak. De gouden pijl blijft loodrecht erop.",
+    `<canvas data-h="320"></canvas>
+     <div class="widget-controls">
+       <label>hoek θ <input type="range" min="15" max="165" step="1" value="50" data-k="theta"> <output data-o="theta">50°</output></label>
+       <label>draaiing <input type="range" min="0" max="360" step="1" value="28" data-k="yaw"> <output data-o="yaw">28°</output></label>
+     </div>
+     <p class="widget-readout"></p>`
+  );
+  const canvas = root.querySelector("canvas");
+  const thetaEl = root.querySelector("[data-k=theta]");
+  const yawEl = root.querySelector("[data-k=yaw]");
+  const note = root.querySelector(".widget-readout");
+
+  const project = (x, y, z, yaw, cx, cy, s) => {
+    const c = Math.cos(yaw), sn = Math.sin(yaw);
+    const xr = x * c - y * sn;
+    const yr = x * sn + y * c;
+    return [cx + xr * s + yr * 0.42 * s, cy - z * s + yr * 0.38 * s];
+  };
+
+  const arrow = (ctx, a, b, color) => {
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(a[0], a[1]);
+    ctx.lineTo(b[0], b[1]);
+    ctx.stroke();
+    const ang = Math.atan2(b[1] - a[1], b[0] - a[0]);
+    ctx.beginPath();
+    ctx.moveTo(b[0], b[1]);
+    ctx.lineTo(b[0] - 12 * Math.cos(ang - 0.4), b[1] - 12 * Math.sin(ang - 0.4));
+    ctx.lineTo(b[0] - 12 * Math.cos(ang + 0.4), b[1] - 12 * Math.sin(ang + 0.4));
+    ctx.closePath();
+    ctx.fill();
+  };
+
+  const draw = () => {
+    const theta = Number(thetaEl.value) * Math.PI / 180;
+    const yaw = Number(yawEl.value) * Math.PI / 180;
+    root.querySelector("[data-o=theta]").textContent = thetaEl.value + "°";
+    root.querySelector("[data-o=yaw]").textContent = yawEl.value + "°";
+    const { ctx, w, h } = prepCanvas(canvas);
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+    const cx = w * 0.46, cy = h * 0.62, s = Math.min(w, h) * 0.11;
+    const P = (x, y, z) => project(x, y, z, yaw, cx, cy, s);
+    const u = [3, 0, 0];
+    const v = [2 * Math.cos(theta), 2 * Math.sin(theta), 0];
+    const nz = u[0] * v[1] - u[1] * v[0];
+    const sum = [u[0] + v[0], u[1] + v[1], 0];
+    const O = P(0, 0, 0);
+    const corners = [P(0, 0, 0), P(u[0], u[1], 0), P(sum[0], sum[1], 0), P(v[0], v[1], 0)];
+    ctx.beginPath();
+    corners.forEach((pt, i) => (i ? ctx.lineTo(pt[0], pt[1]) : ctx.moveTo(pt[0], pt[1])));
+    ctx.closePath();
+    ctx.fillStyle = "rgba(230,199,122,0.08)";
+    ctx.fill();
+    ctx.strokeStyle = "rgba(230,199,122,0.28)";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    arrow(ctx, O, P(4.2, 0, 0), "#8a7a58");
+    arrow(ctx, O, P(0, 3.2, 0), "#8a7a58");
+    arrow(ctx, O, P(0, 0, 3.4), "#8a7a58");
+    arrow(ctx, O, P(u[0], u[1], 0), "#f3e2b0");
+    arrow(ctx, O, P(v[0], v[1], 0), "#7dcea0");
+    arrow(ctx, O, P(0, 0, nz), "#e6c77a");
+    ctx.font = "15px Georgia, serif";
+    const label = (pt, text, color, dx, dy) => {
+      ctx.fillStyle = color;
+      ctx.fillText(text, pt[0] + dx, pt[1] + dy);
+    };
+    label(P(4.2, 0, 0), "x", "#e6c77a", 6, 4);
+    label(P(0, 3.2, 0), "y", "#e6c77a", 6, 4);
+    label(P(0, 0, 3.4), "z", "#e6c77a", 6, -4);
+    label(P(u[0], u[1], 0), "u", "#f3e2b0", 8, 0);
+    label(P(v[0], v[1], 0), "v", "#7dcea0", 8, 0);
+    label(P(0, 0, nz), "u × v", "#e6c77a", 8, 0);
+    note.textContent = "|u × v| = |u| |v| sin θ = " + Math.abs(nz).toFixed(2).replace(".", ",");
+  };
+
+  thetaEl.addEventListener("input", draw);
+  yawEl.addEventListener("input", draw);
+  draw();
+}
+
 function mountSmartMultiplication(root) {
   root.innerHTML = widgetShell(
     "Slim rekenen met vermenigvuldigen",
