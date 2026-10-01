@@ -1,1 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420"><rect width="800" height="420" fill="white"/><g stroke="#222" stroke-width="3" fill="none"><line x1="90" y1="350" x2="740" y2="350"/><line x1="90" y1="350" x2="90" y2="55"/><path d="M120 325 Q300 280 450 205 T710 75"/></g><line x1="170" y1="298" x2="620" y2="116" stroke="#555" stroke-width="4"/><circle cx="170" cy="298" r="7" fill="#222"/><circle cx="620" cy="116" r="7" fill="#222"/><line x1="170" y1="330" x2="620" y2="330" stroke="#777" stroke-width="2"/><line x1="170" y1="322" x2="170" y2="338" stroke="#777" stroke-width="2"/><line x1="620" y1="322" x2="620" y2="338" stroke="#777" stroke-width="2"/><line x1="150" y1="298" x2="150" y2="116" stroke="#777" stroke-width="2"/><line x1="142" y1="298" x2="158" y2="298" stroke="#777" stroke-width="2"/><line x1="142" y1="116" x2="158" y2="116" stroke="#777" stroke-width="2"/><g font-family="Arial,sans-serif" font-size="24" fill="#222"><text x="155" y="375">x₁</text><text x="605" y="375">x₂</text><text x="355" y="360">Δx</text><text x="105" y="215">Δy</text><text x="315" y="190">secant</text><text x="665" y="385">x</text><text x="55" y="65">y</text></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+  <title id="title">Gemiddelde verandering</title>
+  <desc id="desc">Twee punten op een grafiek. De snijlijn ertussen heeft helling delta y gedeeld door delta x: de gemiddelde verandering.</desc>
+  <rect width="900" height="540" fill="#161410"/>
+  <text x="450" y="40" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="26">Gemiddelde verandering</text>
+  <defs>
+    <marker id="ax" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#8a7a58"/>
+    </marker>
+  </defs>
+  <g transform="translate(70,0)">
+    <line x1="80" y1="400" x2="760" y2="400" stroke="#8a7a58" stroke-width="2" marker-end="url(#ax)"/>
+    <line x1="80" y1="400" x2="80" y2="70" stroke="#8a7a58" stroke-width="2" marker-end="url(#ax)"/>
+    <text x="772" y="406" fill="#e6c77a" font-family="Georgia, serif" font-size="20">x</text>
+    <text x="92" y="64" fill="#e6c77a" font-family="Georgia, serif" font-size="20">y</text>
+
+    <!-- één vloeiende boog, boven de snijlijn, door beide punten -->
+    <path d="M110 368 C155 358 185 340 220 312 C354 206 530 174 620 150 C700 129 745 112 780 96" fill="none" stroke="#cbb98a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- driehoek: Δx en Δy raken de snijlijn -->
+    <line x1="220" y1="312" x2="620" y2="312" stroke="#7dcea0" stroke-width="2.5"/>
+    <line x1="620" y1="312" x2="620" y2="150" stroke="#f3e2b0" stroke-width="2.5"/>
+    <path d="M600 312 L600 292 L620 292" fill="none" stroke="#cbb98a" stroke-width="2"/>
+
+    <!-- snijlijn -->
+    <line x1="220" y1="312" x2="620" y2="150" stroke="#e6c77a" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="220" cy="312" r="6" fill="#f7edd6"/>
+    <circle cx="620" cy="150" r="6" fill="#f7edd6"/>
+
+    <line x1="220" y1="400" x2="220" y2="394" stroke="#8a7a58" stroke-width="2"/>
+    <line x1="620" y1="400" x2="620" y2="394" stroke="#8a7a58" stroke-width="2"/>
+
+    <text x="220" y="428" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="18">x₁</text>
+    <text x="620" y="428" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="18">x₂</text>
+    <text x="400" y="348" text-anchor="middle" fill="#7dcea0" font-family="Georgia, serif" font-size="20">Δx</text>
+    <text x="648" y="240" fill="#f3e2b0" font-family="Georgia, serif" font-size="20">Δy</text>
+    <rect x="352" y="268" width="96" height="26" rx="6" fill="#161410"/>
+    <text x="400" y="286" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="18">snijlijn</text>
+    <text x="188" y="300" text-anchor="end" fill="#f7edd6" font-family="Georgia, serif" font-size="16">(x₁, y₁)</text>
+    <text x="590" y="138" text-anchor="end" fill="#f7edd6" font-family="Georgia, serif" font-size="16">(x₂, y₂)</text>
+  </g>
+  <text x="450" y="500" text-anchor="middle" fill="#fff6df" font-family="Georgia, serif" font-size="22">gemiddelde verandering = Δy / Δx</text>
+</svg>

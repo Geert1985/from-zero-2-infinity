@@ -2782,6 +2782,109 @@ function mountPercentageBar(root) {
   resizeCanvas();
 }
 
+function mountMatrixProduct(root) {
+  const A = [[2, 1, 3], [4, 0, -1]];
+  const B = [[5, 2], [1, 3], [0, 4]];
+  const cells = [[0, 0], [0, 1], [1, 0], [1, 1]];
+
+  root.innerHTML = widgetShell(
+    "Matrixvermenigvuldiging",
+    "Kies een element van AB. De rij van A en de kolom van B lichten op.",
+    `<style>
+      .mp-boards { display: flex; flex-wrap: wrap; gap: 18px 28px; justify-content: center; margin-top: 8px; }
+      .mp-board { text-align: center; }
+      .mp-board h3 { margin: 0 0 8px; font-family: Georgia, serif; font-weight: 500; font-size: 1.05rem; }
+      .mp-a { color: #e6c77a; }
+      .mp-b { color: #7dcea0; }
+      .mp-c { color: #f3e2b0; }
+      .mp-grid { display: inline-grid; gap: 6px; padding: 10px 14px; border-left: 2px solid currentColor; border-right: 2px solid currentColor; }
+      .mp-grid span { min-width: 2.4rem; height: 2.2rem; display: grid; place-items: center; border-radius: 8px; font-family: Georgia, serif; font-size: 1.35rem; color: #fff6df; }
+      .mp-note { text-align: center; color: #cbb98a; margin: 0; }
+    </style>
+    <div class="mp-boards">
+      <div class="mp-board"><h3 class="mp-a">A</h3><div class="mp-grid mp-a" data-m="A"></div></div>
+      <div class="mp-board"><h3 class="mp-b">B</h3><div class="mp-grid mp-b" data-m="B"></div></div>
+      <div class="mp-board"><h3 class="mp-c">AB</h3><div class="mp-grid mp-c" data-m="C"></div></div>
+    </div>
+    <div class="widget-controls">
+      <label>element <input type="range" min="1" max="4" step="1" value="1" data-k="k"> <output data-o="k">1</output></label>
+    </div>
+    <p class="widget-readout"></p>
+    <p class="mp-note"></p>`
+  );
+
+  const gridA = root.querySelector("[data-m=A]");
+  const gridB = root.querySelector("[data-m=B]");
+  const gridC = root.querySelector("[data-m=C]");
+  gridA.style.gridTemplateColumns = "repeat(3, 2.4rem)";
+  gridB.style.gridTemplateColumns = "repeat(2, 2.4rem)";
+  gridC.style.gridTemplateColumns = "repeat(2, 2.6rem)";
+
+  const fmt = (n) => (n < 0 ? "−" + (-n) : String(n));
+  const cell = (n) => {
+    const s = document.createElement("span");
+    s.textContent = fmt(n);
+    return s;
+  };
+
+  A.flat().forEach((n) => gridA.appendChild(cell(n)));
+  B.forEach((row) => row.forEach((n) => gridB.appendChild(cell(n))));
+  for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < 2; j++) {
+      const s = document.createElement("span");
+      s.dataset.i = String(i);
+      s.dataset.j = String(j);
+      gridC.appendChild(s);
+    }
+  }
+
+  const range = root.querySelector("[data-k=k]");
+  const note = root.querySelector(".widget-readout");
+  const hint = root.querySelector(".mp-note");
+
+  const draw = () => {
+    const k = Number(range.value) - 1;
+    const i = cells[k][0];
+    const j = cells[k][1];
+    root.querySelector("[data-o=k]").textContent = String(k + 1);
+
+    Array.from(gridA.children).forEach((el, n) => {
+      el.style.background = Math.floor(n / 3) === i ? "rgba(230,199,122,0.22)" : "transparent";
+    });
+    Array.from(gridB.children).forEach((el, n) => {
+      el.style.background = n % 2 === j ? "rgba(125,206,160,0.22)" : "transparent";
+    });
+
+    const parts = A[i].map((a, t) => a * B[t][j]);
+    const sum = parts.reduce((x, y) => x + y, 0);
+
+    Array.from(gridC.children).forEach((el) => {
+      const r = Number(el.dataset.i);
+      const c = Number(el.dataset.j);
+      let v = 0;
+      for (let t = 0; t < 3; t++) v += A[r][t] * B[t][c];
+      el.textContent = fmt(v);
+      el.style.background = r === i && c === j ? "rgba(243,226,176,0.28)" : "transparent";
+      el.style.boxShadow = r === i && c === j ? "inset 0 0 0 1.5px #e6c77a" : "none";
+    });
+
+    const terms = A[i].map((a, t) => {
+      const b = B[t][j];
+      const left = a < 0 ? "(" + fmt(a) + ")" : fmt(a);
+      const right = b < 0 ? "(" + fmt(b) + ")" : fmt(b);
+      return left + " · " + right;
+    }).join(" + ");
+
+    note.textContent = terms + " = " + parts.map(fmt).join(" + ") + " = " + fmt(sum);
+    hint.textContent = "Rij " + (i + 1) + " van A maal kolom " + (j + 1) + " van B.";
+  };
+
+  range.addEventListener("input", draw);
+  draw();
+}
+
+
+
 function mountPlot(root) {
   root.innerHTML = widgetShell("Functieplot", "Sleep a en b. Zet de parabool aan voor x².",
     `<canvas></canvas>
@@ -3238,6 +3341,7 @@ const WIDGET_BUILDERS = {
   sine: mountSine,
   lineGraph:mountLineGraph,
   parabolaGraph:mountParabolaGraph,
+  matrixProduct:mountMatrixProduct,
   crossProduct:mountCrossProduct
 };
 

@@ -1888,10 +1888,7 @@ const MILESTONES_4 = [
 
       <h3>Van rij en kolom naar één getal</h3>
 
-      <div class="theory-image">
-        <img src="assets/matrix-vermenigvuldiging.svg" alt="Een rij van de eerste matrix en een kolom van de tweede matrix worden gekoppeld via een inwendig product om één element van het product te vormen.">
-      </div>
-
+      
       <p>
         Kijk naar de berekening van één uitvoercomponent:
       </p>
@@ -1969,54 +1966,7 @@ const MILESTONES_4 = [
 
       <h3>Een volledig matrixproduct stap voor stap</h3>
 
-      <p>
-        Neem:
-      </p>
-
-      <p class="formula">A = \\begin{pmatrix}2 & 1 \\\\ 3 & 2\\end{pmatrix}</p>
-
-      <p class="formula">B = \\begin{pmatrix}1 & 2 \\\\ 0 & 1\\end{pmatrix}</p>
-
-      <p>
-        Beide matrices zijn <span class="formula-inline">2 × 2</span>, dus het
-        product kan worden gevormd.
-      </p>
-
-      <p>
-        Voor het element linksboven nemen we de eerste rij van
-        <span class="formula-inline">A</span> en de eerste kolom van
-        <span class="formula-inline">B</span>:
-      </p>
-
-      <p class="formula">2 × 1 + 1 × 0 = 2</p>
-
-      <p>
-        Voor het element rechtsboven:
-      </p>
-
-      <p class="formula">2 × 2 + 1 × 1 = 5</p>
-
-      <p>
-        Voor het element linksonder:
-      </p>
-
-      <p class="formula">3 × 1 + 2 × 0 = 3</p>
-
-      <p>
-        En voor het element rechtsonder:
-      </p>
-
-      <p class="formula">3 × 2 + 2 × 1 = 8</p>
-
-      <p>
-        Dus:
-      </p>
-
-      <p class="formula">AB = \\begin{pmatrix}2 & 5 \\\\ 3 & 8\\end{pmatrix}</p>
-
-      <p>
-        Elk element van het product heeft dus zijn eigen rij-kolomberekening.
-      </p>
+      <div data-widget="matrixProduct"></div>
 
       <h3>Waarom zijn de afmetingen zo belangrijk?</h3>
 
