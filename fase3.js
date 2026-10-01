@@ -5,7 +5,7 @@ const MILESTONES_3 = [
   {
   id: "3.1",
   title: "Verandering & gemiddelde snelheid",
-  goal: "Hoe meten we verandering?",
+  goal: "Hoe meten we verandering tussen twee punten?",
   theory: /* html */`
     <h2>Verandering & gemiddelde snelheid</h2>
 
@@ -641,7 +641,7 @@ const MILESTONES_3 = [
   {
   id: "3.2",
   title: "Het idee van de limiet",
-  goal: "Wat gebeurt er als we steeds dichterbij komen?",
+  goal: "Wat gebeurt er als we steeds dichter bij een punt komen?",
   theory: /* html */`
     <h2>Het idee van de limiet</h2>
 
@@ -1431,7 +1431,7 @@ const MILESTONES_3 = [
   {
   id: "3.3",
   title: "Continuïteit",
-  goal: "Wanneer vormt een functie één ononderbroken geheel?",
+  goal: "Wanneer verandert een functie zonder sprongen of gaten?",
   theory: /* html */`
     <h2>Continuïteit</h2>
 
@@ -2907,7 +2907,7 @@ const MILESTONES_3 = [
   {
   id: "3.5",
   title: "Afgeleiden van basisfuncties",
-  goal: "Kunnen we veranderingssnelheden berekenen?",
+  goal: "Hoe berekenen we afgeleiden van basisfuncties?",
   theory: /* html */`
     <h2>Afgeleiden van basisfuncties</h2>
 
@@ -3701,7 +3701,7 @@ const MILESTONES_3 = [
   {
   id: "3.7",
   title: "Afgeleiden van belangrijke functies",
-  goal: "Hoe laten we exponentiële, logaritmische en goniometrische functies veranderen?",
+  goal: "Hoe differentiëren we exponentiële, logaritmische en goniometrische functies?",
   theory: /* html */`
     <h2>Afgeleiden van belangrijke functies</h2>
 
@@ -6494,7 +6494,7 @@ const MILESTONES_3 = [
   {
     id: "3.12",
     title: "Toepassingen van integralen",
-    goal: "Hoe tellen we oneindig veel kleine bijdragen op?",
+    goal: "Wat kunnen we met integralen?",
     theory: `
     <h2>Toepassingen van integralen</h2>
 
@@ -8205,7 +8205,7 @@ const MILESTONES_3 = [
   {
     id: "3.14",
     title: "Multivariabele calculus & vectorvelden",
-    goal: "Hoe beschrijven we verandering in een ruimte?",
+    goal: "Hoe beschrijven we verandering in verschillende richtingen?",
     theory: `
     <h2>Multivariabele calculus & vectorvelden</h2>
 
