@@ -8233,12 +8233,12 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f
+      \\nabla f
       =
-      \\\\left(
-      \\\\frac{\\\\partial f}{\\\\partial x},
-      \\\\frac{\\\\partial f}{\\\\partial y}
-      \\\\right)
+      \\left(
+      \\frac{\\partial f}{\\partial x},
+      \\frac{\\partial f}{\\partial y}
+      \\right)
     </p>
 
     <p>
@@ -8276,11 +8276,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial x}
+      \\frac{\\partial f}{\\partial x}
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial y}
+      \\frac{\\partial f}{\\partial y}
     </p>
 
     <p>
@@ -8308,7 +8308,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{u}=(u_x,u_y)
+      \\mathbf{u}=(u_x,u_y)
     </p>
 
     <p>
@@ -8322,7 +8322,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{u}=(1,0)
+      \\mathbf{u}=(1,0)
     </p>
 
     <p>
@@ -8330,7 +8330,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{u}=(0,1)
+      \\mathbf{u}=(0,1)
     </p>
 
     <p>
@@ -8338,7 +8338,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{u}=(1,1)
+      \\mathbf{u}=(1,1)
     </p>
 
     <p>
@@ -8371,14 +8371,14 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Als <span class="formula-inline">\\\\mathbf{u}</span> een eenheidsvector
+      Als <span class="formula-inline">\\mathbf{u}</span> een eenheidsvector
       is, schrijven we:
     </p>
 
     <p class="formula">
-      D_{\\\\mathbf{u}}f
+      D_{\\mathbf{u}}f
       =
-      \\\\nabla f\\\\cdot\\\\mathbf{u}
+      \\nabla f\\cdot\\mathbf{u}
     </p>
 
     <p>
@@ -8388,7 +8388,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      (a,b)\\\\cdot(c,d)=ac+bd
+      (a,b)\\cdot(c,d)=ac+bd
     </p>
 
     <p>
@@ -8413,12 +8413,12 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Neem een eenheidsvector <span class="formula-inline">\\\\mathbf{u}</span>.
+      Neem een eenheidsvector <span class="formula-inline">\\mathbf{u}</span>.
       Dan is:
     </p>
 
     <p class="formula">
-      D_{\\\\mathbf{u}}f=\\\\nabla f\\\\cdot\\\\mathbf{u}
+      D_{\\mathbf{u}}f=\\nabla f\\cdot\\mathbf{u}
     </p>
 
     <p>
@@ -8461,7 +8461,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f=(2x,2y)
+      \\nabla f=(2x,2y)
     </p>
 
     <p>
@@ -8469,7 +8469,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f(1,2)=(2,4)
+      \\nabla f(1,2)=(2,4)
     </p>
 
     <p>
@@ -8516,7 +8516,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{F}(x,y)
+      \\mathbf{F}(x,y)
       =
       (P(x,y),Q(x,y))
     </p>
@@ -8538,7 +8538,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{F}(x,y)=(x,y)
+      \\mathbf{F}(x,y)=(x,y)
     </p>
 
     <p>
@@ -8546,7 +8546,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{F}(1,0)=(1,0)
+      \\mathbf{F}(1,0)=(1,0)
     </p>
 
     <p>
@@ -8554,7 +8554,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{F}(0,2)=(0,2)
+      \\mathbf{F}(0,2)=(0,2)
     </p>
 
     <p>
@@ -8562,7 +8562,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{F}(-1,-1)=(-1,-1)
+      \\mathbf{F}(-1,-1)=(-1,-1)
     </p>
 
     <p>
@@ -8587,7 +8587,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{v}(x,y)
+      \\mathbf{v}(x,y)
     </p>
 
     <p>
@@ -8630,7 +8630,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{F}(x,y,z)
+      \\mathbf{F}(x,y,z)
     </p>
 
     <p>
@@ -8652,7 +8652,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{r}(t)
+      \\mathbf{r}(t)
     </p>
 
     <p>
@@ -8660,7 +8660,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{v}(t)=\\\\frac{d\\\\mathbf{r}}{dt}
+      \\mathbf{v}(t)=\\frac{d\\mathbf{r}}{dt}
     </p>
 
     <p>
@@ -8668,7 +8668,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{d\\\\mathbf{r}}{dt}=\\\\mathbf{F}(\\\\mathbf{r})
+      \\frac{d\\mathbf{r}}{dt}=\\mathbf{F}(\\mathbf{r})
     </p>
 
     <p>
@@ -8714,7 +8714,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{F}(x,y)=(P(x,y),Q(x,y))
+      \\mathbf{F}(x,y)=(P(x,y),Q(x,y))
     </p>
 
     <p>
@@ -8722,11 +8722,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\operatorname{div}\\\\mathbf{F}
+      \\operatorname{div}\\mathbf{F}
       =
-      \\\\frac{\\\\partial P}{\\\\partial x}
+      \\frac{\\partial P}{\\partial x}
       +
-      \\\\frac{\\\\partial Q}{\\\\partial y}
+      \\frac{\\partial Q}{\\partial y}
     </p>
 
     <p>
@@ -8760,11 +8760,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\operatorname{curl}\\\\mathbf{F}
+      \\operatorname{curl}\\mathbf{F}
       =
-      \\\\frac{\\\\partial Q}{\\\\partial x}
+      \\frac{\\partial Q}{\\partial x}
       -
-      \\\\frac{\\\\partial P}{\\\\partial y}
+      \\frac{\\partial P}{\\partial y}
     </p>
 
     <p>
@@ -8790,7 +8790,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\mathbf{F}=\\\\nabla f
+      \\mathbf{F}=\\nabla f
     </p>
 
     <p>
@@ -8802,11 +8802,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{scalaire functie}
-      \\\\rightarrow
-      \\\\text{gradiënt}
-      \\\\rightarrow
-      \\\\text{vectorveld}
+      \\text{scalaire functie}
+      \\rightarrow
+      \\text{gradiënt}
+      \\rightarrow
+      \\text{vectorveld}
     </p>
 
     <p>
@@ -8886,13 +8886,13 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{één variabele}
-      \\\\rightarrow
-      \\\\text{meerdere variabelen}
-      \\\\rightarrow
-      \\\\text{richtingsverandering}
-      \\\\rightarrow
-      \\\\text{vectorvelden}
+      \\text{één variabele}
+      \\rightarrow
+      \\text{meerdere variabelen}
+      \\rightarrow
+      \\text{richtingsverandering}
+      \\rightarrow
+      \\text{vectorvelden}
     </p>
 
     <h3>Wat we bewust nog niet doen</h3>
@@ -8948,7 +8948,7 @@ const MILESTONES_3 = [
       </li>
       <li>
         Vergeten dat de formule voor een richtingsafgeleide
-        <span class="formula-inline">D_{\\\\mathbf{u}}f=\\\\nabla f\\\\cdot\\\\mathbf{u}</span>
+        <span class="formula-inline">D_{\\mathbf{u}}f=\\nabla f\\cdot\\mathbf{u}</span>
         een eenheidsrichting veronderstelt.
       </li>
       <li>
@@ -8986,7 +8986,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\Delta y}{\\\\Delta x}
+      \\frac{\\Delta y}{\\Delta x}
     </p>
 
     <p>
@@ -9003,7 +9003,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx
+      \\int_a^b f(x)\\,dx
     </p>
 
     <p>
@@ -9025,12 +9025,12 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f
+      \\nabla f
       =
-      \\\\left(
-      \\\\frac{\\\\partial f}{\\\\partial x},
-      \\\\frac{\\\\partial f}{\\\\partial y}
-      \\\\right)
+      \\left(
+      \\frac{\\partial f}{\\partial x},
+      \\frac{\\partial f}{\\partial y}
+      \\right)
     </p>
 
     <p>
@@ -9041,17 +9041,17 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{functie}
-      \\\\rightarrow
-      \\\\text{afgeleide}
-      \\\\rightarrow
-      \\\\text{integraal}
-      \\\\rightarrow
-      \\\\text{meerdere variabelen}
-      \\\\rightarrow
-      \\\\text{richtingsverandering}
-      \\\\rightarrow
-      \\\\text{vectorveld}
+      \\text{functie}
+      \\rightarrow
+      \\text{afgeleide}
+      \\rightarrow
+      \\text{integraal}
+      \\rightarrow
+      \\text{meerdere variabelen}
+      \\rightarrow
+      \\text{richtingsverandering}
+      \\rightarrow
+      \\text{vectorveld}
     </p>
 
     <div class="callout">
