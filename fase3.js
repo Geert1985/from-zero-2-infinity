@@ -4852,11 +4852,787 @@ const MILESTONES_3 = [
     id: "3.10",
     title: "De fundamentele stelling van de calculus",
     goal: "Waarom zijn afgeleiden en integralen verbonden?",
-    theory: ``
-  },
+    theory: /* html */\`
+    <h2>De fundamentele stelling van de calculus</h2>
 
-  {
-    id: "3.11",
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Waarom lijkt differentiëren het omgekeerde van integreren?</li>
+      <li>Hoe kunnen we een integraal laten afhangen van een variabele bovengrens?</li>
+      <li>Waarom levert de afgeleide van zo'n accumulatiefunctie opnieuw de oorspronkelijke functie op?</li>
+      <li>Wat is een primitieve functie?</li>
+      <li>Hoe kunnen we een bepaalde integraal berekenen zonder alle rechthoeken afzonderlijk op te tellen?</li>
+      <li>Waarom is het verschil tussen twee waarden van een primitieve functie precies de totale verandering?</li>
+      <li>Hoe vormt dit de brug naar het echte integraalrekenen van 3.11?</li>
+    </ul>
+
+    <p>
+      In 3.9 hebben we de integraal opgebouwd vanuit kleine bijdragen.
+      We zagen dat we een veranderingssnelheid over een interval kunnen
+      optellen om een totale verandering te krijgen.
+    </p>
+
+    <div class="callout">
+      <p><strong>In 3.8:</strong></p>
+      <p>hoeveelheid → veranderingssnelheid</p>
+      <p><strong>In 3.9:</strong></p>
+      <p>veranderingssnelheid → totale verandering</p>
+      <p><strong>Nu:</strong></p>
+      <p>we onderzoeken waarom deze twee bewerkingen zo nauw met elkaar verbonden zijn.</p>
+    </div>
+
+    <h3>Een verrassende omkering</h3>
+
+    <p>
+      We weten uit 3.4 dat de afgeleide een veranderingssnelheid beschrijft.
+      Als <span class="formula-inline">s(t)</span> de positie van een voorwerp
+      geeft, dan is de snelheid:
+    </p>
+
+    <p class="formula">
+      s'(t)=v(t)
+    </p>
+
+    <p>
+      In 3.9 zagen we juist dat we uit de snelheid de totale verandering
+      in positie kunnen terugvinden:
+    </p>
+
+    <p class="formula">
+      \\\\Delta s=\\\\int_a^b v(t)\\\\,dt
+    </p>
+
+    <p>
+      Dat suggereert iets belangrijks:
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Differentiëren gaat van een hoeveelheid naar haar veranderingssnelheid.
+      </strong></p>
+      <p><strong>
+        Integreren bouwt een hoeveelheid weer op uit haar veranderingssnelheid.
+      </strong></p>
+    </div>
+
+    <p>
+      De fundamentele stelling van de calculus maakt deze intuïtie exact.
+    </p>
+
+    <h3>Van een integraal een functie maken</h3>
+
+    <p>
+      In 3.9 gebruikten we bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(t)\\\\,dt
+    </p>
+
+    <p>
+      Dit levert één getal op: de totale bijdrage van
+      <span class="formula-inline">a</span> tot <span class="formula-inline">b</span>.
+    </p>
+
+    <p>
+      Nu veranderen we één ding.
+      We houden de ondergrens vast, maar laten de bovengrens variëren.
+    </p>
+
+    <p class="formula">
+      F(x)=\\\\int_a^x f(t)\\\\,dt
+    </p>
+
+    <p>
+      Voor iedere waarde van <span class="formula-inline">x</span> krijgen we
+      nu een andere integraal en dus een andere uitkomst.
+      Daardoor is <span class="formula-inline">F(x)</span> een functie.
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Een bepaalde integraal is normaal een getal.
+        Als één grens zelf varieert, kan die integraal een functie van die grens worden.
+      </strong></p>
+    </div>
+
+    <h3>Een concreet voorbeeld</h3>
+
+    <p>
+      Neem de constante veranderingssnelheid:
+    </p>
+
+    <p class="formula">
+      f(t)=2
+    </p>
+
+    <p>
+      We definiëren:
+    </p>
+
+    <p class="formula">
+      F(x)=\\\\int_0^x 2\\\\,dt
+    </p>
+
+    <p>
+      Dit betekent: hoeveel totale verandering hebben we opgebouwd
+      vanaf <span class="formula-inline">t=0</span> tot aan het punt
+      <span class="formula-inline">t=x</span>?
+    </p>
+
+    <p>
+      Omdat de snelheid constant 2 is, weten we uit de rechthoekinterpretatie
+      van 3.9 dat:
+    </p>
+
+    <p class="formula">
+      F(x)=2x
+    </p>
+
+    <p>
+      En dus:
+    </p>
+
+    <p class="formula">
+      F'(x)=2
+    </p>
+
+    <p>
+      De afgeleide van de opgebouwde hoeveelheid is precies de oorspronkelijke
+      veranderingssnelheid.
+    </p>
+
+    <div class="callout">
+      <p><strong>Dit is geen toeval.</strong></p>
+      <p>
+        Het is precies de eerste helft van de fundamentele stelling van de calculus.
+      </p>
+    </div>
+
+    <h3>Waarom werkt dit?</h3>
+
+    <p>
+      We kunnen het idee begrijpen zonder meteen een formeel bewijs uit te werken.
+    </p>
+
+    <p>
+      Stel dat:
+    </p>
+
+    <p class="formula">
+      F(x)=\\\\int_a^x f(t)\\\\,dt
+    </p>
+
+    <p>
+      We verhogen <span class="formula-inline">x</span> een klein beetje,
+      met <span class="formula-inline">h</span>.
+      Dan ontstaat een extra stukje integraal:
+    </p>
+
+    <p class="formula">
+      F(x+h)-F(x)
+      =
+      \\\\int_x^{x+h} f(t)\\\\,dt
+    </p>
+
+    <p>
+      Voor een heel klein interval is die extra bijdrage ongeveer
+      de hoogte van de functie maal de breedte:
+    </p>
+
+    <p class="formula">
+      F(x+h)-F(x) \\\\approx f(x)h
+    </p>
+
+    <p>
+      Deel beide kanten door <span class="formula-inline">h</span>:
+    </p>
+
+    <p class="formula">
+      \\\\frac{F(x+h)-F(x)}{h}
+      \\\\approx
+      f(x)
+    </p>
+
+    <p>
+      Wanneer <span class="formula-inline">h</span> naar nul gaat,
+      wordt de linkerkant de definitie van de afgeleide.
+      Daardoor krijgen we:
+    </p>
+
+    <p class="formula">
+      F'(x)=f(x)
+    </p>
+
+    <p>
+      De continuïteit van <span class="formula-inline">f</span> zorgt ervoor
+      dat deze limiet inderdaad naar <span class="formula-inline">f(x)</span>
+      gaat. We hebben hiermee de intuïtieve kern van het eerste deel van
+      de stelling gezien. De formele stelling geldt bijvoorbeeld wanneer
+      <span class="formula-inline">f</span> continu is op het betreffende interval.
+    </p>
+
+    <h3>De eerste helft van de fundamentele stelling</h3>
+
+    <p>
+      We kunnen het resultaat nu formeel formuleren.
+    </p>
+
+    <div class="callout">
+      <p><strong>Fundamentele stelling van de calculus — deel 1</strong></p>
+      <p>
+        Als <span class="formula-inline">f</span> continu is en
+      </p>
+      <p class="formula">
+        F(x)=\\\\int_a^x f(t)\\\\,dt
+      </p>
+      <p>
+        dan geldt:
+      </p>
+      <p class="formula">
+        F'(x)=f(x)
+      </p>
+    </div>
+
+    <p>
+      Let op de richting:
+    </p>
+
+    <p class="formula">
+      \\\\text{integraal als accumulatie}
+      \\\\rightarrow
+      \\\\text{afgeleide}
+    </p>
+
+    <p>
+      De afgeleide haalt als het ware de oorspronkelijke veranderingssnelheid
+      weer uit de opgebouwde hoeveelheid.
+    </p>
+
+    <h3>Een primitieve functie</h3>
+
+    <p>
+      We kunnen dezelfde relatie ook vanuit de andere richting bekijken.
+    </p>
+
+    <p>
+      Stel dat we een functie <span class="formula-inline">f(x)</span> hebben
+      en een andere functie <span class="formula-inline">F(x)</span> waarvoor:
+    </p>
+
+    <p class="formula">
+      F'(x)=f(x)
+    </p>
+
+    <p>
+      Dan noemen we <span class="formula-inline">F</span> een
+      <strong>primitieve functie</strong> van <span class="formula-inline">f</span>.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      F(x)=x^2
+    </p>
+
+    <p>
+      heeft als afgeleide:
+    </p>
+
+    <p class="formula">
+      F'(x)=2x
+    </p>
+
+    <p>
+      Dus <span class="formula-inline">x^2</span> is een primitieve van
+      <span class="formula-inline">2x</span>.
+    </p>
+
+    <div class="callout">
+      <p><strong>Primitieve = de omgekeerde vraag van differentiëren.</strong></p>
+      <p>
+        Bij differentiëren vragen we:
+        <em>wat is de veranderingssnelheid van deze functie?</em>
+      </p>
+      <p>
+        Bij primitiveren vragen we:
+        <em>welke functie heeft deze veranderingssnelheid?</em>
+      </p>
+    </div>
+
+    <h3>Van de primitieve naar een bepaalde integraal</h3>
+
+    <p>
+      Nu komt de tweede helft van de fundamentele stelling.
+      Stel dat <span class="formula-inline">F</span> een primitieve is van
+      <span class="formula-inline">f</span>:
+    </p>
+
+    <p class="formula">
+      F'(x)=f(x)
+    </p>
+
+    <p>
+      Dan kunnen we de bepaalde integraal van <span class="formula-inline">a</span>
+      tot <span class="formula-inline">b</span> berekenen met alleen de
+      eindpunten:
+    </p>
+
+    <div class="callout">
+      <p><strong>Fundamentele stelling van de calculus — deel 2</strong></p>
+      <p>
+        Als <span class="formula-inline">F</span> een primitieve is van
+        <span class="formula-inline">f</span> op het interval, dan:
+      </p>
+      <p class="formula">
+        \\\\int_a^b f(x)\\\\,dx
+        =
+        F(b)-F(a)
+      </p>
+    </div>
+
+    <p>
+      Dit is een enorme vereenvoudiging.
+      In 3.9 hadden we een limiet van steeds fijnere sommen nodig om de integraal
+      te begrijpen. Dankzij deze stelling kunnen we de waarde van veel integralen
+      rechtstreeks bepalen uit een primitieve functie.
+    </p>
+
+    <h3>Een eenvoudig voorbeeld</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x)=2x
+    </p>
+
+    <p>
+      We weten uit de afgeleiden van 3.5 dat:
+    </p>
+
+    <p class="formula">
+      \\\\frac{d}{dx}(x^2)=2x
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      F(x)=x^2
+    </p>
+
+    <p>
+      is een primitieve van <span class="formula-inline">f(x)=2x</span>.
+      We willen:
+    </p>
+
+    <p class="formula">
+      \\\\int_1^3 2x\\\\,dx
+    </p>
+
+    <p>
+      Volgens deel 2:
+    </p>
+
+    <p class="formula">
+      \\\\int_1^3 2x\\\\,dx
+      =
+      F(3)-F(1)
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      =3^2-1^2
+      =9-1
+      =8
+    </p>
+
+    <p>
+      De integraal is dus 8.
+    </p>
+
+    <p>
+      Geometrisch is dit de gesigneerde oppervlakte onder
+      <span class="formula-inline">f(x)=2x</span> tussen 1 en 3.
+      Maar de stelling laat ons die waarde vinden zonder de rechthoeksommen
+      uit 3.9 opnieuw uit te voeren.
+    </p>
+
+    <h3>Waarom trekken we de eindpunten van elkaar af?</h3>
+
+    <p>
+      Het verschil
+    </p>
+
+    <p class="formula">
+      F(b)-F(a)
+    </p>
+
+    <p>
+      heeft een eenvoudige betekenis.
+      De functie <span class="formula-inline">F</span> bevat als het ware
+      de opgebouwde totale verandering.
+      Door de beginwaarde af te trekken van de eindwaarde houden we alleen
+      de verandering over die tussen <span class="formula-inline">a</span>
+      en <span class="formula-inline">b</span> is opgebouwd.
+    </p>
+
+    <p>
+      Dat sluit rechtstreeks aan bij wat we al eerder zagen:
+    </p>
+
+    <p class="formula">
+      \\\\Delta F=F(b)-F(a)
+    </p>
+
+    <p>
+      Als <span class="formula-inline">F'(x)=f(x)</span>, dan is die verandering
+      precies de integraal van <span class="formula-inline">f</span>:
+    </p>
+
+    <p class="formula">
+      F(b)-F(a)
+      =
+      \\\\int_a^b F'(x)\\\\,dx
+    </p>
+
+    <p>
+      En omdat <span class="formula-inline">F'(x)=f(x)</span>:
+    </p>
+
+    <p class="formula">
+      F(b)-F(a)
+      =
+      \\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <div class="callout">
+      <p><strong>Dit is de kernverbinding:</strong></p>
+      <p>
+        De integraal telt alle kleine veranderingen op.
+        De primitieve beschrijft de opgebouwde hoeveelheid.
+        Het verschil tussen de eind- en beginwaarde geeft de totale verandering.
+      </p>
+    </div>
+
+    <h3>De twee richtingen naast elkaar</h3>
+
+    <p>
+      We kunnen de fundamentele stelling nu als één grote terugkoppeling zien.
+    </p>
+
+    <p class="formula">
+      F(x)
+      \\\\xrightarrow{\\\\text{afgeleide}}
+      F'(x)=f(x)
+    </p>
+
+    <p class="formula">
+      f(x)
+      \\\\xrightarrow{\\\\text{integreren}}
+      F(x)+C
+    </p>
+
+    <p>
+      De eerste pijl zegt:
+      uit een functie halen we haar veranderingssnelheid.
+    </p>
+
+    <p>
+      De tweede pijl zegt:
+      vanuit een veranderingssnelheid kunnen we een familie van primitieve
+      functies terugvinden.
+    </p>
+
+    <p>
+      Voor bepaalde integralen komt daar nog de evaluatieregel bij:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx=F(b)-F(a)
+    </p>
+
+    <div class="callout">
+      <p><strong>De fundamentele stelling verbindt twee werelden.</strong></p>
+      <p>
+        Differentiaalrekening beschrijft lokale verandering.
+      </p>
+      <p>
+        Integraalrekening beschrijft opgetelde verandering.
+      </p>
+      <p>
+        De fundamentele stelling laat zien dat deze twee bewerkingen
+        fundamenteel met elkaar verbonden zijn.
+      </p>
+    </div>
+
+    <h3>Een belangrijke controle: differentieer terug</h3>
+
+    <p>
+      Wanneer we een primitieve hebben gevonden, kunnen we altijd controleren
+      of ze klopt door opnieuw te differentiëren.
+    </p>
+
+    <p>
+      Stel dat we beweren dat:
+    </p>
+
+    <p class="formula">
+      F(x)=\\\\frac{x^3}{3}
+    </p>
+
+    <p>
+      een primitieve is van:
+    </p>
+
+    <p class="formula">
+      f(x)=x^2
+    </p>
+
+    <p>
+      Differentieer:
+    </p>
+
+    <p class="formula">
+      F'(x)=x^2
+    </p>
+
+    <p>
+      De controle klopt dus.
+    </p>
+
+    <div class="callout">
+      <p><strong>Werkregel:</strong></p>
+      <p>
+        Als je een primitieve vindt, differentieer ze opnieuw.
+        Krijg je de oorspronkelijke functie terug, dan heb je de juiste relatie gevonden.
+      </p>
+    </div>
+
+    <h3>Wat gebeurt er met de constante?</h3>
+
+    <p>
+      Bij primitieve functies kunnen meerdere functies dezelfde afgeleide hebben.
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      F(x)=x^2
+    </p>
+
+    <p class="formula">
+      G(x)=x^2+5
+    </p>
+
+    <p>
+      hebben allebei dezelfde afgeleide:
+    </p>
+
+    <p class="formula">
+      F'(x)=G'(x)=2x
+    </p>
+
+    <p>
+      Een constante verdwijnt immers bij differentiëren.
+      Daarom schrijven we de algemene familie van primitieve functies als:
+    </p>
+
+    <p class="formula">
+      F(x)+C
+    </p>
+
+    <p>
+      Voor een <strong>bepaalde integraal</strong> maakt die constante uiteindelijk
+      geen verschil:
+    </p>
+
+    <p class="formula">
+      [F(b)+C]-[F(a)+C]
+      =
+      F(b)-F(a)
+    </p>
+
+    <p>
+      De constante valt weg.
+      Dat is een van de redenen waarom de formule van deel 2 zo eenvoudig werkt.
+    </p>
+
+    <h3>Van totale verandering naar netto verandering</h3>
+
+    <p>
+      De stelling sluit ook aan bij het idee van netto verandering uit 3.9.
+      Als <span class="formula-inline">F'(x)</span> de veranderingssnelheid
+      van een grootheid is, dan:
+    </p>
+
+    <p class="formula">
+      F(b)-F(a)
+      =
+      \\\\int_a^b F'(x)\\\\,dx
+    </p>
+
+    <p>
+      Dit betekent:
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Totale netto verandering =
+        integraal van de veranderingssnelheid.
+      </strong></p>
+    </div>
+
+    <p>
+      Voor beweging is dat bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      s(b)-s(a)
+      =
+      \\\\int_a^b v(t)\\\\,dt
+    </p>
+
+    <p>
+      De integraal van de snelheid geeft dus de verandering in positie.
+      De fundamentele stelling vertelt ons waarom.
+    </p>
+
+    <h3>Wat de stelling niet zegt</h3>
+
+    <p>
+      Het is belangrijk om de stelling niet te verwarren met een algemene
+      truc waarbij iedere integraal automatisch eenvoudig wordt.
+    </p>
+
+    <ul>
+      <li>
+        We moeten nog steeds een geschikte primitieve kunnen vinden.
+      </li>
+      <li>
+        Niet iedere primitieve volgt onmiddellijk uit een bekende afgeleideregel.
+      </li>
+      <li>
+        Bij ingewikkeldere functies zijn technieken nodig om primitiven te vinden.
+      </li>
+      <li>
+        De betekenis van de integraal blijft die van opgetelde bijdragen;
+        de primitieve is een krachtige manier om de waarde ervan te berekenen.
+      </li>
+    </ul>
+
+    <p>
+      Het systematisch vinden van primitieve functies en het toepassen
+      van integratieregels komt daarom pas in 3.11.
+    </p>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        Denken dat een integraal en een primitieve exact hetzelfde begrip zijn.
+      </li>
+      <li>
+        Vergeten dat bij een primitieve de afgeleide gelijk moet zijn aan de oorspronkelijke functie.
+      </li>
+      <li>
+        Bij een bepaalde integraal de volgorde verwarren:
+        <span class="formula-inline">F(b)-F(a)</span>, niet andersom.
+      </li>
+      <li>
+        Denken dat de constante <span class="formula-inline">C</span> de waarde
+        van een bepaalde integraal verandert.
+      </li>
+      <li>
+        Een primitieve niet terug differentiëren om het resultaat te controleren.
+      </li>
+      <li>
+        Denken dat de fundamentele stelling alleen over oppervlakte gaat.
+      </li>
+    </ul>
+
+    <h3>Een vaste werkwijze</h3>
+
+    <ol>
+      <li>Bepaal welke functie je wilt integreren.</li>
+      <li>Zoek een primitieve <span class="formula-inline">F</span> waarvoor <span class="formula-inline">F'(x)=f(x)</span>.</li>
+      <li>Differentieer <span class="formula-inline">F</span> opnieuw als controle.</li>
+      <li>Gebruik bij een bepaalde integraal de grenzen <span class="formula-inline">a</span> en <span class="formula-inline">b</span>.</li>
+      <li>Bereken <span class="formula-inline">F(b)-F(a)</span>.</li>
+      <li>Controleer het teken en interpreteer het resultaat.</li>
+    </ol>
+
+    <h3>De grote ontdekking van Fase 3 tot nu toe</h3>
+
+    <p>
+      We begonnen in 3.1 met een eenvoudige vraag:
+      <strong>hoe verandert iets?</strong>
+    </p>
+
+    <p>
+      Via limieten en afgeleiden leerden we hoe we een ogenblikkelijke
+      veranderingssnelheid kunnen beschrijven.
+    </p>
+
+    <p>
+      In 3.9 draaiden we de richting om:
+      we telden kleine veranderingen op met een integraal.
+    </p>
+
+    <p>
+      Nu zien we waarom die twee ideeën bij elkaar horen.
+    </p>
+
+    <p class="formula">
+      \\\\text{hoeveelheid}
+      \\\\xrightarrow{\\\\text{differentieer}}
+      \\\\text{veranderingssnelheid}
+    </p>
+
+    <p class="formula">
+      \\\\text{veranderingssnelheid}
+      \\\\xrightarrow{\\\\text{integreer}}
+      \\\\text{totale verandering}
+    </p>
+
+    <p>
+      En de fundamentele stelling maakt deze twee pijlen wiskundig met elkaar verbonden.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De fundamentele stelling van de calculus zegt in essentie dat
+        differentiëren en integreren elkaars omgekeerde bewerkingen zijn,
+        onder de juiste voorwaarden.
+      </p>
+      <p>
+        Deel 1 laat zien dat de afgeleide van een accumulatiefunctie
+        de oorspronkelijke functie teruggeeft:
+      </p>
+      <p class="formula">
+        \\\\frac{d}{dx}\\\\left(\\\\int_a^x f(t)\\\\,dt\\\\right)=f(x)
+      </p>
+      <p>
+        Deel 2 geeft de praktische evaluatieregel:
+      </p>
+      <p class="formula">
+        \\\\int_a^b f(x)\\\\,dx=F(b)-F(a)
+      </p>
+      <p>
+        In 3.11 gebruiken we deze verbinding om integralen systematisch
+        te leren berekenen.
+      </p>
+    </div>
+  \`
+},id: "3.11",
     title: "Integraalrekenen",
     goal: "Hoe berekenen we integralen?",
     theory: ``
