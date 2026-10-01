@@ -1,4 +1,4 @@
-/* Formal milestone-test engine. Test content lives in exam-bank-fase1.js. */
+/* Formal milestone-test engine. Test content lives in exam-bank-fase1.js and exam-bank-fase2.js. */
 const EXAM_SESSION = {};
 const MILESTONE_EXAM_SIZE = 12;
 const EXAM_RECENT_KEY = "fz2i_exam_recent_v1";
@@ -15,6 +15,9 @@ function examInstantiate(bank) {
 function examBankFor(phaseId, mid) {
   if (Number(phaseId) === 1 && typeof EXAM_BANKS_1 !== "undefined" && EXAM_BANKS_1[mid]) {
     return EXAM_BANKS_1[mid]();
+  }
+  if (Number(phaseId) === 2 && typeof EXAM_BANKS_2 !== "undefined" && EXAM_BANKS_2[mid]) {
+    return EXAM_BANKS_2[mid]();
   }
   const m = typeof getMilestone === "function" ? getMilestone(mid) : null;
   return m ? (m.exam || []) : [];
