@@ -1800,7 +1800,729 @@ const MILESTONES_4 = [
     `
   },
 
-  { id: "4.5", title: "Matrixvermenigvuldiging & compositie", goal: "Hoe combineren we lineaire bewerkingen stap voor stap?", theory: `` },
+  { id: "4.5", title: "Matrixvermenigvuldiging & compositie", goal: "Hoe combineren we lineaire bewerkingen stap voor stap?", theory: `
+      <h2>Matrixvermenigvuldiging & compositie</h2>
+
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Waarom matrixvermenigvuldiging meer is dan getallen element voor element vermenigvuldigen.</li>
+        <li>Hoe een matrix op een vector kan werken.</li>
+        <li>Hoe de regel “rij maal kolom” ontstaat.</li>
+        <li>Wanneer twee matrices met elkaar vermenigvuldigd kunnen worden.</li>
+        <li>Waarom de volgorde van matrixvermenigvuldiging belangrijk is.</li>
+        <li>Hoe matrixvermenigvuldiging compositie van bewerkingen beschrijft.</li>
+        <li>Welke eigenschappen van gewone vermenigvuldiging behouden blijven en welke niet.</li>
+        <li>Waarom dit de brug vormt naar lineaire stelsels en lineaire transformaties.</li>
+      </ul>
+
+      <p>
+        In 4.4 leerden we matrices lezen, hun afmetingen bepalen, optellen,
+        aftrekken, schalen en transponeren. We zagen ook dat de kolommen van een
+        matrix zelf vectoren kunnen zijn.
+      </p>
+
+      <p>
+        Nu komt de centrale vraag:
+        <strong>wat gebeurt er wanneer een matrix op een vector werkt, en hoe
+        kunnen we twee zulke bewerkingen na elkaar uitvoeren?</strong>
+      </p>
+
+      <div class="callout">
+        <p><strong>Matrixvermenigvuldiging is de rekenregel waarmee we lineaire bewerkingen kunnen combineren.</strong></p>
+      </div>
+
+      <h3>Een matrix kan op een vector werken</h3>
+
+      <p>
+        Neem de matrix:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}2 & 1 \\\\ 1 & 3\\end{pmatrix}</p>
+
+      <p>
+        en de vector:
+      </p>
+
+      <p class="formula">x = \\begin{pmatrix}4 \\\\ 2\\end{pmatrix}</p>
+
+      <p>
+        We willen de matrix gebruiken om van <span class="formula-inline">x</span>
+        een nieuwe vector te maken. We schrijven:
+      </p>
+
+      <p class="formula">Ax</p>
+
+      <p>
+        Het resultaat moet opnieuw een vector met twee componenten zijn.
+        De matrix bepaalt dus hoe de twee invoercomponenten samen bijdragen aan
+        de twee uitvoercomponenten.
+      </p>
+
+      <p>
+        We berekenen:
+      </p>
+
+      <p class="formula">Ax = \\begin{pmatrix}2 & 1 \\\\ 1 & 3\\end{pmatrix}\\begin{pmatrix}4 \\\\ 2\\end{pmatrix}</p>
+
+      <p>
+        De eerste uitvoercomponent ontstaat uit de eerste rij van de matrix:
+      </p>
+
+      <p class="formula">2 × 4 + 1 × 2 = 10</p>
+
+      <p>
+        De tweede uitvoercomponent ontstaat uit de tweede rij:
+      </p>
+
+      <p class="formula">1 × 4 + 3 × 2 = 10</p>
+
+      <p>
+        Dus:
+      </p>
+
+      <p class="formula">Ax = \\begin{pmatrix}10 \\\\ 10\\end{pmatrix}</p>
+
+      <div class="callout">
+        <p><strong>Een matrix combineert de componenten van een vector volgens een vast patroon.</strong></p>
+      </div>
+
+      <h3>Van rij en kolom naar één getal</h3>
+
+      <div class="theory-image">
+        <img src="assets/matrix-vermenigvuldiging.svg" alt="Een rij van de eerste matrix en een kolom van de tweede matrix worden gekoppeld via een inwendig product om één element van het product te vormen.">
+      </div>
+
+      <p>
+        Kijk naar de berekening van één uitvoercomponent:
+      </p>
+
+      <p class="formula">2 × 4 + 1 × 2</p>
+
+      <p>
+        Dit is precies een <strong>inwendig product</strong> van twee vectoren:
+        de rij <span class="formula-inline">(2,1)</span> van de matrix en de
+        kolom <span class="formula-inline">(4,2)</span> van de vector.
+      </p>
+
+      <p>
+        Dat verklaart de regel voor matrixvermenigvuldiging:
+        <strong>een element van het product ontstaat door een rij van de eerste
+        matrix en een kolom van de tweede matrix met elkaar te combineren.</strong>
+      </p>
+
+      <p>
+        De regel is dus niet willekeurig. Hij bouwt rechtstreeks voort op het
+        inwendig product dat we in 4.2 leerden.
+      </p>
+
+      <div class="callout">
+        <p><strong>Rij × kolom → één getal.</strong></p>
+        <p>
+          Een volledig matrixproduct bestaat uit al die rij-kolomberekeningen
+          naast elkaar.
+        </p>
+      </div>
+
+      <h3>De algemene regel</h3>
+
+      <p>
+        Stel dat <span class="formula-inline">A</span> een matrix met
+        <span class="formula-inline">m</span> rijen en
+        <span class="formula-inline">n</span> kolommen is en
+        <span class="formula-inline">B</span> een matrix met
+        <span class="formula-inline">n</span> rijen en
+        <span class="formula-inline">p</span> kolommen.
+        Dan kunnen we het product <span class="formula-inline">AB</span> vormen.
+      </p>
+
+      <p class="formula">A \\in \\mathbb{R}^{m\\times n}</p>
+      <p class="formula">B \\in \\mathbb{R}^{n\\times p}</p>
+
+      <p>
+        Het resultaat heeft dan <span class="formula-inline">m</span> rijen en
+        <span class="formula-inline">p</span> kolommen:
+      </p>
+
+      <p class="formula">AB \\in \\mathbb{R}^{m\\times p}</p>
+
+      <p>
+        Voor het element op rij <span class="formula-inline">i</span> en kolom
+        <span class="formula-inline">j</span> geldt:
+      </p>
+
+      <p class="formula">(AB)_{ij} = \\sum_{k=1}^{n} a_{ik}b_{kj}</p>
+
+      <p>
+        Je hoeft deze somnotatie nog niet als een nieuwe truc uit het hoofd te leren.
+        Ze zegt precies hetzelfde als de rij-kolomregel:
+        vermenigvuldig overeenkomstige componenten en tel de producten op.
+      </p>
+
+      <div class="callout">
+        <p><strong>De binnenste afmetingen moeten overeenkomen.</strong></p>
+        <p>
+          Bij <span class="formula-inline">m × n</span> maal
+          <span class="formula-inline">n × p</span> krijg je
+          <span class="formula-inline">m × p</span>.
+        </p>
+      </div>
+
+      <h3>Een volledig matrixproduct stap voor stap</h3>
+
+      <p>
+        Neem:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}2 & 1 \\\\ 3 & 2\\end{pmatrix}</p>
+
+      <p class="formula">B = \\begin{pmatrix}1 & 2 \\\\ 0 & 1\\end{pmatrix}</p>
+
+      <p>
+        Beide matrices zijn <span class="formula-inline">2 × 2</span>, dus het
+        product kan worden gevormd.
+      </p>
+
+      <p>
+        Voor het element linksboven nemen we de eerste rij van
+        <span class="formula-inline">A</span> en de eerste kolom van
+        <span class="formula-inline">B</span>:
+      </p>
+
+      <p class="formula">2 × 1 + 1 × 0 = 2</p>
+
+      <p>
+        Voor het element rechtsboven:
+      </p>
+
+      <p class="formula">2 × 2 + 1 × 1 = 5</p>
+
+      <p>
+        Voor het element linksonder:
+      </p>
+
+      <p class="formula">3 × 1 + 2 × 0 = 3</p>
+
+      <p>
+        En voor het element rechtsonder:
+      </p>
+
+      <p class="formula">3 × 2 + 2 × 1 = 8</p>
+
+      <p>
+        Dus:
+      </p>
+
+      <p class="formula">AB = \\begin{pmatrix}2 & 5 \\\\ 3 & 8\\end{pmatrix}</p>
+
+      <p>
+        Elk element van het product heeft dus zijn eigen rij-kolomberekening.
+      </p>
+
+      <h3>Waarom zijn de afmetingen zo belangrijk?</h3>
+
+      <p>
+        Matrixvermenigvuldiging heeft een ingebouwde controle op de afmetingen.
+        Stel dat:
+      </p>
+
+      <p class="formula">A \\in \\mathbb{R}^{2\\times3}</p>
+
+      <p class="formula">B \\in \\mathbb{R}^{3\\times4}</p>
+
+      <p>
+        Dan is <span class="formula-inline">AB</span> wel gedefinieerd, want de
+        3 kolommen van <span class="formula-inline">A</span> passen bij de
+        3 rijen van <span class="formula-inline">B</span>.
+      </p>
+
+      <p class="formula">AB \\in \\mathbb{R}^{2\\times4}</p>
+
+      <p>
+        Maar als:
+      </p>
+
+      <p class="formula">A \\in \\mathbb{R}^{2\\times3}</p>
+
+      <p class="formula">C \\in \\mathbb{R}^{2\\times4}</p>
+
+      <p>
+        dan bestaat <span class="formula-inline">AC</span> niet volgens de
+        gewone matrixvermenigvuldiging. De binnenste afmetingen zijn
+        <span class="formula-inline">3</span> en <span class="formula-inline">2</span>
+        en die zijn verschillend.
+      </p>
+
+      <div class="callout">
+        <p><strong>Controleer bij een matrixproduct altijd eerst de afmetingen.</strong></p>
+        <p>
+          De middelste twee getallen moeten gelijk zijn.
+        </p>
+      </div>
+
+      <h3>Een matrix maal een vector</h3>
+
+      <p>
+        Een kolomvector kunnen we zien als een matrix met één kolom.
+        Daardoor is matrix maal vector gewoon een speciaal geval van
+        matrixvermenigvuldiging.
+      </p>
+
+      <p class="formula">A \\in \\mathbb{R}^{m\\times n}</p>
+
+      <p class="formula">x \\in \\mathbb{R}^{n}</p>
+
+      <p>
+        Dan kunnen we <span class="formula-inline">Ax</span> vormen en krijgen we
+        een vector met <span class="formula-inline">m</span> componenten:
+      </p>
+
+      <p class="formula">Ax \\in \\mathbb{R}^{m}</p>
+
+      <p>
+        Bijvoorbeeld:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}1 & 2 & 0 \\\\ 0 & 1 & 3\\end{pmatrix}</p>
+
+      <p class="formula">x = \\begin{pmatrix}4 \\\\ 5 \\\\ 2\\end{pmatrix}</p>
+
+      <p>
+        Dan:
+      </p>
+
+      <p class="formula">Ax = \\begin{pmatrix}1 × 4 + 2 × 5 + 0 × 2 \\\\ 0 × 4 + 1 × 5 + 3 × 2\\end{pmatrix}</p>
+
+      <p class="formula">Ax = \\begin{pmatrix}14 \\\\ 11\\end{pmatrix}</p>
+
+      <p>
+        Een matrix met twee rijen produceert hier dus twee uitvoercomponenten.
+        Elke rij van de matrix bepaalt één component van de uitvoervector.
+      </p>
+
+      <h3>De kolominterpretatie</h3>
+
+      <p>
+        Er is nog een tweede manier om <span class="formula-inline">Ax</span> te
+        begrijpen. Schrijf de matrix als haar kolommen:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}1 & 2 \\\\ 0 & 1\\end{pmatrix}</p>
+
+      <p class="formula">x = \\begin{pmatrix}3 \\\\ 4\\end{pmatrix}</p>
+
+      <p>
+        Dan kunnen we het product ook lezen als een lineaire combinatie van de
+        kolommen van <span class="formula-inline">A</span>:
+      </p>
+
+      <p class="formula">Ax = 3\\begin{pmatrix}1 \\\\ 0\\end{pmatrix} + 4\\begin{pmatrix}2 \\\\ 1\\end{pmatrix}</p>
+
+      <p class="formula">Ax = \\begin{pmatrix}11 \\\\ 4\\end{pmatrix}</p>
+
+      <p>
+        Dit is een belangrijk inzicht. De matrix neemt de componenten van
+        <span class="formula-inline">x</span> en gebruikt ze als gewichten voor
+        de kolommen van <span class="formula-inline">A</span>.
+      </p>
+
+      <div class="callout">
+        <p><strong>Rijbeeld:</strong> elke rij berekent één uitvoercomponent.</p>
+        <p><strong>Kolombeel:</strong> de invoercomponenten wegen de kolommen van de matrix.</p>
+      </div>
+
+      <h3>Waarom heet dit compositie?</h3>
+
+      <p>
+        Stel dat een matrix <span class="formula-inline">B</span> eerst op een
+        vector <span class="formula-inline">x</span> werkt. Daarna laten we een
+        tweede matrix <span class="formula-inline">A</span> op het resultaat
+        werken.
+      </p>
+
+      <p class="formula">x \\rightarrow Bx \\rightarrow A(Bx)</p>
+
+      <p>
+        We kunnen deze twee stappen samen als één bewerking schrijven:
+      </p>
+
+      <p class="formula">A(Bx) = (AB)x</p>
+
+      <p>
+        Het product <span class="formula-inline">AB</span> vertegenwoordigt dus
+        de gecombineerde bewerking: eerst <span class="formula-inline">B</span>,
+        daarna <span class="formula-inline">A</span>.
+      </p>
+
+      <p>
+        Dat is precies wat <strong>compositie</strong> betekent:
+        verschillende bewerkingen worden achter elkaar uitgevoerd en als één
+        nieuwe bewerking beschreven.
+      </p>
+
+      <div class="callout">
+        <p><strong>Bij AB gebeurt B eerst en A daarna.</strong></p>
+        <p>
+          De volgorde in de formule lees je daarom van rechts naar links wanneer
+          je de opeenvolgende bewerkingen bekijkt.
+        </p>
+      </div>
+
+      <h3>De volgorde is belangrijk</h3>
+
+      <p>
+        Bij gewone getallen geldt <span class="formula-inline">ab = ba</span>.
+        Bij matrices geldt dat in het algemeen niet.
+      </p>
+
+      <p>
+        Gebruik opnieuw:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}2 & 1 \\\\ 3 & 2\\end{pmatrix}</p>
+
+      <p class="formula">B = \\begin{pmatrix}1 & 2 \\\\ 0 & 1\\end{pmatrix}</p>
+
+      <p>
+        We vonden:
+      </p>
+
+      <p class="formula">AB = \\begin{pmatrix}2 & 5 \\\\ 3 & 8\\end{pmatrix}</p>
+
+      <p>
+        Maar als we de volgorde omdraaien:
+      </p>
+
+      <p class="formula">BA = \\begin{pmatrix}8 & 5 \\\\ 3 & 2\\end{pmatrix}</p>
+
+      <p>
+        Deze matrices zijn verschillend. Dat betekent:
+      </p>
+
+      <p class="formula">AB ≠ BA</p>
+
+      <p>
+        De reden is inhoudelijk belangrijk. <span class="formula-inline">AB</span>
+        betekent eerst <span class="formula-inline">B</span> en daarna
+        <span class="formula-inline">A</span>. <span class="formula-inline">BA</span>
+        betekent precies het omgekeerde.
+      </p>
+
+      <p>
+        Twee verschillende volgordes van bewerkingen hoeven niet hetzelfde resultaat
+        te geven.
+      </p>
+
+      <h3>De eenheidsmatrix krijgt nu betekenis</h3>
+
+      <p>
+        In 4.4 zagen we de eenheidsmatrix:
+      </p>
+
+      <p class="formula">I_2 = \\begin{pmatrix}1 & 0 \\\\ 0 & 1\\end{pmatrix}</p>
+
+      <p>
+        Nu begrijpen we waarom deze matrix zo belangrijk is. Ze verandert een
+        vector niet:
+      </p>
+
+      <p class="formula">I_2x = x</p>
+
+      <p>
+        En voor een geschikte matrix <span class="formula-inline">A</span> geldt:
+      </p>
+
+      <p class="formula">AI_2 = I_2A = A</p>
+
+      <p>
+        De eenheidsmatrix speelt bij matrixvermenigvuldiging dus dezelfde rol als
+        het getal 1 bij gewone vermenigvuldiging.
+      </p>
+
+      <div class="callout">
+        <p><strong>De eenheidsmatrix is de neutrale bewerking.</strong></p>
+      </div>
+
+      <h3>Associativiteit: haakjes mogen verschuiven</h3>
+
+      <p>
+        Matrixvermenigvuldiging is niet commutatief, maar ze is wel
+        <strong>associatief</strong>. Wanneer de afmetingen kloppen, geldt:
+      </p>
+
+      <p class="formula">(AB)C = A(BC)</p>
+
+      <p>
+        Dat betekent dat we bij drie opeenvolgende matrixbewerkingen de haakjes
+        anders mogen plaatsen zonder het uiteindelijke resultaat te veranderen.
+      </p>
+
+      <p>
+        De bewerkingen zelf veranderen daardoor niet van volgorde:
+        eerst komt <span class="formula-inline">C</span>, daarna
+        <span class="formula-inline">B</span> en tenslotte
+        <span class="formula-inline">A</span>.
+      </p>
+
+      <div class="callout">
+        <p><strong>Associatief betekent niet commutatief.</strong></p>
+        <p>
+          <span class="formula-inline">(AB)C = A(BC)</span>, maar in het algemeen
+          <span class="formula-inline">AB ≠ BA</span>.
+        </p>
+      </div>
+
+      <h3>Distributiviteit</h3>
+
+      <p>
+        Matrixvermenigvuldiging gedraagt zich ook goed tegenover optelling.
+        Wanneer de afmetingen kloppen, geldt:
+      </p>
+
+      <p class="formula">A(B + C) = AB + AC</p>
+
+      <p>
+        En ook:
+      </p>
+
+      <p class="formula">(A + B)C = AC + BC</p>
+
+      <p>
+        Deze regels lijken op de distributieve regel uit de gewone algebra.
+        Ze maken het mogelijk om grotere matrixuitdrukkingen stap voor stap te
+        herschrijven.
+      </p>
+
+      <h3>Matrixvermenigvuldiging is niet elementgewijs</h3>
+
+      <p>
+        Een veelgemaakte fout is om bij
+        <span class="formula-inline">AB</span> simpelweg overeenkomstige elementen
+        met elkaar te vermenigvuldigen:
+      </p>
+
+      <p class="formula">\\begin{pmatrix}a & b \\\\ c & d\\end{pmatrix}\\begin{pmatrix}e & f \\\\ g & h\\end{pmatrix}</p>
+
+      <p>
+        Het resultaat is dus <strong>niet</strong> de matrix waarin je alleen
+        <span class="formula-inline">ae</span>, <span class="formula-inline">bf</span>,
+        <span class="formula-inline">cg</span> en <span class="formula-inline">dh</span>
+        zet.
+      </p>
+
+      <p>
+        In plaats daarvan gebruikt elk resultaatselement een volledige rij en een
+        volledige kolom:
+      </p>
+
+      <p class="formula">AB = \\begin{pmatrix}ae + bg & af + bh \\\\ ce + dg & cf + dh\\end{pmatrix}</p>
+
+      <div class="callout">
+        <p><strong>Matrixvermenigvuldiging = rij-kolomberekeningen, niet elementgewijze vermenigvuldiging.</strong></p>
+      </div>
+
+      <h3>Matrixvermenigvuldiging als lineaire combinatie</h3>
+
+      <p>
+        De kolominterpretatie van <span class="formula-inline">Ax</span> laat nog
+        iets diepers zien. Als:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}a_1 & a_2\\end{pmatrix}</p>
+
+      <p>
+        en:
+      </p>
+
+      <p class="formula">x = \\begin{pmatrix}x_1 \\\\ x_2\\end{pmatrix}</p>
+
+      <p>
+        dan is:
+      </p>
+
+      <p class="formula">Ax = x_1a_1 + x_2a_2</p>
+
+      <p>
+        De invoercomponenten bepalen dus hoeveel van elke kolom wordt gebruikt.
+        Dit is de eerste concrete stap naar het idee van
+        <strong>lineaire combinatie</strong>.
+      </p>
+
+      <p>
+        In 4.10 zullen we dit begrip veel algemener maken wanneer we spreken over
+        opspanning, lineaire onafhankelijkheid, basis en dimensie.
+      </p>
+
+      <h3>Matrixvermenigvuldiging als nieuwe bewerking</h3>
+
+      <p>
+        We kunnen matrixvermenigvuldiging nu formeel samenvatten.
+      </p>
+
+      <div class="callout">
+        <p>
+          Als <span class="formula-inline">A</span> een
+          <span class="formula-inline">m × n</span>-matrix is en
+          <span class="formula-inline">B</span> een
+          <span class="formula-inline">n × p</span>-matrix, dan is
+          <span class="formula-inline">AB</span> een
+          <span class="formula-inline">m × p</span>-matrix.
+        </p>
+        <p>
+          Elk element van <span class="formula-inline">AB</span> is het inwendig
+          product van een rij van <span class="formula-inline">A</span> met een
+          kolom van <span class="formula-inline">B</span>.
+        </p>
+      </div>
+
+      <p>
+        Daarmee hebben we drie gezichtspunten op hetzelfde product:
+      </p>
+
+      <ol>
+        <li><strong>Rekenkundig:</strong> rij maal kolom.</li>
+        <li><strong>Geometrisch:</strong> een matrix werkt op vectoren.</li>
+        <li><strong>Structureel:</strong> matrixvermenigvuldiging combineert bewerkingen door compositie.</li>
+      </ol>
+
+      <h3>Matrixvermenigvuldiging en matrixmachten</h3>
+
+      <p>
+        Wanneer een vierkante matrix met zichzelf wordt vermenigvuldigd, schrijven
+        we kort:
+      </p>
+
+      <p class="formula">A^2 = AA</p>
+
+      <p>
+        Op dezelfde manier:
+      </p>
+
+      <p class="formula">A^3 = AAA</p>
+
+      <p>
+        Deze notatie wordt later nuttig bij iteratieve processen, recursies,
+        dynamische systemen en eigenwaarden. We gebruiken matrixmachten hier nog
+        alleen als natuurlijke uitbreiding van de vermenigvuldiging.
+      </p>
+
+      <h3>Van matrixvermenigvuldiging naar lineaire stelsels</h3>
+
+      <p>
+        Een belangrijke toepassing van matrixvermenigvuldiging ontstaat wanneer we
+        niet alleen een vector <span class="formula-inline">x</span> willen
+        transformeren, maar een vector zoeken die aan een bepaalde voorwaarde voldoet.
+      </p>
+
+      <p>
+        We kunnen bijvoorbeeld een verzameling lineaire vergelijkingen compact
+        schrijven als:
+      </p>
+
+      <p class="formula">Ax = b</p>
+
+      <p>
+        Hierin stelt <span class="formula-inline">A</span> de coëfficiënten voor,
+        <span class="formula-inline">x</span> de onbekende vector en
+        <span class="formula-inline">b</span> de rechterkant.
+      </p>
+
+      <p>
+        In 4.6 gaan we leren hoe we zulke stelsels systematisch kunnen oplossen.
+        Daar komt <strong>Gauss-eliminatie</strong> aan bod.
+      </p>
+
+      <div class="callout">
+        <p><strong>4.5 geeft ons de taal.</strong></p>
+        <p><strong>4.6 gebruikt die taal om lineaire stelsels op te lossen.</strong></p>
+      </div>
+
+      <h3>Veelgemaakte fouten</h3>
+
+      <ul>
+        <li>
+          <strong>Element voor element vermenigvuldigen.</strong>
+          Bij het gewone matrixproduct hoort de rij-kolomregel.
+        </li>
+        <li>
+          <strong>De afmetingen niet controleren.</strong>
+          Bij <span class="formula-inline">m × n</span> maal
+          <span class="formula-inline">n × p</span> moeten de binnenste
+          afmetingen gelijk zijn.
+        </li>
+        <li>
+          <strong>De volgorde verwisselen.</strong>
+          In het algemeen geldt <span class="formula-inline">AB ≠ BA</span>.
+        </li>
+        <li>
+          <strong>De volgorde van compositie verkeerd lezen.</strong>
+          In <span class="formula-inline">ABx</span> werkt
+          <span class="formula-inline">B</span> eerst en
+          <span class="formula-inline">A</span> daarna.
+        </li>
+        <li>
+          <strong>Een vector als rij in plaats van als kolom gebruiken zonder de
+          afmetingen te controleren.</strong>
+          De vorm van de vector bepaalt welke producten geldig zijn.
+        </li>
+        <li>
+          <strong>Associativiteit verwarren met commutativiteit.</strong>
+          Haakjes mogen verschuiven, maar de volgorde van de factoren niet.
+        </li>
+      </ul>
+
+      <h3>Een vaste werkwijze</h3>
+
+      <p>
+        Wanneer je een matrixproduct moet berekenen, kun je steeds dezelfde
+        procedure volgen:
+      </p>
+
+      <ol>
+        <li>Controleer de afmetingen van beide matrices.</li>
+        <li>Controleer of de binnenste afmetingen gelijk zijn.</li>
+        <li>Bepaal de afmetingen van het resultaat.</li>
+        <li>Neem voor elk resultaatselement één rij uit de eerste matrix.</li>
+        <li>Neem de overeenkomstige kolom uit de tweede matrix.</li>
+        <li>Vermenigvuldig overeenkomstige componenten en tel de producten op.</li>
+        <li>Controleer eventueel één resultaat opnieuw via de kolominterpretatie.</li>
+      </ol>
+
+      <p>
+        Deze werkwijze maakt de berekening mechanisch, maar het belangrijkste
+        inzicht blijft de betekenis:
+        <strong>matrixvermenigvuldiging beschrijft hoe lineaire bewerkingen
+        gecombineerd worden.</strong>
+      </p>
+
+      <h3>Van compositie naar lineaire transformaties</h3>
+
+      <p>
+        We hebben nu gezien dat een matrix op een vector kan werken en dat twee
+        matrices kunnen worden samengevoegd tot één matrix die de gecombineerde
+        bewerking voorstelt.
+      </p>
+
+      <p>
+        Daarmee is de volgende vraag onvermijdelijk:
+      </p>
+
+      <div class="callout">
+        <p><strong>Welke soort verandering beschrijft een matrix eigenlijk in de ruimte?</strong></p>
+      </div>
+
+      <p>
+        In 4.7 maken we dat idee expliciet met
+        <strong>lineaire transformaties</strong>. Daar onderzoeken we wat matrices
+        geometrisch doen met vectoren, zoals schalen, spiegelen, roteren en
+        combineren van zulke bewerkingen.
+      </p>
+
+      <p>
+        De matrixvermenigvuldiging uit deze milestone blijkt dan precies de
+        rekenkundige taal te zijn voor het achter elkaar uitvoeren van zulke
+        transformaties.
+      </p>
+` },
   { id: "4.6", title: "Lineaire stelsels & Gauss-eliminatie", goal: "Hoe lossen we meerdere lineaire vergelijkingen systematisch op?", theory: `` },
   { id: "4.7", title: "Lineaire transformaties", goal: "Hoe beschrijven matrices systematische veranderingen van vectoren?", theory: `` },
   { id: "4.8", title: "Determinanten, inverse & invertibiliteit", goal: "Wanneer verliest een lineaire transformatie informatie en wanneer kunnen we haar omkeren?", theory: `` },
