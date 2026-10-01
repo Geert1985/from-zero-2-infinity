@@ -2055,6 +2055,46 @@ const MILESTONES_3 = [
     </div>
 
 
+    <h3>Continuïteit en differentieerbaarheid</h3>
+
+    <p>
+      Continuïteit en differentieerbaarheid zijn nauw met elkaar verbonden,
+      maar betekenen niet hetzelfde.
+    </p>
+
+    <p>
+      Een functie kan continu zijn zonder dat er op een bepaald punt een
+      afgeleide bestaat. Denk aan:
+    </p>
+
+    \\ltp class="formula"\\gt
+      f(x)=|x|
+    </p>
+
+    <p>
+      De grafiek van deze functie heeft bij <span class="formula-inline">x=0</span>
+      geen onderbreking. De functie is daar dus continu.
+      Maar de grafiek heeft een scherpe hoek: van links en van rechts is de
+      helling verschillend. Daarom bestaat er bij <span class="formula-inline">x=0</span>
+      geen afgeleide.
+    </p>
+
+    <p>
+      Omgekeerd geldt wel een belangrijke regel:
+      <strong>als een functie op een punt differentieerbaar is, dan is ze daar
+      ook continu.</strong>
+    </p>
+
+    <div class="callout">
+      <p><strong>Continuïteit is dus noodzakelijk voor differentieerbaarheid,
+      maar niet voldoende.</strong></p>
+      <p>
+        Een afgeleide vraagt meer dan alleen een ononderbroken grafiek:
+        er moet ook een eenduidige lokale helling bestaan.
+      </p>
+    </div>
+
+
     <h3>Een praktische controle</h3>
 
     <p>
@@ -2378,6 +2418,19 @@ const MILESTONES_3 = [
       \\lim_{h\\to0}
       \\frac{f(x+h)-f(x)}{h}
     </p>
+
+    <div class="callout">
+      <p><strong>De limiet is het gereedschap; de afgeleide is de nieuwe grootheid.</strong></p>
+      <p>
+        De limiet beschrijft wat er gebeurt wanneer het interval steeds
+        kleiner wordt. Met dat limietidee definiëren we de
+        <strong>ogenblikkelijke veranderingssnelheid</strong> van de functie.
+      </p>
+      <p>
+        De formule hierboven is dus niet zomaar een rekenregel:
+        ze geeft de precieze betekenis van de afgeleide.
+      </p>
+    </div>
 
     <div class="callout">
       <p><strong>Dit is de afgeleide.</strong></p>
@@ -4074,6 +4127,61 @@ const MILESTONES_3 = [
       Omdat <span class="formula-inline">v(t)=s'(t)</span>, zoeken we dan:
     </p>
     \\ltp class="formula"\\gts'(t)=0</p>
+
+    <h3>De tweede afgeleide</h3>
+
+    <p>
+      We hebben gezien dat de eerste afgeleide beschrijft hoe een functie
+      verandert. We kunnen die veranderingssnelheid zelf ook onderzoeken.
+    </p>
+
+    <p>
+      Dat doen we door nogmaals te differentiëren:
+    </p>
+
+    \\ltp class="formula"\\gt
+      f'(x) \\rightarrow f''(x)
+    </p>
+
+    <p>
+      De tweede afgeleide vertelt dus hoe de eerste afgeleide verandert.
+      Ze geeft daardoor informatie over de <strong>kromming</strong> van een grafiek.
+    </p>
+
+    <p>
+      In veel eenvoudige gevallen geldt:
+    </p>
+
+    \\ltp class="formula"\\gt
+      f''(x)\\gt0
+    </p>
+
+    <p>
+      betekent dat de grafiek naar boven kromt, terwijl:
+    </p>
+
+    \\ltp class="formula"\\gt
+      f''(x)\\lt0
+    </p>
+
+    <p>
+      betekent dat de grafiek naar beneden kromt.
+    </p>
+
+    <p>
+      Dit sluit aan bij het bewegingsvoorbeeld uit de vorige sectie:
+      versnelling is de tweede afgeleide van de positie.
+    </p>
+
+    \\ltp class="formula"\\gt
+      a(t)=s''(t)
+    </p>
+
+    <div class="callout">
+      <p><strong>Eerste afgeleide:</strong> hoe verandert de grootheid?</p>
+      <p><strong>Tweede afgeleide:</strong> hoe verandert die veranderingssnelheid?</p>
+    </div>
+
 
     <h3>Veranderingssnelheden koppelen</h3>
 
