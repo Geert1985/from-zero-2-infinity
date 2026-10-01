@@ -2894,7 +2894,7 @@ const MILESTONES_3 = [
   id: "3.5",
   title: "Afgeleiden van basisfuncties",
   goal: "Kunnen we veranderingssnelheden berekenen?",
-  theory: /* html */\`
+  theory: /* html */`
     <h2>Afgeleiden van basisfuncties</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -3153,9 +3153,10 @@ const MILESTONES_3 = [
         eerste bouwstenen van het differentiëren in handen.
       </p>
     </div>
-  \`
+  `
 },
 
+  {
   id: "3.6",
   title: "Product-, quotiënt- & kettingregel",
   goal: "Wat gebeurt er wanneer functies worden gecombineerd?",
@@ -3687,7 +3688,7 @@ const MILESTONES_3 = [
   id: "3.7",
   title: "Afgeleiden van belangrijke functies",
   goal: "Hoe laten we exponentiële, logaritmische en goniometrische functies veranderen?",
-  theory: /* html */\`
+  theory: /* html */`
     <h2>Afgeleiden van belangrijke functies</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -3923,13 +3924,14 @@ const MILESTONES_3 = [
         samengestelde functies gebruiken.
       </p>
     </div>
-  \`
+  `
 },
 
+  {
   id: "3.8",
   title: "Toepassingen van afgeleiden",
   goal: "Wat kunnen we met veranderingssnelheden?",
-  theory: /* html */\`
+  theory: /* html */`
     <h2>Toepassingen van afgeleiden</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -4289,9 +4291,10 @@ const MILESTONES_3 = [
         taal voor verandering.
       </p>
     </div>
-  \`
+  `
 },
 
+  {
   id: "3.9",
     title: "De integraal als omgekeerde verandering",
     goal: "Kunnen we verandering weer optellen?",
