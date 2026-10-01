@@ -140,7 +140,17 @@ function typesetMixed(el) {
 }
 
 function toTex(s) {
-  return /\\[a-zA-Z{]/.test(s) ? s : unicodeToTex(s);
+  const raw = String(s ?? "");
+
+  // LaTeX uit JavaScript template literals kan beschadigd raken:
+  // \\t wordt een tab, \\f een form-feed en \\n een newline.
+  // Herstel deze bekende gevallen ook wanneer de formule al LaTeX bevat.
+  let repaired = raw;
+  repaired = repaired.replace(/\\f\\s*rac/g, "\\\\frac");
+  repaired = repaired.replace(/\\t\\s*imes/g, "\\\\times");
+  repaired = repaired.replace(/\\n\\s*eq/g, "\\\\neq");
+
+  return /\\\\[a-zA-Z{]/.test(repaired) ? repaired : unicodeToTex(repaired);
 }
 
 function typesetMath(root) {

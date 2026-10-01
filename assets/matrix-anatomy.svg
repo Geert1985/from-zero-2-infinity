@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Anatomie van een matrix</title>
+  <desc id="desc">Een matrix van 2 rijen en 3 kolommen. Het element a12 staat op rij 1, kolom 2.</desc>
+  <rect width="900" height="520" fill="#161410"/>
+  <text x="450" y="42" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="26">Anatomie van een matrix</text>
+
+  <text x="78" y="230" fill="#fff6df" font-family="Georgia, serif" font-size="32">A =</text>
+
+  <!-- haken -->
+  <path d="M168 128 H146 V352 H168" fill="none" stroke="#e6c77a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M492 128 H514 V352 H492" fill="none" stroke="#e6c77a" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- kolom 2: haakje erboven, niet over het cijfer -->
+  <path d="M292 108 H388" fill="none" stroke="#7dcea0" stroke-width="2.5"/>
+  <path d="M292 108 V118 M388 108 V118" fill="none" stroke="#7dcea0" stroke-width="2.5"/>
+  <text x="340" y="96" text-anchor="middle" fill="#7dcea0" font-family="Georgia, serif" font-size="16">kolom 2</text>
+
+  <!-- rij 1: haakje links, buiten de matrix -->
+  <path d="M128 156 V214" fill="none" stroke="#f3e2b0" stroke-width="2.5"/>
+  <path d="M128 156 H138 M128 214 H138" fill="none" stroke="#f3e2b0" stroke-width="2.5"/>
+  <text x="118" y="190" text-anchor="end" fill="#f3e2b0" font-family="Georgia, serif" font-size="16">rij 1</text>
+
+  <!-- element a12 -->
+  <circle cx="340" cy="185" r="28" fill="none" stroke="#e6c77a" stroke-width="2.5"/>
+
+  <g fill="#fff6df" font-family="Georgia, serif" font-size="34" text-anchor="middle">
+    <text x="220" y="196">2</text>
+    <text x="340" y="196">5</text>
+    <text x="460" y="196">7</text>
+    <text x="220" y="292">1</text>
+    <text x="340" y="292">4</text>
+    <text x="460" y="292">6</text>
+  </g>
+
+  <text x="330" y="390" text-anchor="middle" fill="#fff6df" font-family="Georgia, serif" font-size="22">2 × 3</text>
+  <text x="330" y="418" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">2 rijen × 3 kolommen</text>
+
+  <g transform="translate(560,150)">
+    <text x="0" y="0" fill="#e6c77a" font-family="Georgia, serif" font-size="20">a₁₂ = 5</text>
+    <text x="0" y="36" fill="#cbb98a" font-family="Georgia, serif" font-size="16">eerste index: de rij</text>
+    <text x="0" y="62" fill="#cbb98a" font-family="Georgia, serif" font-size="16">tweede index: de kolom</text>
+    <text x="0" y="108" fill="#f3e2b0" font-family="Georgia, serif" font-size="16">rij 1, kolom 2</text>
+    <text x="0" y="148" fill="#8a7a58" font-family="Georgia, serif" font-size="15">De volgorde is vast:</text>
+    <text x="0" y="172" fill="#8a7a58" font-family="Georgia, serif" font-size="15">eerst omlaag, dan opzij.</text>
+  </g>
+</svg>

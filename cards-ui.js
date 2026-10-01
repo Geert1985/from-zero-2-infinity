@@ -58,6 +58,24 @@ function renderHome() {
   );
 }
 
+function stoneArtId(mid) {
+  const phase4Map = {
+    "4.3": "4.1",
+    "4.4": "4.3",
+    "4.5": "4.4",
+    "4.6": "4.5",
+    "4.7": "4.6",
+    "4.8": "4.7",
+    "4.9": "4.8",
+    "4.10": "4.9",
+    "4.11": "4.10",
+    "4.12": "4.11",
+    "4.13": "4.12",
+    "4.14": "4.13"
+  };
+  return phase4Map[mid] || mid;
+}
+
 function renderPhase(phaseId) {
   phaseId = Number(phaseId);
   const phase = COURSE.phases.find((p) => p.id === phaseId);
@@ -82,7 +100,7 @@ function renderPhase(phaseId) {
     return (
       '<article class="stone ' + st + '" data-mid="' + m.id + '" data-phase="' + phaseId + '" tabindex="0" role="button" aria-label="' + escText(m.id + " " + (m.title || "")) + '">' +
       '<span class="stone-num">' + escText(m.id) + "</span>" +
-      '<img class="stone-art" src="assets/mile-' + m.id + '.png?v=4" alt="">' +
+      '<img class="stone-art" src="assets/milestones/mile-' + stoneArtId(m.id) + '.png?v=4" alt="">' +
       "</article>"
     );
   }).join("");

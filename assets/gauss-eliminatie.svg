@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Gauss-eliminatie stap voor stap</title>
+  <desc id="desc">Een drie-bij-drie uitgebreid matrixstelsel wordt met rijbewerkingen omgevormd tot een bovenste driehoeksvorm. Daarna worden de onbekenden met terugsubstitutie bepaald.</desc>
+  <rect width="1200" height="760" fill="#f7f4ec"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#222">Gauss-eliminatie: van stelsel naar oplossing</text>
+
+  <g font-family="Arial, sans-serif" fill="#222">
+    <text x="205" y="92" text-anchor="middle" font-size="22" font-weight="700">1. Begin</text>
+    <text x="600" y="92" text-anchor="middle" font-size="22" font-weight="700">2. Elimineer x</text>
+    <text x="995" y="92" text-anchor="middle" font-size="22" font-weight="700">3. Driehoeksvorm</text>
+  </g>
+
+  <g stroke="#333" stroke-width="2" fill="#fff">
+    <rect x="55" y="120" width="300" height="210" rx="10"/>
+    <rect x="450" y="120" width="300" height="210" rx="10"/>
+    <rect x="845" y="120" width="300" height="210" rx="10"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="25" text-anchor="middle" fill="#222">
+    <text x="130" y="165">1</text><text x="205" y="165">1</text><text x="280" y="165">1</text><text x="330" y="165">6</text>
+    <text x="130" y="215">2</text><text x="205" y="215">−1</text><text x="280" y="215">1</text><text x="330" y="215">3</text>
+    <text x="130" y="265">1</text><text x="205" y="265">2</text><text x="280" y="265">−1</text><text x="330" y="265">3</text>
+
+    <text x="525" y="165">1</text><text x="600" y="165">1</text><text x="675" y="165">1</text><text x="725" y="165">6</text>
+    <text x="525" y="215">0</text><text x="600" y="215">−3</text><text x="675" y="215">−1</text><text x="725" y="215">−9</text>
+    <text x="525" y="265">0</text><text x="600" y="265">1</text><text x="675" y="265">−2</text><text x="725" y="265">−3</text>
+
+    <text x="920" y="165">1</text><text x="995" y="165">1</text><text x="1070" y="165">1</text><text x="1120" y="165">6</text>
+    <text x="920" y="215">0</text><text x="995" y="215">−3</text><text x="1070" y="215">−1</text><text x="1120" y="215">−9</text>
+    <text x="920" y="265">0</text><text x="995" y="265">0</text><text x="1070" y="265">−7</text><text x="1120" y="265">−18</text>
+  </g>
+
+  <g stroke="#8a6d1d" stroke-width="3" fill="none">
+    <rect x="70" y="138" width="270" height="43" rx="6"/>
+    <rect x="465" y="138" width="270" height="93" rx="6"/>
+    <rect x="860" y="138" width="270" height="143" rx="6"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" fill="#555" font-size="20" text-anchor="middle">
+    <text x="205" y="370">R₂ → R₂ − 2R₁</text>
+    <text x="205" y="402">R₃ → R₃ − R₁</text>
+    <text x="600" y="370">R₃ → 3R₃ + R₂</text>
+  </g>
+
+  <g stroke="#555" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M 365 225 L 440 225"/>
+    <path d="M 760 225 L 835 225"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" fill="#222">
+    <text x="600" y="465" text-anchor="middle" font-size="23" font-weight="700">4. Terugsubstitutie</text>
+    <text x="600" y="510" text-anchor="middle" font-size="22">−7z = −18  →  z = 18/7</text>
+    <text x="600" y="550" text-anchor="middle" font-size="22">−3y − z = −9  →  y = 15/7</text>
+    <text x="600" y="590" text-anchor="middle" font-size="22">x + y + z = 6  →  x = 9/7</text>
+  </g>
+
+  <rect x="335" y="635" width="530" height="70" rx="12" fill="#eadfbf" stroke="#8a6d1d" stroke-width="2"/>
+  <text x="600" y="662" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#333">Dezelfde oplossingsverzameling,</text>
+  <text x="600" y="688" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333">maar steeds eenvoudiger beschreven.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
+    </marker>
+  </defs>
+</svg>

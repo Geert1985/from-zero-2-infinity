@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+  <title id="title">Kruisproduct</title>
+  <desc id="desc">Twee vectoren uit dezelfde oorsprong spannen een parallellogram op. Het kruisproduct staat loodrecht op dat vlak; de lengte is de oppervlakte.</desc>
+  <rect width="900" height="540" fill="#161410"/>
+  <text x="450" y="40" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="26">Kruisproduct</text>
+  <defs>
+    <marker id="mu" markerWidth="14" markerHeight="14" refX="13" refY="6.5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0,1 13,6.5 0,12" fill="#f3e2b0"/>
+    </marker>
+    <marker id="mv" markerWidth="14" markerHeight="14" refX="13" refY="6.5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0,1 13,6.5 0,12" fill="#7dcea0"/>
+    </marker>
+    <marker id="mn" markerWidth="14" markerHeight="14" refX="13" refY="6.5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0,1 13,6.5 0,12" fill="#e6c77a"/>
+    </marker>
+  </defs>
+  <g transform="translate(210,390)">
+    <!-- parallellogram: O, u, u+v, v -->
+    <polygon points="0,0 300,-70 430,-210 130,-140" fill="#e6c77a" fill-opacity="0.08" stroke="none"/>
+    <line x1="300" y1="-70" x2="430" y2="-210" stroke="#6f6557" stroke-width="1.8" stroke-dasharray="7 7"/>
+    <line x1="130" y1="-140" x2="430" y2="-210" stroke="#6f6557" stroke-width="1.8" stroke-dasharray="7 7"/>
+    <!-- u en v -->
+    <line x1="0" y1="0" x2="300" y2="-70" stroke="#f3e2b0" stroke-width="5" stroke-linecap="round" marker-end="url(#mu)"/>
+    <line x1="0" y1="0" x2="130" y2="-140" stroke="#7dcea0" stroke-width="5" stroke-linecap="round" marker-end="url(#mv)"/>
+    <!-- hoek in het vlak -->
+    <path d="M62 -14 A64 64 0 0 0 46 -50" fill="none" stroke="#e6c77a" stroke-width="3"/>
+    <text x="74" y="-42" fill="#e6c77a" font-family="Georgia, serif" font-size="22">θ</text>
+    <!-- kruisproduct uit dezelfde oorsprong, uit het vlak -->
+    <line x1="0" y1="0" x2="70" y2="-250" stroke="#e6c77a" stroke-width="5" stroke-linecap="round" marker-end="url(#mn)"/>
+
+    <circle cx="0" cy="0" r="5.5" fill="#f7edd6"/>
+    <text x="312" y="-78" fill="#f3e2b0" font-family="Georgia, serif" font-size="22" font-weight="700">u</text>
+    <text x="112" y="-158" fill="#7dcea0" font-family="Georgia, serif" font-size="22" font-weight="700">v</text>
+    <text x="82" y="-258" fill="#e6c77a" font-family="Georgia, serif" font-size="22" font-weight="700">u × v</text>
+    <text x="448" y="-198" fill="#cbb98a" font-family="Georgia, serif" font-size="16">u + v</text>
+  </g>
+  <text x="450" y="478" text-anchor="middle" fill="#fff6df" font-family="Georgia, serif" font-size="22">|u × v| = |u| |v| sin θ</text>
+  <text x="450" y="508" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="16">Die lengte is de oppervlakte van het parallellogram. De richting volgt de rechterhandregel.</text>
+</svg>

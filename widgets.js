@@ -263,6 +263,95 @@ function mountGroups(root) {
   draw();
 }
 
+function mountCrossProduct(root) {
+  root.innerHTML = widgetShell(
+    "Kruisproduct",
+    "Draai het vlak. De gouden pijl blijft loodrecht erop.",
+    `<canvas data-h="320"></canvas>
+     <div class="widget-controls">
+       <label>hoek θ <input type="range" min="15" max="165" step="1" value="50" data-k="theta"> <output data-o="theta">50°</output></label>
+       <label>draaiing <input type="range" min="0" max="360" step="1" value="28" data-k="yaw"> <output data-o="yaw">28°</output></label>
+     </div>
+     <p class="widget-readout"></p>`
+  );
+  const canvas = root.querySelector("canvas");
+  const thetaEl = root.querySelector("[data-k=theta]");
+  const yawEl = root.querySelector("[data-k=yaw]");
+  const note = root.querySelector(".widget-readout");
+
+  const project = (x, y, z, yaw, cx, cy, s) => {
+    const c = Math.cos(yaw), sn = Math.sin(yaw);
+    const xr = x * c - y * sn;
+    const yr = x * sn + y * c;
+    return [cx + xr * s + yr * 0.42 * s, cy - z * s + yr * 0.38 * s];
+  };
+
+  const arrow = (ctx, a, b, color) => {
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(a[0], a[1]);
+    ctx.lineTo(b[0], b[1]);
+    ctx.stroke();
+    const ang = Math.atan2(b[1] - a[1], b[0] - a[0]);
+    ctx.beginPath();
+    ctx.moveTo(b[0], b[1]);
+    ctx.lineTo(b[0] - 12 * Math.cos(ang - 0.4), b[1] - 12 * Math.sin(ang - 0.4));
+    ctx.lineTo(b[0] - 12 * Math.cos(ang + 0.4), b[1] - 12 * Math.sin(ang + 0.4));
+    ctx.closePath();
+    ctx.fill();
+  };
+
+  const draw = () => {
+    const theta = Number(thetaEl.value) * Math.PI / 180;
+    const yaw = Number(yawEl.value) * Math.PI / 180;
+    root.querySelector("[data-o=theta]").textContent = thetaEl.value + "°";
+    root.querySelector("[data-o=yaw]").textContent = yawEl.value + "°";
+    const { ctx, w, h } = prepCanvas(canvas);
+    ctx.fillStyle = "#0d0b08";
+    ctx.fillRect(0, 0, w, h);
+    const cx = w * 0.46, cy = h * 0.62, s = Math.min(w, h) * 0.11;
+    const P = (x, y, z) => project(x, y, z, yaw, cx, cy, s);
+    const u = [3, 0, 0];
+    const v = [2 * Math.cos(theta), 2 * Math.sin(theta), 0];
+    const nz = u[0] * v[1] - u[1] * v[0];
+    const sum = [u[0] + v[0], u[1] + v[1], 0];
+    const O = P(0, 0, 0);
+    const corners = [P(0, 0, 0), P(u[0], u[1], 0), P(sum[0], sum[1], 0), P(v[0], v[1], 0)];
+    ctx.beginPath();
+    corners.forEach((pt, i) => (i ? ctx.lineTo(pt[0], pt[1]) : ctx.moveTo(pt[0], pt[1])));
+    ctx.closePath();
+    ctx.fillStyle = "rgba(230,199,122,0.08)";
+    ctx.fill();
+    ctx.strokeStyle = "rgba(230,199,122,0.28)";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    arrow(ctx, O, P(4.2, 0, 0), "#8a7a58");
+    arrow(ctx, O, P(0, 3.2, 0), "#8a7a58");
+    arrow(ctx, O, P(0, 0, 3.4), "#8a7a58");
+    arrow(ctx, O, P(u[0], u[1], 0), "#f3e2b0");
+    arrow(ctx, O, P(v[0], v[1], 0), "#7dcea0");
+    arrow(ctx, O, P(0, 0, nz), "#e6c77a");
+    ctx.font = "15px Georgia, serif";
+    const label = (pt, text, color, dx, dy) => {
+      ctx.fillStyle = color;
+      ctx.fillText(text, pt[0] + dx, pt[1] + dy);
+    };
+    label(P(4.2, 0, 0), "x", "#e6c77a", 6, 4);
+    label(P(0, 3.2, 0), "y", "#e6c77a", 6, 4);
+    label(P(0, 0, 3.4), "z", "#e6c77a", 6, -4);
+    label(P(u[0], u[1], 0), "u", "#f3e2b0", 8, 0);
+    label(P(v[0], v[1], 0), "v", "#7dcea0", 8, 0);
+    label(P(0, 0, nz), "u × v", "#e6c77a", 8, 0);
+    note.textContent = "|u × v| = |u| |v| sin θ = " + Math.abs(nz).toFixed(2).replace(".", ",");
+  };
+
+  thetaEl.addEventListener("input", draw);
+  yawEl.addEventListener("input", draw);
+  draw();
+}
+
 function mountSmartMultiplication(root) {
   root.innerHTML = widgetShell(
     "Slim rekenen met vermenigvuldigen",
@@ -2693,6 +2782,226 @@ function mountPercentageBar(root) {
   resizeCanvas();
 }
 
+function mountMatrixProduct(root) {
+  const A = [[2, 1, 3], [4, 0, -1]];
+  const B = [[5, 2], [1, 3], [0, 4]];
+  const cells = [[0, 0], [0, 1], [1, 0], [1, 1]];
+
+  root.innerHTML = widgetShell(
+    "Matrixvermenigvuldiging",
+    "Kies een element van AB. De rij van A en de kolom van B lichten op.",
+    `<style>
+      .mp-boards { display: flex; flex-wrap: wrap; gap: 18px 28px; justify-content: center; margin-top: 8px; }
+      .mp-board { text-align: center; }
+      .mp-board h3 { margin: 0 0 8px; font-family: Georgia, serif; font-weight: 500; font-size: 1.05rem; }
+      .mp-a { color: #e6c77a; }
+      .mp-b { color: #7dcea0; }
+      .mp-c { color: #f3e2b0; }
+      .mp-grid { display: inline-grid; gap: 6px; padding: 10px 14px; border-left: 2px solid currentColor; border-right: 2px solid currentColor; }
+      .mp-grid span { min-width: 2.4rem; height: 2.2rem; display: grid; place-items: center; border-radius: 8px; font-family: Georgia, serif; font-size: 1.35rem; color: #fff6df; }
+      .mp-note { text-align: center; color: #cbb98a; margin: 0; }
+    </style>
+    <div class="mp-boards">
+      <div class="mp-board"><h3 class="mp-a">A</h3><div class="mp-grid mp-a" data-m="A"></div></div>
+      <div class="mp-board"><h3 class="mp-b">B</h3><div class="mp-grid mp-b" data-m="B"></div></div>
+      <div class="mp-board"><h3 class="mp-c">AB</h3><div class="mp-grid mp-c" data-m="C"></div></div>
+    </div>
+    <div class="widget-controls">
+      <label>element <input type="range" min="1" max="4" step="1" value="1" data-k="k"> <output data-o="k">1</output></label>
+    </div>
+    <p class="widget-readout"></p>
+    <p class="mp-note"></p>`
+  );
+
+  const gridA = root.querySelector("[data-m=A]");
+  const gridB = root.querySelector("[data-m=B]");
+  const gridC = root.querySelector("[data-m=C]");
+  gridA.style.gridTemplateColumns = "repeat(3, 2.4rem)";
+  gridB.style.gridTemplateColumns = "repeat(2, 2.4rem)";
+  gridC.style.gridTemplateColumns = "repeat(2, 2.6rem)";
+
+  const fmt = (n) => (n < 0 ? "−" + (-n) : String(n));
+  const cell = (n) => {
+    const s = document.createElement("span");
+    s.textContent = fmt(n);
+    return s;
+  };
+
+  A.flat().forEach((n) => gridA.appendChild(cell(n)));
+  B.forEach((row) => row.forEach((n) => gridB.appendChild(cell(n))));
+  for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < 2; j++) {
+      const s = document.createElement("span");
+      s.dataset.i = String(i);
+      s.dataset.j = String(j);
+      gridC.appendChild(s);
+    }
+  }
+
+  const range = root.querySelector("[data-k=k]");
+  const note = root.querySelector(".widget-readout");
+  const hint = root.querySelector(".mp-note");
+
+  const draw = () => {
+    const k = Number(range.value) - 1;
+    const i = cells[k][0];
+    const j = cells[k][1];
+    root.querySelector("[data-o=k]").textContent = String(k + 1);
+
+    Array.from(gridA.children).forEach((el, n) => {
+      el.style.background = Math.floor(n / 3) === i ? "rgba(230,199,122,0.22)" : "transparent";
+    });
+    Array.from(gridB.children).forEach((el, n) => {
+      el.style.background = n % 2 === j ? "rgba(125,206,160,0.22)" : "transparent";
+    });
+
+    const parts = A[i].map((a, t) => a * B[t][j]);
+    const sum = parts.reduce((x, y) => x + y, 0);
+
+    Array.from(gridC.children).forEach((el) => {
+      const r = Number(el.dataset.i);
+      const c = Number(el.dataset.j);
+      let v = 0;
+      for (let t = 0; t < 3; t++) v += A[r][t] * B[t][c];
+      el.textContent = fmt(v);
+      el.style.background = r === i && c === j ? "rgba(243,226,176,0.28)" : "transparent";
+      el.style.boxShadow = r === i && c === j ? "inset 0 0 0 1.5px #e6c77a" : "none";
+    });
+
+    const terms = A[i].map((a, t) => {
+      const b = B[t][j];
+      const left = a < 0 ? "(" + fmt(a) + ")" : fmt(a);
+      const right = b < 0 ? "(" + fmt(b) + ")" : fmt(b);
+      return left + " · " + right;
+    }).join(" + ");
+
+    note.textContent = terms + " = " + parts.map(fmt).join(" + ") + " = " + fmt(sum);
+    hint.textContent = "Rij " + (i + 1) + " van A maal kolom " + (j + 1) + " van B.";
+  };
+
+  range.addEventListener("input", draw);
+  draw();
+}
+
+function mountGauss(root) {
+  const steps = [
+    {
+      name: "Stelsel",
+      op: "Het stelsel als uitgebreide matrix.",
+      rows: [[1, 1, 1, 6], [2, -1, 1, 3], [1, 2, -1, 3]],
+      changed: [],
+      fresh: []
+    },
+    {
+      name: "x weg",
+      op: "R₂ ← R₂ − 2R₁ en R₃ ← R₃ − R₁",
+      rows: [[1, 1, 1, 6], [0, -3, -1, -9], [0, 1, -2, -3]],
+      changed: [1, 2],
+      fresh: ["1,0", "2,0"]
+    },
+    {
+      name: "Driehoek",
+      op: "R₃ ← 3R₃ + R₂",
+      rows: [[1, 1, 1, 6], [0, -3, -1, -9], [0, 0, -7, -18]],
+      changed: [2],
+      fresh: ["2,1", "2,2"]
+    },
+    {
+      name: "Terug",
+      op: "Van de onderste rij naar boven invullen.",
+      rows: [[1, 1, 1, 6], [0, -3, -1, -9], [0, 0, -7, -18]],
+      changed: [],
+      fresh: ["2,2"],
+      back: [
+        "−7z = −18, dus z = 18/7",
+        "−3y − z = −9, dus y = 15/7",
+        "x + y + z = 6, dus x = 9/7"
+      ]
+    }
+  ];
+
+  root.innerHTML = widgetShell(
+    "Gauss-eliminatie",
+    "Eén stap tegelijk. De gekleurde rijen zijn net veranderd.",
+    `<style>
+      .g-steps { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 8px 0 14px; }
+      .g-steps button {
+        font-family: Georgia, serif;
+        font-size: 16px;
+        color: #cbb98a;
+        background: transparent;
+        border: 1px solid rgba(230,199,122,0.35);
+        border-radius: 999px;
+        padding: 6px 14px;
+        cursor: pointer;
+      }
+      .g-steps button.on { color: #161410; background: #e6c77a; border-color: #e6c77a; }
+      .g-wrap { display: flex; justify-content: center; }
+      .g-grid {
+        display: inline-grid;
+        grid-template-columns: repeat(4, 3.2rem);
+        gap: 6px 8px;
+        padding: 12px 16px;
+        border-left: 2px solid #e6c77a;
+        border-right: 2px solid #e6c77a;
+      }
+      .g-grid span {
+        height: 2.3rem;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        font-family: Georgia, serif;
+        font-size: 1.35rem;
+        color: #fff6df;
+      }
+      .g-grid span.rhs { box-shadow: inset 2px 0 0 #8a7a58; }
+      .g-op { text-align: center; color: #fff6df; font-family: Georgia, serif; font-size: 26px; line-height: 1.4; margin: 16px 0 6px; }
+      .g-back { text-align: center; color: #cbb98a; font-family: Georgia, serif; font-size: 20px; line-height: 1.55; margin: 0; }
+    </style>
+    <div class="g-steps">
+      <button type="button" data-step="0">1. Stelsel</button>
+      <button type="button" data-step="1">2. x weg</button>
+      <button type="button" data-step="2">3. Driehoek</button>
+      <button type="button" data-step="3">4. Terug</button>
+    </div>
+    <div class="g-wrap"><div class="g-grid" data-m></div></div>
+    <p class="g-op"></p>
+    <p class="g-back"></p>`
+  );
+
+  const grid = root.querySelector("[data-m]");
+  const op = root.querySelector(".g-op");
+  const back = root.querySelector(".g-back");
+  const buttons = Array.from(root.querySelectorAll("[data-step]"));
+  const fmt = (n) => (n < 0 ? "−" + (-n) : String(n));
+
+  for (let i = 0; i < 12; i++) {
+    const s = document.createElement("span");
+    if (i % 4 === 3) s.className = "rhs";
+    grid.appendChild(s);
+  }
+
+  const show = (k) => {
+    const step = steps[k];
+    buttons.forEach((b, i) => b.classList.toggle("on", i === k));
+    Array.from(grid.children).forEach((el, n) => {
+      const r = Math.floor(n / 4);
+      const c = n % 4;
+      el.textContent = fmt(step.rows[r][c]);
+      const fresh = step.fresh.indexOf(r + "," + c) !== -1;
+      el.style.color = fresh ? "#7dcea0" : "#fff6df";
+      el.style.background = step.changed.indexOf(r) !== -1 ? "rgba(230,199,122,0.16)" : "transparent";
+    });
+    op.textContent = step.op;
+    back.textContent = step.back ? step.back.join("\n") : "";
+    back.style.whiteSpace = "pre-line";
+  };
+
+  buttons.forEach((b) => b.addEventListener("click", () => show(Number(b.dataset.step))));
+  show(0);
+}
+
+
 function mountPlot(root) {
   root.innerHTML = widgetShell("Functieplot", "Sleep a en b. Zet de parabool aan voor x².",
     `<canvas></canvas>
@@ -3148,7 +3457,10 @@ const WIDGET_BUILDERS = {
   algebraMachine: mountAlgebraMachine,
   sine: mountSine,
   lineGraph:mountLineGraph,
-  parabolaGraph:mountParabolaGraph
+  parabolaGraph:mountParabolaGraph,
+  matrixProduct:mountMatrixProduct,
+  gauss:mountGauss,
+  crossProduct:mountCrossProduct
 };
 
 function mountWidgets(root, milestoneId) {
