@@ -1,32 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
   <title id="title">Vector met componenten</title>
-  <desc id="desc">Een vector naar het punt met componenten 4 en 3, met horizontale en verticale componenten zichtbaar.</desc>
-  <rect width="900" height="430" rx="18" fill="#0d0b08"/>
-  <g font-family="system-ui, sans-serif" fill="#f7edd6">
-    <text x="42" y="46" font-size="24" font-weight="700" fill="#e6c77a">Een vector als componenten</text>
-    <text x="42" y="76" font-size="16" fill="#cbb98a">De pijl bevat één richting, opgebouwd uit twee loodrechte bijdragen.</text>
+  <desc id="desc">Vector v = (4, 3) vanaf de oorsprong, met horizontale component 4 en verticale component 3.</desc>
+  <rect width="900" height="520" fill="#161410"/>
+  <text x="450" y="42" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="26">Een vector als componenten</text>
+  <defs>
+    <marker id="ax" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#8a7a58"/>
+    </marker>
+    <marker id="vec" markerWidth="14" markerHeight="14" refX="13" refY="6.5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0,1 13,6.5 0,12" fill="#f3e2b0"/>
+    </marker>
+  </defs>
+  <g transform="translate(168,392)">
+    <!-- eenheden: 1 = 58 px -->
+    <g stroke="#3a3428" stroke-width="1.4">
+      <line x1="58" y1="8" x2="58" y2="-8"/>
+      <line x1="116" y1="8" x2="116" y2="-8"/>
+      <line x1="174" y1="8" x2="174" y2="-8"/>
+      <line x1="232" y1="8" x2="232" y2="-8"/>
+      <line x1="-8" y1="-58" x2="8" y2="-58"/>
+      <line x1="-8" y1="-116" x2="8" y2="-116"/>
+      <line x1="-8" y1="-174" x2="8" y2="-174"/>
+    </g>
+    <g fill="#8a7a58" font-family="Georgia, serif" font-size="15">
+      <text x="58" y="28" text-anchor="middle">1</text>
+      <text x="116" y="28" text-anchor="middle">2</text>
+      <text x="174" y="28" text-anchor="middle">3</text>
+      <text x="232" y="28" text-anchor="middle">4</text>
+      <text x="-18" y="-50" text-anchor="end">1</text>
+      <text x="-18" y="-108" text-anchor="end">2</text>
+      <text x="-18" y="-166" text-anchor="end">3</text>
+    </g>
+    <line x1="0" y1="0" x2="430" y2="0" stroke="#8a7a58" stroke-width="2" marker-end="url(#ax)"/>
+    <line x1="0" y1="0" x2="0" y2="-300" stroke="#8a7a58" stroke-width="2" marker-end="url(#ax)"/>
+    <text x="444" y="6" fill="#e6c77a" font-family="Georgia, serif" font-size="20">x</text>
+    <text x="10" y="-308" fill="#e6c77a" font-family="Georgia, serif" font-size="20">y</text>
+    <text x="12" y="22" fill="#d7c49a" font-family="Georgia, serif" font-size="16">O</text>
+
+    <!-- projectie, lichter dan de componenten -->
+    <line x1="232" y1="-174" x2="232" y2="0" stroke="#6f6557" stroke-width="1.6" stroke-dasharray="6 7"/>
+    <line x1="0" y1="-174" x2="232" y2="-174" stroke="#6f6557" stroke-width="1.6" stroke-dasharray="6 7"/>
+
+    <!-- componenten -->
+    <line x1="0" y1="0" x2="232" y2="0" stroke="#e6c77a" stroke-width="7" stroke-linecap="round"/>
+    <line x1="232" y1="0" x2="232" y2="-174" stroke="#7dcea0" stroke-width="7" stroke-linecap="round"/>
+    <path d="M214 0 L214 -18 L232 -18" fill="none" stroke="#cbb98a" stroke-width="2"/>
+
+    <!-- vector -->
+    <circle cx="0" cy="0" r="5.5" fill="#f7edd6"/>
+    <circle cx="232" cy="-174" r="5.5" fill="#f7edd6"/>
+    <line x1="0" y1="0" x2="232" y2="-174" stroke="#f3e2b0" stroke-width="4.5" stroke-linecap="round" marker-end="url(#vec)"/>
+
+    <text x="116" y="72" text-anchor="middle" fill="#e6c77a" font-family="Georgia, serif" font-size="22" font-weight="700">v<tspan font-size="16" dy="7">x</tspan><tspan dy="-7"> = 4</tspan></text>
+    <text x="278" y="-78" fill="#7dcea0" font-family="Georgia, serif" font-size="22" font-weight="700">v<tspan font-size="16" dy="7">y</tspan><tspan dy="-7"> = 3</tspan></text>
+    <rect x="4" y="-168" width="132" height="30" rx="8" fill="#161410" stroke="#3a3428"/>
+    <text x="70" y="-147" text-anchor="middle" fill="#f3e2b0" font-family="Georgia, serif" font-size="20" font-weight="700">v = (4, 3)</text>
+    <text x="252" y="-198" fill="#f7edd6" font-family="Georgia, serif" font-size="18">P(4, 3)</text>
   </g>
-  <g stroke="#6f6557" stroke-width="2">
-    <line x1="130" y1="350" x2="790" y2="350"/>
-    <line x1="130" y1="350" x2="130" y2="105"/>
-  </g>
-  <g fill="#cbb98a" font-family="system-ui, sans-serif" font-size="16">
-    <text x="798" y="356">x</text><text x="116" y="96">y</text>
-  </g>
-  <g stroke="#6f6557" stroke-width="2" stroke-dasharray="7 7">
-    <line x1="650" y1="140" x2="650" y2="350"/>
-    <line x1="130" y1="140" x2="650" y2="140"/>
-  </g>
-  <line x1="130" y1="350" x2="650" y2="350" stroke="#e6c77a" stroke-width="7"/>
-  <line x1="650" y1="350" x2="650" y2="140" stroke="#7dcea0" stroke-width="7"/>
-  <line x1="130" y1="350" x2="650" y2="140" stroke="#6ea8fe" stroke-width="9"/>
-  <polygon points="650,140 620,157 638,178" fill="#6ea8fe"/>
-  <g font-family="system-ui, sans-serif" font-size="20" font-weight="700">
-    <text x="375" y="382" fill="#e6c77a">vₓ = 4</text>
-    <text x="665" y="250" fill="#7dcea0">vᵧ = 3</text>
-    <text x="515" y="225" fill="#6ea8fe">v = (4, 3)</text>
-  </g>
-  <circle cx="130" cy="350" r="7" fill="#f7edd6"/>
-  <circle cx="650" cy="140" r="7" fill="#f7edd6"/>
+  <text x="450" y="492" text-anchor="middle" fill="#cbb98a" font-family="Georgia, serif" font-size="17">Eerst 4 naar rechts, dan 3 omhoog. De pijl is die ene verplaatsing.</text>
 </svg>
