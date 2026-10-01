@@ -3237,7 +3237,8 @@ const WIDGET_BUILDERS = {
   algebraMachine: mountAlgebraMachine,
   sine: mountSine,
   lineGraph:mountLineGraph,
-  parabolaGraph:mountParabolaGraph
+  parabolaGraph:mountParabolaGraph,
+  crossProduct:mountCrossProduct
 };
 
 function mountWidgets(root, milestoneId) {
