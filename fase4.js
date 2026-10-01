@@ -1061,9 +1061,7 @@ const MILESTONES_4 = [
 
       <h3>Het kruisproduct werkt in drie dimensies</h3>
 
-      <div class="theory-image">
-        <img src="assets/cross-product-normal.svg" alt="Twee vectoren spannen een vlak op en hun kruisproduct wijst loodrecht op dat vlak.">
-      </div>
+     <div data-widget="crossProduct"></div>
 
       <p>
         Het gewone kruisproduct dat we hier leren is gedefinieerd voor vectoren in
