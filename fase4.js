@@ -2798,7 +2798,7 @@ const MILESTONES_4 = [
         We krijgen:
       </p>
 
-      <p class="formula">\\left[\\begin{array}{cc|c}1 & 1 & 5 \\\\ 0 & -3 & -9\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 1 \\\\ 0 & -3\\end{pmatrix}\\middle|\\begin{pmatrix}5 \\\\ -9\\end{pmatrix}\\right]</p>
 
       <p>
         De tweede vergelijking bevat nu nog maar één onbekende:
