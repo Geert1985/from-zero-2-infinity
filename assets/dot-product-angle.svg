@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-labelledby="title desc">
+  <title id="title">Inwendig product en hoek</title>
+  <desc id="desc">Twee vectoren vertrekken uit hetzelfde punt. De hoek theta tussen de vectoren verbindt het inwendig product met de geometrische richting.</desc>
+  <rect width="900" height="430" rx="18" fill="#0d0b08"/>
+  <text x="42" y="46" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#e6c77a">Inwendig product: vergelijking via de hoek</text>
+  <text x="42" y="76" font-family="system-ui, sans-serif" font-size="16" fill="#cbb98a">Dezelfde componentberekening krijgt een geometrische betekenis.</text>
+  <g stroke="#6f6557" stroke-width="2">
+    <line x1="150" y1="340" x2="800" y2="340"/>
+    <line x1="150" y1="340" x2="150" y2="95"/>
+  </g>
+  <line x1="150" y1="340" x2="710" y2="160" stroke="#6ea8fe" stroke-width="9"/>
+  <polygon points="710,160 682,164 693,189" fill="#6ea8fe"/>
+  <line x1="150" y1="340" x2="650" y2="275" stroke="#e07a6a" stroke-width="9"/>
+  <polygon points="650,275 625,266 628,291" fill="#e07a6a"/>
+  <path d="M235 340 A85 85 0 0 1 232 320" fill="none" stroke="#e6c77a" stroke-width="5"/>
+  <text x="246" y="326" font-family="system-ui, sans-serif" font-size="22" fill="#e6c77a">θ</text>
+  <text x="600" y="142" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#6ea8fe">u</text>
+  <text x="575" y="306" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#e07a6a">v</text>
+  <rect x="500" y="55" width="350" height="72" rx="12" fill="#16130e" stroke="#e6c77a"/>
+  <text x="675" y="88" text-anchor="middle" font-family="serif" font-size="24" fill="#fff6df">u · v = |u| |v| cos(θ)</text>
+  <text x="675" y="113" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#cbb98a">θ bepaalt de relatie tussen de richtingen</text>
+</svg>
