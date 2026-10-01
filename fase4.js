@@ -2473,7 +2473,897 @@ const MILESTONES_4 = [
         transformaties.
       </p>
 ` },
-  { id: "4.6", title: "Lineaire stelsels & Gauss-eliminatie", goal: "Hoe lossen we meerdere lineaire vergelijkingen systematisch op?", theory: `` },
+  { id: "4.6", title: "Lineaire stelsels & Gauss-eliminatie", goal: "Hoe lossen we meerdere lineaire vergelijkingen systematisch op?", theory: `
+      <h2>Lineaire stelsels & Gauss-eliminatie</h2>
+
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Waarom meerdere lineaire vergelijkingen samen één probleem vormen.</li>
+        <li>Hoe we een lineair stelsel als één matrixvergelijking schrijven.</li>
+        <li>Hoe een uitgebreid matrixstelsel de structuur van het probleem zichtbaar maakt.</li>
+        <li>Welke elementaire rijbewerkingen een stelsel veranderen zonder zijn oplossingen te veranderen.</li>
+        <li>Hoe Gauss-eliminatie onbekenden stap voor stap wegwerkt.</li>
+        <li>Hoe we een uniek antwoord, geen oplossing of oneindig veel oplossingen herkennen.</li>
+        <li>Waarom de methode werkt en hoe ze de brug vormt naar de verdere lineaire algebra.</li>
+      </ul>
+
+      <p>
+        In 4.5 leerden we dat matrixvermenigvuldiging ons de compacte vergelijking
+        <span class="formula-inline">Ax = b</span> geeft. Nu keren we de vraag om.
+        In plaats van een vector <span class="formula-inline">x</span> te nemen en
+        <span class="formula-inline">Ax</span> te berekenen, krijgen we
+        <span class="formula-inline">A</span> en <span class="formula-inline">b</span>
+        en willen we <strong>vinden welke vectoren x aan de vergelijking voldoen</strong>.
+      </p>
+
+      <div class="callout">
+        <p><strong>Een lineair stelsel is een probleem waarin meerdere lineaire voorwaarden tegelijk moeten kloppen.</strong></p>
+      </div>
+
+      <h3>Van één vergelijking naar een stelsel</h3>
+
+      <p>
+        Een enkele vergelijking zoals
+        <span class="formula-inline">2x + 3 = 7</span> heeft één onbekende.
+        We kunnen ze oplossen door de bewerkingen op beide kanten van het
+        gelijkheidsteken ongedaan te maken.
+      </p>
+
+      <p>
+        Met twee onbekenden krijgen we bijvoorbeeld:
+      </p>
+
+      <p class="formula">x + y = 5</p>
+      <p class="formula">2x − y = 1</p>
+
+      <p>
+        We zoeken nu niet een waarde voor <span class="formula-inline">x</span>
+        of <span class="formula-inline">y</span> afzonderlijk. We zoeken een paar
+        <span class="formula-inline">(x,y)</span> dat <strong>beide</strong>
+        vergelijkingen tegelijk waar maakt.
+      </p>
+
+      <p>
+        Tel de twee vergelijkingen op:
+      </p>
+
+      <p class="formula">3x = 6</p>
+
+      <p>
+        Dus:
+      </p>
+
+      <p class="formula">x = 2</p>
+
+      <p>
+        Invullen in de eerste vergelijking geeft:
+      </p>
+
+      <p class="formula">2 + y = 5</p>
+
+      <p class="formula">y = 3</p>
+
+      <p>
+        De oplossing is dus:
+      </p>
+
+      <p class="formula">(x,y) = (2,3)</p>
+
+      <p>
+        Dit eenvoudige voorbeeld laat meteen zien wat we willen doen:
+        <strong>één vergelijking gebruiken om informatie uit een andere vergelijking
+        te verwijderen</strong>. Gauss-eliminatie maakt precies dat idee systematisch.
+      </p>
+
+      <h3>Waarom meerdere vergelijkingen samen bekijken?</h3>
+
+      <p>
+        Je zou elke vergelijking afzonderlijk kunnen bekijken, maar dan zie je
+        minder duidelijk hoe ze met elkaar samenhangen.
+      </p>
+
+      <p>
+        Neem:
+      </p>
+
+      <p class="formula">x + y = 5</p>
+      <p class="formula">2x − y = 1</p>
+
+      <p>
+        De eerste vergelijking beschrijft een verzameling mogelijke punten.
+        De tweede beschrijft een andere verzameling mogelijke punten.
+        Een oplossing van het stelsel is een punt dat in beide verzamelingen
+        tegelijk ligt.
+      </p>
+
+      <p>
+        In twee dimensies kun je dit geometrisch zien als het snijpunt van twee
+        rechten. In drie dimensies kunnen vergelijkingen bijvoorbeeld vlakken
+        beschrijven.
+      </p>
+
+      <div class="callout">
+        <p><strong>Een stelsel zoekt de gemeenschappelijke oplossingen van meerdere voorwaarden.</strong></p>
+      </div>
+
+      <h3>De onbekenden als vector</h3>
+
+      <p>
+        Dankzij 4.5 kunnen we de onbekenden samenbrengen in een vector.
+        Voor twee onbekenden schrijven we:
+      </p>
+
+      <p class="formula">x = \\begin{pmatrix}x \\\\ y\\end{pmatrix}</p>
+
+      <p>
+        Het stelsel
+      </p>
+
+      <p class="formula">x + y = 5</p>
+      <p class="formula">2x − y = 1</p>
+
+      <p>
+        kan dan compact worden geschreven als:
+      </p>
+
+      <p class="formula">Ax = b</p>
+
+      <p>
+        met:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}1 & 1 \\\\ 2 & -1\\end{pmatrix}</p>
+
+      <p class="formula">x = \\begin{pmatrix}x \\\\ y\\end{pmatrix}</p>
+
+      <p class="formula">b = \\begin{pmatrix}5 \\\\ 1\\end{pmatrix}</p>
+
+      <p>
+        Als we de matrix vermenigvuldigen met de onbekende vector krijgen we:
+      </p>
+
+      <p class="formula">\\begin{pmatrix}1 & 1 \\\\ 2 & -1\\end{pmatrix}\\begin{pmatrix}x \\\\ y\\end{pmatrix} = \\begin{pmatrix}5 \\\\ 1\\end{pmatrix}</p>
+
+      <p>
+        De twee rijen van de matrixvergelijking zijn precies de twee oorspronkelijke
+        vergelijkingen.
+      </p>
+
+      <div class="callout">
+        <p><strong>Een lineair stelsel kan compact worden geschreven als <span class="formula-inline">Ax = b</span>.</strong></p>
+      </div>
+
+      <h3>De uitgebreide matrix</h3>
+
+      <p>
+        Voor het oplossen van het stelsel hoeven we de namen van de matrices
+        voorlopig niet telkens te schrijven. We kunnen de coëfficiënten en de
+        rechterkant naast elkaar zetten in één <strong>uitgebreide matrix</strong>.
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{cc|c}1 & 1 & 5 \\\\ 2 & -1 & 1\\end{array}\\right]</p>
+
+      <p>
+        Links van de verticale scheidingslijn staan de coëfficiënten van de
+        onbekenden. Rechts staat de rechterkant van de vergelijkingen.
+      </p>
+
+      <p>
+        De verticale lijn is geen extra getal en maakt geen deel uit van de
+        coëfficiëntenmatrix. Ze helpt ons alleen om de twee delen uit elkaar te
+        houden.
+      </p>
+
+      <p>
+        Voor drie vergelijkingen met drie onbekenden kan dit bijvoorbeeld worden:
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{ccc|c}1 & 2 & -1 & 4 \\\\ 2 & 1 & 1 & 7 \\\\ -1 & 1 & 2 & 3\\end{array}\\right]</p>
+
+      <p>
+        De uitgebreide matrix bevat precies dezelfde informatie als het
+        oorspronkelijke lineaire stelsel, maar in een vorm waarop we systematisch
+        rijbewerkingen kunnen uitvoeren.
+      </p>
+
+      <h3>Wat is Gauss-eliminatie?</h3>
+
+      <p>
+        Gauss-eliminatie is een methode om een lineair stelsel stap voor stap te
+        vereenvoudigen. Het centrale idee is eenvoudig:
+      </p>
+
+      <div class="callout">
+        <p><strong>Gebruik één rij om een onbekende uit andere rijen weg te werken.</strong></p>
+      </div>
+
+      <p>
+        Bij twee vergelijkingen betekent dat bijvoorbeeld dat we de eerste
+        onbekende uit de tweede vergelijking proberen te verwijderen.
+        Daarna blijft een eenvoudiger vergelijking over.
+      </p>
+
+      <p>
+        Bij drie onbekenden herhalen we hetzelfde idee: eerst elimineren we een
+        onbekende uit de onderste rijen, daarna een tweede onbekende, totdat een
+        driehoekige structuur ontstaat.
+      </p>
+
+      <div class="theory-image">
+        <img src="assets/gauss-eliminatie.svg" alt="Een uitgebreid matrixstelsel wordt met elementaire rijbewerkingen omgevormd tot een bovenste driehoeksvorm, waarna terugsubstitutie de onbekenden oplevert.">
+      </div>
+
+      <p>
+        De methode is dus geen nieuwe soort algebra. Het is een systematische
+        organisatie van dezelfde toegestane bewerkingen die we al kennen uit het
+        oplossen van vergelijkingen.
+      </p>
+
+      <h3>Welke rijbewerkingen zijn toegestaan?</h3>
+
+      <p>
+        We mogen een rij op drie fundamentele manieren veranderen zonder de
+        oplossingsverzameling van het stelsel te veranderen:
+      </p>
+
+      <ol>
+        <li>twee rijen verwisselen;</li>
+        <li>een rij vermenigvuldigen met een niet-nulgetal;</li>
+        <li>een veelvoud van de ene rij bij een andere rij optellen.</li>
+      </ol>
+
+      <p>
+        Deze bewerkingen komen rechtstreeks overeen met toegestane bewerkingen
+        op vergelijkingen.
+      </p>
+
+      <p>
+        We noteren bijvoorbeeld:
+      </p>
+
+      <p class="formula">R_1 ↔ R_2</p>
+
+      <p class="formula">R_2 → 3R_2</p>
+
+      <p class="formula">R_2 → R_2 − 2R_1</p>
+
+      <p>
+        Hierbij betekent <span class="formula-inline">R_1</span> “eerste rij” en
+        <span class="formula-inline">R_2</span> “tweede rij”.
+      </p>
+
+      <div class="callout">
+        <p><strong>We veranderen de vorm van het stelsel, maar niet de oplossingen.</strong></p>
+      </div>
+
+      <h3>Waarom verandert de oplossing niet?</h3>
+
+      <p>
+        Neem een vergelijking:
+      </p>
+
+      <p class="formula">x + y = 5</p>
+
+      <p>
+        Als we beide kanten vermenigvuldigen met 2, krijgen we:
+      </p>
+
+      <p class="formula">2x + 2y = 10</p>
+
+      <p>
+        Er zijn precies dezelfde oplossingen. We hebben alleen dezelfde informatie
+        anders geschreven.
+      </p>
+
+      <p>
+        Ook wanneer we de ene vergelijking vervangen door zichzelf plus een
+        veelvoud van een andere vergelijking, voegen we geen nieuwe beperking toe
+        en verwijderen we geen geldige oplossing.
+      </p>
+
+      <p>
+        Dat is de reden waarom Gauss-eliminatie veilig kan worden gebruikt:
+        iedere rijbewerking bewaart de oplossingsverzameling.
+      </p>
+
+      <h3>Een eerste eliminatie stap voor stap</h3>
+
+      <p>
+        Neem opnieuw:
+      </p>
+
+      <p class="formula">x + y = 5</p>
+      <p class="formula">2x − y = 1</p>
+
+      <p>
+        De uitgebreide matrix is:
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{cc|c}1 & 1 & 5 \\\\ 2 & -1 & 1\\end{array}\\right]</p>
+
+      <p>
+        We willen de <span class="formula-inline">2</span> onder de eerste
+        pivotpositie wegwerken. Daarom doen we:
+      </p>
+
+      <p class="formula">R_2 → R_2 − 2R_1</p>
+
+      <p>
+        De tweede rij wordt:
+      </p>
+
+      <p class="formula">(2,−1,1) − 2(1,1,5) = (0,−3,−9)</p>
+
+      <p>
+        We krijgen:
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{cc|c}1 & 1 & 5 \\\\ 0 & -3 & -9\\end{array}\\right]</p>
+
+      <p>
+        De tweede vergelijking bevat nu nog maar één onbekende:
+      </p>
+
+      <p class="formula">−3y = −9</p>
+
+      <p class="formula">y = 3</p>
+
+      <p>
+        Daarna vullen we terug in:
+      </p>
+
+      <p class="formula">x + 3 = 5</p>
+
+      <p class="formula">x = 2</p>
+
+      <p>
+        De eliminatie heeft het oorspronkelijke probleem dus veranderd in een
+        eenvoudiger probleem dat we van onder naar boven kunnen oplossen.
+      </p>
+
+      <h3>Pivots: de eerste niet-nulpositie</h3>
+
+      <p>
+        Om grotere stelsels overzichtelijk te bespreken gebruiken we het begrip
+        <strong>pivot</strong>. In een rij-echelonvorm is een pivot het eerste
+        niet-nulelement van een rij, wanneer de rijen van boven naar beneden
+        worden bekeken.
+      </p>
+
+      <p>
+        In:
+      </p>
+
+      <p class="formula">\\begin{pmatrix}1 & 2 & 4 \\\\ 0 & 3 & 5 \\\\ 0 & 0 & 2\\end{pmatrix}</p>
+
+      <p>
+        liggen de pivots bijvoorbeeld op de eerste, tweede en derde diagonaalpositie.
+      </p>
+
+      <p>
+        Voor Gauss-eliminatie is vooral belangrijk dat we door elimineren steeds
+        meer nullen <strong>onder</strong> de pivots krijgen.
+      </p>
+
+      <p>
+        Het volledige begrip van rang en het tellen van onafhankelijke richtingen
+        bewaren we voor 4.11. Hier gebruiken we de pivot alleen als praktisch
+        hulpmiddel om de eliminatiestappen te organiseren.
+      </p>
+
+      <h3>Een stelsel met drie onbekenden</h3>
+
+      <p>
+        Nu voeren we dezelfde methode uit op een groter stelsel:
+      </p>
+
+      <p class="formula">x + y + z = 6</p>
+      <p class="formula">2x − y + z = 3</p>
+      <p class="formula">x + 2y − z = 3</p>
+
+      <p>
+        De uitgebreide matrix is:
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{ccc|c}1 & 1 & 1 & 6 \\\\ 2 & -1 & 1 & 3 \\\\ 1 & 2 & -1 & 3\\end{array}\\right]</p>
+
+      <p>
+        Eerst elimineren we <span class="formula-inline">x</span> uit de tweede
+        en derde rij:
+      </p>
+
+      <p class="formula">R_2 → R_2 − 2R_1</p>
+      <p class="formula">R_3 → R_3 − R_1</p>
+
+      <p>
+        Dan krijgen we:
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{ccc|c}1 & 1 & 1 & 6 \\\\ 0 & -3 & -1 & -9 \\\\ 0 & 1 & -2 & -3\\end{array}\\right]</p>
+
+      <p>
+        Nu richten we ons op de tweede kolom. We kunnen de tweede en derde rij
+        combineren om de <span class="formula-inline">y</span>-term uit de
+        derde rij te verwijderen. Een handige stap is:
+      </p>
+
+      <p class="formula">R_3 → 3R_3 + R_2</p>
+
+      <p>
+        Dan ontstaat:
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{ccc|c}1 & 1 & 1 & 6 \\\\ 0 & -3 & -1 & -9 \\\\ 0 & 0 & -7 & -18\\end{array}\\right]</p>
+
+      <p>
+        De onderste rij geeft:
+      </p>
+
+      <p class="formula">−7z = −18</p>
+
+      <p class="formula">z = \\frac{18}{7}</p>
+
+      <p>
+        Daarna gebruiken we terugsubstitutie in de tweede rij en vervolgens in
+        de eerste rij. Het belangrijke inzicht is hier niet het specifieke getal,
+        maar de structuur:
+      </p>
+
+      <div class="callout">
+        <p><strong>Eliminatie maakt van een gekoppeld probleem een reeks steeds eenvoudigere vergelijkingen.</strong></p>
+      </div>
+
+      <h3>Terugsubstitutie</h3>
+
+      <p>
+        Wanneer de matrix in bovenste driehoeksvorm staat, kunnen we van onder
+        naar boven werken.
+      </p>
+
+      <p>
+        Stel dat we bijvoorbeeld krijgen:
+      </p>
+
+      <p class="formula">x + 2y − z = 4</p>
+      <p class="formula">3y + 2z = 8</p>
+      <p class="formula">5z = 10</p>
+
+      <p>
+        De onderste vergelijking geeft onmiddellijk:
+      </p>
+
+      <p class="formula">z = 2</p>
+
+      <p>
+        Daarmee vinden we uit de tweede vergelijking:
+      </p>
+
+      <p class="formula">3y + 4 = 8</p>
+
+      <p class="formula">y = \\frac{4}{3}</p>
+
+      <p>
+        En daarna gebruiken we de eerste vergelijking om
+        <span class="formula-inline">x</span> te vinden.
+      </p>
+
+      <p>
+        Dit proces heet <strong>terugsubstitutie</strong>: de informatie die onderaan
+        het eenvoudigst is geworden, gebruiken we opnieuw in de rijen erboven.
+      </p>
+
+      <h3>Rij-echelonvorm</h3>
+
+      <p>
+        Een matrix bevindt zich in <strong>rij-echelonvorm</strong> wanneer de
+        niet-nulrijen een trapstructuur vormen:
+      </p>
+
+      <ul>
+        <li>alle volledig nulrijen staan onderaan;</li>
+        <li>elke volgende niet-nulrij begint verder naar rechts dan de vorige;</li>
+        <li>onder elke pivot staan alleen nullen.</li>
+      </ul>
+
+      <p>
+        Bijvoorbeeld:
+      </p>
+
+      <p class="formula">\\begin{pmatrix}1 & 2 & 3 \\\\ 0 & 1 & 4 \\\\ 0 & 0 & 2\\end{pmatrix}</p>
+
+      <p>
+        Deze trapvorm is precies geschikt voor terugsubstitutie.
+      </p>
+
+      <p>
+        Gauss-eliminatie stopt conceptueel zodra deze vorm bereikt is. We hoeven
+        niet altijd alle getallen boven de pivots weg te werken.
+      </p>
+
+      <h3>Gauss-Jordan: nog verder reduceren</h3>
+
+      <p>
+        We kunnen de eliminatie nog verder doorvoeren. Dan proberen we ook boven
+        elke pivot nullen te krijgen en de pivots gelijk aan 1 te maken.
+        Dat levert de <strong>gereduceerde rij-echelonvorm</strong>.
+      </p>
+
+      <p class="formula">\\begin{pmatrix}1 & 0 & a \\\\ 0 & 1 & b \\\\ 0 & 0 & 0\\end{pmatrix}</p>
+
+      <p>
+        Deze uitbreiding heet <strong>Gauss-Jordan-eliminatie</strong>.
+        Ze is niet nodig om het basisidee van Gauss-eliminatie te begrijpen,
+        maar maakt de uiteindelijke oplossing soms direct zichtbaar.
+      </p>
+
+      <div class="callout">
+        <p><strong>Gauss:</strong> maak nullen onder de pivots en gebruik terugsubstitutie.</p>
+        <p><strong>Gauss-Jordan:</strong> maak ook nullen boven de pivots.</p>
+      </div>
+
+      <h3>Een stelsel kan één oplossing hebben</h3>
+
+      <p>
+        Wanneer elke onbekende uiteindelijk door een pivot wordt bepaald, krijgen
+        we een unieke oplossing.
+      </p>
+
+      <p class="formula">\\begin{pmatrix}1 & 0 & 0 & | & 2 \\\\ 0 & 1 & 0 & | & -1 \\\\ 0 & 0 & 1 & | & 4\\end{pmatrix}</p>
+
+      <p>
+        Dit betekent rechtstreeks:
+      </p>
+
+      <p class="formula">x = 2</p>
+      <p class="formula">y = −1</p>
+      <p class="formula">z = 4</p>
+
+      <p>
+        Er is precies één vector die aan het stelsel voldoet.
+      </p>
+
+      <h3>Een stelsel kan geen oplossing hebben</h3>
+
+      <p>
+        Soms leidt eliminatie tot een tegenstrijdigheid. Bijvoorbeeld:
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{cc|c}1 & 2 & 4 \\\\ 0 & 0 & 3\\end{array}\\right]</p>
+
+      <p>
+        De tweede rij betekent:
+      </p>
+
+      <p class="formula">0x + 0y = 3</p>
+
+      <p>
+        Dat is onmogelijk. Geen enkele waarde van
+        <span class="formula-inline">x</span> en
+        <span class="formula-inline">y</span> kan ervoor zorgen dat nul gelijk
+        wordt aan 3.
+      </p>
+
+      <div class="callout">
+        <p><strong>Een rij van de vorm <span class="formula-inline">0 = niet-nul</span> betekent: geen oplossing.</strong></p>
+      </div>
+
+      <p>
+        Geometrisch betekent dit bijvoorbeeld dat twee rechten parallel zijn
+        zonder samen te vallen, of dat meerdere vlakken geen gemeenschappelijk
+        snijpunt hebben.
+      </p>
+
+      <h3>Een stelsel kan oneindig veel oplossingen hebben</h3>
+
+      <p>
+        Er is ook een derde mogelijkheid. Soms levert eliminatie geen
+        tegenstrijdigheid op, maar blijven er minder pivots over dan er
+        onbekenden zijn.
+      </p>
+
+      <p>
+        Bijvoorbeeld:
+      </p>
+
+      <p class="formula">\\left[\\begin{array}{cc|c}1 & 2 & 5 \\\\ 0 & 0 & 0\\end{array}\\right]</p>
+
+      <p>
+        De tweede rij zegt alleen:
+      </p>
+
+      <p class="formula">0 = 0</p>
+
+      <p>
+        Dat is altijd waar. De tweede vergelijking geeft dus geen nieuwe
+        beperking.
+      </p>
+
+      <p>
+        De eerste vergelijking blijft:
+      </p>
+
+      <p class="formula">x + 2y = 5</p>
+
+      <p>
+        We kunnen bijvoorbeeld <span class="formula-inline">y</span> vrij kiezen
+        en daarna <span class="formula-inline">x</span> bepalen:
+      </p>
+
+      <p class="formula">x = 5 − 2y</p>
+
+      <p>
+        Voor iedere keuze van <span class="formula-inline">y</span> ontstaat een
+        oplossing. Er zijn dus oneindig veel oplossingen.
+      </p>
+
+      <div class="callout">
+        <p><strong>Geen tegenstrijdigheid + minstens één vrije variabele → oneindig veel oplossingen.</strong></p>
+      </div>
+
+      <h3>De drie mogelijke uitkomsten</h3>
+
+      <p>
+        Een lineair stelsel kan, wanneer het oplossingen heeft, niet zomaar een
+        willekeurig aantal verschillende oplossingen hebben. Voor een lineair
+        stelsel zijn er drie structurele mogelijkheden:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Resultaat</th>
+            <th>Wat zie je na eliminatie?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Één oplossing</td>
+            <td>Elke onbekende wordt uiteindelijk bepaald.</td>
+          </tr>
+          <tr>
+            <td>Geen oplossing</td>
+            <td>Er ontstaat een rij van de vorm <span class="formula-inline">0 = c</span> met <span class="formula-inline">c ≠ 0</span>.</td>
+          </tr>
+          <tr>
+            <td>Oneindig veel oplossingen</td>
+            <td>Er is geen tegenstrijdigheid, maar minstens één onbekende blijft vrij.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Dit onderscheid is belangrijker dan alleen het uitrekenen van een paar
+        getallen. Gauss-eliminatie vertelt ons niet alleen <em>wat</em> de
+        oplossing is, maar ook <strong>welk type oplossing het stelsel heeft</strong>.
+      </p>
+
+      <h3>Een vrije variabele beschrijven</h3>
+
+      <p>
+        Bij oneindig veel oplossingen geven we een vrije variabele een parameter.
+        Stel:
+      </p>
+
+      <p class="formula">x + 2y = 5</p>
+
+      <p>
+        Kies bijvoorbeeld:
+      </p>
+
+      <p class="formula">y = t</p>
+
+      <p>
+        Dan volgt:
+      </p>
+
+      <p class="formula">x = 5 − 2t</p>
+
+      <p>
+        De volledige oplossingsverzameling kan dan als parametervergelijking worden
+        geschreven:
+      </p>
+
+      <p class="formula">\\begin{pmatrix}x \\\\ y\\end{pmatrix} = \\begin{pmatrix}5 − 2t \\\\ t\\end{pmatrix}</p>
+
+      <p>
+        Hier is <span class="formula-inline">t</span> vrij te kiezen.
+        Elke keuze levert een oplossing.
+      </p>
+
+      <p>
+        Dit is een eerste kennismaking met een idee dat later belangrijk wordt:
+        oplossingen kunnen zelf een geometrische structuur vormen.
+      </p>
+
+      <h3>De geometrische betekenis</h3>
+
+      <p>
+        Voor twee onbekenden stelt een lineaire vergelijking meestal een rechte
+        voor. Twee vergelijkingen geven dus twee rechten.
+      </p>
+
+      <ul>
+        <li>één snijpunt → één oplossing;</li>
+        <li>geen snijpunt → geen oplossing;</li>
+        <li>dezelfde rechte → oneindig veel oplossingen.</li>
+      </ul>
+
+      <p>
+        In drie onbekenden worden lineaire vergelijkingen vlakken. Dan zoekt het
+        stelsel naar hun gemeenschappelijke snijpunt, snijlijn of eventueel een
+        onverenigbare combinatie.
+      </p>
+
+      <p>
+        Gauss-eliminatie is de algebraïsche methode om die geometrische
+        mogelijkheden systematisch te onderscheiden.
+      </p>
+
+      <h3>Een praktische toepassing: twee onbekende hoeveelheden</h3>
+
+      <p>
+        Stel dat een winkel twee soorten tickets verkoopt. Een eerste bestelling
+        bevat 3 standaardtickets en 2 kortingstickets voor €34. Een tweede
+        bestelling bevat 5 standaardtickets en 1 kortingsticket voor €49.
+      </p>
+
+      <p>
+        Noem de prijs van een standaardticket <span class="formula-inline">x</span>
+        en die van een kortingsticket <span class="formula-inline">y</span>.
+        Dan krijgen we:
+      </p>
+
+      <p class="formula">3x + 2y = 34</p>
+      <p class="formula">5x + y = 49</p>
+
+      <p>
+        Dit is een lineair stelsel. We kunnen het als matrix schrijven:
+      </p>
+
+      <p class="formula">\\begin{pmatrix}3 & 2 \\\\ 5 & 1\\end{pmatrix}\\begin{pmatrix}x \\\\ y\\end{pmatrix} = \\begin{pmatrix}34 \\\\ 49\\end{pmatrix}</p>
+
+      <p>
+        Gauss-eliminatie geeft vervolgens een systematische route naar de
+        onbekende prijzen.
+      </p>
+
+      <p>
+        Het belangrijke modelleeridee is:
+        <strong>de onbekenden vormen een vector, de coëfficiënten vormen een matrix
+        en de bekende waarden vormen de rechterkant.</strong>
+      </p>
+
+      <h3>Wat Gauss-eliminatie eigenlijk doet</h3>
+
+      <p>
+        We kunnen de methode nu vanuit drie verschillende invalshoeken bekijken.
+      </p>
+
+      <ol>
+        <li>
+          <strong>Algebraïsch:</strong> we combineren vergelijkingen om onbekenden
+          te elimineren.
+        </li>
+        <li>
+          <strong>Matrixmatig:</strong> we voeren elementaire rijbewerkingen uit
+          op een uitgebreide matrix.
+        </li>
+        <li>
+          <strong>Geometrisch:</strong> we veranderen de beschrijving van hetzelfde
+          oplossingsprobleem zonder de oplossingsverzameling te veranderen.
+        </li>
+      </ol>
+
+      <p>
+        Deze drie beschrijvingen zijn geen verschillende methodes. Ze beschrijven
+        hetzelfde proces vanuit een ander perspectief.
+      </p>
+
+      <div class="callout">
+        <p><strong>Gauss-eliminatie maakt verborgen structuur zichtbaar door informatie stap voor stap te ordenen.</strong></p>
+      </div>
+
+      <h3>Veelgemaakte fouten</h3>
+
+      <ul>
+        <li>
+          <strong>De rechterkant vergeten mee te veranderen.</strong>
+          Een rijbewerking geldt voor de volledige rij, inclusief de rechterkant
+          van de uitgebreide matrix.
+        </li>
+        <li>
+          <strong>De verkeerde rij gebruiken.</strong>
+          Schrijf de rijbewerking eerst expliciet op voordat je rekent.
+        </li>
+        <li>
+          <strong>Een rij vermenigvuldigen met nul.</strong>
+          Een rij mag alleen met een niet-nulgetal worden vermenigvuldigd.
+        </li>
+        <li>
+          <strong>Een kolombewerking uitvoeren alsof het een rijbewerking is.</strong>
+          De standaard Gauss-methode gebruikt elementaire rijbewerkingen.
+        </li>
+        <li>
+          <strong>Een tekenfout bij het elimineren.</strong>
+          Bereken de volledige nieuwe rij voordat je verdergaat.
+        </li>
+        <li>
+          <strong>Te vroeg terugsubstitueren.</strong>
+          Werk eerst systematisch naar een echelonvorm.
+        </li>
+        <li>
+          <strong>Een rij <span class="formula-inline">0 = 0</span> aanzien voor
+          een fout.</strong>
+          Ze betekent dat die vergelijking geen extra beperking geeft.
+        </li>
+        <li>
+          <strong>Een rij <span class="formula-inline">0 = c</span> met
+          <span class="formula-inline">c ≠ 0</span> aanzien voor een oplossing.</strong>
+          Zo'n rij betekent juist dat het stelsel onmogelijk is.
+        </li>
+        <li>
+          <strong>Denken dat elke matrix een uniek stelsel oplost.</strong>
+          Een stelsel kan één, geen of oneindig veel oplossingen hebben.
+        </li>
+      </ul>
+
+      <h3>Een vaste werkwijze</h3>
+
+      <p>
+        Gebruik bij een nieuw lineair stelsel steeds deze volgorde:
+      </p>
+
+      <ol>
+        <li>Schrijf de vergelijkingen duidelijk op en kies de onbekenden.</li>
+        <li>Schrijf het stelsel als <span class="formula-inline">Ax = b</span> als dat nuttig is.</li>
+        <li>Maak de uitgebreide matrix.</li>
+        <li>Controleer de afmetingen en de volgorde van de onbekenden.</li>
+        <li>Kies een geschikte pivot in de eerste kolom.</li>
+        <li>Gebruik rijbewerkingen om de elementen eronder nul te maken.</li>
+        <li>Ga naar de volgende pivot en herhaal.</li>
+        <li>Lees de ontstane echelonvorm.</li>
+        <li>Controleer of er een tegenstrijdige rij of vrije variabele ontstaat.</li>
+        <li>Gebruik terugsubstitutie wanneer er een unieke oplossing is.</li>
+        <li>Schrijf bij vrije variabelen de volledige oplossingsverzameling met parameters.</li>
+        <li>Controleer het gevonden antwoord door het terug in het oorspronkelijke stelsel te plaatsen.</li>
+      </ol>
+
+      <p>
+        Deze laatste controle is vooral belangrijk bij grotere stelsels:
+        één kleine tekenfout in een eliminatiestap kan anders doorwerken tot het einde.
+      </p>
+
+      <h3>Van Gauss-eliminatie naar de volgende stap</h3>
+
+      <p>
+        We kunnen nu een lineair stelsel systematisch oplossen. Maar er ontstaat
+        een nieuwe vraag:
+      </p>
+
+      <div class="callout">
+        <p><strong>Wat betekent een matrix eigenlijk als we haar bekijken als een bewerking die vectoren verandert?</strong></p>
+      </div>
+
+      <p>
+        In 4.5 zagen we al dat een matrix op een vector kan werken.
+        In 4.6 gebruikten we matrices vooral als compacte representatie van
+        vergelijkingen en als hulpmiddel bij eliminatie.
+      </p>
+
+      <p>
+        In 4.7 maken we de onderliggende structuur expliciet:
+        <strong>lineaire transformaties</strong>.
+        Dan onderzoeken we welke geometrische veranderingen matrices veroorzaken,
+        welke eigenschappen daarbij behouden blijven en waarom matrixvermenigvuldiging
+        precies bij compositie past.
+      </p>
+
+      <p>
+        Later zullen begrippen als kern, beeld en rang ons nog preciezer vertellen
+        hoeveel informatie een lineaire transformatie behoudt of verliest.
+        Die verdieping bewaren we voor 4.11.
+      </p>
+` },
   { id: "4.7", title: "Lineaire transformaties", goal: "Hoe beschrijven matrices systematische veranderingen van vectoren?", theory: `` },
   { id: "4.8", title: "Determinanten, inverse & invertibiliteit", goal: "Wanneer verliest een lineaire transformatie informatie en wanneer kunnen we haar omkeren?", theory: `` },
   { id: "4.9", title: "Vectorruimten & deelruimten", goal: "Wat maakt een verzameling vectoren tot een ruimte waarin we lineair kunnen rekenen?", theory: `` },
