@@ -190,6 +190,10 @@ const MILESTONES_4 = [
         naar het eindpunt.
       </p>
 
+      <div class="theory-image">
+        <img src="assets/vectoren-optellen.svg" alt="Twee vectoren optellen.">
+      </div>
+
       <p>In algemene vorm:</p>
 
       <p class="formula">(a,b) + (c,d) = (a + c, b + d)</p>
