@@ -4052,11 +4052,716 @@ const MILESTONES_3 = [
 },
 
   {
-    id: "3.7",
-    title: "Afgeleiden van belangrijke functies",
-    goal: "Hoe laten we exponentiële, logaritmische en goniometrische functies veranderen?",
-    theory: ``
-  },
+  id: "3.7",
+  title: "Afgeleiden van belangrijke functies",
+  goal: "Hoe laten we exponentiële, logaritmische en goniometrische functies veranderen?",
+  theory: /* html */`
+    <h2>Afgeleiden van belangrijke functies</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Hoe verandert een exponentiële functie?</li>
+      <li>Waarom is <span class="formula-inline">e^x</span> bijzonder bij differentiëren?</li>
+      <li>Hoe differentiëren we <span class="formula-inline">a^x</span> voor een willekeurige positieve basis?</li>
+      <li>Wat is de afgeleide van de natuurlijke logaritme?</li>
+      <li>Hoe veranderen sinus en cosinus?</li>
+      <li>Hoe combineren we deze regels met de kettingregel?</li>
+      <li>Hoe herkennen we welke regel we nodig hebben?</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Sommige belangrijke functies hebben een eigen afgeleideregel.
+        Exponentiële functies, logaritmen en goniometrische functies gedragen
+        zich anders dan veeltermfuncties.
+      </p>
+      <p>
+        Zodra we hun basisafgeleiden kennen, kunnen we de regels uit de vorige
+        lessen gebruiken om ook samengestelde vormen af te leiden.
+      </p>
+    </div>
+
+    <h3>Een nieuwe familie van functies</h3>
+
+    <p>
+      In les 3.5 leerden we bijvoorbeeld de machtsregel:
+    </p>
+
+    <p class="formula">
+      \\left(x^n\\right)'=nx^{n-1}
+    </p>
+
+    <p>
+      Daarmee kunnen we veel algebraïsche functies differentiëren.
+      Maar belangrijke functies zoals exponentiële functies, logaritmen,
+      sinus en cosinus passen niet rechtstreeks in deze regel.
+    </p>
+
+    <p>
+      Voor deze functies hebben we nieuwe basisregels nodig.
+    </p>
+
+    <h3>De exponentiële functie</h3>
+
+    <p>
+      Een exponentiële functie heeft de vorm:
+    </p>
+
+    <p class="formula">f(x)=a^x</p>
+
+    <p>
+      waarbij de basis positief is en niet gelijk aan 1.
+    </p>
+
+    <p class="formula">a\\gt0,\\quad a\\neq1</p>
+
+    <p>
+      Bij een exponentiële functie staat de variabele in de exponent.
+      Dat is precies wat deze functies onderscheidt van machten zoals
+      <span class="formula-inline">x^2</span> of <span class="formula-inline">x^3</span>.
+    </p>
+
+    <h3>De bijzondere basis e</h3>
+
+    <p>
+      Eén exponentiële functie speelt een uitzonderlijke rol:
+    </p>
+
+    <p class="formula">f(x)=e^x</p>
+
+    <p>
+      Het getal <span class="formula-inline">e</span> is ongeveer:
+    </p>
+
+    <p class="formula">e\\approx2{,}71828</p>
+
+    <p>
+      De bijzondere eigenschap van deze functie is:
+    </p>
+
+    <p class="formula">\\left(e^x\\right)'=e^x</p>
+
+    <p>
+      De functie verandert dus met precies dezelfde waarde als haar
+      huidige waarde.
+    </p>
+
+    <p>
+      Dat maakt <span class="formula-inline">e^x</span> bijzonder belangrijk
+      bij groei, verval en veranderingsprocessen.
+    </p>
+
+    <h3>Waarom is e<sup>x</sup> zo bijzonder?</h3>
+
+    <p>
+      Stel dat:
+    </p>
+
+    <p class="formula">f(x)=e^x</p>
+
+    <p>
+      Dan geldt:
+    </p>
+
+    <p class="formula">f'(x)=e^x</p>
+
+    <p>
+      De veranderingssnelheid is dus op elk punt gelijk aan de waarde van
+      de functie zelf.
+    </p>
+
+    <p>
+      Als de functie bijvoorbeeld groter wordt, wordt ook haar
+      veranderingssnelheid groter. Dat is precies het mechanisme achter
+      exponentiële groei.
+    </p>
+
+    <h3>Een willekeurige exponentiële basis</h3>
+
+    <p>
+      Niet elke exponentiële functie heeft basis <span class="formula-inline">e</span>.
+      Voor:
+    </p>
+
+    <p class="formula">f(x)=a^x</p>
+
+    <p>
+      geldt:
+    </p>
+
+    <p class="formula">
+      \\left(a^x\\right)'=a^x\\ln(a)
+    </p>
+
+    <p>
+      Alleen wanneer <span class="formula-inline">a=e</span> wordt
+      <span class="formula-inline">\\ln(a)=1</span>. Dan krijgen we:
+    </p>
+
+    <p class="formula">
+      \\left(e^x\\right)'=e^x
+    </p>
+
+    <h3>Een voorbeeld met 2<sup>x</sup></h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">f(x)=2^x</p>
+
+    <p>
+      Dan is:
+    </p>
+
+    <p class="formula">
+      f'(x)=2^x\\ln(2)
+    </p>
+
+    <p>
+      De afgeleide is dus opnieuw een exponentiële functie, maar vermenigvuldigd
+      met de constante <span class="formula-inline">\\ln(2)</span>.
+    </p>
+
+    <h3>Exponentiële functies met een samengestelde exponent</h3>
+
+    <p>
+      Dankzij de kettingregel kunnen we meer algemene vormen differentiëren.
+      Neem:
+    </p>
+
+    <p class="formula">f(x)=e^{3x}</p>
+
+    <p>
+      De buitenste functie is:
+    </p>
+
+    <p class="formula">F(u)=e^u</p>
+
+    <p>
+      De binnenste functie is:
+    </p>
+
+    <p class="formula">u=3x</p>
+
+    <p>
+      De afgeleiden zijn:
+    </p>
+
+    <p class="formula">F'(u)=e^u</p>
+
+    <p class="formula">u'=3</p>
+
+    <p>
+      De kettingregel geeft:
+    </p>
+
+    <p class="formula">
+      f'(x)=e^{3x}(3)
+    </p>
+
+    <p class="formula">
+      f'(x)=3e^{3x}
+    </p>
+
+    <h3>De natuurlijke logaritme</h3>
+
+    <p>
+      De natuurlijke logaritme is de inverse functie van de exponentiële
+      functie met basis <span class="formula-inline">e</span>:
+    </p>
+
+    <p class="formula">y=\\ln(x)</p>
+
+    <p>
+      betekent hetzelfde als:
+    </p>
+
+    <p class="formula">e^y=x</p>
+
+    <p>
+      De natuurlijke logaritme is alleen gedefinieerd voor positieve waarden:
+    </p>
+
+    <p class="formula">x\\gt0</p>
+
+    <h3>De afgeleide van ln(x)</h3>
+
+    <p>
+      De belangrijkste regel is:
+    </p>
+
+    <p class="formula">
+      \\left(\\ln(x)\\right)'=\\frac{1}{x}
+    </p>
+
+    <p>
+      De veranderingssnelheid van de logaritme wordt dus kleiner wanneer
+      <span class="formula-inline">x</span> groter wordt.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x)=\\ln(x)
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{1}{x}
+    </p>
+
+    <h3>De kettingregel bij ln</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">f(x)=\\ln(3x+1)</p>
+
+    <p>
+      De binnenste functie is:
+    </p>
+
+    <p class="formula">u=3x+1</p>
+
+    <p>
+      De afgeleide daarvan is:
+    </p>
+
+    <p class="formula">u'=3</p>
+
+    <p>
+      Voor de buitenste functie geldt:
+    </p>
+
+    <p class="formula">
+      \\left(\\ln(u)\\right)'=\\frac{1}{u}
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{1}{3x+1}(3)
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{3}{3x+1}
+    </p>
+
+    <h3>Een algemene regel voor ln(g(x))</h3>
+
+    <p>
+      De vorige berekening kunnen we algemeen schrijven.
+      Als:
+    </p>
+
+    <p class="formula">f(x)=\\ln(g(x))</p>
+
+    <p>
+      dan geeft de kettingregel:
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{g'(x)}{g(x)}
+    </p>
+
+    <p>
+      Hierbij moet natuurlijk gelden dat:
+    </p>
+
+    <p class="formula">g(x)\\gt0</p>
+
+    <h3>De sinus</h3>
+
+    <p>
+      De sinus kennen we uit de trigonometrie:
+    </p>
+
+    <p class="formula">f(x)=\\sin(x)</p>
+
+    <p>
+      De afgeleide van sinus is:
+    </p>
+
+    <p class="formula">
+      \\left(\\sin(x)\\right)'=\\cos(x)
+    </p>
+
+    <p>
+      De sinus verandert dus volgens de cosinus.
+    </p>
+
+    <p>
+      Dat is interessant omdat sinus en cosinus dezelfde periodieke beweging
+      beschrijven, maar ten opzichte van elkaar verschoven zijn.
+    </p>
+
+    <h3>De cosinus</h3>
+
+    <p>
+      Voor de cosinus geldt:
+    </p>
+
+    <p class="formula">
+      \\left(\\cos(x)\\right)'=-\\sin(x)
+    </p>
+
+    <p>
+      Het minteken is belangrijk.
+      De helling van de cosinus wordt dus gegeven door de negatieve sinus.
+    </p>
+
+    <h3>Sinus en cosinus samen</h3>
+
+    <p>
+      De twee basisregels zijn:
+    </p>
+
+    <p class="formula">
+      \\left(\\sin(x)\\right)'=\\cos(x)
+    </p>
+
+    <p class="formula">
+      \\left(\\cos(x)\\right)'=-\\sin(x)
+    </p>
+
+    <p>
+      Daardoor ontstaat bij herhaald differentiëren een patroon:
+    </p>
+
+    <p class="formula">
+      \\sin(x)\\rightarrow\\cos(x)\\rightarrow-\\sin(x)
+    </p>
+
+    <p class="formula">
+      \\cos(x)\\rightarrow-\\sin(x)\\rightarrow-\\cos(x)
+    </p>
+
+    <p>
+      Na vier afleidingen keren we terug naar de oorspronkelijke functie.
+      Dit hangt samen met het periodieke karakter van sinus en cosinus.
+    </p>
+
+    <h3>De kettingregel bij sinus</h3>
+
+    <p>
+      Beschouw:
+    </p>
+
+    <p class="formula">f(x)=\\sin(2x)</p>
+
+    <p>
+      De buitenste functie is sinus en de binnenste functie is:
+    </p>
+
+    <p class="formula">u=2x</p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">u'=2</p>
+
+    <p>
+      De kettingregel geeft:
+    </p>
+
+    <p class="formula">
+      f'(x)=\\cos(2x)(2)
+    </p>
+
+    <p class="formula">
+      f'(x)=2\\cos(2x)
+    </p>
+
+    <h3>De kettingregel bij cosinus</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">f(x)=\\cos(3x+1)</p>
+
+    <p>
+      De binnenste functie is:
+    </p>
+
+    <p class="formula">u=3x+1</p>
+
+    <p class="formula">u'=3</p>
+
+    <p>
+      Omdat de afgeleide van cosinus <span class="formula-inline">-\\sin(u)</span>
+      is, krijgen we:
+    </p>
+
+    <p class="formula">
+      f'(x)=-\\sin(3x+1)(3)
+    </p>
+
+    <p class="formula">
+      f'(x)=-3\\sin(3x+1)
+    </p>
+
+    <h3>De tangens</h3>
+
+    <p>
+      De tangens is gerelateerd aan sinus en cosinus:
+    </p>
+
+    <p class="formula">
+      \\tan(x)=\\frac{\\sin(x)}{\\cos(x)}
+    </p>
+
+    <p>
+      Met de quotiëntregel kunnen we de afgeleide bepalen.
+      Het resultaat is:
+    </p>
+
+    <p class="formula">
+      \\left(\\tan(x)\\right)'=\\frac{1}{\\cos^2(x)}
+    </p>
+
+    <p>
+      Dit kunnen we ook schrijven als:
+    </p>
+
+    <p class="formula">
+      \\left(\\tan(x)\\right)'=\\sec^2(x)
+    </p>
+
+    <p>
+      De eerste vorm is voorlopig het belangrijkst, omdat die rechtstreeks
+      met sinus en cosinus verbonden is.
+    </p>
+
+    <h3>De belangrijkste regels op een rij</h3>
+
+    <p>
+      We hebben nu een belangrijke verzameling basisafgeleiden:
+    </p>
+
+    <p class="formula">
+      \\left(e^x\\right)'=e^x
+    </p>
+
+    <p class="formula">
+      \\left(a^x\\right)'=a^x\\ln(a)
+    </p>
+
+    <p class="formula">
+      \\left(\\ln(x)\\right)'=\\frac{1}{x}
+    </p>
+
+    <p class="formula">
+      \\left(\\sin(x)\\right)'=\\cos(x)
+    </p>
+
+    <p class="formula">
+      \\left(\\cos(x)\\right)'=-\\sin(x)
+    </p>
+
+    <p class="formula">
+      \\left(\\tan(x)\\right)'=\\frac{1}{\\cos^2(x)}
+    </p>
+
+    <h3>Maar de kettingregel blijft nodig</h3>
+
+    <p>
+      Deze regels gelden voor de basisfuncties.
+      Zodra er een functie binnen de functie staat, moeten we de kettingregel
+      gebruiken.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">f(x)=e^{x^2}</p>
+
+    <p>
+      De afgeleide van de buitenste functie is:
+    </p>
+
+    <p class="formula">e^{x^2}</p>
+
+    <p>
+      De afgeleide van de binnenste functie is:
+    </p>
+
+    <p class="formula">2x</p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      f'(x)=e^{x^2}(2x)
+    </p>
+
+    <p class="formula">
+      f'(x)=2xe^{x^2}
+    </p>
+
+    <h3>Een combinatie van regels</h3>
+
+    <p>
+      Soms zijn meerdere regels tegelijk nodig. Neem bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x)=x^2\\sin(x)
+    </p>
+
+    <p>
+      Dit is een product van twee functies. We gebruiken daarom eerst de
+      productregel:
+    </p>
+
+    <p class="formula">
+      f'(x)=2x\\sin(x)+x^2\\cos(x)
+    </p>
+
+    <p>
+      De productregel en de basisregel voor sinus werken hier dus samen.
+    </p>
+
+    <h3>Hoe herken je de juiste regel?</h3>
+
+    <p>
+      Kijk altijd eerst naar de structuur van de functie.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Macht:</strong> gebruik de machtsregel.
+      </li>
+      <li>
+        <strong>Som of verschil:</strong> differentieer elke term afzonderlijk.
+      </li>
+      <li>
+        <strong>Product:</strong> gebruik de productregel.
+      </li>
+      <li>
+        <strong>Quotiënt:</strong> gebruik de quotiëntregel.
+      </li>
+      <li>
+        <strong>Functie in een functie:</strong> gebruik de kettingregel.
+      </li>
+      <li>
+        <strong>Exponentiële functie:</strong> gebruik de exponentiële regel,
+        eventueel samen met de kettingregel.
+      </li>
+      <li>
+        <strong>Logaritme:</strong> gebruik de logaritmeregel,
+        eventueel samen met de kettingregel.
+      </li>
+      <li>
+        <strong>Sinus, cosinus of tangens:</strong> gebruik de bijbehorende
+        goniometrische regel.
+      </li>
+    </ul>
+
+    <h3>Een vaste werkwijze</h3>
+
+    <p>
+      Gebruik bij het differentiëren deze volgorde:
+    </p>
+
+    <ol>
+      <li>Bekijk de volledige functie.</li>
+      <li>Herken de structuur.</li>
+      <li>Kies de buitenste en binnenste functie als er een samenstelling is.</li>
+      <li>Kies de juiste basisregel.</li>
+      <li>Gebruik indien nodig de product-, quotiënt- of kettingregel.</li>
+      <li>Vereenvoudig het resultaat.</li>
+      <li>Controleer het domein.</li>
+    </ol>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        Vergeten dat de afgeleide van <span class="formula-inline">\\cos(x)</span>
+        een minteken bevat.
+      </li>
+      <li>
+        Bij <span class="formula-inline">e^{g(x)}</span> de afgeleide
+        <span class="formula-inline">g'(x)</span> vergeten.
+      </li>
+      <li>
+        De afgeleide van <span class="formula-inline">\\ln(g(x))</span>
+        schrijven als alleen <span class="formula-inline">1/g(x)</span>.
+      </li>
+      <li>
+        Een exponentiële functie verwarren met een macht.
+      </li>
+      <li>
+        De kettingregel vergeten wanneer de variabele niet rechtstreeks in
+        de basisfunctie staat.
+      </li>
+      <li>
+        Het domein van een logaritme of tangens negeren.
+      </li>
+    </ul>
+
+    <h3>Van basisfuncties naar echte modellen</h3>
+
+    <p>
+      We beschikken nu over de belangrijkste bouwstenen van de
+      differentiaalrekening.
+    </p>
+
+    <p>
+      We kunnen niet alleen eenvoudige machten differentiëren, maar ook
+      exponentiële, logaritmische en goniometrische functies en combinaties
+      daarvan.
+    </p>
+
+    <p>
+      Daardoor kunnen we in de volgende les de afgeleide gebruiken om
+      <strong>vragen over verandering en gedrag van functies</strong> te
+      beantwoorden.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Exponentiële, logaritmische en goniometrische functies hebben elk hun
+        eigen basisafgeleide.
+      </p>
+      <p>
+        De belangrijkste regels zijn:
+      </p>
+
+      <p class="formula">
+        \\left(e^x\\right)'=e^x
+      </p>
+
+      <p class="formula">
+        \\left(\\ln(x)\\right)'=\\frac{1}{x}
+      </p>
+
+      <p class="formula">
+        \\left(\\sin(x)\\right)'=\\cos(x)
+      </p>
+
+      <p class="formula">
+        \\left(\\cos(x)\\right)'=-\\sin(x)
+      </p>
+
+      <p>
+        Samen met de product-, quotiënt- en kettingregel kunnen we hiermee
+        een zeer groot deel van de functies uit de analyse differentiëren.
+      </p>
+    </div>
+  `
+},
 
   {
     id: "3.8",
