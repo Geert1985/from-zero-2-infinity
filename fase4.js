@@ -2641,7 +2641,7 @@ const MILESTONES_4 = [
         rechterkant naast elkaar zetten in één <strong>uitgebreide matrix</strong>.
       </p>
 
-      <p class="formula">\\left[\\begin{array}{cc|c}1 & 1 & 5 \\\\ 2 & -1 & 1\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 1 \\\\ 2 & -1\\end{pmatrix}\\middle|\\begin{pmatrix}5 \\\\ 1\\end{pmatrix}\\right]</p>
 
       <p>
         Links van de verticale scheidingslijn staan de coëfficiënten van de
@@ -2658,7 +2658,7 @@ const MILESTONES_4 = [
         Voor drie vergelijkingen met drie onbekenden kan dit bijvoorbeeld worden:
       </p>
 
-      <p class="formula">\\left[\\begin{array}{ccc|c}1 & 2 & -1 & 4 \\\\ 2 & 1 & 1 & 7 \\\\ -1 & 1 & 2 & 3\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 2 & -1 \\\\ 2 & 1 & 1 \\\\ -1 & 1 & 2\\end{pmatrix}\\middle|\\begin{pmatrix}4 \\\\ 7 \\\\ 3\\end{pmatrix}\\right]</p>
 
       <p>
         De uitgebreide matrix bevat precies dezelfde informatie als het
@@ -2779,7 +2779,7 @@ const MILESTONES_4 = [
         De uitgebreide matrix is:
       </p>
 
-      <p class="formula">\\left[\\begin{array}{cc|c}1 & 1 & 5 \\\\ 2 & -1 & 1\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 1 \\\\ 2 & -1\\end{pmatrix}\\middle|\\begin{pmatrix}5 \\\\ 1\\end{pmatrix}\\right]</p>
 
       <p>
         We willen de <span class="formula-inline">2</span> onder de eerste
@@ -2865,7 +2865,7 @@ const MILESTONES_4 = [
         De uitgebreide matrix is:
       </p>
 
-      <p class="formula">\\left[\\begin{array}{ccc|c}1 & 1 & 1 & 6 \\\\ 2 & -1 & 1 & 3 \\\\ 1 & 2 & -1 & 3\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 1 & 1 \\\\ 2 & -1 & 1 \\\\ 1 & 2 & -1\\end{pmatrix}\\middle|\\begin{pmatrix}6 \\\\ 3 \\\\ 3\\end{pmatrix}\\right]</p>
 
       <p>
         Eerst elimineren we <span class="formula-inline">x</span> uit de tweede
@@ -2879,7 +2879,7 @@ const MILESTONES_4 = [
         Dan krijgen we:
       </p>
 
-      <p class="formula">\\left[\\begin{array}{ccc|c}1 & 1 & 1 & 6 \\\\ 0 & -3 & -1 & -9 \\\\ 0 & 1 & -2 & -3\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 1 & 1 \\\\ 0 & -3 & -1 \\\\ 0 & 1 & -2\\end{pmatrix}\\middle|\\begin{pmatrix}6 \\\\ -9 \\\\ -3\\end{pmatrix}\\right]</p>
 
       <p>
         Nu richten we ons op de tweede kolom. We kunnen de tweede en derde rij
@@ -2893,7 +2893,7 @@ const MILESTONES_4 = [
         Dan ontstaat:
       </p>
 
-      <p class="formula">\\left[\\begin{array}{ccc|c}1 & 1 & 1 & 6 \\\\ 0 & -3 & -1 & -9 \\\\ 0 & 0 & -7 & -18\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 1 & 1 \\\\ 0 & -3 & -1 \\\\ 0 & 0 & -7\\end{pmatrix}\\middle|\\begin{pmatrix}6 \\\\ -9 \\\\ -18\\end{pmatrix}\\right]</p>
 
       <p>
         De onderste rij geeft:
@@ -3008,7 +3008,7 @@ const MILESTONES_4 = [
         we een unieke oplossing.
       </p>
 
-      <p class="formula">\\begin{pmatrix}1 & 0 & 0 & | & 2 \\\\ 0 & 1 & 0 & | & -1 \\\\ 0 & 0 & 1 & | & 4\\end{pmatrix}</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1\\end{pmatrix}\\middle|\\begin{pmatrix}2 \\\\ -1 \\\\ 4\\end{pmatrix}\\right]</p>
 
       <p>
         Dit betekent rechtstreeks:
@@ -3028,7 +3028,7 @@ const MILESTONES_4 = [
         Soms leidt eliminatie tot een tegenstrijdigheid. Bijvoorbeeld:
       </p>
 
-      <p class="formula">\\left[\\begin{array}{cc|c}1 & 2 & 4 \\\\ 0 & 0 & 3\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 2 \\\\ 0 & 0\\end{pmatrix}\\middle|\\begin{pmatrix}4 \\\\ 3\\end{pmatrix}\\right]</p>
 
       <p>
         De tweede rij betekent:
@@ -3065,7 +3065,7 @@ const MILESTONES_4 = [
         Bijvoorbeeld:
       </p>
 
-      <p class="formula">\\left[\\begin{array}{cc|c}1 & 2 & 5 \\\\ 0 & 0 & 0\\end{array}\\right]</p>
+      <p class="formula">\\left[\\begin{pmatrix}1 & 2 \\\\ 0 & 0\\end{pmatrix}\\middle|\\begin{pmatrix}5 \\\\ 0\\end{pmatrix}\\right]</p>
 
       <p>
         De tweede rij zegt alleen:
