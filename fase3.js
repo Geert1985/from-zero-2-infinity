@@ -50,7 +50,7 @@ const MILESTONES_3 = [
 
     <p>De verandering in positie is:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta s = 160 - 0 = 160\\text{ km}
     </p>
 
@@ -61,7 +61,7 @@ const MILESTONES_3 = [
 
     <p>Algemeen schrijven we:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta s = s_2 - s_1
     </p>
 
@@ -92,13 +92,13 @@ const MILESTONES_3 = [
 
     <p>De tijdsverandering is:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta t = 2 - 0 = 2\\text{ uur}
     </p>
 
     <p>De gemiddelde snelheid is dan:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       v_{\\text{gem}}
       =
       \\frac{\\Delta s}{\\Delta t}
@@ -160,24 +160,24 @@ const MILESTONES_3 = [
 
     <p>De temperatuurverandering is:</p>
 
-    <p class="formula">
-      \\Delta T = 25 - 10 = 15{°C}
+    \\ltp class="formula"\\gt
+      \\Delta T = 25 - 10 = 15{&#8451;}
     </p>
 
     <p>De tijdsverandering is:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta t = 3\\text{ uur}
     </p>
 
     <p>De gemiddelde verandering per uur is:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta T}{\\Delta t}
       =
       \\frac{15}{3}
       =
-      5{°C/u}
+      5{&#8451;/u}
     </p>
 
     <p>
@@ -203,7 +203,7 @@ const MILESTONES_3 = [
       wanneer <span class="formula-inline">x</span> verandert, schrijven we:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta y}{\\Delta x}
     </p>
 
@@ -211,7 +211,7 @@ const MILESTONES_3 = [
       Dit betekent letterlijk:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\text{verandering in }y}
       {\\text{verandering in }x}
     </p>
@@ -220,7 +220,7 @@ const MILESTONES_3 = [
       Bij beweging kan dat bijvoorbeeld worden:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       v_{\\text{gem}} = \\frac{\\Delta s}{\\Delta t}
     </p>
 
@@ -246,7 +246,7 @@ const MILESTONES_3 = [
       Neem:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^2
     </p>
 
@@ -258,29 +258,29 @@ const MILESTONES_3 = [
 
     <p>Eerst berekenen we de functiewaarden:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(1)=1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(4)=16
     </p>
 
     <p>De verandering in de functiewaarde is:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta f=16-1=15
     </p>
 
     <p>De verandering in x is:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta x=4-1=3
     </p>
 
     <p>Dus:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta f}{\\Delta x}
       =
       \\frac{15}{3}
@@ -305,7 +305,7 @@ const MILESTONES_3 = [
       veranderingssnelheid:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x_2)-f(x_1)}
       {x_2-x_1}
     </p>
@@ -314,7 +314,7 @@ const MILESTONES_3 = [
       Dit is precies hetzelfde idee als:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta y}{\\Delta x}
     </p>
 
@@ -342,11 +342,11 @@ const MILESTONES_3 = [
       Neem twee punten op de grafiek van een functie:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       P=(x_1,f(x_1))
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       Q=(x_2,f(x_2))
     </p>
 
@@ -354,7 +354,7 @@ const MILESTONES_3 = [
       De verticale verandering tussen de punten is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta y=f(x_2)-f(x_1)
     </p>
 
@@ -362,7 +362,7 @@ const MILESTONES_3 = [
       De horizontale verandering is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta x=x_2-x_1
     </p>
 
@@ -370,7 +370,7 @@ const MILESTONES_3 = [
       Daarom is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta y}{\\Delta x}
     </p>
 
@@ -401,8 +401,8 @@ const MILESTONES_3 = [
 
     <p>Als de functiewaarde toeneemt:</p>
 
-    <p class="formula">
-      \\Delta y>0
+    \\ltp class="formula"\\gt
+      \\Delta y\\gt0
     </p>
 
     <p>
@@ -412,7 +412,7 @@ const MILESTONES_3 = [
     <p>Als de functiewaarde afneemt:</p>
 
     <p class="formula">
-      \\Delta y<0
+      \\Delta y\\lt0
     </p>
 
     <p>
@@ -421,7 +421,7 @@ const MILESTONES_3 = [
 
     <p>Als de functiewaarde niet verandert:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\Delta y=0
     </p>
 
@@ -447,7 +447,7 @@ const MILESTONES_3 = [
       Hoe snel verandert een functie gemiddeld tussen twee punten?
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x_2)-f(x_1)}
       {x_2-x_1}
     </p>
@@ -488,19 +488,19 @@ const MILESTONES_3 = [
       We kunnen het tweede tijdstip steeds dichter bij 2 brengen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       [2,3]
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       [2,2{,}5]
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       [2,2{,}1]
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       [2,2{,}01]
     </p>
 
@@ -537,7 +537,7 @@ const MILESTONES_3 = [
       De gemiddelde veranderingssnelheid over dit kleine interval is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x+h)-f(x)}{h}
     </p>
 
@@ -545,19 +545,19 @@ const MILESTONES_3 = [
       Nu kunnen we het interval steeds kleiner maken:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       h=1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       h=0{,}1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       h=0{,}01
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       h=0{,}001
     </p>
 
@@ -582,7 +582,7 @@ const MILESTONES_3 = [
       gedachte opgebouwd:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\text{verandering}
       \\rightarrow
       \\frac{\\text{verandering}}{\\text{interval}}
@@ -594,7 +594,7 @@ const MILESTONES_3 = [
       Op een grafiek is dezelfde verhouding:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta y}{\\Delta x}
       =
       \\text{helling van een secant}
@@ -661,7 +661,7 @@ const MILESTONES_3 = [
       punten wordt gegeven door:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x_2)-f(x_1)}{x_2-x_1}
     </p>
 
@@ -695,7 +695,7 @@ const MILESTONES_3 = [
       Neem de functie:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^2
     </p>
 
@@ -705,7 +705,7 @@ const MILESTONES_3 = [
       <span class="formula-inline">x=3</span>.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(3)-f(2)}{3-2}
       =
       \\frac{9-4}{1}
@@ -722,23 +722,23 @@ const MILESTONES_3 = [
       Dan kunnen we het tweede punt steeds dichter bij 2 brengen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=3
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=2{,}5
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=2{,}1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=2{,}01
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=2{,}001
     </p>
 
@@ -766,7 +766,7 @@ const MILESTONES_3 = [
       De afstand tot het station kan achtereenvolgens zijn:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       10\\text{ km},\\;
       5\\text{ km},\\;
       1\\text{ km},\\;
@@ -801,7 +801,7 @@ const MILESTONES_3 = [
       Neem opnieuw:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^2
     </p>
 
@@ -810,19 +810,19 @@ const MILESTONES_3 = [
       <span class="formula-inline">x</span> steeds dichter bij 2 komt.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=2{,}1
       \\;\\rightarrow\\;
       f(x)=2{,}1^2=4{,}41
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=2{,}01
       \\;\\rightarrow\\;
       f(x)=2{,}01^2=4{,}0401
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=2{,}001
       \\;\\rightarrow\\;
       f(x)=2{,}001^2=4{,}004001
@@ -834,7 +834,7 @@ const MILESTONES_3 = [
 
     <p>We schrijven:</p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}x^2=4
     </p>
 
@@ -856,7 +856,7 @@ const MILESTONES_3 = [
       Bekijk:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to a}f(x)=L
     </p>
 
@@ -904,7 +904,7 @@ const MILESTONES_3 = [
       Bekijk bijvoorbeeld:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=\\frac{x^2-4}{x-2}
     </p>
 
@@ -917,7 +917,7 @@ const MILESTONES_3 = [
       Voor andere waarden van x kunnen we de teller ontbinden:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x^2-4=(x-2)(x+2)
     </p>
 
@@ -926,7 +926,7 @@ const MILESTONES_3 = [
       <span class="formula-inline">x\\neq2</span>:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{x^2-4}{x-2}=x+2
     </p>
 
@@ -934,7 +934,7 @@ const MILESTONES_3 = [
       Wanneer x naar 2 nadert, nadert de functiewaarde dus naar 4:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}\\frac{x^2-4}{x-2}=4
     </p>
 
@@ -962,7 +962,7 @@ const MILESTONES_3 = [
       <span class="formula-inline">x=2</span> de rechte:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       y=x+2
     </p>
 
@@ -979,7 +979,7 @@ const MILESTONES_3 = [
       De limiet vertelt ons precies waar het ontbrekende punt zou liggen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       (2,4)
     </p>
 
@@ -996,7 +996,7 @@ const MILESTONES_3 = [
       We kunnen een punt van links benaderen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x\\to a^-
     </p>
 
@@ -1008,7 +1008,7 @@ const MILESTONES_3 = [
       Van rechts schrijven we:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x\\to a^+
     </p>
 
@@ -1020,7 +1020,7 @@ const MILESTONES_3 = [
       Een gewone tweezijdige limiet bestaat wanneer beide overeenkomen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to a^-}f(x)
       =
       \\lim_{x\\to a^+}f(x)
@@ -1042,11 +1042,11 @@ const MILESTONES_3 = [
       maar van rechts naar 5.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0^-}f(x)=2
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0^+}f(x)=5
     </p>
 
@@ -1054,7 +1054,7 @@ const MILESTONES_3 = [
       Omdat beide waarden verschillend zijn, bestaat de tweezijdige limiet niet.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0}f(x)
       \\text{ bestaat niet}
     </p>
@@ -1075,7 +1075,7 @@ const MILESTONES_3 = [
       Bijvoorbeeld:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to3}(2x+1)
     </p>
 
@@ -1083,7 +1083,7 @@ const MILESTONES_3 = [
       We vullen <span class="formula-inline">x=3</span> in:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       2(3)+1=7
     </p>
 
@@ -1091,7 +1091,7 @@ const MILESTONES_3 = [
       Dus:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to3}(2x+1)=7
     </p>
 
@@ -1106,7 +1106,7 @@ const MILESTONES_3 = [
       Bijvoorbeeld:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}(x^2+3x)
     </p>
 
@@ -1114,11 +1114,11 @@ const MILESTONES_3 = [
       We kunnen de limiet van beide termen afzonderlijk bepalen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}x^2=4
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}3x=6
     </p>
 
@@ -1126,7 +1126,7 @@ const MILESTONES_3 = [
       Dus:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}(x^2+3x)=10
     </p>
 
@@ -1141,7 +1141,7 @@ const MILESTONES_3 = [
       Neem opnieuw:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}\\frac{x^2-4}{x-2}
     </p>
 
@@ -1149,7 +1149,7 @@ const MILESTONES_3 = [
       Rechtstreeks invullen geeft:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{0}{0}
     </p>
 
@@ -1162,7 +1162,7 @@ const MILESTONES_3 = [
       We factoriseren:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x^2-4=(x-2)(x+2)
     </p>
 
@@ -1170,7 +1170,7 @@ const MILESTONES_3 = [
       Voor <span class="formula-inline">x\\neq2</span> krijgen we:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{(x-2)(x+2)}{x-2}=x+2
     </p>
 
@@ -1178,7 +1178,7 @@ const MILESTONES_3 = [
       Daardoor:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}\\frac{x^2-4}{x-2}
       =
       \\lim_{x\\to2}(x+2)
@@ -1204,7 +1204,7 @@ const MILESTONES_3 = [
       Neem:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=\\frac{1}{x}
     </p>
 
@@ -1213,7 +1213,7 @@ const MILESTONES_3 = [
       worden de functiewaarden steeds groter:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0^+}\\frac{1}{x}=\\infty
     </p>
 
@@ -1221,7 +1221,7 @@ const MILESTONES_3 = [
       Vanuit negatieve waarden worden de functiewaarden steeds negatiever:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0^-}\\frac{1}{x}=-\\infty
     </p>
 
@@ -1269,7 +1269,7 @@ const MILESTONES_3 = [
       In 3.1 zagen we de gemiddelde veranderingssnelheid:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta y}{\\Delta x}
     </p>
 
@@ -1277,7 +1277,7 @@ const MILESTONES_3 = [
       Voor een functie kunnen we die schrijven als:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x+h)-f(x)}{h}
     </p>
 
@@ -1286,7 +1286,7 @@ const MILESTONES_3 = [
       <span class="formula-inline">h</span> naar nul gaat.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{h\\to0}
       \\frac{f(x+h)-f(x)}{h}
     </p>
@@ -1308,7 +1308,7 @@ const MILESTONES_3 = [
       Neem:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^2
     </p>
 
@@ -1318,7 +1318,7 @@ const MILESTONES_3 = [
       <span class="formula-inline">x+h</span> is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{(x+h)^2-x^2}{h}
     </p>
 
@@ -1326,7 +1326,7 @@ const MILESTONES_3 = [
       We werken het kwadraat uit:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       (x+h)^2=x^2+2xh+h^2
     </p>
 
@@ -1334,7 +1334,7 @@ const MILESTONES_3 = [
       Daardoor wordt de verhouding:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{x^2+2xh+h^2-x^2}{h}
     </p>
 
@@ -1342,7 +1342,7 @@ const MILESTONES_3 = [
       Na vereenvoudigen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       2x+h
     </p>
 
@@ -1351,7 +1351,7 @@ const MILESTONES_3 = [
       nadert deze waarde naar:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       2x
     </p>
 
@@ -1486,7 +1486,7 @@ const MILESTONES_3 = [
       Neem de functie:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^2
     </p>
 
@@ -1494,7 +1494,7 @@ const MILESTONES_3 = [
       We zagen in 3.2 dat:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}x^2=4
     </p>
 
@@ -1502,7 +1502,7 @@ const MILESTONES_3 = [
       Tegelijk is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(2)=4
     </p>
 
@@ -1530,19 +1530,19 @@ const MILESTONES_3 = [
 
     <p><strong>1. De functiewaarde bestaat:</strong></p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(a)\\text{ bestaat}
     </p>
 
     <p><strong>2. De limiet bestaat:</strong></p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to a}f(x)\\text{ bestaat}
     </p>
 
     <p><strong>3. De limiet is gelijk aan de functiewaarde:</strong></p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to a}f(x)=f(a)
     </p>
 
@@ -1568,7 +1568,7 @@ const MILESTONES_3 = [
       Neem:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^2+3x-1
     </p>
 
@@ -1581,7 +1581,7 @@ const MILESTONES_3 = [
       Eerst berekenen we de functiewaarde:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(2)=2^2+3(2)-1=4+6-1=9
     </p>
 
@@ -1589,7 +1589,7 @@ const MILESTONES_3 = [
       Vervolgens bekijken we de limiet:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}(x^2+3x-1)=9
     </p>
 
@@ -1597,7 +1597,7 @@ const MILESTONES_3 = [
       Dus:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}f(x)=f(2)=9
     </p>
 
@@ -1613,7 +1613,7 @@ const MILESTONES_3 = [
       In 3.2 bekeken we:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=\\frac{x^2-4}{x-2}
     </p>
 
@@ -1626,7 +1626,7 @@ const MILESTONES_3 = [
       Voor andere waarden van x kunnen we schrijven:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{x^2-4}{x-2}=x+2
     </p>
 
@@ -1634,7 +1634,7 @@ const MILESTONES_3 = [
       en daarom:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}f(x)=4
     </p>
 
@@ -1664,7 +1664,7 @@ const MILESTONES_3 = [
       Stel dat we de vorige functie uitbreiden door te bepalen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(2)=4
     </p>
 
@@ -1672,7 +1672,7 @@ const MILESTONES_3 = [
       Dan wordt de functie op dat punt gedefinieerd en geldt:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to2}f(x)=f(2)=4
     </p>
 
@@ -1699,11 +1699,11 @@ const MILESTONES_3 = [
       terwijl ze rechts van 0 naar 3 nadert.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0^-}f(x)=1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0^+}f(x)=3
     </p>
 
@@ -1734,7 +1734,7 @@ const MILESTONES_3 = [
       Neem:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=\\frac{1}{x}
     </p>
 
@@ -1748,7 +1748,7 @@ const MILESTONES_3 = [
       worden de functiewaarden onbeperkt groot:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0^+}\\frac{1}{x}=\\infty
     </p>
 
@@ -1756,7 +1756,7 @@ const MILESTONES_3 = [
       Vanuit negatieve waarden worden ze onbeperkt negatief:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{x\\to0^-}\\frac{1}{x}=-\\infty
     </p>
 
@@ -1764,7 +1764,7 @@ const MILESTONES_3 = [
       De rechte
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x=0
     </p>
 
@@ -1823,7 +1823,7 @@ const MILESTONES_3 = [
       Zo zijn polynomen zoals:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^3-2x+5
     </p>
 
@@ -1835,7 +1835,7 @@ const MILESTONES_3 = [
       Ook machtsfuncties zoals:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=\\sqrt{x}
     </p>
 
@@ -1847,7 +1847,7 @@ const MILESTONES_3 = [
       Bij rationale functies zoals:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=\\frac{x+1}{x-3}
     </p>
 
@@ -1855,7 +1855,7 @@ const MILESTONES_3 = [
       moeten we opletten voor waarden waarvoor de noemer nul wordt.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x\\neq3
     </p>
 
@@ -1876,11 +1876,11 @@ const MILESTONES_3 = [
       daar ook continu.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)+g(x)
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)-g(x)
     </p>
 
@@ -1888,7 +1888,7 @@ const MILESTONES_3 = [
       Ook het product is continu:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)g(x)
     </p>
 
@@ -1896,7 +1896,7 @@ const MILESTONES_3 = [
       Voor een quotiënt geldt dit wanneer de noemer niet nul is.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x)}{g(x)}
       \\text{ met }g(x)\\neq0
     </p>
@@ -1918,7 +1918,7 @@ const MILESTONES_3 = [
       Een functie is bijvoorbeeld continu op:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       [0,5]
     </p>
 
@@ -1945,13 +1945,13 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f(a)<0
+      f(a)\\lt0
     </p>
 
     <p>en:</p>
 
-    <p class="formula">
-      f(b)>0
+    \\ltp class="formula"\\gt
+      f(b)\\gt0
     </p>
 
     <p>
@@ -1962,7 +1962,7 @@ const MILESTONES_3 = [
       Er moet dus een waarde c tussen a en b bestaan waarvoor:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(c)=0
     </p>
 
@@ -1984,8 +1984,8 @@ const MILESTONES_3 = [
       waarop ze precies:
     </p>
 
-    <p class="formula">
-      0{°C}
+    \\ltp class="formula"\\gt
+      0{&#8451;}
     </p>
 
     <p>
@@ -2117,7 +2117,7 @@ const MILESTONES_3 = [
       We hebben nu drie begrippen met elkaar verbonden:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\text{functiewaarde}
       \\rightarrow
       \\text{limiet}
@@ -2129,7 +2129,7 @@ const MILESTONES_3 = [
       In 3.1 zagen we vervolgens hoe gemiddelde verandering ontstaat uit:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta y}{\\Delta x}
     </p>
 
@@ -2137,7 +2137,7 @@ const MILESTONES_3 = [
       In 3.2 maakten we het interval steeds kleiner:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\lim_{h\\to0}
       \\frac{f(x+h)-f(x)}{h}
     </p>
@@ -2170,7 +2170,7 @@ const MILESTONES_3 = [
         de limiet bestaat en beide gelijk zijn:
       </p>
 
-      <p class="formula">
+      \\ltp class="formula"\\gt
         \\lim_{x\\to a}f(x)=f(a)
       </p>
 
@@ -2210,7 +2210,7 @@ const MILESTONES_3 = [
       Die vertelt ons hoe sterk een grootheid verandert over een interval.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{\\Delta y}{\\Delta x}
     </p>
 
@@ -2234,7 +2234,7 @@ const MILESTONES_3 = [
       De gemiddelde snelheid is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       v_{\\text{gem}} = \\frac{100}{2} = 50\\ \\mathrm{km/u}
     </p>
 
@@ -2261,7 +2261,7 @@ const MILESTONES_3 = [
       kunnen berekenen tussen twee punten.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x_2)-f(x_1)}{x_2-x_1}
     </p>
 
@@ -2280,19 +2280,19 @@ const MILESTONES_3 = [
       <span class="formula-inline">a</span> en:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       a+1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       a+0{,}1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       a+0{,}01
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       a+0{,}001
     </p>
 
@@ -2320,7 +2320,7 @@ const MILESTONES_3 = [
       Het tweede punt is dan:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       x+h
     </p>
 
@@ -2330,7 +2330,7 @@ const MILESTONES_3 = [
       <span class="formula-inline">x+h</span> is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x+h)-f(x)}{h}
     </p>
 
@@ -2346,19 +2346,19 @@ const MILESTONES_3 = [
       Nu maken we het interval steeds kleiner.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       h=1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       h=0{,}1
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       h=0{,}01
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       h=0{,}001
     </p>
 
@@ -2372,7 +2372,7 @@ const MILESTONES_3 = [
       Dat is precies het idee van een limiet.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)
       =
       \\lim_{h\\to0}
@@ -2395,7 +2395,7 @@ const MILESTONES_3 = [
       <span class="formula-inline">x=a</span>, schrijven we:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(a)
       =
       \\lim_{h\\to0}
@@ -2420,7 +2420,7 @@ const MILESTONES_3 = [
       Neem de eenvoudige functie:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^2
     </p>
 
@@ -2428,7 +2428,7 @@ const MILESTONES_3 = [
       We gebruiken rechtstreeks de definitie van de afgeleide:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)
       =
       \\lim_{h\\to0}
@@ -2439,7 +2439,7 @@ const MILESTONES_3 = [
       Eerst werken we het kwadraat uit:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       (x+h)^2=x^2+2xh+h^2
     </p>
 
@@ -2447,7 +2447,7 @@ const MILESTONES_3 = [
       Dus:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)
       =
       \\lim_{h\\to0}
@@ -2458,7 +2458,7 @@ const MILESTONES_3 = [
       De termen <span class="formula-inline">x^2</span> vallen weg:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)
       =
       \\lim_{h\\to0}
@@ -2469,7 +2469,7 @@ const MILESTONES_3 = [
       We kunnen <span class="formula-inline">h</span> wegdelen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)
       =
       \\lim_{h\\to0}(2x+h)
@@ -2479,7 +2479,7 @@ const MILESTONES_3 = [
       Wanneer <span class="formula-inline">h</span> naar nul gaat, krijgen we:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=2x
     </p>
 
@@ -2532,8 +2532,8 @@ const MILESTONES_3 = [
       Als:
     </p>
 
-    <p class="formula">
-      f'(x)>0
+    \\ltp class="formula"\\gt
+      f'(x)\\gt0
     </p>
 
     <p>
@@ -2552,7 +2552,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f'(x)<0
+      f'(x)\\lt0
     </p>
 
     <p>
@@ -2570,7 +2570,7 @@ const MILESTONES_3 = [
       Als:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=0
     </p>
 
@@ -2597,7 +2597,7 @@ const MILESTONES_3 = [
       is de helling:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(a)
     </p>
 
@@ -2605,7 +2605,7 @@ const MILESTONES_3 = [
       De vergelijking van de raaklijn is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       y-f(a)=f'(a)(x-a)
     </p>
 
@@ -2623,7 +2623,7 @@ const MILESTONES_3 = [
       Neem opnieuw:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=x^2
     </p>
 
@@ -2631,7 +2631,7 @@ const MILESTONES_3 = [
       We vonden:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=2x
     </p>
 
@@ -2644,7 +2644,7 @@ const MILESTONES_3 = [
       Eerst berekenen we het punt:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(2)=4
     </p>
 
@@ -2652,7 +2652,7 @@ const MILESTONES_3 = [
       De helling is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(2)=4
     </p>
 
@@ -2660,7 +2660,7 @@ const MILESTONES_3 = [
       Dus:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       y-4=4(x-2)
     </p>
 
@@ -2668,7 +2668,7 @@ const MILESTONES_3 = [
       Uitwerken geeft:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       y=4x-4
     </p>
 
@@ -2685,7 +2685,7 @@ const MILESTONES_3 = [
       Daardoor ontstaat een nieuwe functie:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)\\rightarrow f'(x)
     </p>
 
@@ -2701,7 +2701,7 @@ const MILESTONES_3 = [
       Stel dat de positie van een voorwerp wordt beschreven door:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       s(t)
     </p>
 
@@ -2709,7 +2709,7 @@ const MILESTONES_3 = [
       De afgeleide van de positie naar de tijd geeft de snelheid:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       v(t)=s'(t)
     </p>
 
@@ -2717,7 +2717,7 @@ const MILESTONES_3 = [
       De afgeleide van de snelheid geeft vervolgens de versnelling:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       a(t)=v'(t)
     </p>
 
@@ -2744,7 +2744,7 @@ const MILESTONES_3 = [
       <li>Interpreteer de afgeleide als ogenblikkelijke verandering of helling.</li>
     </ol>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\frac{f(x+h)-f(x)}{h}
       \\longrightarrow
       \\lim_{h\\to0}
@@ -2786,7 +2786,7 @@ const MILESTONES_3 = [
       We hebben nu gezien waar de afgeleide vandaan komt:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)
       =
       \\lim_{h\\to0}
@@ -2823,7 +2823,7 @@ const MILESTONES_3 = [
         Ze ontstaat door de gemiddelde veranderingssnelheid
         over een steeds kleiner interval te laten naderen tot één punt:
       </p>
-      <p class="formula">
+      \\ltp class="formula"\\gt
         f'(x)
         =
         \\lim_{h\\to0}
@@ -2841,7 +2841,7 @@ const MILESTONES_3 = [
   id: "3.5",
   title: "Afgeleiden van basisfuncties",
   goal: "Kunnen we veranderingssnelheden berekenen?",
-  theory: /* html */`
+  theory: /* html */\`
     <h2>Afgeleiden van basisfuncties</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -2851,249 +2851,113 @@ const MILESTONES_3 = [
       <li>Hoe werken afgeleiden bij sommen en verschillen?</li>
       <li>Hoe werkt een constante factor?</li>
       <li>Hoe gaan we om met negatieve en gebroken exponenten?</li>
-      <li>Wat zijn de basisafgeleiden van exponentiële en logaritmische functies?</li>
-      <li>Wat zijn de basisafgeleiden van sinus en cosinus?</li>
       <li>Hoe controleren en interpreteren we een gevonden afgeleide?</li>
+      <li>Welke basisfuncties kunnen we rechtstreeks differentiëren?</li>
     </ul>
 
     <p>
       In 3.4 hebben we gezien waar de afgeleide vandaan komt:
     </p>
 
-    <p class="formula">
-      f'(x)
-      =
-      \\lim_{h\\to0}
-      \\frac{f(x+h)-f(x)}{h}
+    \\ltp class="formula"\\gt
+      f'(x)=
+      \\\\lim_{h\\\\to0}
+      \\\\frac{f(x+h)-f(x)}{h}
     </p>
 
     <p>
-      Nu gaan we een stap verder. We willen niet telkens opnieuw
-      de volledige limietberekening uitvoeren.
+      Nu gaan we een stap verder. We willen niet telkens opnieuw de volledige
+      limietberekening uitvoeren. Voor veel basisfuncties bestaan vaste regels.
     </p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
-        Voor veel belangrijke functies bestaan vaste regels waarmee we
-        de afgeleide rechtstreeks kunnen bepalen.
+        Een afgeleideregel is een verkorte manier om de veranderingssnelheid
+        van een functie te bepalen. De betekenis van de afgeleide blijft
+        dezelfde: de helling van de grafiek op een punt.
       </p>
     </div>
-
 
     <h3>De machtsregel</h3>
 
     <p>
       Een van de belangrijkste regels is de <strong>machtsregel</strong>.
-    </p>
-
-    <p>
       Voor:
     </p>
 
-    <p class="formula">
-      f(x)=x^n
-    </p>
+    \\ltp class="formula"\\gtf(x)=x^n</p>
+    <p>geldt:</p>
+    \\ltp class="formula"\\gtf'(x)=n x^{n-1}</p>
 
     <p>
-      geldt:
-    </p>
-
-    <p class="formula">
-      f'(x)=n x^{n-1}
-    </p>
-
-    <p>
-      De exponent komt dus vooraan te staan en wordt daarna met één
-      verminderd.
+      De exponent komt vooraan te staan en wordt daarna met één verminderd.
     </p>
 
     <div class="callout">
       <p><strong>Machtsregel:</strong></p>
-      <p class="formula">
-        \\left(x^n\\right)'=n x^{n-1}
-      </p>
+      \\ltp class="formula"\\gt\\\\left(x^n\\\\right)'=n x^{n-1}</p>
     </div>
-
 
     <h3>Een eenvoudig voorbeeld</h3>
 
-    <p>
-      Neem:
-    </p>
-
-    <p class="formula">
-      f(x)=x^5
-    </p>
-
-    <p>
-      De exponent 5 komt vooraan:
-    </p>
-
-    <p class="formula">
-      f'(x)=5x^4
-    </p>
-
-    <p>
-      De exponent wordt dus één kleiner:
-    </p>
-
-    <p class="formula">
-      5\\rightarrow4
-    </p>
-
+    <p>Neem:</p>
+    \\ltp class="formula"\\gtf(x)=x^5</p>
+    <p>Dan:</p>
+    \\ltp class="formula"\\gtf'(x)=5x^4</p>
+    <p>De exponent 5 komt vooraan en wordt 4:</p>
+    \\ltp class="formula"\\gt5\\\\rightarrow4</p>
 
     <h3>De functie x</h3>
 
     <p>
       De functie <span class="formula-inline">x</span> kunnen we schrijven als:
     </p>
-
-    <p class="formula">
-      x=x^1
-    </p>
-
-    <p>
-      De machtsregel geeft:
-    </p>
-
-    <p class="formula">
-      \\left(x^1\\right)'=1x^0=1
-    </p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">
-      (x)'=1
-    </p>
-
-    <p>
-      Dat past bij de grafiek van
-      <span class="formula-inline">y=x</span>: de helling is overal 1.
-    </p>
-
+    \\ltp class="formula"\\gtx=x^1</p>
+    <p>De machtsregel geeft:</p>
+    \\ltp class="formula"\\gt\\\\left(x^1\\\\right)'=1x^0=1</p>
+    <p>Dus:</p>
+    \\ltp class="formula"\\gt(x)'=1</p>
 
     <h3>De afgeleide van een constante</h3>
 
     <p>
-      Een constante verandert niet wanneer
-      <span class="formula-inline">x</span> verandert.
+      Een constante verandert niet wanneer <span class="formula-inline">x</span>
+      verandert. Daarom is:
     </p>
-
-    <p>
-      Daarom is:
-    </p>
-
-    <p class="formula">
-      (c)'=0
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">
-      (7)'=0
-    </p>
-
-    <p class="formula">
-      (-12)'=0
-    </p>
-
+    \\ltp class="formula"\\gt(c)'=0</p>
+    <p>Bijvoorbeeld:</p>
+    \\ltp class="formula"\\gt(7)'=0</p>
+    \\ltp class="formula"\\gt(-12)'=0</p>
     <p>
       Geometrisch klopt dit ook: een horizontale rechte heeft helling nul.
     </p>
 
-
-    <h3>Een som afleiden</h3>
-
-    <p>
-      Bij een som mogen we de afgeleide van iedere term afzonderlijk bepalen.
-    </p>
-
-    <p class="formula">
-      (f(x)+g(x))'=f'(x)+g'(x)
-    </p>
+    <h3>Sommen, verschillen en constante factoren</h3>
 
     <p>
-      Hetzelfde geldt voor een verschil:
+      Bij een som of verschil mogen we de termen afzonderlijk afleiden:
     </p>
-
-    <p class="formula">
-      (f(x)-g(x))'=f'(x)-g'(x)
-    </p>
+    \\ltp class="formula"\\gt(f(x)+g(x))'=f'(x)+g'(x)</p>
+    \\ltp class="formula"\\gt(f(x)-g(x))'=f'(x)-g'(x)</p>
 
     <p>
-      Daardoor kunnen we veeltermen term voor term afleiden.
+      Staat er een constante factor voor een functie, dan blijft die factor
+      staan:
     </p>
-
-
-    <h3>Een constante factor</h3>
-
-    <p>
-      Staat er een constante voor een functie, dan blijft die factor staan.
-    </p>
-
-    <p class="formula">
-      (c f(x))'=c f'(x)
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">
-      f(x)=4x^3
-    </p>
-
-    <p>
-      Dan:
-    </p>
-
-    <p class="formula">
-      f'(x)=4\\cdot3x^2=12x^2
-    </p>
-
+    \\ltp class="formula"\\gt(c f(x))'=c f'(x)</p>
 
     <h3>Een volledige veelterm</h3>
 
-    <p>
-      Neem:
-    </p>
-
-    <p class="formula">
-      f(x)=3x^4-5x^2+7x-2
-    </p>
-
-    <p>
-      We leiden iedere term afzonderlijk af:
-    </p>
-
-    <p class="formula">
-      (3x^4)'=12x^3
-    </p>
-
-    <p class="formula">
-      (-5x^2)'=-10x
-    </p>
-
-    <p class="formula">
-      (7x)'=7
-    </p>
-
-    <p class="formula">
-      (-2)'=0
-    </p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">
-      f'(x)=12x^3-10x+7
-    </p>
+    <p>Neem:</p>
+    \\ltp class="formula"\\gtf(x)=3x^4-5x^2+7x-2</p>
+    <p>Leid iedere term afzonderlijk af:</p>
+    \\ltp class="formula"\\gt(3x^4)'=12x^3</p>
+    \\ltp class="formula"\\gt(-5x^2)'=-10x</p>
+    \\ltp class="formula"\\gt(7x)'=7</p>
+    \\ltp class="formula"\\gt(-2)'=0</p>
+    <p>Dus:</p>
+    \\ltp class="formula"\\gtf'(x)=12x^3-10x+7</p>
 
     <div class="callout">
       <p><strong>Werkwijze:</strong></p>
@@ -3102,315 +2966,77 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-
     <h3>Negatieve exponenten</h3>
 
-    <p>
-      De machtsregel werkt ook voor negatieve exponenten.
-    </p>
+    <p>De machtsregel werkt ook voor negatieve exponenten.</p>
+    \\ltp class="formula"\\gtf(x)=x^{-2}</p>
+    \\ltp class="formula"\\gtf'(x)=-2x^{-3}</p>
+    <p>Omdat:</p>
+    \\ltp class="formula"\\gtx^{-3}=\\\\frac{1}{x^3}</p>
+    <p>kunnen we dit ook schrijven als:</p>
+    \\ltp class="formula"\\gtf'(x)=-\\\\frac{2}{x^3}</p>
 
-    <p class="formula">
-      f(x)=x^{-2}
-    </p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">
-      f'(x)=-2x^{-3}
-    </p>
+    <h3>Gebroken exponenten en wortels</h3>
 
     <p>
-      Omdat:
+      Ook een wortelfunctie kunnen we als macht schrijven:
     </p>
-
-    <p class="formula">
-      x^{-3}=\\frac{1}{x^3}
-    </p>
-
-    <p>
-      kunnen we dit ook schrijven als:
-    </p>
-
-    <p class="formula">
-      f'(x)=-\\frac{2}{x^3}
-    </p>
-
-
-    <h3>Gebroken exponenten</h3>
-
-    <p>
-      Ook een wortelfunctie kunnen we als macht schrijven.
-    </p>
-
-    <p class="formula">
-      \\sqrt{x}=x^{1/2}
-    </p>
-
-    <p>
-      De machtsregel geeft:
-    </p>
-
-    <p class="formula">
-      \\left(x^{1/2}\\right)'
-      =
-      \\frac{1}{2}x^{-1/2}
-    </p>
-
-    <p>
-      Omdat:
-    </p>
-
-    <p class="formula">
-      x^{-1/2}=\\frac{1}{\\sqrt{x}}
-    </p>
-
-    <p>
-      volgt:
-    </p>
-
-    <p class="formula">
-      \\left(\\sqrt{x}\\right)'
-      =
-      \\frac{1}{2\\sqrt{x}}
-    </p>
-
-
-    <h3>De exponentiële functie e^x</h3>
-
-    <p>
-      Er bestaat één bijzonder belangrijke exponentiële functie:
-    </p>
-
-    <p class="formula">
-      f(x)=e^x
-    </p>
-
-    <p>
-      De afgeleide van deze functie is opvallend eenvoudig:
-    </p>
-
-    <p class="formula">
-      \\left(e^x\\right)'=e^x
-    </p>
-
-    <p>
-      De functie verandert dus met een snelheid die gelijk is aan haar
-      eigen waarde.
-    </p>
-
-    <div class="callout">
-      <p><strong>Bijzonder geval:</strong></p>
-      <p>
-        De exponentiële functie <span class="formula-inline">e^x</span>
-        is haar eigen afgeleide.
-      </p>
-    </div>
-
-
-    <h3>Een algemene exponentiële functie</h3>
-
-    <p>
-      Voor een positieve basis
-      <span class="formula-inline">a</span>, met
-      <span class="formula-inline">a\\gt0</span> en
-      <span class="formula-inline">a\\neq1</span>, geldt:
-    </p>
-
-    <p class="formula">
-      \\left(a^x\\right)'=a^x\\ln(a)
-    </p>
-
-    <p>
-      Voor <span class="formula-inline">a=e</span> geldt
-      <span class="formula-inline">\\ln(e)=1</span>.
-      Daardoor krijgen we opnieuw:
-    </p>
-
-    <p class="formula">
-      \\left(e^x\\right)'=e^x
-    </p>
-
-
-    <h3>De natuurlijke logaritme</h3>
-
-    <p>
-      De natuurlijke logaritme is de inverse functie van
-      <span class="formula-inline">e^x</span>.
-    </p>
-
-    <p class="formula">
-      f(x)=\\ln(x)
-    </p>
-
-    <p>
-      Voor positieve waarden van
-      <span class="formula-inline">x</span> geldt:
-    </p>
-
-    <p class="formula">
-      (\\ln x)'=\\frac{1}{x}
-    </p>
-
-    <p>
-      De afgeleide is dus positief, maar wordt kleiner wanneer
-      <span class="formula-inline">x</span> groter wordt.
-    </p>
-
-
-    <h3>De sinus</h3>
-
-    <p>
-      Voor de sinusfunctie geldt:
-    </p>
-
-    <p class="formula">
-      (\\sin x)'=\\cos x
-    </p>
-
-    <p>
-      De sinus verandert dus volgens de cosinus.
-    </p>
-
-
-    <h3>De cosinus</h3>
-
-    <p>
-      Voor de cosinusfunctie geldt:
-    </p>
-
-    <p class="formula">
-      (\\cos x)'=-\\sin x
-    </p>
-
-    <p>
-      Het minteken is belangrijk.
-    </p>
-
+    \\ltp class="formula"\\gt\\\\sqrt{x}=x^{1/2}</p>
+    <p>De machtsregel geeft:</p>
+    \\ltp class="formula"\\gt\\\\left(x^{1/2}\\\\right)'=\\\\frac{1}{2}x^{-1/2}</p>
+    <p>Omdat:</p>
+    \\ltp class="formula"\\gtx^{-1/2}=\\\\frac{1}{\\\\sqrt{x}}</p>
+    <p>volgt:</p>
+    \\ltp class="formula"\\gt\\\\left(\\\\sqrt{x}\\\\right)'=\\\\frac{1}{2\\\\sqrt{x}}</p>
 
     <h3>Een compacte verzameling basisregels</h3>
 
+    <p>De belangrijkste regels uit deze les zijn:</p>
+    \\ltp class="formula"\\gt(c)'=0</p>
+    \\ltp class="formula"\\gt(x)'=1</p>
+    \\ltp class="formula"\\gt\\\\left(x^n\\\\right)'=n x^{n-1}</p>
+    \\ltp class="formula"\\gt(f+g)'=f'+g'</p>
+    \\ltp class="formula"\\gt(f-g)'=f'-g'</p>
+    \\ltp class="formula"\\gt(cf)'=cf'</p>
+
     <p>
-      We kunnen de belangrijkste regels nu verzamelen:
+      Hiermee kunnen we al veel algebraïsche functies rechtstreeks afleiden.
+      Voor exponentiële, logaritmische en goniometrische functies komen in
+      3.7 nieuwe basisregels.
     </p>
-
-    <p class="formula">
-      (c)'=0
-    </p>
-
-    <p class="formula">
-      (x)'=1
-    </p>
-
-    <p class="formula">
-      \\left(x^n\\right)'=n x^{n-1}
-    </p>
-
-    <p class="formula">
-      (f+g)'=f'+g'
-    </p>
-
-    <p class="formula">
-      (f-g)'=f'-g'
-    </p>
-
-    <p class="formula">
-      (cf)'=cf'
-    </p>
-
-    <p class="formula">
-      \\left(e^x\\right)'=e^x
-    </p>
-
-    <p class="formula">
-      \\left(a^x\\right)'=a^x\\ln(a)
-    </p>
-
-    <p class="formula">
-      (\\ln x)'=\\frac{1}{x}
-    </p>
-
-    <p class="formula">
-      (\\sin x)'=\\cos x
-    </p>
-
-    <p class="formula">
-      (\\cos x)'=-\\sin x
-    </p>
-
 
     <h3>De betekenis blijft hetzelfde</h3>
 
     <p>
       De regels veranderen niets aan de betekenis van de afgeleide.
-    </p>
-
-    <p>
       De uitkomst vertelt nog steeds hoe snel de oorspronkelijke functie
       op ieder punt verandert.
     </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">
-      f(x)=x^2
-    </p>
-
-    <p class="formula">
-      f'(x)=2x
-    </p>
-
+    <p>Bijvoorbeeld:</p>
+    \\ltp class="formula"\\gtf(x)=x^2</p>
+    \\ltp class="formula"\\gtf'(x)=2x</p>
     <p>
       Bij <span class="formula-inline">x=3</span> is:
     </p>
-
-    <p class="formula">
-      f'(3)=6
-    </p>
-
+    \\ltp class="formula"\\gtf'(3)=6</p>
     <p>
       De grafiek van <span class="formula-inline">x^2</span> heeft daar dus
       een raaklijn met helling 6.
     </p>
 
-
     <h3>De eenheid van een afgeleide</h3>
 
     <p>
       De afgeleide heeft vaak een betekenisvolle eenheid.
-    </p>
-
-    <p>
       Als de positie in kilometer wordt gemeten en de tijd in uren,
       dan heeft de afgeleide de eenheid:
     </p>
-
-    <p class="formula">
-      \\frac{\\mathrm{km}}{\\mathrm{u}}
-    </p>
-
-    <p>
-      Als we een temperatuur in graden Celsius delen door tijd in uren,
-      krijgen we bijvoorbeeld:
-    </p>
-
-    <p class="formula">
-      \\frac{°C}{u}
-    </p>
-
+    \\ltp class="formula"\\gt\\\\frac{\\\\mathrm{km}}{\\\\mathrm{u}}</p>
     <p>
       De eenheid helpt dus om de betekenis van een afgeleide te begrijpen.
     </p>
 
-
     <h3>Vaste werkwijze</h3>
-
-    <p>
-      Wanneer je een basisfunctie moet afleiden, kun je deze stappen volgen:
-    </p>
 
     <ol>
       <li>Herken het type functie.</li>
@@ -3421,25 +3047,14 @@ const MILESTONES_3 = [
       <li>Controleer of de uitkomst logisch is.</li>
     </ol>
 
-    <div class="callout">
-      <p><strong>Voorbeeld:</strong></p>
-      <p>
-        Een macht → machtsregel.
-        Een constante → afgeleide nul.
-        Een som → term voor term.
-        Een constante factor → factor blijft staan.
-      </p>
-    </div>
-
-
     <h3>Veelgemaakte fouten</h3>
 
     <ul>
       <li>
         <strong>De exponent vergeten te vermenigvuldigen.</strong>
-        Uit <span class="formula-inline">x^5</span> volgt niet
-        <span class="formula-inline">x^4</span>, maar
-        <span class="formula-inline">5x^4</span>.
+        Uit <span class="formula-inline">x^5</span> volgt
+        <span class="formula-inline">5x^4</span>, niet
+        <span class="formula-inline">x^4</span>.
       </li>
       <li>
         <strong>De exponent niet met één verminderen.</strong>
@@ -3451,45 +3066,21 @@ const MILESTONES_3 = [
         De afgeleide van een constante is nul.
       </li>
       <li>
-        <strong>Het minteken bij cosinus vergeten.</strong>
-        <span class="formula-inline">(\\cos x)'=-\\sin x</span>.
-      </li>
-      <li>
-        <strong>De domeinvoorwaarde vergeten.</strong>
-        Bij
-        <span class="formula-inline">\\ln x</span>
-        moet <span class="formula-inline">x\\gt0</span> gelden.
+        <strong>Een wortel niet herkennen als macht.</strong>
+        Bijvoorbeeld <span class="formula-inline">\\\\sqrt{x}=x^{1/2}</span>.
       </li>
     </ul>
-
 
     <h3>Van basisfuncties naar gecombineerde functies</h3>
 
     <p>
-      Met deze regels kunnen we veel functies rechtstreeks afleiden.
+      We kunnen nu veel algebraïsche basisfuncties rechtstreeks afleiden.
+      Maar wat als functies met elkaar worden vermenigvuldigd, gedeeld of
+      in elkaar worden geplaatst?
     </p>
-
-    <p>
-      Maar wat als functies met elkaar worden vermenigvuldigd,
-      gedeeld of in elkaar worden geplaatst?
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">
-      f(x)=x^2\\sin x
-    </p>
-
-    <p class="formula">
-      g(x)=\\frac{x^2+1}{x}
-    </p>
-
-    <p class="formula">
-      h(x)=\\sin(x^2)
-    </p>
-
+    \\ltp class="formula"\\gtf(x)=x^2\\\\sin x</p>
+    \\ltp class="formula"\\gtg(x)=\\\\frac{x^2+1}{x}</p>
+    \\ltp class="formula"\\gth(x)=\\\\sin(x^2)</p>
     <p>
       Voor zulke functies hebben we nieuwe regels nodig.
     </p>
@@ -3501,29 +3092,17 @@ const MILESTONES_3 = [
       </p>
     </div>
 
-
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
-        De afgeleide van veel belangrijke basisfuncties kunnen we
-        rechtstreeks berekenen met vaste regels.
-      </p>
-      <p>
-        De belangrijkste basisregel is:
-      </p>
-      <p class="formula">
-        \\left(x^n\\right)'=n x^{n-1}
-      </p>
-      <p>
-        Samen met de regels voor constanten, sommen, exponentiële functies,
-        logaritmen en goniometrische functies vormt dit de basis voor het
-        afleiden van complexere functies.
+        De basisafgeleiden geven ons snelle regels voor machten, constanten,
+        sommen, verschillen en constante factoren. Daarmee hebben we de
+        eerste bouwstenen van het differentiëren in handen.
       </p>
     </div>
-  `
+  \`
 },
 
-  {
   id: "3.6",
   title: "Product-, quotiënt- & kettingregel",
   goal: "Wat gebeurt er wanneer functies worden gecombineerd?",
@@ -3560,21 +3139,21 @@ const MILESTONES_3 = [
       In les 3.5 konden we bijvoorbeeld afleiden:
     </p>
 
-    <p class="formula">f(x)=x^2 \\rightarrow f'(x)=2x</p>
+    \\ltp class="formula"\\gtf(x)=x^2 \\rightarrow f'(x)=2x</p>
 
     <p>
       Maar functies zijn niet altijd zo eenvoudig. Denk bijvoorbeeld aan:
     </p>
 
-    <p class="formula">f(x)=x^2(3x+1)</p>
+    \\ltp class="formula"\\gtf(x)=x^2(3x+1)</p>
 
     <p>
       Hier worden twee functies met elkaar vermenigvuldigd:
     </p>
 
-    <p class="formula">u(x)=x^2</p>
+    \\ltp class="formula"\\gtu(x)=x^2</p>
 
-    <p class="formula">v(x)=3x+1</p>
+    \\ltp class="formula"\\gtv(x)=3x+1</p>
 
     <p>
       We hebben dus een regel nodig die vertelt hoe de afgeleide van een
@@ -3587,22 +3166,22 @@ const MILESTONES_3 = [
       Stel dat een functie bestaat uit het product van twee functies:
     </p>
 
-    <p class="formula">f(x)=u(x)v(x)</p>
+    \\ltp class="formula"\\gtf(x)=u(x)v(x)</p>
 
     <p>
       Dan is de afgeleide:
     </p>
 
-    <p class="formula">f'(x)=u'(x)v(x)+u(x)v'(x)</p>
+    \\ltp class="formula"\\gtf'(x)=u'(x)v(x)+u(x)v'(x)</p>
 
     <p>
       De belangrijke gedachte is dat <strong>beide factoren veranderen</strong>.
       Daarom krijgen we twee termen:
     </p>
 
-    <p class="formula">u'(x)v(x)</p>
+    \\ltp class="formula"\\gtu'(x)v(x)</p>
 
-    <p class="formula">u(x)v'(x)</p>
+    \\ltp class="formula"\\gtu(x)v'(x)</p>
 
     <p>
       We differentiëren dus eerst de eerste factor en daarna de tweede factor.
@@ -3615,33 +3194,33 @@ const MILESTONES_3 = [
       Neem:
     </p>
 
-    <p class="formula">f(x)=x^2(3x+1)</p>
+    \\ltp class="formula"\\gtf(x)=x^2(3x+1)</p>
 
     <p>
       Kies de twee factoren:
     </p>
 
-    <p class="formula">u(x)=x^2</p>
+    \\ltp class="formula"\\gtu(x)=x^2</p>
 
-    <p class="formula">v(x)=3x+1</p>
+    \\ltp class="formula"\\gtv(x)=3x+1</p>
 
     <p>
       Hun afgeleiden zijn:
     </p>
 
-    <p class="formula">u'(x)=2x</p>
+    \\ltp class="formula"\\gtu'(x)=2x</p>
 
-    <p class="formula">v'(x)=3</p>
+    \\ltp class="formula"\\gtv'(x)=3</p>
 
     <p>
       Pas nu de productregel toe:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=u'(x)v(x)+u(x)v'(x)
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=2x(3x+1)+x^2(3)
     </p>
 
@@ -3649,7 +3228,7 @@ const MILESTONES_3 = [
       Vereenvoudigen geeft:
     </p>
 
-    <p class="formula">f'(x)=6x^2+5x</p>
+    \\ltp class="formula"\\gtf'(x)=6x^2+5x</p>
 
     <h3>Waarom niet gewoon beide factoren apart afleiden?</h3>
 
@@ -3657,7 +3236,7 @@ const MILESTONES_3 = [
       Een veelgemaakte fout is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       (u(x)v(x))'=u'(x)v'(x)
     </p>
 
@@ -3669,7 +3248,7 @@ const MILESTONES_3 = [
       De productregel bevat een som van twee producten:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       (uv)'=u'v+uv'
     </p>
 
@@ -3684,7 +3263,7 @@ const MILESTONES_3 = [
       Een quotiënt is een verhouding van twee functies:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=\\frac{u(x)}{v(x)}
     </p>
 
@@ -3692,7 +3271,7 @@ const MILESTONES_3 = [
       Als de noemer niet nul is, geldt:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=\\frac{u'(x)v(x)-u(x)v'(x)}{v(x)^2}
     </p>
 
@@ -3705,7 +3284,7 @@ const MILESTONES_3 = [
       De voorwaarde blijft belangrijk:
     </p>
 
-    <p class="formula">v(x)\\neq0</p>
+    \\ltp class="formula"\\gtv(x)\\neq0</p>
 
     <h3>De quotiëntregel gebruiken</h3>
 
@@ -3713,7 +3292,7 @@ const MILESTONES_3 = [
       Neem:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f(x)=\\frac{x^2}{x+1}
     </p>
 
@@ -3721,23 +3300,23 @@ const MILESTONES_3 = [
       Kies:
     </p>
 
-    <p class="formula">u(x)=x^2</p>
+    \\ltp class="formula"\\gtu(x)=x^2</p>
 
-    <p class="formula">v(x)=x+1</p>
+    \\ltp class="formula"\\gtv(x)=x+1</p>
 
     <p>
       Dus:
     </p>
 
-    <p class="formula">u'(x)=2x</p>
+    \\ltp class="formula"\\gtu'(x)=2x</p>
 
-    <p class="formula">v'(x)=1</p>
+    \\ltp class="formula"\\gtv'(x)=1</p>
 
     <p>
       De quotiëntregel geeft:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=\\frac{2x(x+1)-x^2(1)}{(x+1)^2}
     </p>
 
@@ -3745,7 +3324,7 @@ const MILESTONES_3 = [
       Vereenvoudigen:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=\\frac{x^2+2x}{(x+1)^2}
     </p>
 
@@ -3753,7 +3332,7 @@ const MILESTONES_3 = [
       De oorspronkelijke functie is alleen gedefinieerd wanneer:
     </p>
 
-    <p class="formula">x\\neq-1</p>
+    \\ltp class="formula"\\gtx\\neq-1</p>
 
     <h3>Productregel of quotiëntregel?</h3>
 
@@ -3778,20 +3357,20 @@ const MILESTONES_3 = [
       Beschouw nu:
     </p>
 
-    <p class="formula">f(x)=(3x+1)^4</p>
+    \\ltp class="formula"\\gtf(x)=(3x+1)^4</p>
 
     <p>
       Dit is geen gewoon vierde macht van <code>x</code>. Binnen de macht staat
       namelijk een andere functie:
     </p>
 
-    <p class="formula">g(x)=3x+1</p>
+    \\ltp class="formula"\\gtg(x)=3x+1</p>
 
     <p>
       Daarom kunnen we de functie bekijken als:
     </p>
 
-    <p class="formula">f(x)=g(x)^4</p>
+    \\ltp class="formula"\\gtf(x)=g(x)^4</p>
 
     <p>
       Dit noemen we een <strong>samengestelde functie</strong>: de ene functie
@@ -3804,13 +3383,13 @@ const MILESTONES_3 = [
       Stel dat:
     </p>
 
-    <p class="formula">f(x)=F(g(x))</p>
+    \\ltp class="formula"\\gtf(x)=F(g(x))</p>
 
     <p>
       Dan geldt de kettingregel:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=F'(g(x))g'(x)
     </p>
 
@@ -3832,33 +3411,33 @@ const MILESTONES_3 = [
       Neem:
     </p>
 
-    <p class="formula">f(x)=(3x+1)^4</p>
+    \\ltp class="formula"\\gtf(x)=(3x+1)^4</p>
 
     <p>
       De <strong>binnenste functie</strong> is:
     </p>
 
-    <p class="formula">g(x)=3x+1</p>
+    \\ltp class="formula"\\gtg(x)=3x+1</p>
 
     <p>
       De <strong>buitenste functie</strong> is:
     </p>
 
-    <p class="formula">F(u)=u^4</p>
+    \\ltp class="formula"\\gtF(u)=u^4</p>
 
     <p>
       Differentieer beide:
     </p>
 
-    <p class="formula">F'(u)=4u^3</p>
+    \\ltp class="formula"\\gtF'(u)=4u^3</p>
 
-    <p class="formula">g'(x)=3</p>
+    \\ltp class="formula"\\gtg'(x)=3</p>
 
     <p>
       Pas nu de kettingregel toe:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=4(3x+1)^3(3)
     </p>
 
@@ -3866,7 +3445,7 @@ const MILESTONES_3 = [
       Dus:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=12(3x+1)^3
     </p>
 
@@ -3881,21 +3460,21 @@ const MILESTONES_3 = [
       Bij:
     </p>
 
-    <p class="formula">f(x)=F(g(x))</p>
+    \\ltp class="formula"\\gtf(x)=F(g(x))</p>
 
     <p>
       zijn er daarom twee veranderingssnelheden:
     </p>
 
-    <p class="formula">F'(g(x))</p>
+    \\ltp class="formula"\\gtF'(g(x))</p>
 
-    <p class="formula">g'(x)</p>
+    \\ltp class="formula"\\gtg'(x)</p>
 
     <p>
       De totale veranderingssnelheid is hun product:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=F'(g(x))g'(x)
     </p>
 
@@ -3905,21 +3484,21 @@ const MILESTONES_3 = [
       Beschouw:
     </p>
 
-    <p class="formula">f(x)=\\sqrt{2x+1}</p>
+    \\ltp class="formula"\\gtf(x)=\\sqrt{2x+1}</p>
 
     <p>
       Schrijf de buitenste en binnenste functie:
     </p>
 
-    <p class="formula">F(u)=\\sqrt{u}</p>
+    \\ltp class="formula"\\gtF(u)=\\sqrt{u}</p>
 
-    <p class="formula">g(x)=2x+1</p>
+    \\ltp class="formula"\\gtg(x)=2x+1</p>
 
     <p>
       De afgeleide van de buitenste functie is:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       F'(u)=\\frac{1}{2\\sqrt{u}}
     </p>
 
@@ -3927,13 +3506,13 @@ const MILESTONES_3 = [
       En:
     </p>
 
-    <p class="formula">g'(x)=2</p>
+    \\ltp class="formula"\\gtg'(x)=2</p>
 
     <p>
       De kettingregel geeft:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=\\frac{1}{2\\sqrt{2x+1}}(2)
     </p>
 
@@ -3941,7 +3520,7 @@ const MILESTONES_3 = [
       Dus:
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       f'(x)=\\frac{1}{\\sqrt{2x+1}}
     </p>
 
@@ -3951,7 +3530,7 @@ const MILESTONES_3 = [
       Een functie kan meer dan twee lagen bevatten. Bijvoorbeeld:
     </p>
 
-    <p class="formula">f(x)=\\sin((2x+1)^2)</p>
+    \\ltp class="formula"\\gtf(x)=\\sin((2x+1)^2)</p>
 
     <p>
       Hier zitten meerdere functies in elkaar:
@@ -4013,15 +3592,15 @@ const MILESTONES_3 = [
       leerden we hoe die basisregels gecombineerd kunnen worden.
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\text{product} \\rightarrow \\text{productregel}
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\text{quotiënt} \\rightarrow \\text{quotiëntregel}
     </p>
 
-    <p class="formula">
+    \\ltp class="formula"\\gt
       \\text{samenstelling} \\rightarrow \\text{kettingregel}
     </p>
 
@@ -4055,628 +3634,204 @@ const MILESTONES_3 = [
   id: "3.7",
   title: "Afgeleiden van belangrijke functies",
   goal: "Hoe laten we exponentiële, logaritmische en goniometrische functies veranderen?",
-  theory: /* html */`
+  theory: /* html */\`
     <h2>Afgeleiden van belangrijke functies</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
     <ul>
       <li>Hoe verandert een exponentiële functie?</li>
-      <li>Waarom is <span class="formula-inline">e^x</span> bijzonder bij differentiëren?</li>
-      <li>Hoe differentiëren we <span class="formula-inline">a^x</span> voor een willekeurige positieve basis?</li>
+      <li>Waarom is <span class="formula-inline">e^x</span> bijzonder?</li>
+      <li>Hoe differentiëren we <span class="formula-inline">a^x</span>?</li>
       <li>Wat is de afgeleide van de natuurlijke logaritme?</li>
-      <li>Hoe veranderen sinus en cosinus?</li>
-      <li>Hoe combineren we deze regels met de kettingregel?</li>
+      <li>Hoe veranderen sinus, cosinus en tangens?</li>
+      <li>Hoe gebruiken we de kettingregel bij deze functies?</li>
       <li>Hoe herkennen we welke regel we nodig hebben?</li>
     </ul>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
-        Sommige belangrijke functies hebben een eigen afgeleideregel.
-        Exponentiële functies, logaritmen en goniometrische functies gedragen
-        zich anders dan veeltermfuncties.
-      </p>
-      <p>
-        Zodra we hun basisafgeleiden kennen, kunnen we de regels uit de vorige
-        lessen gebruiken om ook samengestelde vormen af te leiden.
+        In 3.5 leerden we de algebraïsche basisafgeleiden en in 3.6 leerden we
+        hoe we functies kunnen combineren. Nu voegen we belangrijke
+        exponentiële, logaritmische en goniometrische functies toe aan onze
+        gereedschapskist.
       </p>
     </div>
 
-    <h3>Een nieuwe familie van functies</h3>
+    <h3>Exponentiële functies</h3>
 
+    <p>Een exponentiële functie heeft de vorm:</p>
+    \\ltp class="formula"\\gtf(x)=a^x</p>
     <p>
-      In les 3.5 leerden we bijvoorbeeld de machtsregel:
+      waarbij <span class="formula-inline">a\\\\gt0</span> en
+      <span class="formula-inline">a\\\\neq1</span>.
     </p>
-
-    <p class="formula">
-      \\left(x^n\\right)'=nx^{n-1}
-    </p>
-
     <p>
-      Daarmee kunnen we veel algebraïsche functies differentiëren.
-      Maar belangrijke functies zoals exponentiële functies, logaritmen,
-      sinus en cosinus passen niet rechtstreeks in deze regel.
+      De algemene afgeleideregel is:
     </p>
-
-    <p>
-      Voor deze functies hebben we nieuwe basisregels nodig.
-    </p>
-
-    <h3>De exponentiële functie</h3>
-
-    <p>
-      Een exponentiële functie heeft de vorm:
-    </p>
-
-    <p class="formula">f(x)=a^x</p>
-
-    <p>
-      waarbij de basis positief is en niet gelijk aan 1.
-    </p>
-
-    <p class="formula">a\\gt0,\\quad a\\neq1</p>
-
-    <p>
-      Bij een exponentiële functie staat de variabele in de exponent.
-      Dat is precies wat deze functies onderscheidt van machten zoals
-      <span class="formula-inline">x^2</span> of <span class="formula-inline">x^3</span>.
-    </p>
+    \\ltp class="formula"\\gt\\\\left(a^x\\\\right)'=a^x\\\\ln(a)</p>
 
     <h3>De bijzondere basis e</h3>
 
     <p>
-      Eén exponentiële functie speelt een uitzonderlijke rol:
+      Eén exponentiële functie is bijzonder belangrijk:
     </p>
-
-    <p class="formula">f(x)=e^x</p>
-
+    \\ltp class="formula"\\gtf(x)=e^x</p>
     <p>
       Het getal <span class="formula-inline">e</span> is ongeveer:
     </p>
-
-    <p class="formula">e\\approx2{,}71828</p>
-
+    \\ltp class="formula"\\gte\\\\approx2{,}71828</p>
+    <p>De afgeleide is:</p>
+    \\ltp class="formula"\\gt\\\\left(e^x\\\\right)'=e^x</p>
     <p>
-      De bijzondere eigenschap van deze functie is:
+      De functie verandert dus met een snelheid die gelijk is aan haar eigen
+      waarde. Dat maakt <span class="formula-inline">e^x</span> bijzonder
+      belangrijk bij groei en verval.
     </p>
 
-    <p class="formula">\\left(e^x\\right)'=e^x</p>
+    <h3>Een voorbeeld met 2^x</h3>
 
-    <p>
-      De functie verandert dus met precies dezelfde waarde als haar
-      huidige waarde.
-    </p>
+    <p>Neem:</p>
+    \\ltp class="formula"\\gtf(x)=2^x</p>
+    <p>Dan:</p>
+    \\ltp class="formula"\\gtf'(x)=2^x\\\\ln(2)</p>
 
-    <p>
-      Dat maakt <span class="formula-inline">e^x</span> bijzonder belangrijk
-      bij groei, verval en veranderingsprocessen.
-    </p>
-
-    <h3>Waarom is e<sup>x</sup> zo bijzonder?</h3>
-
-    <p>
-      Stel dat:
-    </p>
-
-    <p class="formula">f(x)=e^x</p>
-
-    <p>
-      Dan geldt:
-    </p>
-
-    <p class="formula">f'(x)=e^x</p>
-
-    <p>
-      De veranderingssnelheid is dus op elk punt gelijk aan de waarde van
-      de functie zelf.
-    </p>
-
-    <p>
-      Als de functie bijvoorbeeld groter wordt, wordt ook haar
-      veranderingssnelheid groter. Dat is precies het mechanisme achter
-      exponentiële groei.
-    </p>
-
-    <h3>Een willekeurige exponentiële basis</h3>
-
-    <p>
-      Niet elke exponentiële functie heeft basis <span class="formula-inline">e</span>.
-      Voor:
-    </p>
-
-    <p class="formula">f(x)=a^x</p>
-
-    <p>
-      geldt:
-    </p>
-
-    <p class="formula">
-      \\left(a^x\\right)'=a^x\\ln(a)
-    </p>
-
-    <p>
-      Alleen wanneer <span class="formula-inline">a=e</span> wordt
-      <span class="formula-inline">\\ln(a)=1</span>. Dan krijgen we:
-    </p>
-
-    <p class="formula">
-      \\left(e^x\\right)'=e^x
-    </p>
-
-    <h3>Een voorbeeld met 2<sup>x</sup></h3>
+    <h3>De kettingregel bij exponentiële functies</h3>
 
     <p>
       Neem:
     </p>
-
-    <p class="formula">f(x)=2^x</p>
-
+    \\ltp class="formula"\\gtf(x)=e^{3x}</p>
     <p>
-      Dan is:
+      De buitenste functie is <span class="formula-inline">e^u</span> en de
+      binnenste functie is <span class="formula-inline">u=3x</span>.
     </p>
-
-    <p class="formula">
-      f'(x)=2^x\\ln(2)
-    </p>
-
-    <p>
-      De afgeleide is dus opnieuw een exponentiële functie, maar vermenigvuldigd
-      met de constante <span class="formula-inline">\\ln(2)</span>.
-    </p>
-
-    <h3>Exponentiële functies met een samengestelde exponent</h3>
-
-    <p>
-      Dankzij de kettingregel kunnen we meer algemene vormen differentiëren.
-      Neem:
-    </p>
-
-    <p class="formula">f(x)=e^{3x}</p>
-
-    <p>
-      De buitenste functie is:
-    </p>
-
-    <p class="formula">F(u)=e^u</p>
-
-    <p>
-      De binnenste functie is:
-    </p>
-
-    <p class="formula">u=3x</p>
-
-    <p>
-      De afgeleiden zijn:
-    </p>
-
-    <p class="formula">F'(u)=e^u</p>
-
-    <p class="formula">u'=3</p>
-
-    <p>
-      De kettingregel geeft:
-    </p>
-
-    <p class="formula">
-      f'(x)=e^{3x}(3)
-    </p>
-
-    <p class="formula">
-      f'(x)=3e^{3x}
-    </p>
+    \\ltp class="formula"\\gt\\\\left(e^u\\\\right)'=e^u</p>
+    \\ltp class="formula"\\gtu'=3</p>
+    <p>Dus:</p>
+    \\ltp class="formula"\\gtf'(x)=3e^{3x}</p>
 
     <h3>De natuurlijke logaritme</h3>
 
     <p>
-      De natuurlijke logaritme is de inverse functie van de exponentiële
-      functie met basis <span class="formula-inline">e</span>:
+      De natuurlijke logaritme is de inverse functie van
+      <span class="formula-inline">e^x</span>:
     </p>
-
-    <p class="formula">y=\\ln(x)</p>
-
+    \\ltp class="formula"\\gty=\\\\ln(x)</p>
+    \\ltp class="formula"\\gte^y=x</p>
     <p>
-      betekent hetzelfde als:
+      De natuurlijke logaritme is alleen gedefinieerd voor:
     </p>
-
-    <p class="formula">e^y=x</p>
-
-    <p>
-      De natuurlijke logaritme is alleen gedefinieerd voor positieve waarden:
-    </p>
-
-    <p class="formula">x\\gt0</p>
-
-    <h3>De afgeleide van ln(x)</h3>
-
-    <p>
-      De belangrijkste regel is:
-    </p>
-
-    <p class="formula">
-      \\left(\\ln(x)\\right)'=\\frac{1}{x}
-    </p>
-
-    <p>
-      De veranderingssnelheid van de logaritme wordt dus kleiner wanneer
-      <span class="formula-inline">x</span> groter wordt.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">
-      f(x)=\\ln(x)
-    </p>
-
-    <p class="formula">
-      f'(x)=\\frac{1}{x}
-    </p>
+    \\ltp class="formula"\\gtx\\\\gt0</p>
+    <p>De afgeleideregel is:</p>
+    \\ltp class="formula"\\gt\\\\left(\\\\ln(x)\\\\right)'=\\\\frac{1}{x}</p>
 
     <h3>De kettingregel bij ln</h3>
 
     <p>
-      Neem:
+      Voor een samengestelde logaritme geldt:
     </p>
-
-    <p class="formula">f(x)=\\ln(3x+1)</p>
-
+    \\ltp class="formula"\\gtf(x)=\\\\ln(g(x))</p>
+    <p>Dan:</p>
+    \\ltp class="formula"\\gtf'(x)=\\\\frac{g'(x)}{g(x)}</p>
     <p>
-      De binnenste functie is:
+      waarbij <span class="formula-inline">g(x)\\\\gt0</span>.
+      Bijvoorbeeld:
     </p>
+    \\ltp class="formula"\\gtf(x)=\\\\ln(3x+1)</p>
+    \\ltp class="formula"\\gtf'(x)=\\\\frac{3}{3x+1}</p>
 
-    <p class="formula">u=3x+1</p>
+    <h3>De sinus en cosinus</h3>
 
+    <p>Voor sinus en cosinus gelden:</p>
+    \\ltp class="formula"\\gt\\\\left(\\\\sin(x)\\\\right)'=\\\\cos(x)</p>
+    \\ltp class="formula"\\gt\\\\left(\\\\cos(x)\\\\right)'=-\\\\sin(x)</p>
     <p>
-      De afgeleide daarvan is:
+      Bij herhaald differentiëren verschijnen steeds sinus en cosinus met
+      wisselende tekens.
+    </p>
+    \\ltp class="formula"\\gt
+      \\\\sin(x)\\\\rightarrow\\\\cos(x)\\\\rightarrow-\\\\sin(x)
     </p>
 
-    <p class="formula">u'=3</p>
-
-    <p>
-      Voor de buitenste functie geldt:
-    </p>
-
-    <p class="formula">
-      \\left(\\ln(u)\\right)'=\\frac{1}{u}
-    </p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">
-      f'(x)=\\frac{1}{3x+1}(3)
-    </p>
-
-    <p class="formula">
-      f'(x)=\\frac{3}{3x+1}
-    </p>
-
-    <h3>Een algemene regel voor ln(g(x))</h3>
-
-    <p>
-      De vorige berekening kunnen we algemeen schrijven.
-      Als:
-    </p>
-
-    <p class="formula">f(x)=\\ln(g(x))</p>
-
-    <p>
-      dan geeft de kettingregel:
-    </p>
-
-    <p class="formula">
-      f'(x)=\\frac{g'(x)}{g(x)}
-    </p>
-
-    <p>
-      Hierbij moet natuurlijk gelden dat:
-    </p>
-
-    <p class="formula">g(x)\\gt0</p>
-
-    <h3>De sinus</h3>
-
-    <p>
-      De sinus kennen we uit de trigonometrie:
-    </p>
-
-    <p class="formula">f(x)=\\sin(x)</p>
-
-    <p>
-      De afgeleide van sinus is:
-    </p>
-
-    <p class="formula">
-      \\left(\\sin(x)\\right)'=\\cos(x)
-    </p>
-
-    <p>
-      De sinus verandert dus volgens de cosinus.
-    </p>
-
-    <p>
-      Dat is interessant omdat sinus en cosinus dezelfde periodieke beweging
-      beschrijven, maar ten opzichte van elkaar verschoven zijn.
-    </p>
-
-    <h3>De cosinus</h3>
-
-    <p>
-      Voor de cosinus geldt:
-    </p>
-
-    <p class="formula">
-      \\left(\\cos(x)\\right)'=-\\sin(x)
-    </p>
-
-    <p>
-      Het minteken is belangrijk.
-      De helling van de cosinus wordt dus gegeven door de negatieve sinus.
-    </p>
-
-    <h3>Sinus en cosinus samen</h3>
-
-    <p>
-      De twee basisregels zijn:
-    </p>
-
-    <p class="formula">
-      \\left(\\sin(x)\\right)'=\\cos(x)
-    </p>
-
-    <p class="formula">
-      \\left(\\cos(x)\\right)'=-\\sin(x)
-    </p>
-
-    <p>
-      Daardoor ontstaat bij herhaald differentiëren een patroon:
-    </p>
-
-    <p class="formula">
-      \\sin(x)\\rightarrow\\cos(x)\\rightarrow-\\sin(x)
-    </p>
-
-    <p class="formula">
-      \\cos(x)\\rightarrow-\\sin(x)\\rightarrow-\\cos(x)
-    </p>
-
-    <p>
-      Na vier afleidingen keren we terug naar de oorspronkelijke functie.
-      Dit hangt samen met het periodieke karakter van sinus en cosinus.
-    </p>
-
-    <h3>De kettingregel bij sinus</h3>
-
-    <p>
-      Beschouw:
-    </p>
-
-    <p class="formula">f(x)=\\sin(2x)</p>
-
-    <p>
-      De buitenste functie is sinus en de binnenste functie is:
-    </p>
-
-    <p class="formula">u=2x</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">u'=2</p>
-
-    <p>
-      De kettingregel geeft:
-    </p>
-
-    <p class="formula">
-      f'(x)=\\cos(2x)(2)
-    </p>
-
-    <p class="formula">
-      f'(x)=2\\cos(2x)
-    </p>
-
-    <h3>De kettingregel bij cosinus</h3>
+    <h3>De kettingregel bij sinus en cosinus</h3>
 
     <p>
       Neem:
     </p>
-
-    <p class="formula">f(x)=\\cos(3x+1)</p>
-
-    <p>
-      De binnenste functie is:
-    </p>
-
-    <p class="formula">u=3x+1</p>
-
-    <p class="formula">u'=3</p>
+    \\ltp class="formula"\\gtf(x)=\\\\sin(2x)</p>
+    <p>Dan:</p>
+    \\ltp class="formula"\\gtf'(x)=2\\\\cos(2x)</p>
 
     <p>
-      Omdat de afgeleide van cosinus <span class="formula-inline">-\\sin(u)</span>
-      is, krijgen we:
+      Voor:
     </p>
-
-    <p class="formula">
-      f'(x)=-\\sin(3x+1)(3)
-    </p>
-
-    <p class="formula">
-      f'(x)=-3\\sin(3x+1)
-    </p>
+    \\ltp class="formula"\\gtf(x)=\\\\cos(3x+1)</p>
+    <p>vinden we:</p>
+    \\ltp class="formula"\\gtf'(x)=-3\\\\sin(3x+1)</p>
 
     <h3>De tangens</h3>
 
     <p>
       De tangens is gerelateerd aan sinus en cosinus:
     </p>
-
-    <p class="formula">
-      \\tan(x)=\\frac{\\sin(x)}{\\cos(x)}
+    \\ltp class="formula"\\gt
+      \\\\tan(x)=\\\\frac{\\\\sin(x)}{\\\\cos(x)}
+    </p>
+    <p>Met de quotiëntregel volgt:</p>
+    \\ltp class="formula"\\gt
+      \\\\left(\\\\tan(x)\\\\right)'=\\\\frac{1}{\\\\cos^2(x)}
     </p>
 
-    <p>
-      Met de quotiëntregel kunnen we de afgeleide bepalen.
-      Het resultaat is:
-    </p>
-
-    <p class="formula">
-      \\left(\\tan(x)\\right)'=\\frac{1}{\\cos^2(x)}
-    </p>
+    <h3>Combineren van regels</h3>
 
     <p>
-      Dit kunnen we ook schrijven als:
+      De regels uit 3.5 en 3.6 blijven gewoon gelden.
+      Neem bijvoorbeeld:
     </p>
-
-    <p class="formula">
-      \\left(\\tan(x)\\right)'=\\sec^2(x)
-    </p>
+    \\ltp class="formula"\\gtf(x)=e^{x^2}</p>
+    \\ltp class="formula"\\gtf'(x)=2xe^{x^2}</p>
 
     <p>
-      De eerste vorm is voorlopig het belangrijkst, omdat die rechtstreeks
-      met sinus en cosinus verbonden is.
+      Of neem een product:
     </p>
+    \\ltp class="formula"\\gtg(x)=x^2\\\\sin(x)</p>
+    \\ltp class="formula"\\gtg'(x)=2x\\\\sin(x)+x^2\\\\cos(x)</p>
 
     <h3>De belangrijkste regels op een rij</h3>
 
-    <p>
-      We hebben nu een belangrijke verzameling basisafgeleiden:
-    </p>
-
-    <p class="formula">
-      \\left(e^x\\right)'=e^x
-    </p>
-
-    <p class="formula">
-      \\left(a^x\\right)'=a^x\\ln(a)
-    </p>
-
-    <p class="formula">
-      \\left(\\ln(x)\\right)'=\\frac{1}{x}
-    </p>
-
-    <p class="formula">
-      \\left(\\sin(x)\\right)'=\\cos(x)
-    </p>
-
-    <p class="formula">
-      \\left(\\cos(x)\\right)'=-\\sin(x)
-    </p>
-
-    <p class="formula">
-      \\left(\\tan(x)\\right)'=\\frac{1}{\\cos^2(x)}
-    </p>
-
-    <h3>Maar de kettingregel blijft nodig</h3>
+    \\ltp class="formula"\\gt\\\\left(e^x\\\\right)'=e^x</p>
+    \\ltp class="formula"\\gt\\\\left(a^x\\\\right)'=a^x\\\\ln(a)</p>
+    \\ltp class="formula"\\gt\\\\left(\\\\ln(x)\\\\right)'=\\\\frac{1}{x}</p>
+    \\ltp class="formula"\\gt\\\\left(\\\\sin(x)\\\\right)'=\\\\cos(x)</p>
+    \\ltp class="formula"\\gt\\\\left(\\\\cos(x)\\\\right)'=-\\\\sin(x)</p>
+    \\ltp class="formula"\\gt\\\\left(\\\\tan(x)\\\\right)'=\\\\frac{1}{\\\\cos^2(x)}</p>
 
     <p>
-      Deze regels gelden voor de basisfuncties.
-      Zodra er een functie binnen de functie staat, moeten we de kettingregel
-      gebruiken.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">f(x)=e^{x^2}</p>
-
-    <p>
-      De afgeleide van de buitenste functie is:
-    </p>
-
-    <p class="formula">e^{x^2}</p>
-
-    <p>
-      De afgeleide van de binnenste functie is:
-    </p>
-
-    <p class="formula">2x</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">
-      f'(x)=e^{x^2}(2x)
-    </p>
-
-    <p class="formula">
-      f'(x)=2xe^{x^2}
-    </p>
-
-    <h3>Een combinatie van regels</h3>
-
-    <p>
-      Soms zijn meerdere regels tegelijk nodig. Neem bijvoorbeeld:
-    </p>
-
-    <p class="formula">
-      f(x)=x^2\\sin(x)
-    </p>
-
-    <p>
-      Dit is een product van twee functies. We gebruiken daarom eerst de
-      productregel:
-    </p>
-
-    <p class="formula">
-      f'(x)=2x\\sin(x)+x^2\\cos(x)
-    </p>
-
-    <p>
-      De productregel en de basisregel voor sinus werken hier dus samen.
+      Wanneer er een functie in een functie staat, gebruiken we de kettingregel.
+      Wanneer functies worden vermenigvuldigd of gedeeld, gebruiken we de
+      product- of quotiëntregel.
     </p>
 
     <h3>Hoe herken je de juiste regel?</h3>
 
-    <p>
-      Kijk altijd eerst naar de structuur van de functie.
-    </p>
-
     <ul>
-      <li>
-        <strong>Macht:</strong> gebruik de machtsregel.
-      </li>
-      <li>
-        <strong>Som of verschil:</strong> differentieer elke term afzonderlijk.
-      </li>
-      <li>
-        <strong>Product:</strong> gebruik de productregel.
-      </li>
-      <li>
-        <strong>Quotiënt:</strong> gebruik de quotiëntregel.
-      </li>
-      <li>
-        <strong>Functie in een functie:</strong> gebruik de kettingregel.
-      </li>
-      <li>
-        <strong>Exponentiële functie:</strong> gebruik de exponentiële regel,
-        eventueel samen met de kettingregel.
-      </li>
-      <li>
-        <strong>Logaritme:</strong> gebruik de logaritmeregel,
-        eventueel samen met de kettingregel.
-      </li>
-      <li>
-        <strong>Sinus, cosinus of tangens:</strong> gebruik de bijbehorende
-        goniometrische regel.
-      </li>
+      <li><strong>Macht:</strong> machtsregel.</li>
+      <li><strong>Som of verschil:</strong> differentieer elke term afzonderlijk.</li>
+      <li><strong>Product:</strong> productregel.</li>
+      <li><strong>Quotiënt:</strong> quotiëntregel.</li>
+      <li><strong>Functie in een functie:</strong> kettingregel.</li>
+      <li><strong>Exponentiële functie:</strong> exponentiële regel, eventueel met kettingregel.</li>
+      <li><strong>Logaritme:</strong> logaritmeregel, eventueel met kettingregel.</li>
+      <li><strong>Sinus, cosinus of tangens:</strong> de bijbehorende goniometrische regel.</li>
     </ul>
 
-    <h3>Een vaste werkwijze</h3>
-
-    <p>
-      Gebruik bij het differentiëren deze volgorde:
-    </p>
+    <h3>Vaste werkwijze</h3>
 
     <ol>
       <li>Bekijk de volledige functie.</li>
       <li>Herken de structuur.</li>
-      <li>Kies de buitenste en binnenste functie als er een samenstelling is.</li>
+      <li>Bepaal de buitenste en binnenste functie als dat nodig is.</li>
       <li>Kies de juiste basisregel.</li>
       <li>Gebruik indien nodig de product-, quotiënt- of kettingregel.</li>
       <li>Vereenvoudig het resultaat.</li>
@@ -4686,88 +3841,42 @@ const MILESTONES_3 = [
     <h3>Veelgemaakte fouten</h3>
 
     <ul>
-      <li>
-        Vergeten dat de afgeleide van <span class="formula-inline">\\cos(x)</span>
-        een minteken bevat.
-      </li>
-      <li>
-        Bij <span class="formula-inline">e^{g(x)}</span> de afgeleide
-        <span class="formula-inline">g'(x)</span> vergeten.
-      </li>
-      <li>
-        De afgeleide van <span class="formula-inline">\\ln(g(x))</span>
-        schrijven als alleen <span class="formula-inline">1/g(x)</span>.
-      </li>
-      <li>
-        Een exponentiële functie verwarren met een macht.
-      </li>
-      <li>
-        De kettingregel vergeten wanneer de variabele niet rechtstreeks in
-        de basisfunctie staat.
-      </li>
-      <li>
-        Het domein van een logaritme of tangens negeren.
-      </li>
+      <li>Het minteken bij <span class="formula-inline">\\\\cos(x)</span> vergeten.</li>
+      <li>Bij <span class="formula-inline">e^{g(x)}</span> de factor <span class="formula-inline">g'(x)</span> vergeten.</li>
+      <li>Bij <span class="formula-inline">\\\\ln(g(x))</span> de teller <span class="formula-inline">g'(x)</span> vergeten.</li>
+      <li>Een exponentiële functie verwarren met een macht.</li>
+      <li>Het domein van een logaritme of tangens negeren.</li>
     </ul>
 
-    <h3>Van basisfuncties naar echte modellen</h3>
+    <h3>Van afgeleideregels naar toepassingen</h3>
 
     <p>
-      We beschikken nu over de belangrijkste bouwstenen van de
-      differentiaalrekening.
+      We beschikken nu over een uitgebreide verzameling afgeleideregels.
+      We kunnen algebraïsche, exponentiële, logaritmische en goniometrische
+      functies differentiëren en deze functies met elkaar combineren.
     </p>
 
     <p>
-      We kunnen niet alleen eenvoudige machten differentiëren, maar ook
-      exponentiële, logaritmische en goniometrische functies en combinaties
-      daarvan.
-    </p>
-
-    <p>
-      Daardoor kunnen we in de volgende les de afgeleide gebruiken om
-      <strong>vragen over verandering en gedrag van functies</strong> te
-      beantwoorden.
+      De volgende vraag is daarom niet meer alleen
+      <strong>hoe berekenen we de afgeleide?</strong>, maar:
+      <strong>wat kunnen we met die veranderingssnelheid doen?</strong>
     </p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
         Exponentiële, logaritmische en goniometrische functies hebben elk hun
-        eigen basisafgeleide.
-      </p>
-      <p>
-        De belangrijkste regels zijn:
-      </p>
-
-      <p class="formula">
-        \\left(e^x\\right)'=e^x
-      </p>
-
-      <p class="formula">
-        \\left(\\ln(x)\\right)'=\\frac{1}{x}
-      </p>
-
-      <p class="formula">
-        \\left(\\sin(x)\\right)'=\\cos(x)
-      </p>
-
-      <p class="formula">
-        \\left(\\cos(x)\\right)'=-\\sin(x)
-      </p>
-
-      <p>
-        Samen met de product-, quotiënt- en kettingregel kunnen we hiermee
-        een zeer groot deel van de functies uit de analyse differentiëren.
+        eigen basisafgeleide. Met de regels uit 3.6 kunnen we ze ook in
+        samengestelde functies gebruiken.
       </p>
     </div>
-  `
+  \`
 },
 
- {
   id: "3.8",
   title: "Toepassingen van afgeleiden",
   goal: "Wat kunnen we met veranderingssnelheden?",
-  theory: /* html */`
+  theory: /* html */\`
     <h2>Toepassingen van afgeleiden</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -4775,591 +3884,239 @@ const MILESTONES_3 = [
       <li>Hoe vertelt de afgeleide ons of een functie stijgt of daalt?</li>
       <li>Hoe herkennen we een maximum of minimum?</li>
       <li>Hoe vinden we zulke punten met de afgeleide?</li>
-      <li>Hoe gebruiken we de afgeleide om een optimaal resultaat te vinden?</li>
+      <li>Hoe gebruiken we de afgeleide voor optimalisatie?</li>
       <li>Hoe beschrijft de afgeleide beweging en snelheid?</li>
-      <li>Hoe kunnen we veranderingssnelheden in echte situaties modelleren?</li>
-      <li>Hoe vertalen we een praktisch probleem naar een wiskundig probleem?</li>
+      <li>Hoe interpreteren we een veranderingssnelheid in een praktische context?</li>
+      <li>Waarom is de integraal de natuurlijke volgende stap?</li>
     </ul>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
         De afgeleide vertelt niet alleen hoe snel een functie verandert.
-        Ze geeft ons ook informatie over het <strong>gedrag</strong> van de functie.
-      </p>
-      <p>
-        Met de afgeleide kunnen we bijvoorbeeld bepalen waar een functie
-        stijgt of daalt, waar maxima en minima liggen en welke waarde een
-        grootheid optimaal maakt.
+        Ze geeft ook informatie over het gedrag van de functie.
+        Met de afgeleide kunnen we stijgen en dalen onderzoeken, maxima en
+        minima vinden, problemen optimaliseren en veranderingssnelheden
+        interpreteren.
       </p>
     </div>
 
     <h3>Van veranderingssnelheid naar gedrag</h3>
 
     <p>
-      In les 3.4 zagen we dat de afgeleide de momentane veranderingssnelheid
-      van een functie beschrijft.
+      We weten uit 3.4 dat de afgeleide de helling van de raaklijn beschrijft.
+      Daardoor vertelt het teken van de afgeleide ons wat de functie lokaal doet.
     </p>
+    \\ltp class="formula"\\gtf'(x)\\\\gt0</p>
+    <p>De functie stijgt daar.</p>
+    \\ltp class="formula"\\gtf'(x)\\\\lt0</p>
+    <p>De functie daalt daar.</p>
 
-    <p class="formula">
-      f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}
-    </p>
-
+    <p>Bijvoorbeeld voor:</p>
+    \\ltp class="formula"\\gtf(x)=x^2</p>
+    <p>geldt:</p>
+    \\ltp class="formula"\\gtf'(x)=2x</p>
     <p>
-      Geometrisch is de afgeleide de helling van de raaklijn aan de grafiek.
+      De functie daalt voor <span class="formula-inline">x\\\\lt0</span> en
+      stijgt voor <span class="formula-inline">x\\\\gt0</span>.
     </p>
 
-    <p>
-      Daardoor kunnen we aan het teken van de afgeleide zien wat de grafiek
-      doet.
-    </p>
-
-    <h3>Een positieve afgeleide</h3>
-
-    <p>
-      Als:
-    </p>
-
-    <p class="formula">f'(x)\\gt0</p>
-
-    <p>
-      dan heeft de grafiek op dat punt een positieve helling.
-      De functie is daar aan het stijgen.
-    </p>
-
-    <p>
-      Bijvoorbeeld:
-    </p>
-
-    <p class="formula">f(x)=x^2</p>
-
-    <p>
-      heeft als afgeleide:
-    </p>
-
-    <p class="formula">f'(x)=2x</p>
-
-    <p>
-      Voor positieve waarden van <span class="formula-inline">x</span> geldt:
-    </p>
-
-    <p class="formula">2x\\gt0</p>
-
-    <p>
-      Dus is de functie daar stijgend.
-    </p>
-
-    <h3>Een negatieve afgeleide</h3>
+    <h3>Stationaire en kritieke punten</h3>
 
     <p>
       Als:
     </p>
-
-    <p class="formula">f'(x)\\lt0</p>
-
+    \\ltp class="formula"\\gtf'(x)=0</p>
     <p>
-      dan heeft de grafiek een negatieve helling.
-      De functie is daar aan het dalen.
+      heeft de grafiek daar een horizontale raaklijn. Zo'n punt noemen we
+      een <strong>stationair punt</strong>.
+    </p>
+    <p>
+      Zulke punten zijn belangrijke kandidaten voor maxima en minima.
+      Ook punten waar de afgeleide niet bestaat kunnen belangrijk zijn.
     </p>
 
+    <h3>Extrema herkennen</h3>
+
     <p>
-      Voor <span class="formula-inline">f(x)=x^2</span> geldt bijvoorbeeld:
+      Neem <span class="formula-inline">f(x)=x^2</span>.
     </p>
-
-    <p class="formula">2x\\lt0</p>
-
+    \\ltp class="formula"\\gtf'(x)=2x</p>
+    \\ltp class="formula"\\gt2x=0</p>
+    \\ltp class="formula"\\gtx=0</p>
     <p>
-      wanneer <span class="formula-inline">x\\lt0</span>.
-    </p>
-
-    <p>
-      De parabool daalt dus links van de oorsprong en stijgt rechts van
-      de oorsprong.
-    </p>
-
-    <h3>Waar verandert stijgen in dalen?</h3>
-
-    <p>
-      Als een functie eerst daalt en daarna stijgt, moet er ergens een
-      overgang zijn.
-    </p>
-
-    <p>
-      Bij een gladde grafiek heeft de raaklijn daar vaak een horizontale
-      helling:
-    </p>
-
-    <p class="formula">f'(x)=0</p>
-
-    <p>
-      Zo'n punt noemen we een <strong>stationair punt</strong>.
-    </p>
-
-    <p>
-      Het is belangrijk om te onthouden dat een punt met
-      <span class="formula-inline">f'(x)=0</span> niet automatisch een
-      maximum of minimum is. We moeten ook kijken wat er rond het punt
-      gebeurt.
-    </p>
-
-    <h3>Een minimum vinden</h3>
-
-    <p>
-      Neem opnieuw:
-    </p>
-
-    <p class="formula">f(x)=x^2</p>
-
-    <p>
-      De afgeleide is:
-    </p>
-
-    <p class="formula">f'(x)=2x</p>
-
-    <p>
-      Zoek eerst waar de afgeleide nul is:
-    </p>
-
-    <p class="formula">2x=0</p>
-
-    <p class="formula">x=0</p>
-
-    <p>
-      Links van <span class="formula-inline">0</span> is de afgeleide negatief
-      en rechts van <span class="formula-inline">0</span> positief.
-    </p>
-
-    <p>
+      Links van 0 is de afgeleide negatief en rechts van 0 positief.
       De functie gaat dus van dalen naar stijgen.
-      Daarom heeft <span class="formula-inline">x=0</span> een minimum.
+    </p>
+    \\ltp class="formula"\\gt(0,0)</p>
+    <p>
+      Dit is een minimum.
     </p>
 
     <p>
-      De bijbehorende functiewaarde is:
+      Voor <span class="formula-inline">f(x)=-x^2</span> geldt:
     </p>
-
-    <p class="formula">f(0)=0</p>
-
+    \\ltp class="formula"\\gtf'(x)=-2x</p>
     <p>
-      Het minimum ligt dus in het punt:
-    </p>
-
-    <p class="formula">(0,0)</p>
-
-    <h3>Een maximum vinden</h3>
-
-    <p>
-      Het omgekeerde kan ook gebeuren.
-      Als een functie eerst stijgt en daarna daalt, ontstaat een maximum.
-    </p>
-
-    <p>
-      Een eenvoudig voorbeeld is:
-    </p>
-
-    <p class="formula">f(x)=-x^2</p>
-
-    <p>
-      De afgeleide is:
-    </p>
-
-    <p class="formula">f'(x)=-2x</p>
-
-    <p>
-      De afgeleide is nul voor:
-    </p>
-
-    <p class="formula">x=0</p>
-
-    <p>
-      Links van nul is de afgeleide positief en rechts van nul negatief.
+      Links van nul is de afgeleide positief en rechts negatief.
       De functie gaat dus van stijgen naar dalen.
     </p>
-
+    \\ltp class="formula"\\gt(0,0)</p>
     <p>
-      Daarom heeft de functie een maximum bij:
-    </p>
-
-    <p class="formula">x=0</p>
-
-    <p class="formula">f(0)=0</p>
-
-    <h3>Kritieke punten</h3>
-
-    <p>
-      Punten waar:
-    </p>
-
-    <p class="formula">f'(x)=0</p>
-
-    <p>
-      zijn belangrijke kandidaten voor maxima en minima.
-      Zulke punten noemen we <strong>kritieke punten</strong>.
+      Dit is een maximum.
     </p>
 
     <p>
-      Ook punten waar de afgeleide niet bestaat kunnen belangrijk zijn.
-      Daarom zoeken we bij een optimalisatieprobleem niet alleen naar
-      oplossingen van <span class="formula-inline">f'(x)=0</span>, maar
-      bekijken we ook het domein en eventuele punten waar de afgeleide
-      niet bestaat.
+      Het algemene tekenverloop is:
     </p>
-
-    <h3>Een maximum of minimum herkennen</h3>
-
-    <p>
-      Een handige manier is kijken naar het teken van de afgeleide.
-    </p>
-
     <ul>
-      <li>
-        <strong>positief → negatief:</strong> lokaal maximum
-      </li>
-      <li>
-        <strong>negatief → positief:</strong> lokaal minimum
-      </li>
-      <li>
-        <strong>zelfde teken aan beide kanten:</strong> geen lokale
-        extremumwisseling door het teken van de afgeleide
-      </li>
+      <li><strong>positief → negatief:</strong> lokaal maximum;</li>
+      <li><strong>negatief → positief:</strong> lokaal minimum.</li>
     </ul>
-
-    <p>
-      De afgeleide geeft ons dus een soort routekaart van het gedrag van
-      de functie.
-    </p>
 
     <h3>Optimalisatie</h3>
 
     <p>
-      Veel praktische problemen vragen niet om zomaar een functiewaarde,
-      maar om de <strong>grootst mogelijke</strong> of
-      <strong>kleinst mogelijke</strong> waarde.
+      Veel praktische problemen vragen naar de grootste of kleinste mogelijke
+      waarde. Dat noemen we een <strong>optimalisatieprobleem</strong>.
     </p>
 
     <p>
-      Dat noemen we een optimalisatieprobleem.
+      Denk bijvoorbeeld aan de grootste oppervlakte, minimale kosten,
+      maximale opbrengst of een optimale afstelling.
     </p>
 
     <p>
-      Denk bijvoorbeeld aan:
-    </p>
-
-    <ul>
-      <li>de grootste oppervlakte met een vaste hoeveelheid materiaal;</li>
-      <li>de kleinste hoeveelheid materiaal voor een bepaalde inhoud;</li>
-      <li>de maximale opbrengst;</li>
-      <li>de minimale kosten;</li>
-      <li>de optimale snelheid of afstelling.</li>
-    </ul>
-
-    <p>
-      De wiskundige strategie is steeds vergelijkbaar:
-      maak eerst een functie die het te optimaliseren resultaat beschrijft
-      en zoek daarna naar de relevante kritieke punten.
+      De algemene strategie is:
+      vertaal eerst het praktische probleem naar een functie en onderzoek
+      daarna waar die functie haar gewenste maximum of minimum bereikt.
     </p>
 
     <h3>Voorbeeld: maximale oppervlakte</h3>
 
     <p>
       Stel dat we met 20 meter hekwerk een rechthoek willen maken.
-      Noem één zijde <span class="formula-inline">x</span>.
+      Noem één zijde <span class="formula-inline">x</span> en de andere
+      <span class="formula-inline">y</span>.
     </p>
+
+    \\ltp class="formula"\\gt2x+2y=20</p>
+    \\ltp class="formula"\\gty=10-x</p>
+    \\ltp class="formula"\\gtA=xy</p>
+    \\ltp class="formula"\\gtA(x)=x(10-x)=10x-x^2</p>
 
     <p>
-      Omdat de omtrek 20 meter is:
+      De oppervlakte is nu geschreven als functie van één variabele.
     </p>
-
-    <p class="formula">2x+2y=20</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">y=10-x</p>
-
-    <p>
-      De oppervlakte is:
-    </p>
-
-    <p class="formula">A=xy</p>
-
-    <p>
-      Invullen geeft één functie:
-    </p>
-
-    <p class="formula">A(x)=x(10-x)</p>
-
-    <p>
-      Dus:
-    </p>
-
-    <p class="formula">A(x)=10x-x^2</p>
 
     <h3>De oppervlakte optimaliseren</h3>
 
-    <p>
-      Differentieer de oppervlaktefunctie:
-    </p>
-
-    <p class="formula">A'(x)=10-2x</p>
-
-    <p>
-      Voor een kandidaat voor het maximum geldt:
-    </p>
-
-    <p class="formula">A'(x)=0</p>
+    \\ltp class="formula"\\gtA'(x)=10-2x</p>
+    \\ltp class="formula"\\gtA'(x)=0</p>
+    \\ltp class="formula"\\gt10-2x=0</p>
+    \\ltp class="formula"\\gtx=5</p>
 
     <p>
-      Dus:
+      Omdat <span class="formula-inline">y=10-x</span>, volgt:
     </p>
-
-    <p class="formula">10-2x=0</p>
-
-    <p class="formula">x=5</p>
+    \\ltp class="formula"\\gty=5</p>
 
     <p>
-      Omdat:
+      De rechthoek met maximale oppervlakte is dus een vierkant:
     </p>
-
-    <p class="formula">y=10-x</p>
-
-    <p>
-      volgt:
-    </p>
-
-    <p class="formula">y=5</p>
-
-    <p>
-      De rechthoek met maximale oppervlakte is dus een vierkant.
-      De maximale oppervlakte is:
-    </p>
-
-    <p class="formula">A=5\\cdot5=25\\text{ m}^2</p>
-
-    <p>
-      Dit voorbeeld laat een belangrijk patroon zien:
-      een praktisch optimalisatieprobleem wordt eerst vertaald naar een
-      functie en daarna opgelost met de afgeleide.
-    </p>
+    \\ltp class="formula"\\gtA=5\\\\cdot5=25\\\\text{ m}^2</p>
 
     <h3>Waarom controleren we het antwoord?</h3>
 
     <p>
-      Het oplossen van:
-    </p>
-
-    <p class="formula">f'(x)=0</p>
-
-    <p>
-      levert alleen kandidaten op.
-      We moeten nog controleren of het gevonden punt werkelijk het gewenste
-      maximum of minimum geeft.
+      Het oplossen van <span class="formula-inline">f'(x)=0</span> levert
+      alleen kandidaten op. We moeten controleren of het gevonden punt
+      werkelijk het gewenste maximum of minimum geeft.
     </p>
 
     <p>
-      Bij een probleem uit de werkelijkheid moeten we bovendien controleren
-      of de oplossing binnen het toegestane domein ligt.
+      Bovendien moet de oplossing binnen het domein en de randvoorwaarden
+      van het probleem liggen.
     </p>
 
-    <p>
-      In het hekwerkvoorbeeld moet bijvoorbeeld gelden:
-    </p>
-
-    <p class="formula">0\\lt x\\lt10</p>
+    \\ltp class="formula"\\gt0\\\\lt x\\\\lt10</p>
 
     <p>
-      Een negatieve zijde of een zijde langer dan de volledige halve omtrek
-      heeft geen betekenis.
+      Een negatieve zijde of een zijde langer dan 10 meter heeft in het
+      hekwerkprobleem geen betekenis.
     </p>
 
     <h3>De afgeleide in de bewegingsleer</h3>
 
     <p>
-      De afgeleide heeft een directe betekenis in de fysica.
+      Als de positie wordt beschreven door <span class="formula-inline">s(t)</span>,
+      dan is de snelheid:
     </p>
+    \\ltp class="formula"\\gtv(t)=s'(t)</p>
+    <p>
+      De versnelling is de verandering van de snelheid:
+    </p>
+    \\ltp class="formula"\\gta(t)=v'(t)=s''(t)</p>
+    \\ltp class="formula"\\gtpositie \\\\rightarrow snelheid \\\\rightarrow versnelling</p>
 
     <p>
-      Stel dat de positie van een voorwerp wordt beschreven door:
+      Stel bijvoorbeeld:
     </p>
-
-    <p class="formula">s(t)</p>
+    \\ltp class="formula"\\gts(t)=t^2+2t</p>
+    \\ltp class="formula"\\gtv(t)=s'(t)=2t+2</p>
+    \\ltp class="formula"\\gta(t)=v'(t)=2</p>
 
     <p>
-      Dan is de snelheid de verandering van de positie per tijdseenheid:
+      Een voorwerp staat op een bepaald moment stil wanneer:
     </p>
-
-    <p class="formula">v(t)=s'(t)</p>
-
+    \\ltp class="formula"\\gtv(t)=0</p>
     <p>
-      En de versnelling is de verandering van de snelheid:
+      Omdat <span class="formula-inline">v(t)=s'(t)</span>, zoeken we dan:
     </p>
-
-    <p class="formula">a(t)=v'(t)=s''(t)</p>
-
-    <p>
-      De afgeleide vormt zo een keten:
-    </p>
-
-    <p class="formula">
-      positie \\rightarrow snelheid \\rightarrow versnelling
-    </p>
-
-    <h3>Een bewegingsvoorbeeld</h3>
-
-    <p>
-      Stel dat de positie van een voorwerp wordt gegeven door:
-    </p>
-
-    <p class="formula">s(t)=t^2+2t</p>
-
-    <p>
-      De snelheid is:
-    </p>
-
-    <p class="formula">v(t)=s'(t)=2t+2</p>
-
-    <p>
-      De versnelling is:
-    </p>
-
-    <p class="formula">a(t)=v'(t)=2</p>
-
-    <p>
-      De snelheid neemt dus constant toe.
-      De versnelling blijft gelijk aan 2.
-    </p>
-
-    <h3>Wanneer staat een voorwerp stil?</h3>
-
-    <p>
-      Een voorwerp staat op een bepaald moment stil wanneer zijn snelheid
-      nul is:
-    </p>
-
-    <p class="formula">v(t)=0</p>
-
-    <p>
-      Omdat:
-    </p>
-
-    <p class="formula">v(t)=s'(t)</p>
-
-    <p>
-      zoeken we dus naar:
-    </p>
-
-    <p class="formula">s'(t)=0</p>
-
-    <p>
-      Dezelfde wiskundige voorwaarde die we bij extrema tegenkwamen, krijgt
-      in de bewegingsleer dus een andere betekenis.
-    </p>
+    \\ltp class="formula"\\gts'(t)=0</p>
 
     <h3>Veranderingssnelheden koppelen</h3>
 
     <p>
-      Soms veranderen meerdere grootheden tegelijk.
-      De afgeleide helpt dan om hun veranderingssnelheden met elkaar
-      te verbinden.
+      Soms veranderen meerdere grootheden tegelijk. De afgeleide kan dan
+      beschrijven hoe een verandering in de ene grootheid samenhangt met
+      een verandering in een andere.
     </p>
 
+    <p>Voor de oppervlakte van een cirkel geldt:</p>
+    \\ltp class="formula"\\gtA=\\\\pi r^2</p>
+    <p>Differentieer naar de straal:</p>
+    \\ltp class="formula"\\gt\\\\frac{dA}{dr}=2\\\\pi r</p>
     <p>
-      Stel bijvoorbeeld dat de oppervlakte van een cirkel verandert omdat
-      de straal verandert.
+      Dit vertelt hoe gevoelig de oppervlakte is voor een verandering van
+      de straal.
     </p>
 
-    <p class="formula">A=\\pi r^2</p>
-
-    <p>
-      Differentieer naar de straal:
-    </p>
-
-    <p class="formula">\\frac{dA}{dr}=2\\pi r</p>
-
-    <p>
-      Dit vertelt hoe gevoelig de oppervlakte is voor een kleine verandering
-      van de straal.
-    </p>
-
-    <p>
-      Later kunnen we zulke veranderingssnelheden verder combineren.
-      Dit vormt een brug naar meer geavanceerde toepassingen van calculus.
-    </p>
-
-    <h3>Lokale informatie uit de afgeleide</h3>
-
-    <p>
-      De afgeleide vertelt ons wat er <strong>op een bepaald punt</strong>
-      gebeurt.
-    </p>
-
-    <p>
-      Bij:
-    </p>
-
-    <p class="formula">f'(a)\\gt0</p>
-
-    <p>
-      stijgt de functie lokaal rond <span class="formula-inline">a</span>.
-    </p>
-
-    <p class="formula">f'(a)\\lt0</p>
-
-    <p>
-      daalt de functie lokaal.
-    </p>
-
-    <p class="formula">f'(a)=0</p>
-
-    <p>
-      heeft de grafiek daar een horizontale raaklijn, tenzij de afgeleide
-      niet voldoende informatie geeft over het lokale gedrag.
-    </p>
-
-    <p>
-      Dit lokale perspectief is één van de belangrijkste ideeën van de
-      differentiaalrekening.
-    </p>
-
-    <h3>Van formule naar besluit</h3>
-
-    <p>
-      Bij toepassingen is het niet voldoende om alleen een afgeleide te
-      berekenen. We moeten de uitkomst interpreteren.
-    </p>
+    <h3>Lokale informatie interpreteren</h3>
 
     <p>
       Bijvoorbeeld:
     </p>
-
-    <p class="formula">f'(3)=5</p>
-
+    \\ltp class="formula"\\gtf'(3)=5</p>
     <p>
       betekent dat de functie bij <span class="formula-inline">x=3</span>
-      op dat moment stijgt met een snelheid van 5 eenheden van
-      <span class="formula-inline">f</span> per eenheid van
-      <span class="formula-inline">x</span>.
+      op dat moment stijgt met 5 eenheden van <span class="formula-inline">f</span>
+      per eenheid van <span class="formula-inline">x</span>.
     </p>
-
     <p>
-      De betekenis van de eenheden hoort dus bij het antwoord.
+      De eenheden horen dus bij de interpretatie van het antwoord.
     </p>
 
     <h3>Een vaste werkwijze voor toepassingen</h3>
 
-    <p>
-      Bij een toepassingsprobleem kun je deze volgorde gebruiken:
-    </p>
-
     <ol>
       <li>Lees wat er gevraagd wordt.</li>
-      <li>Bepaal welke grootheid verandert.</li>
+      <li>Bepaal welke grootheid verandert of geoptimaliseerd wordt.</li>
       <li>Maak een wiskundig model.</li>
       <li>Schrijf de relevante functie.</li>
       <li>Differentieer de functie.</li>
-      <li>Los de vergelijking voor een kritieke waarde op wanneer dat nodig is.</li>
-      <li>Controleer het domein en de randvoorwaarden.</li>
+      <li>Los de vergelijking voor kritieke waarden op wanneer dat nodig is.</li>
+      <li>Controleer domein en randvoorwaarden.</li>
       <li>Interpreteer het antwoord in de oorspronkelijke context.</li>
     </ol>
 
@@ -5371,7 +4128,7 @@ const MILESTONES_3 = [
         een maximum of minimum betekent.
       </li>
       <li>
-        Alleen een kritieke waarde berekenen en vergeten de functiewaarde
+        Alleen de kritieke waarde berekenen en vergeten de functiewaarde
         te bepalen.
       </li>
       <li>
@@ -5384,33 +4141,22 @@ const MILESTONES_3 = [
       <li>
         Eenheden vergeten bij een veranderingssnelheid.
       </li>
-      <li>
-        De afgeleide berekenen zonder eerst te bepalen welke grootheid
-        geoptimaliseerd of onderzocht moet worden.
-      </li>
     </ul>
 
     <h3>Van afgeleide naar integraal</h3>
 
     <p>
-      Tot nu toe hebben we vooral gevraagd:
+      Tot nu toe vroegen we vooral:
       <strong>hoe snel verandert iets?</strong>
     </p>
-
     <p>
       De afgeleide gaat van een grootheid naar haar veranderingssnelheid:
     </p>
-
-    <p class="formula">
-      hoeveelheid \\rightarrow veranderingssnelheid
-    </p>
+    \\ltp class="formula"\\gthoeveelheid \\\\rightarrow veranderingssnelheid</p>
 
     <p>
-      Maar we kunnen ook de omgekeerde vraag stellen:
-    </p>
-
-    <p>
-      Als we de veranderingssnelheid kennen, kunnen we dan de oorspronkelijke
+      We kunnen ook de omgekeerde vraag stellen:
+      als we de veranderingssnelheid kennen, kunnen we dan de oorspronkelijke
       hoeveelheid terugvinden?
     </p>
 
@@ -5418,22 +4164,12 @@ const MILESTONES_3 = [
       Dat leidt naar het volgende grote idee van de calculus:
       <strong>integreren</strong>.
     </p>
-
-    <p class="formula">
-      veranderingssnelheid \\rightarrow hoeveelheid
-    </p>
-
-    <p>
-      In de volgende lessen onderzoeken we hoe de integraal die omgekeerde
-      richting mogelijk maakt.
-    </p>
+    \\ltp class="formula"\\gtveranderingssnelheid \\\\rightarrow hoeveelheid</p>
 
     <div class="callout">
       <p><strong>Kernidee:</strong></p>
       <p>
         De afgeleide is een instrument om verandering te onderzoeken.
-      </p>
-      <p>
         Met het teken van de afgeleide kunnen we stijgen en dalen herkennen.
         Met kritieke punten kunnen we kandidaten voor maxima en minima vinden.
         Bij optimalisatie vertalen we een praktisch probleem naar een functie
@@ -5445,11 +4181,10 @@ const MILESTONES_3 = [
         taal voor verandering.
       </p>
     </div>
-  `
+  \`
 },
 
-  {
-    id: "3.9",
+  id: "3.9",
     title: "De integraal als omgekeerde verandering",
     goal: "Kunnen we verandering weer optellen?",
     theory: ``
