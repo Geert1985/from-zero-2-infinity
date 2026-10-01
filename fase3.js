@@ -8206,6 +8206,894 @@ const MILESTONES_3 = [
     id: "3.14",
     title: "Multivariabele calculus & vectorvelden",
     goal: "Hoe beschrijven we verandering in een ruimte?",
-    theory: ``
+    theory: `
+    <h2>Multivariabele calculus & vectorvelden</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Waarom is de richting waarin we bewegen belangrijk bij meerdere variabelen?</li>
+      <li>Hoe kunnen we verandering in een willekeurige richting beschrijven?</li>
+      <li>Wat vertelt de gradiënt ons over die richtingsverandering?</li>
+      <li>Wat is een vectorveld?</li>
+      <li>Hoe kunnen we beweging, stroming en krachten als velden voorstellen?</li>
+      <li>Wat betekenen divergentie en rotatie op een intuïtief niveau?</li>
+      <li>Waarom vormen vectorvelden een natuurlijke brug naar natuurkunde en Fase 4?</li>
+    </ul>
+
+    <p>
+      In 3.13 zagen we dat een functie van meerdere variabelen verschillende
+      richtingsveranderingen kan hebben. Bij
+      <span class="formula-inline">f(x,y)</span> kunnen we bijvoorbeeld de
+      verandering in de <span class="formula-inline">x</span>- en
+      <span class="formula-inline">y</span>-richting afzonderlijk bekijken.
+    </p>
+
+    <p>
+      We brachten die informatie samen in de gradiënt:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f
+      =
+      \\\\left(
+      \\\\frac{\\\\partial f}{\\\\partial x},
+      \\\\frac{\\\\partial f}{\\\\partial y}
+      \\\\right)
+    </p>
+
+    <p>
+      Maar er blijft een belangrijke vraag over:
+      <strong>wat gebeurt er als we niet precies in de x- of y-richting bewegen,
+      maar schuin door het vlak?</strong>
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Bij meerdere variabelen hangt verandering niet alleen af van
+        <em>hoe ver</em> we bewegen, maar ook van <em>in welke richting</em>
+        we bewegen.
+      </p>
+    </div>
+
+    <h3>Van twee richtingen naar elke richting</h3>
+
+    <p>
+      Stel dat we ons op een punt van een landschap bevinden.
+      We kunnen naar het noorden, zuiden, oosten of westen gaan,
+      maar ook in elke richting daartussenin.
+    </p>
+
+    <p>
+      De functie
+      <span class="formula-inline">f(x,y)</span>
+      geeft bijvoorbeeld de hoogte van het landschap.
+      Als we een klein stukje bewegen, verandert onze hoogte.
+    </p>
+
+    <p>
+      In 3.13 konden we de helling in de twee coördinaatrichtingen bepalen:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial x}
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial y}
+    </p>
+
+    <p>
+      Maar een wandelaar beweegt meestal niet exact langs één van die assen.
+      We hebben daarom een manier nodig om een <strong>richting</strong>
+      expliciet te beschrijven.
+    </p>
+
+    <div class="callout">
+      <p>
+        Een vector kunnen we voorlopig zien als een pijl die een
+        <strong>richting</strong> en een <strong>grootte</strong> heeft.
+      </p>
+      <p>
+        De volledige theorie van vectoren bewaren we voor Fase 4.
+        Hier gebruiken we alleen wat nodig is om verandering in de ruimte
+        te begrijpen.
+      </p>
+    </div>
+
+    <h3>Een richting als vector</h3>
+
+    <p>
+      In een vlak kunnen we een richting bijvoorbeeld voorstellen door:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{u}=(u_x,u_y)
+    </p>
+
+    <p>
+      De twee componenten vertellen hoeveel van de beweging in de
+      <span class="formula-inline">x</span>- en
+      <span class="formula-inline">y</span>-richting zit.
+    </p>
+
+    <p>
+      Voor een zuivere beweging naar rechts kunnen we bijvoorbeeld denken aan:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{u}=(1,0)
+    </p>
+
+    <p>
+      en voor een zuivere beweging omhoog:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{u}=(0,1)
+    </p>
+
+    <p>
+      Een diagonale richting kan beide componenten bevatten.
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{u}=(1,1)
+    </p>
+
+    <p>
+      De exacte lengte van de vector is voor het volgende idee belangrijk:
+      als we alleen de <em>richting</em> willen vergelijken, gebruiken we
+      bij voorkeur een <strong>eenheidsvector</strong>, dus een vector met lengte 1.
+    </p>
+
+    <p>
+      We hoeven de volledige berekening van vectorlengtes hier nog niet uit te
+      werken. Het belangrijke idee is dat we een richting kunnen coderen met
+      getallen.
+    </p>
+
+    <h3>De richtingsafgeleide</h3>
+
+    <p>
+      We kunnen nu een nieuwe vraag stellen:
+    </p>
+
+    <div class="callout">
+      <p><strong>
+        Hoe snel verandert een functie als we vanuit een punt
+        in één specifieke richting bewegen?
+      </strong></p>
+    </div>
+
+    <p>
+      Deze verandering noemen we de <strong>richtingsafgeleide</strong>.
+    </p>
+
+    <p>
+      Als <span class="formula-inline">\\\\mathbf{u}</span> een eenheidsvector
+      is, schrijven we:
+    </p>
+
+    <p class="formula">
+      D_{\\\\mathbf{u}}f
+      =
+      \\\\nabla f\\\\cdot\\\\mathbf{u}
+    </p>
+
+    <p>
+      Het punt tussen de twee vectoren staat voor het
+      <strong>inwendig product</strong> (dotproduct).
+      Voor twee componenten betekent dit:
+    </p>
+
+    <p class="formula">
+      (a,b)\\\\cdot(c,d)=ac+bd
+    </p>
+
+    <p>
+      We hoeven het dotproduct hier nog niet als een volledig algebraïsch
+      onderwerp te beheersen. De betekenis is belangrijker:
+      de gradiënt wordt vergeleken met de gekozen bewegingsrichting.
+    </p>
+
+    <div class="callout">
+      <p><strong>Richtingsafgeleide:</strong></p>
+      <p>
+        De lokale verandering van een functie wanneer we vanuit een punt
+        in een gekozen richting bewegen.
+      </p>
+    </div>
+
+    <h3>Waarom de gradiënt de sterkste stijging geeft</h3>
+
+    <p>
+      In 3.13 zagen we al dat de gradiënt wijst naar de sterkste lokale
+      toename van de functie. De richtingsafgeleide maakt duidelijk waarom.
+    </p>
+
+    <p>
+      Neem een eenheidsvector <span class="formula-inline">\\\\mathbf{u}</span>.
+      Dan is:
+    </p>
+
+    <p class="formula">
+      D_{\\\\mathbf{u}}f=\\\\nabla f\\\\cdot\\\\mathbf{u}
+    </p>
+
+    <p>
+      Het dotproduct is maximaal wanneer de gekozen richting dezelfde richting
+      heeft als de gradiënt.
+    </p>
+
+    <p>
+      De gradiënt geeft dus precies de richting waarin de functiewaarde
+      lokaal het sterkst stijgt.
+    </p>
+
+    <p>
+      In de tegengestelde richting is de verandering het sterkst negatief:
+      daar daalt de functie het snelst.
+    </p>
+
+    <div class="callout">
+      <p>
+        <strong>Gradiënt = kompas van de lokale stijging.</strong>
+      </p>
+      <p>
+        De richtingsafgeleide vertelt hoeveel van die stijging we werkelijk
+        ervaren in de richting waarin we bewegen.
+      </p>
+    </div>
+
+    <h3>Een concreet voorbeeld</h3>
+
+    <p>
+      Neem opnieuw het landschap:
+    </p>
+
+    <p class="formula">
+      f(x,y)=x^2+y^2
+    </p>
+
+    <p>
+      De gradiënt is:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f=(2x,2y)
+    </p>
+
+    <p>
+      In het punt <span class="formula-inline">(1,2)</span> krijgen we:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f(1,2)=(2,4)
+    </p>
+
+    <p>
+      De grootste lokale stijging wijst dus in de richting van
+      <span class="formula-inline">(2,4)</span>.
+    </p>
+
+    <p>
+      Als we in een andere richting bewegen, zal de functie nog steeds kunnen
+      stijgen, maar minder sterk. In sommige richtingen blijft de functiewaarde
+      lokaal ongeveer gelijk en in andere richtingen daalt ze.
+    </p>
+
+    <p>
+      Dat is een veel rijker beeld dan één enkel getal voor de afgeleide.
+    </p>
+
+    <h3>Van functies naar velden</h3>
+
+    <p>
+      Tot nu toe gaf een functie op ieder punt één waarde:
+    </p>
+
+    <p class="formula">
+      f(x,y)
+    </p>
+
+    <p>
+      Bijvoorbeeld de temperatuur op iedere plaats.
+    </p>
+
+    <p>
+      Maar in de natuurkunde willen we vaak iets anders beschrijven:
+      op ieder punt kan een <strong>richting én grootte</strong> aanwezig zijn.
+    </p>
+
+    <p>
+      Denk aan de snelheid van de lucht op verschillende plaatsen in een kamer.
+      Op elk punt kan de lucht een andere snelheid en richting hebben.
+    </p>
+
+    <p>
+      Zo'n verzameling pijlen noemen we een <strong>vectorveld</strong>.
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{F}(x,y)
+      =
+      (P(x,y),Q(x,y))
+    </p>
+
+    <p>
+      Voor iedere positie <span class="formula-inline">(x,y)</span>
+      geeft het veld een vector.
+    </p>
+
+    <div class="callout">
+      <p><strong>Scalaire functie:</strong> één getal per punt.</p>
+      <p><strong>Vectorveld:</strong> één vector per punt.</p>
+    </div>
+
+    <h3>Een eenvoudig vectorveld</h3>
+
+    <p>
+      Beschouw:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{F}(x,y)=(x,y)
+    </p>
+
+    <p>
+      In het punt <span class="formula-inline">(1,0)</span> krijgen we de vector:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{F}(1,0)=(1,0)
+    </p>
+
+    <p>
+      In het punt <span class="formula-inline">(0,2)</span> krijgen we:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{F}(0,2)=(0,2)
+    </p>
+
+    <p>
+      En in het punt <span class="formula-inline">(-1,-1)</span>:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{F}(-1,-1)=(-1,-1)
+    </p>
+
+    <p>
+      Op ieder punt staat dus een andere pijl.
+      De verzameling van al die pijlen vormt samen het vectorveld.
+    </p>
+
+    <p>
+      Dit veld wijst overal van de oorsprong weg.
+      De richting en grootte veranderen met de positie.
+    </p>
+
+    <h3>Vectorvelden beschrijven beweging</h3>
+
+    <p>
+      Een vectorveld hoeft geen abstract wiskundig object te zijn.
+      Het kan rechtstreeks een fysisch verschijnsel beschrijven.
+    </p>
+
+    <p>
+      Stel dat:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{v}(x,y)
+    </p>
+
+    <p>
+      de snelheid van een vloeistof op ieder punt van een oppervlak beschrijft.
+    </p>
+
+    <p>
+      Dan vertelt de vector op een bepaald punt:
+    </p>
+
+    <ul>
+      <li>in welke richting de vloeistof beweegt;</li>
+      <li>hoe groot de lokale snelheid is.</li>
+    </ul>
+
+    <p>
+      Een deeltje dat door het veld beweegt, volgt dus een baan die voortdurend
+      wordt beïnvloed door de lokale vector.
+    </p>
+
+    <div class="callout">
+      <p>
+        Een vectorveld kun je zien als een <strong>kaart van lokale beweging</strong>.
+      </p>
+      <p>
+        Op ieder punt vertelt een pijl wat daar gebeurt.
+      </p>
+    </div>
+
+    <h3>Een krachtveld</h3>
+
+    <p>
+      Hetzelfde idee geldt voor krachten.
+      De zwaartekracht rond een hemellichaam kan bijvoorbeeld op ieder punt
+      een andere richting en grootte hebben.
+    </p>
+
+    <p>
+      We kunnen zo'n situatie conceptueel voorstellen als:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{F}(x,y,z)
+    </p>
+
+    <p>
+      De vector op een punt vertelt dan welke kracht een object daar zou
+      ondervinden.
+    </p>
+
+    <p>
+      Dit is een belangrijke stap richting de natuurkunde:
+      een fysisch veld koppelt een toestand of kracht aan iedere positie
+      in de ruimte.
+    </p>
+
+    <h3>Van een vectorveld naar een bewegingsbaan</h3>
+
+    <p>
+      Stel dat een object door een vectorveld beweegt.
+      Zijn positie hangt dan af van de tijd:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{r}(t)
+    </p>
+
+    <p>
+      De snelheid is de verandering van die positie:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{v}(t)=\\\\frac{d\\\\mathbf{r}}{dt}
+    </p>
+
+    <p>
+      Als de snelheid zelf afhangt van de positie, krijgen we bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \\\\frac{d\\\\mathbf{r}}{dt}=\\\\mathbf{F}(\\\\mathbf{r})
+    </p>
+
+    <p>
+      Dit is een eerste kennismaking met een
+      <strong>differentiële vergelijking</strong>:
+      een vergelijking waarin een afgeleide voorkomt.
+    </p>
+
+    <p>
+      We lossen zulke vergelijkingen hier nog niet systematisch op.
+      Het belangrijke inzicht is dat een vectorveld kan bepalen
+      <strong>hoe een systeem door de ruimte evolueert</strong>.
+    </p>
+
+    <h3>Een veld kan uitzetten, samendrukken of draaien</h3>
+
+    <p>
+      Een vectorveld bevat nog meer informatie dan alleen lokale richting
+      en grootte.
+    </p>
+
+    <p>
+      We kunnen bijvoorbeeld vragen:
+    </p>
+
+    <ul>
+      <li>Stromen de pijlen lokaal uit elkaar of naar elkaar toe?</li>
+      <li>Verandert de lokale rotatie van het veld?</li>
+      <li>Hoe verandert het veld wanneer we van punt naar punt bewegen?</li>
+    </ul>
+
+    <p>
+      Hiervoor gebruiken we in de multivariabele calculus onder andere
+      <strong>divergentie</strong> en <strong>curl</strong>.
+      In deze milestone bekijken we vooral hun betekenis.
+      De volledige vectoranalyse bewaren we voor een later stadium.
+    </p>
+
+    <h3>Divergentie: stroomt het veld lokaal uiteen?</h3>
+
+    <p>
+      Voor een tweedimensionaal vectorveld
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{F}(x,y)=(P(x,y),Q(x,y))
+    </p>
+
+    <p>
+      is de divergentie:
+    </p>
+
+    <p class="formula">
+      \\\\operatorname{div}\\\\mathbf{F}
+      =
+      \\\\frac{\\\\partial P}{\\\\partial x}
+      +
+      \\\\frac{\\\\partial Q}{\\\\partial y}
+    </p>
+
+    <p>
+      Intuïtief meet dit of het veld zich lokaal gedraagt alsof er
+      <strong>meer uit een klein gebied wegstroomt dan erin stroomt</strong>,
+      of omgekeerd.
+    </p>
+
+    <p>
+      Positieve divergentie wijst op lokale uitstroming;
+      negatieve divergentie op lokale instroming.
+    </p>
+
+    <div class="callout">
+      <p><strong>Divergentie vraagt:</strong></p>
+      <p>
+        Gedraagt dit kleine gebied zich lokaal als een bron of als een put?
+      </p>
+    </div>
+
+    <h3>Curl: heeft het veld lokale rotatie?</h3>
+
+    <p>
+      Een tweede vraag is of een klein object dat in het veld wordt geplaatst
+      de neiging heeft om lokaal te draaien.
+    </p>
+
+    <p>
+      Voor een tweedimensionaal veld kunnen we de relevante component
+      schrijven als:
+    </p>
+
+    <p class="formula">
+      \\\\operatorname{curl}\\\\mathbf{F}
+      =
+      \\\\frac{\\\\partial Q}{\\\\partial x}
+      -
+      \\\\frac{\\\\partial P}{\\\\partial y}
+    </p>
+
+    <p>
+      Deze grootheid beschrijft de lokale neiging tot rotatie.
+      Je kunt je bijvoorbeeld een heel klein radertje voorstellen dat
+      met het stromingsveld meebeweegt.
+    </p>
+
+    <p>
+      Als de lokale beweging het radertje systematisch laat ronddraaien,
+      is er sprake van lokale rotatie.
+    </p>
+
+    <div class="callout">
+      <p><strong>Divergentie:</strong> lokaal uit elkaar of naar elkaar toe.</p>
+      <p><strong>Curl:</strong> lokale neiging tot ronddraaien.</p>
+    </div>
+
+    <h3>Een belangrijk onderscheid: gradiënt versus vectorveld</h3>
+
+    <p>
+      De gradiënt van een scalaire functie levert zelf een vectorveld:
+    </p>
+
+    <p class="formula">
+      \\\\mathbf{F}=\\\\nabla f
+    </p>
+
+    <p>
+      Dat betekent dat ieder punt een gradiëntvector krijgt.
+    </p>
+
+    <p>
+      Er is dus een natuurlijke overgang:
+    </p>
+
+    <p class="formula">
+      \\\\text{scalaire functie}
+      \\\\rightarrow
+      \\\\text{gradiënt}
+      \\\\rightarrow
+      \\\\text{vectorveld}
+    </p>
+
+    <p>
+      Maar niet elk vectorveld hoeft afkomstig te zijn van een gradiënt.
+      Een vectorveld kan rechtstreeks een snelheid, kracht of andere
+      lokale vectoriële grootheid voorstellen.
+    </p>
+
+    <div class="callout">
+      <p>
+        Een gradiëntveld vertelt hoe een scalaire grootheid lokaal verandert.
+      </p>
+      <p>
+        Een algemeen vectorveld geeft op ieder punt een vector,
+        ongeacht of die vector uit een gradiënt ontstaat.
+      </p>
+    </div>
+
+    <h3>Van lokale verandering naar een pad</h3>
+
+    <p>
+      We kunnen nu twee soorten informatie combineren.
+    </p>
+
+    <p>
+      Een functie kan ons vertellen hoe een grootheid lokaal verandert,
+      terwijl een vectorveld ons vertelt welke richting en grootte
+      op ieder punt aanwezig zijn.
+    </p>
+
+    <p>
+      Als we vervolgens een specifiek pad door de ruimte volgen,
+      kunnen we de verandering langs dat pad onderzoeken.
+    </p>
+
+    <p>
+      Dat leidt uiteindelijk naar het idee van een
+      <strong>lijnintegraal</strong>:
+      een integraal waarbij we niet over een interval op een getallenlijn
+      optellen, maar langs een kromme in de ruimte.
+    </p>
+
+    <p>
+      Conceptueel blijft het basisidee hetzelfde als in 3.9:
+      we delen een grootheid op in kleine bijdragen en tellen die op.
+    </p>
+
+    <div class="callout">
+      <p><strong>De integraal verandert niet van idee.</strong></p>
+      <p>
+        Alleen het object waarover we optellen wordt rijker:
+        van een interval naar een pad door de ruimte.
+      </p>
+    </div>
+
+    <h3>Waarom dit belangrijk is voor de natuurkunde</h3>
+
+    <p>
+      Veel fysische grootheden zijn geen eenvoudige getallen die overal
+      dezelfde betekenis hebben.
+    </p>
+
+    <p>
+      Een temperatuur kan per positie verschillen.
+      Een windsnelheid heeft richting én grootte.
+      Een elektrisch veld geeft op ieder punt een kracht per lading.
+      Een magnetisch veld heeft eveneens een richting en grootte.
+    </p>
+
+    <p>
+      Daardoor is de taal van multivariabele calculus en vectorvelden
+      essentieel voor de klassieke en moderne natuurkunde.
+    </p>
+
+    <p>
+      We hebben in Fase 3 dus een belangrijke uitbreiding gemaakt:
+    </p>
+
+    <p class="formula">
+      \\\\text{één variabele}
+      \\\\rightarrow
+      \\\\text{meerdere variabelen}
+      \\\\rightarrow
+      \\\\text{richtingsverandering}
+      \\\\rightarrow
+      \\\\text{vectorvelden}
+    </p>
+
+    <h3>Wat we bewust nog niet doen</h3>
+
+    <p>
+      Deze milestone is het einde van Fase 3. We hebben nu de conceptuele
+      taal opgebouwd, maar nog niet alle onderliggende vectorrekening
+      systematisch behandeld.
+    </p>
+
+    <p>
+      We gaan hier daarom nog niet uitgebreid in op:
+    </p>
+
+    <ul>
+      <li>volledige vectoralgebra;</li>
+      <li>vectorruimten en basisvectoren;</li>
+      <li>matrices en matrixbewerkingen;</li>
+      <li>eigenwaarden en eigenvectoren;</li>
+      <li>algemene lijn-, oppervlakte- en volume-integralen;</li>
+      <li>de volledige stelling van Green, Gauss en Stokes.</li>
+    </ul>
+
+    <p>
+      Die onderwerpen vragen extra structuur. Vooral vectoren en matrices
+      vormen daarom een natuurlijke ingang naar <strong>Fase 4: lineaire algebra</strong>.
+    </p>
+
+    <div class="callout">
+      <p><strong>Belangrijk:</strong></p>
+      <p>
+        Je hoeft de volledige vectorrekening nog niet te beheersen om te
+        begrijpen waarom vectoren nodig zijn. Je moet nu vooral zien
+        <em>welk probleem</em> ze oplossen: verandering en richting
+        beschrijven in een ruimte met meerdere dimensies.
+      </p>
+    </div>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        Denken dat de afgeleide bij meerdere variabelen nog steeds één
+        universeel getal is. De lokale verandering hangt af van de richting.
+      </li>
+      <li>
+        Een partiële afgeleide verwarren met de totale verandering wanneer
+        meerdere variabelen tegelijk veranderen.
+      </li>
+      <li>
+        Denken dat de gradiënt zelf een gewone scalaire functiewaarde is.
+        De gradiënt is vectorieel.
+      </li>
+      <li>
+        Vergeten dat de formule voor een richtingsafgeleide
+        <span class="formula-inline">D_{\\\\mathbf{u}}f=\\\\nabla f\\\\cdot\\\\mathbf{u}</span>
+        een eenheidsrichting veronderstelt.
+      </li>
+      <li>
+        Een vectorveld verwarren met één vector. Een vectorveld kent aan
+        ieder punt een vector toe.
+      </li>
+      <li>
+        Divergentie en curl zien als alleen maar nieuwe formules.
+        Hun betekenis is belangrijker: bron/putgedrag en lokale rotatie.
+      </li>
+      <li>
+        Denken dat ieder vectorveld automatisch een gradiëntveld is.
+      </li>
+    </ul>
+
+    <h3>Een vaste werkwijze</h3>
+
+    <ol>
+      <li>Bepaal welke grootheid als functie of veld wordt beschreven.</li>
+      <li>Bepaal hoeveel onafhankelijke variabelen de invoer heeft.</li>
+      <li>Gebruik partiële afgeleiden om verandering per coördinaatrichting te vinden.</li>
+      <li>Bundel die informatie in de gradiënt wanneer het om een scalaire functie gaat.</li>
+      <li>Geef een gekozen bewegingsrichting weer met een vector.</li>
+      <li>Gebruik de richtingsafgeleide om lokale verandering in die richting te bepalen.</li>
+      <li>Herken een vectorveld wanneer ieder punt een vector krijgt.</li>
+      <li>Interpreteer divergentie als lokaal bron/putgedrag en curl als lokale rotatie.</li>
+      <li>Houd de volledige vectoralgebra en lineaire algebra voor de volgende fase.</li>
+    </ol>
+
+    <h3>De volledige rode draad van Fase 3</h3>
+
+    <p>
+      We begonnen met een eenvoudige vraag:
+      hoeveel verandert iets tussen twee punten?
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\Delta y}{\\\\Delta x}
+    </p>
+
+    <p>
+      Door het interval kleiner te maken kwamen we bij de limiet en de
+      ogenblikkelijke verandering:
+    </p>
+
+    <p class="formula">
+      f'(x)
+    </p>
+
+    <p>
+      Daarna leerden we dat een integraal kleine bijdragen optelt:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      De fundamentele stelling van de calculus verbond beide ideeën.
+      Vervolgens gebruikten we integralen om oppervlakte, verplaatsing,
+      afstand, volume en andere totale hoeveelheden te bepalen.
+    </p>
+
+    <p>
+      In 3.13 maakten we de stap naar meerdere onafhankelijke variabelen:
+    </p>
+
+    <p class="formula">
+      f(x,y)
+    </p>
+
+    <p>
+      met partiële afgeleiden en de gradiënt:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f
+      =
+      \\\\left(
+      \\\\frac{\\\\partial f}{\\\\partial x},
+      \\\\frac{\\\\partial f}{\\\\partial y}
+      \\\\right)
+    </p>
+
+    <p>
+      In 3.14 gingen we nog een stap verder:
+      we beschreven verandering in een <strong>gekozen richting</strong>
+      en leerden we dat een vectorveld op ieder punt een lokale vector
+      kan bevatten.
+    </p>
+
+    <p class="formula">
+      \\\\text{functie}
+      \\\\rightarrow
+      \\\\text{afgeleide}
+      \\\\rightarrow
+      \\\\text{integraal}
+      \\\\rightarrow
+      \\\\text{meerdere variabelen}
+      \\\\rightarrow
+      \\\\text{richtingsverandering}
+      \\\\rightarrow
+      \\\\text{vectorveld}
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee van 3.14:</strong></p>
+      <p>
+        In één dimensie beschrijven we verandering langs één richting.
+        In meerdere dimensies kunnen we in verschillende richtingen bewegen.
+        De gradiënt beschrijft de lokale richting van sterkste stijging,
+        de richtingsafgeleide meet de verandering langs een gekozen richting
+        en een vectorveld kent aan ieder punt een vector toe.
+      </p>
+      <p>
+        Daarmee hebben we de conceptuele overgang gemaakt van gewone calculus
+        naar vectorcalculus en de taal die nodig is om veel fysische velden
+        te beschrijven.
+      </p>
+    </div>
+
+    <h3>Brug naar Fase 4</h3>
+
+    <p>
+      In 3.14 gebruikten we vectoren vooral als taal voor richting en lokale
+      verandering. We hebben nog niet systematisch onderzocht hoe vectoren
+      worden opgeteld, vermenigvuldigd of gecombineerd met matrices.
+    </p>
+
+    <p>
+      Dat is precies wat in Fase 4 centraal komt te staan.
+    </p>
+
+    <div class="callout">
+      <p><strong>De volgende vraag is:</strong></p>
+      <p>
+        Hoe bouwen we met vectoren en matrices een volledig algebraïsch
+        systeem waarmee we ruimtelijke problemen systematisch kunnen oplossen?
+      </p>
+    </div>
+
+    <p>
+      Daarmee sluiten we Fase 3 af en maken we de overgang naar
+      <strong>lineaire algebra</strong>.
+    </p>
+`
   }
 ];
