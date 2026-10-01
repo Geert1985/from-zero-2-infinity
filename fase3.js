@@ -4763,12 +4763,690 @@ const MILESTONES_3 = [
   `
 },
 
-  {
-    id: "3.8",
-    title: "Toepassingen van afgeleiden",
-    goal: "Wat kunnen we met veranderingssnelheden?",
-    theory: ``
-  },
+ {
+  id: "3.8",
+  title: "Toepassingen van afgeleiden",
+  goal: "Wat kunnen we met veranderingssnelheden?",
+  theory: /* html */`
+    <h2>Toepassingen van afgeleiden</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Hoe vertelt de afgeleide ons of een functie stijgt of daalt?</li>
+      <li>Hoe herkennen we een maximum of minimum?</li>
+      <li>Hoe vinden we zulke punten met de afgeleide?</li>
+      <li>Hoe gebruiken we de afgeleide om een optimaal resultaat te vinden?</li>
+      <li>Hoe beschrijft de afgeleide beweging en snelheid?</li>
+      <li>Hoe kunnen we veranderingssnelheden in echte situaties modelleren?</li>
+      <li>Hoe vertalen we een praktisch probleem naar een wiskundig probleem?</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De afgeleide vertelt niet alleen hoe snel een functie verandert.
+        Ze geeft ons ook informatie over het <strong>gedrag</strong> van de functie.
+      </p>
+      <p>
+        Met de afgeleide kunnen we bijvoorbeeld bepalen waar een functie
+        stijgt of daalt, waar maxima en minima liggen en welke waarde een
+        grootheid optimaal maakt.
+      </p>
+    </div>
+
+    <h3>Van veranderingssnelheid naar gedrag</h3>
+
+    <p>
+      In les 3.4 zagen we dat de afgeleide de momentane veranderingssnelheid
+      van een functie beschrijft.
+    </p>
+
+    <p class="formula">
+      f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Geometrisch is de afgeleide de helling van de raaklijn aan de grafiek.
+    </p>
+
+    <p>
+      Daardoor kunnen we aan het teken van de afgeleide zien wat de grafiek
+      doet.
+    </p>
+
+    <h3>Een positieve afgeleide</h3>
+
+    <p>
+      Als:
+    </p>
+
+    <p class="formula">f'(x)\\gt0</p>
+
+    <p>
+      dan heeft de grafiek op dat punt een positieve helling.
+      De functie is daar aan het stijgen.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">f(x)=x^2</p>
+
+    <p>
+      heeft als afgeleide:
+    </p>
+
+    <p class="formula">f'(x)=2x</p>
+
+    <p>
+      Voor positieve waarden van <span class="formula-inline">x</span> geldt:
+    </p>
+
+    <p class="formula">2x\\gt0</p>
+
+    <p>
+      Dus is de functie daar stijgend.
+    </p>
+
+    <h3>Een negatieve afgeleide</h3>
+
+    <p>
+      Als:
+    </p>
+
+    <p class="formula">f'(x)\\lt0</p>
+
+    <p>
+      dan heeft de grafiek een negatieve helling.
+      De functie is daar aan het dalen.
+    </p>
+
+    <p>
+      Voor <span class="formula-inline">f(x)=x^2</span> geldt bijvoorbeeld:
+    </p>
+
+    <p class="formula">2x\\lt0</p>
+
+    <p>
+      wanneer <span class="formula-inline">x\\lt0</span>.
+    </p>
+
+    <p>
+      De parabool daalt dus links van de oorsprong en stijgt rechts van
+      de oorsprong.
+    </p>
+
+    <h3>Waar verandert stijgen in dalen?</h3>
+
+    <p>
+      Als een functie eerst daalt en daarna stijgt, moet er ergens een
+      overgang zijn.
+    </p>
+
+    <p>
+      Bij een gladde grafiek heeft de raaklijn daar vaak een horizontale
+      helling:
+    </p>
+
+    <p class="formula">f'(x)=0</p>
+
+    <p>
+      Zo'n punt noemen we een <strong>stationair punt</strong>.
+    </p>
+
+    <p>
+      Het is belangrijk om te onthouden dat een punt met
+      <span class="formula-inline">f'(x)=0</span> niet automatisch een
+      maximum of minimum is. We moeten ook kijken wat er rond het punt
+      gebeurt.
+    </p>
+
+    <h3>Een minimum vinden</h3>
+
+    <p>
+      Neem opnieuw:
+    </p>
+
+    <p class="formula">f(x)=x^2</p>
+
+    <p>
+      De afgeleide is:
+    </p>
+
+    <p class="formula">f'(x)=2x</p>
+
+    <p>
+      Zoek eerst waar de afgeleide nul is:
+    </p>
+
+    <p class="formula">2x=0</p>
+
+    <p class="formula">x=0</p>
+
+    <p>
+      Links van <span class="formula-inline">0</span> is de afgeleide negatief
+      en rechts van <span class="formula-inline">0</span> positief.
+    </p>
+
+    <p>
+      De functie gaat dus van dalen naar stijgen.
+      Daarom heeft <span class="formula-inline">x=0</span> een minimum.
+    </p>
+
+    <p>
+      De bijbehorende functiewaarde is:
+    </p>
+
+    <p class="formula">f(0)=0</p>
+
+    <p>
+      Het minimum ligt dus in het punt:
+    </p>
+
+    <p class="formula">(0,0)</p>
+
+    <h3>Een maximum vinden</h3>
+
+    <p>
+      Het omgekeerde kan ook gebeuren.
+      Als een functie eerst stijgt en daarna daalt, ontstaat een maximum.
+    </p>
+
+    <p>
+      Een eenvoudig voorbeeld is:
+    </p>
+
+    <p class="formula">f(x)=-x^2</p>
+
+    <p>
+      De afgeleide is:
+    </p>
+
+    <p class="formula">f'(x)=-2x</p>
+
+    <p>
+      De afgeleide is nul voor:
+    </p>
+
+    <p class="formula">x=0</p>
+
+    <p>
+      Links van nul is de afgeleide positief en rechts van nul negatief.
+      De functie gaat dus van stijgen naar dalen.
+    </p>
+
+    <p>
+      Daarom heeft de functie een maximum bij:
+    </p>
+
+    <p class="formula">x=0</p>
+
+    <p class="formula">f(0)=0</p>
+
+    <h3>Kritieke punten</h3>
+
+    <p>
+      Punten waar:
+    </p>
+
+    <p class="formula">f'(x)=0</p>
+
+    <p>
+      zijn belangrijke kandidaten voor maxima en minima.
+      Zulke punten noemen we <strong>kritieke punten</strong>.
+    </p>
+
+    <p>
+      Ook punten waar de afgeleide niet bestaat kunnen belangrijk zijn.
+      Daarom zoeken we bij een optimalisatieprobleem niet alleen naar
+      oplossingen van <span class="formula-inline">f'(x)=0</span>, maar
+      bekijken we ook het domein en eventuele punten waar de afgeleide
+      niet bestaat.
+    </p>
+
+    <h3>Een maximum of minimum herkennen</h3>
+
+    <p>
+      Een handige manier is kijken naar het teken van de afgeleide.
+    </p>
+
+    <ul>
+      <li>
+        <strong>positief → negatief:</strong> lokaal maximum
+      </li>
+      <li>
+        <strong>negatief → positief:</strong> lokaal minimum
+      </li>
+      <li>
+        <strong>zelfde teken aan beide kanten:</strong> geen lokale
+        extremumwisseling door het teken van de afgeleide
+      </li>
+    </ul>
+
+    <p>
+      De afgeleide geeft ons dus een soort routekaart van het gedrag van
+      de functie.
+    </p>
+
+    <h3>Optimalisatie</h3>
+
+    <p>
+      Veel praktische problemen vragen niet om zomaar een functiewaarde,
+      maar om de <strong>grootst mogelijke</strong> of
+      <strong>kleinst mogelijke</strong> waarde.
+    </p>
+
+    <p>
+      Dat noemen we een optimalisatieprobleem.
+    </p>
+
+    <p>
+      Denk bijvoorbeeld aan:
+    </p>
+
+    <ul>
+      <li>de grootste oppervlakte met een vaste hoeveelheid materiaal;</li>
+      <li>de kleinste hoeveelheid materiaal voor een bepaalde inhoud;</li>
+      <li>de maximale opbrengst;</li>
+      <li>de minimale kosten;</li>
+      <li>de optimale snelheid of afstelling.</li>
+    </ul>
+
+    <p>
+      De wiskundige strategie is steeds vergelijkbaar:
+      maak eerst een functie die het te optimaliseren resultaat beschrijft
+      en zoek daarna naar de relevante kritieke punten.
+    </p>
+
+    <h3>Voorbeeld: maximale oppervlakte</h3>
+
+    <p>
+      Stel dat we met 20 meter hekwerk een rechthoek willen maken.
+      Noem één zijde <span class="formula-inline">x</span>.
+    </p>
+
+    <p>
+      Omdat de omtrek 20 meter is:
+    </p>
+
+    <p class="formula">2x+2y=20</p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">y=10-x</p>
+
+    <p>
+      De oppervlakte is:
+    </p>
+
+    <p class="formula">A=xy</p>
+
+    <p>
+      Invullen geeft één functie:
+    </p>
+
+    <p class="formula">A(x)=x(10-x)</p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">A(x)=10x-x^2</p>
+
+    <h3>De oppervlakte optimaliseren</h3>
+
+    <p>
+      Differentieer de oppervlaktefunctie:
+    </p>
+
+    <p class="formula">A'(x)=10-2x</p>
+
+    <p>
+      Voor een kandidaat voor het maximum geldt:
+    </p>
+
+    <p class="formula">A'(x)=0</p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">10-2x=0</p>
+
+    <p class="formula">x=5</p>
+
+    <p>
+      Omdat:
+    </p>
+
+    <p class="formula">y=10-x</p>
+
+    <p>
+      volgt:
+    </p>
+
+    <p class="formula">y=5</p>
+
+    <p>
+      De rechthoek met maximale oppervlakte is dus een vierkant.
+      De maximale oppervlakte is:
+    </p>
+
+    <p class="formula">A=5\\cdot5=25\\text{ m}^2</p>
+
+    <p>
+      Dit voorbeeld laat een belangrijk patroon zien:
+      een praktisch optimalisatieprobleem wordt eerst vertaald naar een
+      functie en daarna opgelost met de afgeleide.
+    </p>
+
+    <h3>Waarom controleren we het antwoord?</h3>
+
+    <p>
+      Het oplossen van:
+    </p>
+
+    <p class="formula">f'(x)=0</p>
+
+    <p>
+      levert alleen kandidaten op.
+      We moeten nog controleren of het gevonden punt werkelijk het gewenste
+      maximum of minimum geeft.
+    </p>
+
+    <p>
+      Bij een probleem uit de werkelijkheid moeten we bovendien controleren
+      of de oplossing binnen het toegestane domein ligt.
+    </p>
+
+    <p>
+      In het hekwerkvoorbeeld moet bijvoorbeeld gelden:
+    </p>
+
+    <p class="formula">0\\lt x\\lt10</p>
+
+    <p>
+      Een negatieve zijde of een zijde langer dan de volledige halve omtrek
+      heeft geen betekenis.
+    </p>
+
+    <h3>De afgeleide in de bewegingsleer</h3>
+
+    <p>
+      De afgeleide heeft een directe betekenis in de fysica.
+    </p>
+
+    <p>
+      Stel dat de positie van een voorwerp wordt beschreven door:
+    </p>
+
+    <p class="formula">s(t)</p>
+
+    <p>
+      Dan is de snelheid de verandering van de positie per tijdseenheid:
+    </p>
+
+    <p class="formula">v(t)=s'(t)</p>
+
+    <p>
+      En de versnelling is de verandering van de snelheid:
+    </p>
+
+    <p class="formula">a(t)=v'(t)=s''(t)</p>
+
+    <p>
+      De afgeleide vormt zo een keten:
+    </p>
+
+    <p class="formula">
+      positie \\rightarrow snelheid \\rightarrow versnelling
+    </p>
+
+    <h3>Een bewegingsvoorbeeld</h3>
+
+    <p>
+      Stel dat de positie van een voorwerp wordt gegeven door:
+    </p>
+
+    <p class="formula">s(t)=t^2+2t</p>
+
+    <p>
+      De snelheid is:
+    </p>
+
+    <p class="formula">v(t)=s'(t)=2t+2</p>
+
+    <p>
+      De versnelling is:
+    </p>
+
+    <p class="formula">a(t)=v'(t)=2</p>
+
+    <p>
+      De snelheid neemt dus constant toe.
+      De versnelling blijft gelijk aan 2.
+    </p>
+
+    <h3>Wanneer staat een voorwerp stil?</h3>
+
+    <p>
+      Een voorwerp staat op een bepaald moment stil wanneer zijn snelheid
+      nul is:
+    </p>
+
+    <p class="formula">v(t)=0</p>
+
+    <p>
+      Omdat:
+    </p>
+
+    <p class="formula">v(t)=s'(t)</p>
+
+    <p>
+      zoeken we dus naar:
+    </p>
+
+    <p class="formula">s'(t)=0</p>
+
+    <p>
+      Dezelfde wiskundige voorwaarde die we bij extrema tegenkwamen, krijgt
+      in de bewegingsleer dus een andere betekenis.
+    </p>
+
+    <h3>Veranderingssnelheden koppelen</h3>
+
+    <p>
+      Soms veranderen meerdere grootheden tegelijk.
+      De afgeleide helpt dan om hun veranderingssnelheden met elkaar
+      te verbinden.
+    </p>
+
+    <p>
+      Stel bijvoorbeeld dat de oppervlakte van een cirkel verandert omdat
+      de straal verandert.
+    </p>
+
+    <p class="formula">A=\\pi r^2</p>
+
+    <p>
+      Differentieer naar de straal:
+    </p>
+
+    <p class="formula">\\frac{dA}{dr}=2\\pi r</p>
+
+    <p>
+      Dit vertelt hoe gevoelig de oppervlakte is voor een kleine verandering
+      van de straal.
+    </p>
+
+    <p>
+      Later kunnen we zulke veranderingssnelheden verder combineren.
+      Dit vormt een brug naar meer geavanceerde toepassingen van calculus.
+    </p>
+
+    <h3>Lokale informatie uit de afgeleide</h3>
+
+    <p>
+      De afgeleide vertelt ons wat er <strong>op een bepaald punt</strong>
+      gebeurt.
+    </p>
+
+    <p>
+      Bij:
+    </p>
+
+    <p class="formula">f'(a)\\gt0</p>
+
+    <p>
+      stijgt de functie lokaal rond <span class="formula-inline">a</span>.
+    </p>
+
+    <p class="formula">f'(a)\\lt0</p>
+
+    <p>
+      daalt de functie lokaal.
+    </p>
+
+    <p class="formula">f'(a)=0</p>
+
+    <p>
+      heeft de grafiek daar een horizontale raaklijn, tenzij de afgeleide
+      niet voldoende informatie geeft over het lokale gedrag.
+    </p>
+
+    <p>
+      Dit lokale perspectief is één van de belangrijkste ideeën van de
+      differentiaalrekening.
+    </p>
+
+    <h3>Van formule naar besluit</h3>
+
+    <p>
+      Bij toepassingen is het niet voldoende om alleen een afgeleide te
+      berekenen. We moeten de uitkomst interpreteren.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">f'(3)=5</p>
+
+    <p>
+      betekent dat de functie bij <span class="formula-inline">x=3</span>
+      op dat moment stijgt met een snelheid van 5 eenheden van
+      <span class="formula-inline">f</span> per eenheid van
+      <span class="formula-inline">x</span>.
+    </p>
+
+    <p>
+      De betekenis van de eenheden hoort dus bij het antwoord.
+    </p>
+
+    <h3>Een vaste werkwijze voor toepassingen</h3>
+
+    <p>
+      Bij een toepassingsprobleem kun je deze volgorde gebruiken:
+    </p>
+
+    <ol>
+      <li>Lees wat er gevraagd wordt.</li>
+      <li>Bepaal welke grootheid verandert.</li>
+      <li>Maak een wiskundig model.</li>
+      <li>Schrijf de relevante functie.</li>
+      <li>Differentieer de functie.</li>
+      <li>Los de vergelijking voor een kritieke waarde op wanneer dat nodig is.</li>
+      <li>Controleer het domein en de randvoorwaarden.</li>
+      <li>Interpreteer het antwoord in de oorspronkelijke context.</li>
+    </ol>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        Denken dat <span class="formula-inline">f'(x)=0</span> automatisch
+        een maximum of minimum betekent.
+      </li>
+      <li>
+        Alleen een kritieke waarde berekenen en vergeten de functiewaarde
+        te bepalen.
+      </li>
+      <li>
+        Geen rekening houden met het domein van het probleem.
+      </li>
+      <li>
+        Een wiskundig resultaat geven zonder het in de oorspronkelijke
+        context te interpreteren.
+      </li>
+      <li>
+        Eenheden vergeten bij een veranderingssnelheid.
+      </li>
+      <li>
+        De afgeleide berekenen zonder eerst te bepalen welke grootheid
+        geoptimaliseerd of onderzocht moet worden.
+      </li>
+    </ul>
+
+    <h3>Van afgeleide naar integraal</h3>
+
+    <p>
+      Tot nu toe hebben we vooral gevraagd:
+      <strong>hoe snel verandert iets?</strong>
+    </p>
+
+    <p>
+      De afgeleide gaat van een grootheid naar haar veranderingssnelheid:
+    </p>
+
+    <p class="formula">
+      hoeveelheid \\rightarrow veranderingssnelheid
+    </p>
+
+    <p>
+      Maar we kunnen ook de omgekeerde vraag stellen:
+    </p>
+
+    <p>
+      Als we de veranderingssnelheid kennen, kunnen we dan de oorspronkelijke
+      hoeveelheid terugvinden?
+    </p>
+
+    <p>
+      Dat leidt naar het volgende grote idee van de calculus:
+      <strong>integreren</strong>.
+    </p>
+
+    <p class="formula">
+      veranderingssnelheid \\rightarrow hoeveelheid
+    </p>
+
+    <p>
+      In de volgende lessen onderzoeken we hoe de integraal die omgekeerde
+      richting mogelijk maakt.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De afgeleide is een instrument om verandering te onderzoeken.
+      </p>
+      <p>
+        Met het teken van de afgeleide kunnen we stijgen en dalen herkennen.
+        Met kritieke punten kunnen we kandidaten voor maxima en minima vinden.
+        Bij optimalisatie vertalen we een praktisch probleem naar een functie
+        en gebruiken we de afgeleide om het optimale punt te zoeken.
+      </p>
+      <p>
+        In de fysica verbindt de afgeleide positie, snelheid en versnelling.
+        Daarmee is de afgeleide niet alleen een rekenregel, maar een algemene
+        taal voor verandering.
+      </p>
+    </div>
+  `
+},
 
   {
     id: "3.9",
