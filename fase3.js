@@ -51,7 +51,7 @@ const MILESTONES_3 = [
     <p>De verandering in positie is:</p>
 
     <p class="formula">
-      \Delta s = 160 - 0 = 160\text{ km}
+      \\Delta s = 160 - 0 = 160\\text{ km}
     </p>
 
     <p>
@@ -62,7 +62,7 @@ const MILESTONES_3 = [
     <p>Algemeen schrijven we:</p>
 
     <p class="formula">
-      \Delta s = s_2 - s_1
+      \\Delta s = s_2 - s_1
     </p>
 
     <p>waarbij:</p>
@@ -93,19 +93,19 @@ const MILESTONES_3 = [
     <p>De tijdsverandering is:</p>
 
     <p class="formula">
-      \Delta t = 2 - 0 = 2\text{ uur}
+      \\Delta t = 2 - 0 = 2\\text{ uur}
     </p>
 
     <p>De gemiddelde snelheid is dan:</p>
 
     <p class="formula">
-      v_{\text{gem}}
+      v_{\\text{gem}}
       =
-      \frac{\Delta s}{\Delta t}
+      \\frac{\\Delta s}{\\Delta t}
       =
-      \frac{160\text{ km}}{2\text{ uur}}
+      \\frac{160\\text{ km}}{2\\text{ uur}}
       =
-      80\text{ km/u}
+      80\\text{ km/u}
     </p>
 
     <p>
@@ -161,23 +161,23 @@ const MILESTONES_3 = [
     <p>De temperatuurverandering is:</p>
 
     <p class="formula">
-      \Delta T = 25 - 10 = 15^\circ\text{C}
+      \\Delta T = 25 - 10 = 15^\\circ\\text{C}
     </p>
 
     <p>De tijdsverandering is:</p>
 
     <p class="formula">
-      \Delta t = 3\text{ uur}
+      \\Delta t = 3\\text{ uur}
     </p>
 
     <p>De gemiddelde verandering per uur is:</p>
 
     <p class="formula">
-      \frac{\Delta T}{\Delta t}
+      \\frac{\\Delta T}{\\Delta t}
       =
-      \frac{15}{3}
+      \\frac{15}{3}
       =
-      5^\circ\text{C/u}
+      5^\\circ\\text{C/u}
     </p>
 
     <p>
@@ -204,7 +204,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{\Delta y}{\Delta x}
+      \\frac{\\Delta y}{\\Delta x}
     </p>
 
     <p>
@@ -212,8 +212,8 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{\text{verandering in }y}
-      {\text{verandering in }x}
+      \\frac{\\text{verandering in }y}
+      {\\text{verandering in }x}
     </p>
 
     <p>
@@ -221,7 +221,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      v_{\text{gem}} = \frac{\Delta s}{\Delta t}
+      v_{\\text{gem}} = \\frac{\\Delta s}{\\Delta t}
     </p>
 
     <p>
@@ -247,7 +247,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f(x) = x^2
+      f(x)=x^2
     </p>
 
     <p>
@@ -259,31 +259,31 @@ const MILESTONES_3 = [
     <p>Eerst berekenen we de functiewaarden:</p>
 
     <p class="formula">
-      f(1) = 1
+      f(1)=1
     </p>
 
     <p class="formula">
-      f(4) = 16
+      f(4)=16
     </p>
 
     <p>De verandering in de functiewaarde is:</p>
 
     <p class="formula">
-      \Delta f = 16 - 1 = 15
+      \\Delta f=16-1=15
     </p>
 
     <p>De verandering in x is:</p>
 
     <p class="formula">
-      \Delta x = 4 - 1 = 3
+      \\Delta x=4-1=3
     </p>
 
     <p>Dus:</p>
 
     <p class="formula">
-      \frac{\Delta f}{\Delta x}
+      \\frac{\\Delta f}{\\Delta x}
       =
-      \frac{15}{3}
+      \\frac{15}{3}
       =
       5
     </p>
@@ -306,7 +306,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{f(x_2)-f(x_1)}
+      \\frac{f(x_2)-f(x_1)}
       {x_2-x_1}
     </p>
 
@@ -315,7 +315,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{\Delta y}{\Delta x}
+      \\frac{\\Delta y}{\\Delta x}
     </p>
 
     <p>
@@ -343,11 +343,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      P = (x_1,f(x_1))
+      P=(x_1,f(x_1))
     </p>
 
     <p class="formula">
-      Q = (x_2,f(x_2))
+      Q=(x_2,f(x_2))
     </p>
 
     <p>
@@ -355,7 +355,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \Delta y = f(x_2)-f(x_1)
+      \\Delta y=f(x_2)-f(x_1)
     </p>
 
     <p>
@@ -363,7 +363,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \Delta x = x_2-x_1
+      \\Delta x=x_2-x_1
     </p>
 
     <p>
@@ -371,7 +371,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{\Delta y}{\Delta x}
+      \\frac{\\Delta y}{\\Delta x}
     </p>
 
     <p>
@@ -402,7 +402,7 @@ const MILESTONES_3 = [
     <p>Als de functiewaarde toeneemt:</p>
 
     <p class="formula">
-      \Delta y > 0
+      \\Delta y>0
     </p>
 
     <p>
@@ -412,7 +412,7 @@ const MILESTONES_3 = [
     <p>Als de functiewaarde afneemt:</p>
 
     <p class="formula">
-      \Delta y < 0
+      \\Delta y<0
     </p>
 
     <p>
@@ -422,12 +422,12 @@ const MILESTONES_3 = [
     <p>Als de functiewaarde niet verandert:</p>
 
     <p class="formula">
-      \Delta y = 0
+      \\Delta y=0
     </p>
 
     <p>
       en is de gemiddelde veranderingssnelheid nul,
-      zolang <span class="formula-inline">\Delta x \neq 0</span>.
+      zolang <span class="formula-inline">\\Delta x\\neq0</span>.
     </p>
 
     <p>
@@ -448,7 +448,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{f(x_2)-f(x_1)}
+      \\frac{f(x_2)-f(x_1)}
       {x_2-x_1}
     </p>
 
@@ -476,7 +476,7 @@ const MILESTONES_3 = [
 
     <p>
       Stel dat we willen weten hoe snel een auto precies op tijdstip
-      <span class="formula-inline">t = 2</span> uur rijdt.
+      <span class="formula-inline">t=2</span> uur rijdt.
     </p>
 
     <p>
@@ -538,7 +538,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{f(x+h)-f(x)}{h}
+      \\frac{f(x+h)-f(x)}{h}
     </p>
 
     <p>
@@ -546,19 +546,19 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      h = 1
+      h=1
     </p>
 
     <p class="formula">
-      h = 0{,}1
+      h=0{,}1
     </p>
 
     <p class="formula">
-      h = 0{,}01
+      h=0{,}01
     </p>
 
     <p class="formula">
-      h = 0{,}001
+      h=0{,}001
     </p>
 
     <p>
@@ -583,11 +583,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \text{verandering}
-      \rightarrow
-      \frac{\text{verandering}}{\text{interval}}
-      \rightarrow
-      \text{gemiddelde veranderingssnelheid}
+      \\text{verandering}
+      \\rightarrow
+      \\frac{\\text{verandering}}{\\text{interval}}
+      \\rightarrow
+      \\text{gemiddelde veranderingssnelheid}
     </p>
 
     <p>
@@ -595,9 +595,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{\Delta y}{\Delta x}
+      \\frac{\\Delta y}{\\Delta x}
       =
-      \text{helling van een secant}
+      \\text{helling van een secant}
     </p>
 
     <p>
@@ -626,7 +626,7 @@ const MILESTONES_3 = [
       </p>
       <p>
         De gemiddelde veranderingssnelheid is
-        <span class="formula-inline">\Delta y / \Delta x</span>.
+        <span class="formula-inline">\\Delta y / \\Delta x</span>.
         Geometrisch is dat de helling van de secant door twee punten.
       </p>
       <p>
