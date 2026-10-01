@@ -7319,7 +7319,7 @@ const MILESTONES_3 = [
     id: "3.13",
     title: "Functies van meerdere variabelen",
     goal: "Wat verandert er als meerdere grootheden tegelijk veranderen?",
-    theory: \`
+    theory: `
     <h2>Functies van meerdere variabelen</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -7634,11 +7634,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial x}=2x
+      \\frac{\\partial f}{\\partial x}=2x
     </p>
 
     <p>
-      Het symbool <span class="formula-inline">\\\\partial</span>
+      Het symbool <span class="formula-inline">\\partial</span>
       geeft aan dat we slechts naar één variabele tegelijk kijken.
     </p>
 
@@ -7664,7 +7664,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial y}=2y
+      \\frac{\\partial f}{\\partial y}=2y
     </p>
 
     <p>
@@ -7672,11 +7672,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial x}=2x
+      \\frac{\\partial f}{\\partial x}=2x
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial y}=2y
+      \\frac{\\partial f}{\\partial y}=2y
     </p>
 
     <p>
@@ -7708,7 +7708,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial x}=6xy
+      \\frac{\\partial f}{\\partial x}=6xy
     </p>
 
     <p>
@@ -7717,7 +7717,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial y}=3x^2+5
+      \\frac{\\partial f}{\\partial y}=3x^2+5
     </p>
 
     <p>
@@ -7748,7 +7748,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial y}
+      \\frac{\\partial f}{\\partial y}
     </p>
 
     <p>
@@ -7768,12 +7768,12 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f
+      \\nabla f
       =
-      \\\\begin{pmatrix}
-      \\\\frac{\\\\partial f}{\\\\partial x} \\\\
-      \\\\frac{\\\\partial f}{\\\\partial y}
-      \\\\end{pmatrix}
+      \\begin{pmatrix}
+      \\frac{\\partial f}{\\partial x} \\
+      \\frac{\\partial f}{\\partial y}
+      \\end{pmatrix}
     </p>
 
     <p>
@@ -7794,7 +7794,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f=(2x,2y)
+      \\nabla f=(2x,2y)
     </p>
 
     <p>
@@ -7821,7 +7821,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f=(2x,2y)
+      \\nabla f=(2x,2y)
     </p>
 
     <p>
@@ -7829,7 +7829,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f(1,2)=(2,4)
+      \\nabla f(1,2)=(2,4)
     </p>
 
     <p>
@@ -7876,7 +7876,7 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      een cirkel met straal <span class="formula-inline">\\\\sqrt{c}</span>
+      een cirkel met straal <span class="formula-inline">\\sqrt{c}</span>
       wanneer <span class="formula-inline">c&gt;0</span>.
     </p>
 
@@ -7938,7 +7938,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      x=x(t),\\\\qquad y=y(t)
+      x=x(t),\\qquad y=y(t)
     </p>
 
     <p>
@@ -7952,11 +7952,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{df}{dt}
+      \\frac{df}{dt}
       =
-      \\\\frac{\\\\partial f}{\\\\partial x}\\\\frac{dx}{dt}
+      \\frac{\\partial f}{\\partial x}\\frac{dx}{dt}
       +
-      \\\\frac{\\\\partial f}{\\\\partial y}\\\\frac{dy}{dt}
+      \\frac{\\partial f}{\\partial y}\\frac{dy}{dt}
     </p>
 
     <p>
@@ -7987,11 +7987,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial T}{\\\\partial x}=2x
+      \\frac{\\partial T}{\\partial x}=2x
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial T}{\\\\partial y}=4y
+      \\frac{\\partial T}{\\partial y}=4y
     </p>
 
     <p>
@@ -7999,7 +7999,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla T(1,2)=(2,8)
+      \\nabla T(1,2)=(2,8)
     </p>
 
     <p>
@@ -8034,9 +8034,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\partial f}{\\\\partial x},
-      \\\\frac{\\\\partial f}{\\\\partial y},
-      \\\\frac{\\\\partial f}{\\\\partial z}
+      \\frac{\\partial f}{\\partial x},
+      \\frac{\\partial f}{\\partial y},
+      \\frac{\\partial f}{\\partial z}
     </p>
 
     <p>
@@ -8044,11 +8044,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\nabla f
+      \\nabla f
       =
-      (\\\\frac{\\\\partial f}{\\\\partial x},
-      \\\\frac{\\\\partial f}{\\\\partial y},
-      \\\\frac{\\\\partial f}{\\\\partial z})
+      (\\frac{\\partial f}{\\partial x},
+      \\frac{\\partial f}{\\partial y},
+      \\frac{\\partial f}{\\partial z})
     </p>
 
     <p>
@@ -8090,7 +8090,7 @@ const MILESTONES_3 = [
         Bij een partiële afgeleide vergeten welke variabelen constant blijven.
       </li>
       <li>
-        Denken dat <span class="formula-inline">\\\\partial f/\\\\partial x</span>
+        Denken dat <span class="formula-inline">\\partial f/\\partial x</span>
         hetzelfde is als de volledige verandering van <span class="formula-inline">f</span>
         wanneer ook andere variabelen veranderen.
       </li>
@@ -8128,7 +8128,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\Delta y}{\\\\Delta x}
+      \\frac{\\Delta y}{\\Delta x}
     </p>
 
     <p>
@@ -8145,7 +8145,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx
+      \\int_a^b f(x)\\,dx
     </p>
 
     <p>
@@ -8156,11 +8156,11 @@ const MILESTONES_3 = [
 
     <p class="formula">
       f(x,y)
-      \\\\rightarrow
-      \\\\frac{\\\\partial f}{\\\\partial x},
-      \\\\frac{\\\\partial f}{\\\\partial y}
-      \\\\rightarrow
-      \\\\nabla f
+      \\rightarrow
+      \\frac{\\partial f}{\\partial x},
+      \\frac{\\partial f}{\\partial y}
+      \\rightarrow
+      \\nabla f
     </p>
 
     <div class="callout">
@@ -8199,7 +8199,7 @@ const MILESTONES_3 = [
       In 3.14 bouwen we daarvoor verder met vectoren, vectorvelden en
       multivariabele calculus.
     </p>
-  \`
+  `
   },
 
   {
