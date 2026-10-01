@@ -5728,7 +5728,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{d}{dx}(x^2)=2x
+      \\frac{d}{dx}(x^2)=2x
     </p>
 
     <p>
@@ -5736,7 +5736,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int 2x\\\\,dx=x^2+C
+      \\int 2x\\,dx=x^2+C
     </p>
 
     <p>
@@ -5784,7 +5784,7 @@ const MILESTONES_3 = [
         Een onbepaalde integraal beschrijft de familie van alle primitieve functies.
       </p>
       <p class="formula">
-        \\\\int f(x)\\\\,dx=F(x)+C
+        \\int f(x)\\,dx=F(x)+C
       </p>
       <p>
         als <span class="formula-inline">F'(x)=f(x)</span>.
@@ -5798,16 +5798,16 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{d}{dx}(x^n)=nx^{n-1}
+      \\frac{d}{dx}(x^n)=nx^{n-1}
     </p>
 
     <p>
-      We kunnen deze regel omkeren. Als <span class="formula-inline">n\\\\neq-1</span>,
+      We kunnen deze regel omkeren. Als <span class="formula-inline">n\\neq-1</span>,
       dan:
     </p>
 
     <p class="formula">
-      \\\\int x^n\\\\,dx=\\\\frac{x^{n+1}}{n+1}+C
+      \\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C
     </p>
 
     <p>
@@ -5819,7 +5819,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int x^4\\\\,dx=\\\\frac{x^5}{5}+C
+      \\int x^4\\,dx=\\frac{x^5}{5}+C
     </p>
 
     <p>
@@ -5827,7 +5827,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{d}{dx}\\\\left(\\\\frac{x^5}{5}+C\\\\right)=x^4
+      \\frac{d}{dx}\\left(\\frac{x^5}{5}+C\\right)=x^4
     </p>
 
     <p>
@@ -5851,9 +5851,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{x^{(-1)+1}}{(-1)+1}
+      \\frac{x^{(-1)+1}}{(-1)+1}
       =
-      \\\\frac{x^0}{0}
+      \\frac{x^0}{0}
     </p>
 
     <p>
@@ -5862,14 +5862,14 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int \\\\frac{1}{x}\\\\,dx=\\\\ln|x|+C
+      \\int \\frac{1}{x}\\,dx=\\ln|x|+C
     </p>
 
     <p>
-      Hier is <span class="formula-inline">\\\\ln</span> de natuurlijke logaritme.
+      Hier is <span class="formula-inline">\\ln</span> de natuurlijke logaritme.
       De absolute waarde is nodig omdat de afgeleide van
-      <span class="formula-inline">\\\\ln|x|</span> gelijk is aan
-      <span class="formula-inline">1/x</span> voor <span class="formula-inline">x\\\\neq0</span>.
+      <span class="formula-inline">\\ln|x|</span> gelijk is aan
+      <span class="formula-inline">1/x</span> voor <span class="formula-inline">x\\neq0</span>.
     </p>
 
     <p>
@@ -5892,9 +5892,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int 5x^2\\\\,dx
+      \\int 5x^2\\,dx
       =
-      5\\\\int x^2\\\\,dx
+      5\\int x^2\\,dx
     </p>
 
     <p>
@@ -5902,9 +5902,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      5\\\\int x^2\\\\,dx
+      5\\int x^2\\,dx
       =
-      5\\\\frac{x^3}{3}+C
+      5\\frac{x^3}{3}+C
     </p>
 
     <p>
@@ -5912,13 +5912,13 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int 5x^2\\\\,dx=\\\\frac{5x^3}{3}+C
+      \\int 5x^2\\,dx=\\frac{5x^3}{3}+C
     </p>
 
     <div class="callout">
       <p><strong>Constante-factorregel:</strong></p>
       <p class="formula">
-        \\\\int cf(x)\\\\,dx=c\\\\int f(x)\\\\,dx
+        \\int cf(x)\\,dx=c\\int f(x)\\,dx
       </p>
     </div>
 
@@ -5929,11 +5929,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int [f(x)+g(x)]\\\\,dx
+      \\int [f(x)+g(x)]\\,dx
       =
-      \\\\int f(x)\\\\,dx
+      \\int f(x)\\,dx
       +
-      \\\\int g(x)\\\\,dx
+      \\int g(x)\\,dx
     </p>
 
     <p>
@@ -5941,7 +5941,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int (3x^2+4x-5)\\\\,dx
+      \\int (3x^2+4x-5)\\,dx
     </p>
 
     <p>
@@ -5949,11 +5949,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      3\\\\int x^2\\\\,dx
+      3\\int x^2\\,dx
       +
-      4\\\\int x\\\\,dx
+      4\\int x\\,dx
       -
-      5\\\\int 1\\\\,dx
+      5\\int 1\\,dx
     </p>
 
     <p>
@@ -5969,7 +5969,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{d}{dx}(x^3+2x^2-5x+C)
+      \\frac{d}{dx}(x^3+2x^2-5x+C)
       =
       3x^2+4x-5
     </p>
@@ -5989,7 +5989,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int c\\\\,dx=cx+C
+      \\int c\\,dx=cx+C
     </p>
 
     <p>
@@ -5997,7 +5997,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int 7\\\\,dx=7x+C
+      \\int 7\\,dx=7x+C
     </p>
 
     <p>
@@ -6005,7 +6005,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{d}{dx}(7x+C)=7
+      \\frac{d}{dx}(7x+C)=7
     </p>
 
     <h3>Van onbepaalde naar bepaalde integraal</h3>
@@ -6016,7 +6016,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx
+      \\int_a^b f(x)\\,dx
     </p>
 
     <p>
@@ -6025,7 +6025,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx=F(b)-F(a)
+      \\int_a^b f(x)\\,dx=F(b)-F(a)
     </p>
 
     <p>
@@ -6044,7 +6044,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_0^2 (3x^2+2x+1)\\\\,dx
+      \\int_0^2 (3x^2+2x+1)\\,dx
     </p>
 
     <p>
@@ -6068,7 +6068,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_0^2 (3x^2+2x+1)\\\\,dx
+      \\int_0^2 (3x^2+2x+1)\\,dx
       =
       F(2)-F(0)
     </p>
@@ -6130,7 +6130,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int 2x(x^2+1)^3\\\\,dx
+      \\int 2x(x^2+1)^3\\,dx
     </p>
 
     <p>
@@ -6160,7 +6160,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      du=2x\\\\,dx
+      du=2x\\,dx
     </p>
 
     <p>
@@ -6168,7 +6168,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int u^3\\\\,du
+      \\int u^3\\,du
     </p>
 
     <p>
@@ -6176,7 +6176,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int u^3\\\\,du=\\\\frac{u^4}{4}+C
+      \\int u^3\\,du=\\frac{u^4}{4}+C
     </p>
 
     <p>
@@ -6184,7 +6184,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{(x^2+1)^4}{4}+C
+      \\frac{(x^2+1)^4}{4}+C
     </p>
 
     <p>
@@ -6208,13 +6208,13 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      F(x)=\\\\frac{(x^2+1)^4}{4}
+      F(x)=\\frac{(x^2+1)^4}{4}
     </p>
 
     <p class="formula">
       F'(x)
       =
-      \\\\frac{1}{4}\\\\cdot4(x^2+1)^3\\\\cdot2x
+      \\frac{1}{4}\\cdot4(x^2+1)^3\\cdot2x
       =
       2x(x^2+1)^3
     </p>
@@ -6231,7 +6231,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_0^1 2x(x^2+1)^3\\\\,dx
+      \\int_0^1 2x(x^2+1)^3\\,dx
     </p>
 
     <p>
@@ -6247,11 +6247,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      x=0 \\\\rightarrow u=1
+      x=0 \\rightarrow u=1
     </p>
 
     <p class="formula">
-      x=1 \\\\rightarrow u=2
+      x=1 \\rightarrow u=2
     </p>
 
     <p>
@@ -6259,7 +6259,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_1^2 u^3\\\\,du
+      \\int_1^2 u^3\\,du
     </p>
 
     <p>
@@ -6267,12 +6267,12 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      =\\\\left[\\\\frac{u^4}{4}\\\\right]_1^2
+      =\\left[\\frac{u^4}{4}\\right]_1^2
     </p>
 
     <p class="formula">
-      =\\\\frac{16}{4}-\\\\frac{1}{4}
-      =\\\\frac{15}{4}
+      =\\frac{16}{4}-\\frac{1}{4}
+      =\\frac{15}{4}
     </p>
 
     <p>
@@ -6295,9 +6295,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{d}{dx}(F(x))=f(x)
-      \\\\Longleftrightarrow
-      \\\\int f(x)\\\\,dx=F(x)+C
+      \\frac{d}{dx}(F(x))=f(x)
+      \\Longleftrightarrow
+      \\int f(x)\\,dx=F(x)+C
     </p>
 
     <p>
@@ -6320,10 +6320,10 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int f(x)g(x)\\\\,dx
-      \\\\neq
-      \\\\left(\\\\int f(x)\\\\,dx\\\\right)
-      \\\\left(\\\\int g(x)\\\\,dx\\\\right)
+      \\int f(x)g(x)\\,dx
+      \\neq
+      \\left(\\int f(x)\\,dx\\right)
+      \\left(\\int g(x)\\,dx\\right)
     </p>
 
     <p>
@@ -6447,19 +6447,19 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{gemiddelde verandering}
-      \\\\rightarrow
-      \\\\text{limiet}
-      \\\\rightarrow
-      \\\\text{afgeleide}
+      \\text{gemiddelde verandering}
+      \\rightarrow
+      \\text{limiet}
+      \\rightarrow
+      \\text{afgeleide}
     </p>
 
     <p class="formula">
-      \\\\text{afgeleide}
-      \\\\rightarrow
-      \\\\text{veranderingssnelheid}
-      \\\\rightarrow
-      \\\\text{integraal}
+      \\text{afgeleide}
+      \\rightarrow
+      \\text{veranderingssnelheid}
+      \\rightarrow
+      \\text{integraal}
     </p>
 
     <p>
