@@ -1489,7 +1489,7 @@ const MILESTONES_4 = [
         de gegevens overzichtelijk in een rooster plaatsen:
       </p>
 
-      <p class="formula">A = ( 120  80 ;  900  650 ;  110  720 )</p>
+      <p class="formula">A = \\begin{pmatrix}120 & 80 \\\\ 900 & 650 \\\\ 110 & 720\\end{pmatrix}</p>
 
       <p>
         In de eerste kolom kunnen bijvoorbeeld de snelheden staan en in de tweede
@@ -1517,7 +1517,7 @@ const MILESTONES_4 = [
 
       <p>Bijvoorbeeld:</p>
 
-      <p class="formula">A = ( 2  5  7 ;  1  4  6 )</p>
+      <p class="formula">A = \\begin{pmatrix}2 & 5 & 7 \\\\ 1 & 4 & 6\\end{pmatrix}</p>
 
       <p>
         Deze matrix heeft 2 rijen en 3 kolommen. We noemen haar daarom een
@@ -1554,7 +1554,7 @@ const MILESTONES_4 = [
       </p>
 
       <p>Neem:</p>
-      <p class="formula">A = ( 2  5  7 ;  1  4  6 )</p>
+      <p class="formula">A = \\begin{pmatrix}2 & 5 & 7 \\\\ 1 & 4 & 6\\end{pmatrix}</p>
 
       <p>Dan is:</p>
       <p class="formula">a₁₂ = 5</p>
@@ -1593,8 +1593,8 @@ const MILESTONES_4 = [
         overeenkomstig element gelijk is.
       </p>
 
-      <p class="formula">A = ( 1  2 ;  3  4 )</p>
-      <p class="formula">B = ( 1  2 ;  3  4 )</p>
+      <p class="formula">A = \\begin{pmatrix}1 & 2 \\\\ 3 & 4\\end{pmatrix}</p>
+      <p class="formula">B = \\begin{pmatrix}1 & 2 \\\\ 3 & 4\\end{pmatrix}</p>
 
       <p>
         Dan geldt <span class="formula-inline">A = B</span>. De positie van elk
@@ -1609,9 +1609,9 @@ const MILESTONES_4 = [
         We tellen overeenkomstige elementen bij elkaar op.
       </p>
 
-      <p class="formula">A = ( 1  2 ;  3  4 )</p>
-      <p class="formula">B = ( 5  1 ;  2  3 )</p>
-      <p class="formula">A + B = ( 6  3 ;  5  7 )</p>
+      <p class="formula">A = \\begin{pmatrix}1 & 2 \\\\ 3 & 4\\end{pmatrix}</p>
+      <p class="formula">B = \\begin{pmatrix}5 & 1 \\\\ 2 & 3\\end{pmatrix}</p>
+      <p class="formula">A + B = \\begin{pmatrix}6 & 3 \\\\ 5 & 7\\end{pmatrix}</p>
 
       <p>In algemene vorm:</p>
       <p class="formula">(A + B)ᵢⱼ = aᵢⱼ + bᵢⱼ</p>
@@ -1628,7 +1628,7 @@ const MILESTONES_4 = [
       </p>
 
       <p class="formula">A − B = A + (−B)</p>
-      <p class="formula">( 7  5 ;  4  2 ) − ( 2  1 ;  3  6 ) = ( 5  4 ;  1  −4 )</p>
+      <p class="formula">\\begin{pmatrix}7 & 5 \\\\ 4 & 2\\end{pmatrix} - \\begin{pmatrix}2 & 1 \\\\ 3 & 6\\end{pmatrix} = \\begin{pmatrix}5 & 4 \\\\ 1 & -4\\end{pmatrix}</p>
 
       <p>
         Ook hier moeten de twee matrices dezelfde afmetingen hebben.
@@ -1641,7 +1641,7 @@ const MILESTONES_4 = [
         Zo'n getal noemen we een <strong>scalaire factor</strong>.
       </p>
 
-      <p class="formula">3( 1  −2 ;  4  5 ) = ( 3  −6 ;  12  15 )</p>
+      <p class="formula">3\\begin{pmatrix}1 & -2 \\\\ 4 & 5\\end{pmatrix} = \\begin{pmatrix}3 & -6 \\\\ 12 & 15\\end{pmatrix}</p>
       <p class="formula">(kA)ᵢⱼ = k aᵢⱼ</p>
 
       <div class="callout">
@@ -1655,8 +1655,8 @@ const MILESTONES_4 = [
         waarvan alle elementen nul zijn.
       </p>
 
-      <p class="formula">0₂ˣ₃ = ( 0  0  0 ;  0  0  0 )</p>
-      <p class="formula">A + 0 = A</p>
+      <p class="formula">0_{2\\times3} = \\begin{pmatrix}0 & 0 & 0 \\\\ 0 & 0 & 0\\end{pmatrix}</p>
+      <p class="formula">A + 0_{m\\times n} = A</p>
 
       <p>
         De nulmatrix speelt later een belangrijke rol bij matrixvergelijkingen
@@ -1670,7 +1670,7 @@ const MILESTONES_4 = [
         <strong>vierkante matrix</strong>.
       </p>
 
-      <p class="formula">A = ( 2  1 ;  0  3 )</p>
+      <p class="formula">A = \\begin{pmatrix}2 & 1 \\\\ 0 & 3\\end{pmatrix}</p>
 
       <p>
         Dit is een <span class="formula-inline">2 × 2</span>-matrix.
@@ -1685,7 +1685,7 @@ const MILESTONES_4 = [
         linksboven naar rechtsonder.
       </p>
 
-      <p class="formula">A = ( 2  1  4 ;  0  3  5 ;  7  2  6 )</p>
+      <p class="formula">A = \\begin{pmatrix}2 & 1 & 4 \\\\ 0 & 3 & 5 \\\\ 7 & 2 & 6\\end{pmatrix}</p>
       <p class="formula">a₁₁ = 2, a₂₂ = 3, a₃₃ = 6</p>
 
       <p>
@@ -1701,14 +1701,14 @@ const MILESTONES_4 = [
         <strong>eenheidsmatrix</strong>.
       </p>
 
-      <p class="formula">I₂ = ( 1  0 ;  0  1 )</p>
+      <p class="formula">I_2 = \\begin{pmatrix}1 & 0 \\\\ 0 & 1\\end{pmatrix}</p>
 
       <p>
         Op de hoofddiagonaal staan enen en daarbuiten nullen. De volledige betekenis
         wordt duidelijk in 4.5, waar we matrixvermenigvuldiging invoeren:
       </p>
 
-      <p class="formula">AI = IA = A</p>
+      <p class="formula">AI_2 = I_2A = A</p>
 
       <h3>Transponeren: rijen worden kolommen</h3>
 
@@ -1717,8 +1717,8 @@ const MILESTONES_4 = [
         de rijen kolommen en de kolommen rijen.
       </p>
 
-      <p class="formula">A = ( 1  2  3 ;  4  5  6 )</p>
-      <p class="formula">Aᵀ = ( 1  4 ;  2  5 ;  3  6 )</p>
+      <p class="formula">A = \\begin{pmatrix}1 & 2 & 3 \\\\ 4 & 5 & 6\\end{pmatrix}</p>
+      <p class="formula">A^T = \\begin{pmatrix}1 & 4 \\\\ 2 & 5 \\\\ 3 & 6\\end{pmatrix}</p>
 
       <p>
         Een <span class="formula-inline">2 × 3</span>-matrix wordt dus een
@@ -1735,9 +1735,9 @@ const MILESTONES_4 = [
         Een matrix kan ook worden bekeken als een verzameling kolomvectoren.
       </p>
 
-      <p class="formula">A = ( 1  3 ;  2  4 )</p>
-      <p class="formula">a₁ = (1,2)</p>
-      <p class="formula">a₂ = (3,4)</p>
+      <p class="formula">A = \\begin{pmatrix}1 & 3 \\\\ 2 & 4\\end{pmatrix}</p>
+      <p class="formula">a_1 = \\begin{pmatrix}1 \\\\ 2\\end{pmatrix}</p>
+      <p class="formula">a_2 = \\begin{pmatrix}3 \\\\ 4\\end{pmatrix}</p>
 
       <p>
         Dit is een belangrijke brug naar de vorige milestones. Een matrix is niet
