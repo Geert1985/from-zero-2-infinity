@@ -3524,11 +3524,532 @@ const MILESTONES_3 = [
 },
 
   {
-    id: "3.6",
-    title: "Product-, quotiënt- & kettingregel",
-    goal: "Wat gebeurt er wanneer functies worden gecombineerd?",
-    theory: ``
-  },
+  id: "3.6",
+  title: "Product-, quotiënt- & kettingregel",
+  goal: "Wat gebeurt er wanneer functies worden gecombineerd?",
+  theory: /* html */`
+    <h2>Product-, quotiënt- & kettingregel</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Waarom hebben producten en quotiënten van functies hun eigen afgeleideregel?</li>
+      <li>Hoe leiden we de productregel af en gebruiken we die?</li>
+      <li>Hoe werken we met een quotiënt van twee functies?</li>
+      <li>Wat gebeurt er wanneer een functie in een andere functie zit?</li>
+      <li>Hoe herkennen we een samengestelde functie?</li>
+      <li>Hoe gebruiken we de kettingregel stap voor stap?</li>
+      <li>Hoe bepalen we welke afgeleideregel we nodig hebben?</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        In de vorige les leerden we de afgeleiden van afzonderlijke basisfuncties.
+        Maar echte functies zijn vaak opgebouwd uit meerdere functies.
+      </p>
+      <p>
+        De <strong>productregel</strong>, <strong>quotiëntregel</strong> en
+        <strong>kettingregel</strong> vertellen ons hoe we de verandering van
+        zulke samengestelde uitdrukkingen kunnen bepalen.
+      </p>
+    </div>
+
+    <h3>Van eenvoudige naar gecombineerde functies</h3>
+
+    <p>
+      In les 3.5 konden we bijvoorbeeld afleiden:
+    </p>
+
+    <p class="formula">f(x)=x^2 \\rightarrow f'(x)=2x</p>
+
+    <p>
+      Maar functies zijn niet altijd zo eenvoudig. Denk bijvoorbeeld aan:
+    </p>
+
+    <p class="formula">f(x)=x^2(3x+1)</p>
+
+    <p>
+      Hier worden twee functies met elkaar vermenigvuldigd:
+    </p>
+
+    <p class="formula">u(x)=x^2</p>
+
+    <p class="formula">v(x)=3x+1</p>
+
+    <p>
+      We hebben dus een regel nodig die vertelt hoe de afgeleide van een
+      <strong>product van functies</strong> werkt.
+    </p>
+
+    <h3>De productregel</h3>
+
+    <p>
+      Stel dat een functie bestaat uit het product van twee functies:
+    </p>
+
+    <p class="formula">f(x)=u(x)v(x)</p>
+
+    <p>
+      Dan is de afgeleide:
+    </p>
+
+    <p class="formula">f'(x)=u'(x)v(x)+u(x)v'(x)</p>
+
+    <p>
+      De belangrijke gedachte is dat <strong>beide factoren veranderen</strong>.
+      Daarom krijgen we twee termen:
+    </p>
+
+    <p class="formula">u'(x)v(x)</p>
+
+    <p class="formula">u(x)v'(x)</p>
+
+    <p>
+      We differentiëren dus eerst de eerste factor en daarna de tweede factor.
+      De andere factor blijft telkens staan.
+    </p>
+
+    <h3>De productregel gebruiken</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">f(x)=x^2(3x+1)</p>
+
+    <p>
+      Kies de twee factoren:
+    </p>
+
+    <p class="formula">u(x)=x^2</p>
+
+    <p class="formula">v(x)=3x+1</p>
+
+    <p>
+      Hun afgeleiden zijn:
+    </p>
+
+    <p class="formula">u'(x)=2x</p>
+
+    <p class="formula">v'(x)=3</p>
+
+    <p>
+      Pas nu de productregel toe:
+    </p>
+
+    <p class="formula">
+      f'(x)=u'(x)v(x)+u(x)v'(x)
+    </p>
+
+    <p class="formula">
+      f'(x)=2x(3x+1)+x^2(3)
+    </p>
+
+    <p>
+      Vereenvoudigen geeft:
+    </p>
+
+    <p class="formula">f'(x)=6x^2+5x</p>
+
+    <h3>Waarom niet gewoon beide factoren apart afleiden?</h3>
+
+    <p>
+      Een veelgemaakte fout is:
+    </p>
+
+    <p class="formula">
+      (u(x)v(x))'=u'(x)v'(x)
+    </p>
+
+    <p>
+      Dat is <strong>niet</strong> de productregel.
+    </p>
+
+    <p>
+      De productregel bevat een som van twee producten:
+    </p>
+
+    <p class="formula">
+      (uv)'=u'v+uv'
+    </p>
+
+    <p>
+      Dat komt doordat zowel de eerste als de tweede factor verandering kan
+      veroorzaken.
+    </p>
+
+    <h3>De quotiëntregel</h3>
+
+    <p>
+      Een quotiënt is een verhouding van twee functies:
+    </p>
+
+    <p class="formula">
+      f(x)=\\frac{u(x)}{v(x)}
+    </p>
+
+    <p>
+      Als de noemer niet nul is, geldt:
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{u'(x)v(x)-u(x)v'(x)}{v(x)^2}
+    </p>
+
+    <p>
+      De structuur lijkt op die van de productregel, maar nu ontstaat een
+      <strong>verschil</strong> en wordt de noemer gekwadrateerd.
+    </p>
+
+    <p>
+      De voorwaarde blijft belangrijk:
+    </p>
+
+    <p class="formula">v(x)\\neq0</p>
+
+    <h3>De quotiëntregel gebruiken</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x)=\\frac{x^2}{x+1}
+    </p>
+
+    <p>
+      Kies:
+    </p>
+
+    <p class="formula">u(x)=x^2</p>
+
+    <p class="formula">v(x)=x+1</p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">u'(x)=2x</p>
+
+    <p class="formula">v'(x)=1</p>
+
+    <p>
+      De quotiëntregel geeft:
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{2x(x+1)-x^2(1)}{(x+1)^2}
+    </p>
+
+    <p>
+      Vereenvoudigen:
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{x^2+2x}{(x+1)^2}
+    </p>
+
+    <p>
+      De oorspronkelijke functie is alleen gedefinieerd wanneer:
+    </p>
+
+    <p class="formula">x\\neq-1</p>
+
+    <h3>Productregel of quotiëntregel?</h3>
+
+    <p>
+      Kijk eerst naar de structuur van de functie.
+    </p>
+
+    <ul>
+      <li>Zie je een product van twee functies? Gebruik de productregel.</li>
+      <li>Zie je een breuk met functies in teller en noemer? Gebruik de quotiëntregel.</li>
+      <li>Zie je een functie binnen een andere functie? Gebruik de kettingregel.</li>
+    </ul>
+
+    <p>
+      Het herkennen van de structuur komt dus vóór het uitvoeren van de
+      berekening.
+    </p>
+
+    <h3>Een functie in een functie</h3>
+
+    <p>
+      Beschouw nu:
+    </p>
+
+    <p class="formula">f(x)=(3x+1)^4</p>
+
+    <p>
+      Dit is geen gewoon vierde macht van <code>x</code>. Binnen de macht staat
+      namelijk een andere functie:
+    </p>
+
+    <p class="formula">g(x)=3x+1</p>
+
+    <p>
+      Daarom kunnen we de functie bekijken als:
+    </p>
+
+    <p class="formula">f(x)=g(x)^4</p>
+
+    <p>
+      Dit noemen we een <strong>samengestelde functie</strong>: de ene functie
+      wordt toegepast op het resultaat van een andere functie.
+    </p>
+
+    <h3>De kettingregel</h3>
+
+    <p>
+      Stel dat:
+    </p>
+
+    <p class="formula">f(x)=F(g(x))</p>
+
+    <p>
+      Dan geldt de kettingregel:
+    </p>
+
+    <p class="formula">
+      f'(x)=F'(g(x))g'(x)
+    </p>
+
+    <p>
+      In woorden:
+      <strong>differentieer de buitenste functie en vermenigvuldig met de
+      afgeleide van de binnenste functie.</strong>
+    </p>
+
+    <p>
+      De kettingregel beschrijft dus een keten van veranderingen:
+      eerst verandert de binnenste functie, daarna reageert de buitenste
+      functie daarop.
+    </p>
+
+    <h3>De kettingregel stap voor stap</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">f(x)=(3x+1)^4</p>
+
+    <p>
+      De <strong>binnenste functie</strong> is:
+    </p>
+
+    <p class="formula">g(x)=3x+1</p>
+
+    <p>
+      De <strong>buitenste functie</strong> is:
+    </p>
+
+    <p class="formula">F(u)=u^4</p>
+
+    <p>
+      Differentieer beide:
+    </p>
+
+    <p class="formula">F'(u)=4u^3</p>
+
+    <p class="formula">g'(x)=3</p>
+
+    <p>
+      Pas nu de kettingregel toe:
+    </p>
+
+    <p class="formula">
+      f'(x)=4(3x+1)^3(3)
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      f'(x)=12(3x+1)^3
+    </p>
+
+    <h3>Waarom moet de binnenste afgeleide erbij?</h3>
+
+    <p>
+      Stel dat de binnenste functie sneller verandert. Dan verandert ook het
+      resultaat van de buitenste functie sneller.
+    </p>
+
+    <p>
+      Bij:
+    </p>
+
+    <p class="formula">f(x)=F(g(x))</p>
+
+    <p>
+      zijn er daarom twee veranderingssnelheden:
+    </p>
+
+    <p class="formula">F'(g(x))</p>
+
+    <p class="formula">g'(x)</p>
+
+    <p>
+      De totale veranderingssnelheid is hun product:
+    </p>
+
+    <p class="formula">
+      f'(x)=F'(g(x))g'(x)
+    </p>
+
+    <h3>Een tweede voorbeeld</h3>
+
+    <p>
+      Beschouw:
+    </p>
+
+    <p class="formula">f(x)=\\sqrt{2x+1}</p>
+
+    <p>
+      Schrijf de buitenste en binnenste functie:
+    </p>
+
+    <p class="formula">F(u)=\\sqrt{u}</p>
+
+    <p class="formula">g(x)=2x+1</p>
+
+    <p>
+      De afgeleide van de buitenste functie is:
+    </p>
+
+    <p class="formula">
+      F'(u)=\\frac{1}{2\\sqrt{u}}
+    </p>
+
+    <p>
+      En:
+    </p>
+
+    <p class="formula">g'(x)=2</p>
+
+    <p>
+      De kettingregel geeft:
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{1}{2\\sqrt{2x+1}}(2)
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      f'(x)=\\frac{1}{\\sqrt{2x+1}}
+    </p>
+
+    <h3>Meerdere lagen</h3>
+
+    <p>
+      Een functie kan meer dan twee lagen bevatten. Bijvoorbeeld:
+    </p>
+
+    <p class="formula">f(x)=\\sin((2x+1)^2)</p>
+
+    <p>
+      Hier zitten meerdere functies in elkaar:
+    </p>
+
+    <ol>
+      <li>de binnenste functie is <code>2x+1</code>;</li>
+      <li>daarvan wordt het kwadraat genomen;</li>
+      <li>van het resultaat wordt de sinus genomen.</li>
+    </ol>
+
+    <p>
+      De kettingregel wordt dan laag voor laag toegepast. We hoeven dus niet
+      alle stappen tegelijk te zien: we kunnen de structuur van binnen naar
+      buiten volgen.
+    </p>
+
+    <h3>Een vaste werkwijze</h3>
+
+    <p>
+      Gebruik bij samengestelde functies deze volgorde:
+    </p>
+
+    <ol>
+      <li>Bekijk eerst de structuur van de functie.</li>
+      <li>Herken product, quotiënt of samenstelling.</li>
+      <li>Splits de functie indien dat helpt.</li>
+      <li>Differentieer de afzonderlijke onderdelen.</li>
+      <li>Pas de juiste regel toe.</li>
+      <li>Vereenvoudig het resultaat.</li>
+      <li>Controleer of er domeinvoorwaarden zijn.</li>
+    </ol>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        Bij een product alleen beide factoren differentiëren en met elkaar
+        vermenigvuldigen.
+      </li>
+      <li>
+        Bij de kettingregel de afgeleide van de binnenste functie vergeten.
+      </li>
+      <li>
+        Bij een quotiënt de noemer niet kwadrateren.
+      </li>
+      <li>
+        De structuur van een functie niet eerst herkennen.
+      </li>
+      <li>
+        Een domeinvoorwaarde vergeten wanneer een noemer nul kan worden.
+      </li>
+    </ul>
+
+    <h3>Van basisregels naar samengestelde functies</h3>
+
+    <p>
+      In les 3.5 leerden we de afgeleiden van basisfuncties. In deze les
+      leerden we hoe die basisregels gecombineerd kunnen worden.
+    </p>
+
+    <p class="formula">
+      \\text{product} \\rightarrow \\text{productregel}
+    </p>
+
+    <p class="formula">
+      \\text{quotiënt} \\rightarrow \\text{quotiëntregel}
+    </p>
+
+    <p class="formula">
+      \\text{samenstelling} \\rightarrow \\text{kettingregel}
+    </p>
+
+    <p>
+      Daarmee kunnen we steeds ingewikkeldere functies differentiëren.
+      In de volgende lessen kunnen we deze regels toepassen op belangrijke
+      functies en vervolgens op problemen uit de werkelijkheid.
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        De afgeleide van een samengestelde functie volgt uit de manier waarop
+        de functie is opgebouwd.
+      </p>
+      <p>
+        Bij een <strong>product</strong> veranderen beide factoren,
+        bij een <strong>quotiënt</strong> veranderen teller en noemer,
+        en bij een <strong>samenstelling</strong> werkt de verandering
+        laag voor laag.
+      </p>
+      <p>
+        De productregel, quotiëntregel en kettingregel maken het mogelijk om
+        de afgeleideregel van 3.5 uit te breiden naar veel complexere functies.
+      </p>
+    </div>
+  `
+},
 
   {
     id: "3.7",
