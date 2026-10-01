@@ -1975,8 +1975,8 @@ const MILESTONES_3 = [
 
     <p>
       Denk aan een continue temperatuur die van
-      <span class="formula-inline">-5 °C</span> naar
-      <span class="formula-inline">8 °C</span> stijgt.
+      <span class="formula-inline">-5 &#8451;</span> naar
+      <span class="formula-inline">8 &#8451;</span> stijgt.
     </p>
 
     <p>
