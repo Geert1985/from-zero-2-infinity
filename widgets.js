@@ -2883,6 +2883,123 @@ function mountMatrixProduct(root) {
   draw();
 }
 
+function mountGauss(root) {
+  const steps = [
+    {
+      name: "Stelsel",
+      op: "Het stelsel als uitgebreide matrix.",
+      rows: [[1, 1, 1, 6], [2, -1, 1, 3], [1, 2, -1, 3]],
+      changed: [],
+      fresh: []
+    },
+    {
+      name: "x weg",
+      op: "R₂ ← R₂ − 2R₁ en R₃ ← R₃ − R₁",
+      rows: [[1, 1, 1, 6], [0, -3, -1, -9], [0, 1, -2, -3]],
+      changed: [1, 2],
+      fresh: ["1,0", "2,0"]
+    },
+    {
+      name: "Driehoek",
+      op: "R₃ ← 3R₃ + R₂",
+      rows: [[1, 1, 1, 6], [0, -3, -1, -9], [0, 0, -7, -18]],
+      changed: [2],
+      fresh: ["2,1", "2,2"]
+    },
+    {
+      name: "Terug",
+      op: "Van de onderste rij naar boven invullen.",
+      rows: [[1, 1, 1, 6], [0, -3, -1, -9], [0, 0, -7, -18]],
+      changed: [],
+      fresh: ["2,2"],
+      back: [
+        "−7z = −18, dus z = 18/7",
+        "−3y − z = −9, dus y = 15/7",
+        "x + y + z = 6, dus x = 9/7"
+      ]
+    }
+  ];
+
+  root.innerHTML = widgetShell(
+    "Gauss-eliminatie",
+    "Eén stap tegelijk. De gekleurde rijen zijn net veranderd.",
+    `<style>
+      .g-steps { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 8px 0 14px; }
+      .g-steps button {
+        font-family: Georgia, serif;
+        font-size: 16px;
+        color: #cbb98a;
+        background: transparent;
+        border: 1px solid rgba(230,199,122,0.35);
+        border-radius: 999px;
+        padding: 6px 14px;
+        cursor: pointer;
+      }
+      .g-steps button.on { color: #161410; background: #e6c77a; border-color: #e6c77a; }
+      .g-wrap { display: flex; justify-content: center; }
+      .g-grid {
+        display: inline-grid;
+        grid-template-columns: repeat(4, 3.2rem);
+        gap: 6px 8px;
+        padding: 12px 16px;
+        border-left: 2px solid #e6c77a;
+        border-right: 2px solid #e6c77a;
+      }
+      .g-grid span {
+        height: 2.3rem;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        font-family: Georgia, serif;
+        font-size: 1.35rem;
+        color: #fff6df;
+      }
+      .g-grid span.rhs { box-shadow: inset 2px 0 0 #8a7a58; }
+      .g-op { text-align: center; color: #fff6df; font-family: Georgia, serif; font-size: 26px; line-height: 1.4; margin: 16px 0 6px; }
+      .g-back { text-align: center; color: #cbb98a; font-family: Georgia, serif; font-size: 20px; line-height: 1.55; margin: 0; }
+    </style>
+    <div class="g-steps">
+      <button type="button" data-step="0">1. Stelsel</button>
+      <button type="button" data-step="1">2. x weg</button>
+      <button type="button" data-step="2">3. Driehoek</button>
+      <button type="button" data-step="3">4. Terug</button>
+    </div>
+    <div class="g-wrap"><div class="g-grid" data-m></div></div>
+    <p class="g-op"></p>
+    <p class="g-back"></p>`
+  );
+
+  const grid = root.querySelector("[data-m]");
+  const op = root.querySelector(".g-op");
+  const back = root.querySelector(".g-back");
+  const buttons = Array.from(root.querySelectorAll("[data-step]"));
+  const fmt = (n) => (n < 0 ? "−" + (-n) : String(n));
+
+  for (let i = 0; i < 12; i++) {
+    const s = document.createElement("span");
+    if (i % 4 === 3) s.className = "rhs";
+    grid.appendChild(s);
+  }
+
+  const show = (k) => {
+    const step = steps[k];
+    buttons.forEach((b, i) => b.classList.toggle("on", i === k));
+    Array.from(grid.children).forEach((el, n) => {
+      const r = Math.floor(n / 4);
+      const c = n % 4;
+      el.textContent = fmt(step.rows[r][c]);
+      const fresh = step.fresh.indexOf(r + "," + c) !== -1;
+      el.style.color = fresh ? "#7dcea0" : "#fff6df";
+      el.style.background = step.changed.indexOf(r) !== -1 ? "rgba(230,199,122,0.16)" : "transparent";
+    });
+    op.textContent = step.op;
+    back.textContent = step.back ? step.back.join("\n") : "";
+    back.style.whiteSpace = "pre-line";
+  };
+
+  buttons.forEach((b) => b.addEventListener("click", () => show(Number(b.dataset.step))));
+  show(0);
+}
 
 
 function mountPlot(root) {
@@ -3342,6 +3459,7 @@ const WIDGET_BUILDERS = {
   lineGraph:mountLineGraph,
   parabolaGraph:mountParabolaGraph,
   matrixProduct:mountMatrixProduct,
+  gauss:mountGauss,
   crossProduct:mountCrossProduct
 };
 

@@ -2689,9 +2689,7 @@ const MILESTONES_4 = [
         driehoekige structuur ontstaat.
       </p>
 
-      <div class="theory-image">
-        <img src="assets/gauss-eliminatie.svg" alt="Een uitgebreid matrixstelsel wordt met elementaire rijbewerkingen omgevormd tot een bovenste driehoeksvorm, waarna terugsubstitutie de onbekenden oplevert.">
-      </div>
+      <div data-widget="gauss"></div>
 
       <p>
         De methode is dus geen nieuwe soort algebra. Het is een systematische
@@ -3364,8 +3362,695 @@ const MILESTONES_4 = [
         Die verdieping bewaren we voor 4.11.
       </p>
 ` },
-  { id: "4.7", title: "Lineaire transformaties", goal: "Hoe beschrijven matrices systematische veranderingen van vectoren?", theory: `` },
-  { id: "4.8", title: "Determinanten, inverse & invertibiliteit", goal: "Wanneer verliest een lineaire transformatie informatie en wanneer kunnen we haar omkeren?", theory: `` },
+{ id: "4.7", title: "Lineaire transformaties", goal: "Hoe beschrijven matrices systematische veranderingen van vectoren?", theory: /* html */`
+      <h2>Lineaire transformaties</h2>
+
+      <p><strong>Wat gaan we ontdekken?</strong></p>
+      <ul>
+        <li>Wat een transformatie met een vector doet.</li>
+        <li>Wanneer een transformatie lineair genoemd wordt.</li>
+        <li>Waarom optellen en vermenigvuldigen met een getal bij een lineaire transformatie behouden blijven.</li>
+        <li>Hoe een matrix een lineaire transformatie kan voorstellen.</li>
+        <li>Hoe we met basisvectoren de werking van een matrix kunnen begrijpen.</li>
+        <li>Hoe schalen, spiegelen, roteren en schuintrekken als lineaire transformaties beschreven kunnen worden.</li>
+        <li>Waarom matrixvermenigvuldiging overeenkomt met het na elkaar uitvoeren van transformaties.</li>
+        <li>Welke informatie we nog bewaren voor latere milestones.</li>
+      </ul>
+
+      <p>
+        In 4.5 zagen we dat een matrix op een vector kan werken. In 4.6 gebruikten
+        we matrices om lineaire stelsels te organiseren en op te lossen. Nu geven
+        we datzelfde idee een geometrische betekenis.
+      </p>
+
+      <div class="callout">
+        <p><strong>Een lineaire transformatie is een regel die vectoren systematisch naar andere vectoren stuurt en daarbij de lineaire structuur respecteert.</strong></p>
+      </div>
+
+      <h3>Van een vector naar een nieuwe vector</h3>
+
+      <p>
+        Stel dat we een vector
+        <span class="formula-inline">v = (2,1)</span> hebben. Een transformatie
+        kan deze vector veranderen in een nieuwe vector.
+      </p>
+
+      <p class="formula">T(v) = (4,1)</p>
+
+      <p>
+        De letter <span class="formula-inline">T</span> staat hier voor de
+        transformatie. Ze is een functie waarvan de invoer een vector is en
+        waarvan de uitvoer opnieuw een vector is.
+      </p>
+
+      <p>
+        Het belangrijke verschil met een gewone numerieke functie uit Fase 2 is
+        dat de objecten waarmee we werken nu vectoren zijn.
+      </p>
+
+      <p class="formula">T : ℝ² → ℝ²</p>
+
+      <p>
+        Dit betekent: <span class="formula-inline">T</span> neemt een vector uit
+        het tweedimensionale vlak en levert opnieuw een vector uit dat vlak.
+      </p>
+
+      <h3>Een transformatie als een vaste regel</h3>
+
+      <p>
+        Een transformatie is pas interessant wanneer dezelfde regel op elke
+        invoervector wordt toegepast. We willen dus niet voor iedere vector
+        afzonderlijk een antwoord verzinnen.
+      </p>
+
+      <p>
+        Neem bijvoorbeeld:
+      </p>
+
+      <p class="formula">T(x,y) = (2x,y)</p>
+
+      <p>
+        De x-component wordt verdubbeld en de y-component blijft gelijk.
+      </p>
+
+      <p>Voor enkele vectoren krijgen we:</p>
+
+      <p class="formula">T(1,0) = (2,0)</p>
+
+      <p class="formula">T(0,1) = (0,1)</p>
+
+      <p class="formula">T(2,3) = (4,3)</p>
+
+      <p>
+        Dezelfde regel werkt dus overal. Geometrisch wordt het vlak horizontaal
+        uitgerekt.
+      </p>
+
+      <div class="callout">
+        <p><strong>Een transformatie is een voorschrift: dezelfde invoerregel geldt voor iedere vector.</strong></p>
+      </div>
+
+      <h3>Wat maakt een transformatie lineair?</h3>
+
+      <p>
+        Niet elke transformatie van vectoren is lineair. We willen precies
+        aangeven welke structuur behouden moet blijven.
+      </p>
+
+      <p>
+        Een transformatie <span class="formula-inline">T</span> is lineair als
+        ze aan twee eigenschappen voldoet.
+      </p>
+
+      <p>Voor alle vectoren <span class="formula-inline">u</span> en
+        <span class="formula-inline">v</span> geldt:</p>
+
+      <p class="formula">T(u + v) = T(u) + T(v)</p>
+
+      <p>
+        En voor iedere scalaire factor <span class="formula-inline">c</span>:
+      </p>
+
+      <p class="formula">T(cu) = cT(u)</p>
+
+      <p>
+        De eerste eigenschap heet behoud van <strong>vectoroptelling</strong>.
+        De tweede heet behoud van <strong>scalaire vermenigvuldiging</strong>.
+      </p>
+
+      <div class="callout">
+        <p><strong>Lineair betekent hier: optellen blijft optellen en schalen blijft schalen, ook nadat de transformatie is uitgevoerd.</strong></p>
+      </div>
+
+      <h3>Waarom zijn die twee regels belangrijk?</h3>
+
+      <p>
+        Kijk naar een vector die opgebouwd is uit twee andere vectoren:
+      </p>
+
+      <p class="formula">w = u + v</p>
+
+      <p>
+        Als <span class="formula-inline">T</span> lineair is, mogen we eerst
+        optellen en daarna transformeren, of eerst beide vectoren transformeren
+        en daarna optellen:
+      </p>
+
+      <p class="formula">T(u + v) = T(u) + T(v)</p>
+
+      <p>
+        Hetzelfde geldt voor schalen. Als we een vector drie keer zo groot maken,
+        wordt zijn beeld onder <span class="formula-inline">T</span> ook drie
+        keer zo groot:
+      </p>
+
+      <p class="formula">T(3u) = 3T(u)</p>
+
+      <p>
+        Daardoor kan een complexe vectorbewerking worden opgebouwd uit eenvoudige
+        stukken zonder dat de transformatie haar structuur verliest.
+      </p>
+
+      <h3>De nulvector moet naar de nulvector</h3>
+
+      <p>
+        Uit lineariteit volgt een belangrijk gevolg. Neem de nulvector
+        <span class="formula-inline">0</span>.
+      </p>
+
+      <p>
+        We kunnen schrijven:
+      </p>
+
+      <p class="formula">0 = 0u</p>
+
+      <p>
+        Omdat <span class="formula-inline">T</span> lineair is:
+      </p>
+
+      <p class="formula">T(0) = T(0u) = 0T(u) = 0</p>
+
+      <p>
+        Dus iedere lineaire transformatie stuurt de nulvector naar de nulvector.
+      </p>
+
+      <div class="callout">
+        <p><strong>Als een transformatie de nulvector niet naar de nulvector stuurt, kan ze niet lineair zijn.</strong></p>
+      </div>
+
+      <h3>Een voorbeeld van een niet-lineaire transformatie</h3>
+
+      <p>
+        Beschouw:
+      </p>
+
+      <p class="formula">T(x,y) = (x + 1,y)</p>
+
+      <p>
+        De oorsprong wordt dan afgebeeld op:
+      </p>
+
+      <p class="formula">T(0,0) = (1,0)</p>
+
+      <p>
+        Omdat de nulvector niet op zichzelf wordt afgebeeld, is deze transformatie
+        niet lineair.
+      </p>
+
+      <p>
+        Geometrisch is dit een verschuiving. Een verschuiving kan een perfect
+        regelmatige transformatie zijn, maar ze is in deze betekenis niet lineair.
+      </p>
+
+      <div class="callout">
+        <p><strong>Een verschuiving is affine, niet lineair, wanneer de verschuiving niet nul is.</strong></p>
+      </div>
+
+      <h3>Een matrix als lineaire transformatie</h3>
+
+      <p>
+        Nu komt de verbinding met 4.5. Een matrix kan een vector transformeren
+        door matrixvermenigvuldiging.
+      </p>
+
+      <p>Neem:</p>
+
+      <p class="formula">A = \\begin{pmatrix}2 & 0 \\\\ 0 & 1\\end{pmatrix}</p>
+
+      <p>en:</p>
+
+      <p class="formula">v = \\begin{pmatrix}x \\\\ y\\end{pmatrix}</p>
+
+      <p>Dan is:</p>
+
+      <p class="formula">T(v) = Av = \\begin{pmatrix}2 & 0 \\\\ 0 & 1\\end{pmatrix}\\begin{pmatrix}x \\\\ y\\end{pmatrix} = \\begin{pmatrix}2x \\\\ y\\end{pmatrix}</p>
+
+      <p>
+        Dit is precies de transformatie die we eerder beschreven als
+        <span class="formula-inline">T(x,y) = (2x,y)</span>.
+      </p>
+
+      <p>
+        Een matrix geeft ons dus een compacte manier om een lineaire transformatie
+        vast te leggen.
+      </p>
+
+      <h3>Waarom werkt matrixvermenigvuldiging lineair?</h3>
+
+      <p>
+        Neem een matrix <span class="formula-inline">A</span> en twee vectoren
+        <span class="formula-inline">u</span> en <span class="formula-inline">v</span>.
+        Uit de rekenregels van matrixvermenigvuldiging volgt:
+      </p>
+
+      <p class="formula">A(u + v) = Au + Av</p>
+
+      <p>
+        En voor een getal <span class="formula-inline">c</span>:
+      </p>
+
+      <p class="formula">A(cu) = c(Au)</p>
+
+      <p>
+        De transformatie
+        <span class="formula-inline">T(v) = Av</span> is dus lineair.
+      </p>
+
+      <p>
+        Dit is een fundamentele reden waarom matrices zo belangrijk zijn:
+        matrixvermenigvuldiging is precies afgestemd op de twee eigenschappen
+        die lineariteit definiëren.
+      </p>
+
+      <h3>De standaardbasis</h3>
+
+      <p>
+        In het vlak kunnen we iedere vector opbouwen uit twee eenvoudige
+        basisvectoren:
+      </p>
+
+      <p class="formula">e₁ = \\begin{pmatrix}1 \\\\ 0\\end{pmatrix}</p>
+
+      <p class="formula">e₂ = \\begin{pmatrix}0 \\\\ 1\\end{pmatrix}</p>
+
+      <p>
+        Een willekeurige vector
+        <span class="formula-inline">v = (x,y)</span> kan dan worden geschreven als:
+      </p>
+
+      <p class="formula">v = xe₁ + ye₂</p>
+
+      <p>
+        Dat is meer dan een handige notatie. Het betekent dat we de werking van
+        een lineaire transformatie op iedere vector kunnen reconstrueren wanneer
+        we weten wat ze met de basisvectoren doet.
+      </p>
+
+      <h3>Een transformatie volledig bepalen met basisvectoren</h3>
+
+      <p>
+        Stel dat een lineaire transformatie voldoet aan:
+      </p>
+
+      <p class="formula">T(e₁) = \\begin{pmatrix}2 \\\\ 1\\end{pmatrix}</p>
+
+      <p class="formula">T(e₂) = \\begin{pmatrix}1 \\\\ 3\\end{pmatrix}</p>
+
+      <p>
+        Neem nu een willekeurige vector:
+      </p>
+
+      <p class="formula">v = xe₁ + ye₂</p>
+
+      <p>
+        Door lineariteit:
+      </p>
+
+      <p class="formula">T(v) = T(xe₁ + ye₂)</p>
+
+      <p class="formula">T(v) = xT(e₁) + yT(e₂)</p>
+
+      <p>
+        Dus:
+      </p>
+
+      <p class="formula">T(v) = x\\begin{pmatrix}2 \\\\ 1\\end{pmatrix} + y\\begin{pmatrix}1 \\\\ 3\\end{pmatrix}</p>
+
+      <p class="formula">T(v) = \\begin{pmatrix}2x + y \\\\ x + 3y\\end{pmatrix}</p>
+
+      <p>
+        De matrix die deze transformatie voorstelt is:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}2 & 1 \\\\ 1 & 3\\end{pmatrix}</p>
+
+      <div class="callout">
+        <p><strong>De kolommen van de matrix zijn de beelden van de standaardbasisvectoren.</strong></p>
+      </div>
+
+      <h3>Een afbeelding van het rooster</h3>
+
+      <div class="theory-image">
+        <img src="assets/lineaire-transformatie.svg" alt="Een rooster en zijn beeld na een lineaire transformatie; dezelfde transformatie werkt op alle vectoren en behoudt optelling en schaal.">
+      </div>
+
+      <p>
+        Een lineaire transformatie kun je daardoor zien als een systematische
+        verandering van het hele vectorvlak. Een rooster wordt bijvoorbeeld
+        uitgerekt, gedraaid, gespiegeld of schuin getrokken.
+      </p>
+
+      <p>
+        Belangrijk is dat rechte lijnen die door de oorsprong gaan recht blijven
+        en dat onderlinge lineaire relaties behouden blijven.
+      </p>
+
+      <h3>Schalen</h3>
+
+      <p>
+        De eenvoudigste lineaire transformaties veranderen alleen de grootte.
+        Bijvoorbeeld:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}3 & 0 \\\\ 0 & 2\\end{pmatrix}</p>
+
+      <p>
+        Dan wordt:
+      </p>
+
+      <p class="formula">(x,y) → (3x,2y)</p>
+
+      <p>
+        Het vlak wordt horizontaal drie keer en verticaal twee keer uitgerekt.
+        Omdat de oorsprong vast blijft en de componenten lineair worden geschaald,
+        is dit een lineaire transformatie.
+      </p>
+
+      <p>
+        Als beide richtingen dezelfde factor krijgen, spreken we van uniforme
+        schaling:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}k & 0 \\\\ 0 & k\\end{pmatrix}</p>
+
+      <p>
+        Dan geldt eenvoudig:
+      </p>
+
+      <p class="formula">T(v) = kv</p>
+
+      <h3>Spiegelen</h3>
+
+      <p>
+        Ook een spiegeling kan lineair zijn. Spiegeling in de x-as verandert het
+        teken van de y-component:
+      </p>
+
+      <p class="formula">T(x,y) = (x,−y)</p>
+
+      <p>
+        De bijbehorende matrix is:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}1 & 0 \\\\ 0 & -1\\end{pmatrix}</p>
+
+      <p>
+        Spiegeling in de y-as wordt:
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}-1 & 0 \\\\ 0 & 1\\end{pmatrix}</p>
+
+      <p>
+        In beide gevallen blijft de oorsprong op zijn plaats en blijven
+        vectoroptelling en scalaire vermenigvuldiging behouden.
+      </p>
+
+      <h3>Rotatie</h3>
+
+      <p>
+        Een rotatie rond de oorsprong is eveneens een lineaire transformatie.
+        Voor een rotatie over een hoek <span class="formula-inline">θ</span> is
+        de matrix:
+      </p>
+
+      <p class="formula">R(θ) = \\begin{pmatrix}\\cos(θ) & −\\sin(θ) \\\\ \\sin(θ) & \\cos(θ)\\end{pmatrix}</p>
+
+      <p>
+        Deze matrix werkt op iedere vector met dezelfde draaihoek.
+      </p>
+
+      <p>
+        Bijvoorbeeld bij een kwartslag tegen de klok in:
+      </p>
+
+      <p class="formula">R(90°) = \\begin{pmatrix}0 & -1 \\\\ 1 & 0\\end{pmatrix}</p>
+
+      <p>
+        De vector
+        <span class="formula-inline">(1,0)</span> wordt dan:
+      </p>
+
+      <p class="formula">R(90°)\\begin{pmatrix}1 \\\\ 0\\end{pmatrix} = \\begin{pmatrix}0 \\\\ 1\\end{pmatrix}</p>
+
+      <p>
+        We hoeven de trigonometrische afleiding van deze matrix hier niet opnieuw
+        op te bouwen; het belangrijke nieuwe inzicht is dat een geometrische
+        rotatie als een matrixbewerking kan worden vastgelegd.
+      </p>
+
+      <h3>Schuintrekken</h3>
+
+      <p>
+        Een andere eenvoudige lineaire transformatie is een <strong>shear</strong>,
+        of schuintrekking.
+      </p>
+
+      <p class="formula">A = \\begin{pmatrix}1 & k \\\\ 0 & 1\\end{pmatrix}</p>
+
+      <p>
+        Deze matrix geeft:
+      </p>
+
+      <p class="formula">(x,y) → (x + ky,y)</p>
+
+      <p>
+        Horizontale lijnen blijven horizontaal, terwijl verticale lijnen schuin
+        komen te staan. Ook hier geldt dat de oorsprong vast blijft en de
+        transformatie lineair is.
+      </p>
+
+      <h3>Combineren van transformaties</h3>
+
+      <p>
+        In 4.5 zagen we dat matrixvermenigvuldiging de compositie van bewerkingen
+        beschrijft. Nu kunnen we dat geometrisch interpreteren.
+      </p>
+
+      <p>
+        Stel dat eerst <span class="formula-inline">B</span> werkt en daarna
+        <span class="formula-inline">A</span>. Dan:
+      </p>
+
+      <p class="formula">v → Bv → A(Bv)</p>
+
+      <p>
+        En volgens de associatieve matrixvermenigvuldiging:
+      </p>
+
+      <p class="formula">A(Bv) = (AB)v</p>
+
+      <p>
+        De samengestelde transformatie wordt dus voorgesteld door
+        <span class="formula-inline">AB</span>.
+      </p>
+
+      <div class="callout">
+        <p><strong>Matrixvermenigvuldiging is niet zomaar een rekenregel: ze beschrijft het na elkaar uitvoeren van lineaire transformaties.</strong></p>
+      </div>
+
+      <h3>Waarom de volgorde belangrijk is</h3>
+
+      <p>
+        Omdat eerst <span class="formula-inline">B</span> en daarna
+        <span class="formula-inline">A</span> wordt uitgevoerd, krijgen we
+        <span class="formula-inline">AB</span>.
+      </p>
+
+      <p>
+        Als we de volgorde omdraaien, krijgen we:
+      </p>
+
+      <p class="formula">BA</p>
+
+      <p>
+        In het algemeen geldt:
+      </p>
+
+      <p class="formula">AB ≠ BA</p>
+
+      <p>
+        Geometrisch is dat logisch. Eerst roteren en daarna schalen hoeft niet
+        hetzelfde resultaat te geven als eerst schalen en daarna roteren.
+      </p>
+
+      <p>
+        De volgorde van matrixvermenigvuldiging bevat dus informatie over de
+        volgorde van de fysieke of geometrische bewerkingen.
+      </p>
+
+      <h3>Wat blijft behouden?</h3>
+
+      <p>
+        Een lineaire transformatie behoudt per definitie lineaire structuur.
+        Dat betekent onder meer:
+      </p>
+
+      <ul>
+        <li>de nulvector blijft de nulvector;</li>
+        <li>vectoroptelling blijft compatibel met de transformatie;</li>
+        <li>scalaire vermenigvuldiging blijft compatibel met de transformatie;</li>
+        <li>rechte lijnen door de oorsprong worden opnieuw rechte lijnen door de oorsprong.</li>
+      </ul>
+
+      <p>
+        Niet iedere geometrische eigenschap hoeft behouden te blijven. Een
+        transformatie kan bijvoorbeeld lengtes veranderen of hoeken vervormen.
+      </p>
+
+      <p>
+        Of een specifieke eigenschap behouden blijft, hangt af van de matrix.
+        Een rotatie bewaart bijvoorbeeld lengtes en hoeken, terwijl een algemene
+        schaling dat niet noodzakelijk doet.
+      </p>
+
+      <h3>Lineaire transformatie versus algemene verandering</h3>
+
+      <p>
+        Het is nuttig om drie situaties uit elkaar te houden.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Verandering</th>
+            <th>Voorbeeld</th>
+            <th>Lineair?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Schaling vanuit de oorsprong</td>
+            <td><span class="formula-inline">T(x,y) = (2x,3y)</span></td>
+            <td>Ja</td>
+          </tr>
+          <tr>
+            <td>Rotatie rond de oorsprong</td>
+            <td><span class="formula-inline">T(v) = Rv</span></td>
+            <td>Ja</td>
+          </tr>
+          <tr>
+            <td>Verschuiving</td>
+            <td><span class="formula-inline">T(x,y) = (x+1,y)</span></td>
+            <td>Niet in het algemeen</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Vooral de oorsprong is een snelle eerste controle: een niet-nul verschuiving
+        stuurt de oorsprong weg en kan daarom geen lineaire transformatie zijn.
+      </p>
+
+      <h3>Een vaste werkwijze</h3>
+
+      <p>
+        Wanneer je een transformatie krijgt, kun je deze stappen volgen:
+      </p>
+
+      <ol>
+        <li>Bepaal wat de invoer en uitvoer zijn.</li>
+        <li>Controleer of de transformatie de nulvector naar de nulvector stuurt.</li>
+        <li>Test eventueel behoud van optelling en scalaire vermenigvuldiging.</li>
+        <li>Schrijf de transformatie als matrixbewerking wanneer dat mogelijk is.</li>
+        <li>Bekijk wat de matrix met de standaardbasisvectoren doet.</li>
+        <li>Vertaal de matrix naar een geometrische bewerking: schaling, spiegeling, rotatie of shear.</li>
+        <li>Bij meerdere matrices: bepaal welke transformatie eerst wordt uitgevoerd.</li>
+      </ol>
+
+      <p>
+        De basisregel is steeds dezelfde:
+        <strong>ga heen en weer tussen de algebraïsche matrix en het geometrische beeld.</strong>
+      </p>
+
+      <h3>Veelgemaakte fouten</h3>
+
+      <ul>
+        <li>
+          <strong>Denken dat iedere functie van vectoren lineair is.</strong>
+          Een transformatie moet zowel optelling als scalaire vermenigvuldiging behouden.
+        </li>
+        <li>
+          <strong>Alleen controleren dat de nulvector naar de nulvector gaat.</strong>
+          Dat is noodzakelijk, maar op zichzelf niet voldoende om lineariteit te bewijzen.
+        </li>
+        <li>
+          <strong>Een verschuiving lineair noemen.</strong>
+          Een niet-nul verschuiving verplaatst de oorsprong.
+        </li>
+        <li>
+          <strong>De matrixkolommen verwarren met rijen.</strong>
+          Bij <span class="formula-inline">T(v)=Av</span> zijn de kolommen van
+          <span class="formula-inline">A</span> de beelden van de standaardbasisvectoren.
+        </li>
+        <li>
+          <strong>De volgorde van transformaties vergeten.</strong>
+          In het algemeen is <span class="formula-inline">AB ≠ BA</span>.
+        </li>
+        <li>
+          <strong>Denken dat lineair betekent dat alle afstanden behouden blijven.</strong>
+          Lineair betekent behoud van optelling en scalaire vermenigvuldiging,
+          niet automatisch behoud van lengte of hoek.
+        </li>
+      </ul>
+
+      <h3>Van lineaire transformaties naar invertibiliteit</h3>
+
+      <p>
+        We kunnen nu een matrix zien als een regel die het hele vectorvlak
+        systematisch verandert. Maar er blijft een belangrijke vraag over:
+      </p>
+
+      <div class="callout">
+        <p><strong>Kunnen we een transformatie altijd terugdraaien?</strong></p>
+      </div>
+
+      <p>
+        Een schaling met factor 2 kunnen we terugdraaien met een schaling met
+        factor <span class="formula-inline">1/2</span>. Een rotatie kunnen we
+        terugdraaien met de tegengestelde rotatie.
+      </p>
+
+      <p>
+        Maar sommige transformaties kunnen informatie samendrukken. Bijvoorbeeld:
+      </p>
+
+      <p class="formula">T(x,y) = (x,0)</p>
+
+      <p>
+        Zowel <span class="formula-inline">(2,1)</span> als
+        <span class="formula-inline">(2,5)</span> worden dan afgebeeld op
+        <span class="formula-inline">(2,0)</span>.
+      </p>
+
+      <p>
+        Als twee verschillende invoervectoren hetzelfde beeld krijgen, kunnen we
+        uit het beeld niet meer achterhalen welke invoer oorspronkelijk aanwezig was.
+      </p>
+
+      <p>
+        Dat brengt ons rechtstreeks naar de volgende milestone.
+      </p>
+
+      <h3>Van lineaire transformaties naar determinanten en inverse matrices</h3>
+
+      <p>
+        In 4.8 onderzoeken we wanneer een lineaire transformatie informatie
+        verliest en wanneer ze omkeerbaar is. De <strong>determinant</strong>
+        geeft daarbij een belangrijke aanwijzing in het geval van vierkante
+        matrices.
+      </p>
+
+      <p>
+        We zullen ook de <strong>inverse matrix</strong> invoeren als de matrix
+        die een omkeerbare transformatie terugdraait.
+      </p>
+
+      <p>
+        Het inzicht van 4.7 vormt daarvoor de basis:
+        <strong>een matrix is niet alleen een tabel getallen, maar kan een
+        systematische verandering van vectoren voorstellen.</strong>
+      </p>
+` },  { id: "4.8", title: "Determinanten, inverse & invertibiliteit", goal: "Wanneer verliest een lineaire transformatie informatie en wanneer kunnen we haar omkeren?", theory: `` },
   { id: "4.9", title: "Vectorruimten & deelruimten", goal: "Wat maakt een verzameling vectoren tot een ruimte waarin we lineair kunnen rekenen?", theory: `` },
   { id: "4.10", title: "Lineaire combinaties, onafhankelijkheid, opspanning, basis & dimensie", goal: "Hoe bouwen we een vectorruimte op uit onafhankelijke richtingen?", theory: `` },
   { id: "4.11", title: "Kern, beeld, rang & verandering van basis", goal: "Welke informatie behoudt een lineaire transformatie en hoe verandert haar beschrijving bij een andere basis?", theory: `` },
