@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title desc">
+  <title id="title">Anatomie van een matrix</title>
+  <desc id="desc">Een 2 bij 3 matrix met een gemarkeerde rij, kolom en element, plus de afmetingen.</desc>
+  <rect width="900" height="440" rx="18" fill="#0d0b08"/>
+  <text x="42" y="46" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#e6c77a">De anatomie van een matrix</text>
+  <text x="42" y="76" font-family="system-ui, sans-serif" font-size="16" fill="#cbb98a">Een matrix is een rooster: de positie van elk element hoort bij de informatie.</text>
+  <g font-family="serif" font-size="34" fill="#fff6df">
+    <text x="155" y="170">A =</text>
+    <text x="270" y="170">(</text><text x="620" y="170">)</text>
+    <text x="325" y="170">2</text><text x="425" y="170">5</text><text x="525" y="170">7</text>
+    <text x="325" y="250">1</text><text x="425" y="250">4</text><text x="525" y="250">6</text>
+  </g>
+  <rect x="298" y="130" width="90" height="62" rx="8" fill="#e6c77a" fill-opacity="0.16" stroke="#e6c77a" stroke-width="3"/>
+  <rect x="405" y="130" width="90" height="142" rx="8" fill="#6ea8fe" fill-opacity="0.13" stroke="#6ea8fe" stroke-width="3"/>
+  <rect x="298" y="205" width="290" height="62" rx="8" fill="#7dcea0" fill-opacity="0.10" stroke="#7dcea0" stroke-width="3"/>
+  <text x="343" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#e6c77a">rij 1</text>
+  <text x="450" y="350" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#7dcea0">rij 2</text>
+  <text x="450" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" fill="#6ea8fe">kolom 2</text>
+  <text x="325" y="112" font-family="system-ui, sans-serif" font-size="17" fill="#e6c77a">a₁₁ = 2</text>
+  <line x1="388" y1="116" x2="342" y2="133" stroke="#e6c77a" stroke-width="2"/>
+  <rect x="665" y="125" width="185" height="115" rx="14" fill="#16130e" stroke="#e6c77a"/>
+  <text x="757" y="157" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#e6c77a">afmetingen</text>
+  <text x="757" y="195" text-anchor="middle" font-family="serif" font-size="27" fill="#fff6df">2 × 3</text>
+  <text x="757" y="221" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#cbb98a">2 rijen × 3 kolommen</text>
+</svg>
