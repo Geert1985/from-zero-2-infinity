@@ -37,9 +37,9 @@ const COURSE = {
     {
       id: 4,
       title: "Lineaire Algebra",
-      short: "Vectoren en ruimtes",
-      unlock: "Matrices, vectorruimten en eigenvectoren",
-      topics: ["Vectoren & matrices", "Vectorruimten", "Eigenwaarden"]
+      short: "Van vectoren naar lineaire structuren",
+      unlock: "Vectoren, matrices, lineaire transformaties en eigenrichtingen",
+      topics: ["Vectoren & inwendig product", "Matrices & lineaire transformaties", "Lineaire stelsels", "Vectorruimten & basis", "Kern, beeld & rang", "Orthogonaliteit", "Eigenwaarden & diagonalisatie"]
     },
     {
       id: 5,
@@ -70,7 +70,7 @@ const PHASE_BLURB = {
   1: "Van nul kennis van getallen tot de poort van algebra.",
   2: "Van concrete getallen naar variabelen, vormen, functies en goniometrie. Daarna opent de poort naar calculus.",
   3: "Van functies naar verandering: limieten, afgeleiden, integralen en de eerste stappen in meerdere variabelen.",
-  4: "Van punten naar richtingen: vectoren, matrices, vectorruimten en de invariante richtingen van een transformatie.",
+  4: "Van richtingen naar structuren: vectoren, matrices, lineaire transformaties, vectorruimten en eigenrichtingen.",
   5: "Complexe getallen, dynamische systemen en golven: de taal achter oscillatoren en de Schrödingervergelijking.",
   6: "Structuur boven voorstelling: groepen, topologische ruimten en tensoren als taal voor Fase 7.",
   7: "Hoe moderne wiskunde fundamentele interacties beschrijft."
