@@ -39,7 +39,7 @@ const COURSE = {
       title: "Lineaire Algebra",
       short: "Van vectoren naar lineaire structuren",
       unlock: "Vectoren, matrices, lineaire transformaties en eigenrichtingen",
-      topics: ["Vectoren & inwendig product", "Matrices & lineaire transformaties", "Lineaire stelsels", "Vectorruimten & basis", "Kern, beeld & rang", "Orthogonaliteit", "Eigenwaarden & diagonalisatie"]
+      topics: ["Vectoren, inwendig & kruisproduct", "Matrices & lineaire transformaties", "Lineaire stelsels", "Vectorruimten & basis", "Kern, beeld, rang & verandering van basis", "Orthogonaliteit & kleinste kwadraten", "Eigenwaarden & diagonalisatie"]
     },
     {
       id: 5,
