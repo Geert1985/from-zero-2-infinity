@@ -638,7 +638,7 @@ const MILESTONES_3 = [
   `
 },
 
-   {
+  {
   id: "3.2",
   title: "Het idee van de limiet",
   goal: "Wat gebeurt er als we steeds dichterbij komen?",
@@ -662,7 +662,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{f(x_2)-f(x_1)}{x_2-x_1}
+      \\frac{f(x_2)-f(x_1)}{x_2-x_1}
     </p>
 
     <p>
@@ -706,9 +706,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{f(3)-f(2)}{3-2}
+      \\frac{f(3)-f(2)}{3-2}
       =
-      \frac{9-4}{1}
+      \\frac{9-4}{1}
       =
       5
     </p>
@@ -767,11 +767,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      10\text{ km},\quad
-      5\text{ km},\quad
-      1\text{ km},\quad
-      0{,}1\text{ km},\quad
-      0{,}01\text{ km}
+      10\\text{ km},\\;
+      5\\text{ km},\\;
+      1\\text{ km},\\;
+      0{,}1\\text{ km},\\;
+      0{,}01\\text{ km}
     </p>
 
     <p>
@@ -812,19 +812,19 @@ const MILESTONES_3 = [
 
     <p class="formula">
       x=2{,}1
-      \quad\Rightarrow\quad
+      \\;\\rightarrow\\;
       f(x)=2{,}1^2=4{,}41
     </p>
 
     <p class="formula">
       x=2{,}01
-      \quad\Rightarrow\quad
+      \\;\\rightarrow\\;
       f(x)=2{,}01^2=4{,}0401
     </p>
 
     <p class="formula">
       x=2{,}001
-      \quad\Rightarrow\quad
+      \\;\\rightarrow\\;
       f(x)=2{,}001^2=4{,}004001
     </p>
 
@@ -835,7 +835,7 @@ const MILESTONES_3 = [
     <p>We schrijven:</p>
 
     <p class="formula">
-      \lim_{x\to2}x^2=4
+      \\lim_{x\\to2}x^2=4
     </p>
 
     <p>
@@ -857,7 +857,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to a}f(x)=L
+      \\lim_{x\\to a}f(x)=L
     </p>
 
     <p>
@@ -893,295 +893,248 @@ const MILESTONES_3 = [
     </div>
 
 
-    <h3>De functiewaarde en de limiet</h3>
+    <h3>Functiewaarde en limiet zijn niet hetzelfde</h3>
 
     <p>
-      Een van de belangrijkste inzichten is dat de functiewaarde op een punt
-      niet noodzakelijk gelijk hoeft te zijn aan de limiet.
-    </p>
-
-    <p>Bekijk bijvoorbeeld:</p>
-
-    <p class="formula">
-      f(x)=\frac{x^2-4}{x-2}
+      Een belangrijk inzicht is dat de limiet niet noodzakelijk gelijk is
+      aan de werkelijke functiewaarde op het punt.
     </p>
 
     <p>
-      Als we <span class="formula-inline">x=2</span> rechtstreeks invullen,
-      krijgen we:
+      Bekijk bijvoorbeeld:
     </p>
 
     <p class="formula">
-      \frac{2^2-4}{2-2}
-      =
-      \frac{0}{0}
+      f(x)=\\frac{x^2-4}{x-2}
     </p>
 
     <p>
-      De functie is dus niet gedefinieerd voor
-      <span class="formula-inline">x=2</span>.
+      Bij <span class="formula-inline">x=2</span> wordt de noemer nul.
+      De functie is daar dus niet gedefinieerd.
     </p>
 
     <p>
-      Toch kunnen we de uitdrukking voor andere waarden van
-      <span class="formula-inline">x</span> vereenvoudigen:
+      Voor andere waarden van x kunnen we de teller ontbinden:
     </p>
 
     <p class="formula">
-      \frac{x^2-4}{x-2}
-      =
-      \frac{(x-2)(x+2)}{x-2}
-      =
-      x+2
+      x^2-4=(x-2)(x+2)
     </p>
 
     <p>
-      zolang:
+      Daardoor geldt voor
+      <span class="formula-inline">x\\neq2</span>:
     </p>
 
     <p class="formula">
-      x\neq2
+      \\frac{x^2-4}{x-2}=x+2
     </p>
 
     <p>
-      Wanneer <span class="formula-inline">x</span> dicht bij 2 komt,
-      komt <span class="formula-inline">x+2</span> dicht bij 4.
-      Daarom:
+      Wanneer x naar 2 nadert, nadert de functiewaarde dus naar 4:
     </p>
 
     <p class="formula">
-      \lim_{x\to2}
-      \frac{x^2-4}{x-2}
-      =
-      4
+      \\lim_{x\\to2}\\frac{x^2-4}{x-2}=4
+    </p>
+
+    <p>
+      De limiet bestaat dus, ook al is
+      <span class="formula-inline">f(2)</span> niet gedefinieerd.
     </p>
 
     <div class="callout">
       <p><strong>
-        Een functie kan op een punt niet gedefinieerd zijn,
-        terwijl de limiet op dat punt wel bestaat.
+        Een limiet kijkt naar het gedrag rond een punt,
+        niet noodzakelijk naar de functiewaarde precies op dat punt.
       </strong></p>
     </div>
 
-    <p>
-      Dit laat het verschil zien tussen:
-    </p>
 
-    <ul>
-      <li>de waarde van een functie op een punt;</li>
-      <li>het gedrag van de functie in de buurt van dat punt.</li>
-    </ul>
-
-
-    <h3>Waarom vullen we niet gewoon x=a in?</h3>
+    <h3>Een gat in de grafiek</h3>
 
     <p>
-      Bij een limiet onderzoeken we wat er gebeurt wanneer
-      <span class="formula-inline">x</span> <strong>naar</strong>
-      <span class="formula-inline">a</span> gaat.
+      Het vorige voorbeeld heeft een eenvoudig beeld.
     </p>
 
     <p>
-      Dat betekent niet dat we noodzakelijk
-      <span class="formula-inline">x=a</span> moeten invullen.
+      De grafiek volgt vlak bij
+      <span class="formula-inline">x=2</span> de rechte:
+    </p>
+
+    <p class="formula">
+      y=x+2
     </p>
 
     <p>
-      In het vorige voorbeeld was rechtstreeks invullen zelfs onmogelijk,
-      omdat de noemer nul werd.
+      Alleen het punt bij
+      <span class="formula-inline">x=2</span> ontbreekt.
     </p>
 
     <p>
-      De limiet kijkt daarom naar waarden <strong>rond</strong> het punt.
+      We noemen dit een <strong>gat</strong> in de grafiek.
     </p>
 
-    <div class="callout">
-      <p><strong>
-        Een limiet gaat over het gedrag in de omgeving van een punt,
-        niet noodzakelijk over de waarde op dat punt zelf.
-      </strong></p>
-    </div>
+    <p>
+      De limiet vertelt ons precies waar het ontbrekende punt zou liggen:
+    </p>
+
+    <p class="formula">
+      (2,4)
+    </p>
 
 
     <h3>Van links en van rechts</h3>
 
     <p>
-      Een punt kan vanuit twee richtingen worden benaderd.
+      Soms is het niet voldoende om alleen te weten dat
+      <span class="formula-inline">x</span> naar een bepaalde waarde gaat.
+      We moeten ook kijken <strong>van welke kant</strong> we komen.
     </p>
 
     <p>
-      Vanuit kleinere waarden van x schrijven we:
+      We kunnen een punt van links benaderen:
     </p>
 
     <p class="formula">
-      x\to a^-
+      x\\to a^-
     </p>
 
     <p>
-      Dit noemen we de <strong>linkerbenadering</strong>.
+      Dit noemen we de <strong>linkerlimiet</strong>.
     </p>
 
     <p>
-      Vanuit grotere waarden van x schrijven we:
+      Van rechts schrijven we:
     </p>
 
     <p class="formula">
-      x\to a^+
+      x\\to a^+
     </p>
 
     <p>
-      Dit noemen we de <strong>rechterbenadering</strong>.
+      Dit noemen we de <strong>rechterlimiet</strong>.
     </p>
 
     <p>
-      Voor een gewone tweezijdige limiet moeten beide richtingen naar
-      dezelfde waarde naderen.
+      Een gewone tweezijdige limiet bestaat wanneer beide overeenkomen:
     </p>
 
     <p class="formula">
-      \lim_{x\to a^-}f(x)=L
-    </p>
-
-    <p>en:</p>
-
-    <p class="formula">
-      \lim_{x\to a^+}f(x)=L
-    </p>
-
-    <p>
-      Dan geldt:
-    </p>
-
-    <p class="formula">
-      \lim_{x\to a}f(x)=L
+      \\lim_{x\\to a^-}f(x)
+      =
+      \\lim_{x\\to a^+}f(x)
     </p>
 
     <div class="callout">
       <p><strong>
         Links en rechts moeten naar dezelfde waarde naderen
-        voordat de tweezijdige limiet bestaat.
+        voordat de gewone limiet bestaat.
       </strong></p>
     </div>
 
 
-    <h3>Een limiet die niet bestaat</h3>
+    <h3>Wanneer bestaat de limiet niet?</h3>
 
     <p>
-      Stel dat een functie links van
-      <span class="formula-inline">x=0</span> naar 1 nadert,
-      maar rechts van 0 naar 3.
-    </p>
-
-    <p>Dan geldt:</p>
-
-    <p class="formula">
-      \lim_{x\to0^-}f(x)=1
+      Stel dat een functie bij
+      <span class="formula-inline">x=0</span> van links naar 2 nadert,
+      maar van rechts naar 5.
     </p>
 
     <p class="formula">
-      \lim_{x\to0^+}f(x)=3
-    </p>
-
-    <p>
-      Omdat de linker- en rechterlimiet verschillend zijn,
-      bestaat de tweezijdige limiet niet.
+      \\lim_{x\\to0^-}f(x)=2
     </p>
 
     <p class="formula">
-      \lim_{x\to0}f(x)\text{ bestaat niet}
+      \\lim_{x\\to0^+}f(x)=5
     </p>
 
     <p>
-      Dit is een belangrijk gevolg:
-      <strong>niet elke limiet bestaat</strong>.
-    </p>
-
-
-    <h3>De limiet beschrijft gedrag</h3>
-
-    <p>
-      We kunnen een limiet daarom het best zien als een uitspraak over gedrag.
-    </p>
-
-    <p>
-      We vragen niet:
-    </p>
-
-    <div class="callout">
-      <p>
-        "Welke waarde heeft de functie precies op dit punt?"
-      </p>
-    </div>
-
-    <p>
-      We vragen:
-    </p>
-
-    <div class="callout">
-      <p><strong>
-        "Welke waarde begint de functie te benaderen wanneer
-        x steeds dichter bij dit punt komt?"
-      </strong></p>
-    </div>
-
-    <p>
-      Deze manier van denken is essentieel voor de verdere calculus.
-    </p>
-
-
-    <h3>Rechtstreeks invullen</h3>
-
-    <p>
-      Niet iedere limiet is ingewikkeld.
-      Bij veel gewone functies kunnen we de waarde rechtstreeks invullen.
-    </p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">
-      \lim_{x\to3}(x^2+2x)
-    </p>
-
-    <p>
-      Invullen van <span class="formula-inline">x=3</span> geeft:
+      Omdat beide waarden verschillend zijn, bestaat de tweezijdige limiet niet.
     </p>
 
     <p class="formula">
-      3^2+2(3)
-      =
-      9+6
-      =
-      15
-    </p>
-
-    <p>Dus:</p>
-
-    <p class="formula">
-      \lim_{x\to3}(x^2+2x)=15
+      \\lim_{x\\to0}f(x)
+      \\text{ bestaat niet}
     </p>
 
     <p>
-      Voor zulke eenvoudige functies vallen functiewaarde en limiet samen.
+      Dit is belangrijk bij het onderzoeken van grafieken met sprongen
+      of andere onderbrekingen.
+    </p>
+
+
+    <h3>Een eenvoudige limiet berekenen</h3>
+
+    <p>
+      Bij veel eenvoudige functies kunnen we de waarde rechtstreeks invullen.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \\lim_{x\\to3}(2x+1)
+    </p>
+
+    <p>
+      We vullen <span class="formula-inline">x=3</span> in:
+    </p>
+
+    <p class="formula">
+      2(3)+1=7
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      \\lim_{x\\to3}(2x+1)=7
+    </p>
+
+
+    <h3>Limieten van sommen en producten</h3>
+
+    <p>
+      Voor veel gewone functies mogen we limieten term voor term behandelen.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      \\lim_{x\\to2}(x^2+3x)
+    </p>
+
+    <p>
+      We kunnen de limiet van beide termen afzonderlijk bepalen:
+    </p>
+
+    <p class="formula">
+      \\lim_{x\\to2}x^2=4
+    </p>
+
+    <p class="formula">
+      \\lim_{x\\to2}3x=6
+    </p>
+
+    <p>
+      Dus:
+    </p>
+
+    <p class="formula">
+      \\lim_{x\\to2}(x^2+3x)=10
     </p>
 
 
     <h3>De vorm 0/0</h3>
 
     <p>
-      Soms levert rechtstreeks invullen de vorm:
-    </p>
-
-    <p class="formula">
-      \frac{0}{0}
-    </p>
-
-    <p>
-      Dit betekent <strong>niet</strong> dat de limiet nul is.
-      Het betekent dat rechtstreeks invullen ons nog geen antwoord geeft.
-    </p>
-
-    <p>
-      We moeten de uitdrukking verder onderzoeken.
+      Soms geeft rechtstreeks invullen een onbruikbare vorm.
     </p>
 
     <p>
@@ -1189,101 +1142,62 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to2}
-      \frac{x^2-4}{x-2}
+      \\lim_{x\\to2}\\frac{x^2-4}{x-2}
     </p>
 
     <p>
-      Factoriseren geeft:
+      Rechtstreeks invullen geeft:
     </p>
 
     <p class="formula">
-      \frac{x^2-4}{x-2}
-      =
-      \frac{(x-2)(x+2)}{x-2}
-      =
-      x+2
+      \\frac{0}{0}
     </p>
 
     <p>
-      voor <span class="formula-inline">x\neq2</span>.
-      Daarom:
+      Dit betekent <strong>niet</strong> dat de limiet gelijk is aan nul.
+      Het betekent dat we de uitdrukking eerst verder moeten onderzoeken.
+    </p>
+
+    <p>
+      We factoriseren:
     </p>
 
     <p class="formula">
-      \lim_{x\to2}(x+2)=4
+      x^2-4=(x-2)(x+2)
+    </p>
+
+    <p>
+      Voor <span class="formula-inline">x\\neq2</span> krijgen we:
+    </p>
+
+    <p class="formula">
+      \\frac{(x-2)(x+2)}{x-2}=x+2
+    </p>
+
+    <p>
+      Daardoor:
+    </p>
+
+    <p class="formula">
+      \\lim_{x\\to2}\\frac{x^2-4}{x-2}
+      =
+      \\lim_{x\\to2}(x+2)
+      =
+      4
     </p>
 
     <div class="callout">
       <p><strong>
-        De vorm 0/0 is geen antwoord.
-        Het is een signaal dat we verder moeten onderzoeken.
+        0/0 is geen antwoord.
+        Het is een signaal dat verdere bewerking nodig kan zijn.
       </strong></p>
     </div>
 
 
-    <h3>Rekenregels voor limieten</h3>
+    <h3>Limieten die onbeperkt groeien</h3>
 
     <p>
-      Wanneer de afzonderlijke limieten bestaan, kunnen we veel
-      limieten volgens gewone algebraïsche regels behandelen.
-    </p>
-
-    <p>Voor optellen geldt:</p>
-
-    <p class="formula">
-      \lim_{x\to a}(f(x)+g(x))
-      =
-      \lim_{x\to a}f(x)
-      +
-      \lim_{x\to a}g(x)
-    </p>
-
-    <p>Voor aftrekken:</p>
-
-    <p class="formula">
-      \lim_{x\to a}(f(x)-g(x))
-      =
-      \lim_{x\to a}f(x)
-      -
-      \lim_{x\to a}g(x)
-    </p>
-
-    <p>Voor vermenigvuldigen:</p>
-
-    <p class="formula">
-      \lim_{x\to a}(f(x)g(x))
-      =
-      \left(\lim_{x\to a}f(x)\right)
-      \left(\lim_{x\to a}g(x)\right)
-    </p>
-
-    <p>Voor delen geldt:</p>
-
-    <p class="formula">
-      \lim_{x\to a}\frac{f(x)}{g(x)}
-      =
-      \frac{\lim_{x\to a}f(x)}
-      {\lim_{x\to a}g(x)}
-    </p>
-
-    <p>
-      bij een niet-nul noemerlimiet.
-    </p>
-
-    <p>
-      Deze regels maken het mogelijk om veel limieten rechtstreeks
-      algebraïsch te berekenen.
-    </p>
-
-
-    <h3>Limieten naar oneindig</h3>
-
-    <p>
-      We kunnen niet alleen onderzoeken wat er gebeurt wanneer
-      <span class="formula-inline">x</span> een bepaalde waarde nadert.
-      We kunnen ook kijken wat er gebeurt wanneer
-      <span class="formula-inline">x</span> steeds groter wordt.
+      Niet iedere limiet nadert een eindig getal.
     </p>
 
     <p>
@@ -1291,92 +1205,34 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f(x)=\frac{1}{x}
+      f(x)=\\frac{1}{x}
     </p>
 
     <p>
-      Voor steeds grotere waarden van x krijgen we:
+      Wanneer x vanuit positieve waarden naar nul gaat,
+      worden de functiewaarden steeds groter:
     </p>
 
     <p class="formula">
-      \frac{1}{10}=0{,}1
-    </p>
-
-    <p class="formula">
-      \frac{1}{100}=0{,}01
-    </p>
-
-    <p class="formula">
-      \frac{1}{1000}=0{,}001
+      \\lim_{x\\to0^+}\\frac{1}{x}=\\infty
     </p>
 
     <p>
-      De functiewaarden naderen 0.
-    </p>
-
-    <p>We schrijven:</p>
-
-    <p class="formula">
-      \lim_{x\to\infty}\frac{1}{x}=0
-    </p>
-
-    <p>
-      Hierbij is <strong>∞ geen gewoon getal</strong>.
-      We vullen dus niet letterlijk
-      <span class="formula-inline">x=\infty</span> in.
-    </p>
-
-    <p>
-      De notatie beschrijft wat er gebeurt wanneer x zonder bovengrens
-      blijft toenemen.
-    </p>
-
-
-    <h3>Wanneer de waarden onbeperkt groeien</h3>
-
-    <p>
-      Een limiet kan ook beschrijven dat functiewaarden onbeperkt groot worden.
-    </p>
-
-    <p>Bijvoorbeeld:</p>
-
-    <p class="formula">
-      f(x)=\frac{1}{x^2}
-    </p>
-
-    <p>
-      Wanneer x vanuit positieve waarden naar 0 nadert:
+      Vanuit negatieve waarden worden de functiewaarden steeds negatiever:
     </p>
 
     <p class="formula">
-      \frac{1}{0{,}1^2}=100
-    </p>
-
-    <p class="formula">
-      \frac{1}{0{,}01^2}=10\,000
-    </p>
-
-    <p class="formula">
-      \frac{1}{0{,}001^2}=1\,000\,000
+      \\lim_{x\\to0^-}\\frac{1}{x}=-\\infty
     </p>
 
     <p>
-      De waarden worden onbeperkt groot.
-    </p>
-
-    <p class="formula">
-      \lim_{x\to0^+}\frac{1}{x^2}=\infty
-    </p>
-
-    <p>
-      Ook hier betekent ∞ niet dat de functie op
-      <span class="formula-inline">x=0</span> een waarde "oneindig" heeft.
-      De functie is daar niet gedefinieerd.
+      In dit geval bestaat er geen eindige tweezijdige limiet.
     </p>
 
     <div class="callout">
       <p><strong>
-        ∞ beschrijft hier onbeperkte groei, geen gewone functiewaarde.
+        ∞ is hier geen gewoon getal.
+        Het beschrijft dat de functiewaarden onbeperkt groot worden.
       </strong></p>
     </div>
 
@@ -1384,98 +1240,72 @@ const MILESTONES_3 = [
     <h3>De grafische betekenis van een limiet</h3>
 
     <p>
-      De limiet kunnen we ook rechtstreeks op een grafiek interpreteren.
+      Op een grafiek kunnen we een limiet zien als de
+      <strong>hoogte waar de grafiek naartoe beweegt</strong>
+      wanneer we een bepaald x-waarde naderen.
     </p>
 
     <p>
-      Wanneer:
-    </p>
-
-    <p class="formula">
-      \lim_{x\to a}f(x)=L
-    </p>
-
-    <p>
-      betekent dit dat de grafiek steeds dichter bij de hoogte
-      <span class="formula-inline">L</span> komt wanneer
-      <span class="formula-inline">x</span> steeds dichter bij
-      <span class="formula-inline">a</span> komt.
-    </p>
-
-    <p>
-      De grafiek hoeft het punt
-      <span class="formula-inline">(a,L)</span> daarbij niet noodzakelijk
+      Daarbij hoeft de grafiek het betreffende punt niet daadwerkelijk
       te bevatten.
     </p>
 
-    <div class="callout">
-      <p><strong>
-        De limiet beschrijft wat de grafiek doet vlak bij een punt.
-      </strong></p>
-    </div>
-
-
-    <h3>Waarom hebben we limieten nodig?</h3>
-
     <p>
-      We kunnen nu terugkeren naar de vraag waarmee deze milestone begon.
-    </p>
-
-    <p>
-      In 3.1 berekenden we de gemiddelde veranderingssnelheid:
-    </p>
-
-    <p class="formula">
-      \frac{f(x_2)-f(x_1)}
-      {x_2-x_1}
-    </p>
-
-    <p>
-      Maar we wilden weten hoe snel een functie
-      <strong>op één punt</strong> verandert.
-    </p>
-
-    <p>
-      Daarvoor brengen we de twee punten steeds dichter bij elkaar.
-      We kunnen het tweede punt bijvoorbeeld schrijven als
-      <span class="formula-inline">x+h</span>.
-    </p>
-
-    <p>
-      De gemiddelde veranderingssnelheid wordt dan:
-    </p>
-
-    <p class="formula">
-      \frac{f(x+h)-f(x)}{h}
-    </p>
-
-    <p>
-      Nu laten we <span class="formula-inline">h</span> naar nul naderen:
-    </p>
-
-    <p class="formula">
-      \lim_{h\to0}
-      \frac{f(x+h)-f(x)}{h}
-    </p>
-
-    <p>
-      We hebben daarmee nog niet de afgeleide berekend.
-      We hebben het probleem alleen zo geformuleerd dat een
-      <strong>ogenblikkelijke veranderingssnelheid</strong> mogelijk wordt.
+      Een gat kan dus een limiet hebben.
+      Een sprong kan een tweezijdige limiet missen.
+      Een verticale asymptoot kan leiden tot onbeperkte groei.
     </p>
 
     <div class="callout">
       <p><strong>
-        De limiet vormt de brug van gemiddelde verandering
-        naar verandering op één punt.
+        De limiet gaat over gedrag in de buurt van een punt.
       </strong></p>
     </div>
 
 
-    <h3>Een laatste voorbeeld: de afgeleide komt in zicht</h3>
+    <h3>De limiet van een gemiddelde verandering</h3>
 
     <p>
-      Neem opnieuw:
+      In 3.1 zagen we de gemiddelde veranderingssnelheid:
+    </p>
+
+    <p class="formula">
+      \\frac{\\Delta y}{\\Delta x}
+    </p>
+
+    <p>
+      Voor een functie kunnen we die schrijven als:
+    </p>
+
+    <p class="formula">
+      \\frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Als we het interval steeds kleiner maken, betekent dit dat
+      <span class="formula-inline">h</span> naar nul gaat.
+    </p>
+
+    <p class="formula">
+      \\lim_{h\\to0}
+      \\frac{f(x+h)-f(x)}{h}
+    </p>
+
+    <p>
+      Deze limiet beschrijft de veranderingssnelheid
+      <strong>op het punt zelf</strong>.
+    </p>
+
+    <p>
+      Daarmee komen we rechtstreeks bij het begrip
+      <strong>afgeleide</strong>.
+    </p>
+
+
+    <h3>Een voorbeeld met f(x)=x²</h3>
+
+    <p>
+      Neem:
     </p>
 
     <p class="formula">
@@ -1489,19 +1319,27 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{(x+h)^2-x^2}{h}
+      \\frac{(x+h)^2-x^2}{h}
     </p>
 
     <p>
-      Uitwerken geeft:
+      We werken het kwadraat uit:
     </p>
 
     <p class="formula">
-      \frac{x^2+2xh+h^2-x^2}{h}
+      (x+h)^2=x^2+2xh+h^2
+    </p>
+
+    <p>
+      Daardoor wordt de verhouding:
     </p>
 
     <p class="formula">
-      \frac{2xh+h^2}{h}
+      \\frac{x^2+2xh+h^2-x^2}{h}
+    </p>
+
+    <p>
+      Na vereenvoudigen:
     </p>
 
     <p class="formula">
@@ -1509,8 +1347,8 @@ const MILESTONES_3 = [
     </p>
 
     <p>
-      Wanneer <span class="formula-inline">h</span> steeds dichter bij nul komt,
-      komt deze uitdrukking steeds dichter bij:
+      Wanneer <span class="formula-inline">h</span> naar nul gaat,
+      nadert deze waarde naar:
     </p>
 
     <p class="formula">
@@ -1519,8 +1357,8 @@ const MILESTONES_3 = [
 
     <p>
       We hebben hiermee het mechanisme achter de afgeleide al zichtbaar gemaakt.
-      De formele definitie en de praktische regels voor afgeleiden komen in
-      de volgende milestones.
+      De formele definitie en de praktische regels voor afgeleiden komen
+      in de volgende milestones.
     </p>
 
     <div class="callout">
@@ -1657,7 +1495,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to2}x^2=4
+      \\lim_{x\\to2}x^2=4
     </p>
 
     <p>
@@ -1693,19 +1531,19 @@ const MILESTONES_3 = [
     <p><strong>1. De functiewaarde bestaat:</strong></p>
 
     <p class="formula">
-      f(a)\text{ bestaat}
+      f(a)\\text{ bestaat}
     </p>
 
     <p><strong>2. De limiet bestaat:</strong></p>
 
     <p class="formula">
-      \lim_{x\to a}f(x)\text{ bestaat}
+      \\lim_{x\\to a}f(x)\\text{ bestaat}
     </p>
 
     <p><strong>3. De limiet is gelijk aan de functiewaarde:</strong></p>
 
     <p class="formula">
-      \lim_{x\to a}f(x)=f(a)
+      \\lim_{x\\to a}f(x)=f(a)
     </p>
 
     <p>
@@ -1752,7 +1590,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to2}(x^2+3x-1)=9
+      \\lim_{x\\to2}(x^2+3x-1)=9
     </p>
 
     <p>
@@ -1760,7 +1598,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to2}f(x)=f(2)=9
+      \\lim_{x\\to2}f(x)=f(2)=9
     </p>
 
     <p>
@@ -1776,7 +1614,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f(x)=\frac{x^2-4}{x-2}
+      f(x)=\\frac{x^2-4}{x-2}
     </p>
 
     <p>
@@ -1789,7 +1627,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{x^2-4}{x-2}=x+2
+      \\frac{x^2-4}{x-2}=x+2
     </p>
 
     <p>
@@ -1797,7 +1635,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to2}f(x)=4
+      \\lim_{x\\to2}f(x)=4
     </p>
 
     <p>
@@ -1835,7 +1673,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to2}f(x)=f(2)=4
+      \\lim_{x\\to2}f(x)=f(2)=4
     </p>
 
     <p>
@@ -1862,11 +1700,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to0^-}f(x)=1
+      \\lim_{x\\to0^-}f(x)=1
     </p>
 
     <p class="formula">
-      \lim_{x\to0^+}f(x)=3
+      \\lim_{x\\to0^+}f(x)=3
     </p>
 
     <p>
@@ -1897,7 +1735,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f(x)=\frac{1}{x}
+      f(x)=\\frac{1}{x}
     </p>
 
     <p>
@@ -1911,7 +1749,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to0^+}\frac{1}{x}=\infty
+      \\lim_{x\\to0^+}\\frac{1}{x}=\\infty
     </p>
 
     <p>
@@ -1919,7 +1757,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{x\to0^-}\frac{1}{x}=-\infty
+      \\lim_{x\\to0^-}\\frac{1}{x}=-\\infty
     </p>
 
     <p>
@@ -1998,7 +1836,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f(x)=\sqrt{x}
+      f(x)=\\sqrt{x}
     </p>
 
     <p>
@@ -2010,7 +1848,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f(x)=\frac{x+1}{x-3}
+      f(x)=\\frac{x+1}{x-3}
     </p>
 
     <p>
@@ -2018,7 +1856,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      x\neq3
+      x\\neq3
     </p>
 
     <p>
@@ -2059,9 +1897,8 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{f(x)}{g(x)}
-      \qquad
-      \text{met }g(x)\neq0
+      \\frac{f(x)}{g(x)}
+      \\text{ met }g(x)\\neq0
     </p>
 
     <p>
@@ -2148,7 +1985,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      0^\circ\text{C}
+      0^\\circ\\text{C}
     </p>
 
     <p>
@@ -2281,11 +2118,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \text{functiewaarde}
-      \rightarrow
-      \text{limiet}
-      \rightarrow
-      \text{continuïteit}
+      \\text{functiewaarde}
+      \\rightarrow
+      \\text{limiet}
+      \\rightarrow
+      \\text{continuïteit}
     </p>
 
     <p>
@@ -2293,7 +2130,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \frac{\Delta y}{\Delta x}
+      \\frac{\\Delta y}{\\Delta x}
     </p>
 
     <p>
@@ -2301,8 +2138,8 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \lim_{h\to0}
-      \frac{f(x+h)-f(x)}{h}
+      \\lim_{h\\to0}
+      \\frac{f(x+h)-f(x)}{h}
     </p>
 
     <p>
@@ -2332,13 +2169,16 @@ const MILESTONES_3 = [
         Een functie is continu in een punt wanneer de functiewaarde bestaat,
         de limiet bestaat en beide gelijk zijn:
       </p>
+
       <p class="formula">
-        \lim_{x\to a}f(x)=f(a)
+        \\lim_{x\\to a}f(x)=f(a)
       </p>
+
       <p>
         Een gat, een sprong of een verticale asymptoot verbreekt die
         continuïteit.
       </p>
+
       <p>
         Continuïteit verbindt daarmee het gedrag van een functie in de buurt
         van een punt met de werkelijke functiewaarde op dat punt.
