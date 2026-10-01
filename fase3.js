@@ -6495,7 +6495,7 @@ const MILESTONES_3 = [
     id: "3.12",
     title: "Toepassingen van integralen",
     goal: "Hoe tellen we oneindig veel kleine bijdragen op?",
-    theory: \`
+    theory: `
     <h2>Toepassingen van integralen</h2>
 
     <p><strong>Wat gaan we ontdekken?</strong></p>
@@ -6537,9 +6537,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{totale hoeveelheid}
+      \\text{totale hoeveelheid}
       =
-      \\\\int_a^b \\\\text{kleine bijdrage}
+      \\int_a^b \\text{kleine bijdrage}
     </p>
 
     <p>
@@ -6548,7 +6548,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta A \\\\approx f(x)\\\\,\\\\Delta x
+      \\Delta A \\approx f(x)\\,\\Delta x
     </p>
 
     <p>
@@ -6557,7 +6557,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      A=\\\\int_a^b f(x)\\\\,dx
+      A=\\int_a^b f(x)\\,dx
     </p>
 
     <p>
@@ -6581,7 +6581,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      A=\\\\int_a^b f(x)\\\\,dx
+      A=\\int_a^b f(x)\\,dx
     </p>
 
     <p>
@@ -6604,7 +6604,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      F(x)=\\\\frac{x^3}{3}
+      F(x)=\\frac{x^3}{3}
     </p>
 
     <p>
@@ -6612,9 +6612,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      A=\\\\int_0^2 x^2\\\\,dx
+      A=\\int_0^2 x^2\\,dx
       =F(2)-F(0)
-      =\\\\frac{8}{3}
+      =\\frac{8}{3}
     </p>
 
     <p>
@@ -6634,7 +6634,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx
+      \\int_a^b f(x)\\,dx
     </p>
 
     <p>
@@ -6665,7 +6665,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      A=\\\\int_a^b |f(x)|\\\\,dx
+      A=\\int_a^b |f(x)|\\,dx
     </p>
 
     <p>
@@ -6684,9 +6684,9 @@ const MILESTONES_3 = [
     <p class="formula">
       A
       =
-      \\\\int_a^c f(x)\\\\,dx
+      \\int_a^c f(x)\\,dx
       -
-      \\\\int_c^b f(x)\\\\,dx
+      \\int_c^b f(x)\\,dx
     </p>
 
     <p>
@@ -6716,9 +6716,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta A
-      \\\\approx
-      [f(x)-g(x)]\\\\,\\\\Delta x
+      \\Delta A
+      \\approx
+      [f(x)-g(x)]\\,\\Delta x
     </p>
 
     <p>
@@ -6726,7 +6726,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      A=\\\\int_a^b [f(x)-g(x)]\\\\,dx
+      A=\\int_a^b [f(x)-g(x)]\\,dx
     </p>
 
     <div class="callout">
@@ -6755,8 +6755,8 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      A=\\\\int_0^3 [(x+2)-x]\\\\,dx
-      =\\\\int_0^3 2\\\\,dx
+      A=\\int_0^3 [(x+2)-x]\\,dx
+      =\\int_0^3 2\\,dx
       =6
     </p>
 
@@ -6798,7 +6798,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      s(b)-s(a)=\\\\int_a^b v(t)\\\\,dt
+      s(b)-s(a)=\\int_a^b v(t)\\,dt
     </p>
 
     <p>
@@ -6819,9 +6819,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta s
+      \\Delta s
       =
-      \\\\int_0^2 60\\\\,dt
+      \\int_0^2 60\\,dt
       =
       120
     </p>
@@ -6848,7 +6848,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\Delta s=\\\\int_a^b v(t)\\\\,dt
+      \\Delta s=\\int_a^b v(t)\\,dt
     </p>
 
     <p>
@@ -6856,7 +6856,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      d=\\\\int_a^b |v(t)|\\\\,dt
+      d=\\int_a^b |v(t)|\\,dt
     </p>
 
     <p>
@@ -6890,7 +6890,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_0^4 (t-2)\\\\,dt
+      \\int_0^4 (t-2)\\,dt
       =0
     </p>
 
@@ -6904,9 +6904,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_0^2 |t-2|\\\\,dt
+      \\int_0^2 |t-2|\\,dt
       +
-      \\\\int_2^4 |t-2|\\\\,dt
+      \\int_2^4 |t-2|\\,dt
       =4
     </p>
 
@@ -6934,7 +6934,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      dV\\\\approx A(x)\\\\,dx
+      dV\\approx A(x)\\,dx
     </p>
 
     <p>
@@ -6942,7 +6942,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      V=\\\\int_a^b A(x)\\\\,dx
+      V=\\int_a^b A(x)\\,dx
     </p>
 
     <div class="callout">
@@ -6961,7 +6961,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      A(x)=\\\\pi r^2
+      A(x)=\\pi r^2
     </p>
 
     <p>
@@ -6969,7 +6969,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      V=\\\\int_0^h \\\\pi r^2\\\\,dx
+      V=\\int_0^h \\pi r^2\\,dx
     </p>
 
     <p>
@@ -6977,7 +6977,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      V=\\\\pi r^2h
+      V=\\pi r^2h
     </p>
 
     <p>
@@ -6999,7 +6999,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      V=\\\\int_a^b A(x)\\\\,dx
+      V=\\int_a^b A(x)\\,dx
     </p>
 
     <p>
@@ -7028,10 +7028,10 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f_{\\\\text{gem}}
+      f_{\\text{gem}}
       =
-      \\\\frac{1}{b-a}
-      \\\\int_a^b f(x)\\\\,dx
+      \\frac{1}{b-a}
+      \\int_a^b f(x)\\,dx
     </p>
 
     <p>
@@ -7055,16 +7055,16 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      f_{\\\\text{gem}}
+      f_{\\text{gem}}
       =
-      \\\\frac{1}{4}
-      \\\\int_0^4 x\\\\,dx
+      \\frac{1}{4}
+      \\int_0^4 x\\,dx
     </p>
 
     <p class="formula">
       =
-      \\\\frac{1}{4}
-      \\\\left[\\\\frac{x^2}{2}\\\\right]_0^4
+      \\frac{1}{4}
+      \\left[\\frac{x^2}{2}\\right]_0^4
       =2
     </p>
 
@@ -7090,9 +7090,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{verplaatsing}
+      \\text{verplaatsing}
       =
-      \\\\int \\\\text{snelheid}\\\\,dt
+      \\int \\text{snelheid}\\,dt
     </p>
 
     <p>
@@ -7102,7 +7102,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      m=\\\\int_a^b q(t)\\\\,dt
+      m=\\int_a^b q(t)\\,dt
     </p>
 
     <p>
@@ -7110,9 +7110,9 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\frac{\\\\text{kg}}{\\\\text{s}}\\\\times\\\\text{s}
+      \\frac{\\text{kg}}{\\text{s}}\\times\\text{s}
       =
-      \\\\text{kg}
+      \\text{kg}
     </p>
 
     <div class="callout">
@@ -7152,19 +7152,19 @@ const MILESTONES_3 = [
     <ul>
       <li>
         kleine oppervlakte:
-        <span class="formula-inline">f(x)\\\\,dx</span>
+        <span class="formula-inline">f(x)\\,dx</span>
       </li>
       <li>
         kleine verplaatsing:
-        <span class="formula-inline">v(t)\\\\,dt</span>
+        <span class="formula-inline">v(t)\\,dt</span>
       </li>
       <li>
         klein volume:
-        <span class="formula-inline">A(x)\\\\,dx</span>
+        <span class="formula-inline">A(x)\\,dx</span>
       </li>
       <li>
         kleine hoeveelheid uit een stroom:
-        <span class="formula-inline">q(t)\\\\,dt</span>
+        <span class="formula-inline">q(t)\\,dt</span>
       </li>
     </ul>
 
@@ -7250,7 +7250,7 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\int_a^b f(x)\\\\,dx=F(b)-F(a)
+      \\int_a^b f(x)\\,dx=F(b)-F(a)
     </p>
 
     <p>
@@ -7262,11 +7262,11 @@ const MILESTONES_3 = [
     </p>
 
     <p class="formula">
-      \\\\text{kleine bijdragen}
-      \\\\rightarrow
-      \\\\text{integraal}
-      \\\\rightarrow
-      \\\\text{totale grootheid}
+      \\text{kleine bijdragen}
+      \\rightarrow
+      \\text{integraal}
+      \\rightarrow
+      \\text{totale grootheid}
     </p>
 
     <div class="callout">
@@ -7312,7 +7312,7 @@ const MILESTONES_3 = [
     <p>
       Dat is het vertrekpunt van 3.13: functies van meerdere variabelen.
     </p>
-  \`
+  `
   },
 
   {
