@@ -7319,7 +7319,887 @@ const MILESTONES_3 = [
     id: "3.13",
     title: "Functies van meerdere variabelen",
     goal: "Wat verandert er als meerdere grootheden tegelijk veranderen?",
-    theory: ``
+    theory: \`
+    <h2>Functies van meerdere variabelen</h2>
+
+    <p><strong>Wat gaan we ontdekken?</strong></p>
+    <ul>
+      <li>Wat verandert er wanneer een grootheid van meerdere invoeren afhangt?</li>
+      <li>Hoe beschrijven we een functie van twee of meer variabelen?</li>
+      <li>Hoe kunnen we een functie van twee variabelen geometrisch voorstellen?</li>
+      <li>Wat betekent veranderen in één richting terwijl andere variabelen vast blijven?</li>
+      <li>Hoe ontstaat het idee van een partiële afgeleide?</li>
+      <li>Wat betekent de gradiënt van een functie?</li>
+      <li>Waarom hebben we voor verandering in meerdere richtingen uiteindelijk vectoren nodig?</li>
+    </ul>
+
+    <p>
+      In de vorige milestones beschreven we functies meestal met één
+      onafhankelijke variabele:
+    </p>
+
+    <p class="formula">
+      y=f(x)
+    </p>
+
+    <p>
+      In 3.12 zagen we al dat echte toepassingen vaak meerdere grootheden
+      tegelijk kunnen bevatten. Denk bijvoorbeeld aan temperatuur:
+    </p>
+
+    <p class="formula">
+      T=T(x,y,t)
+    </p>
+
+    <p>
+      De temperatuur kan afhangen van de plaats
+      <span class="formula-inline">x</span>,
+      de plaats <span class="formula-inline">y</span>
+      én het tijdstip <span class="formula-inline">t</span>.
+    </p>
+
+    <div class="callout">
+      <p><strong>De nieuwe vraag:</strong></p>
+      <p>
+        Hoe beschrijven en meten we verandering wanneer meerdere variabelen
+        tegelijk invloed hebben op een grootheid?
+      </p>
+    </div>
+
+    <h3>Van één invoer naar twee invoeren</h3>
+
+    <p>
+      Een gewone functie kan bijvoorbeeld zeggen:
+      bij iedere waarde van <span class="formula-inline">x</span> hoort één
+      waarde van <span class="formula-inline">y</span>.
+    </p>
+
+    <p class="formula">
+      y=f(x)
+    </p>
+
+    <p>
+      Maar stel dat een grootheid van twee getallen afhangt.
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      z=f(x,y)
+    </p>
+
+    <p>
+      Nu hebben we twee invoervariabelen, <span class="formula-inline">x</span>
+      en <span class="formula-inline">y</span>, en één uitvoer
+      <span class="formula-inline">z</span>.
+    </p>
+
+    <p>
+      Een eenvoudig voorbeeld is:
+    </p>
+
+    <p class="formula">
+      f(x,y)=x^2+y^2
+    </p>
+
+    <p>
+      Voor elk paar <span class="formula-inline">(x,y)</span> krijgen we
+      precies één waarde van <span class="formula-inline">f</span>.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(1,2)=1^2+2^2=5
+    </p>
+
+    <div class="callout">
+      <p><strong>Een functie van twee variabelen koppelt een punt
+      <span class="formula-inline">(x,y)</span> aan één uitvoerwaarde.</strong></p>
+    </div>
+
+    <h3>Het domein wordt een vlak</h3>
+
+    <p>
+      Bij een functie van één variabele konden we het domein voorstellen
+      op een getallenlijn.
+    </p>
+
+    <p>
+      Bij twee invoervariabelen hebben we twee richtingen nodig.
+      Het domein ligt daarom in een vlak met een
+      <span class="formula-inline">x</span>- en een
+      <span class="formula-inline">y</span>-as.
+    </p>
+
+    <p>
+      Een invoer is nu geen enkel getal meer, maar een punt:
+    </p>
+
+    <p class="formula">
+      (x,y)
+    </p>
+
+    <p>
+      De functie geeft aan dat punt een hoogte:
+    </p>
+
+    <p class="formula">
+      z=f(x,y)
+    </p>
+
+    <p>
+      We kunnen de twee invoervariabelen dus zien als positie in een vlak
+      en de uitvoer als een hoogte boven dat vlak.
+    </p>
+
+    <div class="callout">
+      <p><strong>Bij twee variabelen:</strong></p>
+      <p>
+        <span class="formula-inline">(x,y)</span> bepaalt de positie,
+        <span class="formula-inline">z=f(x,y)</span> bepaalt de hoogte.
+      </p>
+    </div>
+
+    <h3>De grafiek wordt een oppervlak</h3>
+
+    <p>
+      Bij <span class="formula-inline">y=f(x)</span> is de grafiek een kromme
+      in een vlak.
+    </p>
+
+    <p>
+      Bij:
+    </p>
+
+    <p class="formula">
+      z=f(x,y)
+    </p>
+
+    <p>
+      wordt de grafiek in het algemeen een <strong>oppervlak in de ruimte</strong>.
+    </p>
+
+    <p>
+      Voor:
+    </p>
+
+    <p class="formula">
+      z=x^2+y^2
+    </p>
+
+    <p>
+      stijgt het oppervlak wanneer we verder van de oorsprong
+      <span class="formula-inline">(0,0)</span> gaan.
+    </p>
+
+    <p>
+      We kunnen dit zien als een landschap:
+      elk punt in het grondvlak krijgt een hoogte.
+    </p>
+
+    <div class="callout">
+      <p><strong>Een functie van twee variabelen kun je zien als een landschap.</strong></p>
+      <p>
+        <span class="formula-inline">x</span> en <span class="formula-inline">y</span>
+        bepalen waar je bent; <span class="formula-inline">f(x,y)</span>
+        bepaalt hoe hoog je bent.
+      </p>
+    </div>
+
+    <h3>Een functie van drie variabelen</h3>
+
+    <p>
+      Hetzelfde idee kan verder worden uitgebreid.
+      Een temperatuur kan bijvoorbeeld afhangen van drie variabelen:
+    </p>
+
+    <p class="formula">
+      T=T(x,y,t)
+    </p>
+
+    <p>
+      Hier bepalen <span class="formula-inline">x</span> en
+      <span class="formula-inline">y</span> de plaats en
+      <span class="formula-inline">t</span> het tijdstip.
+    </p>
+
+    <p>
+      Voor iedere combinatie van deze drie invoeren krijgen we één temperatuur.
+    </p>
+
+    <p>
+      We kunnen een functie van drie variabelen nog steeds exact definiëren,
+      maar de volledige grafiek ervan heeft vier dimensies:
+      drie invoerrichtingen plus de uitvoer.
+    </p>
+
+    <p>
+      Dat kunnen we niet rechtstreeks als een gewone ruimtelijke grafiek
+      tekenen. Daarom gebruiken we andere voorstellingen, zoals doorsneden
+      of niveauoppervlakken.
+    </p>
+
+    <h3>Een doorsnede maakt het eenvoudiger</h3>
+
+    <p>
+      Een functie van meerdere variabelen kunnen we vaak bestuderen door
+      sommige variabelen tijdelijk vast te zetten.
+    </p>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x,y)=x^2+y^2
+    </p>
+
+    <p>
+      Als we <span class="formula-inline">y=2</span> vastzetten, blijft:
+    </p>
+
+    <p class="formula">
+      f(x,2)=x^2+4
+    </p>
+
+    <p>
+      We hebben nu weer een gewone functie van één variabele.
+    </p>
+
+    <p>
+      Geometrisch bekijken we een doorsnede van het oppervlak.
+      Door verschillende waarden van <span class="formula-inline">y</span>
+      te kiezen, krijgen we verschillende doorsneden.
+    </p>
+
+    <div class="callout">
+      <p><strong>Een functie van meerdere variabelen kan worden onderzocht
+      via functies van minder variabelen.</strong></p>
+    </div>
+
+    <h3>Veranderen in één richting</h3>
+
+    <p>
+      Bij één variabele was de vraag eenvoudig:
+      wat gebeurt er als <span class="formula-inline">x</span> verandert?
+    </p>
+
+    <p>
+      Bij:
+    </p>
+
+    <p class="formula">
+      f(x,y)
+    </p>
+
+    <p>
+      kunnen zowel <span class="formula-inline">x</span> als
+      <span class="formula-inline">y</span> veranderen.
+    </p>
+
+    <p>
+      Om het effect van één variabele afzonderlijk te onderzoeken,
+      houden we de andere variabele tijdelijk constant.
+    </p>
+
+    <p>
+      We kunnen bijvoorbeeld vragen:
+    </p>
+
+    <div class="callout">
+      <p><strong>Hoe verandert <span class="formula-inline">f</span>
+      wanneer <span class="formula-inline">x</span> verandert,
+      terwijl <span class="formula-inline">y</span> constant blijft?</strong></p>
+    </div>
+
+    <p>
+      Dat is precies het idee achter een <strong>partiële afgeleide</strong>.
+    </p>
+
+    <h3>De partiële afgeleide naar x</h3>
+
+    <p>
+      Voor:
+    </p>
+
+    <p class="formula">
+      f(x,y)=x^2+y^2
+    </p>
+
+    <p>
+      houden we <span class="formula-inline">y</span> constant en
+      differentiëren we naar <span class="formula-inline">x</span>:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial x}=2x
+    </p>
+
+    <p>
+      Het symbool <span class="formula-inline">\\\\partial</span>
+      geeft aan dat we slechts naar één variabele tegelijk kijken.
+    </p>
+
+    <p>
+      De term <span class="formula-inline">y^2</span> gedraagt zich hierbij
+      als een constante, omdat <span class="formula-inline">y</span>
+      tijdelijk vastgehouden wordt.
+    </p>
+
+    <div class="callout">
+      <p><strong>Partiële afgeleide naar x:</strong></p>
+      <p>
+        verander <span class="formula-inline">x</span>,
+        houd de andere variabelen constant.
+      </p>
+    </div>
+
+    <h3>De partiële afgeleide naar y</h3>
+
+    <p>
+      We kunnen dezelfde functie vanuit de andere richting bekijken.
+      Nu houden we <span class="formula-inline">x</span> constant:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial y}=2y
+    </p>
+
+    <p>
+      We hebben dus twee verschillende veranderingssnelheden:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial x}=2x
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial y}=2y
+    </p>
+
+    <p>
+      Beide beschrijven verandering van dezelfde functie, maar in een andere
+      richting.
+    </p>
+
+    <div class="callout">
+      <p><strong>Bij meerdere variabelen bestaat er niet noodzakelijk één
+      enkele veranderingssnelheid.</strong></p>
+      <p>
+        De verandering hangt af van de richting waarin we bewegen.
+      </p>
+    </div>
+
+    <h3>Een tweede voorbeeld</h3>
+
+    <p>
+      Neem:
+    </p>
+
+    <p class="formula">
+      f(x,y)=3x^2y+5y
+    </p>
+
+    <p>
+      Naar <span class="formula-inline">x</span> differentiëren betekent
+      <span class="formula-inline">y</span> constant houden:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial x}=6xy
+    </p>
+
+    <p>
+      Naar <span class="formula-inline">y</span> differentiëren betekent
+      <span class="formula-inline">x</span> constant houden:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial y}=3x^2+5
+    </p>
+
+    <p>
+      De berekening lijkt sterk op gewone differentiaalrekening.
+      Het nieuwe idee is vooral: <strong>welke variabelen houden we constant?</strong>
+    </p>
+
+    <h3>Een partiële afgeleide is een helling van een doorsnede</h3>
+
+    <p>
+      De geometrische betekenis sluit aan bij wat we al kennen.
+    </p>
+
+    <p>
+      Als we <span class="formula-inline">y</span> constant houden,
+      snijden we het oppervlak met een verticaal vlak.
+      De ontstane doorsnede is een gewone kromme.
+    </p>
+
+    <p>
+      De partiële afgeleide naar <span class="formula-inline">x</span>
+      is de helling van die kromme in de
+      <span class="formula-inline">x</span>-richting.
+    </p>
+
+    <p>
+      Op dezelfde manier is:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial y}
+    </p>
+
+    <p>
+      de helling in de <span class="formula-inline">y</span>-richting.
+    </p>
+
+    <div class="callout">
+      <p><strong>Partiële afgeleide = lokale helling in één gekozen richting,
+      terwijl de andere variabelen vaststaan.</strong></p>
+    </div>
+
+    <h3>De gradiënt</h3>
+
+    <p>
+      Als we beide partiële afgeleiden samenbrengen, krijgen we informatie
+      over verandering in het vlak:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f
+      =
+      \\\\begin{pmatrix}
+      \\\\frac{\\\\partial f}{\\\\partial x} \\\\
+      \\\\frac{\\\\partial f}{\\\\partial y}
+      \\\\end{pmatrix}
+    </p>
+
+    <p>
+      Dit noemen we de <strong>gradiënt</strong> van
+      <span class="formula-inline">f</span>.
+    </p>
+
+    <p>
+      Voor:
+    </p>
+
+    <p class="formula">
+      f(x,y)=x^2+y^2
+    </p>
+
+    <p>
+      is:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f=(2x,2y)
+    </p>
+
+    <p>
+      De gradiënt bundelt dus de partiële veranderingssnelheden in één object.
+    </p>
+
+    <h3>Wat vertelt de richting van de gradiënt?</h3>
+
+    <p>
+      De gradiënt wijst in de richting waarin de functie lokaal het sterkst
+      toeneemt.
+    </p>
+
+    <p>
+      Voor:
+    </p>
+
+    <p class="formula">
+      f(x,y)=x^2+y^2
+    </p>
+
+    <p>
+      is:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f=(2x,2y)
+    </p>
+
+    <p>
+      Op het punt <span class="formula-inline">(1,2)</span> is de gradiënt:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f(1,2)=(2,4)
+    </p>
+
+    <p>
+      De functie stijgt lokaal het sterkst in de richting van deze vector.
+      In de tegengestelde richting daalt de functie het sterkst.
+    </p>
+
+    <p>
+      Dit is de eerste stap naar een belangrijk idee uit de volgende
+      milestone: verandering hoeft niet alleen "naar links of rechts" te zijn.
+      In de ruimte kunnen we in veel richtingen bewegen.
+    </p>
+
+    <h3>Niveaucurven</h3>
+
+    <p>
+      We kunnen een functie van twee variabelen ook bekijken zonder de
+      hoogte expliciet te tekenen. We kiezen een vaste waarde:
+    </p>
+
+    <p class="formula">
+      f(x,y)=c
+    </p>
+
+    <p>
+      Alle punten die aan deze vergelijking voldoen, vormen een
+      <strong>niveaucurve</strong>.
+    </p>
+
+    <p>
+      Voor:
+    </p>
+
+    <p class="formula">
+      f(x,y)=x^2+y^2
+    </p>
+
+    <p>
+      geeft:
+    </p>
+
+    <p class="formula">
+      x^2+y^2=c
+    </p>
+
+    <p>
+      een cirkel met straal <span class="formula-inline">\\\\sqrt{c}</span>
+      wanneer <span class="formula-inline">c&gt;0</span>.
+    </p>
+
+    <p>
+      Een niveaucurve verbindt dus punten met dezelfde functiewaarde.
+      Op een topografische kaart gebeurt iets vergelijkbaars:
+      een hoogtelijn verbindt punten met dezelfde hoogte.
+    </p>
+
+    <div class="callout">
+      <p><strong>Niveaucurve = alle punten met dezelfde functiewaarde.</strong></p>
+      <p>
+        Ze geeft een tweedimensionale manier om informatie over een
+        driedimensionaal oppervlak weer te geven.
+      </p>
+    </div>
+
+    <h3>De gradiënt en niveaucurven</h3>
+
+    <p>
+      Er is een belangrijke geometrische relatie tussen de gradiënt en
+      niveaucurven.
+    </p>
+
+    <p>
+      Als we langs een niveaucurve bewegen, blijft de functiewaarde constant.
+      De verandering van <span class="formula-inline">f</span> in die
+      bewegingsrichting is dus nul.
+    </p>
+
+    <p>
+      De gradiënt wijst daarom loodrecht op de niveaucurve.
+    </p>
+
+    <p>
+      Voor een landschap betekent dit:
+      de gradiënt wijst de steilste weg omhoog, terwijl een niveaucurve
+      een pad volgt waarop de hoogte gelijk blijft.
+    </p>
+
+    <div class="callout">
+      <p><strong>Gradiënt:</strong> richting van sterkste lokale stijging.</p>
+      <p><strong>Niveaucurve:</strong> richting waarin de functiewaarde constant blijft.</p>
+      <p>
+        Daarom staan gradiënt en niveaucurve lokaal loodrecht op elkaar.
+      </p>
+    </div>
+
+    <h3>Partiële afgeleiden zijn nog geen volledige richting</h3>
+
+    <p>
+      De partiële afgeleiden vertellen wat er gebeurt wanneer we uitsluitend
+      in de <span class="formula-inline">x</span>- of
+      <span class="formula-inline">y</span>-richting bewegen.
+    </p>
+
+    <p>
+      Maar we kunnen ook tegelijk veranderen:
+    </p>
+
+    <p class="formula">
+      x=x(t),\\\\qquad y=y(t)
+    </p>
+
+    <p>
+      Dan bewegen we langs een pad door het vlak.
+      De verandering van <span class="formula-inline">f</span> hangt dan af
+      van beide bewegingen.
+    </p>
+
+    <p>
+      De kettingregel wordt:
+    </p>
+
+    <p class="formula">
+      \\\\frac{df}{dt}
+      =
+      \\\\frac{\\\\partial f}{\\\\partial x}\\\\frac{dx}{dt}
+      +
+      \\\\frac{\\\\partial f}{\\\\partial y}\\\\frac{dy}{dt}
+    </p>
+
+    <p>
+      Deze formule zegt dat de totale verandering ontstaat uit de bijdragen
+      van de afzonderlijke richtingen.
+    </p>
+
+    <div class="callout">
+      <p><strong>Partiële afgeleiden beschrijven richtingsbijdragen.</strong></p>
+      <p>
+        De kettingregel combineert die bijdragen wanneer meerdere variabelen
+        tegelijk veranderen.
+      </p>
+    </div>
+
+    <h3>Een concreet voorbeeld met temperatuur</h3>
+
+    <p>
+      Stel dat:
+    </p>
+
+    <p class="formula">
+      T(x,y)=x^2+2y^2
+    </p>
+
+    <p>
+      Dan:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial T}{\\\\partial x}=2x
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial T}{\\\\partial y}=4y
+    </p>
+
+    <p>
+      Op het punt <span class="formula-inline">(1,2)</span> krijgen we:
+    </p>
+
+    <p class="formula">
+      \\\\nabla T(1,2)=(2,8)
+    </p>
+
+    <p>
+      Dat vertelt ons dat de temperatuur op die plaats lokaal veel sterker
+      reageert op verandering in de <span class="formula-inline">y</span>-richting
+      dan op dezelfde kleine verandering in de
+      <span class="formula-inline">x</span>-richting.
+    </p>
+
+    <p>
+      De gradiënt geeft daarmee een compacte lokale beschrijving van het
+      temperatuurveld.
+    </p>
+
+    <h3>Functies met nog meer variabelen</h3>
+
+    <p>
+      Alles wat we tot nu toe deden kan worden uitgebreid naar drie,
+      vier of nog meer variabelen.
+    </p>
+
+    <p>
+      Bijvoorbeeld:
+    </p>
+
+    <p class="formula">
+      f(x,y,z)
+    </p>
+
+    <p>
+      heeft drie partiële afgeleiden:
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\partial f}{\\\\partial x},
+      \\\\frac{\\\\partial f}{\\\\partial y},
+      \\\\frac{\\\\partial f}{\\\\partial z}
+    </p>
+
+    <p>
+      De gradiënt wordt dan:
+    </p>
+
+    <p class="formula">
+      \\\\nabla f
+      =
+      (\\\\frac{\\\\partial f}{\\\\partial x},
+      \\\\frac{\\\\partial f}{\\\\partial y},
+      \\\\frac{\\\\partial f}{\\\\partial z})
+    </p>
+
+    <p>
+      Het patroon blijft hetzelfde:
+      iedere component beschrijft lokale verandering in één coördinaatrichting.
+    </p>
+
+    <h3>Wat verandert er ten opzichte van gewone calculus?</h3>
+
+    <p>
+      De basisideeën zijn eigenlijk vertrouwd.
+    </p>
+
+    <ul>
+      <li>Een functie koppelt invoer aan uitvoer.</li>
+      <li>Een afgeleide meet lokale verandering.</li>
+      <li>Een limiet beschrijft wat er gebeurt bij steeds kleinere veranderingen.</li>
+      <li>Een integraal telt kleine bijdragen op.</li>
+    </ul>
+
+    <p>
+      Het nieuwe element is dat er <strong>meer dan één onafhankelijke richting</strong>
+      kan zijn.
+    </p>
+
+    <div class="callout">
+      <p><strong>Enkelvoudige calculus:</strong> verandering langs één onafhankelijke variabele.</p>
+      <p><strong>Multivariabele calculus:</strong> verandering in meerdere onafhankelijke richtingen.</p>
+    </div>
+
+    <h3>Veelgemaakte fouten</h3>
+
+    <ul>
+      <li>
+        Denken dat een functie van twee variabelen twee uitvoerwaarden heeft.
+        Ze heeft juist twee invoeren en één uitvoer.
+      </li>
+      <li>
+        Bij een partiële afgeleide vergeten welke variabelen constant blijven.
+      </li>
+      <li>
+        Denken dat <span class="formula-inline">\\\\partial f/\\\\partial x</span>
+        hetzelfde is als de volledige verandering van <span class="formula-inline">f</span>
+        wanneer ook andere variabelen veranderen.
+      </li>
+      <li>
+        De gradiënt verwarren met één enkel getal.
+        De gradiënt bevat meerdere richtingscomponenten.
+      </li>
+      <li>
+        Denken dat de gradiënt altijd "omhoog" in absolute ruimte wijst.
+        Hij wijst in de richting van de sterkste lokale toename van de
+        <strong>functiewaarde</strong>.
+      </li>
+      <li>
+        Niveaucurven verwarren met grafieken van de functie zelf.
+      </li>
+    </ul>
+
+    <h3>Een vaste werkwijze</h3>
+
+    <ol>
+      <li>Bepaal welke variabelen onafhankelijke invoeren zijn.</li>
+      <li>Bepaal welke grootheid de functie beschrijft.</li>
+      <li>Houd bij een partiële afgeleide de andere variabelen constant.</li>
+      <li>Bereken de gewenste partiële afgeleide.</li>
+      <li>Bereken indien nodig alle partiële afgeleiden en vorm de gradiënt.</li>
+      <li>Interpreteer iedere component als lokale verandering in een richting.</li>
+      <li>Gebruik niveaucurven of doorsneden om de geometrische betekenis te onderzoeken.</li>
+      <li>Als meerdere variabelen tegelijk veranderen, gebruik de kettingregel.</li>
+    </ol>
+
+    <h3>De rode draad van Fase 3</h3>
+
+    <p>
+      Fase 3 begon met verandering tussen twee punten.
+    </p>
+
+    <p class="formula">
+      \\\\frac{\\\\Delta y}{\\\\Delta x}
+    </p>
+
+    <p>
+      Daarna maakten we het interval steeds kleiner en kwamen we bij de
+      afgeleide:
+    </p>
+
+    <p class="formula">
+      f'(x)
+    </p>
+
+    <p>
+      Vervolgens leerden we dat integralen kleine bijdragen optellen:
+    </p>
+
+    <p class="formula">
+      \\\\int_a^b f(x)\\\\,dx
+    </p>
+
+    <p>
+      Nu zien we dat verandering niet beperkt is tot één onafhankelijke
+      variabele. Een functie kan afhangen van meerdere invoeren en dan
+      moeten we verandering per richting kunnen beschrijven.
+    </p>
+
+    <p class="formula">
+      f(x,y)
+      \\\\rightarrow
+      \\\\frac{\\\\partial f}{\\\\partial x},
+      \\\\frac{\\\\partial f}{\\\\partial y}
+      \\\\rightarrow
+      \\\\nabla f
+    </p>
+
+    <div class="callout">
+      <p><strong>Kernidee:</strong></p>
+      <p>
+        Een functie van meerdere variabelen beschrijft hoe een grootheid
+        afhangt van verschillende invoeren. Partiële afgeleiden meten
+        verandering in afzonderlijke richtingen. De gradiënt bundelt die
+        lokale richtingsveranderingen en wijst naar de sterkste lokale
+        toename van de functie.
+      </p>
+    </div>
+
+    <h3>Brug naar 3.14</h3>
+
+    <p>
+      In 3.13 hebben we geleerd om verandering in meerdere onafhankelijke
+      richtingen te beschrijven. We hebben daarvoor partiële afgeleiden en
+      de gradiënt gebruikt.
+    </p>
+
+    <p>
+      Maar de gradiënt is zelf al een vectorachtig object:
+      hij bevat meerdere componenten en beschrijft een richting.
+    </p>
+
+    <p>
+      De volgende stap is daarom logisch:
+    </p>
+
+    <div class="callout">
+      <p><strong>Hoe beschrijven we verandering, richting en velden systematisch in de ruimte?</strong></p>
+    </div>
+
+    <p>
+      In 3.14 bouwen we daarvoor verder met vectoren, vectorvelden en
+      multivariabele calculus.
+    </p>
+  \`
   },
 
   {
