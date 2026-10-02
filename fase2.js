@@ -480,11 +480,183 @@ const MILESTONES_2 = [
       <p>Eenvoudiger maken, dezelfde oplossingen houden.</p>
     </div>
 
-    <h3>Van verhaal naar vergelijking</h3>
-    <p>Een getal plus 7 is 19. Noem het getal x:</p>
-    <p class="formula">x + 7 = 19</p>
-    <p class="formula">x = 12</p>
-    <p>Eerst vertalen, dan oplossen.</p>
+    <h3>Van een verhaal naar een vergelijking</h3>
+
+<p>
+  Een vergelijking ontstaat vaak uit een situatie waarin we iets
+  <strong>onbekends</strong> willen vinden.
+</p>
+
+<p>
+  We vertalen het verhaal naar wiskundige taal. De onbekende stellen we
+  voor met een letter.
+</p>
+
+<div class="callout">
+  <strong>De belangrijkste stap</strong>
+  <p>
+    Kies eerst wat de onbekende is. Daarna kun je de informatie uit het
+    verhaal gebruiken om een vergelijking op te stellen.
+  </p>
+</div>
+
+<h4>Een eenvoudig voorbeeld</h4>
+
+<p>
+  Denk aan het volgende probleem:
+</p>
+
+<p>
+  <strong>
+    Een getal vermeerderd met 7 is gelijk aan 19.
+    Welk getal is dat?
+  </strong>
+</p>
+
+<p>
+  We weten nog niet welk getal bedoeld wordt.
+  Daarom noemen we het getal <span class="formula-inline">x</span>.
+</p>
+
+<p class="formula">x = het onbekende getal</p>
+
+<p>
+  Het getal wordt met 7 vermeerderd. Dat kunnen we schrijven als:
+</p>
+
+<p class="formula">x + 7</p>
+
+<p>
+  Volgens het verhaal is dit gelijk aan 19.
+  We krijgen dus de vergelijking:
+</p>
+
+<p class="formula">x + 7 = 19</p>
+
+<p>
+  Nu kunnen we de vergelijking oplossen.
+  We willen weten hoeveel <span class="formula-inline">x</span> is.
+</p>
+
+<p>
+  Trek 7 af van beide kanten:
+</p>
+
+<p class="formula">x = 12</p>
+
+<p>
+  Het onbekende getal is dus <strong>12</strong>.
+</p>
+
+<h4>Een iets moeilijker voorbeeld</h4>
+
+<p>
+  Soms bevat een verhaal meer dan één hoeveelheid.
+</p>
+
+<p>
+  Emma en Jan hebben samen <strong>31 euro</strong>.
+  Jan heeft <strong>7 euro meer</strong> dan Emma.
+  Hoeveel euro heeft Emma?
+</p>
+
+<p>
+  We weten niet hoeveel geld Emma heeft. We noemen dat bedrag
+  <span class="formula-inline">x</span>.
+</p>
+
+<p class="formula">x = het bedrag van Emma</p>
+
+<p>
+  Jan heeft 7 euro meer dan Emma. Als Emma
+  <span class="formula-inline">x</span> euro heeft, dan heeft Jan:
+</p>
+
+<p class="formula">x + 7</p>
+
+<p>
+  Samen hebben ze 31 euro. Daarom krijgen we:
+</p>
+
+<p class="formula">x + (x + 7) = 31</p>
+
+<p>
+  We hebben het verhaal nu vertaald naar een vergelijking.
+</p>
+
+<h4>De vergelijking oplossen</h4>
+
+<p>
+  Eerst werken we de haakjes weg:
+</p>
+
+<p class="formula">x + x + 7 = 31</p>
+
+<p>
+  Trek 7 af van beide kanten:
+</p>
+
+<p class="formula">x + x = 24</p>
+
+<p>
+  Dat kunnen we ook schrijven als:
+</p>
+
+<p class="formula">2x = 24</p>
+
+<p>
+  Deel beide kanten door 2:
+</p>
+
+<p class="formula">x = 12</p>
+
+<p>
+  Emma heeft dus 12 euro.
+  Jan heeft 7 euro meer:
+</p>
+
+<p class="formula">12 + 7 = 19</p>
+
+<p>
+  Samen hebben ze:
+</p>
+
+<p class="formula">12 + 19 = 31</p>
+
+<p>
+  De oplossing klopt dus met het oorspronkelijke verhaal.
+</p>
+
+<div class="callout">
+  <strong>Onthoud</strong>
+  <p>
+    Bij een vergelijking uit een verhaal gaat het om het vinden van
+    een onbekende.
+  </p>
+  <p>
+    We kiezen een letter voor de onbekende, vertalen het verhaal naar
+    een vergelijking en lossen die vergelijking op.
+  </p>
+</div>
+
+<h4>De denkstappen</h4>
+
+<p>
+  Bij dit soort problemen kun je steeds dezelfde denkstappen gebruiken:
+</p>
+
+<ol>
+  <li>Wat is er onbekend?</li>
+  <li>Welke letter gebruik ik voor die onbekende?</li>
+  <li>Welke informatie geeft het verhaal?</li>
+  <li>Hoe vertaal ik die informatie naar een vergelijking?</li>
+  <li>Hoe los ik de vergelijking op?</li>
+  <li>Klopt mijn antwoord met het oorspronkelijke verhaal?</li>
+</ol>
+
+<p class="formula">
+  verhaal → onbekende → vergelijking → oplossing → controle
+</p>
 
     <h3>Een vergelijking is een voorwaarde</h3>
     <p>Een uitdrukking kun je voor veel waarden berekenen. Een vergelijking filtert:</p>
@@ -543,56 +715,248 @@ const MILESTONES_2 = [
     </p>
 
 
-    <h3>Van een verhaal naar wiskunde</h3>
+<h3>Van een verhaal naar wiskunde</h3>
 
-    <p>
-      Stel dat een taxi een vast startbedrag van 4 euro vraagt en daarna
-      2 euro per kilometer.
-    </p>
+<p>
+  In de vorige les hebben we gezien hoe we een verhaal kunnen vertalen
+  naar een vergelijking wanneer we een <strong>onbekende</strong> willen
+  vinden.
+</p>
 
-    <p>
-      Voor één kilometer betaal je:
-    </p>
+<p>
+  Maar wiskunde kan meer dan alleen onbekenden vinden.
+  We kunnen wiskunde ook gebruiken om een situatie
+  <strong>te beschrijven</strong>.
+</p>
 
-    <p class="formula">4 + 2 = 6</p>
+<div class="callout">
+  <strong>Een nieuw idee</strong>
+  <p>
+    Bij wiskundig modelleren vertalen we een situatie uit de werkelijkheid
+    naar wiskundige taal.
+  </p>
+</div>
 
-    <p>
-      Voor vijf kilometer:
-    </p>
+<h4>Een voorbeeld: een taxirit</h4>
 
-    <p class="formula">4 + 2 · 5 = 14</p>
+<p>
+  Stel dat een taxi een <strong>starttarief van 4 euro</strong> vraagt.
+  Voor elke kilometer die je rijdt, betaal je nog
+  <strong>2 euro extra</strong>.
+</p>
 
-    <p>
-      Voor twintig kilometer:
-    </p>
+<p>
+  We willen kunnen berekenen hoeveel een rit kost, ongeacht hoeveel
+  kilometer we rijden.
+</p>
 
-    <p class="formula">4 + 2 · 20 = 44</p>
+<h4>Welke hoeveelheden zijn belangrijk?</h4>
 
-    <p>
-      We kunnen telkens opnieuw rekenen, maar er zit een duidelijk patroon in.
-      De afstand verandert, terwijl het startbedrag en de prijs per kilometer
-      hetzelfde blijven.
-    </p>
+<p>
+  In het verhaal komen twee hoeveelheden voor:
+</p>
 
-    <p>
-      Noem de afstand <strong>x</strong> kilometer en de totale prijs
-      <strong>P</strong> euro. Dan kunnen we alle situaties tegelijk beschrijven:
-    </p>
+<ul>
+  <li>het aantal gereden kilometers;</li>
+  <li>de prijs van de rit.</li>
+</ul>
 
-    <p class="formula">P = 4 + 2x</p>
+<p>
+  Het aantal kilometers kan telkens veranderen.
+  Daarom geven we deze hoeveelheid een naam.
+</p>
 
-    <p>
-      Dit is een <strong>formule</strong>.
-      Eén formule vervangt nu een hele reeks afzonderlijke berekeningen.
-    </p>
+<p class="formula">k = het aantal gereden kilometers</p>
 
-    <div class="callout">
-      <p><strong>Algebra maakt een patroon algemeen.</strong></p>
-      <p>
-        In plaats van voor elke situatie opnieuw te rekenen,
-        beschrijven we de structuur één keer met letters en getallen.
-      </p>
-    </div>
+<p>
+  De prijs verandert mee met het aantal kilometers.
+  Voor de prijs gebruiken we:
+</p>
+
+<p class="formula">P = de prijs van de rit</p>
+
+<h4>De informatie uit het verhaal vertalen</h4>
+
+<p>
+  We beginnen met het vaste starttarief:
+</p>
+
+<p class="formula">4</p>
+
+<p>
+  Daarna komt er voor elke kilometer 2 euro bij.
+  Bij <span class="formula-inline">k</span> kilometer is dat:
+</p>
+
+<p class="formula">2k</p>
+
+<p>
+  De totale prijs bestaat dus uit het starttarief plus de kosten
+  voor de gereden kilometers.
+</p>
+
+<p class="formula">P = 4 + 2k</p>
+
+<p>
+  Dit noemen we een <strong>formule</strong>.
+</p>
+
+<div class="callout">
+  <strong>Inzicht</strong>
+  <p>
+    Een formule kan een verband tussen verschillende hoeveelheden
+    beschrijven.
+  </p>
+</div>
+
+<h4>De formule gebruiken</h4>
+
+<p>
+  Stel dat we 3 kilometer rijden.
+  Dan vullen we <span class="formula-inline">k = 3</span> in:
+</p>
+
+<p class="formula">P = 4 + 2 × 3</p>
+
+<p>
+  Dus:
+</p>
+
+<p class="formula">P = 10</p>
+
+<p>
+  Een rit van 3 kilometer kost 10 euro.
+</p>
+
+<p>
+  Voor 5 kilometer krijgen we:
+</p>
+
+<p class="formula">P = 4 + 2 × 5 = 14</p>
+
+<p>
+  Dezelfde formule werkt dus voor verschillende ritten.
+</p>
+
+<h4>We kunnen de situatie ook in een tabel zetten</h4>
+
+<p>
+  De formule geeft ons verschillende waarden voor de prijs.
+  We kunnen die waarden overzichtelijk in een tabel plaatsen.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aantal kilometer</th>
+      <th>Prijs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>€4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>€6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>€8</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>€10</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>€14</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  De tabel laat hetzelfde verband zien als de formule.
+</p>
+
+<h4>Van werkelijkheid naar een wiskundig model</h4>
+
+<p>
+  We zijn begonnen met een situatie uit de werkelijkheid:
+</p>
+
+<p>
+  <strong>
+    Een taxi kost 4 euro om te starten en daarna 2 euro per kilometer.
+  </strong>
+</p>
+
+<p>
+  We hebben vervolgens bepaald welke hoeveelheden belangrijk zijn,
+  daar variabelen voor gekozen en het verband tussen die hoeveelheden
+  beschreven met een formule.
+</p>
+
+<p class="formula">
+  werkelijkheid → hoeveelheden → variabelen → verband → formule
+</p>
+
+<p>
+  De formule is daarmee een <strong>wiskundig model</strong> van de
+  situatie.
+</p>
+
+<h4>Waarom is een model nuttig?</h4>
+
+<p>
+  Een model helpt ons om met een situatie te rekenen zonder telkens
+  het hele verhaal opnieuw te moeten bekijken.
+</p>
+
+<p>
+  Met de formule
+</p>
+
+<p class="formula">P = 4 + 2k</p>
+
+<p>
+  kunnen we bijvoorbeeld snel berekenen hoeveel een rit van 8, 12 of
+  25 kilometer kost.
+</p>
+
+<p>
+  We kunnen bovendien onderzoeken hoe de prijs verandert wanneer het
+  aantal kilometers verandert.
+</p>
+
+<div class="callout">
+  <strong>Onthoud</strong>
+  <p>
+    Bij wiskundig modelleren vertalen we een situatie uit de werkelijkheid
+    naar wiskundige taal.
+  </p>
+  <p>
+    Een formule, tabel of grafiek kan vervolgens helpen om de situatie
+    te beschrijven, berekeningen uit te voeren en verbanden te onderzoeken.
+  </p>
+</div>
+
+<h4>Van verhaal naar wiskunde</h4>
+
+<p>
+  Het proces dat we hier hebben gebruikt, kunnen we algemeen voorstellen als:
+</p>
+
+<p class="formula">
+  werkelijkheid → wiskundige beschrijving → rekenen → terug naar de werkelijkheid
+</p>
+
+<p>
+  Dat is een belangrijk idee in de wiskunde.
+  We gebruiken wiskundige modellen om situaties uit de werkelijkheid
+  beter te begrijpen en er voorspellingen of berekeningen mee te maken.
+</p>
 
 
     <h3>Wat betekenen de letters?</h3>
