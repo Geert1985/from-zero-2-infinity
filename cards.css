@@ -17,7 +17,7 @@
 .milestone-info p { margin:0; color:#d8cdb7; font-size:.92rem; line-height:1.4; }
 .milestone-info-close { position:absolute; top:6px; right:8px; border:0; background:transparent; color:#bcae90; font-size:20px; cursor:pointer; }
 .milestone.is-open { border-color:rgba(230,199,122,.42); }
-.screen:has(.milestone-grid) { background-image:linear-gradient(180deg,#100c08 0%,#151008 50%,#1a140c 100%) !important; background-color:#100c08; }
-.screen:has(.milestone-grid)::before { background:transparent; }
+.screen:has(.milestone-grid), .screen:has(.lesson) { background-image:linear-gradient(180deg,#100c08 0%,#151008 50%,#1a140c 100%) !important; background-color:#100c08; }
+.screen:has(.milestone-grid)::before, .screen:has(.lesson)::before { background:transparent; }
 @media (max-width:900px) { .milestone-grid { grid-template-columns:repeat(2,minmax(220px,1fr)); } }
 @media (max-width:620px) { .milestone-grid { grid-template-columns:1fr; } }
