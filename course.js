@@ -2,8 +2,9 @@ const COURSE = {
   title: "From Zero 2 Infinity",
   tagline: "Begin met tellen. Ontdek oneindigheid. Begrijp het universum.",
   passRatio: 0.8,
-  /* Kost om fase N te openen: cumulatieve Lesstof- en Toetspunten. Fase 1 is vrij. Punten worden niet afgetrokken. */
+  /* Fase 0 is de vrije voorkamer van de cursus: de taal van de wiskunde. */
   phaseCost: {
+    0: { les: 0, toets: 0 },
     1: { les: 0, toets: 0 },
     2: { les: 10, toets: 8 },
     3: { les: 14, toets: 11 },
@@ -13,6 +14,13 @@ const COURSE = {
     7: { les: 27, toets: 23 }
   },
   phases: [
+    {
+      id: 0,
+      title: "Taal van de wiskunde",
+      short: "Van uitspraken naar bewijzen en oneindigheid",
+      unlock: "Logica, bewijzen, verzamelingen, functies en cardinaliteit",
+      topics: ["Logica", "Bewijzen", "Verzamelingen", "Functies", "Oneindigheid"]
+    },
     {
       id: 1,
       title: "Rekenkunde & Basisgetallen",
@@ -65,8 +73,9 @@ const COURSE = {
   ]
 };
 
-const PLAYABLE_PHASES = [1, 2, 3, 4, 5, 6, 7];
+const PLAYABLE_PHASES = [0, 1, 2, 3, 4, 5, 6, 7];
 const PHASE_BLURB = {
+  0: "De taal van de wiskunde: logisch redeneren, bewijzen, structuren en oneindigheid.",
   1: "Van nul kennis van getallen tot de poort van algebra.",
   2: "Van concrete getallen naar variabelen, vormen, functies en goniometrie. Daarna opent de poort naar calculus.",
   3: "Van functies naar verandering: limieten, afgeleiden, integralen en de eerste stappen in meerdere variabelen.",
