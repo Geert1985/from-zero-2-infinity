@@ -1,416 +1,60 @@
-/* Lesstof Fase 0 — Taal van de wiskunde. Zelfde 14 milestones als GPT---F0; theory uitgebreid, geen nieuwe ids. */
+/* Lesstof Fase 0 — Taal van de wiskunde. 14 milestones: van uitspraken naar oneindigheid. */
 const MILESTONES_0 = [
-{
-  id: "0.1",
-  title: "Wiskundige uitspraken",
-  goal: "Herken wiskundige uitspraken en onderscheid een uitspraak van een vraag, definitie, berekening of open zin.",
-  theory: /* html */`
-
+  {
+    id: "0.1",
+    title: "Wiskundige uitspraken",
+    goal: "Herken wiskundige uitspraken en onderscheid een uitspraak van een vraag, definitie, berekening of open zin.",
+    theory: /* html */`
 <h2>Wiskundige uitspraken</h2>
-
 <p><strong>Wat gaan we ontdekken?</strong></p>
-
 <ul>
   <li>Wat is een wiskundige uitspraak?</li>
-  <li>Wat is het verschil tussen een uitspraak, een vraag, een berekening en een definitie?</li>
+  <li>Wat is het verschil tussen een uitspraak, vraag, berekening en definitie?</li>
   <li>Wat is een open zin?</li>
   <li>Wanneer is een uitspraak waar of onwaar?</li>
-  <li>Waarom is een voorbeeld geen bewijs?</li>
-  <li>Hoe kan één tegenvoorbeeld een algemene uitspraak weerleggen?</li>
+  <li>Waarom bewijst een voorbeeld geen algemene uitspraak?</li>
+  <li>Hoe weerlegt één tegenvoorbeeld een algemene bewering?</li>
 </ul>
-
-
 <h3>Wat is een uitspraak?</h3>
-
-<p>
-  In de wiskunde komen we voortdurend zinnen tegen die iets beweren.
-  Bijvoorbeeld:
-</p>
-
+<p>Een <strong>uitspraak</strong> is een bewering waarvan we in principe kunnen bepalen of ze <strong>waar</strong> of <strong>onwaar</strong> is.</p>
 <p class="formula">2 + 3 = 5</p>
-
-<p>
-  Deze zin beweert dat 2 + 3 gelijk is aan 5.
-  We kunnen nagaan of dat klopt.
-</p>
-
-<p>
-  Een zin waarvan we in principe kunnen bepalen of hij
-  <strong>waar</strong> of <strong>onwaar</strong> is, noemen we een
-  <strong>uitspraak</strong>.
-</p>
-
-<div class="callout">
-  <strong>Definitie</strong>
-  <p>
-    Een <strong>wiskundige uitspraak</strong> is een bewering waaraan
-    precies één waarheidswaarde kan worden toegekend:
-    <strong>waar</strong> of <strong>onwaar</strong>.
-  </p>
-</div>
-
-<p>
-  Een uitspraak hoeft dus niet waar te zijn.
-  Ook een onware bewering is een uitspraak.
-</p>
-
-<p>
-  Bijvoorbeeld: <span class="formula-inline">7</span> is een even getal.
-</p>
-
-<p>
-  Deze uitspraak is <strong>onwaar</strong>, maar het blijft een uitspraak:
-  we kunnen namelijk bepalen dat ze onwaar is.
-</p>
-
-
+<p>Deze bewering is waar. Ook de volgende zin is een uitspraak:</p>
+<p><span class="formula-inline">7</span> is een even getal.</p>
+<p>Deze uitspraak is onwaar. <strong>Onwaar</strong> betekent dus niet “geen uitspraak”.</p>
+<div class="callout"><strong>Definitie</strong><p>Een wiskundige uitspraak is een bewering waaraan precies één waarheidswaarde kan worden toegekend: waar of onwaar.</p></div>
 <h3>Uitspraak of berekening?</h3>
-
-<p>
-  Niet alles wat we in de wiskunde opschrijven, is een uitspraak.
-  Kijk bijvoorbeeld naar:
-</p>
-
 <p class="formula">7 + 5</p>
-
-<p>
-  Dit is een <strong>berekening</strong> of een wiskundige
-  <strong>uitdrukking</strong>. Er wordt nog niets beweerd.
-  We kunnen de berekening uitvoeren:
-</p>
-
+<p>Dit is een <strong>uitdrukking</strong> of berekening. Er wordt niets beweerd.</p>
 <p class="formula">7 + 5 = 12</p>
-
-<p>
-  Nu staat er wél een bewering.
-  We kunnen bepalen dat deze waar is.
-  Daarom is dit een <strong>uitspraak</strong>.
-</p>
-
-<div class="callout">
-  <p>
-    <strong>Belangrijk verschil:</strong>
-  </p>
-
-  <p class="formula">7 + 5</p>
-
-  <p>
-    is een uitdrukking/berekening.
-  </p>
-
-  <p class="formula">7 + 5 = 12</p>
-
-  <p>
-    is een uitspraak.
-  </p>
-</div>
-
-
+<p>Nu staat er wel een bewering. We kunnen bepalen dat ze waar is, dus dit is een uitspraak.</p>
+<div class="callout"><strong>Onthoud</strong><p><span class="formula-inline">7 + 5</span> is een uitdrukking; <span class="formula-inline">7 + 5 = 12</span> is een uitspraak.</p></div>
 <h3>Uitspraak of vraag?</h3>
-
-<p>
-  Een vraag probeert geen bewering te doen. Ze vraagt om informatie.
-</p>
-
-<p>
-  Bijvoorbeeld:
-</p>
-
-<p>
-  <em>“Is 7 een priemgetal?”</em>
-</p>
-
-<p>
-  Dit is <strong>geen uitspraak</strong>.
-  Het is een vraag.
-</p>
-
-<p>
-  De vraag kan wel leiden tot een uitspraak:
-</p>
-
-<p>
-  <span class="formula-inline">7</span> is een priemgetal.
-</p>
-
-<p>
-  Deze zin beweert iets en we kunnen bepalen dat hij waar is.
-  Het is dus wel een uitspraak.
-</p>
-
-
+<p><em>“Is 7 een priemgetal?”</em> is een vraag en dus geen uitspraak. De bijbehorende bewering <span class="formula-inline">7</span> is een priemgetal is wel een uitspraak.</p>
 <h3>Uitspraak of definitie?</h3>
-
-<p>
-  Een <strong>definitie</strong> legt vast wat we met een begrip bedoelen.
-  Een definitie heeft dus een andere functie dan een uitspraak die we
-  als waar of onwaar beoordelen.
-</p>
-
-<p>
-  Bijvoorbeeld:
-</p>
-
-<div class="callout">
-  <p>
-    Een <strong>priemgetal</strong> is een natuurlijk getal groter dan 1
-    dat precies twee positieve delers heeft.
-  </p>
-</div>
-
-<p>
-  Hiermee leggen we vast wat we onder het begrip
-  <em>priemgetal</em> verstaan.
-  We gebruiken deze definitie vervolgens om te bepalen welke getallen
-  priemgetallen zijn.
-</p>
-
-<p>
-  Een definitie is dus niet hetzelfde als een gewone bewering.
-</p>
-
-
+<p>Een <strong>definitie</strong> legt vast wat we met een begrip bedoelen. Bijvoorbeeld:</p>
+<div class="callout"><p>Een <strong>priemgetal</strong> is een natuurlijk getal groter dan 1 dat precies twee positieve delers heeft.</p></div>
+<p>Een definitie gebruiken we vervolgens om te bepalen of een getal aan het begrip voldoet. In deze cursus behandelen we een definitie daarom anders dan een bewering die we als waar of onwaar beoordelen.</p>
 <h3>Uitdrukking, open zin en uitspraak</h3>
-
-<p>
-  Nu bekijken we een voorbeeld waarin een letter voorkomt:
-</p>
-
 <p class="formula">x + 1</p>
-
-<p>
-  Dit is een <strong>uitdrukking</strong>.
-  Er wordt niets beweerd.
-</p>
-
-<p>
-  Kijk nu naar:
-</p>
-
+<p>Dit is een uitdrukking. Er wordt niets beweerd.</p>
 <p class="formula">x + 1 = 4</p>
-
-<p>
-  Hier wordt wél iets beweerd.
-  Maar we weten nog niet welke waarde <span class="formula-inline">x</span>
-  heeft.
-</p>
-
-<p>
-  Daarom kunnen we nog niet bepalen of de bewering waar of onwaar is.
-  Dit noemen we een <strong>open zin</strong>.
-</p>
-
-<p>
-  Geven we <span class="formula-inline">x</span> de waarde 3, dan krijgen we:
-</p>
-
+<p>Dit is een <strong>open zin</strong>: de waarheid hangt af van de waarde van <span class="formula-inline">x</span>.</p>
+<p>Voor <span class="formula-inline">x = 3</span> krijgen we:</p>
 <p class="formula">3 + 1 = 4</p>
-
-<p>
-  Deze uitspraak is waar.
-</p>
-
-<p>
-  Geven we <span class="formula-inline">x</span> de waarde 5, dan krijgen we:
-</p>
-
+<p>Dit is waar. Voor <span class="formula-inline">x = 5</span> krijgen we:</p>
 <p class="formula">5 + 1 = 4</p>
-
-<p>
-  Deze uitspraak is onwaar.
-</p>
-
-<div class="callout">
-  <p><strong>Onthoud:</strong></p>
-
-  <p class="formula">x + 1</p>
-
-  <p>
-    is een uitdrukking.
-  </p>
-
-  <p class="formula">x + 1 = 4</p>
-
-  <p>
-    is een open zin.
-  </p>
-
-  <p class="formula">3 + 1 = 4</p>
-
-  <p>
-    is een uitspraak.
-  </p>
-</div>
-
-<p>
-  Later leren we hoe woorden zoals <em>“voor elke”</em> en
-  <em>“er bestaat”</em> ervoor kunnen zorgen dat een open zin zelf
-  een uitspraak wordt.
-</p>
-
-
-<h3>Waar of onwaar?</h3>
-
-<p>
-  Een uitspraak heeft precies één waarheidswaarde:
-  <strong>waar</strong> of <strong>onwaar</strong>.
-</p>
-
-<p>
-  Bekijk bijvoorbeeld:
-</p>
-
-<p class="formula">8 + 4 = 12</p>
-
-<p>
-  Dit is waar.
-</p>
-
-<p class="formula">8 + 4 = 13</p>
-
-<p>
-  Dit is onwaar.
-</p>
-
-<p>
-  Beide zijn uitspraken, omdat we voor beide kunnen bepalen
-  welke waarheidswaarde ze hebben.
-</p>
-
-<div class="callout">
-  <p>
-    <strong>Let op:</strong> “onwaar” betekent niet “geen uitspraak”.
-    Een onware bewering is nog steeds een uitspraak.
-  </p>
-</div>
-
-
-<h3>Een voorbeeld is geen bewijs</h3>
-
-<p>
-  In de wiskunde willen we vaak weten of een bewering
-  <strong>voor alle gevallen</strong> geldt.
-</p>
-
-<p>
-  Stel dat iemand zegt:
-</p>
-
-<div class="callout">
-  <p>
-    <strong>“Alle natuurlijke getallen groter dan 1 zijn priemgetallen.”</strong>
-  </p>
-</div>
-
-<p>
-  We kunnen verschillende voorbeelden controleren:
-</p>
-
-<p class="formula">2, 3, 5, 7</p>
-
-<p>
-  Deze getallen zijn inderdaad allemaal priemgetallen.
-  Maar daarmee hebben we nog niet bewezen dat de bewering
-  voor <em>alle</em> natuurlijke getallen groter dan 1 geldt.
-</p>
-
-<p>
-  We moeten verder zoeken.
-</p>
-
-
-<h3>Een tegenvoorbeeld</h3>
-
-<p>
-  Een <strong>tegenvoorbeeld</strong> is één geval dat een algemene
-  bewering weerlegt.
-</p>
-
-<p>
-  In de vorige bewering is:
-</p>
-
-<p class="formula">9</p>
-
-<p>
-  een tegenvoorbeeld.
-  9 is groter dan 1, maar 9 is geen priemgetal.
-</p>
-
-<p>
-  Daarom is de bewering
-  <em>“Alle natuurlijke getallen groter dan 1 zijn priemgetallen”</em>
-  onwaar.
-</p>
-
-<div class="callout">
-  <p>
-    <strong>Een tegenvoorbeeld is genoeg.</strong>
-  </p>
-
-  <p>
-    Om een algemene bewering te weerleggen, heb je geen honderd of
-    duizend tegenvoorbeelden nodig. Eén enkel tegenvoorbeeld volstaat.
-  </p>
-</div>
-
-<p>
-  Omgekeerd geldt het volgende:
-</p>
-
-<div class="callout">
-  <p>
-    <strong>Veel voorbeelden bewijzen een algemene bewering nog niet.</strong>
-  </p>
-
-  <p>
-    Duizend gevallen waarin een bewering klopt, laten zien dat ze
-    in die gevallen klopt. Ze bewijzen nog niet automatisch dat ze
-    voor alle gevallen klopt.
-  </p>
-</div>
-
-
-<h3>Samenvatting</h3>
-
-<p>
-  We hebben verschillende soorten wiskundige zinnen leren onderscheiden:
-</p>
-
-<ul>
-  <li>
-    Een <strong>uitspraak</strong> beweert iets dat waar of onwaar kan zijn.
-  </li>
-  <li>
-    Een <strong>berekening of uitdrukking</strong> beweert op zichzelf niets.
-  </li>
-  <li>
-    Een <strong>vraag</strong> vraagt om informatie en is geen uitspraak.
-  </li>
-  <li>
-    Een <strong>definitie</strong> legt vast wat een begrip betekent.
-  </li>
-  <li>
-    Een <strong>open zin</strong> bevat bijvoorbeeld een variabele en is
-    zonder verdere informatie nog niet waar of onwaar.
-  </li>
-  <li>
-    Een <strong>tegenvoorbeeld</strong> kan een algemene bewering weerleggen.
-  </li>
-</ul>
-
-<div class="callout">
-  <strong>Kernidee</strong>
-  <p>
-    Wiskunde gaat niet alleen over rekenen.
-    We moeten ook precies kunnen aangeven
-    <strong>wat we beweren</strong>, wanneer een bewering
-    <strong>waar of onwaar</strong> is en hoe we dat kunnen aantonen.
-  </p>
-</div>
-
-  `
-},
+<p>Dit is onwaar.</p>
+<div class="callout"><strong>Schema</strong><p><span class="formula-inline">x + 1</span> → uitdrukking; <span class="formula-inline">x + 1 = 4</span> → open zin; <span class="formula-inline">3 + 1 = 4</span> → uitspraak.</p></div>
+<p>Later maken we open zinnen met woorden als <em>“voor elke”</em> en <em>“er bestaat”</em> tot uitspraken. Dat behandelen we in 0.4.</p>
+<h3>Voorbeeld en tegenvoorbeeld</h3>
+<p>Een voorbeeld toont dat een bewering in één geval klopt. Dat is niet genoeg om een uitspraak over <strong>alle</strong> gevallen te bewijzen.</p>
+<p>Neem de bewering: “Alle natuurlijke getallen groter dan 1 zijn priemgetallen.” De getallen 2, 3, 5 en 7 voldoen eraan, maar dat bewijst de algemene bewering niet.</p>
+<p>Het getal 9 is een <strong>tegenvoorbeeld</strong>: het is groter dan 1, maar geen priemgetal. Eén tegenvoorbeeld volstaat om een algemene bewering van de vorm “alle” te weerleggen.</p>
+<h3>Zelfstandig</h3>
+<p>Bepaal welke van deze voorbeelden uitspraken zijn: <span class="formula-inline">3 &lt; 8</span>, <span class="formula-inline">x + 1 = 4</span>, <em>“Is 12 deelbaar door 3?”</em> en <span class="formula-inline">7 + 5</span>.</p>
+<p><strong>Antwoordrichting:</strong> de eerste is een ware uitspraak; de tweede is een open zin; de derde is een vraag; de vierde is een uitdrukking.</p>
+    `
+  },
   {
     id: "0.2",
     title: "Logische operatoren",
@@ -420,66 +64,67 @@ const MILESTONES_0 = [
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
   <li>Hoe combineren we uitspraken?</li>
-  <li>Wat betekent “en” precies?</li>
-  <li>Wat is het verschil tussen inclusief en exclusief “of”?</li>
+  <li>Wat betekenen niet, en en of?</li>
+  <li>Waarom is “of” in de wiskunde meestal inclusief?</li>
+  <li>Hoe gebruiken we waarheidstabellen?</li>
 </ul>
 <h3>Niet, en, of</h3>
-<p>Voor uitspraken <span class="formula-inline">P</span> en <span class="formula-inline">Q</span> gebruiken we logische operatoren:</p>
+<p>Voor uitspraken <span class="formula-inline">P</span> en <span class="formula-inline">Q</span> gebruiken we logische operatoren.</p>
 <ul>
-  <li><strong>niet P</strong>: <span class="formula-inline">¬P</span>, waar precies als P onwaar is.</li>
-  <li><strong>P en Q</strong>: <span class="formula-inline">P ∧ Q</span>, waar precies als beide waar zijn.</li>
-  <li><strong>P of Q</strong>: <span class="formula-inline">P ∨ Q</span>, waar als minstens één van beide waar is.</li>
+  <li><strong>niet P:</strong> <span class="formula-inline">¬P</span>. Deze uitspraak is waar precies wanneer <span class="formula-inline">P</span> onwaar is.</li>
+  <li><strong>P en Q:</strong> <span class="formula-inline">P ∧ Q</span>. Deze uitspraak is waar precies wanneer beide uitspraken waar zijn.</li>
+  <li><strong>P of Q:</strong> <span class="formula-inline">P ∨ Q</span>. Deze uitspraak is waar wanneer minstens één van beide waar is.</li>
 </ul>
-<div class="callout"><strong>Definitie</strong><p><span class="formula-inline">P ∧ Q</span> is waar precies wanneer beide uitspraken waar zijn. <span class="formula-inline">P ∨ Q</span> is waar wanneer minstens één van beide waar is.</p></div>
-<p>In de wiskunde is “of” <strong>inclusief</strong>. “n is even of n is een veelvoud van 3” is waar voor 6, want 6 is allebei. Exclusief “of” (“precies één van de twee”) is een andere operator en schrijven we niet als ∨.</p>
+<div class="callout"><strong>Let op</strong><p>Het wiskundige “of” is <strong>inclusief</strong>. Bij <span class="formula-inline">P ∨ Q</span> mogen P en Q dus allebei waar zijn.</p></div>
+<p>Bijvoorbeeld: “<span class="formula-inline">n</span> is even of <span class="formula-inline">n</span> is deelbaar door 3” is waar voor <span class="formula-inline">n = 6</span>, want beide delen zijn waar.</p>
 <h3>Waarheidstabel</h3>
-<p>Elke combinatie van waar en onwaar heeft één uitkomst. Voor <span class="formula-inline">P ∧ ¬Q</span>:</p>
+<p>Een samengestelde uitspraak heeft een waarheidswaarde die afhangt van de waarheidswaarden van haar onderdelen. Voor <span class="formula-inline">P ∧ ¬Q</span> geldt:</p>
 <ul>
-  <li>P waar, Q waar: ¬Q onwaar, dus de samenstelling onwaar.</li>
-  <li>P waar, Q onwaar: ¬Q waar, dus de samenstelling waar.</li>
-  <li>P onwaar, Q waar: onwaar.</li>
-  <li>P onwaar, Q onwaar: onwaar.</li>
+  <li>P waar, Q waar → onwaar.</li>
+  <li>P waar, Q onwaar → waar.</li>
+  <li>P onwaar, Q waar → onwaar.</li>
+  <li>P onwaar, Q onwaar → onwaar.</li>
 </ul>
-<p>De tabel beslist de uitspraak. Een verhaal eromheen niet.</p>
+<p>Een waarheidstabel is een systematische manier om alle mogelijkheden te controleren.</p>
 <h3>De wetten van De Morgan</h3>
 <p class="formula">¬(P ∧ Q) ⇔ (¬P ∨ ¬Q)</p>
 <p class="formula">¬(P ∨ Q) ⇔ (¬P ∧ ¬Q)</p>
-<p><strong>Waarom klopt dit?</strong> De eerste uitspraak zegt dat het onmogelijk is dat beide tegelijk waar zijn. Dat is precies hetzelfde als zeggen dat minstens één ervan niet waar is. “Niet (regen en wind)” is “geen regen, of geen wind, of geen van beide”.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>“Of” betekent in de wiskunde normaal gesproken <strong>minstens één</strong>, niet noodzakelijk precies één. Bij <span class="formula-inline">P ∨ Q</span> mogen P en Q dus allebei waar zijn. Wie “of” leest als “precies één”, leest een andere uitspraak.</p>
+<p>De eerste zegt: “niet allebei” betekent “minstens één niet”. De tweede zegt: “niet minstens één” betekent “geen van beide”.</p>
+<h3>Veelgemaakte fout</h3>
+<p>“Of” verwarren met “precies één van de twee” verandert de betekenis. Exclusief of is een andere logische bewerking.</p>
 <h3>Zelfstandig</h3>
-<p>Maak de waarheidstabel voor <span class="formula-inline">P ∧ ¬Q</span>.</p>
+<p>Maak de waarheidstabel van <span class="formula-inline">P ∧ ¬Q</span> en leg in woorden uit wanneer de uitspraak waar is.</p>
     `
   },
   {
     id: "0.3",
     title: "Implicatie en equivalentie",
-    goal: "Lees implicaties correct, onderscheid de omkering en contrapositie en herken logische equivalentie.",
+    goal: "Lees implicaties correct, onderscheid omkering en contrapositie en herken logische equivalentie.",
     theory: /* html */`
 <h2>Implicatie en equivalentie</h2>
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
   <li>Wat betekent “als …, dan …”?</li>
   <li>Waarom is de omkering niet automatisch geldig?</li>
+  <li>Wat is de contrapositie?</li>
   <li>Wanneer zijn twee uitspraken equivalent?</li>
 </ul>
 <h3>Implicatie</h3>
-<p>De uitspraak <span class="formula-inline">P ⇒ Q</span> betekent: als P waar is, dan moet Q waar zijn. P is de hypothese, Q de conclusie.</p>
-<div class="callout"><strong>Definitie</strong><p>Een implicatie is alleen onwaar wanneer P waar is en Q onwaar.</p></div>
-<p>Is P onwaar, dan is de implicatie waar, wat Q ook is. “Als 0 = 1, dan is 2 = 3” is dus geen tegenvoorbeeld van een implicatie. Dat voelt vreemd, en het is een afspraak: alleen een ware hypothese met een onware conclusie telt als falen.</p>
-<p>Uit <span class="formula-inline">P ⇒ Q</span> volgt altijd de contrapositie <span class="formula-inline">¬Q ⇒ ¬P</span>.</p>
-<h3>Omkering</h3>
-<p>De omkering <span class="formula-inline">Q ⇒ P</span> is een andere uitspraak. Zij volgt niet automatisch uit de oorspronkelijke implicatie. “Als het regent, is de straat nat” zegt niets over een natte straat zonder regen.</p>
+<p>De uitspraak <span class="formula-inline">P ⇒ Q</span> betekent: als <span class="formula-inline">P</span> waar is, dan is <span class="formula-inline">Q</span> waar. P heet de <strong>hypothese</strong> en Q de <strong>conclusie</strong>.</p>
+<div class="callout"><strong>Definitie</strong><p><span class="formula-inline">P ⇒ Q</span> is alleen onwaar wanneer P waar is en Q onwaar.</p></div>
+<p>Dit betekent dat een onware hypothese de implicatie niet ongeldig maakt. Dat is een formele eigenschap van de logische operator.</p>
+<h3>Omkering en contrapositie</h3>
+<p>De <strong>omkering</strong> van <span class="formula-inline">P ⇒ Q</span> is <span class="formula-inline">Q ⇒ P</span>. Die volgt niet automatisch.</p>
+<p>De <strong>contrapositie</strong> is <span class="formula-inline">¬Q ⇒ ¬P</span>. Die is wel logisch equivalent met de oorspronkelijke implicatie.</p>
+<p class="formula">P ⇒ Q ⇔ ¬Q ⇒ ¬P</p>
+<p>Voorbeeld: als een getal deelbaar is door 4, dan is het even. De omkering is fout: 6 is even maar niet deelbaar door 4.</p>
 <h3>Equivalentie</h3>
-<p><span class="formula-inline">P ⇔ Q</span> betekent dat beide richtingen gelden: <span class="formula-inline">P ⇒ Q</span> én <span class="formula-inline">Q ⇒ P</span>. Dan zijn P en Q waar in precies dezelfde situaties. Een bewijs van een equivalentie heeft daarom twee richtingen, tenzij je een al bekende equivalentie gebruikt.</p>
-<h3>Stelling</h3>
-<p><span class="formula-inline">P ⇒ Q</span> is logisch equivalent aan <span class="formula-inline">¬Q ⇒ ¬P</span>.</p>
-<p><strong>Waarom klopt dit?</strong> De enige situatie waarin de implicatie faalt is P waar en Q onwaar. De contrapositie faalt precies in dezelfde situatie: ¬Q waar en ¬P onwaar. Dezelfde faalgevallen, dus dezelfde uitspraak.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>Als een getal deelbaar is door 4, dan is het even. Maar uit “even” volgt niet dat het getal deelbaar is door 4: 6 is even maar niet deelbaar door 4. De omkering is een andere bewering, en hier is ze onwaar.</p>
+<p><span class="formula-inline">P ⇔ Q</span> betekent dat beide richtingen gelden:</p>
+<p class="formula">(P ⇒ Q) ∧ (Q ⇒ P)</p>
+<p>Een equivalentie zegt dus dat P en Q in precies dezelfde situaties waar zijn.</p>
 <h3>Zelfstandig</h3>
-<p>Schrijf de omkering en contrapositie van: “Als n deelbaar is door 6, dan is n even.” Bepaal welke bewering altijd geldig is.</p>
-<p>Antwoordrichting: omkering “als n even is, dan is n deelbaar door 6” (niet altijd; 2). Contrapositie “als n niet even is, dan is n niet deelbaar door 6” (wel altijd, samen met de oorspronkelijke implicatie).</p>
+<p>Schrijf de omkering en contrapositie van: “Als <span class="formula-inline">n</span> deelbaar is door 6, dan is <span class="formula-inline">n</span> even.”</p>
+<p><strong>Antwoordrichting:</strong> omkering: “als <span class="formula-inline">n</span> even is, dan is <span class="formula-inline">n</span> deelbaar door 6”; contrapositie: “als <span class="formula-inline">n</span> niet even is, dan is <span class="formula-inline">n</span> niet deelbaar door 6”.</p>
     `
   },
   {
@@ -490,27 +135,29 @@ const MILESTONES_0 = [
 <h2>Kwantoren</h2>
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
-  <li>Hoe drukken we “voor elk” en “er bestaat” formeel uit?</li>
+  <li>Hoe drukken we “voor alle” en “er bestaat” formeel uit?</li>
+  <li>Waarom hoort het domein bij een kwantor?</li>
   <li>Hoe ontken je een uitspraak met een kwantor?</li>
-  <li>Waarom is de volgorde van kwantoren belangrijk?</li>
+  <li>Waarom kan de volgorde van kwantoren de betekenis veranderen?</li>
 </ul>
 <h3>Universele en existentiële kwantor</h3>
-<p><span class="formula">∀x</span> betekent “voor alle x” en <span class="formula">∃x</span> betekent “er bestaat een x”.</p>
-<div class="callout"><strong>Definitie</strong><p><span class="formula-inline">∀x P(x)</span> zegt dat P voor elk toegelaten x waar is. <span class="formula-inline">∃x P(x)</span> zegt dat er minstens één toegelaten x bestaat waarvoor P waar is.</p></div>
-<p>Het domein hoort erbij. “Voor alle n” op de natuurlijke getallen is een andere uitspraak dan “voor alle n” op de gehele getallen. Bestaat er een natuurlijk getal kleiner dan 0? Nee. Bestaat er een geheel getal kleiner dan 0? Ja.</p>
-<h3>Volgorde</h3>
-<p><span class="formula-inline">∀n ∃m (m > n)</span> op de natuurlijke getallen is waar: bij elke n past een grotere m, bijvoorbeeld n + 1. Die m mag van n afhangen.</p>
-<p><span class="formula-inline">∃m ∀n (m > n)</span> is onwaar: geen enkel getal is groter dan alle getallen. Eerst een m kiezen, en die daarna tegen elke n moeten laten winnen, is een sterkere eis.</p>
+<p><span class="formula-inline">∀x</span> betekent “voor alle <span class="formula-inline">x</span>” en <span class="formula-inline">∃x</span> betekent “er bestaat minstens één <span class="formula-inline">x</span>”.</p>
+<div class="callout"><strong>Definitie</strong><p><span class="formula-inline">∀x P(x)</span> zegt dat P voor elk toegelaten <span class="formula-inline">x</span> waar is. <span class="formula-inline">∃x P(x)</span> zegt dat er minstens één toegelaten <span class="formula-inline">x</span> bestaat waarvoor P waar is.</p></div>
+<p>Het domein moet duidelijk zijn. “Er bestaat een natuurlijk getal kleiner dan 0” is onwaar, terwijl “er bestaat een geheel getal kleiner dan 0” waar is.</p>
+<h3>Volgorde van kwantoren</h3>
+<p class="formula">∀n ∃m (m &gt; n)</p>
+<p>Op <span class="formula-inline">ℕ</span> is dit waar: voor elk <span class="formula-inline">n</span> kunnen we bijvoorbeeld <span class="formula-inline">m = n + 1</span> kiezen.</p>
+<p class="formula">∃m ∀n (m &gt; n)</p>
+<p>Dit is onwaar: één vast <span class="formula-inline">m</span> kan niet groter zijn dan elk natuurlijk getal.</p>
 <h3>Negatie</h3>
-<p>Belangrijk zijn:</p>
 <p class="formula">¬(∀x P(x)) ⇔ ∃x ¬P(x)</p>
 <p class="formula">¬(∃x P(x)) ⇔ ∀x ¬P(x)</p>
-<p><strong>Waarom klopt dit?</strong> “Niet iedereen” betekent dat er minstens één uitzondering is. “Niemand” betekent dat voor iedereen de eigenschap ontbreekt. De ontkenning van “elk priemgetal is oneven” is niet “elk priemgetal is even”, maar “er is een priemgetal dat niet oneven is”: 2.</p>
+<p>“Niet iedereen heeft eigenschap P” betekent dus “er is minstens één uitzondering”. “Niemand heeft P” betekent “iedereen heeft niet-P”.</p>
 <h3>Tegenvoorbeeld</h3>
-<p>De bewering “voor alle natuurlijke n geldt n² ≥ n + 1” is fout; neem n = 1, want 1 ≥ 2 is onwaar. Eén uitzondering ontkent een ∀.</p>
+<p>Een universele bewering <span class="formula-inline">∀x P(x)</span> wordt weerlegd door één toegelaten <span class="formula-inline">x</span> waarvoor <span class="formula-inline">P(x)</span> onwaar is.</p>
 <h3>Zelfstandig</h3>
-<p>Ontken: “Voor elk natuurlijk getal n bestaat een natuurlijk getal m zodat m > n.”</p>
-<p>Antwoordrichting: er bestaat een natuurlijk getal n zodat voor elk natuurlijk getal m geldt dat m ≤ n. Die ontkenning is onwaar, want de oorspronkelijke uitspraak is waar. Ontkennen verandert de vorm; het maakt een ware uitspraak niet ineens waar in ontkende vorm.</p>
+<p>Ontken: “Voor elk natuurlijk getal <span class="formula-inline">n</span> bestaat een natuurlijk getal <span class="formula-inline">m</span> met <span class="formula-inline">m &gt; n</span>.”</p>
+<p><strong>Antwoordrichting:</strong> er bestaat een natuurlijk <span class="formula-inline">n</span> zodat voor elk natuurlijk <span class="formula-inline">m</span> geldt dat <span class="formula-inline">m ≤ n</span>.</p>
     `
   },
   {
@@ -522,22 +169,23 @@ const MILESTONES_0 = [
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
   <li>Hoe verschilt een bewijs van een voorbeeld?</li>
-  <li>Hoe begin je met de hypothese?</li>
+  <li>Hoe begin je bij de hypothese?</li>
   <li>Hoe eindig je met precies de gewenste conclusie?</li>
 </ul>
 <h3>De structuur</h3>
-<p>Bij een directe bewijsvoering neem je de hypothese aan en leid je stap voor stap de conclusie af. Elke stap gebruikt een definitie, een al bewezen feit, of een rekenregel. “Het is duidelijk” is geen stap.</p>
-<div class="callout"><strong>Bewijsschema</strong><p>Neem aan dat P waar is. Gebruik definities en eerder bewezen resultaten. Leid Q af. Dus P ⇒ Q.</p></div>
+<p>Bij een direct bewijs neem je de hypothese aan en leid je daaruit stap voor stap de conclusie af. Elke stap steunt op een definitie, een eerder bewezen resultaat of een geldige rekenregel.</p>
+<div class="callout"><strong>Bewijsschema</strong><p>Neem aan dat P waar is. Gebruik definities en bekende resultaten. Leid Q af. Dus <span class="formula-inline">P ⇒ Q</span>.</p></div>
 <h3>Voorbeeld</h3>
-<p>Bewijs: de som van twee even gehele getallen is even. Een geheel getal is even als het 2 keer een geheel getal is. Neem even getallen <span class="formula-inline">2a</span> en <span class="formula-inline">2b</span>. Dan is <span class="formula-inline">2a + 2b = 2(a + b)</span>, dus de som is even.</p>
-<p>a en b zijn willekeurig. Het bewijs gaat niet over 4 en 6. Die mogen als controle dienen, niet als bewijs.</p>
-<h3>Stelling</h3>
-<p>Een bewijs moet voor <strong>alle</strong> toegelaten gevallen werken; één berekening voor één getal bewijst geen universele uitspraak.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>Uit 2, 4 en 6 kun je niet concluderen dat alle even getallen een bepaalde eigenschap hebben. Een bewijs moet het willekeurige geval behandelen. Ook een tekening is geen bewijs, tenzij elke stap in de tekening is verantwoord.</p>
+<p>Bewijs dat de som van twee even gehele getallen even is.</p>
+<p>Neem twee willekeurige even gehele getallen. Volgens de definitie bestaan er gehele getallen <span class="formula-inline">a</span> en <span class="formula-inline">b</span> zodat de twee getallen <span class="formula-inline">2a</span> en <span class="formula-inline">2b</span> zijn.</p>
+<p class="formula">2a + 2b = 2(a + b)</p>
+<p>Omdat <span class="formula-inline">a + b</span> een geheel getal is, is de som even.</p>
+<p>Het woord <strong>willekeurig</strong> is belangrijk: het bewijs geldt niet alleen voor 2 en 4, maar voor elk toegelaten paar.</p>
+<h3>Veelgemaakte fout</h3>
+<p>Een berekening met één concreet getal kan een controle zijn, maar geen bewijs van een uitspraak voor alle getallen.</p>
 <h3>Zelfstandig</h3>
 <p>Bewijs rechtstreeks dat de som van twee oneven gehele getallen even is.</p>
-<p>Antwoordrichting: oneven getallen zijn <span class="formula-inline">2a + 1</span> en <span class="formula-inline">2b + 1</span>. Som: <span class="formula-inline">2a + 2b + 2 = 2(a + b + 1)</span>, dus even.</p>
+<p><strong>Antwoordrichting:</strong> schrijf de getallen als <span class="formula-inline">2a + 1</span> en <span class="formula-inline">2b + 1</span> en factoriseer de som.</p>
     `
   },
   {
@@ -553,16 +201,18 @@ const MILESTONES_0 = [
   <li>Wanneer is deze methode handig?</li>
 </ul>
 <h3>De methode</h3>
-<p>Om <span class="formula-inline">P ⇒ Q</span> te bewijzen, mag je de equivalente uitspraak <span class="formula-inline">¬Q ⇒ ¬P</span> bewijzen. Je bewijst dus een andere zin, waarvan in 0.3 al vaststond dat ze hetzelfde betekent.</p>
+<p>Om <span class="formula-inline">P ⇒ Q</span> te bewijzen, mogen we de equivalente uitspraak <span class="formula-inline">¬Q ⇒ ¬P</span> bewijzen.</p>
 <div class="callout"><strong>Stelling</strong><p><span class="formula-inline">P ⇒ Q</span> en <span class="formula-inline">¬Q ⇒ ¬P</span> zijn logisch equivalent.</p></div>
-<p>Handig als ¬Q een vorm heeft waarmee je kunt rekenen, en P niet. “n² even” begint bij een kwadraat; “n oneven” begint bij n zelf en is daarom makkelijker om mee te starten.</p>
 <h3>Voorbeeld</h3>
-<p>Bewijs: als n² even is, dan is n even. Contrapositie: als n niet even is, dus n oneven, dan is n² oneven. Schrijf <span class="formula-inline">n = 2k + 1</span>; dan <span class="formula-inline">n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1</span>, een oneven getal. Dus als n² even is, kan n niet oneven zijn.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>De omkering “als n even is, dan is n² even” is wel waar in dit voorbeeld, maar dat komt door een afzonderlijk argument. In het algemeen mag je een omkering nooit verwarren met contrapositie. Contrapositie draait én ontkent. Omkering draait alleen.</p>
+<p>Bewijs: als <span class="formula-inline">n²</span> even is, dan is <span class="formula-inline">n</span> even.</p>
+<p>De contrapositie luidt: als <span class="formula-inline">n</span> niet even is, dan is <span class="formula-inline">n²</span> niet even. Een geheel getal dat niet even is, is oneven, dus schrijf <span class="formula-inline">n = 2k + 1</span>.</p>
+<p class="formula">n² = (2k + 1)² = 4k² + 4k + 1 = 2(2k² + 2k) + 1</p>
+<p>Dus <span class="formula-inline">n²</span> is oneven. Daarmee is de contrapositie bewezen en dus ook de oorspronkelijke implicatie.</p>
+<h3>Omkering is iets anders</h3>
+<p>De omkering van <span class="formula-inline">P ⇒ Q</span> is <span class="formula-inline">Q ⇒ P</span>. Daarvoor bestaat geen algemene logische equivalentie.</p>
 <h3>Zelfstandig</h3>
-<p>Gebruik contrapositie om te bewijzen: als n² oneven is, dan is n oneven.</p>
-<p>Antwoordrichting: contrapositie is “als n even is, dan is n² even”. n = 2k geeft n² = 4k², even.</p>
+<p>Gebruik contrapositie om te bewijzen: als <span class="formula-inline">n²</span> oneven is, dan is <span class="formula-inline">n</span> oneven.</p>
+<p><strong>Antwoordrichting:</strong> bewijs de contrapositie “als <span class="formula-inline">n</span> even is, dan is <span class="formula-inline">n²</span> even”.</p>
     `
   },
   {
@@ -578,16 +228,20 @@ const MILESTONES_0 = [
   <li>Wanneer is reductio ad absurdum nuttig?</li>
 </ul>
 <h3>De methode</h3>
-<p>Wil je P bewijzen, neem dan tijdelijk ¬P aan. Leid daaruit een tegenspraak af: een uitspraak Q én haar ontkenning, of een botsing met een al bewezen feit. Dan kan ¬P niet waar zijn, en volgt P. De aanname wordt aan het eind weggegooid; ze was een werktuig, geen resultaat.</p>
-<div class="callout"><strong>Bewijsschema</strong><p>Aanname: ¬P. Leid Q en ¬Q af. Dat is onmogelijk. Dus ¬P is fout en P is waar.</p></div>
-<h3>Voorbeeld</h3>
-<p>Er is geen rationaal getal waarvan het kwadraat 2 is. Stel van wel: <span class="formula-inline">√2 = a/b</span> in volledig vereenvoudigde vorm, a en b geheel, b ≠ 0, zonder gemeenschappelijke factor groter dan 1. Dan a² = 2b², dus a² even, dus a even (0.6). Schrijf a = 2k. Dan 4k² = 2b², dus b² = 2k², dus b even. Dan hebben a en b een factor 2 gemeen, in strijd met de vereenvoudigde vorm.</p>
-<p>Dit gebruikt alleen even en oneven, en dat een breuk een schrijfwijze in laagste termen heeft. De bouw van de reële getallen komt later.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>Een losse onwaarschijnlijke uitkomst is geen tegenspraak. Er moet een echte logische onverenigbaarheid ontstaan: twee uitspraken die niet tegelijk waar kunnen zijn. “Dan wordt het getal erg groot” is geen tegenspraak.</p>
+<p>Wil je P bewijzen, neem dan tijdelijk <span class="formula-inline">¬P</span> aan. Leid daaruit een tegenspraak af. Dan kan <span class="formula-inline">¬P</span> niet waar zijn en volgt P.</p>
+<div class="callout"><strong>Bewijsschema</strong><p>Aanname: <span class="formula-inline">¬P</span>. Leid <span class="formula-inline">Q</span> en <span class="formula-inline">¬Q</span> af. Dat is onmogelijk. Dus <span class="formula-inline">P</span> is waar.</p></div>
+<h3>Voorbeeld: √2 is niet rationaal</h3>
+<p>We bewijzen dat er geen rationaal getal <span class="formula-inline">q</span> bestaat waarvoor <span class="formula-inline">q² = 2</span>.</p>
+<p>Stel het tegendeel. Schrijf dan <span class="formula-inline">q = a / b</span> in volledig vereenvoudigde vorm, met gehele <span class="formula-inline">a</span> en <span class="formula-inline">b ≠ 0</span>. Dan:</p>
+<p class="formula">a² = 2b²</p>
+<p>Dus <span class="formula-inline">a²</span> is even en daarmee is <span class="formula-inline">a</span> even. Schrijf <span class="formula-inline">a = 2k</span>. Dan volgt:</p>
+<p class="formula">b² = 2k²</p>
+<p>Dus ook <span class="formula-inline">b</span> is even. Dan hebben <span class="formula-inline">a</span> en <span class="formula-inline">b</span> een gemeenschappelijke factor 2. Dat strijdt met de keuze van de breuk in volledig vereenvoudigde vorm. De aanname was dus onmogelijk.</p>
+<h3>Wat is geen tegenspraak?</h3>
+<p>Een verrassend of groot getal is geen tegenspraak. Er moet een echte logische onverenigbaarheid ontstaan, bijvoorbeeld een uitspraak én haar ontkenning.</p>
 <h3>Zelfstandig</h3>
-<p>Maak een bewijsschema voor de uitspraak dat er geen grootste natuurlijk getal bestaat.</p>
-<p>Antwoordrichting: stel dat N het grootste is. Dan is N + 1 een natuurlijk getal groter dan N. Tegenspraak. Dus zo’n N bestaat niet.</p>
+<p>Maak een bewijs uit het ongerijmde voor de uitspraak dat er geen grootste natuurlijk getal bestaat.</p>
+<p><strong>Antwoordrichting:</strong> neem aan dat <span class="formula-inline">N</span> het grootste natuurlijke getal is. Dan is <span class="formula-inline">N + 1</span> natuurlijk en groter dan <span class="formula-inline">N</span>.</p>
     `
   },
   {
@@ -598,26 +252,26 @@ const MILESTONES_0 = [
 <h2>Wiskundige inductie</h2>
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
-  <li>Waarom zijn twee stappen voldoende?</li>
+  <li>Waarom zijn een basisstap en inductiestap voldoende?</li>
   <li>Wat is de inductiehypothese?</li>
-  <li>Wat bewijst de methode precies?</li>
+  <li>Wat bewijst inductie precies?</li>
 </ul>
 <h3>Het principe</h3>
-<p>De natuurlijke getallen nemen we hier als 0, 1, 2, … Fase 1 bouwt ze verder uit. Het principe werkt ook als je bij 1 begint; dan is de basis P(1).</p>
-<div class="callout"><strong>Stelling</strong><p>Als P(0) waar is en uit P(k) volgt dat P(k+1) waar is voor elk natuurlijk k, dan is P(n) waar voor alle natuurlijke n.</p></div>
-<h3>Waarom klopt dit?</h3>
-<p>De basisstap zet de eerste dominosteen vast. De inductiestap zegt dat elke geldige steen de volgende geldig maakt. Daardoor volgt de uitspraak voor alle natuurlijke getallen. De stap moet voor een willekeurige k gelden, niet voor één voorbeeld. P(k) in die stap heet de <strong>inductiehypothese</strong>: je mag haar gebruiken, maar alleen om P(k+1) te halen.</p>
+<p>In deze cursus nemen we <span class="formula-inline">ℕ = {0, 1, 2, …}</span>. Als een uitspraak <span class="formula-inline">P(n)</span> waar is voor 0 en we voor elk natuurlijk <span class="formula-inline">k</span> kunnen aantonen dat <span class="formula-inline">P(k) ⇒ P(k + 1)</span>, dan is <span class="formula-inline">P(n)</span> waar voor elk natuurlijk <span class="formula-inline">n</span>.</p>
+<div class="callout"><strong>Bewijsschema</strong><p>1. Basis: bewijs <span class="formula-inline">P(0)</span>. 2. Inductiestap: neem een willekeurig <span class="formula-inline">k</span> en neem <span class="formula-inline">P(k)</span> aan. Bewijs <span class="formula-inline">P(k + 1)</span>. 3. Conclusie: <span class="formula-inline">P(n)</span> geldt voor alle <span class="formula-inline">n ∈ ℕ</span>.</p></div>
 <h3>Voorbeeld</h3>
-<p>Voor <span class="formula-inline">0 + 1 + … + n = n(n+1)/2</span>: basis n = 0, beide kanten 0. Neem de formule aan voor k en tel k + 1 erbij op. Dan ontstaat <span class="formula-inline">k(k+1)/2 + (k+1) = (k+1)(k+2)/2</span>. Dat is de formule voor k + 1.</p>
-<p>Wie bij 1 begint, zoals in de opgave hieronder, controleert n = 1 en laat de stap vanaf daar lopen. Dat dekt 1, 2, 3, … en niet 0. Zeg dat erbij.</p>
-<h3>Wat geen inductie is</h3>
-<p>Alleen de eerste gevallen controleren is geen inductiebewijs. Een patroon kan later breken. Een stap zonder basis bewijst niets: de stenen kunnen allemaal omliggen. Een basis zonder stap bewijst één geval.</p>
-<p>Het “bewijs” dat alle paarden dezelfde kleur hebben faalt in de stap van 1 naar 2. Twee groepen van één paard hebben geen gemeenschappelijk paard, dus de kleur wordt niet doorgegeven. De stap geldt niet voor elke k.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>Alleen veel eerste gevallen controleren is geen inductiebewijs. Een patroon kan later breken.</p>
+<p>Bewijs:</p>
+<p class="formula">0 + 1 + … + n = n(n + 1) / 2</p>
+<p><strong>Basis:</strong> voor <span class="formula-inline">n = 0</span> zijn beide kanten 0.</p>
+<p><strong>Inductiestap:</strong> neem aan dat de formule voor <span class="formula-inline">k</span> geldt. Dan:</p>
+<p class="formula">0 + 1 + … + k + (k + 1) = k(k + 1) / 2 + (k + 1) = (k + 1)(k + 2) / 2</p>
+<p>Dat is precies de formule voor <span class="formula-inline">k + 1</span>.</p>
+<h3>Wat geen inductiebewijs is</h3>
+<p>Alleen de eerste gevallen controleren is geen inductiebewijs. Ook een inductiestap zonder basisstap is onvoldoende. De stap moet bovendien voor een <strong>willekeurig</strong> natuurlijk <span class="formula-inline">k</span> gelden.</p>
 <h3>Zelfstandig</h3>
-<p>Bewijs met inductie dat <span class="formula-inline">1 + 3 + 5 + … + (2n − 1) = n²</span>.</p>
-<p>Antwoordrichting: basis n = 1, som 1 = 1². Stap: som tot k is k², plus de volgende oneven term 2(k+1) − 1 = 2k + 1, geeft k² + 2k + 1 = (k+1)².</p>
+<p>Bewijs met inductie dat voor <span class="formula-inline">n ≥ 1</span> geldt:</p>
+<p class="formula">1 + 3 + 5 + … + (2n − 1) = n²</p>
+<p><strong>Antwoordrichting:</strong> basis <span class="formula-inline">n = 1</span>. Neem de formule aan voor <span class="formula-inline">k</span> en voeg de volgende oneven term <span class="formula-inline">2k + 1</span> toe.</p>
     `
   },
   {
@@ -629,28 +283,27 @@ const MILESTONES_0 = [
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
   <li>Wat is een verzameling?</li>
-  <li>Wat betekent lidmaatschap?</li>
-  <li>Hoe combineren we verzamelingen?</li>
+  <li>Wat betekenen element en deelverzameling?</li>
+  <li>Hoe werken unie, doorsnede en verschil?</li>
+  <li>Waarom is de lege verzameling belangrijk?</li>
 </ul>
 <h3>Elementen en deelverzamelingen</h3>
-<p>Een verzameling is een collectie objecten die we als geheel beschouwen. Twee verzamelingen zijn gelijk als ze precies dezelfde elementen hebben. Volgorde en herhaling tellen niet: <span class="formula-inline">{1, 2, 2} = {2, 1}</span>. Een verzameling is geen lijst.</p>
-<p>We schrijven <span class="formula-inline">x ∈ A</span> wanneer x een element van A is en <span class="formula-inline">A ⊆ B</span> wanneer elk element van A ook in B zit. Elke verzameling is deelverzameling van zichzelf.</p>
-<div class="callout"><strong>Definitie</strong><p>De lege verzameling ∅ heeft geen elementen. Er is er één. ∅ is deelverzameling van elke verzameling: de eis “elk element van ∅ zit in A” gaat over geen enkel element en is dus waar.</p></div>
-<p><span class="formula-inline">{∅}</span> is niet leeg. Haar enige element is ∅. Dus <span class="formula-inline">∅ ∈ {∅}</span>, maar <span class="formula-inline">∅ ≠ {∅}</span>.</p>
+<p>Een verzameling is een collectie objecten die we als geheel beschouwen. Volgorde en herhaling bepalen de verzameling niet:</p>
+<p class="formula">{1, 2, 2} = {2, 1}</p>
+<p>We schrijven <span class="formula-inline">x ∈ A</span> wanneer <span class="formula-inline">x</span> een element van <span class="formula-inline">A</span> is. We schrijven <span class="formula-inline">A ⊆ B</span> wanneer elk element van <span class="formula-inline">A</span> ook element van <span class="formula-inline">B</span> is.</p>
+<div class="callout"><strong>Definitie</strong><p>De lege verzameling <span class="formula-inline">∅</span> heeft geen elementen. Ze is een deelverzameling van elke verzameling.</p></div>
+<p><span class="formula-inline">{∅}</span> is niet leeg: de lege verzameling is daar het enige element. Dus <span class="formula-inline">∅ ∈ {∅}</span>, terwijl <span class="formula-inline">∅ ≠ {∅}</span>.</p>
 <h3>Bewerkingen</h3>
 <ul>
-  <li>unie: <span class="formula-inline">A ∪ B</span>, elementen die in A of in B zitten (of in allebei).</li>
-  <li>doorsnede: <span class="formula-inline">A ∩ B</span>, elementen die in allebei zitten.</li>
-  <li>verschil: <span class="formula-inline">A \\ B</span>, elementen van A die niet in B zitten.</li>
-  <li>complement: elementen buiten A, alleen binnen een afgesproken universum.</li>
+  <li>unie: <span class="formula-inline">A ∪ B</span> bevat de elementen die in A of in B zitten;</li>
+  <li>doorsnede: <span class="formula-inline">A ∩ B</span> bevat de elementen die in A én in B zitten;</li>
+  <li>verschil: <span class="formula-inline">A ∖ B</span> bevat de elementen van A die niet in B zitten.</li>
 </ul>
-<div class="callout"><strong>Stelling</strong><p>De doorsnede is commutatief: <span class="formula-inline">A ∩ B = B ∩ A</span>. Ook: <span class="formula-inline">A ⊆ B</span> precies als <span class="formula-inline">A ∪ B = B</span>.</p></div>
-<p><strong>Waarom klopt dit?</strong> Een element zit in A ∩ B precies wanneer het in A én in B zit. “A én B” is hetzelfde als “B én A”. En A ∪ B = B betekent dat elk element van A al in B zat.</p>
-<h3>Tegenvoorbeeld</h3>
-<p><span class="formula-inline">A ∈ B</span> betekent niet hetzelfde als <span class="formula-inline">A ⊆ B</span>. Een element en een verzameling zijn verschillende rollen. 1 ∈ {1}, maar “1 ⊆ {1}” is hier onzin als 1 geen verzameling is waarvan we de elementen natrekken.</p>
+<div class="callout"><strong>Stelling</strong><p><span class="formula-inline">A ⊆ B</span> precies wanneer <span class="formula-inline">A ∪ B = B</span>.</p></div>
+<p>Let goed op het verschil tussen lidmaatschap <span class="formula-inline">∈</span> en deelverzameling <span class="formula-inline">⊆</span>. Het zijn verschillende relaties.</p>
 <h3>Zelfstandig</h3>
-<p>Neem A = {1, 2, 3} en B = {3, 4}. Bepaal A ∪ B, A ∩ B en A \\ B.</p>
-<p>Antwoord: {1, 2, 3, 4}, {3}, {1, 2}.</p>
+<p>Neem <span class="formula-inline">A = {1, 2, 3}</span> en <span class="formula-inline">B = {3, 4}</span>. Bepaal <span class="formula-inline">A ∪ B</span>, <span class="formula-inline">A ∩ B</span> en <span class="formula-inline">A ∖ B</span>.</p>
+<p><strong>Antwoord:</strong> <span class="formula-inline">{1, 2, 3, 4}</span>, <span class="formula-inline">{3}</span> en <span class="formula-inline">{1, 2}</span>.</p>
     `
   },
   {
@@ -661,29 +314,28 @@ const MILESTONES_0 = [
 <h2>Relaties en equivalentieklassen</h2>
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
-  <li>Hoe kunnen we zeggen dat twee objecten bij elkaar horen?</li>
+  <li>Wat is een relatie?</li>
   <li>Wat betekenen reflexief, symmetrisch en transitief?</li>
   <li>Hoe ontstaan equivalentieklassen?</li>
 </ul>
-<h3>Koppels</h3>
-<p>Een relatie koppelt dingen. Het <strong>cartesisch product</strong> A × B is de verzameling koppels (a, b) met a ∈ A en b ∈ B. (1, 2) ≠ (2, 1). Een koppel is geen verzameling van twee elementen: {1, 2} = {2, 1}.</p>
-<p>Een <strong>relatie</strong> van A naar B is een deelverzameling van A × B. Op één verzameling A schrijven we aRb als (a, b) in de relatie zit.</p>
+<h3>Relaties</h3>
+<p>Het cartesisch product <span class="formula-inline">A × B</span> bestaat uit alle geordende koppels <span class="formula-inline">(a, b)</span> met <span class="formula-inline">a ∈ A</span> en <span class="formula-inline">b ∈ B</span>. Een relatie van A naar B is een deelverzameling van <span class="formula-inline">A × B</span>.</p>
+<p>Op één verzameling schrijven we <span class="formula-inline">a R b</span> wanneer <span class="formula-inline">(a, b)</span> tot de relatie behoort. De volgorde van een koppel telt: <span class="formula-inline">(1, 2) ≠ (2, 1)</span>.</p>
 <h3>Drie eigenschappen</h3>
 <ul>
-  <li><strong>Reflexief:</strong> voor elke a geldt aRa.</li>
-  <li><strong>Symmetrisch:</strong> als aRb, dan bRa.</li>
-  <li><strong>Transitief:</strong> als aRb en bRc, dan aRc.</li>
+  <li><strong>Reflexief:</strong> voor elke <span class="formula-inline">a</span> geldt <span class="formula-inline">a R a</span>.</li>
+  <li><strong>Symmetrisch:</strong> uit <span class="formula-inline">a R b</span> volgt <span class="formula-inline">b R a</span>.</li>
+  <li><strong>Transitief:</strong> uit <span class="formula-inline">a R b</span> en <span class="formula-inline">b R c</span> volgt <span class="formula-inline">a R c</span>.</li>
 </ul>
-<div class="callout"><strong>Definitie</strong><p>Een equivalentierelatie is reflexief, symmetrisch en transitief.</p></div>
-<p>“Evenveel rest bij deling door 3” op de gehele getallen is een equivalentierelatie. 5 en 8 horen bij elkaar, want beide rest 2. “Kleiner dan” is transitief, niet reflexief en niet symmetrisch, dus geen equivalentie.</p>
-<h3>Klassen</h3>
-<p>De <strong>equivalentieklasse</strong> van a is de verzameling van alles dat met a in relatie staat. Bij rest bij deling door 3 zijn er drie klassen: rest 0, rest 1 en rest 2. Elke gehele zit in precies één klasse. De klassen vormen een <strong>partitie</strong>: ze bedekken de verzameling, en twee klassen zijn gelijk of hebben lege doorsnede.</p>
-<p>Omgekeerd geeft elke partitie een equivalentierelatie: aRb precies als a en b in hetzelfde blok zitten.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>“Is kind van” is niet reflexief, niet symmetrisch en niet transitief. Een klasse zou hier niet netjes de mensen verdelen.</p>
+<div class="callout"><strong>Definitie</strong><p>Een <strong>equivalentierelatie</strong> is reflexief, symmetrisch en transitief.</p></div>
+<h3>Voorbeeld</h3>
+<p>Op de gehele getallen zeggen we dat twee getallen equivalent zijn wanneer ze bij deling door 3 dezelfde rest hebben. Formeel kunnen we schrijven <span class="formula-inline">a ≡ b (mod 3)</span>. De equivalentieklassen zijn de getallen met rest 0, rest 1 en rest 2.</p>
+<p>Een equivalentieklasse verzamelt dus precies de objecten die volgens de relatie “bij elkaar horen”.</p>
+<h3>Partitie</h3>
+<p>De equivalentieklassen vormen een <strong>partitie</strong>: ze bedekken de hele verzameling en twee verschillende klassen hebben geen gemeenschappelijke elementen.</p>
 <h3>Zelfstandig</h3>
-<p>Ga na of “heeft dezelfde absolute waarde” op de gehele getallen reflexief, symmetrisch en transitief is.</p>
-<p>Antwoord: alle drie ja. Klassen zijn {0} en, voor n > 0, {n, −n}.</p>
+<p>Ga na of “heeft dezelfde absolute waarde” op <span class="formula-inline">ℤ</span> reflexief, symmetrisch en transitief is.</p>
+<p><strong>Antwoord:</strong> alle drie. De klasse van 0 is <span class="formula-inline">{0}</span>; voor <span class="formula-inline">n &gt; 0</span> is de klasse <span class="formula-inline">{n, −n}</span>.</p>
     `
   },
   {
@@ -694,22 +346,23 @@ const MILESTONES_0 = [
 <h2>Ordeningen</h2>
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
-  <li>Wanneer is een relatie een ordening?</li>
+  <li>Wanneer is een relatie een partiële ordening?</li>
   <li>Wat is het verschil tussen partieel en totaal?</li>
-  <li>Wanneer bestaat een kleinste element?</li>
+  <li>Wat betekenen kleinste, minimaal, grootste en maximaal?</li>
 </ul>
 <h3>Partiële orde</h3>
-<p>Een relatie ≤ op A is een <strong>partiële orde</strong> als ze reflexief, antisymmetrisch en transitief is. Antisymmetrisch: als a ≤ b en b ≤ a, dan a = b. Dat is niet hetzelfde als “niet symmetrisch”.</p>
-<div class="callout"><strong>Definitie</strong><p>Een totale orde is een partiële orde waarin elke twee elementen vergelijkbaar zijn: a ≤ b of b ≤ a.</p></div>
-<p>De gewone ≤ op de gehele getallen is totaal. “A is deelverzameling van B” op de deelverzamelingen van {1, 2} is partieel: {1} en {2} zijn niet vergelijkbaar. Allebei zijn dat ordeningen.</p>
+<p>Een relatie <span class="formula-inline">≤</span> op een verzameling A is een <strong>partiële orde</strong> als ze reflexief, antisymmetrisch en transitief is.</p>
+<p><strong>Antisymmetrisch</strong> betekent: als <span class="formula-inline">a ≤ b</span> en <span class="formula-inline">b ≤ a</span>, dan <span class="formula-inline">a = b</span>. Antisymmetrisch betekent dus niet “niet symmetrisch”.</p>
+<div class="callout"><strong>Definitie</strong><p>Een <strong>totale orde</strong> is een partiële orde waarin voor elk paar <span class="formula-inline">a, b</span> geldt: <span class="formula-inline">a ≤ b</span> of <span class="formula-inline">b ≤ a</span>.</p></div>
+<h3>Voorbeeld</h3>
+<p>De gewone <span class="formula-inline">≤</span> op <span class="formula-inline">ℤ</span> is een totale orde. De inclusierelatie <span class="formula-inline">⊆</span> op de deelverzamelingen van <span class="formula-inline">{1, 2}</span> is partieel: <span class="formula-inline">{1}</span> en <span class="formula-inline">{2}</span> zijn niet vergelijkbaar.</p>
 <h3>Kleinste en minimaal</h3>
-<p>Een <strong>kleinste</strong> element m voldoet aan m ≤ a voor elke a. Er is er hoogstens één. Een <strong>minimaal</strong> element heeft niets strikt eronder; er kunnen er meerdere zijn. In de deelverzamelingen van {1, 2} zonder de volle verzameling te eisen, is ∅ het kleinste. In de niet-lege deelverzamelingen zijn {1} en {2} minimaal, en er is geen kleinste.</p>
-<p>Grootste en maximaal zijn de omgekeerde begrippen.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>“Deelbaar door” op de natuurlijke getallen groter dan 1 is een partiële orde als we “deelt” als ≤ lezen, maar niet totaal: 2 deelt 3 niet en 3 deelt 2 niet.</p>
+<p>Een <strong>kleinste</strong> element <span class="formula-inline">m</span> voldoet aan <span class="formula-inline">m ≤ a</span> voor elk element <span class="formula-inline">a</span>. Er kan hoogstens één kleinste element zijn.</p>
+<p>Een <strong>minimaal</strong> element heeft geen ander element dat er strikt onder ligt. Er kunnen meerdere minimale elementen zijn.</p>
+<p>Grootste en maximaal zijn de overeenkomstige begrippen aan de andere kant van de orde.</p>
 <h3>Zelfstandig</h3>
-<p>Is “≤” op de natuurlijke getallen een totale orde? Bestaat er een kleinste natuurlijk getal?</p>
-<p>Antwoord: ja, en ja: 0, als de natuurlijke getallen bij 0 beginnen; anders 1. Zeg welke afspraak je gebruikt.</p>
+<p>Is <span class="formula-inline">≤</span> op <span class="formula-inline">ℕ</span> een totale orde? Bestaat er een kleinste natuurlijk getal?</p>
+<p><strong>Antwoord:</strong> ja op beide vragen. Met onze afspraak <span class="formula-inline">ℕ = {0, 1, 2, …}</span> is het kleinste element 0.</p>
     `
   },
   {
@@ -720,22 +373,24 @@ const MILESTONES_0 = [
 <h2>Functies als afbeeldingen</h2>
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
-  <li>Wat hoort er bij een functie, naast de rekenregel?</li>
   <li>Wat zijn domein, codomein en beeld?</li>
-  <li>Wanneer is een relatie geen functie?</li>
+  <li>Wanneer is een relatie een functie?</li>
+  <li>Waarom horen domein en codomein bij de definitie van een functie?</li>
+  <li>Hoe werkt samenstellen?</li>
 </ul>
 <h3>Definitie</h3>
-<p>Een <strong>functie</strong> f: A → B is een relatie van A naar B waarin bij elke a ∈ A precies één b ∈ B hoort. A is het <strong>domein</strong>, B het <strong>codomein</strong>. We schrijven f(a) = b.</p>
-<div class="callout"><strong>Definitie</strong><p>Het beeld f(A) is { f(a) | a ∈ A }. Dat hoeft niet heel B te zijn.</p></div>
-<p>Zonder domein en codomein is een formule nog geen functie. Dezelfde regel n ↦ n kan van ℕ naar ℕ gaan, of van ℕ naar ℤ. Dat zijn verschillende functies. Het codomein hoort bij de functie, niet alleen de pijl.</p>
+<p>Een functie <span class="formula-inline">f: A → B</span> koppelt aan elk element <span class="formula-inline">a ∈ A</span> precies één element <span class="formula-inline">b ∈ B</span>. We schrijven <span class="formula-inline">f(a) = b</span>.</p>
+<div class="callout"><strong>Drie begrippen</strong><p>A is het <strong>domein</strong>, B het <strong>codomein</strong> en <span class="formula-inline">f(A)</span> het <strong>beeld</strong>: de verzameling waarden die daadwerkelijk worden bereikt.</p></div>
+<p>Een formule alleen bepaalt nog niet altijd één specifieke functie. Dezelfde regel <span class="formula-inline">n ↦ n</span> kan bijvoorbeeld een functie van <span class="formula-inline">ℕ</span> naar <span class="formula-inline">ℕ</span> zijn of van <span class="formula-inline">ℕ</span> naar <span class="formula-inline">ℤ</span>.</p>
 <h3>Geen functie</h3>
-<p>“Is kind van”, gelezen als één ouder, faalt: een mens kan twee ouders hebben, dus niet precies één beeld. De lege relatie op een niet-leeg domein faalt ook: sommige elementen hebben géén beeld.</p>
-<p>Samenstellen: (g ∘ f)(a) = g(f(a)), alleen als het beeld van f in het domein van g past. Samenstellen is niet altijd commutatief. f(x) = x + 1 en g(x) = 2x geven g(f(x)) = 2x + 2 en f(g(x)) = 2x + 1.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>De relatie op ℝ gegeven door x² + y² = 1 is geen functie van x naar y: bij x = 0 horen y = 1 en y = −1.</p>
+<p>Een relatie is geen functie wanneer een domeinelement geen beeld heeft of meer dan één beeld heeft. De relatie <span class="formula-inline">x² + y² = 1</span> is bijvoorbeeld geen functie van <span class="formula-inline">x</span> naar <span class="formula-inline">y</span>, want bij <span class="formula-inline">x = 0</span> horen zowel <span class="formula-inline">y = 1</span> als <span class="formula-inline">y = −1</span>.</p>
+<h3>Samenstellen</h3>
+<p>Als het beeld van <span class="formula-inline">f</span> in het domein van <span class="formula-inline">g</span> ligt, kunnen we samenstellen:</p>
+<p class="formula">(g ∘ f)(a) = g(f(a))</p>
+<p>De volgorde is belangrijk. Voor <span class="formula-inline">f(x) = x + 1</span> en <span class="formula-inline">g(x) = 2x</span> zijn <span class="formula-inline">g(f(x)) = 2x + 2</span> en <span class="formula-inline">f(g(x)) = 2x + 1</span> verschillend.</p>
 <h3>Zelfstandig</h3>
-<p>Is “aan elke breuk haar teller koppelen” een functie van de rationale getallen naar de gehele getallen? Let op schrijfwijze.</p>
-<p>Antwoord: nee, niet zonder afspraak. 1/2 en 2/4 zijn hetzelfde rationale getal en hebben andere tellers. Met een vaste schrijfwijze in laagste termen wordt het wel een functie.</p>
+<p>Is “aan elke breuk haar teller koppelen” een functie van de rationale getallen naar de gehele getallen?</p>
+<p><strong>Antwoord:</strong> niet zonder extra afspraak. Hetzelfde rationale getal kan bijvoorbeeld als <span class="formula-inline">1/2</span> of <span class="formula-inline">2/4</span> worden geschreven. Met een vaste schrijfwijze in laagste termen kan men wel een functie definiëren.</p>
     `
   },
   {
@@ -752,18 +407,20 @@ const MILESTONES_0 = [
 </ul>
 <h3>Drie eigenschappen</h3>
 <ul>
-  <li><strong>Injectief:</strong> f(a) = f(a′) impliceert a = a′. Verschillende inputs, verschillende outputs.</li>
-  <li><strong>Surjectief:</strong> voor elke b in het codomein is er een a met f(a) = b. Het beeld is het hele codomein.</li>
-  <li><strong>Bijectief:</strong> injectief en surjectief.</li>
+  <li><strong>Injectief:</strong> <span class="formula-inline">f(a) = f(a′)</span> impliceert <span class="formula-inline">a = a′</span>.</li>
+  <li><strong>Surjectief:</strong> voor elk <span class="formula-inline">b</span> in het codomein bestaat een <span class="formula-inline">a</span> met <span class="formula-inline">f(a) = b</span>.</li>
+  <li><strong>Bijectief:</strong> injectief én surjectief.</li>
 </ul>
-<div class="callout"><strong>Stelling</strong><p>Een functie heeft een inverse functie precies als ze bijectief is.</p></div>
-<p><strong>Waarom klopt dit?</strong> Is f bijectief, dan hoort bij elke b precies één a met f(a) = b. Noem dat a = f⁻¹(b). De twee samenstellingen zijn de identiteit. Bestaat f⁻¹, dan is f injectief, want gelijke beelden geven via de inverse gelijke originelen, en surjectief, want b = f(f⁻¹(b)).</p>
-<p>f: ℤ → ℤ met f(n) = 2n is injectief en niet surjectief: 1 wordt niet geraakt. f: {1, 2, 3} → {a, b} met f(1) = f(2) = a en f(3) = b is surjectief en niet injectief. “Elke functie heeft een inverse” is dus onwaar.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>f: ℕ → ℕ, f(n) = n, is surjectief. Dezelfde regel f: ℕ → ℤ, f(n) = n, is niet surjectief, want −1 wordt niet geraakt. Het codomein beslist mee.</p>
+<div class="callout"><strong>Stelling</strong><p>Een functie heeft een inverse functie precies wanneer ze bijectief is.</p></div>
+<h3>Voorbeelden</h3>
+<p><span class="formula-inline">f: ℤ → ℤ</span> met <span class="formula-inline">f(n) = 2n</span> is injectief maar niet surjectief, want 1 wordt niet bereikt.</p>
+<p><span class="formula-inline">f: {1, 2, 3} → {a, b}</span> met <span class="formula-inline">f(1) = a</span>, <span class="formula-inline">f(2) = a</span> en <span class="formula-inline">f(3) = b</span> is surjectief maar niet injectief.</p>
+<p>Het codomein doet ertoe: de regel <span class="formula-inline">f(n) = n</span> is surjectief van <span class="formula-inline">ℕ</span> naar <span class="formula-inline">ℕ</span>, maar niet van <span class="formula-inline">ℕ</span> naar <span class="formula-inline">ℤ</span>.</p>
+<h3>Inverse</h3>
+<p>Als <span class="formula-inline">f</span> bijectief is, heeft elk element van het codomein precies één oorsprong. Die oorsprong definiëren we als <span class="formula-inline">f⁻¹(b)</span>.</p>
 <h3>Zelfstandig</h3>
-<p>Is f: ℤ → ℤ, f(n) = n + 1, bijectief? Geef de inverse als dat zo is.</p>
-<p>Antwoord: ja. Inverse: g(m) = m − 1.</p>
+<p>Is <span class="formula-inline">f: ℤ → ℤ</span> met <span class="formula-inline">f(n) = n + 1</span> bijectief? Geef de inverse als dat zo is.</p>
+<p><strong>Antwoord:</strong> ja. <span class="formula-inline">f⁻¹(m) = m − 1</span>.</p>
     `
   },
   {
@@ -775,24 +432,27 @@ const MILESTONES_0 = [
 <p><strong>Wat gaan we ontdekken?</strong></p>
 <ul>
   <li>Wanneer hebben twee verzamelingen evenveel elementen?</li>
-  <li>Wat is aftelbaar oneindig?</li>
-  <li>Waarom zijn er meer reële getallen dan natuurlijke getallen?</li>
+  <li>Wat betekent aftelbaar oneindig?</li>
+  <li>Waarom kan een oneindige verzameling even groot zijn als een echte deelverzameling?</li>
+  <li>Waarom zijn de reële getallen niet aftelbaar?</li>
 </ul>
 <h3>Even groot</h3>
-<p>Twee verzamelingen zijn <strong>even groot</strong> als er een bijectie tussen bestaat. Voor eindige verzamelingen is dat het gewone aantal. Een verzameling is eindig als ze leeg is of in bijectie met {1, …, n} voor een n. Dat n ligt vast.</p>
-<div class="callout"><strong>Stelling</strong><p>Een eindige verzameling is niet in bijectie met een echte deelverzameling van zichzelf. Oneindige verzamelingen kunnen dat wel.</p></div>
-<p>n ↦ n + 1 is een bijectie van ℕ naar {1, 2, 3, …}, een echte deelverzameling als 0 ∈ ℕ. “Oneindig + 1 = oneindig” is hier geen rekensom. We hebben geen getal oneindig ingevoerd, alleen bijecties.</p>
-<h3>Aftelbaar</h3>
-<p>Aftelbaar oneindig betekent: in bijectie met ℕ. De elementen staan dan op een rij a₀, a₁, a₂, … waarin elk element precies één keer voorkomt. ℤ is aftelbaar: 0, 1, −1, 2, −2, … De even natuurlijke getallen ook, via n ↦ 2n.</p>
+<p>Twee verzamelingen zijn <strong>even groot</strong> wanneer er een bijectie tussen bestaat. Voor eindige verzamelingen komt dit overeen met hetzelfde aantal elementen.</p>
+<div class="callout"><strong>Stelling</strong><p>Een eindige verzameling is niet in bijectie met een echte deelverzameling van zichzelf. Een oneindige verzameling kan dat wel.</p></div>
+<p>Als <span class="formula-inline">ℕ = {0, 1, 2, …}</span>, dan is <span class="formula-inline">n ↦ n + 1</span> een bijectie van <span class="formula-inline">ℕ</span> naar <span class="formula-inline">{1, 2, 3, …}</span>. De tweede verzameling is een echte deelverzameling van de eerste.</p>
+<p>Dit betekent niet dat “oneindig + 1” een gewone rekensom is. We vergelijken hier verzamelingen via bijecties.</p>
+<h3>Aftelbaar oneindig</h3>
+<p>Een verzameling is <strong>aftelbaar oneindig</strong> als ze in bijectie is met <span class="formula-inline">ℕ</span>. De gehele getallen zijn aftelbaar, bijvoorbeeld via de volgorde <span class="formula-inline">0, 1, −1, 2, −2, 3, −3, …</span>.</p>
+<p>Ook de even natuurlijke getallen zijn aftelbaar: <span class="formula-inline">n ↦ 2n</span> is een bijectie van <span class="formula-inline">ℕ</span> naar de even natuurlijke getallen.</p>
 <h3>Overaftelbaar</h3>
-<p>Cantor: (0, 1) is niet aftelbaar. Stel van wel, en zet alle getallen in een rij r₀, r₁, r₂, … als decimale ontwikkelingen. Kies een getal 0,c₀c₁c₂… met cₙ = 4 als het n-de cijfer van rₙ niet 4 is, en cₙ = 5 als dat cijfer wel 4 is. Dit getal zit in (0, 1) en verschilt van rₙ op plek n, voor elke n. Het staat niet in de rij. Tegenspraak.</p>
-<p>De keuze 4 en 5 ontwijkt 0,1999… = 0,2000…. Er is dus geen bijectie van ℕ naar ℝ. Dat er precies één grootte tussen ℕ en ℝ zit, bewijzen we hier niet; dat ligt buiten de gewone axiomatiek.</p>
-<p>Hetzelfde idee, zonder decimalen: er is geen surjectie van A naar de verzameling van alle deelverzamelingen van A. De verzameling { a ∈ A | a ∉ f(a) } zit niet in het beeld van f.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>{1, …, 10} is niet in bijectie met een echte deelverzameling van zichzelf. Het oneindige voorbeeld hierboven gaat daar niet op.</p>
+<p>De getallen in het interval <span class="formula-inline">(0, 1)</span> zijn niet aftelbaar. Stel dat ze wel op een rij stonden als <span class="formula-inline">r₀, r₁, r₂, …</span>. Kies voor elk n het n-de decimaal van <span class="formula-inline">rₙ</span> zo dat het nieuwe getal op die positie een ander cijfer heeft, bijvoorbeeld 4 als het cijfer van <span class="formula-inline">rₙ</span> niet 4 is en 5 als het wel 4 is.</p>
+<p>Het nieuwe getal ligt in <span class="formula-inline">(0, 1)</span> en verschilt van <span class="formula-inline">rₙ</span> op de n-de positie. Het staat dus niet in de vermeende volledige lijst. Dat is een tegenspraak. Dit is Cantors diagonale argument.</p>
+<p>De keuze van 4 en 5 vermijdt de gebruikelijke dubbelzinnigheid van decimale schrijfwijzen met oneindig veel negens.</p>
+<h3>Wat volgt hieruit?</h3>
+<p>Er is geen bijectie tussen <span class="formula-inline">ℕ</span> en <span class="formula-inline">ℝ</span>. De reële getallen vormen dus een grotere oneindigheid dan de natuurlijke getallen.</p>
 <h3>Zelfstandig</h3>
-<p>Geef een bijectie van ℕ naar de even natuurlijke getallen, en zeg waarom (0, 1) niet op zo’n rij past.</p>
-<p>Antwoord: n ↦ 2n. (0, 1) past niet, want elke vermeende rij mist het diagonaalgetal uit het bewijs.</p>
+<p>Geef een bijectie van <span class="formula-inline">ℕ</span> naar de even natuurlijke getallen. Leg daarna in eigen woorden uit waarom Cantors diagonaalargument een aftelling van <span class="formula-inline">(0, 1)</span> onmogelijk maakt.</p>
+<p><strong>Antwoord:</strong> <span class="formula-inline">n ↦ 2n</span>. Bij een vermeende volledige lijst kan het diagonale getal worden geconstrueerd zodat het van elk element van de lijst minstens één decimaal verschilt.</p>
     `
   }
 ];
