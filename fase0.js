@@ -44,16 +44,17 @@ const MILESTONES_0 = [
 <p>Dit is waar. Voor <span class="formula-inline">x = 5</span> krijgen we:</p>
 <p class="formula">5 + 1 = 4</p>
 <p>Dit is onwaar.</p>
-<div class="callout"><strong>Schema</strong><p><span class="formula-inline">x + 1</span> → uitdrukking; <span class="formula-inline">x + 1 = 4</span> → open zin; <span class="formula-inline">3 + 1 = 4</span> → uitspraak.</p></div>
+<div class="callout"><strong>Schema</strong><p>
+<p><span class="formula-inline">x + 1</span> → uitdrukking;</p> 
+<p><span class="formula-inline">x + 1 = 4</span> → open zin;</p> 
+</p><span class="formula-inline">3 + 1 = 4</span> → uitspraak.</p>
+</div>
 <p>Later maken we open zinnen met woorden als <em>“voor elke”</em> en <em>“er bestaat”</em> tot uitspraken. Dat behandelen we in 0.4.</p>
 <h3>Voorbeeld en tegenvoorbeeld</h3>
 <p>Een voorbeeld toont dat een bewering in één geval klopt. Dat is niet genoeg om een uitspraak over <strong>alle</strong> gevallen te bewijzen.</p>
 <p>Neem de bewering: “Alle natuurlijke getallen groter dan 1 zijn priemgetallen.” De getallen 2, 3, 5 en 7 voldoen eraan, maar dat bewijst de algemene bewering niet.</p>
 <p>Het getal 9 is een <strong>tegenvoorbeeld</strong>: het is groter dan 1, maar geen priemgetal. Eén tegenvoorbeeld volstaat om een algemene bewering van de vorm “alle” te weerleggen.</p>
-<h3>Zelfstandig</h3>
-<p>Bepaal welke van deze voorbeelden uitspraken zijn: <span class="formula-inline">3 &lt; 8</span>, <span class="formula-inline">x + 1 = 4</span>, <em>“Is 12 deelbaar door 3?”</em> en <span class="formula-inline">7 + 5</span>.</p>
-<p><strong>Antwoordrichting:</strong> de eerste is een ware uitspraak; de tweede is een open zin; de derde is een vraag; de vierde is een uitdrukking.</p>
-    `
+ `
   },
   {
     id: "0.2",
@@ -92,8 +93,6 @@ const MILESTONES_0 = [
 <p>De eerste zegt: “niet allebei” betekent “minstens één niet”. De tweede zegt: “niet minstens één” betekent “geen van beide”.</p>
 <h3>Veelgemaakte fout</h3>
 <p>“Of” verwarren met “precies één van de twee” verandert de betekenis. Exclusief of is een andere logische bewerking.</p>
-<h3>Zelfstandig</h3>
-<p>Maak de waarheidstabel van <span class="formula-inline">P ∧ ¬Q</span> en leg in woorden uit wanneer de uitspraak waar is.</p>
     `
   },
   {
