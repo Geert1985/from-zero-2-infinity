@@ -34,7 +34,7 @@
 .screen:has(.milestone-grid)::before, .screen:has(.lesson)::before { background:transparent; }
 
 /* Nachtelijke navigatiebalk: onderdeel van dezelfde wereld als de sterrenhemel. */
-.phase-screen > .topbar { background:rgba(5,11,27,.88); border-bottom:1px solid rgba(145,165,195,.10); }
+.phase-screen > .topbar { position:fixed; top:0; left:0; right:0; z-index:60; background:rgba(5,11,27,.88); border-bottom:1px solid rgba(145,165,195,.10); }
 .phase-screen .topbar .lesstof-score { background:rgba(7,13,30,.82); }
 .phase-screen .topbar .btn { background:rgba(7,13,30,.42); }
 
