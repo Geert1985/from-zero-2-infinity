@@ -17,7 +17,23 @@
 .milestone-info p { margin:0; color:#d8cdb7; font-size:.92rem; line-height:1.4; }
 .milestone-info-close { position:absolute; top:6px; right:8px; border:0; background:transparent; color:#bcae90; font-size:20px; cursor:pointer; }
 .milestone.is-open { border-color:rgba(230,199,122,.42); }
+
+.phase-screen { position:relative; isolation:isolate; overflow:hidden; }
+.phase-stars { position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.phase-stars-layer { position:absolute; inset:0; background-repeat:no-repeat; animation:phaseStarsTwinkle 5.5s ease-in-out infinite; }
+.phase-stars-layer-a { opacity:.72; animation-duration:6.8s; }
+.phase-stars-layer-b { opacity:.52; animation-duration:4.4s; animation-delay:-2.1s; }
+.phase-screen > *:not(.phase-stars) { position:relative; z-index:1; }
+@keyframes phaseStarsTwinkle {
+  0%,100% { opacity:.35; }
+  45% { opacity:.78; }
+  60% { opacity:.48; }
+}
+
 .screen:has(.milestone-grid), .screen:has(.lesson) { background-image:linear-gradient(180deg,#100c08 0%,#151008 50%,#1a140c 100%) !important; background-color:#100c08; }
 .screen:has(.milestone-grid)::before, .screen:has(.lesson)::before { background:transparent; }
+@media (prefers-reduced-motion:reduce) {
+  .phase-stars-layer { animation:none; }
+}
 @media (max-width:900px) { .milestone-grid { grid-template-columns:repeat(2,minmax(220px,1fr)); } }
 @media (max-width:620px) { .milestone-grid { grid-template-columns:1fr; } }
