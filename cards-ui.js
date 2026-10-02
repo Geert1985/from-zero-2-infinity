@@ -62,7 +62,7 @@ function renderPhase(phaseId) {
   phaseId = Number(phaseId);
   const phase = COURSE.phases.find((p) => p.id === phaseId);
   if (!phase) return renderHome();
-  const screen = '<div class="screen phase-screen" style="background-image:url(\'' + bgFor(phaseId) + "')\">";
+  const screen = '<div class="screen phase-screen">';
   if (!phaseUnlocked(phaseId)) {
     const c = phaseCost(phaseId);
     return screen + topbar() +
