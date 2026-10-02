@@ -1,40 +1,416 @@
 /* Lesstof Fase 0 — Taal van de wiskunde. Zelfde 14 milestones als GPT---F0; theory uitgebreid, geen nieuwe ids. */
 const MILESTONES_0 = [
-  {
-    id: "0.1",
-    title: "Wiskundige uitspraken",
-    goal: "Herken wiskundige uitspraken en onderscheid een uitspraak van een vraag, definitie of berekening.",
-    theory: /* html */`
+{
+  id: "0.1",
+  title: "Wiskundige uitspraken",
+  goal: "Herken wiskundige uitspraken en onderscheid een uitspraak van een vraag, definitie, berekening of open zin.",
+  theory: /* html */`
+
 <h2>Wiskundige uitspraken</h2>
+
 <p><strong>Wat gaan we ontdekken?</strong></p>
+
 <ul>
   <li>Wat is een wiskundige uitspraak?</li>
+  <li>Wat is het verschil tussen een uitspraak, een vraag, een berekening en een definitie?</li>
+  <li>Wat is een open zin?</li>
   <li>Wanneer is een uitspraak waar of onwaar?</li>
   <li>Waarom is een voorbeeld geen bewijs?</li>
+  <li>Hoe kan één tegenvoorbeeld een algemene uitspraak weerleggen?</li>
 </ul>
+
+
 <h3>Wat is een uitspraak?</h3>
-<p>Een <strong>uitspraak</strong> is een zin waarvan we in principe kunnen bepalen of hij <strong>waar</strong> of <strong>onwaar</strong> is. Hij beweert iets. Hij vraagt niets, en hij beveelt niets.</p>
+
+<p>
+  In de wiskunde komen we voortdurend zinnen tegen die iets beweren.
+  Bijvoorbeeld:
+</p>
+
 <p class="formula">2 + 3 = 5</p>
-<p>Dit is een ware uitspraak. Ook</p>
-<p class="formula">7 is een even getal</p>
-<p>is een uitspraak, maar deze is onwaar. Onwaar is niet “geen uitspraak”: we konden de waarheidswaarde bepalen.</p>
-<div class="callout"><strong>Definitie</strong><p>Een wiskundige uitspraak is een bewering waaraan precies één waarheidswaarde kan worden toegekend: waar of onwaar.</p></div>
-<h3>Geen uitspraken</h3>
-<p>Een vraag zoals <em>“Is 7 een priemgetal?”</em> is geen uitspraak. Een bevel (“Tel tot tien”) evenmin. Een losse uitdrukking zoals <span class="formula-inline">x + 1</span> beweert niets: er staat geen gelijkheid of andere bewering.</p>
-<p><span class="formula-inline">x + 1 = 4</span> is een <strong>open zin</strong>. Zonder te zeggen wat x is, is hij nog niet waar of onwaar. Wordt x = 3, dan is hij waar. Wordt x = 5, dan is hij onwaar. Pas met een waarde, of met “voor elke x” of “er is een x”, wordt het een uitspraak. Dat laatste komt in 0.4.</p>
-<h3>Voorbeeld en bewijs</h3>
-<p>Een <strong>voorbeeld</strong> laat zien dat iets kán. “4 = 2 + 2” laat zien dat er een even getal bestaat dat de som van twee even getallen is. Het zegt niets over alle even getallen.</p>
-<p>Een <strong>tegenvoorbeeld</strong> is één geval dat een algemene bewering doodt. “Alle natuurlijke getallen zijn even” sterft aan 3. Eén tegenvoorbeeld is genoeg. Duizend voorbeelden bewijzen een “voor alle” niet.</p>
-<h3>Stelling</h3>
-<p>Een uitspraak en haar ontkenning kunnen niet tegelijk waar zijn.</p>
-<p><strong>Waarom klopt dit?</strong> Als een uitspraak waar is, beschrijft haar ontkenning precies het tegenovergestelde. De twee kunnen dus niet tegelijkertijd dezelfde situatie beschrijven. “7 is even” en “7 is niet even” kunnen niet allebei waar zijn.</p>
-<h3>Tegenvoorbeeld</h3>
-<p>De zin <em>“Alle natuurlijke getallen zijn even”</em> is een uitspraak, en ze is onwaar. Het getal 3 is een tegenvoorbeeld. De zin is dus niet “geen uitspraak”; ze is een onware uitspraak.</p>
-<h3>Zelfstandig</h3>
-<p>Bepaal welke zinnen uitspraken zijn en geef voor de uitspraken de waarheidswaarde: <span class="formula-inline">3 < 8</span>, <span class="formula-inline">x+1=4</span>, <span class="formula-inline">Is 12 deelbaar door 3?</span>.</p>
-<p>Antwoordrichting: de eerste is een ware uitspraak. De tweede is open zolang x niet vastligt. De derde is een vraag.</p>
-    `
-  },
+
+<p>
+  Deze zin beweert dat 2 + 3 gelijk is aan 5.
+  We kunnen nagaan of dat klopt.
+</p>
+
+<p>
+  Een zin waarvan we in principe kunnen bepalen of hij
+  <strong>waar</strong> of <strong>onwaar</strong> is, noemen we een
+  <strong>uitspraak</strong>.
+</p>
+
+<div class="callout">
+  <strong>Definitie</strong>
+  <p>
+    Een <strong>wiskundige uitspraak</strong> is een bewering waaraan
+    precies één waarheidswaarde kan worden toegekend:
+    <strong>waar</strong> of <strong>onwaar</strong>.
+  </p>
+</div>
+
+<p>
+  Een uitspraak hoeft dus niet waar te zijn.
+  Ook een onware bewering is een uitspraak.
+</p>
+
+<p>
+  Bijvoorbeeld: <span class="formula-inline">7</span> is een even getal.
+</p>
+
+<p>
+  Deze uitspraak is <strong>onwaar</strong>, maar het blijft een uitspraak:
+  we kunnen namelijk bepalen dat ze onwaar is.
+</p>
+
+
+<h3>Uitspraak of berekening?</h3>
+
+<p>
+  Niet alles wat we in de wiskunde opschrijven, is een uitspraak.
+  Kijk bijvoorbeeld naar:
+</p>
+
+<p class="formula">7 + 5</p>
+
+<p>
+  Dit is een <strong>berekening</strong> of een wiskundige
+  <strong>uitdrukking</strong>. Er wordt nog niets beweerd.
+  We kunnen de berekening uitvoeren:
+</p>
+
+<p class="formula">7 + 5 = 12</p>
+
+<p>
+  Nu staat er wél een bewering.
+  We kunnen bepalen dat deze waar is.
+  Daarom is dit een <strong>uitspraak</strong>.
+</p>
+
+<div class="callout">
+  <p>
+    <strong>Belangrijk verschil:</strong>
+  </p>
+
+  <p class="formula">7 + 5</p>
+
+  <p>
+    is een uitdrukking/berekening.
+  </p>
+
+  <p class="formula">7 + 5 = 12</p>
+
+  <p>
+    is een uitspraak.
+  </p>
+</div>
+
+
+<h3>Uitspraak of vraag?</h3>
+
+<p>
+  Een vraag probeert geen bewering te doen. Ze vraagt om informatie.
+</p>
+
+<p>
+  Bijvoorbeeld:
+</p>
+
+<p>
+  <em>“Is 7 een priemgetal?”</em>
+</p>
+
+<p>
+  Dit is <strong>geen uitspraak</strong>.
+  Het is een vraag.
+</p>
+
+<p>
+  De vraag kan wel leiden tot een uitspraak:
+</p>
+
+<p>
+  <span class="formula-inline">7</span> is een priemgetal.
+</p>
+
+<p>
+  Deze zin beweert iets en we kunnen bepalen dat hij waar is.
+  Het is dus wel een uitspraak.
+</p>
+
+
+<h3>Uitspraak of definitie?</h3>
+
+<p>
+  Een <strong>definitie</strong> legt vast wat we met een begrip bedoelen.
+  Een definitie heeft dus een andere functie dan een uitspraak die we
+  als waar of onwaar beoordelen.
+</p>
+
+<p>
+  Bijvoorbeeld:
+</p>
+
+<div class="callout">
+  <p>
+    Een <strong>priemgetal</strong> is een natuurlijk getal groter dan 1
+    dat precies twee positieve delers heeft.
+  </p>
+</div>
+
+<p>
+  Hiermee leggen we vast wat we onder het begrip
+  <em>priemgetal</em> verstaan.
+  We gebruiken deze definitie vervolgens om te bepalen welke getallen
+  priemgetallen zijn.
+</p>
+
+<p>
+  Een definitie is dus niet hetzelfde als een gewone bewering.
+</p>
+
+
+<h3>Uitdrukking, open zin en uitspraak</h3>
+
+<p>
+  Nu bekijken we een voorbeeld waarin een letter voorkomt:
+</p>
+
+<p class="formula">x + 1</p>
+
+<p>
+  Dit is een <strong>uitdrukking</strong>.
+  Er wordt niets beweerd.
+</p>
+
+<p>
+  Kijk nu naar:
+</p>
+
+<p class="formula">x + 1 = 4</p>
+
+<p>
+  Hier wordt wél iets beweerd.
+  Maar we weten nog niet welke waarde <span class="formula-inline">x</span>
+  heeft.
+</p>
+
+<p>
+  Daarom kunnen we nog niet bepalen of de bewering waar of onwaar is.
+  Dit noemen we een <strong>open zin</strong>.
+</p>
+
+<p>
+  Geven we <span class="formula-inline">x</span> de waarde 3, dan krijgen we:
+</p>
+
+<p class="formula">3 + 1 = 4</p>
+
+<p>
+  Deze uitspraak is waar.
+</p>
+
+<p>
+  Geven we <span class="formula-inline">x</span> de waarde 5, dan krijgen we:
+</p>
+
+<p class="formula">5 + 1 = 4</p>
+
+<p>
+  Deze uitspraak is onwaar.
+</p>
+
+<div class="callout">
+  <p><strong>Onthoud:</strong></p>
+
+  <p class="formula">x + 1</p>
+
+  <p>
+    is een uitdrukking.
+  </p>
+
+  <p class="formula">x + 1 = 4</p>
+
+  <p>
+    is een open zin.
+  </p>
+
+  <p class="formula">3 + 1 = 4</p>
+
+  <p>
+    is een uitspraak.
+  </p>
+</div>
+
+<p>
+  Later leren we hoe woorden zoals <em>“voor elke”</em> en
+  <em>“er bestaat”</em> ervoor kunnen zorgen dat een open zin zelf
+  een uitspraak wordt.
+</p>
+
+
+<h3>Waar of onwaar?</h3>
+
+<p>
+  Een uitspraak heeft precies één waarheidswaarde:
+  <strong>waar</strong> of <strong>onwaar</strong>.
+</p>
+
+<p>
+  Bekijk bijvoorbeeld:
+</p>
+
+<p class="formula">8 + 4 = 12</p>
+
+<p>
+  Dit is waar.
+</p>
+
+<p class="formula">8 + 4 = 13</p>
+
+<p>
+  Dit is onwaar.
+</p>
+
+<p>
+  Beide zijn uitspraken, omdat we voor beide kunnen bepalen
+  welke waarheidswaarde ze hebben.
+</p>
+
+<div class="callout">
+  <p>
+    <strong>Let op:</strong> “onwaar” betekent niet “geen uitspraak”.
+    Een onware bewering is nog steeds een uitspraak.
+  </p>
+</div>
+
+
+<h3>Een voorbeeld is geen bewijs</h3>
+
+<p>
+  In de wiskunde willen we vaak weten of een bewering
+  <strong>voor alle gevallen</strong> geldt.
+</p>
+
+<p>
+  Stel dat iemand zegt:
+</p>
+
+<div class="callout">
+  <p>
+    <strong>“Alle natuurlijke getallen groter dan 1 zijn priemgetallen.”</strong>
+  </p>
+</div>
+
+<p>
+  We kunnen verschillende voorbeelden controleren:
+</p>
+
+<p class="formula">2, 3, 5, 7</p>
+
+<p>
+  Deze getallen zijn inderdaad allemaal priemgetallen.
+  Maar daarmee hebben we nog niet bewezen dat de bewering
+  voor <em>alle</em> natuurlijke getallen groter dan 1 geldt.
+</p>
+
+<p>
+  We moeten verder zoeken.
+</p>
+
+
+<h3>Een tegenvoorbeeld</h3>
+
+<p>
+  Een <strong>tegenvoorbeeld</strong> is één geval dat een algemene
+  bewering weerlegt.
+</p>
+
+<p>
+  In de vorige bewering is:
+</p>
+
+<p class="formula">9</p>
+
+<p>
+  een tegenvoorbeeld.
+  9 is groter dan 1, maar 9 is geen priemgetal.
+</p>
+
+<p>
+  Daarom is de bewering
+  <em>“Alle natuurlijke getallen groter dan 1 zijn priemgetallen”</em>
+  onwaar.
+</p>
+
+<div class="callout">
+  <p>
+    <strong>Een tegenvoorbeeld is genoeg.</strong>
+  </p>
+
+  <p>
+    Om een algemene bewering te weerleggen, heb je geen honderd of
+    duizend tegenvoorbeelden nodig. Eén enkel tegenvoorbeeld volstaat.
+  </p>
+</div>
+
+<p>
+  Omgekeerd geldt het volgende:
+</p>
+
+<div class="callout">
+  <p>
+    <strong>Veel voorbeelden bewijzen een algemene bewering nog niet.</strong>
+  </p>
+
+  <p>
+    Duizend gevallen waarin een bewering klopt, laten zien dat ze
+    in die gevallen klopt. Ze bewijzen nog niet automatisch dat ze
+    voor alle gevallen klopt.
+  </p>
+</div>
+
+
+<h3>Samenvatting</h3>
+
+<p>
+  We hebben verschillende soorten wiskundige zinnen leren onderscheiden:
+</p>
+
+<ul>
+  <li>
+    Een <strong>uitspraak</strong> beweert iets dat waar of onwaar kan zijn.
+  </li>
+  <li>
+    Een <strong>berekening of uitdrukking</strong> beweert op zichzelf niets.
+  </li>
+  <li>
+    Een <strong>vraag</strong> vraagt om informatie en is geen uitspraak.
+  </li>
+  <li>
+    Een <strong>definitie</strong> legt vast wat een begrip betekent.
+  </li>
+  <li>
+    Een <strong>open zin</strong> bevat bijvoorbeeld een variabele en is
+    zonder verdere informatie nog niet waar of onwaar.
+  </li>
+  <li>
+    Een <strong>tegenvoorbeeld</strong> kan een algemene bewering weerleggen.
+  </li>
+</ul>
+
+<div class="callout">
+  <strong>Kernidee</strong>
+  <p>
+    Wiskunde gaat niet alleen over rekenen.
+    We moeten ook precies kunnen aangeven
+    <strong>wat we beweren</strong>, wanneer een bewering
+    <strong>waar of onwaar</strong> is en hoe we dat kunnen aantonen.
+  </p>
+</div>
+
+  `
+},
   {
     id: "0.2",
     title: "Logische operatoren",
