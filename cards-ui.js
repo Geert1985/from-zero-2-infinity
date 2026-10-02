@@ -84,7 +84,7 @@ function renderPhase(phaseId) {
     const lesIco = lesDone ? "book-open.png" : "book-closed.png";
     const testIco = testDone ? "medaille.png" : "toets.png";
     return (
-      '<article class="milestone' + state + '" data-mid="' + escText(m.id) + '">' +
+      '<article class="milestone' + state + '" data-mid="' + escText(m.id) + '" data-phase="' + phaseId + '" tabindex="0" role="button" aria-label="' + escText(m.id + " " + (m.title || "")) + '">' +
         '<div class="milestone-number">' + escText(m.id) + '</div>' +
         '<div class="milestone-title">' + escText(m.title || "") + '</div>' +
         '<div class="milestone-status" aria-label="Voortgang">' +
@@ -103,6 +103,60 @@ function renderPhase(phaseId) {
     screen + topbar() +
     '<div class="layout"><div class="panel"><h1>Fase ' + phaseId + " — " + phase.title +
     "</h1><p>" + (PHASE_BLURB[phaseId] || phase.short) + "</p></div>" +
-    '<div class="milestone-grid">' + milestones + '</div></div></div>'
+    '<div class="milestone-grid">' + milestones + '</div></div></div>' +
+    '<div id="milestone-info" class="milestone-info" hidden></div>'
   );
+}
+
+function closeMilestoneInfo() {
+  const info = document.getElementById("milestone-info");
+  if (info) { info.hidden = true; info.innerHTML = ""; }
+  document.querySelectorAll(".milestone.is-open").forEach((el) => el.classList.remove("is-open"));
+}
+
+function openMilestoneInfo(card) {
+  const info = document.getElementById("milestone-info");
+  if (!info) return;
+  const m = typeof getMilestone === "function" ? getMilestone(card.dataset.mid) : null;
+  if (!m) return;
+  document.querySelectorAll(".milestone.is-open").forEach((el) => el.classList.remove("is-open"));
+  card.classList.add("is-open");
+  info.hidden = false;
+  info.innerHTML =
+    '<button type="button" class="milestone-info-close" aria-label="Sluiten">×</button>' +
+    '<div class="milestone-info-number">' + escText(m.id) + '</div>' +
+    '<h2>' + escText(m.title || "") + '</h2>' +
+    (m.goal ? '<p>' + escText(m.goal) + '</p>' : '');
+  const r = card.getBoundingClientRect();
+  const w = 320;
+  let left = r.left;
+  let top = r.bottom + 8;
+  if (left + w > window.innerWidth - 12) left = window.innerWidth - w - 12;
+  if (left < 12) left = 12;
+  if (top + info.offsetHeight > window.innerHeight - 12) top = Math.max(12, r.top - info.offsetHeight - 8);
+  info.style.left = left + "px";
+  info.style.top = top + "px";
+}
+
+if (!window.__milestoneInfoBound) {
+  window.__milestoneInfoBound = true;
+  document.addEventListener("click", function (e) {
+    const close = e.target.closest(".milestone-info-close");
+    if (close) { closeMilestoneInfo(); return; }
+    const card = e.target.closest(".milestone");
+    if (card && !e.target.closest(".milestone-status-btn")) {
+      e.preventDefault();
+      if (card.classList.contains("is-open")) closeMilestoneInfo();
+      else openMilestoneInfo(card);
+      return;
+    }
+    if (!e.target.closest("#milestone-info")) closeMilestoneInfo();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMilestoneInfo();
+  });
+  window.addEventListener("resize", function () {
+    const card = document.querySelector(".milestone.is-open");
+    if (card) openMilestoneInfo(card);
+  });
 }
