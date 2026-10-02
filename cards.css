@@ -1,5 +1,5 @@
 .milestone-grid { display:grid; grid-template-columns:repeat(3,minmax(220px,1fr)); gap:10px 14px; margin-top:14px; align-items:start; }
-.milestone { box-sizing:border-box; width:100%; height:72px; min-height:72px; display:grid; grid-template-columns:36px minmax(0,1fr) 56px; align-items:center; gap:8px; padding:8px 10px; background:rgba(10,8,6,.72); border:1px solid rgba(190,176,145,.20); border-left:2px solid rgba(190,176,145,.28); border-radius:8px; overflow:hidden; }
+.milestone { box-sizing:border-box; width:100%; height:72px; min-height:72px; display:grid; grid-template-columns:36px minmax(0,1fr) 56px; align-items:center; gap:8px; padding:8px 10px; background:rgba(10,8,6,.72); border:1px solid rgba(190,176,145,.20); border-left:2px solid rgba(190,176,145,.28); border-radius:8px; overflow:hidden; cursor:pointer; }
 .milestone-number { min-width:0; font-family:Cinzel,serif; font-size:11px; line-height:1.1; color:rgba(230,199,122,.62); letter-spacing:.04em; }
 .milestone-title { min-width:0; max-width:100%; color:#ddd3bd; font-size:.96rem; font-weight:600; line-height:1.2; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; line-clamp:2; overflow:hidden; text-overflow:ellipsis; }
 .milestone-status { width:56px; min-width:56px; flex-shrink:0; display:flex; align-items:center; justify-content:flex-end; gap:2px; }
@@ -10,5 +10,12 @@
 .milestone.done .milestone-title { color:#f0dfad; }
 .milestone.done .milestone-status-btn img { filter:none; opacity:1; }
 .milestone-status-btn img[src*="medaille.png"] { filter:none; }
+.milestone-info { position:fixed; z-index:80; width:min(320px,calc(100vw - 24px)); box-sizing:border-box; padding:16px 18px 17px; background:rgba(10,8,6,.98); color:#f0e7d2; border:1px solid rgba(230,199,122,.38); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.45); }
+.milestone-info[hidden] { display:none!important; }
+.milestone-info-number { font-family:Cinzel,serif; font-size:11px; color:rgba(230,199,122,.62); letter-spacing:.04em; margin-bottom:3px; }
+.milestone-info h2 { margin:0 28px 8px 0; font-family:Cinzel,serif; font-size:1.05rem; line-height:1.25; color:#f0dfad; }
+.milestone-info p { margin:0; color:#d8cdb7; font-size:.92rem; line-height:1.4; }
+.milestone-info-close { position:absolute; top:6px; right:8px; border:0; background:transparent; color:#bcae90; font-size:20px; cursor:pointer; }
+.milestone.is-open { border-color:rgba(230,199,122,.42); }
 @media (max-width:900px) { .milestone-grid { grid-template-columns:repeat(2,minmax(220px,1fr)); } }
 @media (max-width:620px) { .milestone-grid { grid-template-columns:1fr; } }
