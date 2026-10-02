@@ -20,164 +20,78 @@
   text-transform: none;
   letter-spacing: 0.04em;
 }
-.stone {
-  position: relative;
-  width: 168px;
-  text-align: center;
-  cursor: pointer;
-  padding: 8px 8px 10px;
-  overflow: hidden;
-}
-.stone h3,
-.stone p,
-.stone .status {
-  text-align: center;
-}
-.stone-topic {
-  margin: 0 14px 2px !important;
-  font-size: 13px !important;
-  color: #e6c77a !important;
-  font-weight: 600;
-  text-transform: none;
-  letter-spacing: 0.02em;
+
+/* Sobere milestonekaarten: alleen nummer, titel en statusiconen. */
+.milestone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 8px 12px;
+  margin-top: 14px;
 }
 
-.stone-num {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  z-index: 2;
-  font-family: Cinzel, serif;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  color: #e6c77a;
-  text-shadow: 0 1px 2px rgba(0,0,0,.7);
-  pointer-events: none;
-}
-
-.stone.done {
-  background: rgba(230, 199, 122, 0.95);
-  border-color: rgba(230, 199, 122, 0.95);
-  box-shadow: 0 0 0 1px rgba(125, 206, 160, 0.25), var(--shadow);
-}
-.stone-art {
-  display: block;
-  width: 140px;
-  height: 140px;
-  max-width: none;
-  margin: 0 auto;
-  object-fit: cover;
-  border: 0 !important;
-}
-
-
-.stone.done .stone-art {
-  border-bottom-color: rgba(230, 199, 122, 0.95);
-}
-
-.stone .stone-actions {
-  display: none;
-}
-
-.stone-stage {
-  position: relative;
-}
-.stone-veil {
-  position: absolute;
-  inset: -8px;
-  z-index: 20;
-  background: rgba(6, 5, 4, 0.72);
-  border-radius: 16px;
-}
-.stone-veil[hidden] {
-  display: none !important;
-}
-.stone-stage.is-dimmed .stone {
-  position: relative;
-  z-index: 1;
-}
-.stone.is-open {
-  z-index: 30 !important;
-  border-color: rgba(230, 199, 122, 0.95);
-  box-shadow: 0 0 0 2px rgba(230, 199, 122, 0.55), var(--shadow);
-}
-
-.stone-float {
-  position: fixed;
-  z-index: 40;
-  width: min(300px, calc(100vw - 24px));
-  padding: 16px 16px 14px;
-  background: rgba(10, 8, 6, 0.98);
-  border: 1px solid rgba(230, 199, 122, 0.55);
-  border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
-  color: #f7edd6;
-}
-.stone-float[hidden] {
-  display: none !important;
-}
-.stone-float-close {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  width: 28px;
-  height: 28px;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  color: #e6c77a;
-  font-size: 22px;
-  line-height: 1;
-  cursor: pointer;
-}
-.stone-float-id {
-  font-family: Cinzel, serif;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  color: #e6c77a;
-  margin-bottom: 2px;
-}
-.stone-float h2 {
-  font-family: Cinzel, serif;
-  font-size: 1.15rem;
-  margin: 0 28px 8px 0;
-  color: #f3e2b0;
-}
-.stone-float-goal {
-  margin: 0 0 14px;
-  color: #d8c9a6;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-.stone-float-actions {
-  display: flex;
-  flex-direction: row;
+.milestone {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  align-items: center;
   gap: 12px;
+  min-height: 58px;
+  padding: 8px 12px;
+  background: rgba(10, 8, 6, 0.72);
+  border: 1px solid rgba(230, 199, 122, 0.18);
+  border-radius: 8px;
 }
-.stone-ico-btn {
+
+.milestone-number {
+  font-family: Cinzel, serif;
+  font-size: 0.9rem;
+  color: #e6c77a;
+  letter-spacing: 0.06em;
+}
+
+.milestone-title {
+  min-width: 0;
+  color: #f3e2b0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.milestone-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.milestone-status-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
-  padding: 8px;
-  border-radius: 14px;
-  border: 1px solid rgba(230, 199, 122, 0.45);
-  background: rgba(20, 16, 10, 0.9);
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  border-radius: 6px;
   cursor: pointer;
 }
-.stone-ico-btn img {
-  width: 42px;
-  height: 42px;
+
+.milestone-status-btn img {
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
-.stone-ico-btn:hover {
-  border-color: #e6c77a;
-  background: rgba(40, 32, 18, 0.95);
+
+.milestone-status-btn:hover,
+.milestone-status-btn:focus-visible {
+  background: rgba(230, 199, 122, 0.1);
+  outline: none;
 }
-.stone-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 168px);
-  justify-content: start;
-  gap: 14px;
+
+.milestone.done {
+  border-color: rgba(230, 199, 122, 0.3);
+}
+
+@media (max-width: 620px) {
+  .milestone-grid {
+    grid-template-columns: 1fr;
+  }
 }
