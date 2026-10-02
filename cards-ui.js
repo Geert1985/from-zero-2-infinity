@@ -22,6 +22,24 @@ function escText(s) {
     .replace(/"/g, "&quot;");
 }
 
+function starLayer(opacity, count) {
+  const stars = [];
+  for (let i = 0; i < count; i++) {
+    const x = (Math.random() * 100).toFixed(2);
+    const y = (Math.random() * 100).toFixed(2);
+    const size = Math.random() < 0.82 ? 0.7 : 1.15;
+    stars.push('radial-gradient(circle at ' + x + '% ' + y + '%, rgba(255,244,210,' + opacity + ') 0 ' + size + 'px, transparent ' + (size + 1.2) + 'px)');
+  }
+  return stars.join(',');
+}
+
+function phaseStarfield() {
+  return '<div class="phase-stars" aria-hidden="true">' +
+    '<div class="phase-stars-layer phase-stars-layer-a" style="background-image:' + starLayer(0.52, 42) + '"></div>' +
+    '<div class="phase-stars-layer phase-stars-layer-b" style="background-image:' + starLayer(0.34, 28) + '"></div>' +
+    '</div>';
+}
+
 function renderHome() {
   const cards = COURSE.phases.map((p) => {
     const open = phaseUnlocked(p.id);
@@ -62,7 +80,7 @@ function renderPhase(phaseId) {
   phaseId = Number(phaseId);
   const phase = COURSE.phases.find((p) => p.id === phaseId);
   if (!phase) return renderHome();
-  const screen = '<div class="screen phase-screen">';
+  const screen = '<div class="screen phase-screen">' + phaseStarfield();
   if (!phaseUnlocked(phaseId)) {
     const c = phaseCost(phaseId);
     return screen + topbar() +
