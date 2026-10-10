@@ -1,6 +1,6 @@
 # Post-M5a uitbreidingen — functionele specificatie
 
-Versie: 1.4.0
+Versie: 1.5.0
 Datum: 2026-10-10
 Status: goedgekeurde productwensen; technische uitwerking en implementatie nog te plannen
 Project: From Zero 2 Infinity — Wiskunde Illustrator
@@ -139,3 +139,15 @@ Status: nieuwe productwens; niet geïmplementeerd.
 - Definieer exportgedrag voor SVG/PNG, viewport-clipping, zichtbaarheid, objectlocks, permissies, undo/redo, import/export en achterwaartse compatibiliteit.
 - Test horizontale/verticale asgevallen, oorsprong, verplaatsen, negatieve coördinaten, zoom/pan, gekoppelde punten en fullscreen in Node/Edge.
 - Plan als kleine zelfstandige UX/meetkunde-checkpoint, eventueel samen met de eenheden- en meetnotatiemilestone; implementatie pas na expliciete opdracht.
+
+## 10. Dynamische hoekmetingen en hoekeenheden (2026-10-10)
+Status: goedgekeurde productwens, nog niet geïmplementeerd.
+
+- Breid **Meten → Hoek** uit met semantisch gekoppelde hoekmetingen op bestaande lijnen, stralen, vectoren, segmenten of drie punten. De meting bewaart stabiele bronobject-ID's en volgt wijzigingen in de constructiegraaf.
+- Ondersteun hoek t.o.v. de positieve x-as van een actief coördinatenstelsel en hoek tussen twee richtingen; onderscheid expliciet gerichte hoek [0°,360°) en kleinste hoek [0°,180°]. Definieer het oriëntatie- en vertexbeleid in een wiskundig contract.
+- Teken optioneel een hoekboog en dynamisch label. Houd labelpositionering en handmatige stijloverrides stabiel bij herberekening.
+- **Eenheden:** kies graden (°) of radialen (rad). Voorzie een documentstandaard met override per hoekmeting, en instelbare precisie; herformatteer labels bij eenheidswisseling zonder geometrische mutatie.
+- Rekenkern: atan2 van determinant en inproduct voor twee niet-nul richtingsvectoren; normaliseer gericht bereik. Nulvectoren, verdwenen bronnen, parallelle/tegengestelde richtingen en degeneraties expliciet behandelen.
+- In toekomstige uitbreidingen: dynamische lengtes, omtrekken en oppervlaktes op dezelfde getypeerde meetobjectarchitectuur; maak dynamische koppeling standaard waar bestaande bronnen beschikbaar zijn, met bewuste statische keuze indien zinvol.
+- Volledige compatibiliteit met undo/redo, permissies, locks, import/export, schema, semantische replay, SVG/PNG en Edge/Node-tests.
+- Plan als afzonderlijke M5-checkpoint vóór brede meetobjectuitbreidingen; geen implementatie zonder opdracht.
