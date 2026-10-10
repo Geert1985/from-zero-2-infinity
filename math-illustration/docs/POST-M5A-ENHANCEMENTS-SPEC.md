@@ -1,6 +1,6 @@
 # Post-M5a uitbreidingen — functionele specificatie
 
-Versie: 1.3.0
+Versie: 1.4.0
 Datum: 2026-10-10
 Status: goedgekeurde productwensen; technische uitwerking en implementatie nog te plannen
 Project: From Zero 2 Infinity — Wiskunde Illustrator
@@ -126,3 +126,16 @@ Status: productvoorstel; de editor heeft al een basisgereedschap Vector, maar de
 - Alle afgeleide objecten volgen bronwijzigingen via de bestaande constructiegraaf; objectidentiteit, stijloverrides, locks, permissies, undo/redo, import/export en semantische replay blijven correct.
 - Toekomstige integratie met dynamische tekstlabels, animaties, fysica en oefeningen; geen impliciete uitbreiding naar 3D in deze scope.
 - Ontwerp eerst een mathematisch en technisch contract, met Node- en Edge-regressietests, en deel implementatie op in kleine milestones.
+
+## 9. Coördinatenprojecties bij punten (2026-10-10)
+Status: nieuwe productwens; niet geïmplementeerd.
+
+- Voeg in **Eigenschappen → Punt** een sectie **Coördinatenprojecties** toe, standaard uit voor bestaande en nieuwe punten.
+- Toon optioneel een verticale gestippelde hulplijn van P=(x,y) naar (x,0) op de x-as en een horizontale gestippelde hulplijn naar (0,y) op de y-as. Toon bij de betreffende as de waarde x respectievelijk y.
+- Bedieningsopties: beide projecties, alleen x, alleen y of geen; afzonderlijke schakelaar voor coördinaatwaarden. Gebruik de bestaande presentatie-/stijlinstellingen waar mogelijk, met duidelijk onderscheid tussen hulplijnen en echte constructieobjecten.
+- Hulplijnen en waarden volgen puntverplaatsing, gekoppelde punten en relevante as-/coördinatenstelselwijzigingen; houd rekening met de latere ondersteuning van meerdere of scheve coördinatenframes en leg het actieve referentieframe expliciet vast.
+- Gebruik de centrale formattering voor documenteenheden, schaal en decimalen zodra beschikbaar; toon negatieve, nul- en decimale waarden correct. Geen dubbele verwarrende aslabels.
+- Hulplijnen zijn presentatie van het punt, geen onafhankelijke meetkundige objecten; niet afzonderlijk selecteerbaar of snappend, en veroorzaken geen nieuwe constructiegraafafhankelijkheden.
+- Definieer exportgedrag voor SVG/PNG, viewport-clipping, zichtbaarheid, objectlocks, permissies, undo/redo, import/export en achterwaartse compatibiliteit.
+- Test horizontale/verticale asgevallen, oorsprong, verplaatsen, negatieve coördinaten, zoom/pan, gekoppelde punten en fullscreen in Node/Edge.
+- Plan als kleine zelfstandige UX/meetkunde-checkpoint, eventueel samen met de eenheden- en meetnotatiemilestone; implementatie pas na expliciete opdracht.
